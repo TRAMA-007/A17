@@ -21,12 +21,12 @@ global.prefa = ["."];                                    //Default prefix here. 
 
 
 //
-global.Owner = ["916297175943", "919362639362"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.OwnerNumber = ["916297175943", "919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
-global.BotName = "A17";
-global.packname = "A17 Bot";                             //Do not change.
+global.Owner = ["249127591317"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.OwnerNumber = ["249127591317"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.ownertag = ["249127591317"];
+global.OwnerName = "akane710";
+global.BotName = "plana";
+global.packname = "plana Bot";                             //Do not change.
 global.author = "By: Kai";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
@@ -41,10 +41,10 @@ global.openAiAPI = "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";
 
 
 //
-global.location = "Tata City, India";
+global.location = "wad madani, sudan";
 global.reactmoji = "❤️";
 global.themeemoji = "💖";
-global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' };
+global.vidmenu = { url: 'https://media.tenor.com/0zUyieJX2kgAAAAC/blue-archive-plana.gif' };
 global.websitex = "https://github.com/Kai0071";
 global.lolhuman = "KaysaS";
 
