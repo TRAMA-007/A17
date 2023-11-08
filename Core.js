@@ -1814,7 +1814,7 @@ Typed *surrender* to surrender and admited defeat`
       // case 'wallpaper': case 'animewallpaper': case 'animewall': {
       // if (isBan) return reply(mess.banned);	 			
       // if (isBanChat) return reply(mess.bangc);
-      // if (!args.join(" ")) return reply("Please enter a term to search!")
+      // if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي")
       // const { AnimeWallpaper } =require("anime-wallpaper")
       // const wall = new AnimeWallpaper();
       // const pages = [1,2,3,4];
@@ -1842,7 +1842,7 @@ Typed *surrender* to surrender and admited defeat`
       // case 'animewall': {
       //   if (isBan) return reply(mess.banned);
       //   if (isBanChat) return reply(mess.bangc);
-      //   A17.sendMessage(from, { react: { text: "🥵" , key: m.key }});
+      //   A17.sendMessage(from, { react: { text: "💦" , key: m.key }});
 
       //   if (!args.join(" ")) return reply("Please enter a term to search!");
 
@@ -1870,7 +1870,7 @@ Typed *surrender* to surrender and admited defeat`
       // case 'animewall': {
       //   if (isBan) return reply(mess.banned);
       //   if (isBanChat) return reply(mess.bangc);
-      //   if (!args.join(" ")) return reply("Please enter a term to search!");
+      //   if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي!");
 
       //   const { AnimeWallpaper } = require("anime-wallpaper");
       //   const wall = new AnimeWallpaper();
@@ -1897,8 +1897,8 @@ Typed *surrender* to surrender and admited defeat`
       //   if (isBan) return reply(mess.banned);
       //   if (isBanChat) return reply(mess.bangc);
       //   reply(mess.waiting)
-      //   A17.sendMessage(from, { react: { text: "🥵" , key: m.key }});
-      //   if (!args.join(" ")) return reply("Please enter a term to search!");
+      //   A17.sendMessage(from, { react: { text: "💦" , key: m.key }});
+      //   if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي");
 
       //   const { AnimeWallpaper } = require("anime-wallpaper");
       //   const wall = new AnimeWallpaper();
@@ -1924,8 +1924,8 @@ Typed *surrender* to surrender and admited defeat`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         reply(mess.waiting);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } });
-        if (!args.join(" ")) return reply("Please enter a term to search!");
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } });
+        if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي");
 
         const { AnimeWallpaper } = require("anime-wallpaper");
         const wall = new AnimeWallpaper();
@@ -6797,7 +6797,7 @@ _Click the button below to download_`
           ] */
         let buttonMessagessfgr = {
           image: { url: waifuddd.data.url },
-          caption: 'Dont be a lolicon !',
+          caption: 'اتحفنا يا سفاح الاندرإيج!',
           /*  buttons: wbuttsssr,
             headerType: 2 */
         }
