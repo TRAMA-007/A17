@@ -2187,9 +2187,9 @@ Typed *surrender* to surrender and admited defeat`
           if (!AntiNsfw) return reply('Already deactivated');
           let off = ntnsfw.indexOf(from);
           ntnsfw.splice(off, 1);
-          reply('Disabled NSFW Commands!');
+          reply('الشغل قفل 😔');
         } else {
-          reply(`NSFW(not safe for work) feature has been enabled in this group, which means anyone here can accesss Adult commands!\n\nPlease use *'${prefix}nsfw on*' to enable NSFW commands or *'${prefix}nsfw off'* to disable them.`);
+          reply(`NSFW(not safe for wakamo) feature has been enabled in this group, which means anyone here can يجلد حلاوة!\n\nPlease use *'${prefix}nsfw on*' to enable NSFW commands or *'${prefix}nsfw off'* to disable them.`);
         }
       }
         break;
@@ -2212,7 +2212,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/agegao.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2225,7 +2225,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ass.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2238,7 +2238,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/bdsm.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2251,7 +2251,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/blowjob.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2264,7 +2264,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cuckold.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2277,7 +2277,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cum.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2290,7 +2290,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/eba.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2303,7 +2303,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ero.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2316,7 +2316,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/femdom.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2342,7 +2342,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/gangbang.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2378,7 +2378,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
         reply(mess.waiting)
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         anu = await hentai()
         result912 = anu[Math.floor(Math.random(), anu.length)]
@@ -2392,7 +2392,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/glasses.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2405,7 +2405,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/hentai.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2418,7 +2418,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2431,7 +2431,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/manga.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2444,7 +2444,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/masturbation.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2457,7 +2457,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/milf.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2470,7 +2470,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2483,7 +2483,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw)
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko2.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2496,7 +2496,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/nsfwloli.json'))
         var kairesult = pickRandom(nsfwdata)
@@ -2509,7 +2509,7 @@ Typed *surrender* to surrender and admited defeat`
       //   if (isBanChat) return reply(mess.bangc);
       //   if (!m.isGroup) return reply(mess.grouponly);
       //   if (!AntiNsfw) return reply(mess.nonsfw)
-      //   A17.sendMessage(from, { react: { text: "🥵" , key: m.key }})
+      //   A17.sendMessage(from, { react: { text: "💦" , key: m.key }})
 
       // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'))
       // var kairesult = pickRandom(nsfwdata)
@@ -2524,7 +2524,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!AntiNsfw) return reply(mess.nonsfw);
 
         // React to the command message with a specific emoji
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } });
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } });
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'));
         var numberOfPictures = 3; // Change this value if you want to send a different number of pictures
@@ -5378,13 +5378,13 @@ _Click the button below to download_`
       // case 'couplepp': case 'cpp': case 'ppcouple': {
       // if (isBan) return reply(mess.banned);
       // if (isBanChat) return reply(mess.bangc);
-      // A17.sendMessage(from, { react: { text: "🙀" , key: m.key }});
+      // A17.sendMessage(from, { react: { text: "🤓" , key: m.key }});
 
       //        reply(mess.waiting)
       //        let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
       //        let random = anu[Math.floor(Math.random() * anu.length)]
       //        A17.sendMessage(m.chat, { image: { url: random.male }, caption: `For him...` }, { quoted: m })
-      //        A17.sendMessage(m.chat, { image: { url: random.female }, caption: `For her...` }, { quoted: m })
+      //        A17.sendMessage(m.chat, { image: { url: random.female }, caption: `not for her عشان انت سنقل عرص😂...` }, { quoted: m })
       //    }
       // break;
 
@@ -5395,7 +5395,7 @@ _Click the button below to download_`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        A17.sendMessage(from, { react: { text: "🙀", key: m.key } });
+        A17.sendMessage(from, { react: { text: "🤓", key: m.key } });
         reply(mess.waiting);
 
         let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json');
@@ -5407,7 +5407,7 @@ _Click the button below to download_`
           await A17.sendMessage(m.chat, { image: { url: random.male }, caption: `For him...` }, { quoted: m });
 
           // Sending the female picture
-          await A17.sendMessage(m.chat, { image: { url: random.female }, caption: `For her...` }, { quoted: m });
+          await A17.sendMessage(m.chat, { image: { url: random.female }, caption: `not for her عشان انت سنقل عرص 🤣...` }, { quoted: m });
         }
       }
         break;
@@ -5589,7 +5589,7 @@ _Click the button below to download_`
       case 'sgif': case 'sticker': case 's': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🌝", key: m.key } })
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
         if (/image/.test(mime)) {
           let media = await quoted.download()
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
