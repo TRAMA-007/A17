@@ -6753,7 +6753,7 @@ _Click the button below to download_`
           ] */
         let button4Messagess = {
           image: { url: waifuddd.data.url },
-          caption: 'More than one waifu will definitely ruin your Laifu!',
+          caption: '*المس العشب يا متوحد*',
           /*buttons: wbuttsssr,
           headerType: 4 */
         }
@@ -6903,7 +6903,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by Kai to do everything tha
   ⌯    *My prefix is :*  ${prefix}
   ⌯    *Owner name :* ${global.OwnerName} 
   ⌯    *Bot runtime :* ${runtime(process.uptime())} 
-  ⌯    *Platform :* Linux
+  ⌯    *Platform :* your mom
 
 
   〢━━━ 〄 Core 〄 ━━━〢
