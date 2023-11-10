@@ -763,6 +763,7 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
+      'كسمك': `ربنا يسامحك`,
 
     };
 
@@ -2214,7 +2215,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!AntiNsfw) return reply(mess.nonsfw);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/agegao.json'))
+        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ahegao.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
         break;
@@ -5612,24 +5613,24 @@ _Click the button below to download_`
 
 
 
-      // case 'couple': case 'ship': {
-      //   if (isBan) return reply(mess.banned);
-      //   if (isBanChat) return reply(mess.bangc);
-      // if (!m.isGroup) return reply(`${mess.grouponly}`)
-      // A17.sendMessage(from, { react: { text: "🌝" , key: m.key }})
+       case 'couple': case 'ship': {
+         if (isBan) return reply(mess.banned);
+         if (isBanChat) return reply(mess.bangc);
+         if (!m.isGroup) return reply(`${mess.grouponly}`)
+       A17.sendMessage(from, { react: { text: "🌝" , key: m.key }})
 
-      // let member = participants.map(u => u.id)
-      // let orang = member[Math.floor(Math.random() * member.length)]
-      // let jodoh = member[Math.floor(Math.random() * member.length)]
-      // let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-      // Ohh i see 👀💖...`
-      // let menst = [orang, jodoh]
-      // let buttons = [
-      // { buttonId: '❤️', buttonText: { displayText: 'Congratulations ❤️' }, type: 1 }
-      // ]
-      // await A17.sendButtonText(m.chat, buttons, jawab, A17.user.name, m, {mentions: menst})
-      // }
-      // break;
+       let member = participants.map(u => u.id)
+       let orang = member[Math.floor(Math.random() * member.length)]
+       let jodoh = member[Math.floor(Math.random() * member.length)]
+       let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
+       Ohh i see 👀💖...`
+       let menst = [orang, jodoh]
+       let buttons = [
+       { buttonId: '❤️', buttonText: { displayText: 'Congratulations ❤️' }, type: 1 }
+       ]
+       await A17.sendButtonText(m.chat, buttons, jawab, A17.user.name, m, {mentions: menst})
+       }
+       break;
 
 
       // case 'soulmate': {
