@@ -764,6 +764,10 @@ Typed *surrender* to surrender and admited defeat`
       konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
       'كسمك': `ربنا يسامحك`,
+      'ليج؟': 'استحم يا خول...الاستحمام يوفر العديد من الفوائد، بما في ذلك تنظيف الجسم والبشرة، والاسترخاء وتخفيف التوتر، كما يمكن أن يكون له تأثير إيجابي على الدورة الدموية. كما أن الاستحمام بالماء الساخن يمكن أن يقلل من آلام العضلات والمفاصل.`,
+      'كسم': `كسم اللي تحتي`,
+      'جلا': `عوووووك`,
+      'شوفونا': `يشوفك الزب`,
 
     };
 
@@ -2183,7 +2187,7 @@ Typed *surrender* to surrender and admited defeat`
         if (args[0] === "on") {
           if (AntiNsfw) return reply('Already activated');
           ntnsfw.push(from);
-          reply('Enabled NSFW Commands!');
+          reply('عووووك الشغل فتح');
         } else if (args[0] === "off") {
           if (!AntiNsfw) return reply('Already deactivated');
           let off = ntnsfw.indexOf(from);
@@ -6771,9 +6775,9 @@ _Click the button below to download_`
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
         waifuddd = await axios.get('https://waifu.pics/api/sfw/neko')
-        /*var wbuttsssr = [
+        var wbuttsssr = [
           {buttonId: `${prefix}eroneko`, buttonText: {displayText: `>>`}, type: 1},
-          ] */
+          ] 
         let buttonMessagessf = {
           image: { url: waifuddd.data.url },
           caption: 'Nyaa...',
