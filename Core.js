@@ -741,12 +741,12 @@ Typed *surrender* to surrender and admited defeat`
   
   if (smallinput.includes('good night')) {
     reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
+  }*/
+  
+  if (smallinput.includes('ليج')|| smallinput.includes('ليغ') || smallinput.includes('حد يكريني')) {
+    reply (`اوووفووو امشي استحمى يا خول ريحتك واصلاني هنا🤮`);
   }
   
-  if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-    reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
-  }
-  */
 
 
     const responses = {
