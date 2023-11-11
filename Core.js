@@ -683,7 +683,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
     
-  let smallinput = budy.toLowerCase()
+  /*let smallinput = budy.toLowerCase()
   if (smallinput.includes('hello')) {
     reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
   } 
