@@ -682,15 +682,15 @@ Typed *surrender* to surrender and admited defeat`
       return arr[Math.floor(Math.random() * arr.length)]
     }
 
-    /*
+    
   let smallinput = budy.toLowerCase()
   if (smallinput.includes('hello')) {
     reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
   } 
   
-  //if (smallinput.includes('hi')) {
+  if (smallinput.includes('ليغ')) {
   
-  //   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+     reply (`اوووفوو امشي استحم يا خول ريحتك واصلاني هنا🤮`);
   
   // } 
   
@@ -699,14 +699,14 @@ Typed *surrender* to surrender and admited defeat`
   }
   
   
-  if (smallinput=='runtime') {
-    reply (`Hey ${pushname} my runtime is ${runtime(process.uptime())}\n\nCurrent Time: ${kaitime}\n\nCurrent Date: ${kaidate}`)
+  if (smallinput=='ايه') {
+    reply (`خدتك عليه`)
   }
   
   
   
-  if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-    reply (`Konichiwa ${pushname}, I am ${BotName}. How can i help you?`);
+  if( smallinput.includes('ايه') || smallinput.includes('إيه') || smallinput.includes('أيه') || smallinput.includes('اييه')){
+    reply (`خدتك عليه`);
   }
   
   
@@ -767,6 +767,7 @@ Typed *surrender* to surrender and admited defeat`
       'شوفونا': `يشوفك الزب قول آميين`,
       'جلا': `كلام شنو`,
       'ايه': `خدتك عليه `,
+      'زبي': `صغير `,
     };
 
     const smallinput = budy.toLowerCase();
