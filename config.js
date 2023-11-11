@@ -27,7 +27,7 @@ global.ownertag = ["249127591317"];
 global.OwnerName = "akane710";
 global.BotName = "plana";
 global.packname = "plana Bot";                             //Do not change.
-global.author = "By: Kai";                               //Do not change.
+global.author = "By: akane710";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
 
