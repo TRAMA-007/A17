@@ -780,6 +780,11 @@ Typed *surrender* to surrender and admited defeat`
     reply (`اوووفووو امشي استحمى يا خول ريحتك واصلاني هنا🤮`);
             }
 
+  
+    if (smallinput.includes('ايه')|| smallinput.includes('إيه') || smallinput.includes('أيه')) {
+    reply (`خدتك عليه`);
+    }
+
 
 
 
