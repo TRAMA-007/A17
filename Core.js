@@ -6777,7 +6777,7 @@ _Click the button below to download_`
         waifuddd = await axios.get('https://waifu.pics/api/sfw/neko')
         /*var wbuttsssr = [
           {buttonId: `${prefix}neko`, buttonText: {displayText: `>>`}, type: 1},
-          ] 
+          ]*/
         let buttonMessagessf = {
           image: { url: waifuddd.data.url },
           caption: 'Nyaa...',
