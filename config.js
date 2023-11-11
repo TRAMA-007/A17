@@ -82,7 +82,7 @@ global.mess = {
   jobdone: 'تم الطبخ',
   useradmin: '*الامر دا بتاع ادمنز بس يا عرص*',
   botadmin: 'فين الادمن',
-  botowner: 'زبك صغير',
+  botowner: 'جلا',
   grouponly: 'يا غبي الامر دا في القروباات بس',
   privateonly: 'تعال خاص يا عسل',
   botonly: 'وبك صغير ههههه',
