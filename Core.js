@@ -764,6 +764,9 @@ Typed *surrender* to surrender and admited defeat`
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
       'كسمك': `ربنا يسامحك`,
       'ليج': `اوووفووو امشي استحمى يا خول ريحتك واصلاني هنا🤮`,
+      'شوفونا': `يشوفك الزب قول آميين`,
+      'جلا': `كلام شنو`,
+      'ايه': `خدتك عليه `,
     };
 
     const smallinput = budy.toLowerCase();
