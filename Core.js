@@ -6570,48 +6570,6 @@ _Click the button below to download_`
         break;
 
 
-     case 'Raiden':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        ud = await axios.get('https://api.waifu.im/search?included_tags=raiden-shogun')
-        /*var wbutsss = [
-          {buttonId: `${prefix}raiden`, buttonText: {displayText: `>>`}, type: 1},
-               ] */
-        let buttonzMessage = {
-          image: { url: ud.data.url },
-          caption: 'الزوجة المثالية...`,
-          /*   footer: `${global.BotName}`,
-                 buttons: wbutsss,
-            headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, buttonzMessage, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break; 
-      
-      case 'Shinobu':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        ud = await axios.get('https://waifu.pics/api/sfw/shinobu')
-        /*var wbutsss = [
-          {buttonId: `${prefix}shinobu`, buttonText: {displayText: `>>`}, type: 1},
-               ] */
-        let buttonzMessage = {
-          image: { url: ud.data.url },
-          caption: `اتعالج يا بيدوفيلي...`,
-          /*   footer: `${global.BotName}`,
-                 buttons: wbutsss,
-            headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, buttonzMessage, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break;
-      
       case 'awoo':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -6807,14 +6765,14 @@ _Click the button below to download_`
         break;
 
 
-      case 'eroneko':
+      case 'neko':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
         waifuddd = await axios.get('https://waifu.pics/api/sfw/neko')
         /*var wbuttsssr = [
-          {buttonId: `${prefix}eroneko`, buttonText: {displayText: `>>`}, type: 1},
+          {buttonId: `${prefix}neko`, buttonText: {displayText: `>>`}, type: 1},
           ] */
         let buttonMessagessf = {
           image: { url: waifuddd.data.url },
