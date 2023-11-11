@@ -677,8 +677,8 @@ Typed *surrender* to surrender and admited defeat`
     //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
-    
-    const pickRandom = (arr) => {
+    //
+   /* const pickRandom = (arr) => {
       return arr[Math.floor(Math.random() * arr.length)]
     }
 
@@ -741,11 +741,11 @@ Typed *surrender* to surrender and admited defeat`
   
   if (smallinput.includes('good night')) {
     reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
-  }*/
+  }
   
   if (smallinput.includes('ليج')|| smallinput.includes('ليغ') || smallinput.includes('حد يكريني')) {
     reply (`اوووفووو امشي استحمى يا خول ريحتك واصلاني هنا🤮`);
-  }
+ } */
 
 
     const responses = {
