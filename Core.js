@@ -761,10 +761,9 @@ Typed *surrender* to surrender and admited defeat`
       'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
       ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
-      konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
+      ليج؟: `اوفوووو امشي استحمى يا خول ريحتك واصلاني هنا`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
       'كسمك': `ربنا يسامحك`,
-      'ليج؟': 'اوووفوووو امشي استحمى يا خول ريحتك واصلاني هنا`,
     };
 
     const smallinput = budy.toLowerCase();
