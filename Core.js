@@ -746,7 +746,6 @@ Typed *surrender* to surrender and admited defeat`
   if (smallinput.includes('ليج')|| smallinput.includes('ليغ') || smallinput.includes('حد يكريني')) {
     reply (`اوووفووو امشي استحمى يا خول ريحتك واصلاني هنا🤮`);
   }
-  
 
 
     const responses = {
