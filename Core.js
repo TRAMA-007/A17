@@ -2205,7 +2205,7 @@ Typed *surrender* to surrender and admited defeat`
         if (args[0] === "on") {
           if (AntiNsfw) return reply('Already activated');
           ntnsfw.push(from);
-          reply('الشغل فتح عوووك');
+          reply('nsfw enabled');
         } else if (args[0] === "off") {
           if (!AntiNsfw) return reply('Already deactivated');
           let off = ntnsfw.indexOf(from);
