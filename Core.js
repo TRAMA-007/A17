@@ -2738,7 +2738,7 @@ Typed *surrender* to surrender and admited defeat`
         break;*/
 
 
-        case 'eroneko':
+        case 'erooneko':
           if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
          if (!m.isGroup) return reply(mess.grouponly);
@@ -2746,7 +2746,7 @@ Typed *surrender* to surrender and admited defeat`
        reply(mess.waiting)						
        waifudd = await axios.get(`https://fantox-apis.vercel.app/catgirl`)
                                 var wbuttsss = [
-             {buttonId: `${prefix}eroneko`, buttonText: {displayText: `>>`}, type: 1},
+             {buttonId: `${prefix}erooneko`, buttonText: {displayText: `>>`}, type: 1},
              ] 
            let buttonsssMessages = {
             image: {url:waifudd.data.url},
