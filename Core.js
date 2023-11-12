@@ -786,6 +786,16 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('كسم')|| smallinput.includes('كسمك') || smallinput.includes('كس')) {
+    reply (`ربنا يسامحك`);
+    }
+
+
+    if (smallinput.includes('قنشن')|| smallinput.includes('جنشن') || smallinput.includes('genshin')) {
+    reply (`امشي استحمى`);
+    }
+
+
 
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -2195,7 +2205,7 @@ Typed *surrender* to surrender and admited defeat`
         if (args[0] === "on") {
           if (AntiNsfw) return reply('Already activated');
           ntnsfw.push(from);
-          reply('عووووك الشغل فتح');
+          reply('الشغل فتح عوووك');
         } else if (args[0] === "off") {
           if (!AntiNsfw) return reply('Already deactivated');
           let off = ntnsfw.indexOf(from);
