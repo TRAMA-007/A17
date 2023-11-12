@@ -821,9 +821,9 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('عب')|| smallinput.includes('عبيد')) {
+  /*  if (smallinput.includes('عب')|| smallinput.includes('عبيد')) {
     reply (`عب الينيكك`);
-    }
+    }*/
 
 
 
