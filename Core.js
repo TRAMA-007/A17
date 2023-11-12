@@ -781,9 +781,9 @@ Typed *surrender* to surrender and admited defeat`
             }
 
   
-    if (smallinput.includes('ايه')|| smallinput.includes('إيه') || smallinput.includes('أيه')) {
+    /*if (smallinput.includes('ايه')|| smallinput.includes('إيه') || smallinput.includes('أيه')) {
     reply (`خدتك عليه`);
-    }
+    }*/
 
 
     if (smallinput.includes('كسم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
