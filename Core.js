@@ -786,7 +786,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('كسم')|| smallinput.includes('كسمك') || smallinput.includes('كس')) {
+    if (smallinput.includes('كسم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
     reply (`ربنا يسامحك`);
     }
 
