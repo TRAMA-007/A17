@@ -6874,14 +6874,14 @@ _Click the button below to download_`
         break;
 
 
-      case "darkjoke":
+      /*case "darkjoke":
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         var res = await Darkjokes()
         teks = "\nDarkjokes"
         A17.sendMessage(m.chat, { image: { url: res }, caption: teks }, { quoted: m })
-        break;
+        break;*/
 
 
 
@@ -7230,7 +7230,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}quotes
   ⌯     ${prefix}report
   ⌯     ${prefix}afk
-  ⌯     ${prefix}darkjoke
+  ⌯     ${prefix}darkjoke واقفة حاليا 
   
 
   〢━━━ ⚠️ *NSFW(واقفة حاليا)* ⚠️ ━━━〢
