@@ -5721,6 +5721,23 @@ _Click the button below to download_`
         break;
 
 
+        case 'pick': {
+
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(`${mess.grouponly}`);
+        A17.sendMessage(from, { react: { text: "🐒", key: m.key } });
+
+        let member = participants.map(u => u.id);
+        let me = m.sender;
+        let jodoh = member[Math.floor(Math.random() * member.length)];
+
+        let message = `@${jodoh.split('@')[0]}`;
+        A17.sendMessage(m.chat, { text: message, mentions: [jodoh] }, { quoted: m });
+      }
+        break;
+
+
       case 'handsomecheck':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
