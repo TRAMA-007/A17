@@ -2761,6 +2761,29 @@ Typed *surrender* to surrender and admited defeat`
        break;  
 
 
+       case 'eroneko':
+          if (isBan) return reply(mess.banned);	 			
+         if (isBanChat) return reply(mess.bangc);
+         if (!m.isGroup) return reply(mess.grouponly);
+         if (!AntiNsfw) return reply(mess.nonsfw)
+       reply(mess.waiting)						
+       waifudd = await axios.get(`https://fantox-apis.vercel.app/catgirl`)
+                                var wbuttsss = [
+             {buttonId: `${prefix}eroneko`, buttonText: {displayText: `>>`}, type: 1},
+             ] 
+           let buttonsssMessages = {
+            image: {url:waifudd.data.url},
+            caption:  `life is too short to argue..just type eroneko and move on`,
+          /* footer: `${global.BotName}`,
+           buttons: wbuttsss,
+           headerType: 4 */
+           }     
+                 await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
+                         return('Error!')
+                     })
+       break;  
+
+
       //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
