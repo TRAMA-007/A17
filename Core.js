@@ -762,7 +762,6 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
       'كسمك': `ربنا يسامحك`,
-      'ليج': `اوووفووو امشي استحمى يا خول ريحتك واصلاني هنا🤮`,
       'شوفونا': `يشوفك الزب قول آميين`,
       'جلا': `كلام شنو`,
       'ايه': `خدتك عليه `,
