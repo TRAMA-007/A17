@@ -796,6 +796,31 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('انيكك')|| smallinput.includes('أنيكك')) {
+    reply (`بي ياتو زب`);
+    }
+
+
+    if (smallinput.includes('لوطي')) {
+    reply (`لوطي الناكك فتل جعباتك`);
+    }
+
+
+    if (smallinput.includes('زرقو')) {
+    reply (`في طيزك علقو`);
+      }
+
+
+    if (smallinput.includes('خول')) {
+    reply (`احترم نفسك`);
+    }
+
+
+    if (smallinput.includes('زبي')) {
+    reply (`صغير`);
+    }
+
+
 
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
