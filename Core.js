@@ -7192,6 +7192,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}hornychec
   ⌯     ${prefix}prettycheck
   ⌯     ${prefix}lovelycheck
+  ⌯     ${prefix}قنيطcheck
+  ⌯     ${prefix}niggacheck
 
 
   〢━━━ 🈴 *Weeb* 🈴 ━━━〢
