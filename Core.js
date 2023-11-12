@@ -796,7 +796,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('انيكك')|| smallinput.includes('أنيكك')) {
+    if (smallinput.includes('انيكك')|| smallinput.includes('انيكو') || smallinput.includes('انيكها')) {
     reply (`بي ياتو زب`);
     }
 
@@ -6937,7 +6937,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
         const helpmenu = `Hemlo *${pushname}* Dear...!! ${nowtime} ,
   
-Hemlo, I am "plana" a WhatsApp bot create and recode by Kai to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 
 
   ⌯    *Time* : ${kaitime}
@@ -7228,7 +7228,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by Kai to do everything tha
   ⌯     ${prefix}darkjoke
   
 
-  〢━━━ ⚠️ *NSFW* ⚠️ ━━━〢
+  〢━━━ ⚠️ *NSFW(واقفة حاليا)* ⚠️ ━━━〢
  
  
   ⌯   🍁 Type *${prefix}nsfw* then enable 
@@ -7238,7 +7238,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by Kai to do everything tha
   ⌯       all NSFW commands.
   ⌯    
   ⌯   『  *${global.BotName}*  』
-  ⌯       Developed By: *Kai*
+  ⌯       Developed By: *braa Mohammad*
   ⌯    
   ⌯   🍁 To use any of these
   ⌯       commands type.
