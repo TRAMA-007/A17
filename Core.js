@@ -487,7 +487,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       const uptimeInSeconds = Math.floor(process.uptime());
       const uptimeFormatted = formatTime(uptimeInSeconds);
 
-      // const status = `
+       const status = `
       // ㅤㅤ〄ㅤㅤ〘 akane710 sensei Personal Edition 〙ㅤㅤ〄ㅤㅤㅤㅤ
       // ㅤㅤㅤ〘ㅤ Auto Uptime: ${uptimeFormatted}ㅤ〙`;
 
@@ -777,7 +777,7 @@ Typed *surrender* to surrender and admited defeat`
 
     
     if (smallinput.includes('ليج')|| smallinput.includes('ليغ') || smallinput.includes('حد يكريني')) {
-    reply (`اوووفووو امشي استحمى يا خول ريحتك واصلاني هنا🤮`);
+    reply (`اوووفووو امشي استحمى ريحتك واصلاني هنا🤮`);
             }
 
   
