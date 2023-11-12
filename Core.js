@@ -2205,7 +2205,7 @@ Typed *surrender* to surrender and admited defeat`
         if (args[0] === "on") {
           if (AntiNsfw) return reply('Already activated');
           ntnsfw.push(from);
-          reply('nsfw enabled');
+          reply('الشغل فتح ');
         } else if (args[0] === "off") {
           if (!AntiNsfw) return reply('Already deactivated');
           let off = ntnsfw.indexOf(from);
@@ -2776,7 +2776,6 @@ Typed *surrender* to surrender and admited defeat`
         await A17.sendMessage(m.chat, { delete: key })
       }
         break;
-
 
 
       //////////////////////////////////////////////////////////////////////
