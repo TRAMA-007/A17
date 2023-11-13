@@ -2223,7 +2223,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
       //
-      case 'nsfw': {
+    /*  case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
