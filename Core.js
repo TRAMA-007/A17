@@ -2223,7 +2223,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
       //
-      case 'nsfw': {
+    /*  case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2749,7 +2749,7 @@ Typed *surrender* to surrender and admited defeat`
                      })
        break;*/
 
-
+/*
         case 'kitsu':
           if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
@@ -2767,10 +2767,10 @@ Typed *surrender* to surrender and admited defeat`
            buttons: wbuttsss,
            headerType: 4 */
            }     
-                 await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
+                /* await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
                          return('Error!')
                      })
-       break;   
+       break;   */
 
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
