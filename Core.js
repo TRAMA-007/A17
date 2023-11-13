@@ -752,7 +752,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
       hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
-      kai: `My Boss is lost in another Multiverse, and I lost connection with him...`,
+      البراء: `My Boss is lost in another Multiverse, and I lost connection with him...`,
       runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
       konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
       sasha: 'Only you...🫶🏻',
@@ -765,7 +765,6 @@ Typed *surrender* to surrender and admited defeat`
       'جلا': `كلامك شين`,
       'ايه': `خدتك عليه `,
       'زبي': `صغير `,
-      'ايه': `ارقعك واحد امبليه`,
     };
 
     const smallinput = budy.toLowerCase();
@@ -785,7 +784,7 @@ Typed *surrender* to surrender and admited defeat`
     }*/
 
 
-    if (smallinput.includes('كسم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
+    if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
     reply (`ربنا يسامحك`);
     }
 
@@ -827,6 +826,16 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('زعاط')) {
     reply (`يزعطك عب لا صلى لا بعرف الله`);
+    }
+
+
+    if (smallinput.includes('بوت معرص')) {
+    reply (`حبيبي والله تسلم`);
+        }
+
+
+    if (smallinput.includes('كيفك')) {
+    reply (`لو مهتم كان عرفت`);
     }
 
 
