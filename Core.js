@@ -4907,7 +4907,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
       ///  
-      case 'twitter': case 'td': case 'twitterdl': {
+    /*  case 'twitter': case 'td': case 'twitterdl': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please provide link!`)
@@ -5231,7 +5231,7 @@ _Click the button below to download_`
       // break;
 
 
-      case 'play':
+    /*  case 'play':
       case 'song':
       case 'music': {
         if (isBan) return reply(mess.banned);
@@ -5280,7 +5280,7 @@ _Click the button below to download_`
         // Rest of the code remains unchanged.
         // ...
       }
-        break;
+        break;*/
 
       case 'spotify': {
         if (isBan) return reply(mess.banned);
@@ -5318,7 +5318,7 @@ _Click the button below to download_`
         break;
 
 
-      case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
+   /*   case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍃", key: m.key } })
@@ -5368,7 +5368,7 @@ _Click the button below to download_`
       A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
       break; 
-      */
+      
 
 
       case 'ytmp3': {
@@ -5392,7 +5392,7 @@ _Click the button below to download_`
         const ytmp4play2 = await YT.mp4(text)
         A17.sendMessage(from, { video: { url: ytmp4play2.videoUrl }, mimetype: "video/mp4", caption: 'Downloaded by *A17 MD*', }, { quoted: m })
       }
-        break;
+        break; */
 
 
       case 'lyrics': {
