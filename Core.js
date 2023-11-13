@@ -2722,20 +2722,32 @@ Typed *surrender* to surrender and admited defeat`
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'thighs':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/thighs.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
         break;*/
+
+
+      
+
+        case 'kitsussy':
+          if (isBan) return reply(mess.banned);	 			
+         if (isBanChat) return reply(mess.bangc);
+         if (!m.isGroup) return reply(mess.grouponly);
+         if (!AntiNsfw) return reply(mess.nonsfw)
+       reply(mess.waiting)						
+       waifudd = await axios.get(`https://fantox-apis.vercel.app/foxgirl`)
+                                var wbuttsss = [
+             {buttonId: `${prefix}kitsussy`, buttonText: {displayText: `>>`}, type: 1},
+             ] 
+           let buttonsssMessages = {
+            image: {url:waifudd.data.url},
+            caption:  `kitsune ussy hits different...`,
+          /* footer: `${global.BotName}`,
+           buttons: wbuttsss,
+           headerType: 4 */
+           }     
+                 await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
+                         return('Error!')
+                     })
+       break;
 
 
         case 'erooneko':
@@ -2758,30 +2770,7 @@ Typed *surrender* to surrender and admited defeat`
                  await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
                          return('Error!')
                      })
-       break;    
-
-
-        case 'kitsussy':
-          if (isBan) return reply(mess.banned);	 			
-         if (isBanChat) return reply(mess.bangc);
-         if (!m.isGroup) return reply(mess.grouponly);
-         if (!AntiNsfw) return reply(mess.nonsfw)
-       reply(mess.waiting)						
-       waifudd = await axios.get(`https://fantox-apis.vercel.app/foxgirl`)
-                                var wbuttsss = [
-             {buttonId: `${prefix}kitsussy`, buttonText: {displayText: `>>`}, type: 1},
-             ] 
-           let buttonsssMessages = {
-            image: {url:waifudd.data.url},
-            caption:  `kitsune ussy hits different...`,
-          /* footer: `${global.BotName}`,
-           buttons: wbuttsss,
-           headerType: 4 */
-           }     
-                 await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
-                         return('Error!')
-                     })
-       break;  
+       break;   
 
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -2850,7 +2839,6 @@ Typed *surrender* to surrender and admited defeat`
         await A17.sendMessage(m.chat, { delete: key })
       }
         break;
-        
 
 
       //////////////////////////////////////////////////////////////////////
