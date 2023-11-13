@@ -2884,7 +2884,7 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
-      case 'listpc': {
+     /* case 'listpc': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
@@ -2917,7 +2917,7 @@ Typed *surrender* to surrender and admited defeat`
         }
         A17.sendTextWithMentions(m.chat, teks, m)
       }
-        break;
+        break; */
 
 
       case 'speedtest': case 'speedcheck': {
@@ -4911,7 +4911,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please provide link!`)
-        if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
+        if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`جلا`)
         xfarrapi.Twitter(`${text}`).then(async (data) => {
           let txt = `「 _Twitter Downloader_ 」\n\n`
           txt += `*Title :* ${data.title}\n`
