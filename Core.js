@@ -2722,7 +2722,7 @@ Typed *surrender* to surrender and admited defeat`
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;*/
+        break;
 
 
       
@@ -2742,27 +2742,27 @@ Typed *surrender* to surrender and admited defeat`
             caption:  `kitsune ussy hits different...`,
           /* footer: `${global.BotName}`,
            buttons: wbuttsss,
-           headerType: 4 */
+           headerType: 4 
            }     
                  await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
                          return('Error!')
                      })
-       break;
+       break;*/
 
 
-        case 'erooneko':
+        case 'kitsu':
           if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
          if (!m.isGroup) return reply(mess.grouponly);
          if (!AntiNsfw) return reply(mess.nonsfw)
        reply(mess.waiting)						
-       waifudd = await axios.get(`https://fantox-apis.vercel.app/catgirl`)
+       waifudd = await axios.get(`https://fantox-apis.vercel.app/foxgirl`)
                                 var wbuttsss = [
-             {buttonId: `${prefix}erooneko`, buttonText: {displayText: `>>`}, type: 1},
+             {buttonId: `${prefix}kitsu`, buttonText: {displayText: `>>`}, type: 1},
              ] 
            let buttonsssMessages = {
             image: {url:waifudd.data.url},
-            caption:  `life is too short to argue just type eroneko and move on...`,
+            caption:  `kitsune ussy hits different...`,
           /* footer: `${global.BotName}`,
            buttons: wbuttsss,
            headerType: 4 */
