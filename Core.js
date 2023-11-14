@@ -7258,31 +7258,9 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}darkjoke واقفة حاليا 
   
 
-  〢━━━ ⚠️ *NSFW(واقفة حاليا)* ⚠️ ━━━〢
+  〢━━━ ⚠️ *الكمونية(واقفة حاليا)* ⚠️ ━━━〢
+
  
- 
-  ⌯   🍁 Type *${prefix}nsfw* then enable 
-  ⌯       NSFW (Admin only!)
-  ⌯    
-  ⌯   🍁 Then type *${prefix}nsfwmenu* for
-  ⌯       all NSFW commands.
-  ⌯    
-  ⌯   『  *${global.BotName}*  』
-  ⌯       Developed By: *braa Mohammad*
-  ⌯    
-  ⌯   🍁 To use any of these
-  ⌯       commands type.
-  ⌯    
-  ⌯   *${prefix}<Command name>*.
-  ⌯    
-  ⌯   🍁 To get Support Group link
-  ⌯     type *${prefix}support*.
-  ⌯    
-  ⌯    
-  ⌯   🍁 Type *${prefix}help* to get
-  ⌯       full command list.
-  ┬│▸
-  ╰────────────···▸`
         let buttonMessage = {
           video: fs.readFileSync('./system/A17_3.mp4'), gifPlayback: true,
           caption: helpmenu,
@@ -7301,7 +7279,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
           if (isBanChat) return reply(mess.bangc);
           A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
-          reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
+          reply(`الحاصل`)
         }
 
         break;
@@ -7313,7 +7291,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
           if (isBanChat) return reply(mess.bangc);
           A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
-          reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
+          reply(`الحاصل`)
         }
 
         break;
@@ -7433,7 +7411,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
           if (isBan) return reply(mess.banned);
           if (isBanChat) return reply(mess.bangc);
           A17.sendMessage(from, { react: { text: "❌", key: m.key } })
-          reply(`Hey *${pushname}* sensei! this command are not programmed! Type *${prefix}help* to get my full command list!`)
+          reply(`جلا..اكتب (.help) عشان تشوف قائمة الاوامر`)
 
         }
 
