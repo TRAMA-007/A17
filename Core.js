@@ -2111,7 +2111,7 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
-      case 'chatgpt':
+      /*case 'chatgpt':
       case 'ai':
       case 'gpt': {
         if (isBan) return reply(mess.banned);
@@ -2165,7 +2165,7 @@ Typed *surrender* to surrender and admited defeat`
           reply("An error occurred while generating the image.");
         }
       }
-        break;
+        break;*/
 
 
 
