@@ -7257,8 +7257,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}afk
   ⌯     ${prefix}darkjoke واقفة حاليا 
   
-
-  〢━━━ ⚠️ *الكمونية(واقفة حاليا)* ⚠️ ━━━〢
+  
       let buttonMessage = {
           video: fs.readFileSync('./system/A17_3.mp4'), gifPlayback: true,
           caption: helpmenu,
