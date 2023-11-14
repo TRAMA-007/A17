@@ -844,7 +844,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('شرموط')|| smallinput.includes('شرمطة') || smallinput.includes('شراميط')) {
+    if (smallinput.includes('شرموط') {
     reply (`الشغل ما عيب`);
     }
 
