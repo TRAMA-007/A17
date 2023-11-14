@@ -417,8 +417,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         txt = `${botreply.data.cnt}`
         m.reply(txt)
         }    
-        
-     
 
 
 
