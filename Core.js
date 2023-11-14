@@ -417,11 +417,11 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         txt = `${botreply.data.cnt}`
         m.reply(txt)
         }    
+        
+     
 
 
 
-
-    
     //----------------------------------------------------------------------------------------------------//
 
 
@@ -845,9 +845,9 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('شرموط') {
+    if (smallinput.includes('شرموط')) {
     reply (`الشغل ما عيب`);
-    }
+           }
 
 
 
@@ -7501,4 +7501,3 @@ fs.watchFile(file, () => {
   delete require.cache[file]
   require(file)
 })
-
