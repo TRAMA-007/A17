@@ -7256,9 +7256,33 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}report
   ⌯     ${prefix}afk
   ⌯     ${prefix}darkjoke واقفة حاليا 
-  
-  
-      let buttonMessage = {
+
+
+  〢━━━ ⚠️ *الكمونية(واقفة حاليا)* ⚠️ ━━━〢
+ 
+  ⌯   🍁 Type *${prefix}nsfw* then enable 
+  ⌯       NSFW (Admin only!)
+  ⌯    
+  ⌯   🍁 Then type *${prefix}nsfwmenu* for
+  ⌯       all NSFW commands.
+  ⌯    
+  ⌯   『  *${global.BotName}*  』
+  ⌯       Developed By: *braa Mohammad*
+  ⌯    
+  ⌯   🍁 To use any of these
+  ⌯       commands type.
+  ⌯    
+  ⌯   *${prefix}<Command name>*.
+  ⌯    
+  ⌯   🍁 To get Support Group link
+  ⌯     type *${prefix}support*.
+  ⌯    
+  ⌯    
+  ⌯   🍁 Type *${prefix}help* to get
+  ⌯       full command list.
+  ┬│▸
+  ╰────────────···▸`
+        let buttonMessage = {
           video: fs.readFileSync('./system/A17_3.mp4'), gifPlayback: true,
           caption: helpmenu,
 
