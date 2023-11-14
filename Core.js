@@ -841,7 +841,7 @@ Typed *surrender* to surrender and admited defeat`
 
     
     if (smallinput.includes('احشك')) {
-    reply (`تحشني بي زبك دا🤏😂؟');
+    reply ('تحشني بي زبك دا🤏😂');
     }
 
 
