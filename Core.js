@@ -7326,7 +7326,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
           if (isBanChat) return reply(mess.bangc);
           A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
-          reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
+          reply(`الحاصل`)
         }
 
         break;
@@ -7433,7 +7433,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
           if (isBan) return reply(mess.banned);
           if (isBanChat) return reply(mess.bangc);
           A17.sendMessage(from, { react: { text: "❌", key: m.key } })
-          reply(`Hey *${pushname}* senpai! this command are not programmed! Type *${prefix}help* to get my full command list!`)
+          reply(`Hey *${pushname}* sensei! this command are not programmed! Type *${prefix}help* to get my full command list!`)
 
         }
 
