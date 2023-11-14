@@ -839,6 +839,16 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('شرموط')) {
+    reply (`الشغل ما عيب`);
+           }
+
+
+    if (smallinput.includes('احشك')) {
+    reply (`تحشني بي زبك دا🤏😂؟');
+    }
+
+
   /*  if (smallinput.includes('عب')|| smallinput.includes('عبيد')) {
     reply (`عب الينيكك`);
     }*/
