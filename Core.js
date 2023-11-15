@@ -6900,8 +6900,8 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        var lolidata = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'))
-        var kairesult = pickRandom(lolidata)
+        var animedata = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'))
+        var kairesult = pickRandom(animedata)
         /* var wbuttsssr = [
           {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
           ] */
