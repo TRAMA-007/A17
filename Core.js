@@ -6856,7 +6856,7 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifuddd = await axios.get('https://api.waifu.pics/sfw/waifu')
+        waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
         /*var wbuttsssr = [
           {buttonId: `${prefix}waifu`, buttonText: {displayText: `>>`}, type: 1},
           ] */
@@ -6884,7 +6884,7 @@ _Click the button below to download_`
           ]*/
         let buttonMessagessf = {
           image: { url: waifuddd.data.url },
-          caption: 'Nyaa...',
+          caption: 'مياو مياو نيغا...',
           /*    buttons: wbuttsssr,
               headerType: 2  */
         }
@@ -6900,19 +6900,19 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        ud = await axios.get('https://waifu.pics/api/sfw/shinobu')
-        /*var wbutsss = [
+        waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
+        /*var wbuttsssr = [
           {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
-               ] */
-        let buttonzMessage = {
-          image: { url: ud.data.url },
-          caption: `اتحفنا يا سفاح الاندرإيج`,
-          /*   footer: `${global.BotName}`,
-                 buttons: wbutsss,
-            headerType: 4 */
+          ]*/
+        let buttonMessagessf = {
+          image: { url: waifuddd.data.url },
+          caption: 'اتحفنا يا سفاح الاندرإيج...',
+          /*    buttons: wbuttsssr,
+              headerType: 2  */
         }
-        await A17.sendMessage(m.chat, buttonzMessage, { quoted: m }).catch(err => {
-          return ('Error!')
+
+        await A17.sendMessage(m.chat, buttonMessagessf, { quoted: m }).catch(err => {
+          return ('error..')
         })
         break;
 
@@ -7259,7 +7259,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}wallpaper
   ⌯     ${prefix}animequote
  
-    
+
   〢━━━ ♨️ *Informative* ♨️ ━━━〢
   
 
