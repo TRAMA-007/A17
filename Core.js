@@ -5807,9 +5807,6 @@ _Click the button below to download_`
       case 'uglycheck':
       case 'قنيطcheck':
       case 'niggacheck':
-      case 'pedocheck':
-      case 'خولنةcheck':
-      case 'breedabiltycheck':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😺", key: m.key } })
@@ -6884,7 +6881,7 @@ _Click the button below to download_`
           ]*/
         let buttonMessagessf = {
           image: { url: waifuddd.data.url },
-          caption: 'مياو مياو نيغا...',
+          caption: 'Nyaa...',
           /*    buttons: wbuttsssr,
               headerType: 2  */
         }
@@ -6901,17 +6898,17 @@ _Click the button below to download_`
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
         waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
-        /*var wbuttsssr = [
+        /* var wbuttsssr = [
           {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
-          ]*/
-        let buttonMessagessf = {
+          ] */
+        let buttonMessagessfgr = {
           image: { url: waifuddd.data.url },
-          caption: 'اتحفنا يا سفاح الاندرإيج...',
-          /*    buttons: wbuttsssr,
-              headerType: 2  */
+          caption: 'اتحفنا يا سفاح الاندرإيج!',
+          /*  buttons: wbuttsssr,
+            headerType: 2 */
         }
 
-        await A17.sendMessage(m.chat, buttonMessagessf, { quoted: m }).catch(err => {
+        await A17.sendMessage(m.chat, buttonMessagessfgr, { quoted: m }).catch(err => {
           return ('error..')
         })
         break;
