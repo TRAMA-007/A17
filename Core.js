@@ -6856,7 +6856,7 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
+        waifuddd = await axios.get('https://pic.re/image/')
         /*var wbuttsssr = [
           {buttonId: `${prefix}waifu`, buttonText: {displayText: `>>`}, type: 1},
           ] */
@@ -6895,19 +6895,46 @@ _Click the button below to download_`
         break;
 
 
+        case 'erooneko':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        reply(mess.waiting)
+        ud = await axios.get('https://waifu.pics/api/nsfw/neko')
+        /*var wbutsss = [
+          {buttonId: `${prefix}erooneko`, buttonText: {displayText: `>>`}, type: 1},
+               ] */
+        let buttonzMessage = {
+          image: { url: ud.data.url },
+          caption: `ايرونيكو مش ميم...`,
+          /*   footer: `${global.BotName}`,
+                 buttons: wbutsss,
+            headerType: 4 */
+        }
+        await A17.sendMessage(m.chat, buttonzMessage, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+        break;
+
+
       case 'loli':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        var animedata = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'))
-        var kairesult = pickRandom(animedata)
-        A17.sendMessage(m.chat, { caption: mess.اتحفنا يا سفاح الاندرايج, image: { url: kairesult.url } }, { quoted: m })
-        break;
+        ud = await axios.get('https://waifu.pics/api/sfw/shinobu')
+        /*var wbutsss = [
+          {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
+               ] */
+        let buttonzMessage = {
+          image: { url: ud.data.url },
+          caption: `اتحفنا يا سفاح الاندرإيج`,
+          /*   footer: `${global.BotName}`,
+                 buttons: wbutsss,
+            headerType: 4 */
         }
-
-        await A17.sendMessage(m.chat, buttonMessagessfgr, { quoted: m }).catch(err => {
-          return ('error..')
+        await A17.sendMessage(m.chat, buttonzMessage, { quoted: m }).catch(err => {
+          return ('Error!')
         })
         break;
 
