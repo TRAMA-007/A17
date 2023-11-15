@@ -6881,7 +6881,7 @@ _Click the button below to download_`
           ]*/
         let buttonMessagessf = {
           image: { url: waifuddd.data.url },
-          caption: 'Nyaa...',
+          caption: 'مياو مياو نيغا ...',
           /*    buttons: wbuttsssr,
               headerType: 2  */
         }
@@ -6909,28 +6909,6 @@ _Click the button below to download_`
         }
 
         await A17.sendMessage(m.chat, buttonMessagessfgr, { quoted: m }).catch(err => {
-          return ('error..')
-        })
-        break;
-
-
-        case 'ايرونيكو':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        waifuddd = await axios.get('https://waifu.pics/api/nsfw/neko')
-        /*var wbuttsssr = [
-          {buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
-          ]*/
-        let buttonMessagessf = {
-          image: { url: waifuddd.data.url },
-          caption: 'ايرونيكو مش ميم...',
-          /*    buttons: wbuttsssr,
-              headerType: 2  */
-        }
-
-        await A17.sendMessage(m.chat, buttonMessagessf, { quoted: m }).catch(err => {
           return ('error..')
         })
         break;
