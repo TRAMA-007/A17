@@ -5807,6 +5807,9 @@ _Click the button below to download_`
       case 'uglycheck':
       case 'قنيطcheck':
       case 'niggacheck':
+      case 'pedocheck':
+      case 'خولنةcheck':
+      case 'breedabiltycheck':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😺", key: m.key } })
@@ -6897,7 +6900,8 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifuddd = await axios.get('https://www.waifu.im/search/?included_tags=raiden-shogun')
+        var lolidata = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'))
+        var kairesult = pickRandom(lolidata)
         /* var wbuttsssr = [
           {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
           ] */
