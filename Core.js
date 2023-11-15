@@ -6154,7 +6154,7 @@ _Click the button below to download_`
       //   if (!m.isGroup) return reply(mess.grouponly);
       //   if (!AntiNsfw) return reply(mess.nonsfw)
       // reply(mess.waiting)
-      //   waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
+      //   waifudd = await axios.get(``)
       // /* let hnekobot = [
       //   {buttonId: `${prefix + command}`, buttonText: {displayText: `>>`}, type: 1},
       //   ] */
@@ -6262,6 +6262,31 @@ _Click the button below to download_`
         let button12ssMessages = {
           image: { url: waifudd.data.url },
           caption: `Awoooo...`,
+          /* footer: `${global.BotName}`,
+          buttons: wbuttsss,
+          headerType: 4 */
+        }
+        await A17.sendMessage(m.chat, button12ssMessages, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+        break;
+
+
+        case 'ايرونيكو':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+
+        reply(mess.waiting)
+        waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
+
+        /* var wbuttsss = [
+   {buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
+   ] */
+        let button12ssMessages = {
+          image: { url: waifudd.data.url },
+          caption: `ايرونيكو مش ميم...`,
           /* footer: `${global.BotName}`,
           buttons: wbuttsss,
           headerType: 4 */
