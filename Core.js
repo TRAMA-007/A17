@@ -6902,14 +6902,8 @@ _Click the button below to download_`
         reply(mess.waiting)
         var animedata = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'))
         var kairesult = pickRandom(animedata)
-        /* var wbuttsssr = [
-          {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
-          ] */
-        let buttonMessagessfgr = {
-          image: { url: waifuddd.data.url },
-          caption: 'اتحفنا يا سفاح الاندرإيج!',
-          /*  buttons: wbuttsssr,
-            headerType: 2 */
+        A17.sendMessage(m.chat, { caption: mess.اتحفنا يا سفاح الاندرايج, image: { url: kairesult.url } }, { quoted: m })
+        break;
         }
 
         await A17.sendMessage(m.chat, buttonMessagessfgr, { quoted: m }).catch(err => {
@@ -7260,7 +7254,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}wallpaper
   ⌯     ${prefix}animequote
  
-
+    
   〢━━━ ♨️ *Informative* ♨️ ━━━〢
   
 
