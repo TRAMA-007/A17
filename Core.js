@@ -6897,7 +6897,7 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifuddd = await axios.get('https://api.lolicon.app/setu/v2?tag=萝莉')
+        waifuddd = await axios.get('https://www.waifu.im/search/?included_tags=raiden-shogun')
         /* var wbuttsssr = [
           {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
           ] */
