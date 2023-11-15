@@ -6316,7 +6316,7 @@ _Click the button below to download_`
 
 
       //
-     /* case 'crossplay': case 'crosplay': case 'cosplay':
+      case 'crossplay': case 'crosplay': case 'cosplay':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -6326,7 +6326,7 @@ _Click the button below to download_`
    {buttonId: '-crossplay', buttonText: {displayText: '>>'}, type: 1},
        ]     */
 
-       /* const cosplybutton = {
+        const cosplybutton = {
           image: { url: 'https://fantox-cosplay-api.onrender.com/' },
           caption: "Guess who am i...",
           /* footer: `${global.BotName}`,
