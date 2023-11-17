@@ -765,6 +765,7 @@ Typed *surrender* to surrender and admited defeat`
       'جلا': `كلامك شين`,
       'ايه': `خدتك عليه `,
       'زبي': `صغير `,
+      'و انا': `انت على زبي' `,
     };
 
     const smallinput = budy.toLowerCase();
@@ -2170,41 +2171,7 @@ Typed *surrender* to surrender and admited defeat`
         }
       }
         break;
-
-
-      case 'youai': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-
-        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
-        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
-
-        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, aiussy!`);
-
-        try {
-          const apiUrl1 = `https://vihangayt.me/tools/youai?q=${encodeURIComponent(q)}`;
-
-          const response1 = await fetch(apiUrl1);
-          const responseData1 = await response1.json();
-
-          let message = "";
-
-          if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
-            message = responseData1.data;
-          } else {
-            return reply("Sorry, I couldn't fetch a response from the API at the moment.");
-          }
-
-          const me = m.sender;
-          await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
-
-        } catch (error) {
-          console.error(error);
-          reply("جلا");
-        }
-      }
-        break;
-
+        
 
       case 'aiussy':
       case 'cai':
@@ -2218,7 +2185,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!q) return reply(`عايز شنو`);
 
         try {
-          const apiUrl1 = `https://vihangayt.me/tools/characterai2?q=${encodeURIComponent(q)}`;
+          const apiUrl1 = `https://vihangayt.me/tools/characterai?q=${encodeURIComponent(q)}`;
 
           const response1 = await fetch(apiUrl1);
           const responseData1 = await response1.json();
