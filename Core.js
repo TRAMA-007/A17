@@ -413,7 +413,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
     if (!isCmd && !m.isGroup){
-        const botreply = await axios.get(`https://vihangayt.me/tools/characterai?q=${encodeURIComponent(q)`)
+        const botreply = await axios.get(`http://api.brainshop.ai/get?bid=166512&key=5nz1Ha6nS9Zx1MfT&uid=[uid]&msg=[msg]=[${budy}]`)
         txt = `${botreply.data.cnt}`
         m.reply(txt)
         }    
@@ -2136,7 +2136,7 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
-     /* case 'chatgpt':
+      case 'chatgpt':
       case 'ai':
       case 'gpt': {
         if (isBan) return reply(mess.banned);
@@ -2169,7 +2169,7 @@ Typed *surrender* to surrender and admited defeat`
           reply("An error occurred while fetching the response from the API.");
         }
       }
-        break;*/
+        break;
 
 
       case 'dalle': case 'imgai': {
