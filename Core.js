@@ -2172,9 +2172,7 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
-      case 'characterai':
-      case 'cai':
-      case 'aiussy': {
+      case 'youai': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
@@ -2184,7 +2182,43 @@ Typed *surrender* to surrender and admited defeat`
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, aiussy!`);
 
         try {
-          const apiUrl1 = `https://vihangayt.me/tools/characterai?q=${encodeURIComponent(q)}`;
+          const apiUrl1 = `https://vihangayt.me/tools/youai?q=${encodeURIComponent(q)}`;
+
+          const response1 = await fetch(apiUrl1);
+          const responseData1 = await response1.json();
+
+          let message = "";
+
+          if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
+            message = responseData1.data;
+          } else {
+            return reply("Sorry, I couldn't fetch a response from the API at the moment.");
+          }
+
+          const me = m.sender;
+          await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
+
+        } catch (error) {
+          console.error(error);
+          reply("جلا");
+        }
+      }
+        break;
+
+
+      case 'chatgpt':
+      case 'ai':
+      case 'gpt': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+
+        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
+        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
+
+        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
+
+        try {
+          const apiUrl1 = `https://vihangayt.me/tools/chatgpt2?q=${encodeURIComponent(q)}`;
 
           const response1 = await fetch(apiUrl1);
           const responseData1 = await response1.json();
@@ -7102,8 +7136,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}revoke
   ⌯     ${prefix}tagall
   ⌯     ${prefix}hidetag
-  ⌯     ${prefix}nsfw
-  ⌯     ${prefix}nsnfwmenu
 
 
   〢━━━❗ *Anti Link ❗* ━━━〢
@@ -7138,6 +7170,9 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}image
   ⌯     ${prefix}searchgc
   ⌯     ${prefix}wikimedia
+  ⌯     ${prefix}gpt
+  ⌯     ${prefix}youai
+  ⌯     ${prefix}characterai
 
 
   〢━━━ 📈 *Economy* 📈 ━━━〢
@@ -7322,15 +7357,11 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}report
   ⌯     ${prefix}afk
   ⌯     ${prefix}darkjoke واقفة حاليا 
+  ⌯     ${prefix}pick
 
 
   〢━━━ ⚠️ *الكمونية(واقفة حاليا)* ⚠️ ━━━〢
  
-  ⌯   🍁 Type *${prefix}nsfw* then enable 
-  ⌯       NSFW (Admin only!)
-  ⌯    
-  ⌯   🍁 Then type *${prefix}nsfwmenu* for
-  ⌯       all NSFW commands.
   ⌯    
   ⌯   『  *${global.BotName}*  』
   ⌯       Developed By: *braa Mohammad*
