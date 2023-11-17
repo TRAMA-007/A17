@@ -5210,7 +5210,7 @@ _Click the button below to download_`
 
       
         	
-      case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
+  /*    case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
           if (isBan) return reply(mess.banned);	 			
        if (isBanChat) return reply(mess.bangc);
        A17.sendMessage(from, { react: { text: "🍁" , key: m.key }}) 
