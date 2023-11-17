@@ -2206,19 +2206,19 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
-      case 'chatgpt':
-      case 'ai':
-      case 'gpt': {
+      case 'aiussy':
+      case 'cai':
+      case 'characterai': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
         const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
         A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
 
-        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
+        if (!q) return reply(`عايز شنو`);
 
         try {
-          const apiUrl1 = `https://vihangayt.me/tools/chatgpt2?q=${encodeURIComponent(q)}`;
+          const apiUrl1 = `https://vihangayt.me/tools/characterai2?q=${encodeURIComponent(q)}`;
 
           const response1 = await fetch(apiUrl1);
           const responseData1 = await response1.json();
@@ -2228,7 +2228,7 @@ Typed *surrender* to surrender and admited defeat`
           if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
             message = responseData1.data;
           } else {
-            return reply("Sorry, I couldn't fetch a response from the API at the moment.");
+            return reply("جلا");
           }
 
           const me = m.sender;
