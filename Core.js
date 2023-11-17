@@ -2172,6 +2172,42 @@ Typed *surrender* to surrender and admited defeat`
         break;
 
 
+      case 'characterai':
+      case 'cai':
+      case 'aiussy': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+
+        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
+        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
+
+        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, aiussy!`);
+
+        try {
+          const apiUrl1 = `https://vihangayt.me/tools/characterai?q=${encodeURIComponent(q)}`;
+
+          const response1 = await fetch(apiUrl1);
+          const responseData1 = await response1.json();
+
+          let message = "";
+
+          if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
+            message = responseData1.data;
+          } else {
+            return reply("Sorry, I couldn't fetch a response from the API at the moment.");
+          }
+
+          const me = m.sender;
+          await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
+
+        } catch (error) {
+          console.error(error);
+          reply("An error occurred while fetching the response from the API.");
+        }
+      }
+        break;
+
+
       case 'dalle': case 'imgai': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
