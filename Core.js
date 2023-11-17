@@ -5208,7 +5208,7 @@ _Click the button below to download_`
         break;
 
 
-      /*
+      
         	
       case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
           if (isBan) return reply(mess.banned);	 			
