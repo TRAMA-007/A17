@@ -6369,29 +6369,7 @@ _Click the button below to download_`
         break;
 
 
-      
-      case 'touhou':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        waifudd = await axios.get(`https://fantox-apis.vercel.app/touhou`)
-        /*        var wbuttsss = [
-{buttonId: `${prefix}touhou`, buttonText: {displayText: `>>`}, type: 1},
-] */
-        let button112ssMessages = {
-          image: { url: waifudd.data.url },
-          caption: `can't have shit in gensokyo...`,
-          /*   footer: `${global.BotName}`,
-             buttons: wbuttsss,
-             headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, button112ssMessages, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break;
-
-
+      //
       case 'feed':
       case 'meow':
       case 'tickle':
