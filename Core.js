@@ -886,6 +886,12 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
+    if (smallinput.includes('اسمك منو')) {
+    reply (`لو مهتم كان عرفت`);
+          }
+
+
+
 
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -7047,7 +7053,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
 
 
-  ⌯    *if you want to add me to your group.. Join the support group by typing ${prefix}support or dm my owner by typing ${prefix}owner
+  ⌯    *if you want to add me to your group.. Join the support group by typing ${prefix}support or dm my owner by typing ${prefix}owner*
 
 
   ⌯    *Time* : ${kaitime}
