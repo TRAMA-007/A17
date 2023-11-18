@@ -876,7 +876,7 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
-    if (smallinput.includes('يوي احسن')|| smallinput.includes('يوي احلى') || smallinput.includes('يوي عسل')) || smallinput.includes('يوي احلا')) {
+    if (smallinput.includes('يوي احلى')|| smallinput.includes('يوي احسن') || smallinput.includes('يوي عسل')) {
     reply (`يوي التنيكك يا كسم ما تحشر لينا`);
     }
 
