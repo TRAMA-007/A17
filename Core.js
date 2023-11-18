@@ -6347,18 +6347,18 @@ _Click the button below to download_`
         break;
 
 
-      case 'waifu3':
+      case 'touhou':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`)
+        waifudd = await axios.get(`https://fantox-apis.vercel.app/touhou`)
         /*        var wbuttsss = [
-{buttonId: `${prefix}waifu3`, buttonText: {displayText: `>>`}, type: 1},
+{buttonId: `${prefix}touhou`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button112ssMessages = {
           image: { url: waifudd.data.url },
-          caption: `Here it is...`,
+          caption: `can't have shit in gensokyo...`,
           /*   footer: `${global.BotName}`,
              buttons: wbuttsss,
              headerType: 4 */
