@@ -6395,19 +6395,19 @@ _Click the button below to download_`
         break;
 
 
-      case 'neko2':
+      case 'ايرونيكو':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
 
-        waifud = await axios.get('https://waifu.pics/api/sfw/neko')
+        waifud = await axios.get('https://fantox-apis.vercel.app/catgirl')
         var wbutsss = [
-          { buttonId: `${prefix}neko2`, buttonText: { displayText: `>>` }, type: 1 },
+          { buttonId: `${prefix}ايرونيكو`, buttonText: { displayText: `>>` }, type: 1 },
         ]
         let buttonssMessage = {
           image: { url: waifud.data.url },
-          caption: `Here it is...`,
+          caption: `life is too short to argue just type eroneko and move on...`,
           footer: `${global.BotName}`,
           buttons: wbutsss,
           headerType: 4
@@ -6719,28 +6719,6 @@ _Click the button below to download_`
         let buttonzMessage = {
           image: { url: ud.data.url },
           caption: `Here it is...`,
-          /*   footer: `${global.BotName}`,
-                 buttons: wbutsss,
-            headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, buttonzMessage, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break;
-
-
-      case 'ايرونيكو':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        ud = await axios.get('https://fantox-apis.vercel.app/catgirl')
-        /*var wbutsss = [
-          {buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
-               ] */
-        let buttonzMessage = {
-          image: { url: ud.data.url },
-          caption: `ايرونيكو مش ميم...`,
           /*   footer: `${global.BotName}`,
                  buttons: wbutsss,
             headerType: 4 */
