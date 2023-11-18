@@ -6370,19 +6370,19 @@ _Click the button below to download_`
 
 
       //
-      case 'crossplay': case 'crosplay': case 'cosplay':
+      case 'touhou': case '2hu': case 'toho':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
         /*   const buttons = [
-   {buttonId: '-crossplay', buttonText: {displayText: '>>'}, type: 1},
+   {buttonId: '-touhou', buttonText: {displayText: '>>'}, type: 1},
        ]     */
 
         const cosplybutton = {
-          image: { url: 'https://fantox-cosplay-api.onrender.com/' },
-          caption: "Guess who am i...",
+          image: { url: 'https://fantox-apis.vercel.app/touhou' },
+          caption: "can't have shit in gensokyo...",
           /* footer: `${global.BotName}`,
            buttons: buttons,
            headerType: 4 */
@@ -6392,28 +6392,6 @@ _Click the button below to download_`
           return ('Error!')
         })
 
-        break;
-
-
-      case 'ايرونيكو':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        ud = await axios.get('https://fantox-apis.vercel.app/catgirl')
-        /*var wbutsss = [
-          {buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
-               ] */
-        let buttonzMessage = {
-          image: { url: ud.data.url },
-          caption: `ايرونيكو مش ميم...`,
-          /*   footer: `${global.BotName}`,
-                 buttons: wbutsss,
-            headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, buttonzMessage, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
         break;
 
 
