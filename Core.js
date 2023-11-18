@@ -6369,7 +6369,7 @@ _Click the button below to download_`
         break;
 
 
-      //
+      
       case 'touhou':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
