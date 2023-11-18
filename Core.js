@@ -7035,7 +7035,7 @@ _Click the button below to download_`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
-        const helpmenu = `Hemlo *${pushname}* Dear...!! ${nowtime} ,
+        const helpmenu = `Hemlo *${pushname}* sensei...!! ${nowtime} ,
   
 Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 
