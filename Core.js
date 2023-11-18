@@ -881,6 +881,12 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('فنيط')) {
+    reply (`جرحت مشاعري 😔`);
+          }
+
+
+
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
 
@@ -990,7 +996,7 @@ Typed *surrender* to surrender and admited defeat`
         if (isBanChat) return reply(mess.bangc);
 
         A17.sendMessage(from, { react: { text: "💫", key: m.key } })
-        reply(`⚙ *My developer's group:* ⚙ http://gg.gg/12ewfs`)
+        reply(`⚙ *My developer's group:* ⚙ https://chat.whatsapp.com/KJKxoW0FmOeLLv7etC6e5Y`)
       }
         break;
 
