@@ -7046,6 +7046,10 @@ _Click the button below to download_`
 Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 
 
+
+  ⌯    *if you want to add me to your group.. Join the support group by typing ${prefix}support or dm my owner by typing ${prefix}owner
+
+
   ⌯    *Time* : ${kaitime}
   ⌯    *Date* : ${kaidate}
 
