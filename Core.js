@@ -6280,17 +6280,17 @@ _Click the button below to download_`
 
 
       //
-      case 'smug2':
+      case 'لولي':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://nekos.life/api/v2/img/smug`)
+        waifudd = await axios.get(`https://fantox-apis.vercel.app/loli`)
         /*       var wbuttsss = [
-{buttonId: `${prefix}smug2`, buttonText: {displayText: `>>`}, type: 1},
+{buttonId: `${prefix}لولي`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button1ssMessages = {
           image: { url: waifudd.data.url },
-          caption: `Here it is...`,
+          caption: `اتحفنا يا سفاح الاندرايج...`,
           /*  footer: `${global.BotName}`,
             buttons: wbuttsss,
             headerType: 4 */
@@ -6326,18 +6326,18 @@ _Click the button below to download_`
         break;
         
 
-      case 'animenom':
+      case 'touhou':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://waifu.pics/api/sfw/nom`)
+        waifudd = await axios.get(`https://fantox-apis.vercel.app/touhou`)
         /*  let xxhnekobot = [
-          {buttonId: `${prefix}animenom`, buttonText: {displayText: `>>`}, type: 1},
+          {buttonId: `${prefix}touhou`, buttonText: {displayText: `>>`}, type: 1},
           ]  */
         let xx1button3Messages = {
           image: { url: waifudd.data.url },
-          caption: `Here it is...`,
+          caption: `can't have shit in gensokyo...`,
           /*  buttons: xxhnekobot,
           headerType: 1 */
         }
