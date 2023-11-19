@@ -5878,7 +5878,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🤧", key: m.key } })
 
         if (!text) return reply(`Tag Someone, Example : ${prefix + command} @Kai`)
-        const A17tttt = ['Compassionate', 'Generous', 'Grumpy', 'Forgiving', 'Obedient', 'Good', 'Simp', 'Kind-Hearted', 'patient', 'UwU', 'top, anyway', 'Helpful']
+        const A17tttt = ['قنيط', 'عب', 'خول', 'معرص', 'كلجة', 'عب قاتشا', 'قافل الشغل', 'فاتح الشغل', 'عب كراتين صينية', 'بوت', 'نجاو ساي, مصري', 'نيرد']
         const taky = A17tttt[Math.floor(Math.random() * A17tttt.length)]
         A17.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
         break;
@@ -6347,18 +6347,18 @@ _Click the button below to download_`
         break;
 
 
-      case 'touhou':
+      case 'ايرونيكو':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://fantox-apis.vercel.app/touhou`)
+        waifudd = await axios.get(`https://fantox-apis.vercel.app/catgirl`)
         /*        var wbuttsss = [
-{buttonId: `${prefix}touhou`, buttonText: {displayText: `>>`}, type: 1},
+{buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button112ssMessages = {
           image: { url: waifudd.data.url },
-          caption: `can't have shit in gensokyo...`,
+          caption: `ايرونيكو مش ميم...`,
           /*   footer: `${global.BotName}`,
              buttons: wbuttsss,
              headerType: 4 */
