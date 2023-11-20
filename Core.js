@@ -906,6 +906,11 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('سولز')) {
+    reply (`يخسييي في فان سولز هنا🤢🤮`);
+    }
+
+
 
 
 
