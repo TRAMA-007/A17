@@ -896,6 +896,11 @@ Typed *surrender* to surrender and admited defeat`
   }
 
 
+    if (smallinput.includes('وأنا')) {
+    reply (`انت على زبي😂`);
+    }
+
+
 
 
 
