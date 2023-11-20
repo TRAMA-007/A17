@@ -877,7 +877,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('يوي احلى')|| smallinput.includes('يوي احسن') || smallinput.includes('يوي عسل')) {
-    reply (`يوي التنيكك يا كسم ما تحشر لينا`);
+    reply (`و انا`);
     }
 
 
@@ -914,6 +914,11 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('دا شنو')) {
     reply (`شمبورة فيل تقدر تشيل 😂`);
       }
+
+
+    if (smallinput.includes('@201501519655')) {
+    reply (`اي تاقي لي صقرك دا كويس😂`);
+  }
 
 
 
