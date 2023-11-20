@@ -911,6 +911,11 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('دا شنو')) {
+    reply (`شمبورة فيل تقدر تشيل 😂`);
+      }
+
+
 
 
 
