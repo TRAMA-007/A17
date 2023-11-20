@@ -901,6 +901,11 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('@249905898290')) {
+    reply (`اي تاقي صقرك دا كويس😂`);
+    }
+
+
 
 
 
