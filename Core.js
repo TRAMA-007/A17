@@ -881,14 +881,19 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('فنيط')) {
-    reply (`جرحت مشاعري 😔`);
+    if (smallinput.includes('قنيط')) {
+    reply (`الفاظك لو سمحت`);
           }
 
 
     if (smallinput.includes('اسمك منو')) {
     reply (`لو مهتم كان عرفت`);
           }
+
+
+    if (smallinput.includes('@249127591317')) {
+    reply (`عايز شنو`);
+  }
 
 
 
