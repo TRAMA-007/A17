@@ -5891,6 +5891,7 @@ _Click the button below to download_`
       case 'uglycheck':
       case 'قنيطcheck':
       case 'niggacheck':
+      case 'ضعفجنسيcheck':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😺", key: m.key } })
@@ -5908,7 +5909,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🤧", key: m.key } })
 
         if (!text) return reply(`Tag Someone, Example : ${prefix + command} @Kai`)
-        const A17tttt = ['قنيط', 'عب', 'خول', 'معرص', 'كلجة', 'عب قاتشا', 'قافل الشغل', 'فاتح الشغل', 'عب كراتين صينية', 'بوت', 'نجاو ساي, مصري', 'نيرد']
+        const A17tttt = ['قنيط', 'عب', 'خول', 'معرص', 'كلجة', 'عب قاتشا', 'قافل الشغل', 'فاتح الشغل', 'عب كراتين صينية', 'بوت', 'نجاو ساي , مصري', 'نيرد']
         const taky = A17tttt[Math.floor(Math.random() * A17tttt.length)]
         A17.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
         break;
@@ -7267,7 +7268,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}hornychec
   ⌯     ${prefix}prettycheck
   ⌯     ${prefix}lovelycheck
-  ⌯     ${prefix}قنيطcheck
   ⌯     ${prefix}niggacheck
 
 
