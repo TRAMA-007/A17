@@ -901,8 +901,8 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('@249905898290')) {
-    reply (`اي تاقي صقرك دا كويس😂`);
+    if (smallinput.includes('وينك')) {
+    reply (`لو مهتم كان عرفت`);
     }
 
 
@@ -916,8 +916,8 @@ Typed *surrender* to surrender and admited defeat`
       }
 
 
-    if (smallinput.includes('@201501519655')) {
-    reply (`اي تاقي لي صقرك دا كويس😂`);
+    if (smallinput.includes('الحاصل')) {
+    reply (`لباسك ناصل`);
   }
 
 
