@@ -412,13 +412,13 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
     
-    if (!isCmd && !m.isGroup){
+   /*   if (!isCmd && !m.isGroup){
         const botreply = await axios.get(`http://api.brainshop.ai/get?bid=166512&key=5nz1Ha6nS9Zx1MfT&uid=[uid]&msg=[msg]=[${budy}]`)
         txt = `${botreply.data.cnt}`
         m.reply(txt)
-        }    
+        }  
         
-     
+     */
 
 
 
@@ -2225,16 +2225,7 @@ Typed *surrender* to surrender and admited defeat`
         break;
         
 
-      case 'aiussy':
-      case 'cai':
-      case 'characterai': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-
-        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
-        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
-
-        if (!q) return reply(`عايز شنو`);
+      if (!isCmd && !m.isGroup){
 
         try {
           const apiUrl1 = `https://vihangayt.me/tools/characterai?q=${encodeURIComponent(q)}`;
