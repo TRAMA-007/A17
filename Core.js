@@ -921,6 +921,11 @@ Typed *surrender* to surrender and admited defeat`
   }
 
 
+    if (smallinput.includes('بنيكك')|| smallinput.includes('ببلك') || smallinput.includes('بحشك')) {
+    reply (`كلام بدون افعال🤏🤭`);
+    }
+
+
 
 
 
