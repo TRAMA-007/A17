@@ -896,9 +896,9 @@ Typed *surrender* to surrender and admited defeat`
   }
 
 
-    if (smallinput.includes('وأنا')) {
+    /*if (smallinput.includes('وأنا')) {
     reply (`انت على زبي😂`);
-    }
+    }*/
 
 
     if (smallinput.includes('وينك')) {
@@ -923,6 +923,16 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('بنيكك')|| smallinput.includes('ببلك') || smallinput.includes('بحشك')) {
     reply (`كلام بدون افعال🤏🤭`);
+    }
+
+
+    if (smallinput.includes('نيك امك')|| smallinput.includes('نيك ابوك') || smallinput.includes('عايز كسك')) {
+    reply (`كلام بدون أفعال يا عديم الزب`);
+    }
+
+
+    if (smallinput.includes('عايز انيكك')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
+    reply (`بي زبك دا الا لو داير تكلكلني`);
     }
 
 
@@ -2225,7 +2235,16 @@ Typed *surrender* to surrender and admited defeat`
         break;
         
 
-      if (!isCmd && !m.isGroup){
+      case 'aiussy':
+      case 'cai':
+      case 'characterai': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+
+        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
+        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
+
+        if (!q) return reply(`try talking to real girls next time`);
 
         try {
           const apiUrl1 = `https://vihangayt.me/tools/characterai?q=${encodeURIComponent(q)}`;
