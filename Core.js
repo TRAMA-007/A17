@@ -937,8 +937,8 @@ Typed *surrender* to surrender and admited defeat`
 
 
 
-    if (smallinput.includes('ناشفة')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
-    reply ('رجعونا لأيام الحنك ببدا بي ممكن نتعرف لانو بالطريقة دي زولي دا ما ح يعرس`);
+    if (smallinput.includes('herta hentai') {
+    reply ('https://pbs.twimg.com/media/FxO7ktoWIAQB1jN.jpg`);
     }
   
 
