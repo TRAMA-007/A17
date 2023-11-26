@@ -896,8 +896,8 @@ Typed *surrender* to surrender and admited defeat`
   }
 
 
-    if (smallinput.includes('heerta hentai')) {
-    await getBuffer (`https://pbs.twimg.com/media/FxO7ktoWIAQB1jN.jpg`);
+    if (smallinput.includes('ناشفة')) {
+    reply (`رجعونا لأيام الحنك كان ببدا بي ممكن نتعرف لأنو بالطريقة دي زولي دا ما ح يعرس`);
     }
 
 
