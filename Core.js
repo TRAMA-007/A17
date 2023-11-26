@@ -934,12 +934,6 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('عايز انيكك')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
     reply (`بي زبك دا الا لو داير تكلكلني`);
     }
-
-
-
-    if (smallinput.includes('herta hentai') {
-    reply ('https://pbs.twimg.com/media/FxO7ktoWIAQB1jN.jpg`);
-    }
   
 
     if (smallinput.includes('هيرتا')) {
