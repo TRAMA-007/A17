@@ -934,7 +934,13 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('عايز انيكك')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
     reply (`بي زبك دا الا لو داير تكلكلني`);
     }
-    
+
+
+
+    if (smallinput.includes('ناشفة')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
+    reply ('رجعونا لأيام الحنك ببدا بي ممكن نتعرف لانو بالطريقة دي زولي دا ما ح يعرس`);
+    }
+  
 
     if (smallinput.includes('هيرتا')) {
     reply (` ما بقدر اتحمل بعد دا.. وين الدوجينز؟؟؟؟! 
@@ -6058,7 +6064,7 @@ _Click the button below to download_`
           "make any tiktok dance challenge video and put it on status, u can delete it after 5hrs",
           "break;up with your best friend for 5hrs without telling him/her that its a dare",
           "tell one of your frnd that u love him/her and wanna marry him/her, without telling him/her that its a dare",
-          "say i love depak kalal through voice note",
+          "say انا لوطي عايز اتناك through voice note",
           "write i am feeling horny and put it on status, u can delete it only after 5hrs",
           "write i am lesbian and put it on status, u can delete only after 5hrs",
           "kiss your mommy or papa and say i love you😌",
