@@ -934,12 +934,7 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('عايز انيكك')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
     reply (`بي زبك دا الا لو داير تكلكلني`);
     }
-
-
-    if (smallinput.includes('ناشفة') {
-    reply (`رجعونا لي ايام الحنك كان ببدأ بي ممكن نتعرف لانو بالطريقة دي زولي دا ما ح يعرس`);
-                            }
-
+    
 
     if (smallinput.includes('هيرتا')) {
     reply (` ما بقدر اتحمل بعد دا.. وين الدوجينز؟؟؟؟! 
