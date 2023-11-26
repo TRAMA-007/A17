@@ -896,7 +896,7 @@ Typed *surrender* to surrender and admited defeat`
   }
 
 
-    if (smallinput.includes('herta hentai')) {
+    if (smallinput.includes('heerta hentai')) {
     await getBuffer (`https://pbs.twimg.com/media/FxO7ktoWIAQB1jN.jpg`);
     }
 
