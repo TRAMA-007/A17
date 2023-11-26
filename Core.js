@@ -980,8 +980,12 @@ And sooo..
 THAT KURUKURUSSY MUST BE DIVINE ☝️
 I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`);
+   } 
+    
+    
+ if (smallinput.includes('ناشفة')|| smallinput.includes('ناشفه') {
+    reply (`رجعونا لي ايام الحنك كان ببدأ بي"ممكن نتعرف"..لانو بالطريقة دي زولي دا ما ح يعرس😔`);
     }
-
 
 
 
