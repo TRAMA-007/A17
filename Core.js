@@ -936,7 +936,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('ناشفة')|| smallinput.includes('ناشفه') {
+    if (smallinput.includes('ناشفة') {
     reply (`رجعونا لي ايام الحنك كان ببدأ بي ممكن نتعرف..لانو بالطريقة دي زولي دا ما ح يعرس`);
                             }
 
