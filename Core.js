@@ -784,9 +784,9 @@ Typed *surrender* to surrender and admited defeat`
             }
 
   
-    /*if (smallinput.includes('ايه')|| smallinput.includes('إيه') || smallinput.includes('أيه')) {
-    reply (`خدتك عليه`);
-    }*/
+    if (smallinput.includes('سم شاك')|| smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
+    reply (`يا اروالي ويا اروالي سرى الليل يا اروالي عب الناكك و ختاهو ليك طوالي 😂🫵 `);
+            }
 
 
     if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
