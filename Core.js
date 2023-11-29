@@ -766,6 +766,10 @@ Typed *surrender* to surrender and admited defeat`
       'ايه': `خدتك عليه `,
       'زبي': `صغير `,
       'و انا': `انت على زبي' `,
+      'وانا': `انت على زبي' `,
+      'و أنا': `انت على زبي' `,
+      'وأنا': `انت على زبي' `,
+      'ايه': `ارقعك واحد امبليه`,
     };
 
     const smallinput = budy.toLowerCase();
@@ -5832,7 +5836,7 @@ _Click the button below to download_`
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia)
         } else {
-          reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Seconds`)
+          reply(`رسل الصورة العايز تحولها لستيكر يا غبي`)
         }
       }
         break;
@@ -5953,6 +5957,7 @@ _Click the button below to download_`
       case 'قنيطcheck':
       case 'niggacheck':
       case 'ضعفجنسيcheck':
+      case 'خولنةcheck':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😺", key: m.key } })
@@ -5983,38 +5988,38 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🌝", key: m.key } })
 
         const dare = [
-          "eat 2 tablespoons of rice without any side dishes, if it's dragging you can drink",
-          "spill people who make you pause",
-          "call crush/pickle now and send ss",
-          "drop only emote every time you type on gc/pc for 1 day.",
-          "say Welcome to Who Wants To Be a Millionaire! to all the groups you have",
-          "call ex saying miss",
+          "eat 2 tablespoons of salt",
+          "send nudes",
+          "call your crush and send nudes",
+          "kill yourself.",
+          "say Welcome to Who Wants To fuck me! to all the groups you have",
+          "call ex saying مشتاقين",
           "sing the chorus of the last song you played",
-          "vn your ex/crush/girlfriend, says hi (name), wants to call, just a moment. I miss🥺👉🏼👈🏼",
+          "vn your ex/crush/girlfriend, says hi (name), wants to call, just a moment. I miss you😔",
           "Bang on the table (which is at home) until you get scolded for being noisy",
-          "Tell random people - I was just told I was your twin first, we separated, then I had plastic surgery. And this is the most ciyusss_ thing",
+          "Tell random people - I was just told I was your twin first, we separated, then I had plastic surgery",
           "mention ex's name",
-          "make 1 rhyme for the members!",
+          "رسل 10 الف بنكك!",
           "send ur whatsapp chat list",
-          "chat random people with gheto language then ss here",
+          "chat random people with Japanese",
           "tell your own version of embarrassing things",
           "tag the person you hate",
           "Pretending to be possessed, for example: possessed by dog, possessed by grasshoppers, possessed by refrigerator, etc.",
-          "change name to *I AM DONKEY* for 24 hours",
-          "shout *ma chuda ma chuda ma chuda* in front of your house",
+          "change name to *I AM A WHORE* for 24 hours",
+          "shout *انا عرمان* in front of your house",
           "snap/post boyfriend photo/crush",
           "tell me your boyfriend type!",
           "say *i hv crush on you, do you want to be my girlfriend?* to the opposite sex, the last time you chatted (submit on wa/tele), wait for him to reply, if you have, drop here",
-          "record ur voice that read *titar ke age do titar, titar ke piche do titar*",
+          "record ur voice and say i love you plana*",
           "prank chat ex and say *i love u, please come back.* without saying dare!",
           "chat to contact wa in the order according to your battery %, then tell him *i am lucky to hv you!*",
-          "change the name to *I am a child of randi* for 5 hours",
-          "type in bengali 24 hours",
-          "Use selmon bhoi photo for 3 days",
+          "change the name to *I am a slave for plana* for 5 hours",
+          "type in Saudi for 24 hours",
+          "Use my photo as pfp for 3 days",
           "drop a song quote then tag a suitable member for that quote",
           "send voice note saying can i call u baby?",
-          "ss recent call whatsapp",
-          "Say *YOU ARE SO BEAUTIFUL DON'T LIE* to guys!",
+          "send recent call on whatsapp",
+          "Say *YOU ARE SO BEAUTIFUL DON'T LIE* to a random guy!",
           "pop to a group member, and say fuck you",
           "Act like a chicken in front of ur parents",
           "Pick up a random book and read one page out loud in vn n send it here",
@@ -6022,8 +6027,8 @@ _Click the button below to download_`
           "Take an embarrassing selfie and paste it on your profile picture",
           "Let the group choose a word and a well known song. You have to sing that song and send it in voice note",
           "Walk on your elbows and knees for as long as you can",
-          "sing national anthem in voice note",
-          "break;dance for 30 seconds in the sitting room😂",
+          "sing blue archive main theme in voice note",
+          "break;dance for 30 seconds in the sitting room",
           "Tell the saddest story you know",
           "make a twerk dance video and put it on status for 5mins",
           "Eat a raw piece of garlic",
@@ -6032,21 +6037,21 @@ _Click the button below to download_`
           "make a short dance video without any filter just with a music and put it on ur status for 5hrs",
           "call ur bestie, bitch",
           "put your photo without filter on ur status for 10mins",
-          "say i love oli london in voice note🤣🤣",
+          "say i love braa in voice note",
           "Send a message to your ex and say I still like you",
           "call Crush/girlfriend/bestie now and screenshot here",
           "pop to one of the group member personal chat and Say you ugly bustard",
           "say YOU ARE BEAUTIFUL/HANDSOME to one of person who is in top of ur pinlist or the first person on ur chatlist",
           "send voice notes and say, can i call u baby, if u r boy tag girl/if girl tag boy",
-          "write i love you (random grup member name, who is online) in personal chat, (if u r boy write girl name/if girl write boy name) take a snap of the pic and send it here",
-          "use any bollywood actor photo as ur pfp for 3 days",
+          "write i love you (random group member name, who is online) in personal chat, (if u r boy write girl name/if girl write boy name) take a snap of the pic and send it here",
+          "use any blue archive character as your pfp for 3 days",
           "put your crush photo on status with caption, this is my crush",
           "change name to I AM GAY for 5 hours",
           "chat to any contact in whatsapp and say i will be ur bf/gf for 5hours",
           "send voice note says i hv crush on you, want to be my girlfriend/boyfriend or not? to any random person from the grup(if u girl choose boy, if boy choose girl",
-          "slap ur butt hardly send the sound of slap through voice note😂",
+          "slap ur butt hardly send the sound of slap through voice note😋",
           "state ur gf/bf type and send the photo here with caption, ugliest girl/boy in the world",
-          "shout bravooooooooo and send here through voice note",
+          "shout عايز انيكand send here through voice note",
           "snap your face then send it here",
           "Send your photo with a caption, i am lesbian",
           "shout using harsh words and send it here through vn",
@@ -6079,7 +6084,7 @@ _Click the button below to download_`
         const truth = [
           "Have you ever liked anyone? How long?",
           "If you can or if you want, which gc/outside gc would you make friends with? (maybe different/same type)",
-          "apa ketakutan terbesar kamu?",
+          "اخبار السكس كيف?",
           "Have you ever liked someone and felt that person likes you too?",
           "What is the name of your friend's ex-girlfriend that you used to secretly like?",
           "Have you ever stolen money from your father or mom? The reason?",
