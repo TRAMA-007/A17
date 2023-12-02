@@ -5359,7 +5359,7 @@ _Click the button below to download_`
 
       
         	
-  /*    case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
+      case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
           if (isBan) return reply(mess.banned);	 			
        if (isBanChat) return reply(mess.bangc);
        A17.sendMessage(from, { react: { text: "🍁" , key: m.key }}) 
@@ -5400,7 +5400,7 @@ _Click the button below to download_`
        }
        break;
       
-      */
+      
 
 
       /// Normal
@@ -6377,17 +6377,17 @@ _Click the button below to download_`
 
 
       //
-      case 'لولي':
+      case 'قدور':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         reply(mess.waiting)
         waifudd = await axios.get(`https://fantox-apis.vercel.app/loli`)
         /*       var wbuttsss = [
-{buttonId: `${prefix}لولي`, buttonText: {displayText: `>>`}, type: 1},
+{buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button1ssMessages = {
           image: { url: waifudd.data.url },
-          caption: `اتحفنا يا سفاح الاندرايج...`,
+          caption: `تاقيهو ما تخليهو...`,
           /*  footer: `${global.BotName}`,
             buttons: wbuttsss,
             headerType: 4 */
@@ -6396,26 +6396,6 @@ _Click the button below to download_`
           return ('Error!')
         })
         break;
-
-        
-        case 'play':
-          if (isBan) return reply(mess.banned);
-        reply(mess.waiting)
-        waifudd = await axios.get(`https://c.wallhere.com/photos/93/2e/anime_anime_girls_Blue_Archive_arona_blue_archive_pantyhose_black_pantyhose_portrait_display_nimbus-2236132.jpg`)
-        /*       var wbuttsss = [
-{buttonId: `${prefix}play`, buttonText: {displayText: `>>`}, type: 1},
-] */
-        let button1ssMessages = {
-          image: { url: waifudd.data.url },
-          caption: `هذا الأمر متوقف مؤقتا...`,
-          /*  footer: `${global.BotName}`,
-            buttons: wbuttsss,
-            headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break; 
         
 
       case 'foxgirl':
