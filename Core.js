@@ -6387,7 +6387,7 @@ _Click the button below to download_`
 ] */
         let button1ssMessages = {
           image: { url: waifudd.data.url },
-          caption: `تاقيهو ما تخليهو...`,
+          caption: `😹تاقيهو ما تخليهو...`,
           /*  footer: `${global.BotName}`,
             buttons: wbuttsss,
             headerType: 4 */
