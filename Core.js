@@ -5419,7 +5419,7 @@ _Click the button below to download_`
       // break;
 
 
-      case 'play':
+    /*  case 'play':
       case 'song':
       case 'music': {
         if (isBan) return reply(mess.banned);
@@ -5468,7 +5468,7 @@ _Click the button below to download_`
         // Rest of the code remains unchanged.
         // ...
       }
-        break;
+        break; */
 
       case 'spotify': {
         if (isBan) return reply(mess.banned);
@@ -6397,6 +6397,66 @@ _Click the button below to download_`
         })
         break;
 
+        
+        case 'play':
+          if (isBan) return reply(mess.banned);
+        reply(mess.waiting)
+        waifudd = await axios.get(`https://c.wallhere.com/photos/93/2e/anime_anime_girls_Blue_Archive_arona_blue_archive_pantyhose_black_pantyhose_portrait_display_nimbus-2236132.jpg!s2`)
+        /*       var wbuttsss = [
+{buttonId: `${prefix}play`, buttonText: {displayText: `>>`}, type: 1},
+] */
+        let button1ssMessages = {
+          image: { url: waifudd.data.url },
+          caption: `هذا الأمر متوقف مؤقتا...`,
+          /*  footer: `${global.BotName}`,
+            buttons: wbuttsss,
+            headerType: 4 */
+        }
+        await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+        break; 
+
+
+        case 'song':
+          if (isBan) return reply(mess.banned);
+        reply(mess.waiting)
+        waifudd = await axios.get(`https://c.wallhere.com/photos/93/2e/anime_anime_girls_Blue_Archive_arona_blue_archive_pantyhose_black_pantyhose_portrait_display_nimbus-2236132.jpg!s2`)
+        /*       var wbuttsss = [
+{buttonId: `${prefix}song`, buttonText: {displayText: `>>`}, type: 1},
+] */
+        let button1ssMessages = {
+          image: { url: waifudd.data.url },
+          caption: `هذا الأمر متوقف مؤقتا...`,
+          /*  footer: `${global.BotName}`,
+            buttons: wbuttsss,
+            headerType: 4 */
+        }
+        await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+        break;
+
+
+        case 'music':
+          if (isBan) return reply(mess.banned);
+        reply(mess.waiting)
+        waifudd = await axios.get(`https://c.wallhere.com/photos/93/2e/anime_anime_girls_Blue_Archive_arona_blue_archive_pantyhose_black_pantyhose_portrait_display_nimbus-2236132.jpg!s2`)
+        /*       var wbuttsss = [
+{buttonId: `${prefix}music`, buttonText: {displayText: `>>`}, type: 1},
+] */
+        let button1ssMessages = {
+          image: { url: waifudd.data.url },
+          caption: `هذا الأمر متوقف مؤقتا...`,
+          /*  footer: `${global.BotName}`,
+            buttons: wbuttsss,
+            headerType: 4 */
+        }
+        await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+        break;
+        
 
       case 'foxgirl':
         if (isBan) return reply(mess.banned);
