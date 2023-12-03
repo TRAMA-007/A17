@@ -412,13 +412,31 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
     
-   /*   if (!isCmd && !m.isGroup){
-        const botreply = await axios.get(`http://api.brainshop.ai/get?bid=166512&key=5nz1Ha6nS9Zx1MfT&uid=[uid]&msg=[msg]=[${budy}]`)
-        txt = `${botreply.data.cnt}`
-        m.reply(txt)
-        }  
+      // استيراد مكتبة axios لإجراء طلبات HTTP
+const axios = require('axios');
+
+// تعريف دالة لإرسال طلب إلى API واستلام الرد
+async function getBotResponse(userInput) {
+  try {
+    // إرسال طلب POST إلى API مع بيانات المستخدم المدخلة
+    const response = await axios.post('https://vihangayt.me/tools/blackboxv4?q=${encodeURIComponent(q)}', {
+      userInput: userInput
+    });
+
+    // استرداد رد البوت من الرد المستلم من الAPI
+    const botResponse = response.data.botResponse;
+
+    return botResponse;
+  } catch (error) {
+    console.error(error);
+    return 'حدث خطأ أثناء الاتصال بالبوت. يرجى المحاولة مرة أخرى.';
+  }
+}
+
+  });
+
         
-     */
+     
 
 
 
