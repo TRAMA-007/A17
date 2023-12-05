@@ -780,11 +780,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
     
-    if (smallinput.includes('ليج')|| smallinput.includes('ليغ') || smallinput.includes('حد يكريني')) {
-    reply (`اوووفووو امشي استحمى ريحتك واصلاني هنا🤮`);
-            }
-
-  
+    
     if (smallinput.includes('سم شاك')|| smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
     reply (`يا اروالي ويا اروالي سرى الليل يا اروالي عب الناكك و ختاهو ليك طوالي 😂🫵 `);
             }
@@ -916,13 +912,13 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('دا شنو')) {
-    reply (`شمبورة فيل تقدر تشيل 😂`);
+    if (smallinput.includes('i love you')) {
+    reply (`plana loves you too`);
       }
 
 
-    if (smallinput.includes('الحاصل')) {
-    reply (`لباسك ناصل`);
+    if (smallinput.includes('بحبك')) {
+    reply (`الحب افعال ما اقوال`);
   }
 
 
