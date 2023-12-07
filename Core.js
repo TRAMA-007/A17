@@ -932,11 +932,6 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('@+1 (507) 273-4883') {
-    reply (`حي انا من جايرو المجننكم دا🥴اي تاقي صقرك دا كويس ما اوصيك`);
-  }
-
-
     if (smallinput.includes('عايز انيكك')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
     reply (`بي زبك دا الا لو داير تكلكلني`);
     }
