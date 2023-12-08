@@ -868,7 +868,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
    if (smallinput.includes('ياسر بنقوية')) {
-    reply (`ياسر؟ قصدك المعلط الما عارف طيزو من بطنو`);
+    reply (`ياسر؟ قصدك المعلط الما عارف طيزوو من بطنو`);
           } 
 
 
