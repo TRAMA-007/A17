@@ -802,7 +802,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('لوطي')) {
-    reply (`لوطي الناكك فتل جعباتك`);
+    reply (`لوطي الناككك فتل جعباتك`);
     }
 
 
