@@ -902,8 +902,8 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('وينك')) {
-    reply (`لو مهتم كان عرفت`);
+    if (smallinput.includes('بلانا')) {
+    reply ('ركز في حياتك افضل وانا شايفك مركز معاي احسن تشوف لي حياه عشان انا والله بركبك ودا ما مجرد كلام لو لقيتك بركبك ما قاعد اهظر معاك  اخطانى ما ناقصنى والله`);
     }
 
 
