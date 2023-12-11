@@ -24,11 +24,10 @@ const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate)
 
 const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
-const thiccysapi = require('textmaker-thiccy');
+// const thiccysapi = require('textmaker-thiccy');
 // const ffmpeg = require('fluent-ffmpeg');
 // const ffmpegPath = require('ffmpeg-static').path;
 // ffmpeg.setFfmpegPath(ffmpegPath);
-const maker = require('mumaker');
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
 const { hentai } = require('./lib/scraper2.js');
@@ -45,88 +44,26 @@ const os = require('os');       // for os info
 
 const gis = require("g-i-s");
 const { MessageType } = require('@whiskeysockets/baileys');
-const {
-  FajarNews,
-  BBCNews,
-  metroNews,
-  CNNNews,
-  iNews,
-  KumparanNews,
-  TribunNews,
-  DailyNews,
-  DetikNews,
-  OkezoneNews,
-  CNBCNews,
-  KompasNews,
-  SindoNews,
-  TempoNews,
-  IndozoneNews,
-  AntaraNews,
-  RepublikaNews,
-  VivaNews,
-  KontanNews,
-  MerdekaNews,
-  KomikuSearch,
-  AniPlanetSearch,
-  KomikFoxSearch,
-  KomikStationSearch,
-  MangakuSearch,
-  KiryuuSearch,
-  KissMangaSearch,
-  KlikMangaSearch,
-  PalingMurah,
-  LayarKaca21,
-  AminoApps,
-  Mangatoon,
-  WAModsSearch,
-  Emojis,
-  CoronaInfo,
-  JalanTikusMeme,
-  Cerpen,
-  Quotes,
-  Couples,
-  Darkjokes
-} = require("dhn-api");
 //"parse-ms": "^1.1.0",
 
 
-
 //
-if (time2 < "23:59:00") {
-
-  var nowtime = 'Good night 🌌'
-
-}
-
-if (time2 < "19:00:00") {
-
-  var nowtime = 'Good afternoon 🌆'
-
-}
-
-if (time2 < "18:00:00") {
-
-  var nowtime = 'Good afternoon 🌇'
-
-}
-
-if (time2 < "15:00:00") {
-
-  var nowtime = 'Good afternoon 🏞'
-
-}
-
-if (time2 < "11:00:00") {
-
-  var nowtime = 'Good morning 🌅'
-
-}
+let nowtime = '';
 
 if (time2 < "05:00:00") {
-
-  var nowtime = 'Good night 🏙'
-
+  nowtime = 'Good night 🏙';
+} else if (time2 < "11:00:00") {
+  nowtime = 'Good morning 🌅';
+} else if (time2 < "15:00:00") {
+  nowtime = 'Good afternoon 🏞';
+} else if (time2 < "18:00:00") {
+  nowtime = 'Good evening 🌇';
+} else if (time2 < "19:00:00") {
+  nowtime = 'Good evening 🌆';
+} else {
+  nowtime = 'Good night 🌌';
 }
+
 
 
 
