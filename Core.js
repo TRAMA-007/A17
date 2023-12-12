@@ -4902,7 +4902,7 @@ I NEED THAT HERTUSSY 💦🍆`);
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please provide link!`)
-        if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`جلا`)
+        if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
         xfarrapi.Twitter(`${text}`).then(async (data) => {
           let txt = `「 _Twitter Downloader_ 」\n\n`
           txt += `*Title :* ${data.title}\n`
@@ -5143,7 +5143,6 @@ _Click the button below to download_`
 
       ///
       case 'yts': case 'ytsearch': {
-        if (isBcase 'yts': case 'ytsearch': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📍", key: m.key } })
@@ -5310,7 +5309,6 @@ _Click the button below to download_`
         break;
 
 
-
       case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5407,7 +5405,6 @@ _Click the button below to download_`
 `.trim())
       }
         break;
-
 
 
 
