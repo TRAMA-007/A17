@@ -5143,6 +5143,7 @@ _Click the button below to download_`
 
       ///
       case 'yts': case 'ytsearch': {
+        if (isBcase 'yts': case 'ytsearch': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📍", key: m.key } })
@@ -5160,7 +5161,7 @@ _Click the button below to download_`
         break;
 
 
-      
+      /*
         	
       case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
           if (isBan) return reply(mess.banned);	 			
@@ -5203,7 +5204,7 @@ _Click the button below to download_`
        }
        break;
       
-      
+      */
 
 
       /// Normal
@@ -5222,7 +5223,7 @@ _Click the button below to download_`
       // break;
 
 
-    /*  case 'play':
+      case 'play':
       case 'song':
       case 'music': {
         if (isBan) return reply(mess.banned);
@@ -5271,7 +5272,7 @@ _Click the button below to download_`
         // Rest of the code remains unchanged.
         // ...
       }
-        break; */
+        break;
 
       case 'spotify': {
         if (isBan) return reply(mess.banned);
