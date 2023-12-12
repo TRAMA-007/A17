@@ -5310,6 +5310,7 @@ _Click the button below to download_`
         break;
 
 
+
       case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5325,7 +5326,7 @@ _Click the button below to download_`
         break;
 
 
-      
+      /*
       case 'ytmp3': case 'ytmusic':  case 'ytmp4': case 'ytvideo': case 'ytdl':{
         if (isBan) return reply(mess.banned);	 			
       if (isBanChat) return reply(mess.bangc);
@@ -5360,7 +5361,7 @@ _Click the button below to download_`
       A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
       break; 
-      
+      */
 
 
       case 'ytmp3': {
@@ -5384,7 +5385,7 @@ _Click the button below to download_`
         const ytmp4play2 = await YT.mp4(text)
         A17.sendMessage(from, { video: { url: ytmp4play2.videoUrl }, mimetype: "video/mp4", caption: 'Downloaded by *A17 MD*', }, { quoted: m })
       }
-        break; 
+        break;
 
 
       case 'lyrics': {
@@ -5406,6 +5407,7 @@ _Click the button below to download_`
 `.trim())
       }
         break;
+
 
 
 
