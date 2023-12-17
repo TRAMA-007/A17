@@ -814,7 +814,7 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
-    if (smallinput.includes('😂')|| smallinput.includes('🤣') || smallinput.includes('ههه')) {
+    if (smallinput.includes('😂😂')|| smallinput.includes('🤣🤣') || smallinput.includes('ههه')) {
     reply (`كت كت كت؟ وزعنا بلح جاك عجوة`);
     }
 
