@@ -804,7 +804,7 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
-   if (smallinput.includes('ياسر بنقوية')) {
+   if (smallinput.includes('ياسر')) {
     reply (`ياسر؟ قصدك المعلط الما عارف طيزوو من بطنو`);
           } 
 
@@ -814,8 +814,8 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
-    if (smallinput.includes('يوي احلى')|| smallinput.includes('يوي احسن') || smallinput.includes('يوي عسل')) {
-    reply (`و انا`);
+    if (smallinput.includes('😂')|| smallinput.includes('🤣') || smallinput.includes('ههه')) {
+    reply (`كت كت كت؟ وزعنا بلح جاك عجوة`);
     }
 
 
