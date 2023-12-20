@@ -5981,6 +5981,15 @@ _Click the button below to download_`
         break;
 
 
+       case 'كافكا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://upload-os-bbs.hoyolab.com/upload/2023/07/22/328717725/fe8ad8cc3b299d2dfc5c6b8474efaf3d_6292298148236115623.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_80`)
+        A17.sendMessage(from, { image: buffer, caption: '*بدل تبني الشخصيات رايك شنو تبني حياتك اول*'}, { quoted: m })
+        break;
+
+
 
 
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ NSFW ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
