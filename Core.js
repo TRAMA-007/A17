@@ -6188,42 +6188,42 @@ _Click the button below to download_`
         break;
 
 
-      case 'hsr':
+        case 'hsr':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704892785.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'الشخصيات 
--
-
-( 5 stars ) 
+        A17.sendMessage(from, { image: buffer, caption: 'الشخصيات -
+*5 stars* 
 🌟🌟🌟🌟🌟
-
-1- سيلي
-2- جينغ يوان 
-3- هيميكو
-4- جيبارد 
-5- برونيا 
-6- كلارا 
-7- بايلو
-8- ويلت 
-9- يانكينغ 
-10- لوتشا
-11- سيلفر وولف
-12- بليد
-13- دان 
-14- فوشوان 
-15- جينغلو
-16- كافكا
-17- هاوهاو
-18- ارجينتي
-19- توباز
-20- روان ماي
-21- ريشيو(دكتور نسبة) 
-22- بلاك سوان 
-23-هانابي '}, { quoted: m })
+          سيلي- جينغ يوان - هيميكو- جيبارد - برونيا - كلارا - بايلو- ويلت - يانكينغ - لوتشا- سيلفر وولف- بليد- دان - فوشوان - جينغلو- كافكا- هاوهاو- ارجينتي- توباز- روان ماي- ريشيو*دكتور نسبة*- بلاك سوان -هانابي '}, { quoted: m })
         break;
 
+      case 'هيرتا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704894960.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
+
+
+      case 'استا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704895074.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
+
+
+      case 'بيلا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704895128.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
 
 
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ NSFW ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
