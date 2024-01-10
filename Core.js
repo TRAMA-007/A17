@@ -6188,6 +6188,42 @@ _Click the button below to download_`
         break;
 
 
+      case 'hsr':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704892785.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'الشخصيات 
+-
+
+( 5 stars ) 
+🌟🌟🌟🌟🌟
+
+1- سيلي
+2- جينغ يوان 
+3- هيميكو
+4- جيبارد 
+5- برونيا 
+6- كلارا 
+7- بايلو
+8- ويلت 
+9- يانكينغ 
+10- لوتشا
+11- سيلفر وولف
+12- بليد
+13- دان 
+14- فوشوان 
+15- جينغلو
+16- كافكا
+17- هاوهاو
+18- ارجينتي
+19- توباز
+20- روان ماي
+21- ريشيو(دكتور نسبة) 
+22- بلاك سوان 
+23-هانابي '}, { quoted: m })
+        break;
+
 
 
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ NSFW ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
@@ -7349,6 +7385,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}migumin
   ⌯     ${prefix}wallpaper
   ⌯     ${prefix}animequote
+  ⌯     ${prefix}hsr (honkai star rail bulids) 
  
 
   〢━━━ ♨️ *Informative* ♨️ ━━━〢
