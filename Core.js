@@ -6187,18 +6187,6 @@ _Click the button below to download_`
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         break;
 
-
-        case 'hsr':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704892785.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'الشخصيات -
-*5 stars* 
-🌟🌟🌟🌟🌟
-          سيلي- جينغ يوان - هيميكو- جيبارد - برونيا - كلارا - بايلو- ويلت - يانكينغ - لوتشا- سيلفر وولف- بليد- دان - فوشوان - جينغلو- كافكا- هاوهاو- ارجينتي- توباز- روان ماي- ريشيو*دكتور نسبة*- بلاك سوان -هانابي '}, { quoted: m })
-        break;
-
       case 'هيرتا':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
