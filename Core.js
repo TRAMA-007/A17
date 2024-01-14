@@ -708,6 +708,45 @@ Typed *surrender* to surrender and admited defeat`
       'و أنا': `انت على زبي' `,
       'وأنا': `انت على زبي' `,
       'ايه': `ارقعك واحد امبليه`,
+      'هيرتا': ` ما بقدر اتحمل بعد دا.. وين الدوجينز؟؟؟؟! 
+كيف مفروض احبس رغبتي العميقة في اني اغتصب الدمية الاسمها هيرتا دي!!!..
+نفسي جدجد اسرق واحد من دمياتها.. شفتوا في منها كم في محطة الفضاء الدولية؟؟ ..
+ممكن عادي اعملها و ما حتلاحظ ابدا.. 
+نفسي المس بشرتها المتزامنة الناعمة الحريرية.. نفسي أفرك خدي مع وجهها الخالي من الحياة لحدي بكرا..
+و ما حتعرف ابدا...
+لأنها بتحاول تعرف سبب نفاد ذاكرة الرام في الكون المحاكي..
+هذا لأنه لا يستطيع محاكاة زبي الاسود الكبير😂!!
+الصبجة بت الشرموطة..
+غالبا حاليا بتفكر : "امممم اكشلي الدمى ما عندها كس🤓 ☝ ️"
+اسكت يا خول
+ هيرتا اكتشفت كيفية عكس عمرها.. أنا متأكد بنسبة 100 ٪ أنها عندها الكوروكوروسي💦.. 
+نفسي اخليها تعمل كورورينغ.. 
+حأستعمل فيها مضربي ابو 30 سنتي اخليها تفهم ليه القواعد صنعت لتكسر!! 
+عيونها عديمة الحياة دي بتخليني عرمان لمن غلط💦
+واحدة شرموطة زيها فاضية لدرجة مخلية شكلها شكل مراهقة للابد اكيد باقي الدميات ح تكون بيرفكت.. 
+الكوروكورووسي بتاعها ح يكون ممتاز☝ ️ 
+وااااي انا عرمان لدرجة ح اطير بقوة الف ستيلارون!!!!
+انا محتاج الهيرتاووسي💦 🍆`,
+      'herta': `I can't fukin take it anymore.. Where are the doujins???!
+HOW AM I SUPPOSED TO CONTAIN MY DEEP SEATED DESIRE TO VIOLATE THE HERTA PUPPET!!!..
+I wanna steal one of her puppets so bad.. Have you seen how many of them are AFK o n the space station ???..
+She'd never notice
+I dream about touching that silky smooth synithitic skin.. I'd rub my cheeks against her lifeless face..
+And she'd never know ☝️..
+As she's too busy figuring out why the simulated universe is running out of RAM..
+IT'S BECAUSE IT CAN'T SIMULATE MY MASSIVE THROBBING COCK!!
+Dumbass.. Absolute fucking idiot..
+You're probably thinking :"ummm actually puppets don't have pussies🤓☝️"
+Shut the fuck up
+Herta figured out how to reverse her age.. I'm 100% certain she got that kurukurussy💦
+I wanna make her kururing
+I'm gonna take my 30cm bat and show her why rules are made to be broken!! 
+Her puppets lifeless eyes.. Turn me on so bad💦
+Someone vain enough to keep her appearances at a young age would definitely make sure her puppets are perfect..
+And sooo..
+THAT KURUKURUSSY MUST BE DIVINE ☝️
+I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
+I NEED THAT HERTUSSY 💦🍆`,
     };
 
     const smallinput = budy.toLowerCase();
@@ -874,50 +913,13 @@ Typed *surrender* to surrender and admited defeat`
     }
   
 
-    if (smallinput.includes('هيرتا')) {
-    reply (` ما بقدر اتحمل بعد دا.. وين الدوجينز؟؟؟؟! 
-كيف مفروض احبس رغبتي العميقة في اني اغتصب الدمية الاسمها هيرتا دي!!!..
-نفسي جدجد اسرق واحد من دمياتها.. شفتوا في منها كم في محطة الفضاء الدولية؟؟ ..
-ممكن عادي اعملها و ما حتلاحظ ابدا.. 
-نفسي المس بشرتها المتزامنة الناعمة الحريرية.. نفسي أفرك خدي مع وجهها الخالي من الحياة لحدي بكرا..
-و ما حتعرف ابدا...
-لأنها بتحاول تعرف سبب نفاد ذاكرة الرام في الكون المحاكي..
-هذا لأنه لا يستطيع محاكاة زبي الاسود الكبير😂!!
-الصبجة بت الشرموطة..
-غالبا حاليا بتفكر : "امممم اكشلي الدمى ما عندها كس🤓 ☝ ️"
-اسكت يا خول
- هيرتا اكتشفت كيفية عكس عمرها.. أنا متأكد بنسبة 100 ٪ أنها عندها الكوروكوروسي💦.. 
-نفسي اخليها تعمل كورورينغ.. 
-حأستعمل فيها مضربي ابو 30 سنتي اخليها تفهم ليه القواعد صنعت لتكسر!! 
-عيونها عديمة الحياة دي بتخليني عرمان لمن غلط💦
-واحدة شرموطة زيها فاضية لدرجة مخلية شكلها شكل مراهقة للابد اكيد باقي الدميات ح تكون بيرفكت.. 
-الكوروكورووسي بتاعها ح يكون ممتاز☝ ️ 
-وااااي انا عرمان لدرجة ح اطير بقوة الف ستيلارون!!!!
-انا محتاج الهيرتاووسي💦 🍆`);
+    if (smallinput.includes('ما شغال')) {
+    reply (`جربتو؟🤭`);
   }
 
 
-    if (smallinput.includes('herta')) {
-    reply (`I can't fukin take it anymore.. Where are the doujins???!
-HOW AM I SUPPOSED TO CONTAIN MY DEEP SEATED DESIRE TO VIOLATE THE HERTA PUPPET!!!..
-I wanna steal one of her puppets so bad.. Have you seen how many of them are AFK o n the space station ???..
-She'd never notice
-I dream about touching that silky smooth synithitic skin.. I'd rub my cheeks against her lifeless face..
-And she'd never know ☝️..
-As she's too busy figuring out why the simulated universe is running out of RAM..
-IT'S BECAUSE IT CAN'T SIMULATE MY MASSIVE THROBBING COCK!!
-Dumbass.. Absolute fucking idiot..
-You're probably thinking :"ummm actually puppets don't have pussies🤓☝️"
-Shut the fuck up
-Herta figured out how to reverse her age.. I'm 100% certain she got that kurukurussy💦
-I wanna make her kururing
-I'm gonna take my 30cm bat and show her why rules are made to be broken!! 
-Her puppets lifeless eyes.. Turn me on so bad💦
-Someone vain enough to keep her appearances at a young age would definitely make sure her puppets are perfect..
-And sooo..
-THAT KURUKURUSSY MUST BE DIVINE ☝️
-I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
-I NEED THAT HERTUSSY 💦🍆`);
+    if (smallinput.includes('احشك')) {
+    reply (`قلل كلامك و كتر أفعالك يا عديم الزب`);
    }
 
 
