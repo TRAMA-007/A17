@@ -975,6 +975,43 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
 
+        case 'hsr': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "❤", key: m.key } })
+
+        let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
+        teks = `🌟🌟🌟🌟🌟*سيلي- جينغ يوان -هيميكو-جيبارد - برونيا - كلارا - بايلو- ويلت- يانكينغ - لوتشا - سيلفر وولف- بلايد - دان- فوشوان - جينغلو- كافكا- هاوهاو- ارجينتي- توباز- روان مي- ريشيو او دكتور نسبة- بلاك سوان - هانابي*🌟🌟🌟🌟*هيرتا- استا- بيلا- دان- سيرفال- مارش- ناتاشا- هوك- qq- ارلان- تينغيون- سامبو - سوشانغ- يوكونغ- لوكا- لينكس- جيونافين- هانيا- شيويي- ميشا*`
+        /*  let buttons = [
+          {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
+          ] */
+        let buttonMessage = {
+          image: Thumb,
+          jpegThumbnail: BotLogo,
+          caption: teks,
+          /* footer: `${BotName}`,
+           buttons: buttons,
+           headerType: 4, */
+          contextInfo: {
+            externalAdreply: {
+              title: "Powered by Kai",
+              body: " ",
+              thumbnail: fs.readFileSync("Assets/pic2.jpg"),
+              mediaType: 1,
+              //mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
+              //sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
+              mediaUrl: 'github.com/Kai0071/A17',
+              sourceUrl: "github.com/Kai0071/A17"
+            }
+          }
+
+        }
+        A17.sendMessage(m.chat, buttonMessage, { quoted: m })
+      }
+        break;
+
+
+
       case 'qt': {
         if (!args[0] && !m.quoted) {
           return m.reply(`Please provide a text (Type or mention a message) !`);
