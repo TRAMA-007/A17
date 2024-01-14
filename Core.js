@@ -853,7 +853,7 @@ I NEED THAT HERTUSSY 💦🍆`,
           }
 
 
-    if (smallinput.includes('😂😂')|| smallinput.includes('🤣🤣') || smallinput.includes('ههه')) {
+    if (smallinput.includes('😂😂😂😂😂😂😂')|| smallinput.includes('🤣🤣🤣🤣🤣🤣') || smallinput.includes('ههههههه')) {
     reply (`كت كت كت؟ وزعنا بلح جاك عجوة`);
     }
 
@@ -921,6 +921,11 @@ I NEED THAT HERTUSSY 💦🍆`,
     if (smallinput.includes('احشك')) {
     reply (`قلل كلامك و كتر أفعالك يا عديم الزب`);
    }
+
+
+    if (smallinput.includes('ايه')) {
+    reply (`خدتك عليه`);
+    } 
 
 
 
@@ -2185,7 +2190,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         break;
 
 
-      case 'chatgpt':
+      case 'plana':
       case 'ai':
       case 'gpt': {
         if (isBan) return reply(mess.banned);
