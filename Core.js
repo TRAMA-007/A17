@@ -889,7 +889,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
     if (smallinput.includes('i love you')) {
-    reply (`plana loves you too`);
+    reply (`plana loves you too ${pushname}`);
       }
 
 
