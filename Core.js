@@ -925,6 +925,21 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     if (smallinput.includes('ايه')) {
     reply (`خدتك عليه`);
+    }
+
+
+    if (smallinput.includes('ممتع')) {
+    reply (`دا زاتو ممتع`);
+    }
+
+
+    if (smallinput.includes('صغير')) {
+    reply (`بس يحير`);
+    }
+
+
+    if (smallinput.includes('متناك')) {
+    reply (`☹️`);
     } 
 
 
