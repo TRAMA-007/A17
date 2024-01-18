@@ -940,7 +940,12 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     if (smallinput.includes('متناك')) {
     reply (`☹️`);
-    } 
+    }
+
+
+    if (smallinput.includes('كبير')) {
+    reply (`الله يكرمك`);
+    }  
 
 
 
