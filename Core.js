@@ -945,7 +945,12 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     if (smallinput.includes('كبير')) {
     reply (`الله يكرمك`);
-    }  
+    }
+
+
+    if (smallinput.includes('+1 (507) 273-4883')) {
+    reply (`حي انا من جايرو صقرك دا🤭`);
+  }
 
 
 
