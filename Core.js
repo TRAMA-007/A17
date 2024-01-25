@@ -699,6 +699,7 @@ Typed *surrender* to surrender and admited defeat`
       ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
+      'سمعة': `اب لمعة`,
       'شوفونا': `يشوفك الزب قول آميين`,
       'جلا': `كلامك شين`,
       'ايه': `خدتك عليه `,
@@ -6457,8 +6458,8 @@ _Click the button below to download_`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🤮", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1706169521.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'امشي من هنا يا عرص مافي اي بيلد ليك..امسح حسابك و اختار ستيلي'}, { quoted: m })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1706175536.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'امشي من هنا يا عرص مافي اي بيلد ليك'}, { quoted: m })
         break;
 
 
