@@ -6444,6 +6444,26 @@ _Click the button below to download_`
         break;
 
 
+        case 'ستيلي':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://upload-os-bbs.hoyolab.com/upload/2023/05/17/136718215/5aa872ec3ef8456beaaac5b105e097fb_7649136321522721804.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
+
+
+        case 'كاليوس':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🤮", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1706169521.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'امشي من هنا يا عرص مافي اي بيلد ليك..امسح حسابك و اختار ستيلي'}, { quoted: m })
+        break;
+
+
+
+
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ NSFW ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
 
 
