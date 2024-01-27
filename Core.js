@@ -925,7 +925,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
     if (smallinput.includes('genshin could never')) {
-    reply (`Can you just post about Star Rail without mentioning Genshin.. I played both of the games and love it equally, just appreciated it without comparing even they are from the same company because both are different games, their gameplay is different.. Just like your siblings even with same parents they gonna be different and do you like if your comparing yourself with your siblings? lately so many posts gloating about HSR then at the last sentenced mentioning Genshin, like why Genshin are always in your mind, some people doesn't even play Genshin but so happy to trash talk about Genshin..`);
+    reply (`Can you just post about Star Rail without mentioning Genshin.. I played both of the games and love it equally, just appreciated it without comparing even they are from the same company because both are different games, their gameplay is different.. Just like your siblings even with same parents they gonna be different and do you like if your comparing yourself with your siblings? lately so many posts gloating about HSR then at the last sentenced mentioning Genshin, like why Genshin are always in your mind, some people doesn't even play Genshin but so happy to trash talk about Genshin`);
     }
 
 
@@ -934,8 +934,8 @@ I NEED THAT HERTUSSY 💦🍆`,
     }
 
 
-    if (smallinput.includes('صغير')) {
-    reply (`بس يحير`);
+    if (smallinput.includes('لباسك ناصل')) {
+    reply (`ايوا ناصل عشان مستنيك تمص لي`);
     }
 
 
