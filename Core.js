@@ -879,8 +879,8 @@ I NEED THAT HERTUSSY 💦🍆`,
     }
 
 
-    if (smallinput.includes('بلانا')) {
-    reply ('عيونو');
+    if (smallinput.includes('نيك بلانا')) {
+    reply ('تنيكني كيف لكن انا حرفيا برنامج..الا لو قصدك تخت زبك الما تامي 5 سنتي دا في الشاشة');
     }
 
 
@@ -925,7 +925,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
     if (smallinput.includes('genshin could never')) {
-    reply (`Can you just post about Star Rail without mentioning Genshin.. I played both of the games and love it equally, just appreciated it without comparing even they are from the same company because both are different games, their gameplay is different.. Just like your siblings even with same parents they gonna be different and do you like if your comparing yourself with your siblings? lately so many posts gloating about HSR then at the last sentenced mentioning Genshin, like why Genshin are always in your mind, some people doesn't even play Genshin but so happy to trash talk about Genshin`);
+    reply (`كسم قنشن على كسم ستار ريل ما تنيك افكارنا انت كمان`);
     }
 
 
@@ -952,6 +952,12 @@ I NEED THAT HERTUSSY 💦🍆`,
     if (smallinput.includes('15072734883')) {
     reply (`حي انا من جايرو صقرك دا🤭`);
   }
+
+
+    if (smallinput.includes('زلطة')) {
+    reply (`زلطه ؟ قصدك الحلبي الصبجه البلعب طيزعين فريم وبلع بوكسات من هندي`);
+  }
+
 
 
 
