@@ -42,7 +42,7 @@ global.openAiAPI = "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";
 
 //
 global.location = "wad madani, sudan";
-global.reactmoji = "❤️";
+global.reactmoji = "🍆";
 global.themeemoji = "💖";
 global.vidmenu = { url: 'https://media.tenor.com/0zUyieJX2kgAAAAC/blue-archive-plana.gif' };
 global.websitex = "https://github.com/Kai0071";
