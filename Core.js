@@ -961,6 +961,11 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     if (smallinput.includes('سم السيسي')) {
     reply (`انت راجل محترم و متربي احسن تربية`);
+    }
+
+
+    if (smallinput.includes('ااي')) {
+    reply (`دخل جاب سخل؟ `);
     } 
 
 
