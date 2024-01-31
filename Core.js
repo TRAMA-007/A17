@@ -971,7 +971,12 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     if (smallinput.includes('genshin could never')) {
     reply (`🍆`);
-    } 
+    }
+
+
+    if (smallinput.includes('حد يكريني') {
+    reply (`تعال كري دا اول🍆`);
+    }
 
 
 
