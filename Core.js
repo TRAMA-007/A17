@@ -966,6 +966,11 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     if (smallinput.includes('ااي')) {
     reply (`دخل جاب سخل؟ `);
+    }
+
+
+    if (smallinput.includes('genshin could never')) {
+    reply (`🍆`);
     } 
 
 
