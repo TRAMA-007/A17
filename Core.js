@@ -826,7 +826,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
     if (smallinput.includes('شرموط')) {
-    reply (`الشغل ما عيب`);
+    reply (`الشغل ماا عيب`);
            }
 
 
