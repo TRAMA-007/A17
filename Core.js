@@ -966,7 +966,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
     if (smallinput.includes('ااي')) {
-    reply (`دخل جاااب سخل؟ `);
+    reply (`دخل جااااب سخل؟ `);
     }
 
 
