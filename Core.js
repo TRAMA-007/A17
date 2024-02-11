@@ -995,6 +995,11 @@ I NEED THAT HERTUSSY 💦🍆`,
     }
 
 
+   if (smallinput.includes(' ايه ')) {
+    reply (`خدتك عليه`);
+}
+
+
 
 
 
