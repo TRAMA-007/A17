@@ -996,7 +996,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
    if (smallinput.includes('دا زاتو')) {
-    reply (`هوي يا بوت`);
+    reply (`هوي ياا بوت`);
 }
 
 
