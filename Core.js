@@ -995,8 +995,8 @@ I NEED THAT HERTUSSY 💦🍆`,
     }
 
 
-   if (smallinput.includes(' ايه ')) {
-    reply (`خدتك عليه`);
+   if (smallinput.includes('دا زاتو')) {
+    reply (`هوي يا بوت`);
 }
 
 
