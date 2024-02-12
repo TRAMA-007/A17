@@ -2340,7 +2340,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
 
         try {
-          const apiUrl1 = `https://vihangayt.me/tools/chatgptv4?q=${encodeURIComponent(q)}`;
+          const apiUrl1 = `https://vihangayt.me/tools/chatgpt4?q=${encodeURIComponent(q)}`;
 
           const response1 = await fetch(apiUrl1);
           const responseData1 = await response1.json();
