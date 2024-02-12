@@ -1460,6 +1460,26 @@ I NEED THAT HERTUSSY 💦🍆`,
       }
 
 
+      case 'ls':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "📂", key: m.key } });
+
+
+        const currentDir = process.cwd(); // Get the current working directory
+
+        try {
+          const files = fs.readdirSync(currentDir);
+          let folderName = `Files in ${currentDir}:\n\n`;
+          let fileList = files.join('\n'); // Join the file names with a newline
+          A17.sendMessage(from, { text: folderName + fileList }, m);
+        } catch (error) {
+          console.error(error);
+          A17.sendMessage(from, { text: 'Error reading directory contents.🫳🏻' }, m);
+        }
+        break; 
+
+
       case 'autostatus':
       case 'auto-status':
       case 'statusevent':
@@ -4823,6 +4843,59 @@ I NEED THAT HERTUSSY 💦🍆`,
         const result2 = `*Title :* ${res2[0].judul}\n*Wiki :* ${res2[0].wiki}`
         A17.sendMessage(from, { image: { url: res2[0].thumb }, caption: result2 })
         break;
+
+
+     case 'urban': {
+        A17.sendMessage(from, { react: { text: "📖", key: m.key } })
+        // Extract the word from the message
+        const word = text.trim();
+
+        if (!word) {
+          reply(`Please provide a word to look up on Urban Dictionary. Example: ${prefix}urban hello`);
+          return;
+        }
+
+        // Make a request to the Urban Dictionary API
+        const apiUrl = `https://api.urbandictionary.com/v0/define?term=${encodeURIComponent(word)}`;
+
+        try {
+          const response = await axios.get(apiUrl);
+
+          // Extract the first definition from the API response
+          const definition = response.data.list[0]?.definition;
+
+          if (definition) {
+            const urbanMessage = `📖 *Urban Dictionary Definition for "${word}":*\n\n${definition}`;
+            reply(urbanMessage);
+          } else {
+            reply(`No Urban Dictionary definition found for "${word}".`);
+          }
+        } catch (error) {
+          console.error('Error fetching Urban Dictionary definition:', error.message);
+          reply('An error occurred while fetching the Urban Dictionary definition. Please try again later.');
+        }
+      }
+        break;
+
+
+        case 'aju': case 'campus': case 'imgaju':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
+
+        const aju = {
+          image: { url: 'https://campus-pictures.onrender.com/' },
+          caption: `${pushname} here you go...`,
+
+        }
+
+        await A17.sendMessage(m.chat, aju, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+
+        break;
+  
 
       case 'earthquake':
         if (isBan) return reply(mess.banned);
