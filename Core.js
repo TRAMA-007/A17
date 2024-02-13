@@ -7771,7 +7771,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         const helpmenu = `الشخصيات 
 
 
- *5 stars* 
+ *(  5 stars  )* 
 🌟🌟🌟🌟🌟
 
 1-سيلي
@@ -7798,7 +7798,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 22- بلاك سوان 
 23- هانابي (لو كتبت سباركل بركبك) 
 
-( 4 stars ) 
+*( 4 stars )* 
 🌟🌟🌟🌟
 
 1- هيرتا
