@@ -1044,53 +1044,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         }
         A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
-        break;
-
-
-
-        case 'hsr': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "❤", key: m.key } })
-
-        let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
-        teks = `🌟🌟🌟🌟🌟
-
-*سيلي- جينغ يوان -هيميكو-جيبارد - برونيا - كلارا - بايلو- ويلت- يانكينغ - لوتشا - سيلفر وولف- بلايد - دان- فوشوان - جينغلو- كافكا
-- هاوهاو- ارجينتي- توباز- روان مي- ريشيو او دكتور نسبة- بلاك 
-سوان - هانابي*
-
-🌟🌟🌟🌟
-
-*هيرتا- استا- بيلا- دان- سيرفال- مارش- ناتاشا- هوك- qq- ارلان- تينغيون- سامبو - سوشانغ- يوكونغ- لوكا- لينكس- جيونافين- هانيا- شيويي- ميشا*`
-        /*  let buttons = [
-          {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
-          ] */
-        let buttonMessage = {
-          image: Thumb,
-          jpegThumbnail: BotLogo,
-          caption: teks,
-          /* footer: `${BotName}`,
-           buttons: buttons,
-           headerType: 4, */
-          contextInfo: {
-            externalAdreply: {
-              title: "Powered by Kai",
-              body: " ",
-              thumbnail: fs.readFileSync("Assets/pic3.jpg"),
-              mediaType: 1,
-              //mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
-              //sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
-              mediaUrl: 'github.com/Kai0071/A17',
-              sourceUrl: "github.com/Kai0071/A17"
-            }
-          }
-
-        }
-        A17.sendMessage(m.chat, buttonMessage, { quoted: m })
-      }
-        break;
-
+        break; 
 
 
       case 'qt': {
@@ -7808,6 +7762,75 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
         break;
+
+
+      case 'honkai': case 'hsr': case 'هونكاي': case 'قطار': case 'star': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
+        const helpmenu = `الشخصيات 
+
+
+ *5 stars* 
+🌟🌟🌟🌟🌟
+
+1-سيلي
+2-جينغ يوان 
+3-هيميكو
+4- جيبارد 
+5- برونيا 
+6- كلارا 
+7- بايلو
+8- ويلت 
+9- يانكينغ 
+10- لوتشا 
+11- سيلفر وولف
+12- بليد
+13- دان
+14- فوشوان 
+15- جينغلو 
+16- كافكا
+17- هاوهاو
+18- ارجينتي
+19- توباز
+20- روان مي
+21- ريشيو
+22- بلاك سوان 
+23- هانابي (لو كتبت سباركل بركبك) 
+
+( 4 stars ) 
+🌟🌟🌟🌟
+
+1- هيرتا
+2- استا
+3- بيلا
+4- دان هينج
+5- سيرفال
+6- مارش
+7- ناتاشا
+8- هوك
+9- qq
+10- ارلان
+11- تينغيون
+12- سامبو 
+13- سوشانغ
+14- يوكونغ
+15- لوكا
+16- لينكس
+17- جيونافين
+18- هانيا
+19- شيويي
+20- ميشا`
+     let buttonMessage = {
+          video: fs.readFileSync('./system/A17_3.mp4'), gifPlayback: true,
+          caption: helpmenu,
+
+          headerType: 4
+
+        }
+        A17.sendMessage(m.chat, buttonMessage, { quoted: m })
+      }
+      break;
 
 
       case '':
