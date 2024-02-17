@@ -2514,7 +2514,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         break;
 
 
-   /*   case 'bdsm':
+      case 'bdsm':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2527,7 +2527,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         break;
 
 
-      case 'blowjob':
+   /*   case 'blowjob':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
