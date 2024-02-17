@@ -2486,24 +2486,23 @@ I NEED THAT HERTUSSY 💦🍆`,
         A17.sendMessage(from, { react: { text: "⚠️", key: m.key } })
 
         reply(` *━━〈 ⚠️ NSFW Menu ⚠️  〉━━*\n\n gifs, hentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
-        break;
+        break; */
 
 
       //
-     /* case 'ahegao':
+      case 'مينغودا':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ahegao.json'))
+        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/Menggoda.json'))
         var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
+        A17.sendMessage(m.chat, { caption: mess.😋💦, image: { url: kairesult.url } }, { quoted: m })
         break;
 
 
-      case 'ass':
+   /*   case 'ass':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
