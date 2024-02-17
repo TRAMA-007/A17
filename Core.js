@@ -2454,7 +2454,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
       //
-      case 'nsfw': {
+    /*  case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2496,7 +2496,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
 
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/Menggoda.json'))
+        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cum.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.succses, image: { url: kairesult.url } }, { quoted: m })
         break;
@@ -2769,7 +2769,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko2.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break; */
+        break; 
 
 
       case 'مينغوداا':
@@ -2797,7 +2797,7 @@ I NEED THAT HERTUSSY 💦🍆`,
       // break;
 
 
- /*     case 'orgy':
+      case 'orgy':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
