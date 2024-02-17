@@ -2454,7 +2454,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
       //
-  /*    case 'nsfw': {
+      case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2514,7 +2514,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         break;
 
 
- /*     case 'bdsm':
+      case 'bdsm':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2746,7 +2746,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         break;
 
 
-      case 'neko':
+    /*  case 'neko':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2769,7 +2769,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko2.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
+        break; */
 
 
       case 'nsfwloli':
@@ -2951,7 +2951,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;*/
+        break;
 
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
