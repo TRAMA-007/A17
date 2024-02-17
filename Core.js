@@ -2454,7 +2454,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
       //
-    /*  case 'nsfw': {
+      case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2486,7 +2486,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         A17.sendMessage(from, { react: { text: "⚠️", key: m.key } })
 
         reply(` *━━〈 ⚠️ NSFW Menu ⚠️  〉━━*\n\n gifs, hentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
-        break; */
+        break;
 
 
       //
