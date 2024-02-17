@@ -2454,7 +2454,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
       //
-      case 'nsfw': {
+ /*     case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2781,7 +2781,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/nsfwloli.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
+        break; */
 
 
       // case 'orgy':
@@ -2797,16 +2797,15 @@ I NEED THAT HERTUSSY 💦🍆`,
       // break;
 
 
-      case 'orgy':
+      case 'مينغودا':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
 
         // React to the command message with a specific emoji
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } });
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } });
 
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'));
+        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/Menggoda.json'));
         var numberOfPictures = 3; // Change this value if you want to send a different number of pictures
 
         // Create a function to get multiple random pictures from the 'nsfwdata' array
@@ -2850,7 +2849,7 @@ I NEED THAT HERTUSSY 💦🍆`,
       // break;
 
 
-      case 'panties':
+     /* case 'panties':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2950,7 +2949,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break; 
+        break; */
 
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
