@@ -2498,7 +2498,7 @@ I NEED THAT HERTUSSY 💦🍆`,
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/Menggoda.json'))
         var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.😋💦, image: { url: kairesult.url } }, { quoted: m })
+        A17.sendMessage(m.chat, { caption: mess.succses, image: { url: kairesult.url } }, { quoted: m })
         break;
 
 
