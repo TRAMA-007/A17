@@ -866,7 +866,9 @@ I NEED THAT HERTUSSY 💦🍆`,
 
 
     if (smallinput.includes('سباركل')) {
-    reply (`اسمها هانابي يا قنيط`);
+    reply (`The gift of seed is on the way to Hanabis womb
+I'm gonna make aventurine and Sunday watch us have steaming hot passionate sex
+Then if I got any juice left I'm gonna get Sunday too`);
           }
 
 
@@ -2181,7 +2183,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         const wallpapers = await wall.getAnimeWall4({ title: q, type: "sfw", page: pages }).catch(() => null);
 
         const maxImagesToSend = 15;
-        const minImagesToSend = 5;
+        const minImagesToSend = 1;
         const imagesToSend = Math.min(maxImagesToSend, Math.max(minImagesToSend, wallpapers.length));
 
         for (let i = 0; i < imagesToSend; i++) {
@@ -2294,7 +2296,7 @@ I NEED THAT HERTUSSY 💦🍆`,
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
 
         try {
-          const apiUrl1 = `https://vihangayt.me/tools/chatgpt4?q=${encodeURIComponent(q)}`;
+          const apiUrl1 = `https://vihangayt.me/tools/chatgpt2?q=${encodeURIComponent(q)}`;
 
           const response1 = await fetch(apiUrl1);
           const responseData1 = await response1.json();
