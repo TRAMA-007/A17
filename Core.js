@@ -7862,6 +7862,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 ⌯     ${prefix}ريشيو     Ratio
 ⌯     ${prefix}بلاك سوان   black swan
 ⌯     ${prefix}هانابي (لو كتبت سباركل بركبك)
+⌯     ${prefix}اكيرون   acheron
+⌯     ${prefix}افينشرين   aventurine 
 
 *( 4 stars )* 
 🌟🌟🌟🌟
