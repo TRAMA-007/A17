@@ -6338,6 +6338,7 @@ _Click the button below to download_`
         break;
 
       case 'هيرتا':
+      case 'herta':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6347,6 +6348,7 @@ _Click the button below to download_`
 
 
       case 'استا':
+      case 'asta':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6356,6 +6358,7 @@ _Click the button below to download_`
 
 
       case 'بيلا':
+      case 'bela':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6365,6 +6368,7 @@ _Click the button below to download_`
 
 
       case 'دان':
+      case 'dan':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6374,6 +6378,7 @@ _Click the button below to download_`
 
 
       case 'سيرفال':
+      case 'serval':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6383,6 +6388,7 @@ _Click the button below to download_`
 
 
       case 'مارش':
+      case 'march':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6392,6 +6398,7 @@ _Click the button below to download_`
 
 
        case 'ناتاشا':
+       case 'Natasha':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6401,6 +6408,7 @@ _Click the button below to download_`
 
 
        case 'هوك':
+       case 'hook':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6419,6 +6427,7 @@ _Click the button below to download_`
 
 
        case 'ارلان':
+       case 'arlan':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6428,6 +6437,7 @@ _Click the button below to download_`
 
 
        case 'تينغيون':
+       case 'tingyun':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6437,6 +6447,7 @@ _Click the button below to download_`
 
 
        case 'سامبو':
+       case 'sampo':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6446,6 +6457,7 @@ _Click the button below to download_`
 
 
        case 'سوشانغ':
+       case 'sushang':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6455,6 +6467,7 @@ _Click the button below to download_`
 
 
         case 'يوكونغ':
+        case 'yukong':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6464,6 +6477,7 @@ _Click the button below to download_`
 
 
        case 'لوكا':
+       case 'louka':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6473,6 +6487,7 @@ _Click the button below to download_`
 
 
        case 'لينكس':
+       case 'lynx':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6482,6 +6497,7 @@ _Click the button below to download_`
 
 
        case 'جيونافين':
+       case 'guinaifen':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6491,6 +6507,7 @@ _Click the button below to download_`
 
 
        case 'هانيا':
+       case 'hanya':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6500,6 +6517,7 @@ _Click the button below to download_`
 
 
        case 'شيويي':
+       case 'Xueyi':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6509,6 +6527,7 @@ _Click the button below to download_`
 
 
        case 'ميشا':
+       case 'misha':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6518,6 +6537,7 @@ _Click the button below to download_`
 
 
         case 'ستيلي':
+        case 'stellle':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -6527,6 +6547,7 @@ _Click the button below to download_`
 
 
         case 'كاليوس':
+        case 'calius':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🤮", key: m.key } })
@@ -7792,53 +7813,55 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
  *(  5 stars  )* 
 🌟🌟🌟🌟🌟
 
-1-سيلي
-2-جينغ يوان 
-3-هيميكو
-4- جيبارد 
-5- برونيا 
-6- كلارا 
-7- بايلو
-8- ويلت 
-9- يانكينغ 
-10- لوتشا 
-11- سيلفر وولف
-12- بليد
-13- دان
-14- فوشوان 
-15- جينغلو 
-16- كافكا
-17- هاوهاو
-18- ارجينتي
-19- توباز
-20- روان مي
-21- ريشيو
-22- بلاك سوان 
-23- هانابي (لو كتبت سباركل بركبك) 
+⌯     ${prefix}ستيلي   stelle
+⌯     ${prefix}كاليوس   calius
+⌯     ${prefix}سيلي   seele
+⌯     ${prefix}جينغ يوان   jinguan 
+⌯     ${prefix}هيميكو     Himeko
+⌯     ${prefix}جيبارد    jipard
+⌯     ${prefix}برونيا    Bronya 
+⌯     ${prefix}كلارا    clara
+⌯     ${prefix}بايلو    Bailu
+⌯     ${prefix}ويلت    welt
+⌯     ${prefix}يانكينغ   yanqing
+⌯     ${prefix}لوتشا     loucha
+⌯     ${prefix}سيلفر وولف  silver worlf
+⌯     ${prefix}بلايد      Blade
+⌯     ${prefix}دان       Dan
+⌯     ${prefix}فوشوان    fuxuan
+⌯     ${prefix}جينغلو     jingliu 
+⌯     ${prefix}كافكا      Kafka
+⌯     ${prefix}هاوهاو    Haohao
+⌯     ${prefix}ارجينتي   Argenti
+⌯     ${prefix}توباز      Topaz
+⌯     ${prefix}روان مي   Ruan mai
+⌯     ${prefix}ريشيو     Ratio
+⌯     ${prefix}بلاك سوان   black swan
+⌯     ${prefix}هانابي (لو كتبت سباركل بركبك)    hanabi
 
 *( 4 stars )* 
 🌟🌟🌟🌟
 
-1- هيرتا
-2- استا
-3- بيلا
-4- دان هينج
-5- سيرفال
-6- مارش
-7- ناتاشا
-8- هوك
-9- qq
-10- ارلان
-11- تينغيون
-12- سامبو 
-13- سوشانغ
-14- يوكونغ
-15- لوكا
-16- لينكس
-17- جيونافين
-18- هانيا
-19- شيويي
-20- ميشا`
+⌯     ${prefix}هيرتا   Herta
+⌯     ${prefix}استا    Asta 
+⌯     ${prefix}بيلا     Bela
+⌯     ${prefix}دان     dan
+⌯     ${prefix}سيرفال  Serval
+⌯     ${prefix}مارش   March
+⌯     ${prefix}ناتاشا   Natacha
+⌯     ${prefix}هوك   Hook
+⌯     ${prefix}qq (ما عرفت اكتب اسمها عربي)
+⌯     ${prefix}ارلان   arlab
+⌯     ${prefix}تينغيون  Tingyun
+⌯     ${prefix}سامبو     sampo
+⌯     ${prefix}سوشانغ    Suchang
+⌯     ${prefix}يوكونغ     Yukong
+⌯     ${prefix}لوكا       Louka
+⌯     ${prefix}لينكس     Lynx
+⌯     ${prefix}جيونافين   guinaifen
+⌯     ${prefix}هانيا     Hanya
+⌯     ${prefix}شيويي   Xueyi
+⌯     ${prefix}ميشا     Misha`
      let buttonMessage = {
           video: fs.readFileSync('./system/A17_4.mp4'), gifPlayback: true,
           caption: helpmenu,
