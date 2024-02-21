@@ -912,7 +912,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
     }
 
 
-    if (smallinput.includes('عايز انيكك')|| smallinput.includes('عايز احشك') || smallinput.includes('كسم ابوك')) {
+    if (smallinput.includes('عايز انيكك')|| smallinput.includes('بحشر ليك') || smallinput.includes('كسم ابوك')) {
     reply (`بي زبك دا الا لو داير تكلكلني`);
     }
   
@@ -967,7 +967,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
     }
 
 
-    if (smallinput.includes('ااي')) {
+    if (smallinput.includes('ااااي')) {
     reply (`دخل جااااب سخل؟ `);
     }
 
