@@ -855,8 +855,8 @@ I NEED THAT HERTUSSY 💦🍆`,
           }
 
 
-    if (smallinput.includes('😂😂😂😂😂😂😂')|| smallinput.includes('🤣🤣🤣🤣🤣🤣') || smallinput.includes('ههههههه')) {
-    reply (`كت كت كت؟ وزعنا بلح جاك عجوة`);
+    if (smallinput.includes('افصلا')|| smallinput.includes('افصلها') {
+    reply (`يفصل هنايتك`);
     }
 
 
