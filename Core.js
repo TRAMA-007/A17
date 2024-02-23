@@ -2831,6 +2831,45 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
+        case 'loli':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+
+        // React to the command message with a specific emoji
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } });
+
+        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'));
+        var numberOfPictures = 3; // Change this value if you want to send a different number of pictures
+
+        // Create a function to get multiple random pictures from the 'nsfwdata' array
+        function getRandomPictures(array, count) {
+          var shuffled = array.slice();
+          var i = array.length;
+          var min = i - count;
+          var temp;
+          var index;
+
+          while (i-- > min) {
+            index = Math.floor((i + 1) * Math.random());
+            temp = shuffled[index];
+            shuffled[index] = shuffled[i];
+            shuffled[i] = temp;
+          }
+
+          return shuffled.slice(min);
+        }
+
+        // Get multiple random pictures from 'nsfwdata'
+        var selectedPictures = getRandomPictures(nsfwdata, numberOfPictures);
+
+        // Send the selected pictures one by one
+        for (let picture of selectedPictures) {
+          A17.sendMessage(m.chat, { caption: mess.success, image: { url: picture.url } }, { quoted: m });
+        }
+        break;
+
+
       // case 'panties':
       //   if (isBan) return reply(mess.banned)	 			
       //   if (isBanChat) return reply(mess.bangc);
@@ -5423,7 +5462,7 @@ _Click the button below to download_`
 
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
-        let abuffer = `https://www.guruapi.tech/api/spotifydl?url=${encodeURIComponent(q)}`
+        let abuffer = `https://vihangayt.me/download/spotify?url=${encodeURIComponent(q)}`
         let bbuffer = await fetchJson(`https://www.guruapi.tech/api/spotifyinfo?text=${encodeURIComponent(q)}`)
 
         let bimg = bbuffer.spty.results.thumbnail
@@ -7410,7 +7449,7 @@ _Click the button below to download_`
         break;
 
 
-      case 'loli':
+      case 'shinobu':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
