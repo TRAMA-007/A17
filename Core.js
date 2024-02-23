@@ -5463,7 +5463,43 @@ _Click the button below to download_`
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
         let abuffer = `https://vihangayt.me/download/spotify?url=${encodeURIComponent(q)}`
-        let bbuffer = await fetchJson(`https://www.guruapi.tech/api/spotifyinfo?text=${encodeURIComponent(q)}`)
+        let bbuffer = await fetchJson(`https://vihangayt.me/download/spotify?url=${encodeURIComponent(q)}`)
+
+        let bimg = bbuffer.spty.results.thumbnail
+        let bname = bbuffer.spty.results.title
+        let burl = bbuffer.spty.results.url;
+
+        await A17.sendMessage(from, {
+          audio: { url: abuffer },
+          ptt: true,
+          filename: 'error.mp3',
+          mimetype: 'audio/mpeg',
+          contextInfo: {
+            mentionedJid: [m.sender],
+            externalAdReply: {
+              title: "↺ |◁   II   ▷|   ♡",
+              body: `Now playing: ${bname}`,
+              thumbnailUrl: bimg,
+              sourceUrl: burl,
+              mediaType: 1,
+              renderLargerThumbnail: true
+            }
+          }
+        }, { quoted: m }
+        );
+      }
+        break;
+
+
+     case 'soundcloud': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+
+        if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
+
+        let abuffer = `https://vihangayt.me/download/soundcloud?url=${encodeURIComponent(q)}`
+        let bbuffer = await fetchJson(`https://vihangayt.me/download/soundcloud?url=${encodeURIComponent(q)}`)
 
         let bimg = bbuffer.spty.results.thumbnail
         let bname = bbuffer.spty.results.title
