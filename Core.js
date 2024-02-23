@@ -999,7 +999,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
    if (smallinput.includes('دا زاتو')) {
     reply (`هوي يا بوت`);
-    }
+}
 
 
 
