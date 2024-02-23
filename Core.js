@@ -855,11 +855,6 @@ I NEED THAT HERTUSSY 💦🍆`,
           }
 
 
-    if (smallinput.includes('افصلا')|| smallinput.includes('افصلها') {
-    reply (`يفصل هنايتك`);
-    }
-
-
     if (smallinput.includes('قنيط')) {
     reply (`الفاظك لو سمحت`);
           }
@@ -1000,8 +995,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
    if (smallinput.includes('دا زاتو')) {
     reply (`هوي يا بوت`);
 }
-
-
 
 
 
