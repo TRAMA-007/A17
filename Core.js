@@ -694,6 +694,7 @@ Typed *surrender* to surrender and admited defeat`
       runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
       konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
       sasha: 'Only you...🫶🏻',
+      اح: 'دا راسو بس',
       ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
       'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
       ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
