@@ -993,7 +993,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
     }
 
 
-    if (smallinput.includes('لباسك ناص')) {
+    if (smallinput.includes('لباسك ناص.ل')) {
     reply (`حي انا كان تتمها`);
     }
 
