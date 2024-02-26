@@ -7273,20 +7273,20 @@ _Click the button below to download_`
         break;
 
         
-      case 'awoo':
+      case 'menggoda':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
 
         reply(mess.waiting)
-        waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`)
+        waifudd = await axios.get(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=prinz_eugen_(azur_lane)`)
         /* var wbuttsss = [
           {buttonId: `${prefix}awoo`, buttonText: {displayText: `>>`}, type: 1},
           ] */
         let button1Messages = {
           image: { url: waifudd.data.url },
-          caption: `Here it is...`,
+          caption: `:q💦 `,
           /*  footer: `${global.BotName}`,
           buttons: wbuttsss,
           headerType: 2 */
