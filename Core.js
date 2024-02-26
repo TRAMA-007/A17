@@ -6876,7 +6876,7 @@ _Click the button below to download_`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${command}`)
+        waifudd = await axios.get(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${q}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
