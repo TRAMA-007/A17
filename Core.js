@@ -7280,12 +7280,12 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
 
         reply(mess.waiting)
-        waifudd = await axios.get(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=prinz_eugen_(azur_lane)`)
+        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=prinz_eugen_(azur_lane)`)
         /* var wbuttsss = [
           {buttonId: `${prefix}awoo`, buttonText: {displayText: `>>`}, type: 1},
           ] */
         let button1Messages = {
-          image: { url: waifudd.data.url },
+          image: { url: buffer.data.url },
           caption: `:q💦 `,
           /*  footer: `${global.BotName}`,
           buttons: wbuttsss,
