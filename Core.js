@@ -6673,6 +6673,15 @@ _Click the button below to download_`
         break;
 
 
+     case 'menggoda':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=prinz_eugen_(azur_lane)`)
+        A17.sendMessage(from, { image: buffer, caption: ':q 💦 '}, { quoted: m })
+        break;
+
+
 
 
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ NSFW ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
@@ -7273,7 +7282,7 @@ _Click the button below to download_`
         break;
 
         
-      case 'menggoda':
+      case 'men':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -7285,7 +7294,7 @@ _Click the button below to download_`
           {buttonId: `${prefix}awoo`, buttonText: {displayText: `>>`}, type: 1},
           ] */
         let button1Messages = {
-          image: { url: buffer.data.url },
+          image: buffer,
           caption: `:q💦 `,
           /*  footer: `${global.BotName}`,
           buttons: wbuttsss,
