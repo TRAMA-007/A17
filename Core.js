@@ -6948,12 +6948,12 @@ _Click the button below to download_`
         break;
 
 
-      case 'ايرونيكو':
+      case 'سكس':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://fantox-apis.vercel.app/catgirl`)
+        waifudd = await axios.get(`https://api.lolicon.app/setu/v2?tag=%E8%90%9D%E8%8E%89|%E5%B0%91%E5%A5%B3&tag=%E7%99%BD%E4%B8%9D|%E9%BB%91%E4%B8%9D`)
         /*        var wbuttsss = [
 {buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
 ] */
