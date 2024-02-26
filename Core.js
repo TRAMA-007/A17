@@ -6872,17 +6872,17 @@ _Click the button below to download_`
 
 
       //
-      case 'قدور':
+      case 'danbooru':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://fantox-apis.vercel.app/loli`)
+        waifudd = await axios.get(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${command}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button1ssMessages = {
           image: { url: waifudd.data.url },
-          caption: `😹تاقيهو ما تخليهو...`,
+          caption: `ْ`,
           /*  footer: `${global.BotName}`,
             buttons: wbuttsss,
             headerType: 4 */
