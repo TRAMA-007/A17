@@ -5754,7 +5754,7 @@ _Click the button below to download_`
         let results = [];
 
         // Get multiple random images (let's say 5 images)
-        const numImages = 5;
+        const numImages = 25;
         for (let i = 0; i < numImages && i < anutrest.length; i++) {
           results.push(anutrest[Math.floor(Math.random() * anutrest.length)]);
         }
@@ -7429,30 +7429,30 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        const aru = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
+        
+        const ba = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
         reply(mess.waiting);
-        const character = await aru.getInfoFromName(text).catch(() => null)
-        const info = await aru.getInfoFromName(text).catch(() => null)
-        const image = await aru.getInfoFromName(text).catch(() => null)
+        const aru = await aru.getInfoFromName(text).catch(() => null)
         let arutxt = `
-  🎀 *Name: ${character.name}*
-  🎋 *rarity: ${character.rarity}*
-  🎐 *armorType: ${character.armorType}*
-  💠 *bulletType: ${character.bulletType}*
-  📈 *position: ${character.position}*
-  💮 *role: ${character.role}
-  📍 *squadType: ${character.squadType}*
-  🌟 *profile: ${character.profile}*
-  💎 *age: ${info.age}*
-  🏅 *birthDate: ${info.birthDate}*
-  💫 *height: ${info.height}*
-  ♦️ *artist: ${info.artist}*
-  🌐 *club: ${info.club}*
-  ❄ *schoolYear:* ${info.schoolYear}*`
-        await A17.sendMessage(m.chat, { image: { url: image.lobby }, caption: arutxt }, { quoted: m })
-      }
+  🎀 *Name: ${aru.character.name}*
+  🎋 *rarity: ${aru.character.rarity}*
+  🎐 *armorType: ${aru.character.armorType}*
+  💠 *bulletType: ${aru.character.bulletType}*
+  📈 *position: ${aru.character.position}*
+  💮 *role: ${aru.character.role}
+  📍 *squadType: ${aru.character.squadType}*
+  🌟 *profile: ${aru.character.profile}*
+  💎 *age: ${aru.info.age}*
+  🏅 *birthDate: ${aru.info.birthDate}*
+  💫 *height: ${aru.info.height}*
+  ♦️ *artist: ${aru.info.artist}*
+  🌐 *club: ${aru.info.club}*
+  ❄ *schoolYear:* ${aru.info.schoolYear}*`
+       await A17.sendMessage(m.chat, { image: { url: aru.image.lobby}, caption: arutxt }, { quoted: m })
+     }
         break;
 
+          
 
       case 'manga':
         if (isBan) return reply(mess.banned);
