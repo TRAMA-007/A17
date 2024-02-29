@@ -7430,6 +7430,10 @@ _Click the button below to download_`
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         const aru = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
+        reply(mess.waiting);
+        const character = await malScraper.getInfoFromName(text).catch(() => null)
+        const info = await malScraper.getInfoFromName(text).catch(() => null)
+        const image = await malScraper.getInfoFromName(text).catch(() => null)
         let arutxt = `
   🎀 *Name: ${character.name}*
   🎋 *rarity: ${character.rarity}*
@@ -7443,7 +7447,7 @@ _Click the button below to download_`
   🏅 *birthDate: ${info.birthDate}*
   💫 *height: ${info.height}*
   ♦️ *artist: ${info.artist}*
-  🌐 *club: ${info}*
+  🌐 *club: ${info.club}*
   ❄ *schoolYear:* ${info.schoolYear}*`
         await A17.sendMessage(m.chat, { image: { url: image.lobby }, caption: arutxt }, { quoted: m })
       }
