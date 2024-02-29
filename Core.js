@@ -350,8 +350,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
        if (!isCmd && !m.isGroup){
-        const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt4?prompt=${budy}`)
-        txt = `${botreply.data.reply}`
+        const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${budy}`)
+        txt = `${botreply.data.completion}`
         m.reply(txt)
         } 
 
