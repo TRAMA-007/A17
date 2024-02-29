@@ -7430,7 +7430,7 @@ _Click the button below to download_`
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         
-        const ba = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
+        const ba = await fetchJson(`https://api.ennead.cc/buruaka/character/aru`)
         reply(mess.waiting);
         const aru = await ba.getInfoFromName(text).catch(() => null)
         let arutxt = `
