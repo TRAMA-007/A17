@@ -7422,7 +7422,7 @@ _Click the button below to download_`
         await A17.sendMessage(m.chat, { image: { url: anime.picture }, caption: animetxt }, { quoted: m })
       }
         break;
-
+        
 
       case 'aru': {
         if (isBan) return reply(mess.banned);
@@ -7431,9 +7431,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         const aru = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
         reply(mess.waiting);
-        const character = await malScraper.getInfoFromName(text).catch(() => null)
-        const info = await malScraper.getInfoFromName(text).catch(() => null)
-        const image = await malScraper.getInfoFromName(text).catch(() => null)
+        const character = await aru.getInfoFromName(text).catch(() => null)
+        const info = await aru.getInfoFromName(text).catch(() => null)
+        const image = await aru.getInfoFromName(text).catch(() => null)
         let arutxt = `
   🎀 *Name: ${character.name}*
   🎋 *rarity: ${character.rarity}*
