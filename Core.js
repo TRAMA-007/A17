@@ -2836,7 +2836,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-        case 'loli':
+     /*   case 'loli':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2888,7 +2888,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // break;
 
 
-     /* case 'panties':
+      case 'panties':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -6681,6 +6681,13 @@ _Click the button below to download_`
         A17.sendMessage(from, { image: buffer, caption: ':q 💦 '}, { quoted: m })
         break;
 
+      case 'loli':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=39d86e79464a60f1043a9418&query=loli%20kawaii`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
 
 
 
