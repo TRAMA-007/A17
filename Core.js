@@ -7432,7 +7432,7 @@ _Click the button below to download_`
         
         const ba = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
         reply(mess.waiting);
-        const aru = await aru.getInfoFromName(text).catch(() => null)
+        const aru = await ba.getInfoFromName(text).catch(() => null)
         let arutxt = `
   🎀 *Name: ${aru.character.name}*
   🎋 *rarity: ${aru.character.rarity}*
