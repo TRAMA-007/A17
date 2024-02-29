@@ -7424,6 +7424,32 @@ _Click the button below to download_`
         break;
 
 
+      case 'aru': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        const aru = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
+        let arutxt = `
+  🎀 *Name: ${character.name}*
+  🎋 *rarity: ${character.rarity}*
+  🎐 *armorType: ${character.armorType}*
+  💠 *bulletType: ${character.bulletType}*
+  📈 *position: ${character.position}*
+  💮 *role: ${character.role}
+  📍 *squadType: ${character.squadType}*
+  🌟 *profile: ${character.profile}*
+  💎 *age: ${info.age}*
+  🏅 *birthDate: ${info.birthDate}*
+  💫 *height: ${info.height}*
+  ♦️ *artist: ${info.artist}*
+  🌐 *club: ${info}*
+  ❄ *schoolYear:* ${info.schoolYear}*`
+        await A17.sendMessage(m.chat, { image: { url: image.lobby }, caption: arutxt }, { quoted: m })
+      }
+        break;
+
+
       case 'manga':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
