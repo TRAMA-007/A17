@@ -6965,7 +6965,7 @@ _Click the button below to download_`
 {buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button112ssMessages = {
-          image: { url: waifudd.data.urls.original},
+          image: { url: waifudd.data[0].urls.original},
           caption: `😋😋😋`,
           /*   footer: `${global.BotName}`,
              buttons: wbuttsss,
