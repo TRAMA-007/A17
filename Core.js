@@ -6955,25 +6955,6 @@ _Click the button below to download_`
         break;
 
 
-      case 'يوجين':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        fetch('https://api.lolicon.app/setu/v2?tag=プリンツ・オイゲン(アズールレーン)')
-    .then(response => response.json())
-    .then(data => {
-        // عند هنا يمكنك التعامل مع البيانات المجيئة من الAPI، مثل الحصول على رابط الصورة
-        const imageUrl = data.data[0].urls.original;
-        console.log(imageUrl);
-    })
-    .catch(error => {
-        console.error('حدث خطأ في الحصول على البيانات: ', error);
-    });
-        }
-        break;
-
-
       //
       case 'feed':
       case 'meow':
