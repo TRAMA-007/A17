@@ -6960,20 +6960,17 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://api.lolicon.app/setu/v2?tag=プリンツ・オイゲン(アズールレーン)`)
-        /*        var wbuttsss = [
-{buttonId: `${prefix}ايرونيكو`, buttonText: {displayText: `>>`}, type: 1},
-] */
-        let button112ssMessages = {
-          image: { url: waifudd.data[0].urls.original},
-          caption: `😋😋😋`,
-          /*   footer: `${global.BotName}`,
-             buttons: wbuttsss,
-             headerType: 4 */
+        fetch('https://api.lolicon.app/setu/v2?tag=プリンツ・オイゲン(アズールレーン)')
+    .then(response => response.json())
+    .then(data => {
+        // عند هنا يمكنك التعامل مع البيانات المجيئة من الAPI، مثل الحصول على رابط الصورة
+        const imageUrl = data.data[0].urls.original;
+        console.log(imageUrl);
+    })
+    .catch(error => {
+        console.error('حدث خطأ في الحصول على البيانات: ', error);
+    });
         }
-        await A17.sendMessage(m.chat, button112ssMessages, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
         break;
 
 
