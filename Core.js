@@ -6759,19 +6759,18 @@ _Click the button below to download_`
       // break;
 
 
-      // case 'blowjobgif': case 'bj' :
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      // reply(mess.waiting)
-      // bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)         
-      // let bjf = await getBuffer(bjd.data.url)
-      // let bjif = await GIFBufferToVideoBuffer(bjf)   
-      //       await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
-      //                   return reply('error..')
-      //                                   })
-      // break;
+       case 'blowjobgif': case 'bj' :
+         if (isBan) return reply(mess.banned);	 			
+         if (isBanChat) return reply(mess.bangc);
+         if (!m.isGroup) return reply(mess.grouponly);
+       reply(mess.waiting)
+       bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)         
+       let bjf = await getBuffer(bjd.data.url)
+       let bjif = await GIFBufferToVideoBuffer(bjf)   
+             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
+                         return reply('error..')
+                                         })
+       break;
 
 
       // case 'hentaivid': case 'hentaivideo': {
