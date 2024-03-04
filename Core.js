@@ -6892,7 +6892,7 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}danbooru plana`)
         reply(mess.waiting)
-        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${q}`)
+        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${encodeURIComponent(q)}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
