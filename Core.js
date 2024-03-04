@@ -6897,7 +6897,7 @@ _Click the button below to download_`
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button1ssMessages = {
-          image: waifudd,
+          image: buffer,
           caption: `ْ`,
           /*  footer: `${global.BotName}`,
             buttons: wbuttsss,
