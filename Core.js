@@ -6899,7 +6899,7 @@ _Click the button below to download_`
         const button1ssMessages = {
           image: waifudd,
           caption: 'ْ',
-          /*  footer: ${global.BotName},
+         /*   footer: ${global.BotName},
             buttons: wbuttsss,
             headerType: 4 */
         };
@@ -6907,7 +6907,7 @@ _Click the button below to download_`
     } catch (error) {
         return ('Error!');
     }
-    break؛ ​
+    break; ​
         
 
       case 'foxgirl':
