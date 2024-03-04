@@ -6759,7 +6759,7 @@ _Click the button below to download_`
       // break;
 
 
-       case 'blowjobgif': case 'bj' :
+       case 'جغ': case 'جغغ' :
          if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
          if (!m.isGroup) return reply(mess.grouponly);
@@ -6890,13 +6890,14 @@ _Click the button below to download_`
       case 'danbooru':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}danbooru plana`)
         reply(mess.waiting)
-        waifudd = await axios.get(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${q}`)
+        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${q}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button1ssMessages = {
-          image: { url: waifudd.data.url },
+          image: buffer,
           caption: `ْ`,
           /*  footer: `${global.BotName}`,
             buttons: wbuttsss,
