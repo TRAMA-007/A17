@@ -6906,7 +6906,7 @@ _Click the button below to download_`
         await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
           return ('Error!')
         })
-        break; ​
+        break;
         
 
       case 'foxgirl':
