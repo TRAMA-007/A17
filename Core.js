@@ -7402,32 +7402,36 @@ _Click the button below to download_`
         break;
         
 
-      case 'aru': {
+      case 'الارشيف':
+      case 'ba':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
-        const ba = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
+        const ba = await axios.get(`https://api.ennead.cc/buruaka/character/${q}`)
         reply(mess.waiting);
         const aru = ba.data;
         let arutxt = `
 🎀 *Name: ${aru.character.name}*
-🎋 *rarity: ${aru.character.rarity}*
-🎐 *armorType: ${aru.character.armorType}*
-💠 *bulletType: ${aru.character.bulletType}*
-📈 *position: ${aru.character.position}*
+🌟 *rarity: ${aru.character.rarity}
+🍆*armorType: ${aru.character.armorType}*
+🎯 *bulletType: ${aru.character.bulletType}
+🚩*position: ${aru.character.position}*
 💮 *role: ${aru.character.role}*
 📍 *squadType: ${aru.character.squadType}*
 🌟 *profile: ${aru.character.profile}*
-💎 *age: ${aru.info.age}*
-🏅 *birthDate: ${aru.info.birthDate}*
-💫 *height: ${aru.info.height}*
-♦️ *artist: ${aru.info.artist}*
-🌐 *club: ${aru.info.club}*
-❄ *schoolYear: ${aru.info.schoolYear}*
+😋 *age: ${aru.info.age}*
+✨ *birthDay: ${aru.info.birthDate}*
+🔆 *height: ${aru.info.height}*
+🎨 *artist: ${aru.info.artist}*
+♣️ *club: ${aru.info.club}*
+🌹 *schoolYear: ${aru.info.schoolYear}*
+🏫 *school: ${aru.info.school}*
+➿ *voiceactor: ${aru.info.voiceActor}*
 `;
-       await A17.sendMessage(m.chat, { image: { url: aru.image.lobby}, caption: arutxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { image: { url: aru.image.portrait}, caption: arutxt }, { quoted: m })
      }
         break;
 
