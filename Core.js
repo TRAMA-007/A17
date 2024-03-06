@@ -7441,20 +7441,44 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-
+        
         const sex = await axios.get(`https://api.lolicon.app/setu/v2?tag=ロリ`)
         reply(mess.waiting);
         const loli = sex.data.data[0];
         let lolitxt = `
- - *pid: ${loli.pid}*
- - *uid: ${loli.uid}*
-- *title: ${loli.title}*
-- *author: ${loli.author}*
-- *R18: ${loli.r18}*
--  *Tags: ${loli.tags.join(',')}*
-- *aitype: ${loli.aiType}*
+ *pid: ${loli.pid}*
+ *uid: ${loli.uid}*
+*title: ${loli.title}*
+*author: ${loli.author}*
+*R18: ${loli.r18}*
+*Tags: ${loli.tags.join(',')}*
+*aitype: ${loli.aiType}*
 `;
        await A17.sendMessage(m.chat, { image: { url: loli.urls.original}, caption: lolitxt }, { quoted: m })
+     }
+        break;
+
+
+     case 'pixiv':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+       if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}pixiv shiki`)
+
+        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=loli`)
+        reply(mess.waiting);
+        const pixiv = segs.data.data[0];
+        let pixivtxt = `
+ *pid: ${pixiv.pid}*
+ *uid: ${pixiv.uid}*
+*title: ${pixiv.title}*
+ *author: ${pixiv.author}*
+*R18: ${pixiv.r18}*
+ *Tags: ${pixiv.tags.join(',')}*
+ *aitype: ${pixiv.aiType}*
+`;
+       await A17.sendMessage(m.chat, { image: { url: pixiv.urls.original}, caption: pixivtxt }, { quoted: m })
      }
         break;
           
