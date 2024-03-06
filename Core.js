@@ -6681,13 +6681,13 @@ _Click the button below to download_`
         A17.sendMessage(from, { image: buffer, caption: ':q 💦 '}, { quoted: m })
         break;
 
-      case 'loli':
+      /* case 'loli':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         buffer = await getBuffer(`https://api.lolhuman.xyz/api/wallpaper?apikey=39d86e79464a60f1043a9418&query=loli%20kawaii`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        break; */
 
 
 
@@ -7435,6 +7435,28 @@ _Click the button below to download_`
      }
         break;
 
+
+      case 'loli':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+
+        const sex = await axios.get(`https://api.lolicon.app/setu/v2?tag=loli`)
+        reply(mess.waiting);
+        const loli = sex.data;
+        let lolitxt = `
+ *pid: ${loli.data.pid}*
+ *uid: ${loli.data.uid}
+*title: ${loli.data.title}*
+ *author: ${loli.data.author}
+*R18: ${loli.data.r18}*
+ *Tags: ${loli.data.tags}*
+ *aitype: ${loli.data.aiType}*
+`;
+       await A17.sendMessage(m.chat, { image: { url: loli.data.urls.original}, caption: arutxt }, { quoted: m })
+     }
+        break;
           
 
       case 'manga':
