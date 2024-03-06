@@ -7446,8 +7446,8 @@ _Click the button below to download_`
         reply(mess.waiting);
         const loli = sex.data.data[0];
         let lolitxt = `
- *pid: ${loli.pid}*
- *uid: ${loli.uid}*
+*pid: ${loli.pid}*
+*uid: ${loli.uid}*
 *title: ${loli.title}*
 *author: ${loli.author}*
 *R18: ${loli.r18}*
@@ -7466,7 +7466,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}pixiv shiki`)
 
-        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=loli`)
+        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=${q}`)
         reply(mess.waiting);
         const pixiv = segs.data.data[0];
         let pixivtxt = `
