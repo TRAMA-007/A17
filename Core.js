@@ -7444,17 +7444,17 @@ _Click the button below to download_`
 
         const sex = await axios.get(`https://api.lolicon.app/setu/v2?tag=loli`)
         reply(mess.waiting);
-        const loli = sex.data;
+        const loli = sex.data.data[0];
         let lolitxt = `
- *pid: ${loli.data.pid}*
- *uid: ${loli.data.uid}
-*title: ${loli.data.title}*
- *author: ${loli.data.author}
-*R18: ${loli.data.r18}*
- *Tags: ${loli.data.tags}*
- *aitype: ${loli.data.aiType}*
+ *pid: ${loli.pid}*
+ *uid: ${loli.uid}
+*title: ${loli.title}*
+ *author: ${loli.author}
+*R18: ${loli.r18}*
+ *Tags: ${loli.tags.join(',')}*
+ *aitype: ${loli.aiType}*
 `;
-       await A17.sendMessage(m.chat, { image: { url: loli.data.urls.original}, caption: arutxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { image: { url: loli.urls.original}, caption: lolitxt }, { quoted: m })
      }
         break;
           
