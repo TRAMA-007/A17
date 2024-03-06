@@ -7442,17 +7442,17 @@ _Click the button below to download_`
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
 
-        const sex = await axios.get(`https://api.lolicon.app/setu/v2?tag=loli`)
+        const sex = await axios.get(`https://api.lolicon.app/setu/v2?tag=ロリ`)
         reply(mess.waiting);
         const loli = sex.data.data[0];
         let lolitxt = `
- *pid: ${loli.pid}*
- *uid: ${loli.uid}
-*title: ${loli.title}*
- *author: ${loli.author}
-*R18: ${loli.r18}*
- *Tags: ${loli.tags.join(',')}*
- *aitype: ${loli.aiType}*
+ - *pid: ${loli.pid}*
+ - *uid: ${loli.uid}*
+- *title: ${loli.title}*
+- *author: ${loli.author}*
+- *R18: ${loli.r18}*
+-  *Tags: ${loli.tags.join(',')}*
+- *aitype: ${loli.aiType}*
 `;
        await A17.sendMessage(m.chat, { image: { url: loli.urls.original}, caption: lolitxt }, { quoted: m })
      }
