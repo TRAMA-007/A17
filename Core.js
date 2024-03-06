@@ -7410,23 +7410,24 @@ _Click the button below to download_`
         
         const ba = await axios.get(`https://api.ennead.cc/buruaka/character/aru`)
         reply(mess.waiting);
-        const aru = await ba.getInfoFromName(text).catch(() => null)
+        const aru = ba.data;
         let arutxt = `
-  🎀 *Name: ${aru.name}*
-  🎋 *rarity: ${aru.rarity}*
-  🎐 *armorType: ${aru.armorType}*
-  💠 *bulletType: ${aru.bulletType}*
-  📈 *position: ${aru.position}*
-  💮 *role: ${aru.role}
-  📍 *squadType: ${aru.squadType}*
-  🌟 *profile: ${aru.profile}*
-  💎 *age: ${aru.age}*
-  🏅 *birthDate: ${aru.birthDate}*
-  💫 *height: ${aru.height}*
-  ♦️ *artist: ${aru.artist}*
-  🌐 *club: ${aru.club}*
-  ❄ *schoolYear:* ${aru.schoolYear}*`
-       await A17.sendMessage(m.chat, { image: { url: aru.lobby}, caption: arutxt }, { quoted: m })
+🎀 *Name: ${aru.character.name}*
+🎋 *rarity: ${aru.character.rarity}*
+🎐 *armorType: ${aru.character.armorType}*
+💠 *bulletType: ${aru.character.bulletType}*
+📈 *position: ${aru.character.position}*
+💮 *role: ${aru.character.role}*
+📍 *squadType: ${aru.character.squadType}*
+🌟 *profile: ${aru.character.profile}*
+💎 *age: ${aru.info.age}*
+🏅 *birthDate: ${aru.info.birthDate}*
+💫 *height: ${aru.info.height}*
+♦️ *artist: ${aru.info.artist}*
+🌐 *club: ${aru.info.club}*
+❄ *schoolYear: ${aru.info.schoolYear}*
+`;
+       await A17.sendMessage(m.chat, { image: { url: aru.image.lobby}, caption: arutxt }, { quoted: m })
      }
         break;
 
