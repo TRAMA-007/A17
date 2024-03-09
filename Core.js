@@ -7449,19 +7449,19 @@ _Click the button below to download_`
  *uid: ${rail.player.uid}*
  *nickname: ${rail.player.nickname}*
  *level: ${rail.player.level}*
- *world level: ${rail.player.world_level}
+ *worldlevel: ${rail.player.world_level}*
  *friends: ${rail.player.friend_count}*
  *avatar id: ${rail.player.avatar.id}*
  *name: ${rail.player.avatar.name}*
  *signature: ${rail.player.signature}*
  *memory of chaos: ${rail.player.memory_data.level}*
- *chaos level: ${rail.player.memory_data.chaos_level}*
- *simulated universe: ${rail.player.universe_level}*
- *lighes cones: ${rail.player.light_cone_count}*
+ *chaoslevel: ${rail.player.memory_data.chaos_level}*
+ *simulateduniverse: ${rail.player.universe_level}*
+ *lighescones: ${rail.player.light_cone_count}*
  *avatars: ${rail.player.avatar_count}*
  *achievements: ${rail.player.achievement_count}*
 `;
-       await A17.sendMessage(m.chat, { caption: startxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { message: startxt }, { quoted: m })
      }
         break;
 
