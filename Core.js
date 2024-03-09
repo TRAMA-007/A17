@@ -7445,22 +7445,25 @@ _Click the button below to download_`
         const star = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`);
         reply(mess.waiting);
         const rail = star.data;
+        const playerinfo = rail.player;
+        const avatarinfo = playerinfo.avatar;
+        const spaceinfo = playerinfo.space_info.memory_data;
         
         let startxt = `
-        *UID: ${rail.player.uid}*
-        *Nickname: ${rail.player.nickname}*
-        *Level: ${rail.player.level}*
-        *World Level: ${rail.player.world_level}*
-        *Friends: ${rail.player.friend_count}*
-        *Avatar ID: ${rail.player.avatar.id}*
-        *Name: ${rail.player.avatar.name}*
-        *Signature: ${rail.player.signature}*
-        *Memory of Chaos: ${rail.player.space_info.memory_data.level}*
-        *Chaos Level: ${rail.player.space_info.memory_data.chaos_id || 'N/A'}*
-        *Simulated Universe: ${rail.player.space_info.universe_level}*
-        *Light Cones: ${rail.player.space_info.light_cone_count}*
-        *Avatars: ${rail.player.space_info.avatar_count}*
-        *Achievements: ${rail.player.space_info.achievement_count}*
+        *UID: ${playerinfo.uid}*
+        *Nickname: ${playerinfo.nickname}*
+        *Level: ${playerinfo.level}*
+        *World Level: ${playerinfo.world_level}*
+        *Friends: ${playerinfo.friend_count}*
+        *Avatar ID: ${avatarinfo.id}*
+        *Name: ${avatarinfo..name}*
+        *Signature: ${playerinfo.signature}*
+        *Memory of Chaos: ${spaceinfo.level}*
+        *Chaos Level: ${spaceinfo.chaos_id || 'N/A'}*
+        *Simulated Universe: ${playerinfo.space_info.universe_level}*
+        *Light Cones: ${playerinfo.space_info.light_cone_count}*
+        *Avatars: ${playerinfo.space_info.avatar_count}*
+        *Achievements: ${playerinfo.space_info.achievement_count}*
         `;
         
         await A17.sendMessage(m.chat, { message: startxt }, { quoted: m });
