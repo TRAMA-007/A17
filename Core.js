@@ -7444,6 +7444,7 @@ _Click the button below to download_`
         
         const star = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`)
         reply(mess.waiting);
+        buffer = await getBuffer(`https://cdn.wanderer.moe/honkai-star-rail/cover.png`)
         const rail = star.data;
         let startxt = `
  *uid: ${rail.player.uid}*
@@ -7461,7 +7462,7 @@ _Click the button below to download_`
  *avatars: ${rail.player.avatar_count}*
  *achievements: ${rail.player.achievement_count}*
 `;
-       await A17.sendMessage(m.chat, { image: { buffer: `https://cdn.wanderer.moe/honkai-star-rail/cover.png`}, caption: startxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { image: buffer, caption: startxt }, { quoted: m })
      }
         break;
 
