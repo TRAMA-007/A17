@@ -7442,7 +7442,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } });
         if (!text) return reply(`Please proide an id!\n\n*Example:* ${prefix}star 701607417`)
         
-        const star = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en}`)
+        const star = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`)
         reply(mess.waiting);
         const rail = star.data;
         let startxt = `
@@ -7452,7 +7452,7 @@ _Click the button below to download_`
  *world level: ${rail.player.world_level}
  *friends: ${rail.player.friend_count}*
  *avatar id: ${rail.player.avatar.id}*
- *name: ${rail.player.avater.name}*
+ *name: ${rail.player.avatar.name}*
  *signature: ${rail.player.signature}*
  *memory of chaos: ${rail.player.memory_data.level}*
  *chaos level: ${rail.player.memory_data.chaos_level}*
