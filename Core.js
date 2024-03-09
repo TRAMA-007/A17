@@ -7436,6 +7436,36 @@ _Click the button below to download_`
         break;
 
 
+      case 'star':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } });
+        if (!text) return reply(`Please proide an id!\n\n*Example:* ${prefix}star 701607417`)
+        
+        const star = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en}`)
+        reply(mess.waiting);
+        const rail = star.data;
+        let startxt = `
+ *uid: ${rail.player.uid}*
+ *nickname: ${rail.player.nickname}*
+ *level: ${rail.player.level}*
+ *world level: ${rail.player.world_level}
+ *friends: ${rail.player.friend_count}*
+ *avatar id: ${rail.player.avatar.id}*
+ *name: ${rail.player.avater.name}*
+ *signature: ${rail.player.signature}*
+ *memory of chaos: ${rail.player.memory_data.level}*
+ *chaos level: ${rail.player.memory_data.chaos_level}*
+ *simulated universe: ${rail.player.universe_level}*
+ *lighes cones: ${rail.player.light_cone_count}*
+ *avatars: ${rail.player.avatar_count}*
+ *achievements: ${rail.player.achievement_count}*
+`;
+       await A17.sendMessage(m.chat, { image: { buffer: `https://cdn.wanderer.moe/honkai-star-rail/cover.png`}, caption: startxt }, { quoted: m })
+     }
+        break;
+
+
       case 'loli':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
