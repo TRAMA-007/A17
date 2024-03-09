@@ -7436,34 +7436,36 @@ _Click the button below to download_`
         break;
 
 
-      case 'star':{
+      case 'star': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } });
-        if (!text) return reply(`Please proide an id!\n\n*Example:* ${prefix}star 701607417`)
+        if (!text) return reply('Please provide an id!\n\n*Example:* ${prefix}star 701607417');
         
-        const star = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`)
+        const star = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`);
         reply(mess.waiting);
         const rail = star.data;
+        
         let startxt = `
- *uid: ${rail.player.uid}*
- *nickname: ${rail.player.nickname}*
- *level: ${rail.player.level}*
- *worldlevel: ${rail.player.world_level}*
- *friends: ${rail.player.friend_count}*
- *avatar id: ${rail.player.avatar.id}*
- *name: ${rail.player.avatar.name}*
- *signature: ${rail.player.signature}*
- *memory of chaos: ${rail.player.memory_data.level}*
- *chaoslevel: ${rail.player.memory_data.chaos_level}*
- *simulateduniverse: ${rail.player.universe_level}*
- *lighescones: ${rail.player.light_cone_count}*
- *avatars: ${rail.player.avatar_count}*
- *achievements: ${rail.player.achievement_count}*
-`;
-       await A17.sendMessage(m.chat, { message: startxt }, { quoted: m })
-     }
-        break;
+        *UID: ${rail.player.uid}*
+        *Nickname: ${rail.player.nickname}*
+        *Level: ${rail.player.level}*
+        *World Level: ${rail.player.world_level}*
+        *Friends: ${rail.player.friend_count}*
+        *Avatar ID: ${rail.player.avatar.id}*
+        *Name: ${rail.player.avatar.name}*
+        *Signature: ${rail.player.signature}*
+        *Memory of Chaos: ${rail.player.space_info.memory_data.level}*
+        *Chaos Level: ${rail.player.space_info.memory_data.chaos_id || 'N/A'}*
+        *Simulated Universe: ${rail.player.space_info.universe_level}*
+        *Light Cones: ${rail.player.space_info.light_cone_count}*
+        *Avatars: ${rail.player.space_info.avatar_count}*
+        *Achievements: ${rail.player.space_info.achievement_count}*
+        `;
+        
+        await A17.sendMessage(m.chat, { message: startxt }, { quoted: m });
+    }
+    break;
 
 
       case 'loli':{
