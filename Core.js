@@ -7461,7 +7461,7 @@ _Click the button below to download_`
  *avatars: ${rail.player.avatar_count}*
  *achievements: ${rail.player.achievement_count}*
 `;
-       await A17.sendMessage(m.chat, { image: { url: `https://cdn.wanderer.moe/honkai-star-rail/cover.png`}, caption: startxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { caption: startxt }, { quoted: m })
      }
         break;
 
