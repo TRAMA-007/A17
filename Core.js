@@ -752,19 +752,16 @@ I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`,
     };
 
-    const smallinput = budy.toLowerCase();
+    const smallInput = budy.toLowerCase();
 
-    if (responses.hasOwnProperty(smallinput)) {
-      reply(responses[smallinput]);
-    }
+if (responses.hasOwnProperty(smallInput)) {
+  reply(responses[smallInput]);
+}
 
-    
-    
-    if (smallinput.includes('بكره نيكي')) {
-    let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-        await A17.groupParticipantsUpdate(m.chat, [users], 'remove');
-    }
-
+if (smallInput.includes('بكره نيكي')) {
+  // حذف الإجابة على 'بكره نيكي' إذا تواجدت
+  delete responses[smallInput];
+}
 
 
     if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
