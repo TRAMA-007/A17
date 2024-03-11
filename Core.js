@@ -686,7 +686,7 @@ Typed *surrender* to surrender and admited defeat`
  } */
 
 
- //   const responses = {
+    const responses = {
 
 
    /*   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
@@ -750,9 +750,9 @@ And sooo..
 THAT KURUKURUSSY MUST BE DIVINE ☝️
 I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`,
-    }; */
+    };
 
-  /*  const smallinput = budy.toLowerCase();
+    const smallinput = budy.toLowerCase();
 
     if (responses.hasOwnProperty(smallinput)) {
       reply(responses[smallinput]);
@@ -760,14 +760,12 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     
     
-    if (smallinput.includes('بكره نيكي')) {
-    // Assuming 'message' is the variable representing the message you want to delete
-    message.delete();
-}
+    if (smallinput.includes('سم شاك')|| smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
+    reply (`يا اروالي ويا اروالي سرى الليل يا اروالي عب الناكك و ختاهو ليك طوالي 😂🫵 `);
+            }
 
 
-
-   /* if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
+    if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
     reply (`ربنا يسامحك`);
     }
 
@@ -2656,7 +2654,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
       //
-    /*  case 'hentaivid': case 'hentaivideo': {
+      case 'hentaivid': case 'hentaivideo': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2670,7 +2668,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-      case 'glasses':
+  /*    case 'glasses':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2799,7 +2797,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // break;
 
 
-   /*   case 'مينغودا':
+      case 'مينغودا':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -2838,7 +2836,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-        case 'loli':
+     /*   case 'loli':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -7269,7 +7267,7 @@ _Click the button below to download_`
         break;
 
         
-  /*   case 'men':
+      case 'men':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -7277,21 +7275,21 @@ _Click the button below to download_`
 
         reply(mess.waiting)
         buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=prinz_eugen_(azur_lane)`)
-         var wbuttsss = [
+        /* var wbuttsss = [
           {buttonId: `${prefix}awoo`, buttonText: {displayText: `>>`}, type: 1},
-          ] 
+          ] */
         let button1Messages = {
           image: buffer,
           caption: `:q💦 `,
           /*  footer: `${global.BotName}`,
           buttons: wbuttsss,
-          headerType: 2 
+          headerType: 2 */
 
         }
         await A17.sendMessage(m.chat, button1Messages, { quoted: m }).catch(err => {
           return ('Error!')
         })
-        break; */
+        break;
 
 
       case 'animewall2': case 'animewallpaper2':
@@ -7438,7 +7436,7 @@ _Click the button below to download_`
         break;
 
 
-    /*  case 'star': {
+      case 'star': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } });
@@ -7517,7 +7515,7 @@ _Click the button below to download_`
 `;
        await A17.sendMessage(m.chat, { image: { url: pixiv.urls.original}, caption: pixivtxt }, { quoted: m })
      }
-        break; */
+        break;
           
 
       case 'manga':
