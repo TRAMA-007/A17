@@ -761,8 +761,8 @@ I NEED THAT HERTUSSY 💦🍆`,
     
     
     if (smallinput.includes('بكره نيكي')) {
-    // Assuming 'message' is the variable representing the message you want to delete
-    message.delete();
+    let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
+        await A17.groupParticipantsUpdate(m.chat, [users], 'remove');
     }
 
 
