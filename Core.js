@@ -686,7 +686,7 @@ Typed *surrender* to surrender and admited defeat`
  } */
 
 
-    const responses = {
+ //   const responses = {
 
 
    /*   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
@@ -762,9 +762,7 @@ I NEED THAT HERTUSSY 💦🍆`,
     
     if (smallinput.includes('بكره نيكي')) {
     // Assuming 'message' is the variable representing the message you want to delete
-    message.delete()
-        .then(msg => console.log(Deleted message from ${msg.author.username}))
-        .catch(console.error);
+    message.delete();
 }
 
 
