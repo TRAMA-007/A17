@@ -752,7 +752,7 @@ I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`,
     }; */
 
-    const smallinput = budy.toLowerCase();
+  /*  const smallinput = budy.toLowerCase();
 
     if (responses.hasOwnProperty(smallinput)) {
       reply(responses[smallinput]);
