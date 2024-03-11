@@ -7436,7 +7436,7 @@ _Click the button below to download_`
         break;
 
 
-      case 'star': {
+ /*     case 'star': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } });
@@ -7468,7 +7468,7 @@ _Click the button below to download_`
         
         await A17.sendMessage(m.chat, { message: startxt }, { quoted: m });
     }
-    break; 
+    break; */
 
 
       case 'loli':{
