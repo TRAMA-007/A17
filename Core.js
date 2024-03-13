@@ -7500,7 +7500,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}pixiv shiki`)
 
-        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=${encodeURIComponent(q)}`)
+        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=$(q)`)
         reply(mess.waiting);
         const pixiv = segs.data.data[0];
         let pixivtxt = `
