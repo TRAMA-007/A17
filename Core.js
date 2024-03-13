@@ -2166,7 +2166,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // break;
 
 
-      case 'wallpaper':
+     /* case 'wallpaper':
       case 'animewallpaper':
       case 'animewall': {
         if (isBan) return reply(mess.banned);
@@ -2194,7 +2194,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           A17.sendMessage(m.chat, message, { quoted: m });
         }
       }
-        break;
+        break; */
 
 
       case 'wikimedia': case 'wikiimage': {
@@ -5358,7 +5358,7 @@ _Click the button below to download_`
       // break;
 
 
-      case 'play':
+  /*    case 'play':
       case 'song':
       case 'music': {
         if (isBan) return reply(mess.banned);
@@ -5407,7 +5407,7 @@ _Click the button below to download_`
         // Rest of the code remains unchanged.
         // ...
       }
-        break;
+        break; */
 
       case 'spotify': {
         if (isBan) return reply(mess.banned);
@@ -5481,7 +5481,7 @@ _Click the button below to download_`
         break;
 
 
-      case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
+ /*     case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍃", key: m.key } })
@@ -5493,7 +5493,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { video: { url: ytmp4play.videoUrl }, mimetype: "video/mp4", caption: anu.title + ' By *A17 MD*', }, { quoted: m })
       }
 
-        break;
+        break; */
 
 
       /*
@@ -5690,7 +5690,7 @@ _Click the button below to download_`
 
 
       //
-      case 'pinterest':
+   /*   case 'pinterest':
       case 'pin': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5713,7 +5713,7 @@ _Click the button below to download_`
           A17.sendMessage(m.chat, { image: { url: results[i] } }, { quoted: m });
         }
       }
-        break;
+        break; */
 
 
       // case 'pinterest':
@@ -7064,6 +7064,12 @@ _Click the button below to download_`
       case 'loli':
       case 'waifu':
       case 'kiss':
+      case 'wallpaper':
+      case 'pinterest':
+      case 'play':
+      case 'music':
+      case 'video':
+      case 'song':
          if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
          if (!m.isGroup) return reply(mess.grouponly);
@@ -7098,7 +7104,7 @@ _Click the button below to download_`
 
 
       //
-      case 'feed':
+  /*    case 'feed':
       case 'meow':
       case 'tickle':
         if (isBan) return reply(mess.banned);
@@ -7119,7 +7125,7 @@ _Click the button below to download_`
         await A17.sendMessage(m.chat, buttonssMessages, { quoted: m }).catch(err => {
           return ('Error!')
         })
-        break;
+        break; */
 
 
 
@@ -7129,7 +7135,7 @@ _Click the button below to download_`
 
 
       //
-      case 'cry': case 'handhold': {
+  /*    case 'cry': case 'handhold': {
 
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
