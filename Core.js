@@ -7070,9 +7070,16 @@ _Click the button below to download_`
       case 'music':
       case 'video':
       case 'song':
+      case 'feed':
+      case 'meow':
+      case 'tickle':
+      case 'hug':
+      case 'kill': case 'pat': case 'lick': case 'bite':
+      case 'bully': case 'bonk': case 'poke': case 'slap':
+      case 'happy':
+      case 'cuddle': case 'kick':
          if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
-         if (!m.isGroup) return reply(mess.grouponly);
        reply(mess.waiting)
        bjd = await getBuffer(`https://media.tenor.com/et1uYmWUlwIAAAAM/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D8%B9%D9%85%D8%B1%D9%88_%D9%85%D8%B5%D8%B7%D9%81%D9%89.gif`)
        let bjif = await GIFBufferToVideoBuffer(bjd)   
