@@ -350,7 +350,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
        if (!isCmd && !m.isGroup){
-        const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${budy}`)
+        const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${encodeURIComponent(budy)}`)
         txt = `${botreply.data.completion}`
         m.reply(txt)
         } 
@@ -686,7 +686,7 @@ Typed *surrender* to surrender and admited defeat`
  } */
 
 
-    const responses = {
+ /*   const responses = {
 
 
       hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
@@ -7500,7 +7500,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}pixiv shiki`)
 
-        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=${q}`)
+        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const pixiv = segs.data.data[0];
         let pixivtxt = `
