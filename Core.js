@@ -6634,22 +6634,10 @@ _Click the button below to download_`
      case 'card-jingliu':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide an id!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-        reply(mess.waiting)
-        jingliu = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png}`)
-        /*       var wbuttsss = [
-{buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
-] */
-        let button1ssMessages = {
-          image: jingliu,
-          caption: `here's your jingliu`,
-          /*  footer: `${global.BotName}`,
-            buttons: wbuttsss,
-            headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your jingliu'}, { quoted: m })
         break;
 
 
@@ -6797,7 +6785,7 @@ _Click the button below to download_`
       //   if (!AntiNsfw) return reply(mess.nonsfw)
       // reply(mess.waiting)
       //   waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
-      // /* let nwaifubot = [
+      // /* let nwaifubot = 
       //   {buttonId: `${prefix + command}`, buttonText: {displayText: `>>`}, type: 1},
       //   ] */
       // let button4Messages = {
