@@ -6903,9 +6903,8 @@ _Click the button below to download_`
          if (isBanChat) return reply(mess.bangc);
          if (!m.isGroup) return reply(mess.grouponly);
        reply(mess.waiting)
-       bjd = await getbuffer(`https://media.tenor.com/et1uYmWUlwIAAAAM/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D8%B9%D9%85%D8%B1%D9%88_%D9%85%D8%B5%D8%B7%D9%81%D9%89.gif`)         
-       let bjf = await getBuffer(bjd)
-       let bjif = await GIFBufferToVideoBuffer(bjf)   
+       bjd = await getBuffer(`https://media.tenor.com/et1uYmWUlwIAAAAM/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D8%B9%D9%85%D8%B1%D9%88_%D9%85%D8%B5%D8%B7%D9%81%D9%89.gif`)
+       let bjif = await GIFBufferToVideoBuffer(bjd)   
              await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
                          return reply('error..')
                                          })
