@@ -6759,20 +6759,6 @@ _Click the button below to download_`
       // break;
 
 
-       case 'جغ': case 'جغغ' :
-         if (isBan) return reply(mess.banned);	 			
-         if (isBanChat) return reply(mess.bangc);
-         if (!m.isGroup) return reply(mess.grouponly);
-       reply(mess.waiting)
-       bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)         
-       let bjf = await getBuffer(bjd.data.url)
-       let bjif = await GIFBufferToVideoBuffer(bjf)   
-             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
-                         return reply('error..')
-                                         })
-       break;
-
-
       // case 'hentaivid': case 'hentaivideo': {
       //   if (isBan) return reply(mess.banned);	 			
       //   if (isBanChat) return reply(mess.bangc);
@@ -6910,28 +6896,20 @@ _Click the button below to download_`
         
 
       case 'foxgirl':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
-
-        reply(mess.waiting)
-        waifudd = await axios.get(`https://nekos.life/api/v2/img/fox_girl`)
-
-        /* var wbuttsss = [
-   {buttonId: `${prefix}foxgirl`, buttonText: {displayText: `>>`}, type: 1},
-   ] */
-        let button12ssMessages = {
-          image: { url: waifudd.data.url },
-          caption: `Awoooo...`,
-          /* footer: `${global.BotName}`,
-          buttons: wbuttsss,
-          headerType: 4 */
-        }
-        await A17.sendMessage(m.chat, button12ssMessages, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break;
+      case 'neko':
+      case 'loli':
+      case 'waifu':
+         if (isBan) return reply(mess.banned);	 			
+         if (isBanChat) return reply(mess.bangc);
+         if (!m.isGroup) return reply(mess.grouponly);
+       reply(mess.waiting)
+       bjd = await getbuffer(`https://media.tenor.com/et1uYmWUlwIAAAAM/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D8%B9%D9%85%D8%B1%D9%88_%D9%85%D8%B5%D8%B7%D9%81%D9%89.gif`)         
+       let bjf = await getBuffer(bjd)
+       let bjif = await GIFBufferToVideoBuffer(bjf)   
+             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
+                         return reply('error..')
+                                         })
+       break;
         
 
       case 'touhou':
@@ -7471,7 +7449,7 @@ _Click the button below to download_`
     break; */ 
 
 
-      case 'loli':{
+  /*   case 'loli':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -7491,7 +7469,7 @@ _Click the button below to download_`
 `;
        await A17.sendMessage(m.chat, { image: { url: loli.urls.original}, caption: lolitxt }, { quoted: m })
      }
-        break;
+        break; */
 
 
      case 'pixiv':{
@@ -7501,7 +7479,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}pixiv shiki`)
 
-        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=${q}`)
+        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const pixiv = segs.data.data[0];
         let pixivtxt = `
@@ -7553,50 +7531,6 @@ _Click the button below to download_`
           ""
         )}`;
         A17.sendMessage(m.chat, { image: { url: srh.data[0].images.jpg.large_image_url }, caption: mang }, { quoted: m })
-        break;
-
-
-      case 'waifu':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
-        /*var wbuttsssr = [
-          {buttonId: `${prefix}waifu`, buttonText: {displayText: `>>`}, type: 1},
-          ] */
-        let button4Messagess = {
-          image: { url: waifuddd.data.url },
-          caption: '*المس العشب يا متوحد*',
-          /*buttons: wbuttsssr,
-          headerType: 4 */
-        }
-
-        await A17.sendMessage(m.chat, button4Messagess, { quoted: m }).catch(err => {
-          return ('error..')
-        })
-        break;
-
-
-      case 'neko':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        waifuddd = await axios.get('https://waifu.pics/api/sfw/neko')
-        /*var wbuttsssr = [
-          {buttonId: `${prefix}neko`, buttonText: {displayText: `>>`}, type: 1},
-          ]*/
-        let buttonMessagessf = {
-          image: { url: waifuddd.data.url },
-          caption: 'مياو مياو نيغا ...',
-          /*    buttons: wbuttsssr,
-              headerType: 2  */
-        }
-
-        await A17.sendMessage(m.chat, buttonMessagessf, { quoted: m }).catch(err => {
-          return ('error..')
-        })
         break;
 
 
