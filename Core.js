@@ -6834,7 +6834,7 @@ _Click the button below to download_`
         break;
 
 
-        case 'card-argengi':
+        case 'card-argenti':
         case 'card-arjenti':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
