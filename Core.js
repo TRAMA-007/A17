@@ -7054,6 +7054,7 @@ _Click the button below to download_`
       case 'neko':
       case 'loli':
       case 'waifu':
+      case 'kiss':
          if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
          if (!m.isGroup) return reply(mess.grouponly);
@@ -7274,7 +7275,7 @@ _Click the button below to download_`
 
 
       //
-      case 'kill': case 'pat': case 'lick': case 'kiss': case 'bite':
+      case 'kill': case 'pat': case 'lick': case 'bite':
       case 'bully': case 'bonk': case 'poke': case 'slap':
       case 'happy':
       case 'cuddle': case 'kick': {
@@ -7858,21 +7859,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}setdesc
   ⌯     ${prefix}revoke
   ⌯     ${prefix}tagall
-  ⌯     ${prefix}hidetag
-
-
-  〢━━━❗ *Anti Link ❗* ━━━〢
-
-  
-  ⌯     ${prefix}antilinkgc
-  ⌯     ${prefix}antilinktt
-  ⌯     ${prefix}antilinkytch
-  ⌯     ${prefix}antilinkytch
-  ⌯     ${prefix}antilinkig
-  ⌯     ${prefix}antilinkfb
-  ⌯     ${prefix}antilinktwit
-  ⌯     ${prefix}antiwame
-  ⌯     ${prefix}antilinkall
+  ⌯     ${prefix}hidetag 
   
 
   〢━━━ 🔍 *Search* 🔎 ━━━〢
@@ -7894,8 +7881,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}searchgc
   ⌯     ${prefix}wikimedia
   ⌯     ${prefix}gpt
-  ⌯     ${prefix}youai
-  ⌯     ${prefix}characterai
 
 
   〢━━━ 📈 *Economy* 📈 ━━━〢
@@ -7935,24 +7920,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}steal
   ⌯     ${prefix}stickermeme
   ⌯     ${prefix}emojimix
-
-
-  〢━━━ ◈ Sound Edit ◈ ━━━〢
-
-
-  ⌯     ${prefix}ringtone
-  ⌯     ${prefix}bass
-  ⌯     ${prefix}tempo
-  ⌯     ${prefix}blown
-  ⌯     ${prefix}robot
-  ⌯     ${prefix}slow
-  ⌯     ${prefix}squirrel
-  ⌯     ${prefix}deep
-  ⌯     ${prefix}earrape
-  ⌯     ${prefix}fast
-  ⌯     ${prefix}fat
-  ⌯     ${prefix}nightcore
-  ⌯     ${prefix}reverse
 
 
   〢━━━ 📍 *Reactions* 📍 ━━━〢
@@ -7998,8 +7965,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}twittermp3
   ⌯     ${prefix}tiktok
   ⌯     ${prefix}tiktokaudio
-  ⌯     ${prefix}happymod
-  ⌯     ${prefix}tiktoknowm
 
  
   〢━━━ 🎐 *Fun* 🎐 ━━━〢
@@ -8027,13 +7992,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
   
   ⌯     ${prefix}anime
-  ⌯     ${prefix}animestory
-  ⌯     ${prefix}awoo
   ⌯     ${prefix}manga
   ⌯     ${prefix}animewall
-  ⌯     ${prefix}animewallpaper2
-  ⌯     ${prefix}crosplay
-  ⌯     ${prefix}animenom
   ⌯     ${prefix}feed
   ⌯     ${prefix}foxgirl
   ⌯     ${prefix}waifu
@@ -8042,24 +8002,16 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}loli
   ⌯     ${prefix}coffee
   ⌯     ${prefix}tickle
-  ⌯     ${prefix}meow
-  ⌯     ${prefix}neko
-  ⌯     ${prefix}neko2
-  ⌯     ${prefix}migumin
   ⌯     ${prefix}wallpaper
-  ⌯     ${prefix}animequote
   ⌯     ${prefix}hsr (honkai star rail bulids) 
+  ⌯     ${prefix}hsr-cards (honkai star rail character cards)
  
 
   〢━━━ ♨️ *Informative* ♨️ ━━━〢
   
 
-  ⌯     ${prefix}quote
   ⌯     ${prefix}weather
-  ⌯     ${prefix}covid
-  ⌯     ${prefix}earthquake
   ⌯     ${prefix}wiki
-  ⌯     ${prefix}stalknumber
 
 
   〢━━━ 🪁 *Essentials* 🪁 ━━━〢
@@ -8069,21 +8021,18 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}say
   ⌯     ${prefix}fliptext
   ⌯     ${prefix}toletter
-  ⌯     ${prefix}translate, 
+  ⌯     ${prefix}translate 
   
  
   〢━━━ 🎗 *Others* 🎗 ━━━〢
 
 
-  ⌯     ${prefix}stickermeme
-  ⌯     ${prefix}quotes
   ⌯     ${prefix}report
   ⌯     ${prefix}afk
-  ⌯     ${prefix}darkjoke واقفة حاليا 
   ⌯     ${prefix}pick
 
 
-  〢━━━ ⚠️ *الكمونية(واقفة حاليا)* ⚠️ ━━━〢
+  〢━━━ 💕 *Ramadan Mobarak* 💕 ━━━〢
  
   ⌯    
   ⌯   『  *${global.BotName}*  』
@@ -8176,6 +8125,47 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 ⌯     ${prefix}شيويي   Xueyi
 ⌯     ${prefix}ميشا     Misha`
      let buttonMessage = {
+          video: fs.readFileSync('./system/A17_4.mp4'), gifPlayback: true,
+          caption: helpmenu,
+
+          headerType: 4
+
+        }
+        A17.sendMessage(m.chat, buttonMessage, { quoted: m })
+      }
+      break;
+
+
+        case 'hsr-cards': case 'cards': case 'بطاقات': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
+        const helpmenu = `you can generate your characters cards using the command register followed by your id then wait 20 seconds..after that you can use the command card followed by the character name..example card-jingliu 701607417...
+       
+        *Commands guide* :
+
+        Card-seele
+        Card-bronya
+        Card-himeko
+        Card-welt
+        Card-clara
+        Card-bailu
+        Card-jepard
+        Card-jinguan
+        Card-loucha
+        Card-silver
+        Card-blade
+        Card-lunae
+        Card-fuxuan
+        Card-jingliu 
+        Card-kafka
+        Card-huohuo
+        Card-argenti 
+        Card-topaz
+        Card-ratio
+        Card-swan
+        Card-hanabi`
+        let buttonMessage = {
           video: fs.readFileSync('./system/A17_4.mp4'), gifPlayback: true,
           caption: helpmenu,
 
