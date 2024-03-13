@@ -6604,12 +6604,19 @@ _Click the button below to download_`
 
        case 'اكيرون':
        case 'acheron':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1708542982.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    A17.sendMessage(from, { react: { text: "💦", key: m.key } });
+
+    // إرسال الصورة الأولى
+    buffer1 = await getBuffer("https://mallucampaign.in/images/img_1708542982.jpg");
+    A17.sendMessage(from, { image: buffer1, caption: 'ْ' }, { quoted: m });
+
+    // إرسال الصورة الثانية
+    buffer2 = await getBuffer("https://pbs.twimg.com/media/GGygxuqWMAE11NK.jpg:large");
+    A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+
+    break;
 
 
       case 'افينشرين':
