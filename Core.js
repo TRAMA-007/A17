@@ -6712,7 +6712,7 @@ _Click the button below to download_`
         break;
 
 
-        case 'card-black':
+        case 'card-swan':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
@@ -6729,6 +6729,119 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1112_${q}.png`)
         A17.sendMessage(from, { image: buffer, caption: 'heres your topaz'}, { quoted: m })
+        break;
+
+
+         case 'card-bronya':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1101_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your bronya'}, { quoted: m })
+        break;
+
+
+        case 'card-bailu':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1211_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your bailu'}, { quoted: m })
+        break;
+
+
+        case 'card-clara':
+        case 'card-klara':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1107_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your clara'}, { quoted: m })
+        break;
+
+
+         case 'card-himeko':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1003_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your himeko'}, { quoted: m })
+        break;
+
+
+        case 'card-welt':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1004_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your welt'}, { quoted: m })
+        break;
+
+
+        case 'card-gepard':
+        case 'card-jepard':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1104_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your gepard'}, { quoted: m })
+        break;
+
+
+         case 'card-loucha':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1203_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your loucha'}, { quoted: m })
+        break;
+
+
+        case 'card-jinguan':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1204_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your jinguan'}, { quoted: m })
+        break;
+
+
+        case 'card-lunae':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1213_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your dan'}, { quoted: m })
+        break;
+
+
+         case 'card-huohuo':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1217_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your huohuo'}, { quoted: m })
+        break;
+
+
+        case 'card-argengi':
+        case 'card-arjenti':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1302_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your argenti🏳️‍🌈'}, { quoted: m })
         break;
 
 
