@@ -6625,7 +6625,7 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1708542989.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'The gift of seed is on the way to Hanabis womb Im gonna make aventurine and Sunday watch us have steaming hot passionate sex Then if I got any juice left Im gonna get Sunday too'}, { quoted: m })
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         break;
 
 
