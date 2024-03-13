@@ -7337,6 +7337,22 @@ _Click the button below to download_`
         await A17.sendMessage(m.chat, { image: { url: anime.picture }, caption: animetxt }, { quoted: m })
       }
         break;
+
+
+      case 'register':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
+        
+        const starid = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}`)
+        reply(mess.waiting);
+        const fuck = starid.data;
+        let idtxt = `generating your characters' cards..please wait 20 seconds then try using the card command`
+        await A17.sendMessage(m.chat, { message : idtxt }, { quoted: m })
+      }
+        break;
         
 
       case 'الارشيف':
