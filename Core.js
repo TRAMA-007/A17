@@ -6626,6 +6626,8 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1708542989.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        buffer2 = await getBuffer("https://pbs.twimg.com/media/GG0z7tGbMAARnBi.jpg:large");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break;
 
 
