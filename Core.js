@@ -7033,8 +7033,27 @@ _Click the button below to download_`
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1214_${q}.png`)
         A17.sendMessage(from, { image: buffer, caption: 'heres your xueyi'}, { quoted: m })
         break;
-        
 
+
+        case 'card-hanya':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1215_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your hanya'}, { quoted: m })
+        break;
+
+
+        case 'card-misha':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1312_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your misha🏳️‍🌈'}, { quoted: m })
+        break;
+        
 
 
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ NSFW ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
@@ -8344,9 +8363,10 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
-        const helpmenu = `you can generate your characters cards using the command register followed by your id then wait 20 seconds..after that you can use the command card followed by the character name..example card-jingliu 701607417...
+        const helpmenu = `you can generate your characters cards using the command ${prefix}register followed by your id..
+        then wait 20 seconds..after that you can use the command ${prefix}card followed by the character name..example ${prefix}card-jingliu 701607417...
        
-        *Commands guide* :
+        *Commands list* :
 
         Card-seele
         Card-bronya
@@ -8366,9 +8386,32 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         Card-huohuo
         Card-argenti 
         Card-topaz
+        Card-ruan
         Card-ratio
         Card-swan
-        Card-hanabi`
+        Card-hanabi
+        
+        
+        Card-herta
+        Card-asta
+        Card-march
+        Card-dan
+        Card-asta
+        Card-pela
+        Card-serval
+        Card-natasha
+        Card-hook
+        Card-qq
+        Card-arlan
+        Card-tingyun
+        Card-sampo
+        Card-luka
+        Card-yukong
+        Card-lynx
+        Card-guinafen
+        Card-hanya
+        Card-xueyi
+        Card-misha`
         let buttonMessage = {
           video: fs.readFileSync('./system/A17_4.mp4'), gifPlayback: true,
           caption: helpmenu,
