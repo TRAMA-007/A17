@@ -350,7 +350,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
        if (!isCmd && !m.isGroup){
-        const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=$(budy)`)
+        const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${budy}`)
         txt = `${botreply.data.completion}`
         m.reply(txt)
         } 
@@ -616,7 +616,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     //
- /*   const pickRandom = (arr) => {
+   /* const pickRandom = (arr) => {
       return arr[Math.floor(Math.random() * arr.length)]
     }
 
@@ -686,10 +686,10 @@ Typed *surrender* to surrender and admited defeat`
  } */
 
 
- /*   const responses = {
+    const responses = {
 
 
-      hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
+   /*   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
       البراء: `My Boss is lost in another Multiverse, and I lost connection with him...`,
       runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
       konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
@@ -752,16 +752,17 @@ I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`,
     };
 
-    const smallInput = budy.toLowerCase();
+    const smallinput = budy.toLowerCase();
 
-if (responses.hasOwnProperty(smallInput)) {
-  reply(responses[smallInput]);
-}
+    if (responses.hasOwnProperty(smallinput)) {
+      reply(responses[smallinput]);
+    }
 
-if (smallInput.includes('بكره نيكي')) {
-  // حذف الإجابة على 'بكره نيكي' إذا تواجدت
-  delete responses[smallInput];
-}
+    
+    
+    if (smallinput.includes('سم شاك')|| smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
+    reply (`يا اروالي ويا اروالي سرى الليل يا اروالي عب الناكك و ختاهو ليك طوالي 😂🫵 `);
+            }
 
 
     if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
@@ -7435,7 +7436,7 @@ _Click the button below to download_`
         break;
 
 
- /*     case 'star': {
+     /* case 'star': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } });
@@ -7467,7 +7468,7 @@ _Click the button below to download_`
         
         await A17.sendMessage(m.chat, { message: startxt }, { quoted: m });
     }
-    break; */
+    break; */ 
 
 
       case 'loli':{
@@ -7500,7 +7501,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}pixiv shiki`)
 
-        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=$(q)`)
+        const segs = await axios.get(`https://api.lolicon.app/setu/v2?tag=${q}`)
         reply(mess.waiting);
         const pixiv = segs.data.data[0];
         let pixivtxt = `
