@@ -6847,14 +6847,14 @@ _Click the button below to download_`
       case 'card-jingliu':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}danbooru plana`)
+        if (!text) return reply(`Please proide an id!\n\n*Example:* ${prefix}card-jingliu 701607417`)
         reply(mess.waiting)
-        waifudd = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png}`)
+        jingliu = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
         let button1ssMessages = {
-          image: waifudd,
+          image: jingliu,
           caption: `here's your jingliu`,
           /*  footer: `${global.BotName}`,
             buttons: wbuttsss,
