@@ -6641,7 +6641,7 @@ _Click the button below to download_`
         break;
 
 
-       case 'card-ruan\x20mei':
+       case 'card-ruan':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
