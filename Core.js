@@ -2654,18 +2654,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
       //
-      case 'hentaivid': case 'hentaivideo': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        anu = await hentai()
-        result912 = anu[Math.floor(Math.random(), anu.length)]
-        A17.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `Title : ${result912.title}\nCategory : ${result912.category}\n$Mimetype : ${result912.type}\nViews : ${result912.views_count}\nShares : ${result912.share_count}\nSource : ${result912.link}\nMedia Url : ${result912.video_1}` }, { quoted: m })
-      }
-        break;
 
 
   /*    case 'glasses':
@@ -2795,45 +2783,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // var kairesult = pickRandom(nsfwdata)
       // A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
       // break;
-
-
-      case 'مينغودا':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-
-        // React to the command message with a specific emoji
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } });
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/Menggoda.json'));
-        var numberOfPictures = 3; // Change this value if you want to send a different number of pictures
-
-        // Create a function to get multiple random pictures from the 'nsfwdata' array
-        function getRandomPictures(array, count) {
-          var shuffled = array.slice();
-          var i = array.length;
-          var min = i - count;
-          var temp;
-          var index;
-
-          while (i-- > min) {
-            index = Math.floor((i + 1) * Math.random());
-            temp = shuffled[index];
-            shuffled[index] = shuffled[i];
-            shuffled[i] = temp;
-          }
-
-          return shuffled.slice(min);
-        }
-
-        // Get multiple random pictures from 'nsfwdata'
-        var selectedPictures = getRandomPictures(nsfwdata, numberOfPictures);
-
-        // Send the selected pictures one by one
-        for (let picture of selectedPictures) {
-          A17.sendMessage(m.chat, { caption: mess.success, image: { url: picture.url } }, { quoted: m });
-        }
-        break;
 
 
      /*   case 'loli':
@@ -4067,7 +4016,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-      case 'group': case 'grup': {
+   /*   case 'group': case 'grup': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -4090,7 +4039,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           A17.sendMessage(m.chat, buttonMessage, { quoted: m })
         }
       }
-        break;
+        break; */
 
 
       case 'promote': case 'admin': {
