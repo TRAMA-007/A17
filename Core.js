@@ -6842,6 +6842,28 @@ _Click the button below to download_`
           return ('Error!')
         })
         break;
+
+
+      case 'card-jingliu':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}danbooru plana`)
+        reply(mess.waiting)
+        waifudd = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png}`)
+        /*       var wbuttsss = [
+{buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
+] */
+        let button1ssMessages = {
+          image: waifudd,
+          caption: `here's your jingliu`,
+          /*  footer: `${global.BotName}`,
+            buttons: wbuttsss,
+            headerType: 4 */
+        }
+        await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+        break;
         
 
       case 'foxgirl':
