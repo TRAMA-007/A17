@@ -6736,7 +6736,7 @@ _Click the button below to download_`
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1208_${q}.png`)
-        A17.sendMessage(from, { image: buffer, caption: 'heres your ruan fuxuan'}, { quoted: m })
+        A17.sendMessage(from, { image: buffer, caption: 'heres your fuxuan'}, { quoted: m })
         break;
 
 
