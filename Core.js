@@ -861,7 +861,7 @@ I NEED THAT HERTUSSY 💦🍆`,
           }
 
 
-    if (smallinput.includes('سباركل')) {
+    if (smallinput.includes('سبارككل')) {
     reply (`The gift of seed is on the way to Hanabis womb
 I'm gonna make aventurine and Sunday watch us have steaming hot passionate sex
 Then if I got any juice left I'm gonna get Sunday too`);
