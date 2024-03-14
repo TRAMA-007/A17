@@ -6158,9 +6158,11 @@ _Click the button below to download_`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://upload-os-bbs.hoyolab.com/upload/2023/07/22/328717725/fe8ad8cc3b299d2dfc5c6b8474efaf3d_6292298148236115623.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_80`)
+        buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs8GPAYvWY__tYflw2ULggmH-C0_hMXiNMMQ&usqp=CAU`)
         A17.sendMessage(from, { image: buffer, caption: '*بدل تبني الشخصيات رايك شنو تبني حياتك اول*'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXFMAy9siZ1PSNg_5bjQLQzHEy3Tj9RBJsJA&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'سيلي':
@@ -6170,7 +6172,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704879265.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgu6gPxlqJs2FGmoQ8UMbIRCrgF7K5RwSr0A&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'جينغ يوان':
@@ -6180,7 +6184,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704880190.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2V6yr6orqjGOu12EbmpFs1AjeM3OvRoHwjw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'هيميكو':
@@ -6190,7 +6196,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704880251.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQALeK44bkOP2aNq03cwQ8yjuSlRMwgEuS8FA&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'جيبارد':
@@ -6200,7 +6208,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704880694.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4cyk6H17zhhC_wGnnXn7L74zENf29mmGZKA&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'برونيا':
@@ -6210,7 +6220,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704880768.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5YKh1JhKHGhF05hBtiYbz04XrscnpSB3FNw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'كلارا':
@@ -6220,7 +6232,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704880881.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw2uaJ1rs6D59enw2KcPZQy4LVfWwr-pUb-A&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'بايلو':
@@ -6230,7 +6244,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704880982.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        break
 
 
        case 'ويلت':
@@ -6240,7 +6254,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704881087.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Z8ak3uT0Za_ztxclHK6wLAKu8zvxjqy-hA&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'يانكينغ':
@@ -6250,7 +6266,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704883857.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRlrfsTJxphJQhgDjr24Kt4YHbw5h3SsCBWA&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'لوتشا':
@@ -6260,7 +6278,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704883922.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGo3cBOEEEM8chSZQLZDWsbVraOG-1XCskIw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'سيلفر':
@@ -6270,7 +6290,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704883980.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEkbC3vroccfwYo-eO8AAFNqkEx0hBvwEmnQ&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'بلايد':
@@ -6280,7 +6302,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704884014.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQglKhETlZC2vnIMFU3E3o03QtDmi6yn_kcAg&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'دان':
@@ -6290,7 +6314,11 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704884088.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9H7nGX2W-OKFYC_3jELFgfSrDHZmiMx8_rg&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        buffer3 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-dmSOsdAUPy2LRhUtMsdGNAHKNxrzgVRhhQ&usqp=CAU");
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'فوشوان':
@@ -6300,7 +6328,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704884157.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdregiOJKswXw6uNHxyUFw0YTj277udIhqRg&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'جينغلو':
@@ -6310,17 +6340,21 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886323.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsWNIQZBgoxCAbBuZoLO4wTr8AX-f3wFUCjA&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
-      case 'هاوهاو':
-      case 'haohao':
+      case 'هوهو':
+      case 'huohuo':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886396.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJbnkKuP-Jbd4s3Y9cI4Wmi2fokx4Xj46gAg&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'ارجينتي':
@@ -6330,7 +6364,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886471.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZBHdzVzErHc3S1tYvqJpVGVVsW7qLpPIVw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'توباز':
@@ -6340,7 +6376,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886518.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhY7V43HwJZeUt21YbKrclv1LjOYjaNrwyQ&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
      case 'روان':
@@ -6350,7 +6388,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886550.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkVvhRAUG7-tBfPnsRSN0yk-f5E3oPVt8ngw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
      case 'ريشيو':
@@ -6360,7 +6400,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886653.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm6uZpdyb1-bS2K2KDHJKf7eE4bA_C-Z5f2Q&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
      case 'بلاك':
@@ -6370,7 +6412,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886731.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0_URlfmP4C-nhdLfuEa9Mvea4ZnSL8YBKEw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'هانابي':
@@ -6380,8 +6424,10 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886809.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'The gift of seed is on the way to Hanabis womb Im gonna make aventurine and Sunday watch us have steaming hot passionate sex Then if I got any juice left Im gonna get Sunday too'}, { quoted: m })
-        break;
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTULwSKD0B7MWFIt_W_-ZsQP6qyIAV8Snunw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
       case 'هيرتا':
       case 'herta':
@@ -6390,7 +6436,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704894960.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvGdtQ-EAVP7DyvbQ0hzvqOgzeYkp-NsbgA&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'استا':
@@ -6400,27 +6448,21 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704895074.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT87HPd1GszebEE49dCHyrYjOAh-rXnHqEvxw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'بيلا':
-      case 'bela':
+      case 'pela':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704895128.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
-
-
-      case 'دان':
-      case 'dan':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704959995.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT89Yaa4f8eeYtsSxSTHaWqJq_LUCsaXmuCdQ&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'سيرفال':
@@ -6430,7 +6472,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960076.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7DUo02v2wW7wXXGWkZwApC1Oijhoh7vmW4Q&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
       case 'مارش':
@@ -6440,7 +6484,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960138.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSLw2jEdeTE2VZ7kb4U8t5bjXVeObwou9Zbw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'ناتاشا':
@@ -6450,7 +6496,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960219.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxAw4MJxkg7vgdyZa_Bi9M4uP7ipBG6BLfSg&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'هوك':
@@ -6460,7 +6508,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960262.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_q9d3J75QHSM3w7CfqWcmc_NRjtwv9sLdzg&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'qq':
@@ -6469,7 +6519,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960341.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://upload-os-bbs.hoyolab.com/upload/2024/03/04/162791300/7f806d21095428c636ede42df3f5f28b_2190414815822329489.png?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_80");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'ارلان':
@@ -6479,7 +6531,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960379.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqxrjBNLd1vsl-fpXwwT-gLqYrY7SkrkHbtQ&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'تينغيون':
@@ -6489,7 +6543,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960418.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'the kitsunyussy got me actin unwise'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkpGNtKpVSeYmZ7cIAT5i2HI0_GZG4Gqj6Rw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'سامبو':
@@ -6499,6 +6555,8 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960492.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIppAoZjtw6eLu262d9T0IB8Ci_4TDbO2c3w&usqp=CAU");
+       A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break;
 
 
@@ -6509,6 +6567,8 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960532.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQydCaPgR04wfNd_8SkRgk9cTjYBKQ9-exw-g&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break;
 
 
@@ -6517,7 +6577,7 @@ _Click the button below to download_`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960568.jpg`)
+        buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSj4WxQa24Ze1nLVvk6TEi_3q26IaKbw965Q&usqp=CAU`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         break;
 
@@ -6529,7 +6589,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960670.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHzYMPip3NeQc8WCZMjhyEYbYEX0gj9XFF4Q&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'لينكس':
@@ -6549,7 +6611,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960738.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'منبه السكس 🔥'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROJbGOPT0CjA6R3ctkIAGDE35pUdZ3JUHjMw&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'هانيا':
@@ -6559,7 +6623,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960790.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZtbqMhAIoYfHYXx_CbFxMy0a0fLKxOZXKUg&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'شيويي':
@@ -6569,7 +6635,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960828.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStqkwws-JgR-Oj5G739wgaiIeQHM7EOEbq6Q&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
        case 'ميشا':
@@ -6579,7 +6647,9 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1704960858.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
+        buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-8EeX59aC6oFUnnzNHmh6EHkFtbT4ZwM0w&usqp=CAU");
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
 
 
         case 'ستيلي':
@@ -6813,7 +6883,7 @@ _Click the button below to download_`
         break;
 
 
-        case 'card-jinguan':
+        case 'card-jingyuan':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
