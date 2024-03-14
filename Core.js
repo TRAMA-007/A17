@@ -6730,6 +6730,16 @@ _Click the button below to download_`
         break;
 
 
+        case 'card-fuxuan':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1208_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your ruan fuxuan'}, { quoted: m })
+        break;
+
+
         case 'card-ratio':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
