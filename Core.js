@@ -869,7 +869,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('@201100224155')) {
-    reply (`عايز شنو`);
+    reply (`عاييز شنو`);
   }
 
 
