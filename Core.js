@@ -644,7 +644,7 @@ Typed *surrender* to surrender and admited defeat`
   
   
   if( smallinput.includes('ايه') || smallinput.includes('إيه') || smallinput.includes('أيه') || smallinput.includes('اييه')){
-    reply (`خدتك عليه`);
+    reply (`خدتكك عليه`);
   }
   
   
