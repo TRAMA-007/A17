@@ -750,7 +750,7 @@ And sooo..
 THAT KURUKURUSSY MUST BE DIVINE ☝️
 I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`,
-    };
+    };*/
 
     const smallinput = budy.toLowerCase();
 
@@ -760,12 +760,17 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     
     
-    if (smallinput.includes('سم شاك')|| smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
-    reply (`يا اروالي ويا اروالي سرى الليل يا اروالي عب الناكك و ختاهو ليك طوالي 😂🫵 `);
-            }
+    if (smallinput.includes('شوفونا')|| smallinput.includes('شوفنا')) {
+    video: fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4'), gifPlayback: true,
+
+          headerType: 4
+
+        }
+        A17.sendMessage(m.chat, buttonMessage, { quoted: m })
+      }
 
 
-    if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
+ /*   if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
     reply (`ربنا يسامحك`);
     }
 
@@ -1005,7 +1010,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
    if (smallinput.includes('دا زاتو')) {
     reply (`هوي يا بوت`); 
-}
+} */
 
 
 
