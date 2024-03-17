@@ -686,10 +686,10 @@ Typed *surrender* to surrender and admited defeat`
  } */
 
 
- /*   const responses = {
+    const responses = {
 
 
-      hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
+   /*   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
       البراء: `My Boss is lost in another Multiverse, and I lost connection with him...`,
       runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
       konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
@@ -750,7 +750,7 @@ And sooo..
 THAT KURUKURUSSY MUST BE DIVINE ☝️
 I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`,
-    }; */
+    };
 
     const smallinput = budy.toLowerCase();
 
@@ -760,14 +760,12 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     
     
-    if (smallinput.includes('شوفونا')|| smallinput.includes('شوفنا')) {
-    video: fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4'), gifPlayback: true,
-
-        A17.sendMessage(m.chat, video, { quoted: m })
-      }
+    if (smallinput.includes('سم شاك')|| smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
+    reply (`يا اروالي ويا اروالي سرى الليل يا اروالي عب الناكك و ختاهو ليك طوالي 😂🫵 `);
+            }
 
 
- /*   if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
+    if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
     reply (`ربنا يسامحك`);
     }
 
@@ -787,14 +785,9 @@ I NEED THAT HERTUSSY 💦🍆`,
     }
 
 
-    if (smallinput.includes('سم شاك') || smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
-    // تحميل الصورة
-    buffer = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykXGHEt1XMibvgpRmTLgRshZynrJElPcTYQ&usqp=CAU");
-
-    // إرسال الصورة
-    A17.sendMessage(from, { image: buffer }, { quoted: m });
-}
-
+    if (smallinput.includes('زرقو')) {
+    reply (`في طيزك علقو`);
+      }
 
 
     if (smallinput.includes('خول')) {
@@ -1006,8 +999,8 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
    if (smallinput.includes('دا زاتو')) {
-    reply (`هوي يا بوت`); 
-} */
+    reply (`هوي يا بوت`); */
+}
 
 
 
