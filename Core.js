@@ -721,7 +721,7 @@ Typed *surrender* to surrender and admited defeat`
 
     
     
-    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا') {
+    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
     let buttoonMessage = {
           video: fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4'), gifPlayback: false,
 
