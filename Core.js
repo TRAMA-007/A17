@@ -689,7 +689,7 @@ Typed *surrender* to surrender and admited defeat`
     const responses = {
 
 
-   /*   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
+      hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
       البراء: `My Boss is lost in another Multiverse, and I lost connection with him...`,
       runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
       konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
@@ -785,9 +785,14 @@ I NEED THAT HERTUSSY 💦🍆`,
     }
 
 
-    if (smallinput.includes('زرقو')) {
-    reply (`في طيزك علقو`);
-      }
+    if (smallinput.includes('سم شاك') || smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
+    // تحميل الصورة
+    buffer = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykXGHEt1XMibvgpRmTLgRshZynrJElPcTYQ&usqp=CAU");
+
+    // إرسال الصورة
+    A17.sendMessage(from, { image: buffer }, { quoted: m });
+}
+
 
 
     if (smallinput.includes('خول')) {
@@ -999,7 +1004,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
    if (smallinput.includes('دا زاتو')) {
-    reply (`هوي يا بوت`); */
+    reply (`هوي يا بوت`); 
 }
 
 
