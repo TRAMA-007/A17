@@ -742,12 +742,16 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
+
+    if (smallinput.includes('يا نجم البحر')) {
+    // تحميل الصورة
+    buffer = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
+
+    // إرسال الصورة
+    A17.sendMessage(from, { image: buffer }, { quoted: m });
+}
+
 /*
-    if (smallinput.includes('قنشن')|| smallinput.includes('جنشن') || smallinput.includes('genshin')) {
-    reply (`امشي استحمى`);
-    }
-
-
     if (smallinput.includes('انيكك')|| smallinput.includes('انيكو') || smallinput.includes('انيكها')) {
     reply (`بي ياتو زب`);
     }
