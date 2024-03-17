@@ -722,14 +722,10 @@ Typed *surrender* to surrender and admited defeat`
     
     
     if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-    let buttoonMessage = {
-          video: fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4'), gifPlayback: false,
-
-          headerType: 4
-
-        }
-        A17.sendMessage(m.chat, buttoonMessage, { quoted: m })
-      }
+    let media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
+}
 
 
 
