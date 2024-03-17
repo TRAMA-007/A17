@@ -744,11 +744,9 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('يا نجم البحر')) {
-    // تحميل الصورة
-    buffer = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
-
-    // إرسال الصورة
-    A17.sendMessage(from, { image: buffer }, { quoted: m });
+    let media = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
+          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
 }
 
 /*
