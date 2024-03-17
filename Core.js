@@ -731,13 +731,18 @@ Typed *surrender* to surrender and admited defeat`
         A17.sendMessage(m.chat, buttoonMessage, { quoted: m })
       }
 
+
+
+    if (smallinput.includes('i love you ') || smallinput.includes('بحبك') {
+    // تحميل ملصق الواتساب بصيغة WebP
+    buffer = await getBuffer("https://stickercommunity.com/uploads/main/24-08-2020-18-28-15-abc8.webp");
+
+    // إرسال الملصق
+    A17.sendMessage(from, { sticker: buffer }, { quoted: m });
+}
+
+
 /*
-
-    if (smallinput.includes('كسمهم')|| smallinput.includes('كسمك') || smallinput.includes('كسمكم')) {
-    reply (`ربنا يسامحك`);
-    }
-
-
     if (smallinput.includes('قنشن')|| smallinput.includes('جنشن') || smallinput.includes('genshin')) {
     reply (`امشي استحمى`);
     }
