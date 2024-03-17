@@ -733,12 +733,12 @@ Typed *surrender* to surrender and admited defeat`
 
 
 
-    if (smallinput.includes('i love you ') || smallinput.includes('بحبك') {
-    // تحميل ملصق الواتساب بصيغة WebP
-    buffer = await getBuffer("https://stickercommunity.com/uploads/main/24-08-2020-18-28-15-abc8.webp");
+    if (smallinput.includes('i love you ') || smallinput.includes('بحبك') || smallinput.includes('دايسكي')) {
+    // تحميل الصورة
+    buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
 
-    // إرسال الملصق
-    A17.sendMessage(from, { sticker: buffer }, { quoted: m });
+    // إرسال الصورة
+    A17.sendMessage(from, { image: buffer, caption: 'plana loves you too ${pushname}' }, { quoted: m });
 }
 
 
