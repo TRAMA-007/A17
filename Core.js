@@ -733,12 +733,12 @@ Typed *surrender* to surrender and admited defeat`
 
 
 
-    if (smallinput.includes('i love you ') || smallinput.includes('بحبك') || smallinput.includes('دايسكي')) {
+    if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('دايسكي')) {
     // تحميل الصورة
     buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
 
     // إرسال الصورة
-    A17.sendMessage(from, { image: buffer, caption: 'plana loves you too ${pushname}' }, { quoted: m });
+    A17.sendMessage(from, { image: buffer, caption: `plana loves you too ${pushname}` }, { quoted: m });
 }
 
 
