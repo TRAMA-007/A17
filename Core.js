@@ -761,15 +761,14 @@ I NEED THAT HERTUSSY 💦🍆`,
     
     
     if (smallinput.includes('سم شاك') || smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
-    // قراءة ملف الفيديو من الملف المعين (system.mp4 مثال)
-    let fileData = fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4');
+    let buttoonMessage = {
+          video: fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4'), gifPlayback: true,
 
-    // تحميل الفيديو كمرفق
-    let videoBuffer = Buffer.from(fileData, 'base64');
+          headerType: 4
 
-    // إرسال الفيديو
-    A17.sendMessage(from, { video: videoBuffer, caption: 'ٰ' }, { quoted: m });
-}
+        }
+        A17.sendMessage(m.chat, buttoonMessage, { quoted: m })
+      }
 
 
 
