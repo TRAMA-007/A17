@@ -760,15 +760,15 @@ I NEED THAT HERTUSSY 💦🍆`,
 
     
     
-    if (smallinput.includes('سم شاك') || smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
-    let buttoonMessage = {
-          video: fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4'), gifPlayback: true,
+//    if (smallinput.includes('سم شاك') || smallinput.includes('سم شاق') || smallinput.includes('اروالي')) {
+  //  let buttoonMessage = {
+ //         video: fs.readFileSync('./system/Hey_ no_ stop just calm down_ don_t do it_(360P).mp4'), gifPlayback: true,
 
-          headerType: 4
+   //       headerType: 4
 
-        }
-        A17.sendMessage(m.chat, buttoonMessage, { quoted: m })
-      }
+ //       }
+   //     A17.sendMessage(m.chat, buttoonMessage, { quoted: m })
+//      }
 
 
 
