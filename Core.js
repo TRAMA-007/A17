@@ -750,7 +750,7 @@ And sooo..
 THAT KURUKURUSSY MUST BE DIVINE ☝️
 I'M GOING TO BUST WITH A FORCE OF A THOUSAND STELLARONS!!!!
 I NEED THAT HERTUSSY 💦🍆`,
-    };*/
+    }; 
 
     const smallinput = budy.toLowerCase();
 
