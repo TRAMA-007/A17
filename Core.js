@@ -747,10 +747,11 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('test')) {
-    let { chat, id } = m.quoted
+    let { chat, fromMe, id } = m.quoted
 
         const key = {
           remoteJid: m.chat,
+          fromMe: true,
           id: m.quoted.id,
           participant: m.quoted.sender
         }
@@ -758,7 +759,7 @@ Typed *surrender* to surrender and admited defeat`
         await A17.sendMessage(m.chat, { delete: key })
       }
 
-
+/*
     if (smallinput.includes('لوطي')) {
     reply (`لوطي الناككك فتل جعباتك`);
     }
