@@ -754,7 +754,8 @@ Typed *surrender* to surrender and admited defeat`
         id: id,
         participant: m.sender
     };
-    
+    if (isBotAdmins) return reply(`bad words detected..message deleted`);
+    if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`);
         await A17.sendMessage(chat, { delete: key });
 }
   
