@@ -745,11 +745,19 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);
 }
 
-    
     if (smallinput.includes('test')) {
-    let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-        await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
-      }
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+    
+        await A17.sendMessage(chat, { delete: key });
+}
+
 
 
     
