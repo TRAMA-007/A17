@@ -745,6 +745,14 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);
 }
 
+
+    if (smallinput.includes('كبير')) {
+    let media = await getBuffer("https://mallucampaign.in/images/img_1710774519.jpg");
+          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
+} 
+      
+
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     let { chat, fromMe, id } = m;
     
@@ -836,11 +844,21 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-    if (smallinput.includes('زعاط')) {
-    reply (`يزعطك عب لا صلى لا بعرف الله`);
-    }
+    if (smallinput.includes('cock') || smallinput.includes('pussy') || smallinput.includes('sex')) {
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) return reply(`bad words detected..message deleted`);
+      if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`); 
+}
 
-
+/*
     if (smallinput.includes('بوت معرص')) {
     reply (`حبيبي والله تسلم`);
         }
