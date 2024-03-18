@@ -728,8 +728,15 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
+    if (smallinput.includes('يعني ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
+    let media = await getBuffer("https://graph.org/file/1ffa4ac8f20ecb203b96d.mp4");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
+    }
 
-    if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('دايسكي')) {
+
+
+    if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
     // تحميل الصورة
     buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
 
@@ -748,6 +755,13 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('كبير')) {
     let media = await getBuffer("https://mallucampaign.in/images/img_1710774519.jpg");
+          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
+} 
+
+
+    if (smallinput.includes('بلانا')) {
+    let media = await getBuffer("https://mallucampaign.in/images/img_1710783974.jpg");
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
 } 
