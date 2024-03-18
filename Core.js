@@ -745,11 +745,19 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);
 }
 
-
+    
     if (smallinput.includes('test')) {
-        reply (`bad words detected`);
-        await A17.sendMessage(m.chat, { delete: smallinput });
-}
+    let smallinput = m.quoted
+
+        const test = {
+          remoteJid: m.chat,
+          fromMe: false,
+          id: m.quoted.id,
+          participant: m.quoted.sender
+        }
+
+        await A17.sendMessage(m.chat, { delete: test })
+      }
 
     
 /*
