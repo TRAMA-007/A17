@@ -886,14 +886,25 @@ Typed *surrender* to surrender and admited defeat`
       if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
 }
 
-/*
-    if (smallinput.includes('كيفك')) {
-    reply (`لو مهتم كان عرفت`);
-    }
 
-
+    if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('كصم')) {
+    let { chat, fromMe, id } = m;
     
-    if (smallinput.includes('كسم بلانا')) {
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
+}
+
+
+ /*
+    
+   if (smallinput.includes('كسم بلانا')) {
     reply ('هوي يا عب انا لو قبضتك ببيعك والله');
     }
 
