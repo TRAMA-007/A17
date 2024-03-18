@@ -745,7 +745,8 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);
 }
 
-    if (smallinput.includes('test')) {
+    if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
+    if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`);
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -761,22 +762,56 @@ Typed *surrender* to surrender and admited defeat`
 
 
     
+
+    if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
+    if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`);
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+    
+        await A17.sendMessage(chat, { delete: key });
+}
+
+
+    if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
+    if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`);
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+    
+        await A17.sendMessage(chat, { delete: key });
+}
+    
+        await A17.sendMessage(chat, { delete: key });
+}
+
+
+    if (smallinput.includes('احشك') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
+    if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`);
+    if (isBotAdmins) return reply(`bad words detected..message will be deleted`);
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+    
+        await A17.sendMessage(chat, { delete: key });
+}
+
 /*
-    if (smallinput.includes('لوطي')) {
-    reply (`لوطي الناككك فتل جعباتك`);
-    }
-
-
-    if (smallinput.includes('زرقو')) {
-    reply (`في طيزك علقو`);
-      }
-
-
-    if (smallinput.includes('خول')) {
-    reply (`احترم نفسك`);
-    }
-
-
     if (smallinput.includes('زبي')) {
     reply (`صغير`);
     }
