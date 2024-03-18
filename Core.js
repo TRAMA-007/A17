@@ -887,7 +887,7 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-    if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('كصم')) {
+    if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
     let { chat, fromMe, id } = m;
     
     const key = {
