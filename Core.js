@@ -769,11 +769,12 @@ Typed *surrender* to surrender and admited defeat`
         id: id,
         participant: m.sender
     };
-    
         await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) return reply(`bad words detected..message deleted`);
+      if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`); 
 }
 
-
+    
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
     let { chat, fromMe, id } = m;
     
@@ -783,8 +784,9 @@ Typed *surrender* to surrender and admited defeat`
         id: id,
         participant: m.sender
     };
-    
         await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) return reply(`bad words detected..message deleted`);
+      if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`); 
 }
 
 
@@ -797,20 +799,41 @@ Typed *surrender* to surrender and admited defeat`
         id: id,
         participant: m.sender
     };
-    
         await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) return reply(`bad words detected..message deleted`);
+      if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`); 
 }
 
 
-  /*
-    if (smallinput.includes('زبي')) {
-    reply (`صغير`);
-    }
+  
+    if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) return reply(`bad words detected..message deleted`);
+      if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`); 
+}
 
 
-    if (smallinput.includes('قنيطتك')) {
-    reply (`قنيطتي اخير منك ما موسعة`);
-    }
+    if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('معرص')) {
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) return reply(`bad words detected..message deleted`);
+      if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`); 
+}
 
 
     if (smallinput.includes('زعاط')) {
