@@ -757,10 +757,7 @@ Typed *surrender* to surrender and admited defeat`
     
         await A17.sendMessage(chat, { delete: key });
 }
-
-
-
-    
+  
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
     let { chat, fromMe, id } = m;
@@ -788,9 +785,6 @@ Typed *surrender* to surrender and admited defeat`
     
         await A17.sendMessage(chat, { delete: key });
 }
-    
-        await A17.sendMessage(chat, { delete: key });
-}
 
 
     if (smallinput.includes('احشك') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
@@ -806,7 +800,8 @@ Typed *surrender* to surrender and admited defeat`
         await A17.sendMessage(chat, { delete: key });
 }
 
-/*
+
+  /*
     if (smallinput.includes('زبي')) {
     reply (`صغير`);
     }
