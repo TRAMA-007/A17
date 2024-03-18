@@ -747,11 +747,10 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('test')) {
-    let { chat, fromMe, id } = m.quoted
+    let { chat, id } = m.quoted
 
         const key = {
           remoteJid: m.chat,
-          fromMe: true,
           id: m.quoted.id,
           participant: m.quoted.sender
         }
