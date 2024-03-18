@@ -947,13 +947,23 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
- /*
+ 
     
-   if (smallinput.includes('كسم بلانا')) {
-    reply ('هوي يا عب انا لو قبضتك ببيعك والله');
-    }
+   if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('🇫🇷🇫🇷')) {
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) await A17.sendMessage(from, { text: '*no france allowed*' });
+      if (!isBotAdmins) await A17.sendMessage(from, { text: '*france detected but plana isnt an admin..I am in your walls*' }); 
+}
 
-
+/*
     if (smallinput.includes('شرموط')) {
     reply (`الشغل ماا عيب`);
            }
