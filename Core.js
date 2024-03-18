@@ -745,10 +745,19 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);
 }
 
-/*
-    if (smallinput.includes('انيكك')|| smallinput.includes('انيكو') || smallinput.includes('انيكها')) {
-    reply (`بي ياتو زب`);
-    }
+
+    if (smallinput.includes('test')) {
+    let { chat, fromMe, id } = m.quoted
+
+        const key = {
+          remoteJid: m.chat,
+          fromMe: true,
+          id: m.quoted.id,
+          participant: m.quoted.sender
+        }
+
+        await A17.sendMessage(m.chat, { delete: key })
+      }
 
 
     if (smallinput.includes('لوطي')) {
