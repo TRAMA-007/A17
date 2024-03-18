@@ -747,7 +747,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('test')) {
-
+        reply (`bad words detected`);
         await A17.sendMessage(m.chat, { delete: smallinput });
 }
 
