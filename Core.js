@@ -747,17 +747,17 @@ Typed *surrender* to surrender and admited defeat`
 
     
     if (smallinput.includes('test')) {
-    let smallinput = m.quoted
+    let { chat, fromMe, id } = m.quoted;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.quoted.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+    }
 
-        const test = {
-          remoteJid: m.chat,
-          fromMe: false,
-          id: m.quoted.id,
-          participant: m.quoted.sender
-        }
-
-        await A17.sendMessage(m.chat, { delete: test })
-      }
 
     
 /*
