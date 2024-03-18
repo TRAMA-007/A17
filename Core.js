@@ -798,7 +798,6 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('احشك') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
     if (!isBotAdmins) return reply(`bad words detected but plana isn't an admin..I'll let it slide this time`);
-    if (isBotAdmins) return reply(`bad words detected..message will be deleted`);
     let { chat, fromMe, id } = m;
     
     const key = {
