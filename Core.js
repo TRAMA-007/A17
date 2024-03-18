@@ -760,12 +760,57 @@ Typed *surrender* to surrender and admited defeat`
 } 
 
 
-    if (smallinput.includes('بلانا')) {
-    let media = await getBuffer("https://mallucampaign.in/images/img_1710783974.jpg");
-          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
-} 
-      
+    if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+    // قائمة بروابط الصور المختلفة
+    const imageUrls = [
+ 'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
+ 'https://graph.org/file/8cb96154ceca2e3a7c559.png',
+ 'https://graph.org/file/86c444642b5768dc7d2d5.png',
+ 'https://graph.org/file/67186665580c88684c847.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+ 'https://graph.org/file/cf53ec7f3817161f70e04.png',
+ 'https://graph.org/file/06b1384e5851cb8df6453.png',
+ 'https://graph.org/file/fea1df2cb9c3cbd74208a.png',
+ 'https://graph.org/file/d8348cba6f9caa492f528.png',
+ 'https://graph.org/file/044205e05040b25ae18c0.png',
+ 'https://graph.org/file/3d639c81211176b676c7b.png',
+ 'https://graph.org/file/deaf54cca4d7e8c1645ac.png',
+ 'https://graph.org/file/554aba4cddf27e0cebe10.png',
+ 'https://graph.org/file/643187ff668a557512b66.png',
+ 'https://graph.org/file/9d88ea96e7c88decc3c26.png',
+ 'https://graph.org/file/605d62c22f3b3057124da.png',
+ 'https://graph.org/file/1d26e9d151405e99878e7.png',
+ 'https://graph.org/file/a38ed9f19170b07a235d9.png',
+ 'https://graph.org/file/ae225ecf4eea605fa167b.png',
+ 'https://graph.org/file/da7f5dcaf673f12be8a6d.png',
+ 'https://graph.org/file/6f8872058c39134e0fbfa.png',
+ 'https://graph.org/file/fd3ba2812b12cf5c3609a.png',
+ 'https://graph.org/file/73865e2cf9159393c7542.png',
+ 'https://graph.org/file/eced2b8043793bb27c203.png',
+ 'https://graph.org/file/586ef4516dac781fe9fe7.png',
+ 'https://graph.org/file/c637016bdc9c6bd801b16.png',
+ 'https://graph.org/file/eb52990a6ad3b167cdda2.png',
+ 'https://graph.org/file/df01b8a5772e73f54293a.png',
+ 'https://graph.org/file/36668cd71370d782724a6.png',
+ 'https://graph.org/file/ef59a99caa789d2d5fdf8.png',
+ 'https://graph.org/file/0c2f50ee0cb70aaeecb18.png',
+ 'https://graph.org/file/800513365a66b012cabb8.png',
+ 'https://graph.org/file/d267aec0acafe5f43f815.png',
+ 'https://graph.org/file/241eed3339a4cf3b48972.png',
+ 'https://graph.org/file/c75ddf11f60cdf8c84aa3.png',
+ 'https://graph.org/file/d2be0eb890ffafd60fbcc.png',
+ 'https://graph.org/file/b3358420cd2879e69ed89.png',
+ 'https://graph.org/file/752b1574303ae17d4d4d2.png',
+    ];
+
+    // اختيار رابط عشوائي
+    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+        let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+        await fs.unlinkSync(encmedia);
+}
+    
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     let { chat, fromMe, id } = m;
