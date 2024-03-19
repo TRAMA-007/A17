@@ -761,17 +761,9 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('كسمك')) {
-    let { chat, fromMe, id } = m;
-    
-    const key = {
-        remoteJid: chat,
-        fromMe: fromMe,
-        id: id,
-        participant: m.sender
-    };
-        await A17.groupParticipantsUpdate(chat, { remove: key });
-      if (isBotAdmins) await A17.sendMessage(from, { text: 'الراجل يرجعو' });
-    } 
+        let users = m.remoteJid[0] ? m.remoteJid[0] : m.sender
+        await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
+      }
 
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
