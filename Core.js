@@ -953,12 +953,12 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins) await A17.sendMessage(from, { text: '*no france allowed*' });
 }
 
-/*
-    if (smallinput.includes('شرموط')) {
-    reply (`الشغل ماا عيب`);
+
+    if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
+    reply (`توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان`);
            }
 
-
+/*
    if (smallinput.includes('عثمان قدور')) {
     reply (`عثمان قدور؟ قصدك الزنجي البيدوفايل`);
           }
@@ -5486,11 +5486,12 @@ _Click the button below to download_`
       // break;
 
 
-  /*    case 'play':
+      case 'play':
       case 'song':
       case 'music': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
+        if (!isCreator) return reply(`this command is unavailable`)
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
 
         const YT = require('./lib/ytdl-core');
@@ -5535,7 +5536,8 @@ _Click the button below to download_`
         // Rest of the code remains unchanged.
         // ...
       }
-        break; */
+        break; 
+        
 
       case 'spotify': {
         if (isBan) return reply(mess.banned);
@@ -7475,10 +7477,7 @@ _Click the button below to download_`
       case 'kiss':
       case 'wallpaper':
       case 'pinterest':
-      case 'play':
-      case 'music':
       case 'video':
-      case 'song':
       case 'feed':
       case 'meow':
       case 'tickle':
