@@ -761,9 +761,10 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('test')) {
-        let users = m.mentionedJid[0] ? m.mentionedJid[0] : m ? m.sender 
+        let users = m.remoteJid[0] ? m.remoteJid[0] : chat ? participant: m.sender 
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
       }
+        break;
 
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
