@@ -758,14 +758,7 @@ Typed *surrender* to surrender and admited defeat`
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
 } 
-
-
-    if (smallinput.includes('test')) {
-        let users = m.remoteJid[0] ? m.remoteJid[0] : chat ? participant: m.sender 
-        await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
-      }
-        break;
-
+    
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
     // قائمة بروابط الصور المختلفة
@@ -7986,7 +7979,6 @@ _Click the button below to download_`
       case 'register':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
