@@ -769,7 +769,7 @@ Typed *surrender* to surrender and admited defeat`
         id: id,
         participant: m.sender
     };
-        await A17.groupParticipantsUpdate(m.chat, [key], 'remove')
+        await A17.groupParticipantsUpdate(chat, { remove: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: 'الراجل يرجعو' });
     } 
 
