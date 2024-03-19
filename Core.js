@@ -760,6 +760,12 @@ Typed *surrender* to surrender and admited defeat`
 } 
 
 
+    if (smallinput.includes('كسمك')) {
+    let users = m.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
+        await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
+    } 
+
+
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
     // قائمة بروابط الصور المختلفة
     const imageUrls = [
