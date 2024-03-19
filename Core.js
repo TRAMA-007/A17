@@ -761,7 +761,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('كسمك')) {
-        let users = m.remoteJid[0] ? m.remoteJid[0] : m.sender
+        let users = remoteJid[0] ? remoteJid[0] : chat ? participant: m.sender
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
       }
 
