@@ -822,8 +822,7 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
+      if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' }); 
 }
   
 
@@ -838,8 +837,7 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
-}
+    }
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
     let { chat, fromMe, id } = m;
@@ -852,8 +850,7 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
-}
+    }
 
 
     if (smallinput.includes('احشك') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
@@ -867,7 +864,6 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
 }
 
 
@@ -883,7 +879,6 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
 }
 
 
@@ -898,7 +893,6 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
 }
 
 
@@ -913,7 +907,6 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
 }
 
 
@@ -928,8 +921,7 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
-}
+    }
 
 
     if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
@@ -943,7 +935,6 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected but plana isnt an admin..I will let it slide this time*' }); 
 }
 
 
@@ -960,7 +951,6 @@ Typed *surrender* to surrender and admited defeat`
     };
         await A17.sendMessage(chat, { delete: key });
       if (isBotAdmins) await A17.sendMessage(from, { text: '*no france allowed*' });
-      if (!isBotAdmins) await A17.sendMessage(from, { text: '*france detected but plana isnt an admin..I am in your walls*' }); 
 }
 
 /*
