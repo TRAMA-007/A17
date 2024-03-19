@@ -761,8 +761,9 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('كسمك')) {
-    let users = m.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
+    let users = m.sender
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
+      if (isBotAdmins) await A17.sendMessage(from, { text: '*الراجل يرجعو*' });
     } 
 
 
