@@ -26,7 +26,7 @@ global.OwnerNumber = ["249904077717"];   //If you want singal number so global.O
 global.ownertag = ["249904077717"];
 global.OwnerName = "akane710";
 global.BotName = "plana";
-global.packname = "plana Bot";                             //Do not change.
+global.packname = "plana";                             //Do not change.
 global.author = "By: akane710";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/KJKxoW0FmOeLLv7etC6e5Y";
@@ -80,10 +80,10 @@ global.ntilink = []
 //
 global.mess = {
   jobdone: 'تم الطبخ',
-  useradmin: '*الامر دا بتاع ادمنز بس يا عرص*',
+  useradmin: '*الامر دا بتاع ادمنز بس يا حلو*',
   botadmin: 'فين الادمن',
   botowner: 'جلا',
-  grouponly: 'يا غبي الامر دا في القروباات بس',
+  grouponly: 'يا غبي الامر دا في القروبات بس',
   privateonly: 'تعال خاص يا عسل',
   botonly: 'وبك صغير ههههه',
   waiting: 'يتم الطبخ حاليا.',
