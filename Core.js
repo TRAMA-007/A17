@@ -703,7 +703,7 @@ Typed *surrender* to surrender and admited defeat`
     //  'سمعة': `اب لمعة`,
   //    'شوفونا': `يشوفك الزب قول آميين`,
       'جلا': `كلامك شين`,
-      'ايه': `خددتك عليه `,
+      'ايه': `خدتك عليه `,
   //    'زبي': `صغير `,
       'بلانا': `شنو يا عسل`,
     //  'و انا': `انت على زبي' `,
@@ -751,13 +751,6 @@ Typed *surrender* to surrender and admited defeat`
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
 }
-
-
-    if (smallinput.includes('كبير')) {
-    let media = await getBuffer("https://mallucampaign.in/images/img_1710774519.jpg");
-          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
-} 
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
