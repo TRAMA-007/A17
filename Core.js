@@ -882,7 +882,7 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-    if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('معرص')) {
+    if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -958,17 +958,26 @@ Typed *surrender* to surrender and admited defeat`
     reply (`توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان`);
            }
 
-/*
-   if (smallinput.includes('عثمان قدور')) {
-    reply (`عثمان قدور؟ قصدك الزنجي البيدوفايل`);
-          }
+
+   if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+}
 
 
    if (smallinput.includes('بكره نيكي')) {
     reply (`اسكت يا متملح`);
           }
           
-
+/*
    if (smallinput.includes('ديفيد عمل شنو')) {
     reply (`واحد زبو تحت المتوسط اعلن ضعفه الجنسي😂🤏`);
           }
