@@ -795,6 +795,13 @@ Typed *surrender* to surrender and admited defeat`
  'https://graph.org/file/d2be0eb890ffafd60fbcc.png',
  'https://graph.org/file/b3358420cd2879e69ed89.png',
  'https://graph.org/file/752b1574303ae17d4d4d2.png',
+ 'https://graph.org/file/3ce710fb2bb70ff8fc9fc.png',
+ 'https://graph.org/file/fafaa870311201cb56ee8.png',
+ 'https://graph.org/file/752b1574303ae17d4d4d2.png',
+ 'https://graph.org/file/734c560402d38bbe48b31.png',
+ 'https://graph.org/file/7f758dcff3c9cb07b3960.png',
+ 'https://graph.org/file/eb9add667e4be99de2904.png',
+ 'https://graph.org/file/f98193c69a00ad41380d2.png', 
     ];
 
     // اختيار رابط عشوائي
