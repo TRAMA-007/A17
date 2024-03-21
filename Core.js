@@ -8038,9 +8038,9 @@ _Click the button below to download_`
  *native: ${shiroko.name.native}*
   *id: ${shiroko.id}*
   *favorites: ${shiroko.favourites}*
-  *description: ${shiroko.description}*
+  *description*: ${shiroko.description}
   `;
-        await A17.sendMessage(m.chat, { image: { url: shiroko.image.medium}, caption: shirokotxt }, { quoted: m })
+        await A17.sendMessage(m.chat, { image: { url: shiroko.image.large}, caption: shirokotxt }, { quoted: m })
      }
         break;
 
