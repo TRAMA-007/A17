@@ -7997,7 +7997,7 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
-        const ba = await axios.get(`https://api.ennead.cc/buruaka/character/${q}`)
+        const ba = await axios.get(`https://api.ennead.cc/buruaka/character/${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const aru = ba.data;
         let arutxt = `
