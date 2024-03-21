@@ -940,7 +940,7 @@ Typed *surrender* to surrender and admited defeat`
 
  
     
-   if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('🇫🇷🇫🇷')) {
+   if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french')) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -8342,7 +8342,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}tomp3
   ⌯     ${prefix}toaudio
   ⌯     ${prefix}steal
-  ⌯     ${prefix}stickermeme
   ⌯     ${prefix}emojimix
 
 
@@ -8402,14 +8401,11 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}beautifulcheck
   ⌯     ${prefix}awesomecheck
   ⌯     ${prefix}greatcheck
-  ⌯     ${prefix}gaycheck
   ⌯     ${prefix}uglycheck
   ⌯     ${prefix}charactercheck
   ⌯     ${prefix}lesbiancheck
-  ⌯     ${prefix}hornychec
   ⌯     ${prefix}prettycheck
   ⌯     ${prefix}lovelycheck
-  ⌯     ${prefix}niggacheck
 
 
   〢━━━ 🈴 *Weeb* 🈴 ━━━〢
@@ -8429,6 +8425,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}wallpaper
   ⌯     ${prefix}hsr (honkai star rail bulids) 
   ⌯     ${prefix}hsr-cards (honkai star rail character cards)
+  ⌯     ${prefix}ba (blue archive characters)
+  ⌯     ${prefix}character
  
 
   〢━━━ ♨️ *Informative* ♨️ ━━━〢
@@ -8576,7 +8574,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         Card-clara
         Card-bailu
         Card-jepard
-        Card-jinguan
+        Card-jingyuan
         Card-loucha
         Card-silver
         Card-blade
