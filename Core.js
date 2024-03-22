@@ -1084,7 +1084,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('لباسك ناصل')) {
-    reply (`ايوا ناصل عشان مستنيك تمص لي`);
+    reply (`ايوا نااصل عشان مستنيك تمص لي`);
     }
 
 
