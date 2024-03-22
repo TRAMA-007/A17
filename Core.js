@@ -5633,7 +5633,7 @@ _Click the button below to download_`
         break;
 
 
- /*     case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
+      case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍃", key: m.key } })
@@ -5642,10 +5642,10 @@ _Click the button below to download_`
         let search = await yts(text)
         let anu = search.videos[0]
         const ytmp4play = await YT.mp4(anu.url)
-        A17.sendMessage(from, { video: { url: ytmp4play.videoUrl }, mimetype: "video/mp4", caption: anu.title + ' By *A17 MD*', }, { quoted: m })
+        A17.sendMessage(from, { video: { url: ytmp4play.videoUrl }, mimetype: "video/mp4", caption: anu.title }, { quoted: m })
       }
 
-        break; */
+        break; 
 
 
       /*
