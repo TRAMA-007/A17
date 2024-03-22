@@ -626,7 +626,7 @@ Typed *surrender* to surrender and admited defeat`
     reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
   } 
   
-  if (smallinput.includes('ليغ')) {
+  if (smallinput.includes('لييغ')) {
   
      reply (`اوووفوو امشي استحم يا خول ريحتك والاني هنا🤮`);
   
