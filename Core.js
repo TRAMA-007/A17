@@ -742,6 +742,13 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('hug') || smallinput.includes('حضن')) {
+    let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
+    }
+
+
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
     // تحميل الصورة
     buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
