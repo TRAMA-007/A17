@@ -735,6 +735,12 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
+    let media = await getBuffer("https://gifdb.com/images/thumbnail/ghost-hug-virtual-kiss-anime-girl-menhera-chan-c3fvyxsyb034zqbt.gif");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
+    }
+
 
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
     // تحميل الصورة
