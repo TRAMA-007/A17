@@ -351,7 +351,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     
        if (!isCmd && !m.isGroup){
         const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(budy)}`)
-        txt = `${botreply.data.result.reply}`
+        txt = `${botreply.data.completion}`
         m.reply(txt)
         } 
 
