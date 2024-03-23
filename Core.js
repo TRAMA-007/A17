@@ -5843,7 +5843,7 @@ _Click the button below to download_`
 
 
       //
-      case 'pinterest':
+ /*     case 'pinterest':
       case 'pin': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
@@ -5863,7 +5863,7 @@ for (let i = 0; i < imageCount; i++) {
     await A17.sendMessage(m.chat, { image: media }, { quoted: m });
 }
      } 
-break;
+break; */
 
 
       // case 'pinterest':
