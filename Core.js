@@ -2316,7 +2316,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // break;
 
 
-     /* case 'wallpaper':
+      case 'wallpaper':
       case 'animewallpaper':
       case 'animewall': {
         if (isBan) return reply(mess.banned);
@@ -2344,7 +2344,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           A17.sendMessage(m.chat, message, { quoted: m });
         }
       }
-        break; */
+        break; 
 
 
       case 'wikimedia': case 'wikiimage': {
@@ -7497,7 +7497,6 @@ _Click the button below to download_`
       case 'loli':
       case 'waifu':
       case 'kiss':
-      case 'wallpaper':
       case 'pinterest':
       case 'video':
       case 'feed':
