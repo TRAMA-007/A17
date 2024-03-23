@@ -8058,27 +8058,21 @@ _Click the button below to download_`
         break;
 
 
-        case 'pin': {
+    case 'pin': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     if (!m.isGroup) return reply(mess.grouponly);
-    
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-    
-    if (!text) return reply(Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn);
+    if (!text) return reply('Please provide a search term!\n\n*Example:* ${prefix}pinterest philodendron');
     
     const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const images = pin.data.result;
-          
     for (let i = 0; i < images.length; i++) {
-        let pinterest = images[i];
-        let media = await getBuffer(pinterest);
+        let media = await getBuffer(images[i])};
         await A17.sendMessage(m.chat, { image: media }, { quoted: m });
-    }
 }
-break;
-
+      break;
 
 
   /*   case 'loli':{
