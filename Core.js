@@ -8067,10 +8067,10 @@ _Click the button below to download_`
         
         const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(q)}`)
         reply(mess.waiting);
-        const images = ba.data.result;
+        const images = pin.data.result;
 // تحديث الكود لتطبيق عملية الحلقة على جميع الروابط
-Images.forEach(async (url) => {
-    let media = await getBuffer(url);
+images.forEach(async (url) => {
+    let media = await getBuffer(url)};
     await A17.sendMessage(m.chat, { image: media }, { quoted: m })
      }
         break;
