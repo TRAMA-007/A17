@@ -5843,7 +5843,7 @@ _Click the button below to download_`
 
 
       //
-      case 'pinterest':
+     /* case 'pinterest':
       case 'pin': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5866,7 +5866,7 @@ _Click the button below to download_`
           A17.sendMessage(m.chat, { image: { url: results[i] } }, { quoted: m });
         }
       }
-        break; 
+        break; */
 
 
       // case 'pinterest':
@@ -8056,6 +8056,25 @@ _Click the button below to download_`
         await A17.sendMessage(m.chat, { image: { url: shiroko.image.large}, caption: shirokotxt }, { quoted: m })
      }
         break;
+
+
+        case 'pin':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}pinterest phild corn`)
+        
+        const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(q)}`)
+        reply(mess.waiting);
+        const images = ba.data.result;
+// تحديث الكود لتطبيق عملية الحلقة على جميع الروابط
+Images.forEach(async (url) => {
+    let media = await getBuffer(url);
+    await A17.sendMessage(m.chat, { image: media }, { quoted: m })
+     }
+        break;
+
 
   /*   case 'loli':{
         if (isBan) return reply(mess.banned);
