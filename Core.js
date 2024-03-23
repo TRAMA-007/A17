@@ -8068,12 +8068,15 @@ _Click the button below to download_`
     const pin = await axios.get(https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(text)});
     reply(mess.waiting);
     const images = pin.data.result;
-    for (let i = 0; i < images.length; i++) {
-        const pinterest = images[i];
-        let media = await getBuffer(pinterest);
-        await A17.sendMessage(m.chat, { image: media }, { quoted: m });
-    }
+    // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
+const imageCount = 20; // عدد الصور التي تريد إرسالها
+
+for (let i = 0; i < imageCount; i++) {
+    const randomImageUrl = images[i % images.length]; // يُحدد اختيار صورة عشوائية من القائمة
+    let media = await getBuffer(randomImageUrl);
+    await A17.sendMessage(m.chat, { image: media }, { quoted: m });
 }
+     } 
 break;
 
 
