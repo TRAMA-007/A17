@@ -5843,30 +5843,27 @@ _Click the button below to download_`
 
 
       //
-     /* case 'pinterest':
+      case 'pinterest':
       case 'pin': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🐦", key: m.key } });
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!m.isGroup) return reply(mess.grouponly);
+    A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+    if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
 
-        if (!args.join(" ")) return reply(`${pushname} Please provide a search term!`);
-        reply(mess.waiting)
-        let { pinterest } = require('./lib/scraper');
-        let anutrest = await pinterest(text);
-        let results = [];
+    const pin = await axios.get(https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(text)});
+    reply(mess.waiting);
+    const images = pin.data.result;
+    // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
+const imageCount = 20; // عدد الصور التي تريد إرسالها
 
-        // Get multiple random images (let's say 5 images)
-        const numImages = 10;
-        for (let i = 0; i < numImages && i < anutrest.length; i++) {
-          results.push(anutrest[Math.floor(Math.random() * anutrest.length)]);
-        }
-
-        // Send each image without any caption
-        for (let i = 0; i < results.length; i++) {
-          A17.sendMessage(m.chat, { image: { url: results[i] } }, { quoted: m });
-        }
-      }
-        break; */
+for (let i = 0; i < imageCount; i++) {
+    const randomImageUrl = images[i % images.length]; // يُحدد اختيار صورة عشوائية من القائمة
+    let media = await getBuffer(randomImageUrl);
+    await A17.sendMessage(m.chat, { image: media }, { quoted: m });
+}
+     } 
+break;
 
 
       // case 'pinterest':
@@ -8056,28 +8053,6 @@ _Click the button below to download_`
         await A17.sendMessage(m.chat, { image: { url: shiroko.image.large}, caption: shirokotxt }, { quoted: m })
      }
         break;
-
-
-    case 'pin': {
-    if (isBan) return reply(mess.banned);
-    if (isBanChat) return reply(mess.bangc);
-    if (!m.isGroup) return reply(mess.grouponly);
-    A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-    if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
-
-    const pin = await axios.get(https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(text)});
-    reply(mess.waiting);
-    const images = pin.data.result;
-    // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
-const imageCount = 20; // عدد الصور التي تريد إرسالها
-
-for (let i = 0; i < imageCount; i++) {
-    const randomImageUrl = images[i % images.length]; // يُحدد اختيار صورة عشوائية من القائمة
-    let media = await getBuffer(randomImageUrl);
-    await A17.sendMessage(m.chat, { image: media }, { quoted: m });
-}
-     } 
-break;
 
 
 
