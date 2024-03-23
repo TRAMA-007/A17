@@ -5513,7 +5513,7 @@ _Click the button below to download_`
       case 'music': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!isCreator) return reply(`this command is unavailable`)
+        if (!isCreator) return reply(`this command is unavailable for you`)
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
 
         const YT = require('./lib/ytdl-core');
@@ -5842,7 +5842,7 @@ _Click the button below to download_`
 
 
       //
-   /*   case 'pinterest':
+      case 'pinterest':
       case 'pin': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5855,7 +5855,7 @@ _Click the button below to download_`
         let results = [];
 
         // Get multiple random images (let's say 5 images)
-        const numImages = 25;
+        const numImages = 10;
         for (let i = 0; i < numImages && i < anutrest.length; i++) {
           results.push(anutrest[Math.floor(Math.random() * anutrest.length)]);
         }
@@ -5865,7 +5865,7 @@ _Click the button below to download_`
           A17.sendMessage(m.chat, { image: { url: results[i] } }, { quoted: m });
         }
       }
-        break; */
+        break; 
 
 
       // case 'pinterest':
