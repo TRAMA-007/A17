@@ -2321,6 +2321,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
       case 'animewall': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
+        if (m.isGroup) return reply(mess.privateonly);
         reply(mess.waiting);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } });
         if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي");
