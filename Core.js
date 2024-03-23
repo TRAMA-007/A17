@@ -990,12 +990,12 @@ Typed *surrender* to surrender and admited defeat`
     reply (`اسكت يا متملح`);
           }
           
-/*
-   if (smallinput.includes('ديفيد عمل شنو')) {
-    reply (`واحد زبو تحت المتوسط اعلن ضعفه الجنسي😂🤏`);
+
+   if (smallinput.includes('دا اول')) {
+    reply (`🤏`);
           }
 
-
+/*
    if (smallinput.includes('ياسر')) {
     reply (`ياسر؟ قصدك المعلط الما عارف طيزوو من بطنو`);
           } 
