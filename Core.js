@@ -3038,10 +3038,10 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'))
       // var kairesult = pickRandom(nsfwdata)
       // A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-      // break;
+      // break; */
 
 
-      case 'pussy':
+      case 'orgy':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -3050,7 +3050,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         // React to the command message with a specific emoji
         A17.sendMessage(from, { react: { text: "🥵", key: m.key } });
 
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'));
+        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'));
 
         // Create an empty array to store the randomly selected pictures
         var selectedPictures = [];
@@ -3088,7 +3088,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
         var kairesult = pickRandom(nsfwdata)
         A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break; */
+        break; 
 
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
