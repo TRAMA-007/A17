@@ -8054,7 +8054,7 @@ break; */
         if (isBanChat) return reply(mess.bangc);
         const seggs = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
         const bj = seggs.data;
-        await A17.sendMessage(m.chat, { video: { url: bj.url} }, { quoted: m })
+        await A17.sendMessage(m.chat, { video: { url: bj.url}, gifPlayback:true }, { quoted: m })
      }
         break;
 
