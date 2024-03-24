@@ -5120,14 +5120,12 @@ Then if I got any juice left I'm gonna get Sunday too`);
       case 'ig': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (args[0] === "mp4") {
-          A17.sendMessage(from, { video: { url: args[1] }, caption: 'Here it is...', mimetype: 'video/mp4' }, { quoted: m })
-        } else if (args[0] === "jpg") {
-          A17.sendMessage(from, { image: { url: args[1] }, caption: 'Here it is...' }, { quoted: m })
-        } else {
-          reply("Error! ")
-        }
-      }
+        if (!text) return reply(`Please proide a link`) 
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        reply(mess.waiting);
+        const ig = instgram.data;
+        await A17.sendMessage(m.chat, { video: { url: ig.result} }, { quoted: m })
+     }
         break;
 
 
