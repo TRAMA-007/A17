@@ -8063,13 +8063,15 @@ break; */
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`)
+        const sticker = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`)
         reply(mess.waiting);
-        const hoshino = stickers.data.result.stickers;
-        const arona = hoshino[Math.floor(Math.random() * hoshino.length)];
-        let sex = await getBuffer(arona);
-        await A17.sendMessage(m.chat, { image: sex }, { quoted: m })
-     }
+        const me = sticker.data.result;
+        const imageUrls = me.stickers;
+        const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+        let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+        await fs.unlinkSync(encmedia);
+    }
         break;
 
 
