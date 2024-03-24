@@ -8059,13 +8059,13 @@ break; */
         if (!text) return reply(`Please proide a link`) 
         const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`)
         reply(mess.waiting);
-        const boobs = stickers.data.result.stickers;
-        const randomImageUrl = boobs[Math.floor(Math.random() * boobs.length)];
+        const hoshino = stickers.data.result.stickers;
+        const randomImageUrl = hoshino[Math.floor(Math.random() * hoshino.length)];
         let media = await getBuffer(randomImageUrl);
         let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
         await fs.unlinkSync(encmedia);
-     }
-        break;
+        }
+          break;
 
 
 
