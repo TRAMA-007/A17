@@ -7498,12 +7498,12 @@ break; */
        break;
         
 
-      case 'touhou':
+      case 'topless':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         reply(mess.waiting)
-        waifudd = await axios.get(`https://fantox-apis.vercel.app/touhou`)
+        waifudd = await axios.get(`https://fantox-apis.vercel.app/topless`)
         /*  let xxhnekobot = [
           {buttonId: `${prefix}touhou`, buttonText: {displayText: `>>`}, type: 1},
           ]  */
