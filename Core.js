@@ -8053,6 +8053,18 @@ break; */
         break;
 
 
+        case 'stickers': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`)
+        reply(mess.waiting);
+        const boobs = stickers.data.result;
+        await A17.sendImageAsSticker(m.chat, { image: { url: boobs.stickers} }, { quoted: m })
+     }
+        break;
+
+
 
   /*   case 'loli':{
         if (isBan) return reply(mess.banned);
