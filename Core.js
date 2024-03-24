@@ -5853,8 +5853,7 @@ break; */
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a search term.');
     
-    const query = encodeURIComponent(text);
-    const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${query}`);
+    const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${q}`);
     
     reply(mess.waiting);
     
@@ -5863,7 +5862,7 @@ break; */
     for (let i = 0; i < stickersData.length; i++) {
         let media = await getBuffer(stickersData[i]);
         // ارسال الصورة أو فعل أي شيء آخر تريد فعله مع الصورة هنا
-        await A17.sendImageAsSticker(m.chat, { image: media }, { quoted: m });
+        await A17.sendMessage(m.chat, { image: media }, { quoted: m });
     }
 }
 break;
