@@ -3044,8 +3044,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
       case 'orgy':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
 
         // React to the command message with a specific emoji
         A17.sendMessage(from, { react: { text: "🥵", key: m.key } });
@@ -3081,8 +3079,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
       case 'tentacles':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
         A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
 
         var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
