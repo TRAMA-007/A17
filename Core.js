@@ -5849,24 +5849,25 @@ break; */
 
 
         case 'stickers': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!args.join(" ")) return reply(`${pushname} Please provide a search term!`);
-          
-        const sticker = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`)
-        const results = sticker.data.result.stickers;
-      
-          const numImages = 5;
-        for (let i = 0; i < numImages && i < sticker.length; i++) {
-          results.push(sticker[Math.floor(Math.random() * sticker.length)]);
-        }
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply('Please provide a search term.');
+    
+    const query = encodeURIComponent(text);
+    const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${query}`);
+    
+    reply(mess.waiting);
+    
+    const stickersData = stickers.data.result.stickers;
+    
+    for (let i = 0; i < stickersData.length; i++) {
+        let media = await getBuffer(stickersData[i]);
+        // ارسال الصورة أو فعل أي شيء آخر تريد فعله مع الصورة هنا
+        await A17.sendImageAsSticker(m.chat, { image: media }, { quoted: m });
+    }
+}
+break;
 
-        // Send each image without any caption
-        for (let i = 0; i < results.length; i++) {
-          A17.sendMessage(m.chat, { image: { url: results[i] } }, { quoted: m });
-        }
-      }
-        break;
 
 
       // case 'pinterest':
