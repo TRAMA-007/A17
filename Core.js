@@ -5853,17 +5853,17 @@ break; */
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a search term.');
     
-    const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=frieren`);
+    let stickers = await fetchjson(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${q}`);
     
     reply(mess.waiting);
     
-    const stickersData = stickers.data.result;
+    const stickersData = stickers.data.result.stickers;
     
     for (let i = 0; i < 5; i++) {  // the set of picures.
           let random = stickersData[Math.floor(Math.random() * stickersData.length)];
 
           // Sending the female picture
-          await A17.sendMessage(m.chat, { image: { url: random.stickers } }, { quoted: m });
+          await A17.sendMessage(m.chat, { image: { url: random } }, { quoted: m });
         }
       }
         break;
