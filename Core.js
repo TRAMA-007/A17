@@ -5117,18 +5117,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // break;
 
 
-      case 'ig': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=GataDios&url=${encodeURIComponent(q)}`)
-        reply(mess.waiting);
-        const ig = instgram.data;
-        await A17.sendMessage(m.chat, { video: { url: ig.result} }, { quoted: m })
-     }
-        break;
-
-
       case 'mp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -8049,6 +8037,18 @@ break; */
   *description*: ${shiroko.description}
   `;
         await A17.sendMessage(m.chat, { image: { url: shiroko.image.large}, caption: shirokotxt }, { quoted: m })
+     }
+        break;
+
+
+        case 'ig': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        reply(mess.waiting);
+        const ig = instgram.data;
+        await A17.sendMessage(m.chat, { video: { url: ig.result} }, { quoted: m })
      }
         break;
 
