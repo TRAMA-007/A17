@@ -8062,7 +8062,7 @@ break; */
         const boobs = stickers.data.result.stickers;
         const randomImageUrl = boobs[Math.floor(Math.random() * boobs.length)];
         let media = await getBuffer(randomImageUrl);
-        await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+        let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
         await fs.unlinkSync(encmedia);
      }
         break;
