@@ -8049,6 +8049,16 @@ break; */
         break;
 
 
+        case 'planaarona119': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        const seggs = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
+        const bj = seggs.data;
+        await A17.sendMessage(m.chat, { video: { url: bj.url} }, { quoted: m })
+     }
+        break;
+
+
         case 'stickers': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
