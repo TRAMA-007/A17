@@ -8060,12 +8060,11 @@ break; */
         const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const hoshino = stickers.data.result.stickers;
-        const randomImageUrl = hoshino[Math.floor(Math.random() * hoshino.length)];
-        let media = await getBuffer(randomImageUrl);
-        let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
-        await fs.unlinkSync(encmedia);
-        }
-          break;
+        const arona = hoshino[Math.floor(Math.random() * hoshino.length)];
+        let sex = await getBuffer(arona);
+        await A17.sendMessage(m.chat, { image: sex }, { quoted: m })
+     }
+        break;
 
 
 
