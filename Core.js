@@ -8059,8 +8059,11 @@ break; */
         if (!text) return reply(`Please proide a link`) 
         const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`)
         reply(mess.waiting);
-        const boobs = stickers.data.result;
-        await A17.sendImageAsSticker(m.chat, { image: { url: boobs.stickers} }, { quoted: m })
+        const boobs = stickers.data.result.stickers;
+        let i = 0; i < boobs.length; i++
+       let media = await getBuffer(boobs[i]);
+    // ارسال الصورة أو فعل أي شيء آخر تريد فعله مع الصورة هنا
+        await A17.sendImageAsSticker(m.chat, { image: media }, { quoted: m })
      }
         break;
 
