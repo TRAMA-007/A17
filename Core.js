@@ -5853,7 +5853,7 @@ break; */
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a search term.');
     
-    let stickers = await fetchjson(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${q}`);
+    const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${q}`);
     
     reply(mess.waiting);
     
