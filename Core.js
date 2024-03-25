@@ -758,6 +758,13 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
+    if (smallinput.includes('بلانا اطرديه') || smallinput.includes('حد يطرده') || smallinput.includes('اطلع برا')) {
+        if (!isAdmins && !isCreator) await A17.sendMessage(from, { react: { text: "🤏", key: m.key } })
+        let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
+        await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
+        if (isAdmins && isCreator) return reply('تم') 
+        }
+
 
     if (smallinput.includes('يا نجم البحر')) {
     let media = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
