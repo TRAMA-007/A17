@@ -5832,15 +5832,14 @@ _Click the button below to download_`
 
 
       //
- /*     case 'pinterest':
+      case 'pinterest':
       case 'pin': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
-    if (!m.isGroup) return reply(mess.grouponly);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
 
-    const pin = await axios.get(https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(text)});
+    const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const images = pin.data.result;
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
@@ -5852,7 +5851,7 @@ for (let i = 0; i < imageCount; i++) {
     await A17.sendMessage(m.chat, { image: media }, { quoted: m });
 }
      } 
-break; */
+break; 
 
 
         case 'stickers': {
