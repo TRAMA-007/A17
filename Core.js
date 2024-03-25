@@ -5872,7 +5872,7 @@ for (let i = 0; i < imageCount; i++) {
     let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
         await fs.unlinkSync(encmedia);
     let encmedia2 = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
-        await fs.unlinkSync(encmedia);
+        await fs.unlinkSync(encmedia2);
  } 
      } 
 break; 
