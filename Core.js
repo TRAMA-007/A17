@@ -5857,22 +5857,22 @@ break;
         case 'stickers': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
-    if (!text) return reply('Please provide a search term.');
-    
-    const stickers = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${q}`);
-    
-    reply(mess.waiting);
-    
-    const stickersData = stickers.data.result.stickers;
-    
-    for (let i = 0; i < 5; i++) {  // the set of picures.
-          let random = stickersData[Math.floor(Math.random() * stickersData.length)];
+    A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+    if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}stickers frieren");
 
-          // Sending the female picture
-          await A17.sendMessage(m.chat, { image: { url: random } }, { quoted: m });
-        }
-      }
-        break;
+    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`);
+    reply(mess.waiting);
+    const Essam = tawfik.data.result[0].stickers;
+    // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
+const imageCount = 10; // عدد الصور التي تريد إرسالها
+
+for (let i = 0; i < imageCount; i++) {
+    const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
+    let media = await getBuffer(randomImageUrl);
+    await A17.sendMessage(m.chat, { image: media }, { quoted: m });
+}
+     } 
+break; 
 
 
 
