@@ -5862,7 +5862,7 @@ break;
 
     const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
-    const Essam = tawfik.data.result[0].stickers;
+    const Essam = tawfik.data.result[0].stickers[0];
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
 const imageCount = 10; // عدد الصور التي تريد إرسالها
 
