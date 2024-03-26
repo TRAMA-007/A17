@@ -5918,12 +5918,19 @@ for (let i = 0; i < 7 && i < tawfik.data.result.length; i++) {
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
 const imageCount = 5; // عدد الصور التي تريد إرسالها
 
-for (let i = 0; i < imageCount; i++) {
-    const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
-    let media = await getBuffer(randomImageUrl);
-    let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
-     } 
+for (let i = 0; i < imageCount && i < essam.length; i++) {
+    const imageUrl = essam[i];
+
+    // التحقق من صيغة الصورة
+    if (imageUrl.endsWith('.webp')) {
+        // تخطي الصورة إذا كانت بصيغة WebP
+        continue;
+    // إرسال الصورة كملصق بعد التحقق من صيغتها ومعالجتها
+    let media = await getBuffer(imageUrl);
+    let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+    await fs.unlinkSync(encmedia);
+}
+    }
          } 
            } 
 break;
