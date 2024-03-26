@@ -5866,7 +5866,6 @@ break;
 // يمكنك استخدام حلقة for للوصول إلى جميع القيم داخل مصفوفة النتائج
 for (let i = 0; i < results.length; i++) {
     const essam = results[i].stickers;
-}
     // هنا يمكنك استخدام مصفوفة stickers كما تحتاج
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
 const imageCount = 10; // عدد الصور التي تريد إرسالها
@@ -5878,6 +5877,7 @@ for (let i = 0; i < imageCount; i++) {
         await fs.unlinkSync(encmedia);  
      } 
          } 
+           } 
 break; 
 
 
