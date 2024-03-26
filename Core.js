@@ -5892,19 +5892,20 @@ break;
         const imageCount = 5;
 
         for (let j = 0; j < imageCount && j < essam.length; j++) {
-            const randomImageUrl = essam[j % essam.length];
+            const randomImageUrl = essam[j];
             let media = await getBuffer(randomImageUrl);
 
             if (randomImageUrl.endsWith('.png')) {
-                await A17.sendImageAsSticker(from, media, { quoted: m });
-             else {
-                await A17.sendMessage(from, { sticker: media }, { quoted: m });
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+        await fs.unlinkSync(encmedia);
+            } else {
+               A17.sendMessage(from, { sticker: media }, { quoted: m });
             }
         }
     }
 }
-       } 
 break;
+
 
 
 
