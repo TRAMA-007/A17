@@ -730,9 +730,8 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('لولي') || smallinput.includes('loli')) {
     let media = await getBuffer("https://stickerly.pstatic.net/sticker_pack/GPyTbSabzVZpcOKmzEIA/4OTBND/20/1903024411.webp");
-          let encmedia = await A17.sendImage(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
-    }
+          A17.sendMessage(from, { sticker: media }, { quoted: m });
+}
 
 
     if (smallinput.includes('يعني ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
