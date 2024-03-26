@@ -8133,6 +8133,21 @@ break;
         break;
 
 
+        case 'yt': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/ytvideo2?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        reply(mess.waiting);
+        const yt = youtube.data.result;
+        let ytxt = ` 
+        *Downloading*: ${yt.title} `;
+        await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
+        await A17.sendMessage(m.chat, { video: { url: yt.link} }, { quoted: m })
+     }
+        break;
+
+
         case 'planaarona119': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
