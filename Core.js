@@ -8094,8 +8094,8 @@ break;
         let hutao = `
         *Name: ${w.title}*
         *Description*: ${w.intro} `;
-        await A17.sendMessage(m.chat, { image: { url: q.cover1 }, caption: hutao }, { quoted: m })
-        await A17.sendMessage(m.chat, { audio: { url: q.cv[0].audio[0] } }, { quoted: m })
+        await A17.sendMessage(m.chat, { image: { url: w.cover1 }, caption: hutao }, { quoted: m })
+        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[0] } }, { quoted: m })
       }
         break;
 
