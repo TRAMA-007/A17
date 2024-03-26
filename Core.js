@@ -7520,6 +7520,28 @@ break;
           return ('Error!')
         })
         break;
+
+
+      case 'upscale':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!img) return reply(`Please proide an image`)
+        reply(mess.waiting)
+        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${img}`)
+        /*       var wbuttsss = [
+{buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
+] */
+        let button1ssMessages = {
+          image: waifudd,
+          caption: `ْ`,
+          /*  footer: `${global.BotName}`,
+            buttons: wbuttsss,
+            headerType: 4 */
+        }
+        await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+        break;
         
 
       case 'foxgirl':
