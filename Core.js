@@ -5892,17 +5892,18 @@ break;
         const imageCount = 5;
 
         for (let j = 0; j < imageCount && j < essam.length; j++) {
-            const randomImageUrl = essam[j];
+            const randomImageUrl = essam[j % essam.length];
             let media = await getBuffer(randomImageUrl);
 
             if (randomImageUrl.endsWith('.png')) {
                 await A17.sendImageAsSticker(from, media, { quoted: m });
-            } else {
+             else {
                 await A17.sendMessage(from, { sticker: media }, { quoted: m });
             }
         }
     }
 }
+       } 
 break;
 
 
