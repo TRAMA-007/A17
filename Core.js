@@ -766,6 +766,22 @@ Typed *surrender* to surrender and admited defeat`
         }
 
 
+    if (smallinput.includes('امسح العار') || smallinput.includes('بلانا احذفي') || smallinput.includes('بلانا أمسحي')) {
+        if (!isAdmins && !isCreator) return reply('نو')
+        let { chat, fromMe, id } = m.quoted
+
+        const key = {
+          remoteJid: m.chat,
+          fromMe: false,
+          id: m.quoted.id,
+          participant: m.quoted.sender
+        }
+
+        await A17.sendMessage(m.chat, { delete: key })
+        if (isAdmins && isCreator) return reply('تم') 
+     }
+
+
     if (smallinput.includes('يا نجم البحر')) {
     let media = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
