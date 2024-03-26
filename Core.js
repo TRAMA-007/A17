@@ -5873,16 +5873,9 @@ const imageCount = 10; // عدد الصور التي تريد إرسالها
 for (let i = 0; i < imageCount; i++) {
     const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
     let media = await getBuffer(randomImageUrl);
-    let stickerFileType = "webp"; // نوع ملف الستيكر
-
-    // إذا كان نوع الملف غير محدد، استخدم webp كالافتراضي
-    if (!stickerFileType || stickerFileType !== "webp") {
-        stickerFileType = "webp";
-    }
-
-    let encmedia = await A17.sendImageAsSticker(m.chat, media, { packname: global.packname, author: global.author }, { stickerType: stickerFileType });
-    await fs.unlinkSync(encmedia);
-}
+    let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+        await fs.unlinkSync(encmedia);  
+     } 
          } 
            } 
 break; 
