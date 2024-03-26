@@ -5865,7 +5865,7 @@ break;
     const results = tawfik.data.result;
 // يمكنك استخدام حلقة for للوصول إلى جميع القيم داخل مصفوفة النتائج
 for (let i = 0; i < 5 && i < tawfik.data.result.length; i++) {
-    const stickers = tawfik.data.result[i].stickers;
+    const essam = tawfik.data.result[i].stickers;
     // هنا يمكنك استخدام مصفوفة stickers كما تحتاج
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
 const imageCount = 10; // عدد الصور التي تريد إرسالها
