@@ -5873,7 +5873,7 @@ const imageCount = 10; // عدد الصور التي تريد إرسالها
 for (let i = 0; i < imageCount; i++) {
     const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
     let media = await getBuffer(randomImageUrl);
-    let encmedia = await A17.sendSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+    let encmedia = await A17.sendVideoAsStickerGIF(m.chat, media, m, { packname: global.packname, author: global.author });
         await fs.unlinkSync(encmedia);  
      } 
          } 
