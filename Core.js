@@ -5885,21 +5885,26 @@ break;
     const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const results = tawfik.data.result;
-// يمكنك استخدام حلقة for للوصول إلى جميع القيم داخل مصفوفة النتائج
-for (let i = 0; i < 7 && i < tawfik.data.result.length; i++) {
-    const essam = tawfik.data.result[i].stickers;
-    // هنا يمكنك استخدام مصفوفة stickers كما تحتاج
-    // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
-const imageCount = 5; // عدد الصور التي تريد إرسالها
 
-for (let i = 0; i < imageCount; i++) {
-    const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
-    let media = await getBuffer(randomImageUrl);
-    A17.sendMessage(from, { sticker: media }, { quoted: m });
-     } 
-         } 
-           } 
+    for (let i = 0; i < 7 && i < tawfik.data.result.length; i++) {
+        const essam = tawfik.data.result[i].stickers;
+
+        const imageCount = 5;
+
+        for (let j = 0; j < imageCount && j < essam.length; j++) {
+            const randomImageUrl = essam[j];
+            let media = await getBuffer(randomImageUrl);
+
+            if (randomImageUrl.endsWith('.png')) {
+                await A17.sendImageAsSticker(from, media, { quoted: m });
+            } else {
+                await A17.sendMessage(from, { sticker: media }, { quoted: m });
+            }
+        }
+    }
+}
 break;
+
 
 
         case 'stickers2': {
