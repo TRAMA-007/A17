@@ -8088,13 +8088,14 @@ break;
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}genshin hu tao`)
         
-        const q = await axios.get(`https://api.lolhuman.xyz/api/genshin/${q} ?apikey=GataDios`)
+        const q = await axios.get(`https://api.lolhuman.xyz/api/genshin/hu tao?apikey=GataDios`)
         reply(mess.waiting);
         const w = q.data.result;
         let hutao = `
         *Name*: ${w.title}
         *Description*: ${w.intro} `;
         await A17.sendMessage(m.chat, { image: { url: w.cover1}, caption: hutao }, { quoted: m })
+        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[0]} }, { quoted: m })
       }
         break;
 
@@ -8137,13 +8138,12 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/ytvideo2?apikey=GataDios&url=${encodeURIComponent(q)}`)
-        reply(mess.waiting);
+        const youtube = await axios.get(`https://api.lolhuman.xyz/api/ytvideo2?apikey=GataDios&url=${encodeURIComponent(q)}`)
         const yt = youtube.data.result;
         let ytxt = ` 
-        *Downloading*: ${yt.title} `;
+        *${yt.title}* `;
         await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
-        await A17.sendMessage(m.chat, { video: { url: yt.link} }, { quoted: m })
+        await A17.sendMessage(m.chat, { video: { url: yt.link}, caption: ytxt }, { quoted: m })
      }
         break;
 
