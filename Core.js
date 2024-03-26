@@ -5875,8 +5875,7 @@ for (let i = 0; i < imageCount; i++) {
     const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
     let media = await getBuffer(randomImageUrl);
     let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
-        await fs.unlinkSync(encmedia); 
- } 
+        await fs.unlinkSync(encmedia);  
      } 
          } 
 break; 
