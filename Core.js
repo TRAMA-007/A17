@@ -5886,16 +5886,18 @@ break;
     reply(mess.waiting);
     const results = tawfik.data.result;
 // يمكنك استخدام حلقة for للوصول إلى جميع القيم داخل مصفوفة النتائج
-for (let i = 0; i < 5 && i < tawfik.data.result.length; i++) {
+for (let i = 0; i < 7 && i < tawfik.data.result.length; i++) {
     const essam = tawfik.data.result[i].stickers;
     // هنا يمكنك استخدام مصفوفة stickers كما تحتاج
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
-const imageCount = 10; // عدد الصور التي تريد إرسالها
+const imageCount = 2; // عدد الصور التي تريد إرسالها
 
 for (let i = 0; i < imageCount; i++) {
     const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
     let media = await getBuffer(randomImageUrl);
     A17.sendMessage(from, { sticker: media }, { quoted: m });
+    let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
      } 
          } 
            } 
