@@ -1030,7 +1030,7 @@ Typed *surrender* to surrender and admited defeat`
           } 
 
 
-   if (smallinput.includes('وينو')) {
+   if (smallinput.includes('ونو')) {
     reply (`اوريك ما تزعل😂`);
           }
 
