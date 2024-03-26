@@ -5843,7 +5843,7 @@ _Click the button below to download_`
     reply(mess.waiting);
     const images = pin.data.result;
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
-const imageCount = 20; // عدد الصور التي تريد إرسالها
+const imageCount = 5; // عدد الصور التي تريد إرسالها
 
 for (let i = 0; i < imageCount; i++) {
     const randomImageUrl = images[i % images.length]; // يُحدد اختيار صورة عشوائية من القائمة
@@ -5873,7 +5873,7 @@ const imageCount = 10; // عدد الصور التي تريد إرسالها
 for (let i = 0; i < imageCount; i++) {
     const randomImageUrl = essam[i % essam.length]; // يُحدد اختيار صورة عشوائية من القائمة
     let media = await getBuffer(randomImageUrl);
-    let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
+    let encmedia = await A17.sendSticker(m.chat, media, m, { packname: global.packname, author: global.author });
         await fs.unlinkSync(encmedia);  
      } 
          } 
