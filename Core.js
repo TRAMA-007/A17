@@ -199,6 +199,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
     const from = m.chat
@@ -750,6 +751,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
+      if (isTawfik) return reply('احضن ذا اول🤭')
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
     }
