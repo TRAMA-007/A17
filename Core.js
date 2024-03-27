@@ -1016,7 +1016,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
    if (smallinput.includes('فكيو') || smallinput.includes('فك يو') || smallinput.includes('شتفكب')) {
-    reply (`🤭`);
+    reply (`🤓`);
           }
           
 
