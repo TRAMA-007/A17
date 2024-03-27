@@ -200,6 +200,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
     const from = m.chat
@@ -754,6 +755,18 @@ Typed *surrender* to surrender and admited defeat`
       if (isTawfik) return reply('احضن ذا اول🤭')
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
+    }
+
+
+    if (smallinput.includes('مسا') || smallinput.includes('مثا')) {
+    let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
+      if (isIssam) return reply('احلى مسا على احلى عصام🌹') 
+    }
+
+
+    if (smallinput.includes('صباح') || smallinput.includes('ثباح')) {
+    let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
+      if (isIssam) return reply('احلى صباح على احلى عصام🌹') 
     }
 
 
