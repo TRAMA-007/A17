@@ -1015,13 +1015,13 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-   if (smallinput.includes('بكره نيكي')) {
-    reply (`اسكت يا متملح`);
+   if (smallinput.includes('فكيو') || smallinput.includes('فك يو') || smallinput.includes('شتفكب')) {
+    reply (`🤭`);
           }
           
 
-   if (smallinput.includes('دا اول')) {
-    reply (`🤏`);
+   if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('دا زاتو شين')) {
+   reply (`🤏`);
           }
 
 /*
