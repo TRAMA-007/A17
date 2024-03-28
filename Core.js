@@ -5636,15 +5636,17 @@ _Click the button below to download_`
 
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
-        let abuffer = `https://vihangayt.me/download/spotify?url=${encodeURIComponent(q)}`
-        let bbuffer = await fetchJson(`https://vihangayt.me/download/spotify?url=${encodeURIComponent(q)}`)
+        let bbuffer = await axios.get(`https://api.lolhuman.xyz/api/spotifysearch?apikey=GataDios&query=${encodeURIComponent(q)}`)
+ 
+        let bname = bbuffer.data.result[0].title
+        let burl = bbuffer.data.result[0].external_urls.spotify;
 
-        let bimg = bbuffer.spty.results.thumbnail
-        let bname = bbuffer.spty.results.title
-        let burl = bbuffer.spty.results.url;
+       let abuffer = await axios.get(`https://api.caliph.biz.id/api/download/spotify?apikey=caliphkey&url=${burl}`) 
 
+        let bimg = abuffer.data.result.thumbnail; 
+        
         await A17.sendMessage(from, {
-          audio: { url: abuffer },
+          audio: { url: abuffer.data.result.mp3},
           ptt: true,
           filename: 'error.mp3',
           mimetype: 'audio/mpeg',
