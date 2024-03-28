@@ -5675,12 +5675,13 @@ _Click the button below to download_`
 
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
-        let abuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/download?url=https://m.soundcloud.com/resarxam/touhou-1-instrumental-remix-eternal-shrine-maiden-iris-amp-winds-of-time&apikey=caliphkey`)
-        let bbuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/search?query=touhou%201%20instrumental%20remix&apikey=caliphkey`)
+        let bbuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/search?query=${encodeURIComponent(q)}&apikey=caliphkey`)
 
         let bimg = bbuffer.data.result[0].thumb
         let bname = bbuffer.data.result[0].title
         let burl = bbuffer.data.result[0].url;
+
+       let abuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/download?url=${burl}&apikey=caliphkey`) 
 
         await A17.sendMessage(from, {
           audio: { url: abuffer.data.result.url},
