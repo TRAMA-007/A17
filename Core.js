@@ -8221,27 +8221,7 @@ const characterAI = new CharacterAI();
        await A17.sendMessage(m.chat, { image: { url: aru.image.portrait}, caption: arutxt }, { quoted: m })
      }
         break;
-
-
-     /* case 'hutao':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        
-        const q = await axios.get(`https://api.lolhuman.xyz/api/genshin/hu tao?apikey=GataDios`)
-        reply(mess.waiting);
-        const w = q.data.result;
-        let hutao = `
-        *Name*: ${w.title}
-        *Description*: ${w.intro} `;
-        await A17.sendMessage(m.chat, { image: { url: w.cover1}, caption: hutao }, { quoted: m })
-        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[0]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg', { quoted: m }) 
-        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[1]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg', { quoted: m }) 
-        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[2]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg', { quoted: m }) 
-      }
-        break;
-*/
+     
 
       case 'character':{
         if (isBan) return reply(mess.banned);
