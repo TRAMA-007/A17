@@ -4734,6 +4734,35 @@ Then if I got any juice left I'm gonna get Sunday too`);
         }
         await fs.unlinkSync(media5);
         break;
+
+
+        case "enhance":
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+
+        let { GraphOrg } = require("./lib/uploader");
+        if (!m.quoted) {
+          //
+          A17.sendMessage(from, { react: { text: "❔", key: m.key } })
+          return m.reply(
+            `With caption not working, first send an *Image* / *Video* to enhance then tag with *${prefix}tourl*`
+          );
+        }
+        let media5 = await A17.downloadAndSaveMediaMessage(quoted);
+        if (/image/.test(mime)) {
+          //
+          let anu = await GraphOrg(media5);
+          let serika = await getbuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img={anu}`)
+          A17.sendMessage(from, { image: serika }, { quoted: m })
+        } 
+         else {
+          //
+          return m.reply(
+            `Plese provide an *Image* to upscale`
+          );
+        }
+        await fs.unlinkSync(media5);
+        break; 
         
 
       //--------------------------------------------------------------------------------------------------------------------//
