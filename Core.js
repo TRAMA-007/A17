@@ -8276,6 +8276,26 @@ const characterAI = new CharacterAI();
         break;
 
 
+        case 'tiktok': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const tt = await axios.get(`https://api.lolhuman.xyz/api/tiktok?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        const sx = tt.data.result;
+        let shirokotxt = `
+  *title: ${sx.title}*
+
+  
+ *views: ${sx.statistic.play_count}*
+  *likes: ${sx.statistic.like_count}*
+ *share: ${sx.statistic.share_count}*
+  *comments: ${sx.statistic.comment_count}*
+  `; 
+        await A17.sendMessage(m.chat, { video: { url: sx.link}, caption: shirokotxt }, { quoted: m })
+     }
+        break;
+
+
         case 'apk': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
