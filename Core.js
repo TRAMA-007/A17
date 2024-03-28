@@ -1031,7 +1031,8 @@ Typed *surrender* to surrender and admited defeat`
 
 
    if (smallinput.includes('فكيو') || smallinput.includes('فك يو') || smallinput.includes('شتفكب')) {
-    reply (`🤓`);
+   if (isTawfik) return reply('توفيق تشان..عيب')
+     reply (`🤓`);
           }
           
 
@@ -4736,7 +4737,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-        case "enhance": case 'upscale':
+     /*   case "enhance": case 'upscale':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
@@ -4776,7 +4777,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           );
         }
         await fs.unlinkSync(media5);
-        break;
+        break; */
         
 
       //--------------------------------------------------------------------------------------------------------------------//
