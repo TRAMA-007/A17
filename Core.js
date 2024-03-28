@@ -7631,7 +7631,7 @@ const characterAI = new CharacterAI();
 
 (async () => {
   // Authenticating as a guest (use `.authenticateWithToken()` to use an account)
-  await characterAI.authenticateAsGuest();
+  await characterAI.authenticateWithToken("529e24b4173b29dbc3054fef02a380e1e5b41949");
 
   // Place your character's id here
   const characterId = "zISqldbxDP0sG2UfhCYcGNVtF7tksXNLUcuo5wTu5OM";
