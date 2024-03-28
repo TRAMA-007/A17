@@ -8280,9 +8280,29 @@ const characterAI = new CharacterAI();
         const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=GataDios&package=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const fk = apk.data.result;
-        await A17.sendMessage(m.chat, { document: { url: fk.apk_link} }, { quoted: m })
-     }
+        let bname = fk.apk_name
+        let bimg = fk.apk_icon
+        let burl = fk.apk_link;
+        await A17.sendMessage(from, {
+          document: { url: fk.apk_link},
+          filename: 'error.apk',
+          mimetype: 'document/apk',
+          contextInfo: {
+            mentionedJid: [m.sender],
+            externalAdReply: {
+              title: "play store",
+              body: `Now downloading : ${bname}`,
+              thumbnailUrl: bimg,
+              sourceUrl: burl,
+              mediaType: 1,
+              renderLargerThumbnail: true
+            }
+          }
+        }, { quoted: m }
+        );
+      }
         break;
+
 
 
         case 'yt': {
