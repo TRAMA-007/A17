@@ -5675,15 +5675,15 @@ _Click the button below to download_`
 
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
-        let abuffer = `https://vihangayt.me/download/soundcloud?url=${encodeURIComponent(q)}`
-        let bbuffer = await fetchJson(`https://vihangayt.me/download/soundcloud?url=${encodeURIComponent(q)}`)
+        let abuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/download?url=https://m.soundcloud.com/resarxam/touhou-1-instrumental-remix-eternal-shrine-maiden-iris-amp-winds-of-time&apikey=caliphkey`)
+        let bbuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/search?query=touhou%201%20instrumental%20remix&apikey=caliphkey`)
 
-        let bimg = bbuffer.spty.results.thumbnail
-        let bname = bbuffer.spty.results.title
-        let burl = bbuffer.spty.results.url;
+        let bimg = bbuffer.data.result[0].thumb
+        let bname = bbuffer.data.result[0].title
+        let burl = bbuffer.data.result[0].url;
 
         await A17.sendMessage(from, {
-          audio: { url: abuffer },
+          audio: { url: abuffer.data.result.url},
           ptt: true,
           filename: 'error.mp3',
           mimetype: 'audio/mpeg',
