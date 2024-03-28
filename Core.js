@@ -787,8 +787,8 @@ Typed *surrender* to surrender and admited defeat`
         }
 
 
-    if (smallinput.includes('امسح العار') || smallinput.includes('بلانا احذفي') || smallinput.includes('بلانا أمسحي')) {
-        if (!isAdmins && !isCreator) return reply('نو')
+    if (smallinput.includes('امسح العار') || smallinput.includes('بلانا احذفي') || smallinput.includes('بلانا امسحي')) {
+        if (!isCreator) return reply('نو')
         let { chat, fromMe, id } = m.quoted
 
         const key = {
