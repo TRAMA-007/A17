@@ -2504,16 +2504,8 @@ const characterAI = new CharacterAI();
 
   // Send a message
   const response = await chat.sendAndAwaitResponse("hello plana!", true);
-  
-          const response1 = await fetch(response.text);
-          const responseData1 = await response1.json();
 
-          let message = "";
-
-          message = responseData1;
-          
-          const me = m.sender;
-          await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
+   A17.sendMessage(m.chat, { text: response.text}, { quoted: m });
   
   // Use `response.text` to use it as a string
 })();
