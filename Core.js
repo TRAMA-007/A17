@@ -8233,9 +8233,9 @@ const characterAI = new CharacterAI();
         *Name*: ${w.title}
         *Description*: ${w.intro} `;
         await A17.sendMessage(m.chat, { image: { url: w.cover1}, caption: hutao }, { quoted: m })
-        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[0]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg',, { quoted: m }) 
-        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[1]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg',, { quoted: m }) 
-        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[2]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg',, { quoted: m }) 
+        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[0]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg', { quoted: m }) 
+        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[1]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg', { quoted: m }) 
+        await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[2]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg', { quoted: m }) 
       }
         break;
 
