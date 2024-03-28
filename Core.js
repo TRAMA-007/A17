@@ -200,6 +200,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
@@ -745,6 +746,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
     let media = await getBuffer("https://gifdb.com/images/thumbnail/ghost-hug-virtual-kiss-anime-girl-menhera-chan-c3fvyxsyb034zqbt.gif");
+      if (isAdam) return reply('لول ادم')
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
     }
@@ -753,6 +755,8 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
       if (isTawfik) return reply('احضن ذا اول🤭')
+      if (isAdam) return reply('كان نفسي احضنك بس انت آدم')
+      if (isIssam) return reply('لول مصري')
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
     }
@@ -1012,8 +1016,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
-    reply (`توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان`);
-           }
+    if (isTawfik) return reply('توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان')
 
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
@@ -8220,7 +8223,7 @@ const characterAI = new CharacterAI();
         break;
 
 
-      case 'hutao':{
+     /* case 'hutao':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -8238,7 +8241,7 @@ const characterAI = new CharacterAI();
         await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[2]} } filename: w.title + '.mp3',  mimetype: 'audio/mpeg', { quoted: m }) 
       }
         break;
-
+*/
 
       case 'character':{
         if (isBan) return reply(mess.banned);
