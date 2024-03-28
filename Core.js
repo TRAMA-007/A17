@@ -4748,11 +4748,11 @@ Then if I got any juice left I'm gonna get Sunday too`);
             `With caption not working, first send an *Image* / *Video* to generate a link! then tag with *${prefix}tourl*`
           );
         }
-        let media5 = await A17.downloadAndSaveMediaMessage(quoted);
+        let media6 = await A17.downloadAndSaveMediaMessage(quoted);
         if (/image/.test(mime)) {
           //
           let anu = await GraphOrg(media5);
-          let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(anu)}`)
+          serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(anu)}`)
           A17.sendMessage(from, { image: serika }, { quoted: m })
         } else if (/video/.test(mime)) {
           //
