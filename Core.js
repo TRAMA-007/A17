@@ -363,8 +363,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         } 
 
         
-     if (plan && plan && m.isGroup){
-       const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(q)}`)
+     if (plan && pla && m.isGroup){
+       const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(budy)}`)
        txt = `${plana.data.completion}`
         m.reply(txt)
         } 
