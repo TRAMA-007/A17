@@ -7420,6 +7420,16 @@ break;
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1312_${q}.png`)
         A17.sendMessage(from, { image: buffer, caption: 'heres your misha🏳️‍🌈'}, { quoted: m })
         break;
+
+
+        case 'card-acheron':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1308_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your acheron'}, { quoted: m })
+        break;
         
 
 
