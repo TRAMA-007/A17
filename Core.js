@@ -194,6 +194,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const prefix = global.prefa
     const isCmd = body.startsWith(prefix)
     const notCmd = body.startsWith('')
+    const plana = body.startsWith('plana')
+    const planaa = body.startsWith('بلانا')
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
@@ -359,7 +361,11 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         } 
 
         
-     
+     if (plana && planaa){
+       const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(budy)}`)
+       txt = `${plana.data.completion}`
+        m.reply(txt)
+        } 
 
 
 
