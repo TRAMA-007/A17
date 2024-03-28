@@ -7641,7 +7641,7 @@ const characterAI = new CharacterAI();
   // Send a message
   const response = await chat.sendAndAwaitResponse("Hello plana", true);
 
-        await A17.sendMessage(m.chat, response.text, { quoted: m }).catch(err => {
+         A17.sendMessage(m.chat, response.text, { quoted: m }).catch(err => {
           return ('Error!')
         })
   // Use `response.text` to use it as a string
