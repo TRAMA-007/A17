@@ -8273,6 +8273,18 @@ const characterAI = new CharacterAI();
         break;
 
 
+        case 'apk': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=GataDios&package=${encodeURIComponent(q)}`)
+        reply(mess.waiting);
+        const fk = apk.data.result;
+        await A17.sendMessage(m.chat, { document: { url: fk.apk_link} }, { quoted: m })
+     }
+        break;
+
+
         case 'yt': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
