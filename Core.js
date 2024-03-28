@@ -8280,29 +8280,31 @@ const characterAI = new CharacterAI();
         const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=GataDios&package=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const fk = apk.data.result;
-        let bname = fk.apk_name;
-        let bimg = fk.apk_icon;
-        let burl = fk.apk_link;
-        await A17.sendMessage(from, {
-          document: { url: fk.apk_link},
-          filename: 'error.apk',
-          mimetype: 'apk',
-          contextInfo: {
-            mentionedJid: [m.sender],
-            externalAdReply: {
-              title: "play store",
-              body: `Now downloading : ${bname}`,
-              thumbnailUrl: bimg,
-              sourceUrl: burl,
-              mediaType: 1,
-              renderLargerThumbnail: true
-            }
-          }
-        }, { quoted: m }
-        );
-      }
-        break;
+        await A17.sendMessage(
+          from,
+          {
+            image: { url: fk.apk_icon}, // Include the thumbnail image in the response
+            caption: `\n*Downloading:* *${fk.apk_name}*
+            
+   *version :* ${fk.apk_version}
 
+   *author :* ${fk.apk_author}\n`,
+  },
+          { quoted: m }
+        );
+
+        // Send the audio file with the proper 'type' property set to 'audio'
+        await A17.sendMessage(from, {
+           document: { url: fk.apk_link},
+          filename: fk.apk_name + '.apk',
+          mimetype: 'application/vnd.android.package-archive',
+          quoted: m,
+        });
+
+        // Rest of the code remains unchanged.
+        // ...
+      }
+        break; 
 
 
         case 'yt': {
