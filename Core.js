@@ -8280,13 +8280,13 @@ const characterAI = new CharacterAI();
         const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=GataDios&package=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const fk = apk.data.result;
-        let bname = fk.apk_name
-        let bimg = fk.apk_icon
+        let bname = fk.apk_name;
+        let bimg = fk.apk_icon;
         let burl = fk.apk_link;
         await A17.sendMessage(from, {
           document: { url: fk.apk_link},
           filename: 'error.apk',
-          mimetype: 'document/apk',
+          mimetype: 'apk',
           contextInfo: {
             mentionedJid: [m.sender],
             externalAdReply: {
