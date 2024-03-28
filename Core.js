@@ -192,10 +192,12 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
+    const plana = global.plan
+    const planaa = global.plann
     const isCmd = body.startsWith(prefix)
     const notCmd = body.startsWith('')
-    const plana = body.startsWith('plana')
-    const planaa = body.startsWith('بلانا')
+    const plan = body.startsWith(plana)
+    const pla = body.startsWith(planaa)
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
@@ -361,8 +363,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         } 
 
         
-     if (plana && planaa && m.isGroup){
-       const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(q)}`)
+     if (plan && plan && m.isGroup){
+       const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(budy)}`)
        txt = `${plana.data.completion}`
         m.reply(txt)
         } 
