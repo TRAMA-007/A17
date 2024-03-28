@@ -364,7 +364,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
         
      if (plan && plan && m.isGroup){
-       const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(budy)}`)
+       const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(q)}`)
        txt = `${plana.data.completion}`
         m.reply(txt)
         } 
@@ -2528,22 +2528,6 @@ const characterAI = new CharacterAI();
   // Use `response.text` to use it as a string
 })();
         break; */
-        
-
-      case 'plana':
-      case 'بلانا':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-
-        if (!q) return;
-
-        if (!isCmd && m.isGroup){
-          const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt4?prompt=${encodeURIComponent(q)}`);
-          let plana = botreply.data.completion;
-        await A17.sendMessage(m.chat, { message : plana }, { quoted: m })
-      }
-       } 
-        break; 
 
 
       case 'dalle': case 'imgai': {
