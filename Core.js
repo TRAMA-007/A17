@@ -7625,7 +7625,7 @@ break;
         break;
 
 
-      case 'cai':
+      case 'test':
 const CharacterAI = require("node_characterai");
 const characterAI = new CharacterAI();
 
