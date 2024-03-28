@@ -17,7 +17,9 @@ global.autoreadgc = true;
 
 
 //
-global.prefa = ["."];                                    //Default prefix here. you can change if you want.
+global.prefa = ["."];//Default prefix here. you can change if you want.
+global.plan = ["plana"];
+global.plann = ["بلانا"];
 
 
 //
