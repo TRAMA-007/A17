@@ -2479,7 +2479,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-      case 'plana':
+   /*   case 'plana':
       case 'ai':
       case 'gpt': {
         if (isBan) return reply(mess.banned);
@@ -2509,7 +2509,7 @@ const characterAI = new CharacterAI();
   
   // Use `response.text` to use it as a string
 })();
-        break;
+        break; */
         
 
       case 'aiussy':
@@ -7622,6 +7622,30 @@ break;
         await A17.sendMessage(m.chat, button1ssMessages, { quoted: m }).catch(err => {
           return ('Error!')
         })
+        break;
+
+
+      case 'cai':
+const CharacterAI = require("node_characterai");
+const characterAI = new CharacterAI();
+
+(async () => {
+  // Authenticating as a guest (use `.authenticateWithToken()` to use an account)
+  await characterAI.authenticateAsGuest();
+
+  // Place your character's id here
+  const characterId = "8_1NyR8w1dOXmI1uWaieQcd147hecbdIK7CeEAIrdJw";
+
+  const chat = await characterAI.createOrContinueChat(characterId);
+
+  // Send a message
+  const response = await chat.sendAndAwaitResponse("Hello discord mod!", true);
+
+        await A17.sendMessage(m.chat, response, { quoted: m }).catch(err => {
+          return ('Error!')
+        })
+  // Use `response.text` to use it as a string
+})();
         break;
 
 
