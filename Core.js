@@ -4752,7 +4752,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (/image/.test(mime)) {
           //
           let anu = await GraphOrg(media5);
-          let serika = await getbuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img={anu}`)
+          let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img={anu}`)
           A17.sendMessage(from, { image: serika }, { quoted: m })
         } 
          else {
