@@ -761,6 +761,13 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
+    if (smallinput.includes('براه') || smallinput.includes('bruh')) {
+     if (isTawfik) return reply('تشسن')
+      if (isAdam) return reply('تشسن')
+      if (isIssam) return reply('تشسن')
+    }
+
+
     if (smallinput.includes('مسا') || smallinput.includes('مثا')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
       if (isIssam) return reply('احلى مسا على احلى عصام🌹') 
