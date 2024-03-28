@@ -2528,40 +2528,20 @@ const characterAI = new CharacterAI();
         break; */
         
 
-      case 'aiussy':
-      case 'cai':
-      case 'characterai': {
+      case 'plana':
+      case 'بلانا':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
-        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
+        if (!q) return;
 
-        if (!q) return reply(`try talking to real girls next time`);
-
-        try {
-          const apiUrl1 = `https://vihangayt.me/tools/characterai?q=${encodeURIComponent(q)}`;
-
-          const response1 = await fetch(apiUrl1);
-          const responseData1 = await response1.json();
-
-          let message = "";
-
-          if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
-            message = responseData1.data;
-          } else {
-            return reply("جلا");
-          }
-
-          const me = m.sender;
-          await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
-
-        } catch (error) {
-          console.error(error);
-          reply("An error occurred while fetching the response from the API.");
-        }
+        if (!isCmd && m.isGroup){
+          const botreply = await axios.get(`https://ultimetron.guruapi.tech/gpt4?prompt=${encodeURIComponent(q)}`);
+          let plana = botreply.data.completion;
+        await A17.sendMessage(m.chat, { message : plana }, { quoted: m })
       }
-        break;
+       } 
+        break; 
 
 
       case 'dalle': case 'imgai': {
