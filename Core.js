@@ -7634,14 +7634,14 @@ const characterAI = new CharacterAI();
   await characterAI.authenticateAsGuest();
 
   // Place your character's id here
-  const characterId = "8_1NyR8w1dOXmI1uWaieQcd147hecbdIK7CeEAIrdJw";
+  const characterId = "zISqldbxDP0sG2UfhCYcGNVtF7tksXNLUcuo5wTu5OM";
 
   const chat = await characterAI.createOrContinueChat(characterId);
 
   // Send a message
-  const response = await chat.sendAndAwaitResponse("Hello discord mod!", true);
+  const response = await chat.sendAndAwaitResponse("Hello plana", true);
 
-        await A17.sendMessage(m.chat, response, { quoted: m }).catch(err => {
+        await A17.sendMessage(m.chat, response.text, { quoted: m }).catch(err => {
           return ('Error!')
         })
   // Use `response.text` to use it as a string
