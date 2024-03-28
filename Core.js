@@ -4736,7 +4736,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-        case "enhance":
+        case "enhance": case 'upscale':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
@@ -4745,24 +4745,38 @@ Then if I got any juice left I'm gonna get Sunday too`);
           //
           A17.sendMessage(from, { react: { text: "❔", key: m.key } })
           return m.reply(
-            `With caption not working, first send an *Image* / *Video* to enhance then tag with *${prefix}tourl*`
+            `With caption not working, first send an *Image* / *Video* to generate a link! then tag with *${prefix}tourl*`
           );
         }
         let media5 = await A17.downloadAndSaveMediaMessage(quoted);
         if (/image/.test(mime)) {
           //
           let anu = await GraphOrg(media5);
-          let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${anu}`)
+          let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(anu)}`)
           A17.sendMessage(from, { image: serika }, { quoted: m })
-        } 
-         else {
+        } else if (/video/.test(mime)) {
+          //
+          try {
+            let anu = await GraphOrg(media5);
+          } catch (e) {
+            //
+            await fs.unlinkSync(media5);
+            return A17.sendMessage(
+              m.from,
+              {
+                text: `*Your video size is too big!*\n\n*Max video size:* 5MB`,
+              },
+              { quoted: m }
+            );
+          }
+        } else {
           //
           return m.reply(
-            `Plese provide an *Image* to upscale`
+            `Plese provide an *Image* / *Video* to generate a link!`
           );
         }
         await fs.unlinkSync(media5);
-        break; 
+        break;
         
 
       //--------------------------------------------------------------------------------------------------------------------//
