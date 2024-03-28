@@ -8281,10 +8281,12 @@ const characterAI = new CharacterAI();
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         const seggs = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
-        const bj = seggs.data;
-        await A17.sendMessage(m.chat, { video: { url: bj.url}, gifPlayback:true }, { quoted: m })
-     }
-        break;
+        let bjd = await getBuffer(seggs)
+        let bjif = await GIFBufferToVideoBuffer(bjd)   
+             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
+                         return reply('error..')
+                                         })
+          break;
 
 
 
