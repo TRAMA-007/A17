@@ -8283,9 +8283,8 @@ const characterAI = new CharacterAI();
         const seggs = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
         let bjf = await getBuffer(bjd.data.url)
        let bjif = await GIFBufferToVideoBuffer(bjf)   
-             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
-                         return reply('error..')
-                                         })
+             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m })
+                                         }
        break;
 
 
