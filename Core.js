@@ -5675,13 +5675,13 @@ _Click the button below to download_`
 
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
-        let bbuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/search?query=${encodeURIComponent(q)}&apikey=caliphkey`)
+        let bbuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/search?apikey=caliphkey&query=${encodeURIComponent(q)}`)
 
         let bimg = bbuffer.data.result[0].thumb
         let bname = bbuffer.data.result[0].title
         let burl = bbuffer.data.result[0].url;
 
-       let abuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/download?url=${burl}&apikey=caliphkey`) 
+       let abuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/download?apikey=caliphkey&url=${burl}`) 
 
         await A17.sendMessage(from, {
           audio: { url: abuffer.data.result.url},
