@@ -731,9 +731,9 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-    if (smallinput.includes('لولي') || smallinput.includes('loli')) {
-    let media = await getBuffer("https://stickerly.pstatic.net/sticker_pack/GPyTbSabzVZpcOKmzEIA/4OTBND/20/1903024411.webp");
-          A17.sendMessage(from, { sticker: media }, { quoted: m });
+  //  if (smallinput.includes('لولي') || smallinput.includes('loli')) {
+  //  let media = await getBuffer("https://stickerly.pstatic.net/sticker_pack/GPyTbSabzVZpcOKmzEIA/4OTBND/20/1903024411.webp");
+    //      A17.sendMessage(from, { sticker: media }, { quoted: m });
 }
 
 
@@ -1016,8 +1016,8 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
-    if (isTawfik) return reply('توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان')
-
+    if (isTawfik) return reply('توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان');
+    }   
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
     let { chat, fromMe, id } = m;
