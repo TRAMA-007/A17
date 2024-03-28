@@ -5436,69 +5436,6 @@ _Click the button below to download_`
 
 
       ///
-      case 'tiktok': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!q) return reply('Please provide the link !')
-        reply(mess.wait)
-        if (!q.includes('tiktok')) return reply(`Invalid tiktok link!`)
-        const musim_rambutan = await A17Tiktok(`${q}`).catch(e => {
-          reply(mess.error)
-        })
-        console.log(musim_rambutan)
-        const A17tiktokop = musim_rambutan.result.watermark
-        texttk = `_Please choose the button below_`
-        let buttons = [
-          { buttonId: `${prefix}ttnowm ${q}`, buttonText: { displayText: 'Watermark Free' }, type: 1 },
-          { buttonId: `${prefix}ttaud ${q}`, buttonText: { displayText: 'Audio ' }, type: 1 }
-        ]
-        let buttonMessage = {
-          video: { url: A17tiktokop },
-          caption: texttk,
-          footer: `${BotName}`,
-          buttons: buttons,
-          headerType: 4,
-
-        }
-        A17.sendMessage(from, buttonMessage, { quoted: m })
-      }
-        break;
-
-
-      case 'tiktoknowm': case 'ttnowm': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!q) return reply('Please provide the link !')
-        reply(mess.wait)
-        if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-        const musim_rambutan = await A17Tiktok(`${q}`).catch(e => {
-          reply(mess.error)
-        })
-        console.log(musim_rambutan)
-        const A17tiktoknowm = musim_rambutan.result.nowatermark
-        A17.sendMessage(from, { video: { url: A17tiktoknowm }, caption: "Here it is..." }, { quoted: m })
-      }
-        break;
-
-
-      case 'tiktokaudio':
-      case 'tiktokmusic':
-      case 'ttaud': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!q) return reply('Where is the audio?')
-        if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-        const musim_rambutan = await A17Tiktok(`${q}`).catch(e => {
-          reply(mess.error)
-        })
-        console.log(musim_rambutan)
-        const A17tiktokaudio = musim_rambutan.result.nowatermark
-        A17.sendMessage(from, { audio: { url: A17tiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
-      }
-        break;
-
-
-      ///
       case 'yts': case 'ytsearch': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
