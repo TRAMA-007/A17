@@ -361,7 +361,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         } 
 
         
-     if (plana && planaa){
+     if (plana && planaa && m.isGroup){
        const plana = await axios.get(`https://ultimetron.guruapi.tech/gpt2?prompt=${encodeURIComponent(budy)}`)
        txt = `${plana.data.completion}`
         m.reply(txt)
