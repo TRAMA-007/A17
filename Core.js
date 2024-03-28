@@ -2490,28 +2490,33 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
 
-        try {
-          const apiUrl1 = `https://vihangayt.me/tools/chatgpt2?q=${encodeURIComponent(q)}`;
+const CharacterAI = require("node_characterai");
+const characterAI = new CharacterAI();
 
-          const response1 = await fetch(apiUrl1);
+(async () => {
+  // Authenticating as a guest (use `.authenticateWithToken()` to use an account)
+  await characterAI.authenticateAsGuest();
+
+  // Place your character's id here
+  const characterId = "zISqldbxDP0sG2UfhCYcGNVtF7tksXNLUcuo5wTu5OM";
+
+  const chat = await characterAI.createOrContinueChat(characterId);
+
+  // Send a message
+  const response = await chat.sendAndAwaitResponse("hello plana!", true);
+  
+          const response1 = await fetch(response.text);
           const responseData1 = await response1.json();
 
           let message = "";
 
-          if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
-            message = responseData1.data;
-          } else {
-            return reply("Sorry, I couldn't fetch a response from the API at the moment.");
-          }
-
+          message = responseData1;
+          
           const me = m.sender;
           await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
-
-        } catch (error) {
-          console.error(error);
-          reply("An error occurred while fetching the response from the API.");
-        }
-      }
+  
+  // Use `response.text` to use it as a string
+})();
         break;
         
 
