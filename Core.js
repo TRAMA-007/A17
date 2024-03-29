@@ -774,7 +774,7 @@ Typed *surrender* to surrender and admited defeat`
       let media = await getBuffer("https://graph.org/file/a4dff11527b9d043757de.jpg"); 
        if (!isCreator) return;
     let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);}
+          await fs.unlinkSync(encmedia);
 }
 
 
