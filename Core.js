@@ -1058,6 +1058,13 @@ Typed *surrender* to surrender and admited defeat`
    reply (`🤏`);
           }
 
+
+    if (smallinput.includes('ارونا احسن') || smallinput.includes('ارونا افضل') || smallinput.includes('ارونا فوء')) {
+   reply (`منطقية.. 
+بس يا ترى ارونا تگدر تسوي كدا 👇
+*starts twerking*`);
+      }
+
 /*
    if (smallinput.includes('ياسر')) {
     reply (`ياسر؟ قصدك المعلط الما عارف طيزوو من بطنو`);
