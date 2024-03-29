@@ -763,10 +763,13 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
     let media2 = await getBuffer("https://graph.org/file/a4dff11527b9d043757de.jpg"); 
-      if (isAdam) return A17.sendImageAsSticker(m.chat, media2)
-      if (isIssam) return reply('بطل تكون مصري عشان اعرف أحضنك')
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
+       if (isIssam) return reply('بطل تكون مصري عشان اعرف أحضنك')
+      if (isCreator) {
+          let encmedia2 = await A17.sendImageAsSticker(m.chat, media2, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia2);} else {
+    let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);}
+  } 
     }
 
 
