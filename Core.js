@@ -766,7 +766,7 @@ Typed *surrender* to surrender and admited defeat`
        if (isIssam) return reply('بطل تكون مصري عشان اعرف أحضنك')
       if (isCreator) return;
     let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);}
+          await fs.unlinkSync(encmedia);
     }
 
 
