@@ -7610,12 +7610,11 @@ const characterAI = new CharacterAI();
       case 'waifu':
       case 'kiss':
       case 'pinterest':
-      case 'video':
       case 'feed':
       case 'meow':
       case 'tickle':
       case 'hug':
-      case 'kill': case 'pat': case 'lick': case 'bite':
+      case 'kill': case 'lick': case 'bite':
       case 'bully': case 'bonk': case 'poke': case 'slap':
       case 'happy':
       case 'cuddle': case 'kick':
