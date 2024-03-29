@@ -790,10 +790,12 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
     // تحميل الصورة
-    buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
+    buffer = await axios.get("https://weeb-api.vercel.app/wallpaper?query=plana%20blue%20archive");
+      const randomImageUrl = buffer[Math.floor(Math.random() * buffer.length)];
+        let media = await getBuffer(randomImageUrl);
 
     // إرسال الصورة
-    A17.sendMessage(from, { image: buffer, caption: `plana loves you too ${pushname}` }, { quoted: m });
+    A17.sendMessage(from, { image: media, caption: `plana loves you too ${pushname}` }, { quoted: m });
 }
 
 
