@@ -739,9 +739,9 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-    if (smallinput.includes('لولي') || smallinput.includes('loli')) {
-    let media = await getBuffer("https://stickerly.pstatic.net/sticker_pack/GPyTbSabzVZpcOKmzEIA/4OTBND/20/1903024411.webp");
-          A17.sendMessage(from, { sticker: media }, { quoted: m });
+    if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
+    let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
+          A17.sendVideoAsSticker(from, { video: media }, { quoted: m });
 }
 
 
@@ -790,13 +790,9 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
     // تحميل الصورة
- const gg = await axios.get("https://weeb-api.vercel.app/wallpaper?query=plana%20blue%20archive");
-      const buffer = gg.data
-      const randomImageUrl = buffer[Math.floor(Math.random() * buffer.length)];
-        let media = await getBuffer(randomImageUrl);
-
+ buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
     // إرسال الصورة
-    A17.sendMessage(from, { image: media, caption: `plana loves you too ${pushname}` }, { quoted: m });
+    A17.sendMessage(from, { image: buffer, caption: `plana loves you too ${pushname}` }, { quoted: m });
 }
 
 
