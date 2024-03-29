@@ -1445,7 +1445,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         if (/webp/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${media}`) 
+        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(media)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break; 
