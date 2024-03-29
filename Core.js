@@ -8310,9 +8310,9 @@ const characterAI = new CharacterAI();
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-           document: { url: fk.data},
+          document: { url: fk.data},
           filename: fk.fileName,
-          mimetype: ${fk.mimetype},
+          mimetype: fk.mimetype,
           quoted: m,
         });
 
