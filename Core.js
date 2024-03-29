@@ -8298,6 +8298,7 @@ const characterAI = new CharacterAI();
         const fk = apk.data.result;
         await A17.sendMessage(
           from,
+         { 
           { text: `\n*Downloading:* *${fk.fileName}*
             
    *size :* ${fk.fileSize}
