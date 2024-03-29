@@ -764,18 +764,10 @@ Typed *surrender* to surrender and admited defeat`
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
     let media2 = await getBuffer("https://graph.org/file/a4dff11527b9d043757de.jpg"); 
        if (isIssam) return reply('بطل تكون مصري عشان اعرف أحضنك')
-      if (isCreator) return;
+      if (isCreator) return A17.sendImageAsSticker(from, { image: media2 }, { quoted: m });
     let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
     }
-
-
-  if (smallinput.includes('hug') || smallinput.includes('حضن')) {
-      let media = await getBuffer("https://graph.org/file/a4dff11527b9d043757de.jpg"); 
-       if (!isCreator) return;
-    let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
-}
 
 
     if (smallinput.includes('براه') || smallinput.includes('bruh')) {
@@ -1038,7 +1030,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
-    reply (`توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان`);
+    if (isTawfik) reply (`توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان`);
            }
 
 
