@@ -7834,7 +7834,7 @@ const characterAI = new CharacterAI();
           console.log(error);
         }
       }
-        break;
+        break; */
 
 
       //
@@ -7878,7 +7878,7 @@ const characterAI = new CharacterAI();
       }
         break;
 
-
+/*
       case 'yeet':
       case 'wink': case 'smile':
       case 'wave': case 'blush': case 'smug': case 'glomp':
@@ -7920,7 +7920,7 @@ const characterAI = new CharacterAI();
         break;
 
 
-      /*
+      
       
       case 'cry': case 'kill': case 'hug': case 'pat': case 'lick': case 'kiss': case 'bite': case 'yeet':
       case 'bully': case 'bonk': case 'wink': case 'poke': case 'nom': case 'slap': case 'smile':
