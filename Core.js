@@ -790,7 +790,8 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
     // تحميل الصورة
- const buffer = await axios.get("https://weeb-api.vercel.app/wallpaper?query=plana%20blue%20archive");
+ const gg = await axios.get("https://weeb-api.vercel.app/wallpaper?query=plana%20blue%20archive");
+      const buffer = gg.data
       const randomImageUrl = buffer[Math.floor(Math.random() * buffer.length)];
         let media = await getBuffer(randomImageUrl);
 
