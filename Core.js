@@ -1440,12 +1440,14 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
 
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         if (/webp/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(media)}`) 
+        let anu = await GraphOrg(media);
+        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(anu)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break; 
