@@ -8294,12 +8294,11 @@ const characterAI = new CharacterAI();
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
         const apk = await axios.get(`https://aemt.me/download/gdrive?url=${encodeURIComponent(q)}`)
-        reply(mess.waiting);
         const fk = apk.data.result;
         await A17.sendMessage(
           from,
          { 
-          { text: `\n*Downloading:* *${fk.fileName}*
+           text: `\n*Downloading:* *${fk.fileName}*
             
    *size :* ${fk.fileSize}
 
