@@ -1179,7 +1179,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('زلطة')) {
-    reply (`زلطه ؟ قصدك الحلبي الصبجه البلعب طيزعين فريم وبلع بوكساات من هندي`);
+    reply (`زلطه ؟ قصدك الحلبي الصبجه البلعب طيزعين فري وبلع بوكساات من هندي`);
   }
 
 
