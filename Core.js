@@ -761,7 +761,8 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
-    let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
+    const sx = await axios.get("https://api.waifu.pics/sfw/hug");
+      let media = await getBuffer(sx)
     let media2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXqQY6a2n4uFVN0GYSwSDNovD5skQv7Ky5Ag&usqp=CAU"); 
     let media3 = await getBuffer("https://i.pinimg.com/originals/ff/63/04/ff6304df8b82e3b924ae5369d8f0b340.gif");
        if (isIssam) { let encmedia3 = await A17.sendVideoAsSticker(m.chat, media3, m, { packname: global.packname, author: global.author })
