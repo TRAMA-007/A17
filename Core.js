@@ -2547,7 +2547,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
+        const randoEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
         A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
 
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
