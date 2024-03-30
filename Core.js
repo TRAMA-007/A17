@@ -8598,9 +8598,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
  
   ⌯     ${prefix}play
   ⌯     ${prefix}song
-  ⌯     ${prefix}video
-  ⌯     ${prefix}ytmp3
-  ⌯     ${prefix}ytmp4 
+  ⌯     ${prefix}video 
   ⌯     ${prefix}yts
   ⌯     ${prefix}lyrics
   ⌯     ${prefix}movie
@@ -8612,6 +8610,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}searchgc
   ⌯     ${prefix}wikimedia
   ⌯     ${prefix}gpt
+  ⌯     ${prefix}stickers
 
 
   〢━━━ 📈 *Economy* 📈 ━━━〢
@@ -8650,6 +8649,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}toaudio
   ⌯     ${prefix}steal
   ⌯     ${prefix}emojimix
+  ⌯     ${prefix}enhance / upscale 
+  ⌯     ${prefix}removebackground / removebg
 
 
   〢━━━ 📍 *Reactions* 📍 ━━━〢
@@ -8685,16 +8686,12 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   〢━━ 🌌 *Downloader* 🌌 ━━〢
  
 
-  ⌯     ${prefix}ytvideo
-  ⌯     ${prefix}mediafire
-  ⌯     ${prefix}instagram
-  ⌯     ${prefix}igtv
-  ⌯     ${prefix}facebook
-  ⌯     ${prefix}fbmp3
+  ⌯     ${prefix}yt
+  ⌯     ${prefix}drive (up to 1 GB)
+  ⌯     ${prefix}instagram / ig
+  ⌯     ${prefix}facebook / fb
   ⌯     ${prefix}twitter
-  ⌯     ${prefix}twittermp3
   ⌯     ${prefix}tiktok
-  ⌯     ${prefix}tiktokaudio
 
  
   〢━━━ 🎐 *Fun* 🎐 ━━━〢
