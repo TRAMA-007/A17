@@ -8297,7 +8297,7 @@ const characterAI = new CharacterAI();
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const apk = await axios.get(`https://aemt.me/download/gdrive?url=${encodeURIComponent(q)}`)
+        const apk = await axios.get(`https://api.caliph.biz.id/api/gdrive?apikey=caliphkey&url=${encodeURIComponent(q)}`)
         const fk = apk.data.result;
         await A17.sendMessage(
           from,
@@ -8313,7 +8313,7 @@ const characterAI = new CharacterAI();
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.data},
+          document: { url: fk.downloadUrl},
           filename: fk.fileName,
           mimetype: fk.mimetype,
           quoted: m,
