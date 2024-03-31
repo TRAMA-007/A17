@@ -8259,6 +8259,20 @@ const characterAI = new CharacterAI();
         break;
 
 
+        case 'segs': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!isCreator) return reply (`عيب`)
+        if (!isCreator && !text) return reply (`The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food, paizuri, tentacle, boobs, hboobs, yaoi, donator types: cosplay, swimsuit, pantsu, nakadashi`)
+        const tt = await axios.get(`https://nekobot.xyz/api/image?type=${q}`)
+        const sx = tt.data.message;
+        let shirokotxt = await getbuffer(sx) 
+        await A17.sendMessage(m.chat, { image: shirokotxt }, { quoted: m })
+     }
+        break;
+
+
+
         case 'apk': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
