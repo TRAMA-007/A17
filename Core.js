@@ -5638,16 +5638,17 @@ _Click the button below to download_`
 
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
-        let bbuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/search?apikey=caliphkey&query=${encodeURIComponent(q)}`)
+        let bbuffer = await axios.get(`https://api.neoxr.eu/api/soundcloud-search?apikey=gateapix&q=${encodeURIComponent(q)}`)
 
-        let bimg = bbuffer.data.result[0].thumb
-        let bname = bbuffer.data.result[0].title
-        let burl = bbuffer.data.result[0].url;
+        let bname = bbuffer.data.data[0].title
+        let burl = bbuffer.data.data[0].url;
 
-       let abuffer = await axios.get(`https://api.caliph.biz.id/api/soundcloud/download?apikey=caliphkey&url=${burl}`) 
+       let abuffer = await axios.get(`https://api.neoxr.eu/api/soundcloud?apikey=gateapix&url=https://soundcloud.com/vember-vibe/https://api.neoxr.eu/api/soundcloud?apikey=gateapix&url=${burl}`) 
+
+       let bimg = abuffer.data.data.imageURL;
 
         await A17.sendMessage(from, {
-          audio: { url: abuffer.data.result.url},
+          audio: { url: abuffer.data.data.url},
           ptt: true,
           filename: 'error.mp3',
           mimetype: 'audio/mpeg',
