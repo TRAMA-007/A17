@@ -5636,14 +5636,14 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
 
-        if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
+        if (!q) return reply(`Please provide a query. Example: ${prefix + command} eternal Shrine maiden`);
 
         let bbuffer = await axios.get(`https://api.neoxr.eu/api/soundcloud-search?apikey=gateapix&q=${encodeURIComponent(q)}`)
 
         let bname = bbuffer.data.data[0].title
         let burl = bbuffer.data.data[0].url;
 
-       let abuffer = await axios.get(`https://api.neoxr.eu/api/soundcloud?apikey=gateapix&url=https://soundcloud.com/vember-vibe/https://api.neoxr.eu/api/soundcloud?apikey=gateapix&url=${burl}`) 
+       let abuffer = await axios.get(`https://api.neoxr.eu/api/soundcloud?apikey=gateapix&url=${burl}`) 
 
        let bimg = abuffer.data.data.imageURL;
 
