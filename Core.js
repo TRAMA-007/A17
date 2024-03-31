@@ -2545,37 +2545,40 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-   /*   case 'plana':
+      case 'plana':
       case 'ai':
       case 'gpt': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        const randoEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
+        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
         A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
 
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
 
-const CharacterAI = require("node_characterai");
-const characterAI = new CharacterAI();
+        try {
+          const apiUrl1 = `https://ultimetron.guruapi.tech/gpt4?prompt=${encodeURIComponent(q)}`;
 
-(async () => {
-  // Authenticating as a guest (use `.authenticateWithToken()` to use an account)
-  await characterAI.authenticateAsGuest();
+          const response1 = await fetch(apiUrl1);
+          const responseData1 = await response1.json();
 
-  // Place your character's id here
-  const characterId = "zISqldbxDP0sG2UfhCYcGNVtF7tksXNLUcuo5wTu5OM";
+          let message = "";
 
-  const chat = await characterAI.createOrContinueChat(characterId);
+          if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
+            message = responseData1.data.result.reply;
+          } else {
+            return reply("Sorry, I couldn't fetch a response from the API at the moment.");
+          }
 
-  // Send a message
-  const response = await chat.sendAndAwaitResponse("hello plana!", true);
+          const me = m.sender;
+          await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
 
-   A17.sendMessage(m.chat, { text: response.text}, { quoted: m });
-  
-  // Use `response.text` to use it as a string
-})();
-        break; */
+        } catch (error) {
+          console.error(error);
+          reply("An error occurred while fetching the response from the API.");
+        }
+      }
+        break;
 
 
       case 'dalle': case 'imgai': {
