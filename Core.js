@@ -2551,21 +2551,15 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
-        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
-
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
 
         try {
-          const apiUrl1 = `https://ultimetron.guruapi.tech/gpt4?prompt=${encodeURIComponent(q)}`;
-
-          const response1 = await fetch(apiUrl1);
-          const responseData1 = await response1.json();
-
+          const hoshino = await axios.get(`https://ultimetron.guruapi.tech/gpt4?prompt=${encodeURIComponent(q)}`);
+          const yume = hoshino.data.result;
           let message = "";
 
-          if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
-            message = responseData1.data.result.reply;
+          if (yume.success === true) {
+            message = yume.reply;
           } else {
             return reply("Sorry, I couldn't fetch a response from the API at the moment.");
           }
