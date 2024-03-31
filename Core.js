@@ -358,7 +358,10 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     
        if (!isCmd && !m.isGroup){
         const botreply = await axios.get(`https://api.betabotz.eu.org/api/search/c-ai?apikey=CsNocQqB&char=prinz eugen&prompt=${encodeURIComponent(budy)}`)
-        menggoda = `${botreply.data.message}`
+        const eugen = botreply.data.message
+        const text = await axios.get(`https://api.lolhuman.xyz/api/translate/auto/en?apikey=39d86e79464a60f1043a9418&text=&${eugen}`)
+         
+        menggoda = `${text.data.result.translated}`
         m.reply(menggoda)
         } 
 
