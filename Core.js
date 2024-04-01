@@ -1450,7 +1450,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        if (/webp/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
         let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(anu)}`) 
@@ -1468,7 +1467,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        if (/webp/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
         let serika = await getBuffer(`https://api.lolhuman.xyz/api/removebg?apikey=gatadios&img=${util.format(anu)}`) 
@@ -4644,10 +4642,11 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (!m.quoted) return reply('reply Image')
         if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
         reply(mess.waiting)
-        let { webp2mp4File } = require('./lib/uploader')
+        let { GraphOrg } = require("./lib/uploader");
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let webpToMp4 = await webp2mp4File(media)
-        await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
+        let webpToMp4 = await GraphOrg(media)
+        let kayoko = await axios.get(`https://api.neoxr.eu/api/webp2mp4?apikey=gateapix&url=${util.format(webpToMp4)}`);
+        await A17.sendMessage(m.chat, { video: { url: kayoko.data.data.url, caption: 'ْ' } }, { quoted: m })
         await fs.unlinkSync(media)
       }
         break;
