@@ -781,6 +781,7 @@ Typed *surrender* to surrender and admited defeat`
      if (isTawfik) return reply('تشسن')
       if (isAdam) return reply('تشسن')
       if (isIssam) return reply('تشسن')
+      if (isCreator) return reply('حرفيا انت') 
     }
 
 
@@ -4639,15 +4640,14 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
+        let { GraphOrg } = require("./lib/uploader");
         if (!m.quoted) return reply('reply Image')
         if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
-        reply(mess.waiting)
-        let { GraphOrg } = require("./lib/uploader");
+        
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let webpToMp4 = await GraphOrg(media)
         let kayoko = await axios.get(`https://api.neoxr.eu/api/webp2mp4?apikey=gateapix&url=${util.format(webpToMp4)}`);
         await A17.sendMessage(m.chat, { video: { url: kayoko.data.data.url, caption: 'ْ' } }, { quoted: m })
-        await fs.unlinkSync(media)
       }
         break;
 
