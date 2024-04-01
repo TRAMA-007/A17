@@ -8135,7 +8135,7 @@ const characterAI = new CharacterAI();
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
         const instgram = await axios.get(`https://api.lolhuman.xyz/api/twitter?apikey=GataDios&url=${encodeURIComponent(q)}`)
-        const ig = instgram.data.result;
+        const ig = instgram.data.result.media[0];
         await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
      }
         break;
