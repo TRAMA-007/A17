@@ -8608,6 +8608,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}facebook / fb
   ⌯     ${prefix}twitter
   ⌯     ${prefix}tiktok
+  ⌯     ${prefix}soundcloud
+  ⌯     ${prefix}Spotify
 
  
   〢━━━ 🎐 *Fun* 🎐 ━━━〢
@@ -8633,12 +8635,9 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   
   ⌯     ${prefix}anime
   ⌯     ${prefix}manga
-  ⌯     ${prefix}animewall
   ⌯     ${prefix}feed
   ⌯     ${prefix}foxgirl
   ⌯     ${prefix}waifu
-  ⌯     ${prefix}waifu2
-  ⌯     ${prefix}waifu3
   ⌯     ${prefix}loli
   ⌯     ${prefix}coffee
   ⌯     ${prefix}tickle
