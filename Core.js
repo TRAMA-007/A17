@@ -5260,116 +5260,8 @@ Then if I got any juice left I'm gonna get Sunday too`);
           reply("Link error")
         }
       }
-        break;
-
-
-      case 'igtv': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please provide link!`)
-        const { instagramdl, instagramdlv2, instagramdlv3 } = require('@bochilteam/scraper')
-        if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply('*Invalid link!*')
-        instagramdlv3(`${text}`).then(async (data) => {
-          var buf = await getBuffer(data[0].thumbnail)
-          A17.sendMessage(m.chat, { video: { url: data[0].url }, jpegThumbnail: buf, caption: `${BotName}` }, { quoted: m })
-        }).catch((err) => {
-          reply(mess.error)
-        })
-      }
-        break;
-
-
-      ///  
-      case 'twitter': case 'td': case 'twitterdl': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please provide link!`)
-        if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
-        xfarrapi.Twitter(`${text}`).then(async (data) => {
-          let txt = `「 _Twitter Downloader_ 」\n\n`
-          txt += `*Title :* ${data.title}\n`
-          txt += `*Quality :* ${data.medias[1].quality}\n`
-          txt += `*Type :* ${data.medias[1].extension}\n`
-          txt += `*Size :* ${data.medias[1].formattedSize}\n`
-          txt += `*Duration :* ${data.medias.length}\n`
-          txt += `*URL :* ${data.url}\n\n`
-          txt += `*${BotName}*`
-          buf = await getBuffer(data.thumbnail)
-          A17.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail: buf, caption: `${txt}` }, { quoted: m })
-          for (let i of data.medias) {
-            A17.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail: buf, caption: `*${text}*` }, { quoted: m })
-          }
-        }).catch((err) => {
-          reply(mess.error)
-        })
-      }
-        break;
-
-
-      case 'twittermp3': case 'twitteraudio': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please provide link!`)
-        if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
-        xfarrapi.Twitter(`${text}`).then(async (data) => {
-          A17.sendMessage(m.chat, { audio: { url: data.medias[1].url }, mimetype: 'audio/mp4' }, { quoted: m })
-        }).catch((err) => {
-          reply(mess.reply)
-        })
-      }
-        break;
-
-
-      case 'twitterxx': case 'twdlxx': case 'twmp4xx': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!args[0]) return reply(`Example :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
-        try {
-          let lotwit = await aiovideodl(args[0])
-          teks = `「 _Twitter Downloader_ 」
-Caption : ${lotwit.title ? lotwit.title : "undefined"}
-Type : ${lotwit.medias[1].extension}
-Size : ${lotwit.medias[1].formattedSize}
-Link : ${lotwit.medias[1].url}
-_Please choose the video quality_`
-          let buttons = [
-            { buttonId: `${prefix}twitter ${lotwit.medias[0].url}`, buttonText: { displayText: `Quality ${lotwit.medias[0].quality}` }, type: 1 },
-            { buttonId: `${prefix}twitter ${lotwit.medias[2].url}`, buttonText: { displayText: `Quality ${lotwit.medias[2].quality}` }, type: 1 }
-          ]
-          let buttonMessage = {
-            video: { url: lotwit.medias[1].url },
-            caption: teks,
-            footer: `${pushname}`,
-            buttons: buttons,
-            headerType: 4,
-
-          }
-          A17.sendMessage(from, buttonMessage, { quoted: m })
-        } catch {
-          reply("Link Error!")
-        }
-      }
-        break;
-
-
-      case 'twddlxx': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let buttons = [
-          { buttonId: `${prefix}menu`, buttonText: { displayText: '✨Menu✨' }, type: 1 }
-        ]
-        let buttonMessage = {
-          video: { url: args[0] },
-          caption: "Here it is...",
-          footer: `${pushname}`,
-          buttons: buttons,
-          headerType: 4,
-
-        }
-        A17.sendMessage(from, buttonMessage, { quoted: m })
-      }
-        break;
-
+        break; 
+        
 
       ///
       case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
@@ -8234,6 +8126,17 @@ const characterAI = new CharacterAI();
         reply(mess.waiting);
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { video: { url: ig.result} }, { quoted: m })
+     }
+        break;
+
+
+        case 'twitter': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/twitter?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        const ig = instgram.data.result;
+        await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
      }
         break;
 
