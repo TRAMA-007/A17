@@ -358,14 +358,14 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
        if (!isCmd && !islucas && !isTawfik && !isAdam && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=WN8Kmu9Zh3jHMAIG3J3xaZa8GXZZwHOeJ9-1LQpoEdA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=Ik_8BMNdm6ZNk7MVpW-TYbfETTKJk2SbTe7bbaUXdmo&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         }
 
 
      if (!isCmd && islucas && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=Dvm_7p9ea1uPKtENq18-tjJqHpFkdmP-nFreeGx00s0&sessionId=n21qBM984TPZWyfykVCLRWttR0wr14dgXxYy2GD2juM&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=Dvm_7p9ea1uPKtENq18-tjJqHpFkdmP-nFreeGx00s0&sessionId=Vc8LYfrj8siOpn8y42EoTb8PO6FtWhmUnuJReoiKjyI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
      }
@@ -379,7 +379,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     if (!isCmd && isAdam && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=JmfEuTkX9oGCDIpbvLUWocnVrm8-mtXJttnumQizXoI&sessionId=H_Q1TozNeuPrTBhZikDXL4nutiZXL71JUjtzBCr33DE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=JmfEuTkX9oGCDIpbvLUWocnVrm8-mtXJttnumQizXoI&sessionId=wKDKr86xnHcIB8igZr7Jip6gUZYyStNHpOvwd449FG4&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
