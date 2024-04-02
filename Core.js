@@ -1127,7 +1127,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('سولز')) {
-    reply (`يخسيييييي في فان سولز هنا🤢🤮`);
+    reply (`يخسييييييي في فان سولز هنا🤢🤮`);
     }
 
 
