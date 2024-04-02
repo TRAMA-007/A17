@@ -26,6 +26,7 @@ global.plann = ["بلانا"];
 global.Owner = ["249904077717"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.tawfik = ["212607497765"];
 global.adam = ["962796904879"];
+global.lucas = ["249901496804"];
 global.issam = ["201098744043"];
 global.OwnerNumber = ["249904077717"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.ownertag = ["249904077717"];
