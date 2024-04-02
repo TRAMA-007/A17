@@ -372,7 +372,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     if (!isCmd && isTawfik && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=XX3c9hBaUxR2qsF9VfbhojEsdrtYCSWZj4ZiuWeXaeI&sessionId=_gjGpWmn77oAeBqiqleZ6bTJh_dsxHCjOa6Nmo7f8m8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=XX3c9hBaUxR2qsF9VfbhojEsdrtYCSWZj4ZiuWeXaeI&sessionId=f9yOsvDMDFV7vI7Rea434AzGrDmfvxI7GQu9CT0UnLI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
