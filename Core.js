@@ -357,7 +357,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
     
-       if (!isCmd && !islucas && !isTawfik && !m.isGroup){
+       if (!isCmd && !islucas && !isTawfik && !isAdam && !m.isGroup){
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=WN8Kmu9Zh3jHMAIG3J3xaZa8GXZZwHOeJ9-1LQpoEdA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
@@ -373,6 +373,13 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     if (!isCmd && isTawfik && !m.isGroup){
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=XX3c9hBaUxR2qsF9VfbhojEsdrtYCSWZj4ZiuWeXaeI&sessionId=f9yOsvDMDFV7vI7Rea434AzGrDmfvxI7GQu9CT0UnLI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    }
+
+
+    if (!isCmd && isAdam && !m.isGroup){
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=JmfEuTkX9oGCDIpbvLUWocnVrm8-mtXJttnumQizXoI&sessionId=H_Q1TozNeuPrTBhZikDXL4nutiZXL71JUjtzBCr33DE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
