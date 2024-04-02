@@ -206,6 +206,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isAli = [botNumber, ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const islucas = [botNumber, ...global.lucas].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isAwad = [botNumber, ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
@@ -358,7 +359,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
     
-       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !m.isGroup){
+       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !m.isGroup){
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=Ik_8BMNdm6ZNk7MVpW-TYbfETTKJk2SbTe7bbaUXdmo&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
@@ -398,6 +399,13 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
           }
+
+
+    if (!isCmd && isAwad && !m.isGroup){
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=XpiEXfJDtsAHPfOkNJ8dzn9y3dcK9rvwojBx5-Btves&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    }
 
 
     
