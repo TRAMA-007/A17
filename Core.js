@@ -5500,7 +5500,7 @@ _Click the button below to download_`
       case 'music': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!isCreator) return reply(`this command is unavailable for you`)
+        if (!isCreator && !isAdam && !IsTawfik) return reply(`this command is unavailable for you`)
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
 
         const YT = require('./lib/ytdl-core');
