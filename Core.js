@@ -205,6 +205,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [botNumber, ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isEgo = [botNumber, ...global.ego].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const islucas = [botNumber, ...global.lucas].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAwad = [botNumber, ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -359,7 +360,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
     
-       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !m.isGroup){
+       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !m.isGroup){
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=ik8Lhp_kTt-mvYy1eXnwpa4kGgGeW4OIQl12UBgrnHE&sessionId=zN_hzkoqS4HDTSgHg73oxl-Hc-IW7u2NffX4aZvaTLA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
@@ -403,6 +404,13 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     if (!isCmd && isAwad && !m.isGroup){
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=WN8Kmu9Zh3jHMAIG3J3xaZa8GXZZwHOeJ9-1LQpoEdA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    }
+
+
+    if (!isCmd && isEgo && !m.isGroup){
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=scsnOOq2jDNHqRpA9Inuckrb5HHqyQZgtxPFQyPJ-eQ&sessionId=uJiiBbwGUs4dDLYf768T2qvm83pz8NeKVS99R-efWPI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
