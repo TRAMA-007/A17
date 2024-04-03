@@ -1511,6 +1511,22 @@ Then if I got any juice left I'm gonna get Sunday too`);
         let serika = await getBuffer(`https://api.lolhuman.xyz/api/removebg?apikey=gatadios&img=${util.format(anu)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
+        break;
+
+
+        case 'toanime':{
+
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
+
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await GraphOrg(media);
+        let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=plana&url=${util.format(anu)}`) 
+        await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
+      }
         break; 
 
 
@@ -8475,6 +8491,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
 
   ⌯    *if you want to add me to your group.. Join the support group by typing ${prefix}support or dm my owner by typing ${prefix}owner*
+  ⌯    *i use character.ai for auto reply..plana is the default character..if you want a different character you can contact my owner*
 
 
   ⌯    *Time* : ${kaitime}
@@ -8490,46 +8507,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯    *Bot runtime :* ${runtime(process.uptime())} 
   ⌯    *Platform :* your mom
 
-
-  〢━━━ 〄 Core 〄 ━━━〢
-
-
-  ⌯     ${prefix}repo
-  ⌯     ${prefix}script
-  ⌯     ${prefix}speak
-  ⌯     ${prefix}support
-  ⌯     ${prefix}stalk
-  ⌯     ${prefix}setprefix
-  ⌯     ${prefix}auto-status
-  ⌯     ${prefix}auto-typing
-  ⌯     ${prefix}auto-recoding
-
-
-  〢━━━ ⌬ Owner Only ⌬ ━━━〢
-
-
-  ⌯     ${prefix}join
-  ⌯     ${prefix}self
-  ⌯     ${prefix}public
-  ⌯     ${prefix}restart
-  ⌯     ${prefix}sleep
-  ⌯     ${prefix}setbotpp
-  ⌯     ${prefix}post
-  ⌯     ${prefix}listonline
-  ⌯     ${prefix}listgc
-  ⌯     ${prefix}listpc
-  ⌯     ${prefix}getcase
-  ⌯     ${prefix}bangroup
-  ⌯     ${prefix}broadcast
-  ⌯     ${prefix}bye
-  ⌯     ${prefix}block
-  ⌯     ${prefix}unblock
-  ⌯     ${prefix}ban add
-  ⌯     ${prefix}ban del
-
  
   〢━━ ❅ Group Moderation ❅ ━━〢
-
 
   ⌯     ${prefix}add
   ⌯     ${prefix}invite
@@ -8648,6 +8627,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}tiktok
   ⌯     ${prefix}soundcloud
   ⌯     ${prefix}Spotify
+  ⌯     ${prefix}apk
 
  
   〢━━━ 🎐 *Fun* 🎐 ━━━〢
