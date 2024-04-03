@@ -31,6 +31,8 @@ global.sora = ["249117300794"];
 global.adam = ["962796904879"];
 global.lucas = ["249901496804"];
 global.issam = ["201098744043"];
+global.issam2 = ["12394885980"];
+global.issam3 = ["201275373558"];
 global.OwnerNumber = ["249904077717"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.ownertag = ["249904077717"];
 global.OwnerName = "akane710";
