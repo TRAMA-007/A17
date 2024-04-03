@@ -8196,7 +8196,7 @@ const characterAI = new CharacterAI();
         break;
 
 
-        case 'imagine': {
+      /*  case 'imagine': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a prompt`) 
@@ -8204,7 +8204,7 @@ const characterAI = new CharacterAI();
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { image: { url: ig.url} }, { quoted: m })
      }
-        break;
+        break; */
 
 
         case 'tiktok': {
