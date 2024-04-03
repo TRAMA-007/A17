@@ -210,6 +210,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isAwad = [botNumber, ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isIssam2 = [botNumber, ...global.issam2].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isissam3 = [botNumber, ...global.issam3].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
     const from = m.chat
@@ -8204,15 +8206,17 @@ const characterAI = new CharacterAI();
         break;
 
 
-      /*  case 'imagine': {
-        if (isBan) return reply(mess.banned);
+        case 'imagine': {
+        if (isIssam) return reply('نو');
+        if (isIssam2) return reply('ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني');
+        if (isIssam3) return reply('لو بعت لي ب مليون رقم برضو نو');
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a prompt`) 
         const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=plana&prompt=${encodeURIComponent(q)}`)
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { image: { url: ig.url} }, { quoted: m })
      }
-        break; */
+        break; 
 
 
         case 'tiktok': {
