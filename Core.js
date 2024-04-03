@@ -5850,6 +5850,7 @@ break;
         case 'stickers': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
+    if (m.isGroup) return reply('تعال خاص يا عسل');
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}stickers frieren");
 
@@ -8195,6 +8196,17 @@ const characterAI = new CharacterAI();
         break;
 
 
+        case 'imagine': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a prompt`) 
+        const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=plana&prompt=${encodeURIComponent(q)}`)
+        const ig = instgram.data;
+        await A17.sendMessage(m.chat, { image: { url: ig.url} }, { quoted: m })
+     }
+        break;
+
+
         case 'tiktok': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -8574,6 +8586,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
  
 
   ⌯     ${prefix}sticker
+  ⌯     ${prefix}imagine
+  ⌯     ${prefix}toanime
   ⌯     ${prefix}toimg
   ⌯     ${prefix}tovideo
   ⌯     ${prefix}togif
