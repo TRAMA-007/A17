@@ -362,7 +362,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
     
-       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isAlaa && !m.isGroup){
+       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !m.isGroup){
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=zISqldbxDP0sG2UfhCYcGNVtF7tksXNLUcuo5wTu5OM&sessionId=nSI1d0hoNtP7HiYoisqQ5QAIaApfd3ctO97ltbbsS0U&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
