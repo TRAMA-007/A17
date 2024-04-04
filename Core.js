@@ -4798,7 +4798,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           //
           let anu = await GraphOrg(media5);
           m.reply(`*Generated Image URL:* \n\n${util.format(anu)}\n`);
-        } else if (/video/.test(mime)) {
+        } else if (/webp/.test(mime)) {
           //
           try {
             let anu = await GraphOrg(media5);
