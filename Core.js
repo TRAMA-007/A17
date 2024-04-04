@@ -3431,33 +3431,34 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-case 'status':
+/*case 'status':
 case 'post': {
-    if (!isCreator) return reply(mess.owner);
-    if (!m.quoted) return reply('Send/reply Image With Caption ${prefix}status');
-    if (/video/.test(mime)) {
-        if ((quoted.msg || quoted).seconds > 30) return reply('Maximum 30 seconds video is allowed!');
-    }
-
-    const messageType = Object.keys(m.message)[0];
-
-    if (messageType === 'imageMessage') {
-        const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage });
-        const fileName = 'image.' + media.mimetype.split('/')[1];
-        await writeFile(./${fileName}, media.data);
-        await A17.sendMessage(botNumber, 'status@broadcast', { url: ./${fileName}, media });
-        reply(*✨ ${pushname}...!! Posted On My Status ✨*);
-    } else if (messageType === 'videoMessage') {
-        const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage });
-        const fileName = 'video.' + media.mimetype.split('/')[1];
-        await writeFile(./${fileName}, media.data);
-        await A17.sendMessage(botNumber, 'status@broadcast', { url: ./${fileName}, media });
-        reply(*✨ ${pushname}...!! Posted On My Status ✨*);
-    } else {
-        reply('An error occurred');
-    }
+  if (!isCreator) return reply("You don't have permission to do that")
+  if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)
+  if (/video/.test(mime)) {
+    if ((quoted.msg || quoted).seconds > 30) return reply('Maximum 30 seconds video is allowed!')
+  }
+  const messageType = Object.keys(m.message)[0]
+  if (messageType === 'imageMessage') {
+    // Replace 'downloadMediaMessage' and 'writeFile' with appropriate functions
+    // Replace 'A17' and 'botNumber' with the actual variables
+    // Replace './image.jpeg' with the correct file path
+    // Replace 'reply' with the function to send a reply
+    // Replace 'pushname' with the user's name
+    // Replace 'fs.unlinkSync(media)' with the appropriate error handling
+    // Make sure to import necessary modules or functions
+    // Handle errors appropriately
+  }
+  else if (messageType === 'videoMessage') {
+    // Similar to above, handle video message posting
+  }
+  else {
+    // Handle other message types
+  }
+  break;
 }
-break;
+*/
+
 
 
 
