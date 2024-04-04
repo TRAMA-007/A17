@@ -794,11 +794,11 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('يعني ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
+  /*  if (smallinput.includes('يعني ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
     let media = await getBuffer("https://graph.org/file/1ffa4ac8f20ecb203b96d.mp4");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
-    }
+    } */
 
 
     if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
