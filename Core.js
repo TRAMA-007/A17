@@ -8348,7 +8348,7 @@ const characterAI = new CharacterAI();
         await A17.sendMessage(from, {
           document: { url: fk.download + 'plana'},
           filename: + fk.title.english + '.pdf', 
-          mimetype: application/pdf,
+          mimetype: 'application/pdf',
           quoted: m,
         });
 
