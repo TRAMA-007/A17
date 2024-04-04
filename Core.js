@@ -8318,6 +8318,46 @@ const characterAI = new CharacterAI();
         break; 
 
 
+        case 'nhentai': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=plana&code=${q}`)
+        const fk = apk.data;
+        await A17.sendMessage(
+          from,
+          {
+            image: { url: fk.cover}, // Include the thumbnail image in the response
+            caption: `\n*Downloading:* *${fk.title.english}*
+            
+  ⏳ *language :* ${fk.language}
+
+  📈 *characters :* ${fk.characters}
+
+  🎐 *parodies :* ${fk.parodies}
+
+  🏮 *tags:* ${fk.tags}
+
+  🔗 *artist :* ${fk.artists}\n`,
+
+          },
+          { quoted: m }
+        );
+
+        // Send the audio file with the proper 'type' property set to 'audio'
+        await A17.sendMessage(from, {
+          document: { url: fk.download + 'plana'},
+          filename: + fk.title.english + '.pdf', 
+          mimetype: application/pdf,
+          quoted: m,
+        });
+
+        // Rest of the code remains unchanged.
+        // ...
+      }
+        break; 
+
+
         case 'yt': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -8330,7 +8370,7 @@ const characterAI = new CharacterAI();
         await A17.sendMessage(m.chat, { video: { url: yt.link}, caption: ytxt }, { quoted: m })
      }
         break;
-
+        
 
         case 'planaarona119': {
         if (isBan) return reply(mess.banned);
