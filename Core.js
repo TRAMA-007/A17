@@ -1533,8 +1533,14 @@ Then if I got any juice left I'm gonna get Sunday too`);
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
         let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=plana&url=${util.format(anu)}`) 
+        let shiroko = await axios.get(`https://skizo.tech/api/toanime?apikey=plana&url=${util.format(anu)} `)
+        const sensei = shiroko.data.status;
+        if (sensei === 400) {
+            return reply("oops..daily limit reached..please wait for tomorrow reset");
+          } else {      
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
+         }
         break; 
 
 
