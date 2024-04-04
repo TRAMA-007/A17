@@ -3431,31 +3431,29 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-      case 'status': case 'post': {
-        if (!isCreator) return reply(mess.owner)
-        if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)
-        if (/video/.test(mime)) {
-          if ((quoted.msg || quoted).seconds > 30) return reply('Maximum 30 seconds video is allowed!')
-        }
-        const messageType = Object.keys(m.message)[0]
-        if (messageType === 'imageMessage') {
-          const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage })
-          await writeFile('./image.jpeg', media)
-          await A17.sendMessage(botNumber, 'status@broadcast', { url: './image.jpeg', media }).catch((err) => fs.unlinkSync(media))
-          reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
-        }
-        else if (messageType === 'videoMessage') {
-          const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage })
-          await writeFile('./video.mp4', media)
-          await A17.sendMessage(botNumber, 'status@broadcast', { url: 'video.mp4', media }).catch((err) => fs.unlinkSync(media))
-          reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
-        }
-        else {
-          reply(`an error occurred`)
-        }
+case 'status':
+case 'post':
+    if (!isCreator) return reply(mess.owner);
+    if (!quoted) return reply('Send/reply Image With Caption ${prefix}status');
+    if (/video/.test(mime)) {
+        if ((quoted.msg || quoted).seconds > 30) return reply('Maximum 30 seconds video is allowed!');
+    }
+    const messageType = Object.keys(m.message)[0];
+    if (messageType === 'imageMessage') {
+        const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage });
+        await writeFile('./image.jpeg', media);
+        await A17.sendImageWithUrl(botNumber, 'status@broadcast', { url: './image.jpeg', media }).catch((err) => fs.unlinkSync(media));
+        reply("✨ ${pushname}...!! Posted On My Status ✨");
+    } else if (messageType === 'videoMessage') {
+        const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage });
+        await writeFile('./video.mp4', media);
+        await A17.sendImageWithUrl(botNumber, 'status@broadcast', { url: './video.mp4', media }).catch((err) => fs.unlinkSync(media));
+        reply("✨ ${pushname}...!! Posted On My Status ✨");
+    } else {
+        reply("An error occurred");
+    }
+break;
 
-      }
-        break;
 
 
 
@@ -6164,7 +6162,7 @@ break;
         A17.sendMessage(from, { react: { text: "🤧", key: m.key } })
 
         if (!text) return reply(`Tag Someone, Example : ${prefix + command} @Kai`)
-        const A17tttt = ['قنيط', 'عب', 'خول', 'معرص', 'كلجة', 'عب قاتشا', 'قافل الشغل', 'فاتح الشغل', 'عب كراتين صينية', 'بوت', 'نجاو ساي , مصري', 'نيرد']
+        const A17tttt = ['قنيط', 'عب', 'خول', 'معرص', 'كلجة', 'عب قاتشا', 'قافل الشغل', 'فاتح الشغل', 'عب كراتين صينية', 'بوت', 'نجاو ساي' , 'مصري', 'نيرد']
         const taky = A17tttt[Math.floor(Math.random() * A17tttt.length)]
         A17.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
         break;
@@ -6174,7 +6172,7 @@ break;
       case 'dare':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🌝", key: m.key } })
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
 
         const dare = [
           "eat 2 tablespoons of salt",
@@ -6279,7 +6277,7 @@ break;
           "Have you ever stolen money from your father or mom? The reason?",
           "What makes you happy when you're sad?",
           "Ever had a one sided love? if so who? how does it feel bro?",
-          "been someone's mistress?",
+          "حار هو ولا حار فراقو?",
           "the most feared thing",
           "Who is the most influential person in your life?",
           "what proud thing did you get this year",
@@ -7371,6 +7369,7 @@ break;
         nye = `http://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${command}`
         A17.sendMessage(from, { image: { url: nye }, caption: "Master..." }, { quoted: m })
         break;
+        
 
       case 'mediafire': case 'mediafiredl': {
         if (isBan) return reply(mess.banned);
