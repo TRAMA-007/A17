@@ -211,7 +211,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssamm = [botNumber, ...global.issamm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-    const isissammm = [botNumber, ...global.issammm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isIssammm = [botNumber, ...global.issammm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
     const from = m.chat
@@ -8207,11 +8207,10 @@ const characterAI = new CharacterAI();
 
 
         case 'imagine': {
-        if (isIssam) return reply(`نو`);
-        if (isIssamm) return reply(`ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني`);
-        if (isIssammm) return reply(`لول فاكرني ناسية الرقم دا`);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a prompt`) 
+        if (isIssam) return reply(`نو`)
+        if (isIssamm) return reply(`ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني`)
+        if (isIssammm) return reply(`لول فاكرني ناسية الرقم دا`)        
+        if (!text) return reply(`Please provide a prompt`) 
         const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=plana&prompt=${encodeURIComponent(q)}`)
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { image: { url: ig.url} }, { quoted: m })
