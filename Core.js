@@ -3432,27 +3432,33 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
 case 'status':
-case 'post':
+case 'post': {
     if (!isCreator) return reply(mess.owner);
-    if (!quoted) return reply('Send/reply Image With Caption ${prefix}status');
+    if (!m.quoted) return reply('Send/reply Image With Caption ${prefix}status');
     if (/video/.test(mime)) {
         if ((quoted.msg || quoted).seconds > 30) return reply('Maximum 30 seconds video is allowed!');
     }
+
     const messageType = Object.keys(m.message)[0];
+
     if (messageType === 'imageMessage') {
         const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage });
-        await writeFile('./image.jpeg', media);
-        await A17.sendImageWithUrl(botNumber, 'status@broadcast', { url: './image.jpeg', media }).catch((err) => fs.unlinkSync(media));
-        reply("✨ ${pushname}...!! Posted On My Status ✨");
+        const fileName = 'image.' + media.mimetype.split('/')[1];
+        await writeFile(./${fileName}, media.data);
+        await A17.sendMessage(botNumber, 'status@broadcast', { url: ./${fileName}, media });
+        reply(*✨ ${pushname}...!! Posted On My Status ✨*);
     } else if (messageType === 'videoMessage') {
         const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage });
-        await writeFile('./video.mp4', media);
-        await A17.sendImageWithUrl(botNumber, 'status@broadcast', { url: './video.mp4', media }).catch((err) => fs.unlinkSync(media));
-        reply("✨ ${pushname}...!! Posted On My Status ✨");
+        const fileName = 'video.' + media.mimetype.split('/')[1];
+        await writeFile(./${fileName}, media.data);
+        await A17.sendMessage(botNumber, 'status@broadcast', { url: ./${fileName}, media });
+        reply(*✨ ${pushname}...!! Posted On My Status ✨*);
     } else {
-        reply("An error occurred");
+        reply('An error occurred');
     }
+}
 break;
+
 
 
 
