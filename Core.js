@@ -8321,7 +8321,8 @@ const characterAI = new CharacterAI();
         case 'nhentai': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a link`) 
+        if (!isCreator) return reply(`💀`) 
+        if (!text) return reply(`Please proide a code`) 
         const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=plana&code=${q}`)
         const fk = apk.data;
         await A17.sendMessage(
@@ -8330,17 +8331,24 @@ const characterAI = new CharacterAI();
             image: { url: fk.cover}, // Include the thumbnail image in the response
             caption: `\n*Downloading:* *${fk.title.english}*
             
-  ⏳ *language :* ${fk.language}
+   *language : ${fk.language}*
 
-  📈 *characters :* ${fk.characters}
+   *characters : ${fk.characters}*
 
-  🎐 *parodies :* ${fk.parodies}
+   *parodies : ${fk.parodies}*
 
-  🏮 *tags:* ${fk.tags}
+   *tags: ${fk.tags}*
 
-  🔗 *artist :* ${fk.artists}\n`,
+   *groups : ${fk.groups}*
 
-          },
+   *categories : ${fk.categories}*
+
+   *uploaded: ${fk.uploaded}*
+
+   *artists : ${fk.artists}*
+
+   *id: ${fk.id}*\n`,
+    },
           { quoted: m }
         );
 
