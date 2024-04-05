@@ -8380,13 +8380,15 @@ const characterAI = new CharacterAI();
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const youtube = await axios.get(`https://api.lolhuman.xyz/api/ytvideo2?apikey=GataDios&url=${encodeURIComponent(q)}`)
-        const yt = youtube.data.result;
+        const youtube = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}`)
+        const yt = youtube.data;
         let ytxt = ` 
         *${yt.title}* `;
-        await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
-        await A17.sendMessage(m.chat, { video: { url: yt.link}, caption: ytxt }, { quoted: m })
-     }
+       await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: { url: yt.video.1080p.url}, caption: '1080p' }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: { url: yt.video.720p.url}, caption: '720p' }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url}, caption: '480p' }, { quoted: m })
+      }
         break;
         
 
