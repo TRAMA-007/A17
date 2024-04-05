@@ -601,7 +601,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     // function pickRandom(list) {
     // return list[Math.floor(list.length * Math.random())]
-    // }
+    // 
 
 
 
