@@ -8221,7 +8221,7 @@ const characterAI = new CharacterAI();
         if (isIssamm) return reply(`ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني`)
         if (isIssammm) return reply(`لول فاكرني ناسية الرقم دا`)        
         if (!text) return reply(`Please provide a prompt`) 
-        const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=plana&prompt=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=arona&prompt=${encodeURIComponent(q)}`)
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { image: { url: ig.url} }, { quoted: m })
      }
@@ -8333,7 +8333,7 @@ const characterAI = new CharacterAI();
         if (isBanChat) return reply(mess.bangc);
         if (!isCreator) return reply(`💀`) 
         if (!text) return reply(`Please proide a code`) 
-        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=plana&code=${q}`)
+        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=arona&code=${q}`)
         const fk = apk.data;
         await A17.sendMessage(
           from,
