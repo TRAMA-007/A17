@@ -8383,14 +8383,8 @@ const characterAI = new CharacterAI();
         const youtube = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}`)
         const yt = youtube.data;
         let ytxt = ` 
-        *${yt.title}* `;
-        let a = `1080p`;
-        let b = `720p`;
-        let c = `480p`;
-       await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.1080p.url}, caption: a }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.720p.url}, caption: b }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url}, caption: c }, { quoted: m })
+        *${yt.title}* `;  
+       await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url}, caption: ytxt }, { quoted: m })
       }
         break;
         
