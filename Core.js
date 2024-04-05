@@ -6017,7 +6017,6 @@ break;
 
 
       case 'sgif': case 'sticker': case 's': {
-      case 'sgif': case 'sticker': case 's': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
@@ -6028,7 +6027,7 @@ break;
         } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, crop: true })
           await fs.unlinkSync(encmedia)
         } else {
           reply(`رسل الصورة العايز تحولها لستيكر يا غبي`)
