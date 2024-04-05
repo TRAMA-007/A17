@@ -8376,17 +8376,19 @@ const characterAI = new CharacterAI();
         break; 
 
 
-     /*   case 'yt': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a link`) 
-        const youtube = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}`)
-        const yt = youtube.data.video.480p;
-        let ytxt = ` 
-        *${yt.title}* `;  
-       await A17.sendMessage(m.chat, { video: { url: yt.url}, caption: ytxt }, { quoted: m })
-      }
-        break; */
+    case 'yt': { 
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply('Please provide a link');
+    
+    const youtube = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}`);
+    const yt = youtube.data.video['480p'];
+    let ytxt = `*${yt.title}*`;
+
+    await A17.sendMessage(m.chat, { video: { url: yt.url }, caption: ytxt }, { quoted: m });
+    }
+      break;
+ 
         
 
         case 'planaarona119': {
