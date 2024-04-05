@@ -8376,7 +8376,7 @@ const characterAI = new CharacterAI();
         break; 
 
 
-        case 'yt': {
+     /*   case 'yt': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
@@ -8386,7 +8386,7 @@ const characterAI = new CharacterAI();
         *${yt.title}* `;  
        await A17.sendMessage(m.chat, { video: { url: yt.url}, caption: ytxt }, { quoted: m })
       }
-        break;
+        break; */
         
 
         case 'planaarona119': {
