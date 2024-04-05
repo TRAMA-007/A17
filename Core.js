@@ -8381,10 +8381,10 @@ const characterAI = new CharacterAI();
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
         const youtube = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}`)
-        const yt = youtube.data;
+        const yt = youtube.data.video;
         let ytxt = ` 
         *${yt.title}* `;  
-       await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url}, caption: ytxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: { url: yt.480p.url}, caption: ytxt }, { quoted: m })
       }
         break;
         
