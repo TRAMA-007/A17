@@ -8381,11 +8381,11 @@ const characterAI = new CharacterAI();
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a link');
     
-    const youtube = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}`);
-    const yt = youtube.data.video['480p'];
+    const youtube = await axios.get("https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}");
+    const yt = youtube.data;
     let ytxt = `*${yt.title}*`;
 
-    await A17.sendMessage(m.chat, { video: { url: yt.url }, caption: ytxt }, { quoted: m });
+    await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url }, caption: ytxt }, { quoted: m });
     }
       break;
  
