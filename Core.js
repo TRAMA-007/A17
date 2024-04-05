@@ -8385,8 +8385,6 @@ const characterAI = new CharacterAI();
         let ytxt = ` 
         *${yt.title}* `;
        await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.1080p.url}, caption: '1080p' }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.720p.url}, caption: '720p' }, { quoted: m })
        await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url}, caption: '480p' }, { quoted: m })
       }
         break;
