@@ -8384,10 +8384,13 @@ const characterAI = new CharacterAI();
         const yt = youtube.data;
         let ytxt = ` 
         *${yt.title}* `;
+        let a = `1080p`;
+        let b = `720p`;
+        let c = `480p`;
        await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.1080p.url}, caption: `1080p` }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.720p.url}, caption: `720p` }, { quoted: m })
-       await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url}, caption: `480p` }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: { url: yt.video.1080p.url}, caption: a }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: { url: yt.video.720p.url}, caption: b }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: { url: yt.video.480p.url}, caption: c }, { quoted: m })
       }
         break;
         
