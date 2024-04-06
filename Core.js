@@ -364,7 +364,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
        if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=zISqldbxDP0sG2UfhCYcGNVtF7tksXNLUcuo5wTu5OM&sessionId=mI2RfTnmbuKCAn8l_kQLv7Ao92wjvaunOzCylhM14hE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=nXnFdKMRwYczP-MHy3d7SECkeE5hZnzfAf2nXmTP6W8&sessionId=PN2So34K_DtzCvmu0TlC6zPW_vCxbtDwvrsts3ee8ME&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         }
@@ -392,7 +392,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     if (!isCmd && isCreator && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=vzMd6oFrL1MAWeTp6enZXNaUT4MUBzx21YwuE3m8pGE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=nXnFdKMRwYczP-MHy3d7SECkeE5hZnzfAf2nXmTP6W8&sessionId=aP9eOGOnH1tfhIhUW_B2myD6oKid_Q9koZWZss&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
