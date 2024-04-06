@@ -8387,11 +8387,10 @@ const characterAI = new CharacterAI();
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a link');
     
-    const youtube = await axios.get(`https://api.lolhuman.xyz/api/ytvideo2?apikey=GataDios8&url=${encodeURIComponent(q)}`);
+    const youtube = await axios.get(`https://aemt.me/download/ytdl?url=${encodeURIComponent(q)}`);
     const yt = youtube.data.result;
-    let ytxt = `*${yt.title}*`;
 
-    await A17.sendMessage(m.chat, { video: { url: yt.link}, caption: ytxt }, { quoted: m });
+    await A17.sendMessage(m.chat, { video: { url: yt['mp4']} }, { quoted: m });
     }
       break;
  
