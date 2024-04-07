@@ -4391,7 +4391,7 @@ case 'post': {
         if (isNaN(text)) return reply(`Enter only the numbers plus your country code without spaces`)
         let group = m.chat
         let link = 'https://chat.whatsapp.com/' + await A17.groupInviteCode(group)
-        await A17.sendMessage(text + '@s.whatsapp.net', { text: ` *GROUP INVITATION*\n\nA user invites you to join this group \n\n${link}`, mentions: [m.sender] })
+        await A17.sendMessage(text + '@s.whatsapp.net', { text: ` *اصير لك مامي بس لا تزعل🥰..يلا ادخل \n\n${link}*`, mentions: [m.sender] })
         reply(` An invite link is sent to the user`)
       }
         break;
