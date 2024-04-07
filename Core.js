@@ -208,6 +208,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isHamid = [botNumber, ...global.hamid].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isEgo = [botNumber, ...global.ego].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const islucas = [botNumber, ...global.lucas].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isAsir = [botNumber, ...global.asir].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAwad = [botNumber, ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -943,7 +944,8 @@ Typed *surrender* to surrender and admited defeat`
     
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
-    let { chat, fromMe, id } = m;
+      if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
+       let { chat, fromMe, id } = m;
     
     const key = {
         remoteJid: chat,
@@ -957,6 +959,7 @@ Typed *surrender* to surrender and admited defeat`
   
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
+    if (isAsir) return reply('هوي يا عراقي') 
     let { chat, fromMe, id } = m;
     
     const key = {
