@@ -8305,6 +8305,36 @@ const characterAI = new CharacterAI();
         break; 
 
 
+        case 'mkv': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const apk = await axios.get(`https://api.caliph.biz.id/api/gdrive?apikey=caliphkey&url=${encodeURIComponent(q)}`)
+        const fk = apk.data.result;
+        await A17.sendMessage(
+          from,
+         { 
+           text: `\n*Downloading:* *${fk.fileName}*
+            
+   *size :* ${fk.fileSize}`,
+  },
+          { quoted: m }
+        );
+
+        // Send the audio file with the proper 'type' property set to 'audio'
+        await A17.sendMessage(from, {
+          document: { url: fk.downloadUrl},
+          filename: fk.fileName,
+          mimetype: 'video/x-matroska',
+          quoted: m,
+        });
+
+        // Rest of the code remains unchanged.
+        // ...
+      }
+        break;
+
+
         case 'drive': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
