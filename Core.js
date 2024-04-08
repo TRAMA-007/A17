@@ -5987,7 +5987,7 @@ break;
         const swn = args.join(" ")
         const pcknm = swn.split("|")[0];
         const atnm = swn.split("|")[1];
-       // if (m.quoted.isAnimated === true) {
+       // if (m.quoted.isAnimated === true) 
        //   A17.downloadAndSaveMediaMessage(quoted, "gifee")
         //  A17.sendMessage(from, { sticker: fs.readFileSync("gifee.webp") }, { quoted: m })
          else if (/image/.test(mime)) {
@@ -6001,7 +6001,7 @@ break;
           await fs.unlinkSync(encmedia)
         } else if (/webp/.test(mime)) {
           let media = await quoted.download()
-          A17.sendMessage(from, { sticker: media },{ packname: pcknm, author: atnm }, { quoted: m }); 
+          A17.sendMessage(from, { sticker: media }, { packname: pcknm, author: atnm }, { quoted: m }); 
         }
       }
         break;
