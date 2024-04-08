@@ -2632,12 +2632,12 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
 
         try {
-          const hoshino = await axios.get(`https://ultimetron.guruapi.tech/gpt4?prompt=${encodeURIComponent(q)}`);
-          const yume = hoshino.data.result;
+          const hoshino = await axios.get(`https://skizo.tech/api/openai?apikey=arona&messages=&system=sex&text=${encodeURIComponent(q)}`);
+          const yume = hoshino.data;
           let message = "";
 
-          if (yume.success === true) {
-            message = yume.reply;
+          if (yume.status === 200) {
+            message = yume.result;
           } else {
             return reply("Sorry, I couldn't fetch a response from the API at the moment.");
           }
