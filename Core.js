@@ -5999,7 +5999,10 @@ break;
           let media = await quoted.download()
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
-        } else {
+        } else if (/webp/.test(mime)) {
+          let media = await quoted.download()
+          let encmedia = await A17.sendMessage(from, { sticker: media }, { packname: pcknm, author: atnm }) { quoted: m });
+          await fs.unlinkSync(encmedia) 
           reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 seconds is allowed!`)
         }
       }
