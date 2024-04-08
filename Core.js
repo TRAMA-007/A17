@@ -2629,10 +2629,10 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
+        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
 
         try {
-          const hoshino = await axios.get(`https://skizo.tech/api/openai?apikey=arona&messages=&system=sex&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/openai?apikey=arona&messages=&system=&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
