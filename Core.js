@@ -6001,7 +6001,7 @@ break;
           await fs.unlinkSync(encmedia)
         } else if (/webp/.test(mime)) {
           let media = await quoted.download()
-          A17.sendMessage(from, { sticker: media }, { packname: pcknm, author: atnm }) { quoted: m }); 
+          A17.sendMessage(from, { sticker: media }, { packname: pcknm, author: atnm }); 
         }
       }
         break;
