@@ -5983,23 +5983,23 @@ break;
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 
-        if (!args.join(" ")) return reply(`Like use -take A17|By: Kai`)
+        if (!args.join(" ")) return reply(`Like use -take plana|By: حسن زلقو`)
         const swn = args.join(" ")
         const pcknm = swn.split("|")[0];
         const atnm = swn.split("|")[1];
-       // if (m.quoted.isAnimated === true) 
-       //   A17.downloadAndSaveMediaMessage(quoted, "gifee")
-        //  A17.sendMessage(from, { sticker: fs.readFileSync("gifee.webp") }, { quoted: m })
-         else if (/image/.test(mime)) {
+         if (m.quoted.isAnimated === true) {
+          A17.downloadAndSaveMediaMessage(quoted, "gifee")
+          A17.sendMessage(from, { sticker: fs.readFileSync("gifee.webp") }, { quoted: m })
+       }  else if (/image/.test(mime)) {
           let media = await quoted.download()
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
         } else if (/video/.test(mime)) {
-          if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds is allowed!')
+          if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
-        } else if (/webp/.test(mime)) {
+        } else if (/sticker/.test(mime)) {
           let media = await quoted.download()
           A17.sendMessage(from, { sticker: media }, { packname: pcknm, author: atnm }, { quoted: m }); 
         }
