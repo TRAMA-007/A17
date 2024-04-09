@@ -2511,23 +2511,18 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (m.isGroup) return reply(mess.privateonly);
-        reply(mess.waiting);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } });
         if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي");
 
-        const { AnimeWallpaper } = require("anime-wallpaper");
-        const wall = new AnimeWallpaper();
-        const pages = [1, 2, 3, 4];
-        const random = pages[Math.floor(Math.random() * pages.length)];
-        const wallpapers = await wall.getAnimeWall4({ title: q, type: "sfw", page: pages }).catch(() => null);
-
+        const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=${q}`)
+        const sensei = shiroko.data[0];
         const maxImagesToSend = 15;
         const minImagesToSend = 1;
         const imagesToSend = Math.min(maxImagesToSend, Math.max(minImagesToSend, wallpapers.length));
 
         for (let i = 0; i < imagesToSend; i++) {
           let message = {
-            image: { url: wallpapers[i].image },
+            image: { url: sensei[i] },
             footer: `${BotName}`,
             headerType: 4
           };
