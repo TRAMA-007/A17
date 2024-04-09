@@ -2514,22 +2514,19 @@ Then if I got any juice left I'm gonna get Sunday too`);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } });
         if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي");
 
-        const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=${q}`)
+        const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=${encodeURIComponent(q)}`)
         const sensei = shiroko.data[0];
-        const maxImagesToSend = 15;
-        const minImagesToSend = 1;
-        const imagesToSend = Math.min(maxImagesToSend, Math.max(minImagesToSend, wallpapers.length));
+        
+        const imageCount = 10;
 
-        for (let i = 0; i < imagesToSend; i++) {
-          let message = {
-            image: { url: sensei[i] },
-            footer: `${BotName}`,
-            headerType: 4
-          };
-          A17.sendMessage(m.chat, message, { quoted: m });
+        for (let j = 0; j < imageCount && j < sensei.length; j++) {
+            const randomImageUrl = sensei[j];
+            let media = await getBuffer(randomImageUrl);
+
+           await A17.sendMessage(from, { image: media }, { quoted: m });
+            }
         }
-      }
-        break; 
+break;
 
 
       case 'wikimedia': case 'wikiimage': {
