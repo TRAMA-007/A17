@@ -2512,7 +2512,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
     if (!text) return reply("اكتب الاسم يا غبي");
 
     const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=${encodeURIComponent(q)}`)
-    const sensei = shiroko.data[0];
+    const sensei = shiroko.data;
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
 const imageCount = 10; // عدد الصور التي تريد إرسالها
 
