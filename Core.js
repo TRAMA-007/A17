@@ -2504,29 +2504,25 @@ Then if I got any juice left I'm gonna get Sunday too`);
       // }
       // break;
 
-
-      case 'wallpaper':
-      case 'animewallpaper':
-      case 'animewall': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (m.isGroup) return reply(mess.privateonly);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } });
-        if (!args.join(" ")) return reply("اكتب اسم الانمي يا غبي");
-
-        const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=${encodeURIComponent(q)}`)
-        const sensei = shiroko.data[0];
         
-        const imageCount = 10;
+       case 'wallpaper': {
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    A17.sendMessage(from, { react: { text: "💦", key: m.key } });
+    if (!text) return reply("اكتب الاسم يا غبي");
 
-        for (let j = 0; j < imageCount && j < sensei.length; j++) {
-            const randomImageUrl = sensei[j];
-            let media = await getBuffer(randomImageUrl);
+    const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=${encodeURIComponent(q)}`)
+    const sensei = shiroko.data[0];
+    // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
+const imageCount = 10; // عدد الصور التي تريد إرسالها
 
-           await A17.sendMessage(from, { image: media }, { quoted: m });
-            }
-        }
-break;
+for (let i = 0; i < imageCount; i++) {
+    const randomImageUrl = sensei[i % sensei.length]; // يُحدد اختيار صورة عشوائية من القائمة
+    let media = await getBuffer(randomImageUrl);
+    await A17.sendMessage(m.chat, { image: media }, { quoted: m });
+}
+     } 
+break; 
 
 
       case 'wikimedia': case 'wikiimage': {
