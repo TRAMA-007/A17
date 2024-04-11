@@ -27,6 +27,7 @@ global.Owner = ["249904077717"];//If you want singal number so global.Owner = ['
 global.tawfik = ["212607497765"];
 global.asir = ["249112089604"];
 global.hamid = ["17087378235"];
+global.dabi = ["249124328416"];
 global.ego = ["249122618252"];
 global.awad = ["201271270116"];
 global.sora = ["249117300794"];
