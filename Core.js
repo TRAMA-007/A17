@@ -736,7 +736,7 @@ Typed *surrender* to surrender and admited defeat`
   
   if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
   
-    reply (`Good afthernoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
+    reply (`Good afthernoo to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
   
   }
   
