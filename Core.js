@@ -5872,8 +5872,7 @@ _Click the button below to download_`
 
 
       //
-      case 'pinterest':
-      case 'pin': {
+      case 'pinterest': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
@@ -8446,7 +8445,19 @@ const characterAI = new CharacterAI();
     await A17.sendMessage(m.chat, { video: { url: yt['mp4']} }, { quoted: m });
     }
       break;
- 
+
+
+        case 'pin': { 
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply('Please provide a link');
+    
+    const youtube = await axios.get(`https://api.lolhuman.xyz/api/pinterestdl?apikey=39d86e79464a60f1043a9418&url=${encodeURIComponent(q)}`);
+    const yt = youtube.data;
+
+    await A17.sendMessage(m.chat, { video: { url: yt.result} }, { quoted: m });
+    }
+      break;
         
 
         case 'planaarona119': {
