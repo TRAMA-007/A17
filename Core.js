@@ -2167,7 +2167,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (!isCreator) return reply(mess.botowner)
         var user = m.sender
         var cara = 'cara'
-        const give1 = eco.give(user, cara, 1000000)
+        const give1 = eco.give(user, cara, 100000)
         reply(`You are the wealthiest my *Lord*`)
       }
         break;
@@ -2197,7 +2197,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           const g = (balance.wallet) > parseInt(value)
           const k = 50
           const a = (k) > parseInt(value)
-          const twice = gg * 10
+          const twice = gg * 2
           const f = ["up", "right", "left", "down", "up", "left", "down", "right", "up", "down", "right", "left"]
           const r = f[Math.floor(Math.random() * f.length)]
           if (isBan) return reply(mess.banned);
