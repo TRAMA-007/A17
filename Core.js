@@ -1952,7 +1952,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           A17.sendMessage(from, { react: { text: "💰", key: m.key } })
           let user = m.sender
           const cara = "cara"
-          const daily = await eco.daily(user, cara, 999); //give 999 for daily, can be changed
+          const daily = await eco.daily(user, cara, 5000); //give 999 for daily, can be changed
 
           if (daily.cd) return reply(`You already claimed daily for today, come back in ${daily.cdL}`); //cdL is already formatted cooldown Left
 
@@ -2109,6 +2109,15 @@ Then if I got any juice left I'm gonna get Sunday too`);
           switch (random) {
             case 'ran':
               await reply(`Your victim escaped, be more scaryðŸ˜¤ next time.`)
+         
+            case 'caught':
+             let deduct = await eco.deduct(user1, cara, k); 
+             reply(`ماشي وين يا عب تعال هنا قبضوك بالثابتة`)
+
+            case 'rob':
+             let deduct = await eco.deduct(user2, cara, k);
+             let h = await eco.give(user1, cara, k);
+             reply(`successfully robbed 250`)
           }
         }
         break;
