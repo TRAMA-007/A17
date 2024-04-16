@@ -2095,10 +2095,10 @@ Then if I got any juice left I'm gonna get Sunday too`);
           if (!target || target === m.sender) return reply("what are you trying to do!")
           if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
           while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
-          const a = 250
-          const cara = "cara";
+          const cara = "cara"
           const user1 = m.sender;
           const user2 = target;
+          const a = 250
           const balance1 = await eco.balance(user1, cara);
           const balance2 = await eco.balance(user2, cara);
 
@@ -2118,13 +2118,13 @@ const k2 = Math.floor(balance2 * 0.25); // تمثل 25% (ربع) من المبل
             
 } else if (random === 'caught') {
     let deduct = await eco.deduct(user1, cara, k);
-    reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
+    reply(`ماشي وين يا عب تعال هنا قبضوك بالثابتة`);
     reply(`you lost 💎${k}`);
             
 } else if (random === 'rob') {
     let deduct = await eco.deduct(user2, cara, k2);
     let h = await eco.give(user1, cara, k2);
-    reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
+    reply(`حرامي خسيس..شيلها ان شاء الله تنفعك`);
     reply(`you got 💎${k2}`);
 }
     }
