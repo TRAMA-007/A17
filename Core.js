@@ -2080,51 +2080,51 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
-      case 'rob': case 'attack':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
+ case 'rob':
+case 'attack':
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!m.isGroup) return reply(mess.grouponly);
 
-        {
-          A17.sendMessage(from, { react: { text: "🔪", key: m.key } })
-          if (!text) return reply(`Use ${prefix}rob @user`)
-          const target =
-            m.quoted && m.mentionedJid.length === 0
-              ? m.quoted.sender
-              : m.mentionedJid[0] || null;
-          if (!target || target === m.sender) return reply("what are you trying to do!")
-          if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
-          while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
-          const cara = "cara"
-          const user1 = m.sender;
-          const user2 = target;
-          const a = 250
-          const balance1 = await eco.balance(user1, cara);
-          const balance2 = await eco.balance(user2, cara);
-          const k = Math.floor(balance1 * 0.25); // تمثل 25% (ربع) من المبلغ
-          const w = Math.floor(balance2 * 0.25); // تمثل 25% (ربع) من المبلغ
+    {
+        A17.sendMessage(from, { react: { text: "🔪", key: m.key } });
+        if (!text) return reply(`Use ${prefix}rob @user`);
+        
+        const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
+        if (!target || target === m.sender) return reply("What are you trying to do!");
+        if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender);
+        while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender);
 
-          const typ = ['ran', 'rob', 'caught'];
-          const random = typ[Math.floor(Math.random() * typ.length)];
-          if (a > balance1.wallet) return reply(`☹️ You don't have enough money to pay incase you get caught`);
-          if (a > balance2.wallet) return reply(`Sorry, your victim is too poor 🤷🏽‍♂️ let go.`);
-          let tpy = random
-          if (random === 'ran') {
-   await reply("Your victim escaped, be more scary next time. 😱");
-            
-} else if (random === 'caught') {
-    let deduct = await eco.deduct(user1, cara, k);
-    reply(`ماشي وين يا عب تعال هنا قبضوك بالثابتة`);
-    reply(`you lost 💎${k}`);
-            
-} else if (random === 'rob') {
-    let deduct = await eco.deduct(user2, cara, w);
-    let h = await eco.give(user1, cara, w);
-    reply(`حرامي خسيس..شيلها ان شاء الله تنفعك`);
-    reply(`you got 💎${w}`);
-}
+        const cara = "cara";
+        const user1 = m.sender;
+        const user2 = target;
+        const a = 250;
+        const balance1 = await eco.balance(user1, cara);
+        const balance2 = await eco.balance(user2, cara);
+        const k = Math.floor(balance1 * 0.25); // ربع المبلغ للمستخدم 1
+        const w = Math.floor(balance2 * 0.25); // ربع المبلغ للمستخدم 2
+
+        const typ = ['ran', 'rob', 'caught'];
+        const random = typ[Math.floor(Math.random() * typ.length)];
+
+        if (a > balance1.wallet) return reply("☹️ You don't have enough money to pay in case you get caught.");
+        if (a > balance2.wallet) return reply("Sorry, your victim is too poor 🤷🏽‍♂️ let go.");
+
+        let tpy = random;
+        if (random === 'ran') {
+            await reply("Your victim escaped, be more scary next time. 😱");
+        } else if (random === 'caught') {
+            await eco.deduct(user1, cara, k);
+            reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
+            reply(`You lost 💎${k}`);
+        } else if (random === 'rob') {
+            await eco.deduct(user2, cara, w);
+            await eco.give(user1, cara, w);
+            reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
+            reply(`You got 💎${w}`);
+        }
     }
-     break;
+    break;
 
 
       case 'transfer': case 'give': {
