@@ -2112,7 +2112,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
         let tpy = random;
         if (random === 'ran') {
-            await reply("Your victim escaped, be more scary next time. 😱");
+            await reply("زولك دا مفلس ساي اعمل رايح");
         } else if (random === 'caught') {
             await eco.deduct(user1, cara, k);
             await eco.give(user2, cara, k);
@@ -2167,7 +2167,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (!isCreator) return reply(mess.botowner)
         var user = m.sender
         var cara = 'cara'
-        const give1 = eco.give(user, cara, 9999)
+        const give1 = eco.give(user, cara, 1000000)
         reply(`You are the wealthiest my *Lord*`)
       }
         break;
