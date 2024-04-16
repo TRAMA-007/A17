@@ -205,6 +205,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [botNumber, ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isBayome = [botNumber, ...global.bayome].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHamid = [botNumber, ...global.hamid].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isEgo = [botNumber, ...global.ego].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const islucas = [botNumber, ...global.lucas].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -976,6 +977,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
+      if (isBayome) return reply('الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial') 
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -991,6 +993,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
     if (isAsir) return reply('هوي يا عراقي') 
+    if (isBayome) return reply('الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial') 
     let { chat, fromMe, id } = m;
     
     const key = {
