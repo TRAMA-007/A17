@@ -2112,11 +2112,13 @@ Then if I got any juice left I'm gonna get Sunday too`);
 } else if (random === 'caught') {
     let deduct = await eco.deduct(user1, cara, k);
     reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
+    reply("you lost 250(حق الحكومة)");
             
 } else if (random === 'rob') {
     let deduct = await eco.deduct(user2, cara, k);
     let h = await eco.give(user1, cara, k);
-    reply("Successfully robbed 250.");
+    reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
+    reply("you got 250");
 }
     }
      break;
