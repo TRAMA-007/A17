@@ -2009,7 +2009,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           A17.sendMessage(from, { react: { text: "💲", key: m.key } })
 
           //if (!isCreator) return reply(mess.botowner)
-          if (!text) return reply(`💴 Bank-capacity 💳\n\n1 | 1000 sp = 💎100\n\n2 | 10000 sp = 💎1000\n\n3 | 100000 sp = 💎10000\n\nExample- ${prefix}capacity 1 OR ${prefix}bankupgrade 1000`)
+          if (!text) return reply(`💴 Bank-capacity 💳\n\n1 | 10000 sp = 💎100\n\n2 | 100000 sp = 💎1000\n\n3 | 250000 sp = 💎10000\n\nExample- ${prefix}capacity 1 OR ${prefix}bankupgrade 1000`)
           if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
           const user = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
           const cara = "cara"
@@ -2017,24 +2017,24 @@ Then if I got any juice left I'm gonna get Sunday too`);
           let k = parseInt(value)
           const balance = await eco.balance(user, cara)
           switch (value) {
-            case '1000':
+            case '10000':
             case '1':
               if (k > balance.wallet) return reply(`You need to pay 💎100 to increase bank capacity ~ 1000 sp`);
               const deduct1 = await eco.deduct(user, cara, 100);
-              const add1 = eco.giveCapacity(user, cara, 1000);
+              const add1 = eco.giveCapacity(user, cara, 10000);
               await reply(`1000 💎diamond storage has been added in ${pushname} bank`)
-            case '10000':
+            case '100000':
             case '2':
               if (k > balance.wallet) return reply(`You need to pay 💎1000 to increase bank capacity ~ 10000 sp`);
               const deduct2 = await eco.deduct(user, cara, 1000);
-              const add2 = eco.giveCapacity(user, cara, 10000);
-              await reply(`10000 💎diamond storage has been added in ${pushname} bank`)
-            case '100000':
+              const add2 = eco.giveCapacity(user, cara, 100000);
+              await reply(`100000 💎diamond storage has been added in ${pushname} bank`)
+            case '250000':
             case '3':
               if (k > balance.wallet) return reply(`You need to pay 💎10000 to increase bank capacity ~ 100000 sp`);
               const deduct3 = await eco.deduct(user, cara, 10000);
-              const add3 = eco.giveCapacity(user, cara, 100000);
-              await reply(`100000 💎diamond storage has been added in ${pushname} bank`)
+              const add3 = eco.giveCapacity(user, cara, 250000);
+              await reply(`250000 💎diamond storage has been added in ${pushname} bank`)
           }
         }
         break;
