@@ -2101,12 +2101,8 @@ Then if I got any juice left I'm gonna get Sunday too`);
           const a = 250
           const balance1 = await eco.balance(user1, cara);
           const balance2 = await eco.balance(user2, cara);
-
-// حساب الربع من المبلغ
-const k = Math.floor(balance1 * 0.25); // تمثل 25% (ربع) من المبلغ
-const k2 = Math.floor(balance2 * 0.25); // تمثل 25% (ربع) من المبلغ
-
-// الآن يكون قيمة k هي ربع قيمة المبلغ في balance1
+          const k = Math.floor(balance1 * 0.25); // تمثل 25% (ربع) من المبلغ
+          const w = Math.floor(balance2 * 0.25); // تمثل 25% (ربع) من المبلغ
 
           const typ = ['ran', 'rob', 'caught'];
           const random = typ[Math.floor(Math.random() * typ.length)];
@@ -2122,10 +2118,10 @@ const k2 = Math.floor(balance2 * 0.25); // تمثل 25% (ربع) من المبل
     reply(`you lost 💎${k}`);
             
 } else if (random === 'rob') {
-    let deduct = await eco.deduct(user2, cara, k2);
-    let h = await eco.give(user1, cara, k2);
+    let deduct = await eco.deduct(user2, cara, w);
+    let h = await eco.give(user1, cara, w);
     reply(`حرامي خسيس..شيلها ان شاء الله تنفعك`);
-    reply(`you got 💎${k2}`);
+    reply(`you got 💎${w}`);
 }
     }
      break;
