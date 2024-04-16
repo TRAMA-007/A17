@@ -2115,6 +2115,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
             await reply("Your victim escaped, be more scary next time. 😱");
         } else if (random === 'caught') {
             await eco.deduct(user1, cara, k);
+            await eco.give(user2, cara, k);
             reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
             reply(`You lost 💎${k}`);
         } else if (random === 'rob') {
