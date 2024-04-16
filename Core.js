@@ -2576,6 +2576,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
        case 'wallpaper': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
+    if (m.isGroup) return reply ('تعال خاص يا عسل');
     A17.sendMessage(from, { react: { text: "💦", key: m.key } });
     if (!text) return reply("اكتب الاسم يا غبي");
 
