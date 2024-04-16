@@ -1141,7 +1141,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('كسم بلانا') || smallinput.includes('بلانا شرموط') || smallinput.includes('كسم البوت')) {
+    if (smallinput.includes('كسم بلانا') || smallinput.includes('بلانا شرموط') || smallinput.includes('test')) {
     let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     if (isBotAdmins) await A17.sendMessage(from, { text: 'كدي الراجل يرجعه' });
