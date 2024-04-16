@@ -11,7 +11,7 @@ global.antitags = true;
 //auto functioner
 global.autoTyping = false;                //auto tying by default off.
 global.autoRecord = false;                //auto recording by default off.
-global.groupevent = false;                //This is the new variable for controlling group event handling.
+global.groupevent = true;                //This is the new variable for controlling group event handling.
 global.statusseen = true;                 //This is the new variable for controlling status seen.
 global.autoreadgc = true;
 
@@ -25,6 +25,7 @@ global.plann = ["بلانا"];
 //
 global.Owner = ["249904077717"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.tawfik = ["212607497765"];
+global.bayome = ["249966573392"];
 global.asir = ["249112089604"];
 global.hamid = ["17087378235"];
 global.dabi = ["249124328416"];
