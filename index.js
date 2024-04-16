@@ -275,7 +275,7 @@ async function startA17() {
             A17text = `
 Hello @${WAuserName.split("@")[0]},
 
-I am *A17 Bot*, Welcome to ${metadata.subject}.
+I am *plana*, Welcome to ${metadata.subject}.
 
 *Group Description:*
 ${metadata.desc}
@@ -293,9 +293,7 @@ ${metadata.desc}
             // ... existing logic for saying goodbye to departing participants ...
             let WAuserName = num
             A17text = `
-Okay Bye 👋, @${WAuserName.split("@")[0]},
-
-You'll be a noticeable absence!
+ما تنسى تشيلو معاك, @${WAuserName.split("@")[0]},
 `
 
             let buttonMessage = {
