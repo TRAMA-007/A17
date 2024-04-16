@@ -1142,7 +1142,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('كسم بلانا') || smallinput.includes('بلانا شرموط') || smallinput.includes('كسم البوت')) {
-     let users = m.senderJid[0] ? m.senderJid[0]
+     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
     if (isBotAdmins) await A17.sendMessage(from, { text: 'كدي الراجل يرجعه' });
   } 
