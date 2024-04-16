@@ -2108,10 +2108,12 @@ Then if I got any juice left I'm gonna get Sunday too`);
           let tpy = random
           if random === ('ran') {
             await reply(`Your victim escaped, be more scaryðŸ˜¤ next time.`)
-            } else if random === ('caught') {
+            } else { 
+            if random === ('caught') 
             let deduct = await eco.deduct(user1, cara, k); 
              reply(`ماشي وين يا عب تعال هنا قبضوك بالثابتة`)
-          } else if random === ('rob') {
+          } else { 
+            if random === ('rob') 
             let deduct = await eco.deduct(user2, cara, k);
              let h = await eco.give(user1, cara, k);
              reply(`successfully robbed 250`)
