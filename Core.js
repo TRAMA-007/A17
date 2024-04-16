@@ -1194,8 +1194,8 @@ Typed *surrender* to surrender and admited defeat`
 
 /*
    if (smallinput.includes('ياسر')) {
-    reply (`ياسر؟ قصدك المعلط الما عارف طيزوو من بطنو`);
-          } 
+    reply (`ياسر؟ قصدك المعللما عارف طيزوو من بطنو`);
+          }
 
 
    if (smallinput.includes('ونو')) {
