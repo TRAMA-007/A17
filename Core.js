@@ -2080,8 +2080,8 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
- case 'rob':
-case 'attack':
+      case 'rob':
+      case 'attack':
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     if (!m.isGroup) return reply(mess.grouponly);
@@ -2098,11 +2098,12 @@ case 'attack':
         const cara = "cara";
         const user1 = m.sender;
         const user2 = target;
+        const percentage = 0.25; 
         const a = 250;
         const balance1 = await eco.balance(user1, cara);
         const balance2 = await eco.balance(user2, cara);
-        const k = Math.floor(balance1 * 0.25); // ربع المبلغ للمستخدم 1
-        const w = Math.floor(balance2 * 0.25); // ربع المبلغ للمستخدم 2
+        const k = Math.floor(balance1 * percentage); // ربع المبلغ للمستخدم 1
+        const w = Math.floor(balance2 * percentage); // ربع المبلغ للمستخدم 2
 
         const typ = ['ran', 'rob', 'caught'];
         const random = typ[Math.floor(Math.random() * typ.length)];
