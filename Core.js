@@ -7656,19 +7656,10 @@ const characterAI = new CharacterAI();
       case 'neko':
       case 'loli':
       case 'waifu':
-      case 'kiss':
-      case 'pinterest':
-      case 'feed':
-      case 'meow':
-      case 'tickle':
-      case 'hug':
-      case 'kill': case 'lick': case 'bite':
-      case 'bully': case 'bonk': case 'poke': case 'slap':
-      case 'happy':
-      case 'cuddle': case 'kick':
+      case 'kiss': 
          if (isBan) return reply(mess.banned);	 			
          if (isBanChat) return reply(mess.bangc);
-       reply(mess.waiting)
+       return reply(`عيب`)
        bjd = await getBuffer(`https://media.tenor.com/et1uYmWUlwIAAAAM/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D8%B9%D9%85%D8%B1%D9%88_%D9%85%D8%B5%D8%B7%D9%81%D9%89.gif`)
        let bjif = await GIFBufferToVideoBuffer(bjd)   
              await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
@@ -7699,7 +7690,7 @@ const characterAI = new CharacterAI();
 
 
       //
-  /*    case 'feed':
+      case 'feed':
       case 'meow':
       case 'tickle':
         if (isBan) return reply(mess.banned);
@@ -7720,7 +7711,7 @@ const characterAI = new CharacterAI();
         await A17.sendMessage(m.chat, buttonssMessages, { quoted: m }).catch(err => {
           return ('Error!')
         })
-        break; */
+        break; 
 
 
 
@@ -7730,7 +7721,7 @@ const characterAI = new CharacterAI();
 
 
       //
-  /*    case 'cry': case 'handhold': {
+      case 'cry': case 'handhold': {
 
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -7881,7 +7872,7 @@ const characterAI = new CharacterAI();
           console.log(error);
         }
       }
-        break; */
+        break; 
 
 
       //
@@ -7925,7 +7916,7 @@ const characterAI = new CharacterAI();
       }
         break;
 
-/*
+
       case 'yeet':
       case 'wink': case 'smile':
       case 'wave': case 'blush': case 'smug': case 'glomp':
@@ -7969,7 +7960,7 @@ const characterAI = new CharacterAI();
 
       
       
-      case 'cry': case 'kill': case 'hug': case 'pat': case 'lick': case 'kiss': case 'bite': case 'yeet':
+      case 'cry': case 'kill': case 'hug': case 'pat': case 'bite': case 'yeet':
       case 'bully': case 'bonk': case 'wink': case 'poke': case 'nom': case 'slap': case 'smile':
       case 'wave': case 'blush': case 'smug': case 'glomp': case 'happy': case 'dance':
       case 'cringe': case 'cuddle': case 'highfive': case 'handhold': case 'kick':
@@ -7985,7 +7976,7 @@ const characterAI = new CharacterAI();
                                       })
       break;
       
-      */
+      
 
 
       case 'megumin':
@@ -8758,14 +8749,12 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
   ⌯     ${prefix}cuddle
   ⌯     ${prefix}hug
-  ⌯     ${prefix}kiss
   ⌯     ${prefix}bonk
   ⌯     ${prefix}cry
   ⌯     ${prefix}bully
   ⌯     ${prefix}slap
   ⌯     ${prefix}kill
   ⌯     ${prefix}happy
-  ⌯     ${prefix}lick
   ⌯     ${prefix}pat
   ⌯     ${prefix}smug
   ⌯     ${prefix}nom
