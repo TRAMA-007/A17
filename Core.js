@@ -2106,20 +2106,20 @@ Then if I got any juice left I'm gonna get Sunday too`);
           if (k > balance1.wallet) return reply(`☹️ You don't have enough money to pay incase you get caught`);
           if (k > balance2.wallet) return reply(`Sorry, your victim is too poor 🤷🏽‍♂️ let go.`);
           let tpy = random
-          if random === ('ran') {
-            await reply(`Your victim escaped, be more scaryðŸ˜¤ next time.`)
-            } else { 
-            if random === ('caught') 
-            let deduct = await eco.deduct(user1, cara, k); 
-             reply(`ماشي وين يا عب تعال هنا قبضوك بالثابتة`)
-          } else { 
-            if random === ('rob') 
-            let deduct = await eco.deduct(user2, cara, k);
-             let h = await eco.give(user1, cara, k);
-             reply(`successfully robbed 250`)
-          }
-        }
-        break;
+          if (random === 'ran') {
+   await reply("Your victim escaped, be more scary next time. 😱");
+            
+} else if (random === 'caught') {
+    let deduct = await eco.deduct(user1, cara, k);
+    reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
+            
+} else if (random === 'rob') {
+    let deduct = await eco.deduct(user2, cara, k);
+    let h = await eco.give(user1, cara, k);
+    reply("Successfully robbed 250.");
+}
+    }
+     break;
 
 
       case 'transfer': case 'give': {
