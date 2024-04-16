@@ -2101,9 +2101,8 @@ Then if I got any juice left I'm gonna get Sunday too`);
         const a = 250;
         const balance1 = await eco.balance(user1, cara);
         const balance2 = await eco.balance(user2, cara);
-        const k = balance1 * 2
-        const w = balance2 * 2
-        const s = 1000
+        const k = balance1.wallet * 0.25
+        const w = balance2.wallet * 0.25
 
         const typ = ['ran', 'rob', 'caught'];
         const random = typ[Math.floor(Math.random() * typ.length)];
@@ -2115,12 +2114,12 @@ Then if I got any juice left I'm gonna get Sunday too`);
         if (random === 'ran') {
             await reply("Your victim escaped, be more scary next time. 😱");
         } else if (random === 'caught') {
-            await eco.deduct(user1, cara, s);
+            await eco.deduct(user1, cara, k);
             reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
             reply(`You lost 💎${k}`);
         } else if (random === 'rob') {
-            await eco.deduct(user2, cara, s);
-            await eco.give(user1, cara, s);
+            await eco.deduct(user2, cara, w);
+            await eco.give(user1, cara, w);
             reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
             reply(`You got 💎${w}`);
         }
