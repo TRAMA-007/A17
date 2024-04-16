@@ -256,7 +256,7 @@ async function startA17() {
           try {
             ppuser = await A17.profilePictureUrl(num, 'image')
           } catch {
-            ppuser = 'https://images6.alphacoders.com/690/690121.jpg'
+            ppuser = 'https://graph.org/file/9089a6335637762784cd4.png'
           }
 
           try {
