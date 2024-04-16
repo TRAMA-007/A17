@@ -297,9 +297,8 @@ ${metadata.desc}
 `
 
             let buttonMessage = {
-              image: await getBuffer(ppuser),
               mentions: [num],
-              caption: A17text,
+              text: A17text,
               footer: `${global.BotName}`,
               headerType: 4,
 
