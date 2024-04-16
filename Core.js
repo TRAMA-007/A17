@@ -1147,7 +1147,7 @@ Typed *surrender* to surrender and admited defeat`
     if (isBotAdmins) await A17.sendMessage(from, { text: 'الراجل يرجعه' });
       }
         break;
-                                                                                                               }
+                                                                                                               
 
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
