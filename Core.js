@@ -2095,16 +2095,23 @@ Then if I got any juice left I'm gonna get Sunday too`);
           if (!target || target === m.sender) return reply("what are you trying to do!")
           if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
           while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
-          const cara = "cara"
-          const user1 = m.sender
-          const user2 = target
-          const k = 250
-          const balance1 = await eco.balance(user1, cara)
-          const balance2 = await eco.balance(user2, cara)
+          const a = 250
+          const cara = "cara";
+          const user1 = m.sender;
+          const user2 = target;
+          const balance1 = await eco.balance(user1, cara);
+          const balance2 = await eco.balance(user2, cara);
+
+// حساب الربع من المبلغ
+const k = Math.floor(balance1 * 0.25); // تمثل 25% (ربع) من المبلغ
+const k2 = Math.floor(balance2 * 0.25); // تمثل 25% (ربع) من المبلغ
+
+// الآن يكون قيمة k هي ربع قيمة المبلغ في balance1
+
           const typ = ['ran', 'rob', 'caught'];
           const random = typ[Math.floor(Math.random() * typ.length)];
-          if (k > balance1.wallet) return reply(`☹️ You don't have enough money to pay incase you get caught`);
-          if (k > balance2.wallet) return reply(`Sorry, your victim is too poor 🤷🏽‍♂️ let go.`);
+          if (a > balance1.wallet) return reply(`☹️ You don't have enough money to pay incase you get caught`);
+          if (a > balance2.wallet) return reply(`Sorry, your victim is too poor 🤷🏽‍♂️ let go.`);
           let tpy = random
           if (random === 'ran') {
    await reply("Your victim escaped, be more scary next time. 😱");
@@ -2112,13 +2119,13 @@ Then if I got any juice left I'm gonna get Sunday too`);
 } else if (random === 'caught') {
     let deduct = await eco.deduct(user1, cara, k);
     reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
-    reply("you lost 250(حق الحكومة)");
+    reply(`you lost 💎${k}`);
             
 } else if (random === 'rob') {
-    let deduct = await eco.deduct(user2, cara, k);
-    let h = await eco.give(user1, cara, k);
+    let deduct = await eco.deduct(user2, cara, k2);
+    let h = await eco.give(user1, cara, k2);
     reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
-    reply("you got 250");
+    reply(`you got 💎${k2}`);
 }
     }
      break;
