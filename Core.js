@@ -1148,12 +1148,12 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-    if (smallinput.includes('كىى') {
+/*    if (smallinput.includes('كىى') {
     let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     if (isBotAdmins) await A17.sendMessage(from, { text: 'هههههههه فاكر لو شفرها مش حأفهم يعني' });
     if (isBotAdmins) await A17.sendMessage(from, { text: 'اطلع برا يلا يا مضحك' });
-    }
+    } */
 
 
 
