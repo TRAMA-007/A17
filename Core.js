@@ -2101,9 +2101,9 @@ Then if I got any juice left I'm gonna get Sunday too`);
         const a = 250;
         const balance1 = await eco.balance(user1, cara);
         const balance2 = await eco.balance(user2, cara);
-        const k = balance1 * 0.25
-        const w = balance2 * 0.25
-        const s = 500
+        const k = balance1 * 2
+        const w = balance2 * 2
+        const s = 1000
 
         const typ = ['ran', 'rob', 'caught'];
         const random = typ[Math.floor(Math.random() * typ.length)];
