@@ -1009,6 +1009,7 @@ Typed *surrender* to surrender and admited defeat`
     }
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
+      if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب')
     let { chat, fromMe, id } = m;
     
     const key = {
