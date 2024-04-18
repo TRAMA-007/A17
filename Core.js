@@ -7445,8 +7445,18 @@ break;
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1308_${q}.png`)
-        A17.sendMessage(from, { image: buffer, caption: 'heres your acheron'}, { quoted: m })
+        A17.sendMessage(from, { image: buffer, caption: 'heres your aventurine'}, { quoted: m })
         break;
+
+
+        case 'card-aventurine':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1304_${q}.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'heres your acheron'}, { quoted: m })
+        break; 
         
 
 
@@ -9025,6 +9035,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         Card-ratio
         Card-swan
         Card-hanabi
+        Card-acheron 
+        Card-aventurine
         
         
         Card-herta
