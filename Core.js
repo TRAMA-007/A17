@@ -716,7 +716,7 @@ Typed *surrender* to surrender and admited defeat`
   
   
   if (smallinput=='ايها') {
-    reply (`خدتككك عليه`)
+    reply (`خدتكككك عليه`)
   }
   
   
