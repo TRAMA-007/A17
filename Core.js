@@ -2329,7 +2329,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
              }
              else if (((f1 == f2) && f2 == f3) && f3 == f4){
                 const give5 = eco.give(user, cara, 1000);
-                     reply(`${mess4}\n\n_🎊 JackPot --> _💎1000_`)
+                     reply(`${mess4}\n\n_JackPot --> _💎1000_`)
              }
              else { 
                      reply(`Do you understand what you are doing?`)
