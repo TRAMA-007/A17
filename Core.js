@@ -932,7 +932,6 @@ Typed *surrender* to surrender and admited defeat`
  'https://graph.org/file/586ef4516dac781fe9fe7.png',
  'https://graph.org/file/c637016bdc9c6bd801b16.png',
  'https://graph.org/file/eb52990a6ad3b167cdda2.png',
- 'https://graph.org/file/df01b8a5772e73f54293a.png',
  'https://graph.org/file/36668cd71370d782724a6.png',
  'https://graph.org/file/ef59a99caa789d2d5fdf8.png',
  'https://graph.org/file/0c2f50ee0cb70aaeecb18.png',
@@ -8314,7 +8313,7 @@ const characterAI = new CharacterAI();
         const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=GataDios&url=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const ig = instgram.data;
-        await A17.sendMessage(m.chat, { video: { url: ig.result} }, { quoted: m })
+        await A17.sendMessage(m.chat, { video: { url: ig.result[0]} }, { quoted: m })
      }
         break;
 
