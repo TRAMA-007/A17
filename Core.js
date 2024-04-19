@@ -7364,7 +7364,7 @@ break;
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1201_${q}.png`)
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1202_${q}.png`)
         A17.sendMessage(from, { image: buffer, caption: 'heres your tingyun'}, { quoted: m })
         break;
 
@@ -7445,7 +7445,7 @@ break;
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1308_${q}.png`)
-        A17.sendMessage(from, { image: buffer, caption: 'heres your aventurine'}, { quoted: m })
+        A17.sendMessage(from, { image: buffer, caption: 'heres your acheron'}, { quoted: m })
         break;
 
 
