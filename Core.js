@@ -2699,7 +2699,6 @@ break;
         break;
 
 
-      case 'plana':
       case 'ai':
       case 'gpt': {
         if (isBan) return reply(mess.banned);
@@ -2716,6 +2715,35 @@ break;
             message = yume.result;
           } else {
             return reply("Sorry, I couldn't fetch a response from the API at the moment.");
+          }
+
+          const me = m.sender;
+          await A17.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
+
+        } catch (error) {
+          console.error(error);
+          reply("An error occurred while fetching the response from the API.");
+        }
+      }
+        break;
+
+
+        case 'plana':
+      case 'aiussy': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+
+        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
+
+        try {
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=zaWoUtRPYvg4Xr2JWC_30WmL6_mewNJN57nuMOJSBmQ&sessionId=DCXsI093VKdbdaqNp_T4AVjTqWY73niCwCJ995MvQqA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const yume = hoshino.data;
+          let message = "";
+
+          if (yume.success === true) {
+            message = yume.result.text;
+          } else {
+            return reply("Sorry, my circuits has been fried..wait a bit till i get hold of myself.");
           }
 
           const me = m.sender;
