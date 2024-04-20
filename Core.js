@@ -994,8 +994,10 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
   
 
@@ -1011,9 +1013,11 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
-    }
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
+}
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب')
@@ -1026,9 +1030,11 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
-    }
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
+}
 
 
     if (smallinput.includes('احشك') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
@@ -1041,8 +1047,10 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
 
 
@@ -1057,8 +1065,10 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
 
 
@@ -1072,8 +1082,10 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
 
 
@@ -1087,8 +1099,10 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
 
 
@@ -1102,9 +1116,11 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
-    }
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
+}
 
 
     if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
@@ -1117,8 +1133,10 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
 
 
@@ -1134,10 +1152,11 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*no france allowed*' });
-      if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'خخخخخ توفيق يتكلم فرنسي' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-
 
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
     if (isTawfik) reply (`توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان`);
@@ -1149,7 +1168,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('كسم بلانا') || smallinput.includes('بلانا شرموط') || smallinput.includes('كسم البوت')) {
+    if (smallinput.includes('كسم بلانا') || smallinput.includes('كسمك يا بلانا') || smallinput.includes('كسم البوت')) {
     let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     if (isBotAdmins) await A17.sendMessage(from, { text: 'كدي الراجل يرجعه' });
@@ -1178,8 +1197,10 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
+      if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
+      if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
 
 
