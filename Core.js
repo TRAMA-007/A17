@@ -8434,7 +8434,7 @@ const characterAI = new CharacterAI();
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const apk = await axios.get(`https://api.caliph.biz.id/api/gdrive?apikey=caliphkey&url=${encodeURIComponent(q)}`)
+        const apk = await axios.get(`https://aemt.me/download/gdrive?url=${encodeURIComponent(q)}`)
         const fk = apk.data.result;
         await A17.sendMessage(
           from,
@@ -8448,7 +8448,7 @@ const characterAI = new CharacterAI();
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.downloadUrl},
+          document: { url: fk.data},
           filename: fk.fileName,
           mimetype: 'video/x-matroska',
           quoted: m,
@@ -8464,7 +8464,7 @@ const characterAI = new CharacterAI();
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const apk = await axios.get(`https://api.caliph.biz.id/api/gdrive?apikey=caliphkey&url=${encodeURIComponent(q)}`)
+        const apk = await axios.get(`https://aemt.me/download/gdrive?url=${encodeURIComponent(q)}`)
         const fk = apk.data.result;
         await A17.sendMessage(
           from,
@@ -8480,7 +8480,7 @@ const characterAI = new CharacterAI();
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.downloadUrl},
+          document: { url: fk.data},
           filename: fk.fileName,
           mimetype: fk.mimetype,
           quoted: m,
@@ -8497,7 +8497,7 @@ const characterAI = new CharacterAI();
         if (isBanChat) return reply(mess.bangc);
         if (!isCreator) return reply(`💀`) 
         if (!text) return reply(`Please proide a code`) 
-        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=plana&code=${q}`)
+        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=arona&code=${q}`)
         const fk = apk.data;
         await A17.sendMessage(
           from,
