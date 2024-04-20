@@ -8545,10 +8545,10 @@ const characterAI = new CharacterAI();
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a link');
     
-    const youtube = await axios.get(`https://aemt.me/download/ytdl?url=${encodeURIComponent(q)}`);
-    const yt = youtube.data.result;
+    const youtube = await getBuffer(`https://aemt.me/youtube?filter=audioandvideo&quality=highestvideo&contenttype=video/mp4&url=${encodeURIComponent(q)}`);
+   // const yt = youtube.data.result;
 
-    await A17.sendMessage(m.chat, { video: { url: yt['mp4']} }, { quoted: m });
+    await A17.sendMessage(m.chat, { video: youtube }, { quoted: m });
     }
       break;
 
