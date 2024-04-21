@@ -3407,8 +3407,8 @@ break;
       case 'deleteall': case 'delall': case 'delete': case 'del': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
+      //  if (!isBotAdmins) return reply(mess.botadmin);
+     //   if (!isAdmins && !isCreator) return reply(mess.useradmin)
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 
         if (!m.quoted) return reply('Please mention a message baka!')
