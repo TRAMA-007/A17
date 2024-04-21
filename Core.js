@@ -6316,7 +6316,7 @@ break;
 
         const dare = [
           "eat 2 tablespoons of salt",
-          "send nudes",
+          "kiss me",
           "call your crush and send nudes",
           "kill yourself.",
           "say Welcome to Who Wants To fuck me! to all the groups you have",
@@ -6333,7 +6333,7 @@ break;
           "tag the person you hate",
           "Pretending to be possessed, for example: possessed by dog, possessed by grasshoppers, possessed by refrigerator, etc.",
           "change name to *I AM A WHORE* for 24 hours",
-          "shout *انا عرمان* in front of your house",
+          "shout *فكت مني* in front of your house",
           "snap/post boyfriend photo/crush",
           "tell me your boyfriend type!",
           "say *i hv crush on you, do you want to be my girlfriend?* to the opposite sex, the last time you chatted (submit on wa/tele), wait for him to reply, if you have, drop here",
@@ -6378,7 +6378,7 @@ break;
           "send voice note says i hv crush on you, want to be my girlfriend/boyfriend or not? to any random person from the grup(if u girl choose boy, if boy choose girl",
           "slap ur butt hardly send the sound of slap through voice note😋",
           "state ur gf/bf type and send the photo here with caption, ugliest girl/boy in the world",
-          "shout عايز انيكand send here through voice note",
+          "say i love you plana and send it here through voice note",
           "snap your face then send it here",
           "Send your photo with a caption, i am lesbian",
           "shout using harsh words and send it here through vn",
@@ -6411,7 +6411,6 @@ break;
         const truth = [
           "Have you ever liked anyone? How long?",
           "If you can or if you want, which gc/outside gc would you make friends with? (maybe different/same type)",
-          "اخبار السكس كيف?",
           "Have you ever liked someone and felt that person likes you too?",
           "What is the name of your friend's ex-girlfriend that you used to secretly like?",
           "Have you ever stolen money from your father or mom? The reason?",
