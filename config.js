@@ -25,6 +25,7 @@ global.plann = ["بلانا"];
 //
 global.Owner = ["249904077717"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.tawfik = ["212607497765"];
+global.eisa = ["9647816028285"];
 global.kaze = ["249128210725"];
 global.bayome = ["249966573392"];
 global.asir = ["249112089604"];
