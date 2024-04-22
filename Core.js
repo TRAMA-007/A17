@@ -1218,15 +1218,15 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كس')) {
-     if (!isTawfik && !isCreator && !m.isGroup) {
-       const callerId = json.content[0].attrs['m.sender']
-       let contactMessage = await A17.sendContact(callerId, global.Owner)  
-        reply (`خخخخخخخ يا متحرش`);
-        reply (`بلوك`);
-        await sleep(8000)
-        await A17.updateBlockStatus(contactMessage, "block")
-     }
-    } 
+    if (!isCreator && !m.isGroup) {
+        let contactMessage = m.sender;
+        await A17.sendMessage(from, { text: 'خخخخخخخ يا متحرش' }, { quoted: contactMessage });
+        await A17.sendMessage(from, { text: 'بلوك' }, { quoted: contactMessage });
+        await sleep(8000);
+        await A17.updateBlockStatus(contactMessage, "block");
+    }
+}
+
 
 
     if (smallinput.includes('ارونا احسن') || smallinput.includes('ارونا افضل') || smallinput.includes('ارونا فوء')) {
