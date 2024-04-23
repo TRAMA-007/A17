@@ -1065,8 +1065,7 @@ Typed *surrender* to surrender and admited defeat`
 
   
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
-      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-    let { chat, fromMe, id } = m;
+      let { chat, fromMe, id } = m;
     
     const key = {
         remoteJid: chat,
@@ -1083,8 +1082,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
-      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-    let { chat, fromMe, id } = m;
+      let { chat, fromMe, id } = m;
     
     const key = {
         remoteJid: chat,
