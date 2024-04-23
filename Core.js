@@ -991,7 +991,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
-      if (isBayome) return reply('الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial') 
+      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1010,7 +1010,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
     if (isAsir) return reply('هوي يا عراقي') 
-    if (isBayome) return reply('الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial') 
+    if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1027,7 +1027,7 @@ Typed *surrender* to surrender and admited defeat`
 }
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
-      if (isBayome) return reply('الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial')
+      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب')
     let { chat, fromMe, id } = m;
     
@@ -1046,7 +1046,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('احش') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
-    if (isBayome) return reply('الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial') 
+    if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1065,6 +1065,7 @@ Typed *surrender* to surrender and admited defeat`
 
   
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
+      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1082,6 +1083,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
+      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     let { chat, fromMe, id } = m;
     
     const key = {
