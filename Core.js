@@ -2770,43 +2770,6 @@ break;
         break;
 
 
-        case 'hh':{ 
-
-    async function main() {
-    const url = "https://starraillcard.up.railway.app/api/card";
-    const headers = {'Content-Type': 'application/json'};
-
-    const data = {
-        "uid": "701607417",
-        "lang": "ua",
-        "name": "1212",
-        "image": {"1212": "https://graph.org/file/6e2751669c68f92843e64.jpg"}
-    };
-
-    try {
-        const response = await axios.post(url, data, {headers});
-
-        if (response.status === 200) {
-        await A17.sendMessage(m.chat, { text: response.data }, { quoted: m });
-            if (!responseData.message) {
-                console.log("Request successful");
-                console.log(responseData);
-            } else {
-                console.log("Request failed");
-                console.log(responseData.message);
-            }
-        } else {
-            console.log(`Request failed with status code ${response.status}`);
-        }
-    } catch (error) {
-        console.error("Error during the request:", error.message);
-    }
-}
-
-break;
-
-
-
         case 'plana':
       case 'aiussy': {
         if (isBan) return reply(mess.banned);
