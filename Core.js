@@ -8306,6 +8306,29 @@ const characterAI = new CharacterAI();
      }
         break;
 
+        
+      case 'hh':
+    async function main() {
+    const url = "https://graph.org/file/6e2751669c68f92843e64.jpg";
+    const headers = {'Content-Type': 'application/json'};
+
+       const data = {
+        "uid": "701607417",
+        "lang": "ua",
+        "name": "1212",
+        "image": {"1212": "https://graph.org/file/6e2751669c68f92843e64.jpg"}
+    };
+
+    try {
+        const response = await axios.post(url, data, {headers});
+
+        if (response.status === 200) {
+            await A17.sendMessage(m.chat, { text: response.data }, { quoted: m })
+     }
+      } 
+        break;   
+
+
 
       case 'genshin':{
         if (isBan) return reply(mess.banned);
