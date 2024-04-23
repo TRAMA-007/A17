@@ -1227,11 +1227,10 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كس')) {
-    if (!isCreator && !m.isGroup) {
+    if (!m.isGroup) {
         let contactMessage = m.sender;
         await A17.sendMessage(from, { text: 'خخخخخخخ يا متحرش' }, { quoted: contactMessage });
         await A17.sendMessage(from, { text: 'بلوك' }, { quoted: contactMessage });
-        await sleep(8000);
         await A17.updateBlockStatus(contactMessage, "block");
     }
 }
