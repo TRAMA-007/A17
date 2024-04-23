@@ -2283,7 +2283,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
           const g = (balance.wallet) > parseInt(value)
           const k = 50
           const a = (k) > parseInt(value)
-          const twice = gg * 10
+          const twice = gg * 2
           const f = ["up", "right", "left", "down", "up", "left", "down", "right", "up", "down", "right", "left"]
           const r = f[Math.floor(Math.random() * f.length)]
           if (isBan) return reply(mess.banned);
