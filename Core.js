@@ -1226,7 +1226,7 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
-    if (smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كس')) {
+    if (smallinput.includes('hoshino') || smallinput.includes('انيك') || smallinput.includes('كس')) {
     if (!m.isGroup) {
         let contactMessage = m.sender;
         await A17.sendMessage(from, { text: 'خخخخخخخ يا متحرش' }, { quoted: contactMessage });
