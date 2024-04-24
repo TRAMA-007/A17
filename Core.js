@@ -1515,10 +1515,8 @@ Then if I got any juice left I'm gonna get Sunday too`);
         const response = await axios.post("https://starraillcard.up.railway.app/api/card", starrail, { 
           headers: { "Content-Type": "application/json"}, 
      });
-
-        if (response.status === 200) {
+          
         await A17.sendMessage(m.chat, { text: response.data }, { quoted: m });
-         }
       } 
         break;
 
