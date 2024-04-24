@@ -1512,7 +1512,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         "image": {"1212": "https://graph.org/file/6e2751669c68f92843e64.jpg"}
     };
           
-        const url = await axios.post("https://starraillcard.up.railway.app/api/card", data, { 
+        const url = await axios.post("https://starraillcard.up.railway.app/api/card", starrail, { 
           headers: { "Content-Type": "application/json"}, 
      });
 
