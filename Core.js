@@ -1503,6 +1503,28 @@ Then if I got any juice left I'm gonna get Sunday too`);
       }
 
 
+        case 'hh': { 
+  
+        const data = {
+        "uid": "701607417",
+        "lang": "ua",
+        "name": "1212",
+        "image": {"1212": "https://graph.org/file/6e2751669c68f92843e64.jpg"}
+    };
+
+    try {
+        const url = await axios.post("https://starraillcard.up.railway.app/api/card",data, { 
+          headers: { "Content-Type': 'application/json"};
+     });
+
+        if (response.status === 200) {
+        await A17.sendMessage(m.chat, { text: response.data }, { quoted: m });
+         }
+      }
+   } 
+        break;
+
+
 
       case 'support': case 'supportgc': {
         if (isBan) return reply(mess.banned);
@@ -2768,30 +2790,6 @@ break;
         }
       }
         break;
-
-
-        case 'hh': {
-   
-    const url = "https://starraillcard.up.railway.app/api/card";
-    const headers = {'Content-Type': 'application/json'};
-
-    const data = {
-        "uid": "701607417",
-        "lang": "ua",
-        "name": "1212",
-        "image": {"1212": "https://graph.org/file/6e2751669c68f92843e64.jpg"}
-    };
-
-    try {
-        const response = await axios.post(url, data, {headers});
-
-        if (response.status === 200) {
-        await A17.sendMessage(m.chat, { text: response.data }, { quoted: m });
-         }
-      }
-   } 
-        break;
-
 
 
         case 'plana':
