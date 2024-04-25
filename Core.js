@@ -1264,7 +1264,7 @@ Typed *surrender* to surrender and admited defeat`
   }
 
 
-  if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput=== '201100224155') {
+  if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput.includes('201100224155')) {
      if (!isAli && !isTawfik && !isCreator && !isAbd) return reply (`شنو يا عسل`)
      if (isAli) return reply (`مالك يا بوت`)
      if (isTawfik) return reply (`توفيق يا عسل`)
