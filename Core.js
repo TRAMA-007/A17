@@ -1237,6 +1237,13 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
+   if (smallinput.includes('زولتي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
+   const typ = ['زولي السمين..الخبر', 'وين الناس', 'اخبار السكس شنو يا زولي'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+    if (isAbd) reply (random);
+  }
+
+
     if (smallinput.includes('hoshino') || smallinput.includes('انيك') || smallinput.includes('كس')) {
     if (!m.isGroup) {
         const callerId = json.content[0].attrs['m.sender']
