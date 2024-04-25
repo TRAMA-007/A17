@@ -790,7 +790,7 @@ Typed *surrender* to surrender and admited defeat`
       'جلا': `كلامك شين`,
       'ايه': `خدتك عليه `,
   //    'زبي': `صغير `,
-      'بلانا': `شنو يا عسل`,
+     // 'بلانا': `شنو يا عسل`,
     //  'و انا': `انت على زبي' `,
  //     'انا': `انت على زبي' `,
 //      'و أنا': `انت على زبي' `,
@@ -1047,6 +1047,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('احش') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
     if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+    if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1065,6 +1066,7 @@ Typed *surrender* to surrender and admited defeat`
 
   
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
+     if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1082,6 +1084,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
+     if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1241,6 +1244,14 @@ Typed *surrender* to surrender and admited defeat`
    reply (`منطقية.. 
 بس يا ترى ارونا تگدر تسوي كدا 👇
 *starts twerking*`);
+  }
+
+
+  if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput=== '201100224155') {
+     if (!isAli && !isTawfik && !isCreator) return reply (`شنو يا عسل`)
+     if (isAli) return reply (`مالك يا بوت`)
+     if (isTawfik) return reply (`توفيق يا عسل`)
+     if (isCreator) return reply (`عيون بلانا 🥰`) 
       }
 
 /*
