@@ -1284,7 +1284,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('قنيط')) {
-    reply (`الفاظك لو سمحت`);
+    reply (`الفاك لو سمحت`);
           }
 
 
