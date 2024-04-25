@@ -8594,7 +8594,7 @@ const characterAI = new CharacterAI();
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.download + 'plana'},
+          document: { url: fk.download + 'adamxion'},
           filename: + fk.title.english + '.pdf', 
           mimetype: 'application/pdf',
           quoted: m,
