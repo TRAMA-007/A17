@@ -214,6 +214,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isAsir = [botNumber, ...global.asir].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isDabi = [botNumber, ...global.dabi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAwad = [botNumber, ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isAbd = [botNumber, ...global.coomer].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssamm = [botNumber, ...global.issamm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -990,8 +991,11 @@ Typed *surrender* to surrender and admited defeat`
     
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
+    const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
+    const random = typ[Math.floor(Math.random() * typ.length)];
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isAbd) return reply (random) 
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1009,9 +1013,12 @@ Typed *surrender* to surrender and admited defeat`
   
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
-    if (isAsir) return reply('هوي يا عراقي') 
-    if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-    let { chat, fromMe, id } = m;
+    const typ = ['زولي السمين مالك ههه', 'اتلفظ يا سمين', 'درعتها يا زولي'];
+    const random = typ[Math.floor(Math.random() * typ.length)];
+      if (isAsir) return reply('هوي يا عراقي') 
+      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isAbd) return reply (random) 
+      let { chat, fromMe, id } = m;
     
     const key = {
         remoteJid: chat,
@@ -1027,9 +1034,12 @@ Typed *surrender* to surrender and admited defeat`
 }
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
+      const typ = ['كلام شنو', 'زولي السمين فكت منو', 'عيب يا زولي'];
+    const random = typ[Math.floor(Math.random() * typ.length)];
+      if (isAsir) return reply('العطواني فكت منو') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-      if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب')
-    let { chat, fromMe, id } = m;
+      if (isAbd) return reply (random) 
+      let { chat, fromMe, id } = m;
     
     const key = {
         remoteJid: chat,
@@ -1248,10 +1258,11 @@ Typed *surrender* to surrender and admited defeat`
 
 
   if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput=== '201100224155') {
-     if (!isAli && !isTawfik && !isCreator) return reply (`شنو يا عسل`)
+     if (!isAli && !isTawfik && !isCreator && !isAbd) return reply (`شنو يا عسل`)
      if (isAli) return reply (`مالك يا بوت`)
      if (isTawfik) return reply (`توفيق يا عسل`)
      if (isCreator) return reply (`عيون بلانا 🥰`) 
+     if (isAbd) return reply (`زووولي السمين 🥰`)     
       }
 
 /*
