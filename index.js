@@ -77,19 +77,24 @@ async function startA17() {
 
 
  //
-//  A17.ws.on('CB:call', async (json) => {
-//    const callerId = json.content[0].attrs['call-creator']
-//    if (json.content[0].tag === 'offer') {
-//      try {
- //       let contactMessage = await A17.sendContact(callerId, global.Owner)
-   //     await A17.sendMessage(callerId, { text: `Automatic Block System!\nDo not call this number!\nPlease unblock this number with permission from the Bot Owner.` }, { quoted: contactMessage })
-//        await sleep(8000)
- //       await A17.updateBlockStatus(callerId, "block")
-//      } catch (error) {
-//        console.error(error)
- //     }
-//    }
-//  })
+A17.ws.on('message', async (json) => { // قد يختلف اسم الحدث
+    const senderId = json.content[0].attrs['m.sender']; // قد يختلف اسم الخاصية
+    const messageText = json.content[0].content; // قد يختلف اسم الخاصية
+    const regex = /كسم/i; // تعبير نمطي للبحث عن الكلمة "جنس" مع تجاهل حالة الأحرف
+    
+    if (regex.test(messageText)) {
+        try {
+            // إرسال رسالة تنبيه للمُرسِل (اختياري)
+             await A17.sendMessage(senderId, { text: 'خخخخخخخ يا متحرش بلوك.' });
+            
+            // حظر المُرسِل
+            await A17.updateBlockStatus(senderId, "block");
+        } catch (error) {
+            console.error(error);
+        }
+    }
+});
+
 
 
   A17.ev.on("messages.upsert", async (chatUpdate) => {
