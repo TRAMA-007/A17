@@ -204,6 +204,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [botNumber, ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isShaq = [botNumber, ...global.shaq].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isJoan = [botNumber, ...global.eisa].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isBayome = [botNumber, ...global.bayome].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -1265,11 +1266,17 @@ Typed *surrender* to surrender and admited defeat`
 
 
   if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput.includes('201100224155')) {
-     if (!isAli && !isTawfik && !isCreator && !isAbd) return reply (`شنو يا عسل`)
+    const typ = ['عيون بلانا', 'احكي', 'شنو يا عسل', 'شنو يا زوووو999لي'];
+    const random = typ[Math.floor(Math.random() * typ.length)];
+     if (!isAli && !isTawfik && !isCreator && !isAbd && !isShaq) return reply (random)
      if (isAli) return reply (`مالك يا بوت`)
      if (isTawfik) return reply (`توفيق يا عسل`)
      if (isCreator) return reply (`عيون بلانا 🥰`) 
-     if (isAbd) return reply (`زووولي السمين 🥰`)     
+     if (isAbd) return reply (`زووولي السمين 🥰`) 
+    const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
+    const gg = tt[Math.floor(Math.random() * tt.length)];
+    if (isShaq) return reply (gg) 
+
       }
 
 /*
