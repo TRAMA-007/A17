@@ -7109,6 +7109,7 @@ break;
 
       case 'افينشرين':
       case 'aventurine':
+      case 'كاكافاشا':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
@@ -7117,6 +7118,28 @@ break;
         buffer2 = await getBuffer("https://pbs.twimg.com/media/GG0z7tGbMAARnBi.jpg:large");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break;
+
+
+      case 'boothill':
+      case 'بوتهيل':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GJtziVUWQAAGn4P?format=jpg&name=large`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
+
+
+      case 'robin':
+      case 'روبن':
+      case 'روبين':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GJtznMUWwAAbKyX.jpg:large`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
+
 
 
      case 'menggoda':
