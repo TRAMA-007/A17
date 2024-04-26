@@ -1551,17 +1551,15 @@ Then if I got any juice left I'm gonna get Sunday too`);
         case 'hh': { 
   
         const starrail = {
-        "uid": "701607417",
+        "uid": "724281429",
         "lang": "ua",
-        "name": "1212",
-        "image": {"1212": "https://graph.org/file/6e2751669c68f92843e64.jpg"}, 
          };
           
-        const response = await axios.post("https://starraillcard.up.railway.app/api/card", starrail, { 
+        const response = await axios.post("https://starraillcard.up.railway.app/api/genshin/profile", starrail, { 
           headers: { "Content-Type": "application/json"}, 
      });
           
-        await A17.sendMessage(m.chat, { text: response.data }, { quoted: m });
+        await A17.sendMessage(m.chat, { text: response.json() }, { quoted: m });
       } 
         break;
 
