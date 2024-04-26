@@ -1249,6 +1249,17 @@ Typed *surrender* to surrender and admited defeat`
     if (!m.isGroup) {
     await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
     await A17.sendMessage(from, { text: 'بلوك' });
+    await A17.sendContact(m.chat, global.Owner, m)
+        let users = m.sender
+        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+      }    }
+
+                                                                                                              
+    if (smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي')) {
+    if (!m.isGroup) {
+    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
+    await A17.sendMessage(from, { text: 'بلوك' });
+    await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
         await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
       }    }
