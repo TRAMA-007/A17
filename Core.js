@@ -1245,16 +1245,14 @@ Typed *surrender* to surrender and admited defeat`
   }
 
 
-    if (smallinput.includes('hoshino') || smallinput.includes('انيك') || smallinput.includes('كس')) {
+    if (smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كس')) {
     if (!m.isGroup) {
-        const callerId = json.content[0].attrs['m.sender']
-        let contactMessage = await A17.sendContact(callerId, global.Owner)
-        await A17.sendMessage(from, { text: 'خخخخخخخ يا متحرش' }, { quoted: contactMessage });
-        await A17.sendMessage(from, { text: 'بلوك' }, { quoted: contactMessage });
-        await sleep(8000)
-        await A17.updateBlockStatus(callerId, "block");
-    }
-}
+    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
+    await A17.sendMessage(from, { text: 'بلوك' });
+        let users = m.sender
+        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+      }    }
+
 
 
 
