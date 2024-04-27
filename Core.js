@@ -8324,7 +8324,112 @@ break;
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000085_${q}.png`)
         A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;    
+        break;
+
+
+        case 'card-wriothesely':
+        case 'card-wrio':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000086_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-neauvillate':
+        case 'card-خرطوش':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000087_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-charlotte':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000088_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-furina':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000089_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-chevreuse':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000090_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-navia':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000091_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-gaming':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000092_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-xianyun':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000093_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-chiori':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000094_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        case 'card-arlecchino':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000096_${q}.png`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+        
         
 
 
