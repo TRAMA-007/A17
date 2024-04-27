@@ -8224,10 +8224,8 @@ break;
         const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/profile/${q}?update=true`) 
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000073_${q}.png`)
         A17.sendMessage(from, { image: buffer }, { quoted: m })
-        catch (error) {
           console.error(error);
           reply("uhh..an error occurred..please make sure you have this character on your profile and (show character details) option is enabled");
-}
        break; 
 
     
