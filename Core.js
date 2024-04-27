@@ -4607,6 +4607,17 @@ case 'post': {
         break;
 
 
+      case 'send': {
+      A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+        const swn = args.join(" ")
+        const number = swn.split("/")[0];
+        const message = swn.split("/")[1];
+        await A17.sendMessage(number+ '@s.whatsapp.net', { text: message, mentions: [m.sender] })
+        reply(`تم الطبخ`)
+      }
+        break;
+
+
       case 'remove': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
