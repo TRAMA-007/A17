@@ -1265,6 +1265,16 @@ Typed *surrender* to surrender and admited defeat`
       }    }
 
 
+    if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('ass')) {
+    if (!m.isGroup) {
+    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
+    await A17.sendMessage(from, { text: 'بلوك' });
+    await A17.sendContact(m.chat, global.Owner, m)
+        let users = m.sender
+        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+      }    }
+
+
 
 
     if (smallinput.includes('ارونا احسن') || smallinput.includes('ارونا افضل') || smallinput.includes('ارونا فوء')) {
