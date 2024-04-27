@@ -1252,6 +1252,10 @@ Typed *surrender* to surrender and admited defeat`
     await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
         await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+      const txtmsg = `*تم الجغم*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
       }    }
 
                                                                                                               
@@ -1278,6 +1282,10 @@ Typed *surrender* to surrender and admited defeat`
     await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
         await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+      const txtmsg = `*تم الجغم*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
       }    }
 
 
@@ -1288,6 +1296,24 @@ Typed *surrender* to surrender and admited defeat`
     await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
         await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+    const txtmsg = `*تم الجغم*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
+      }    }
+
+
+    if (smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck')) {
+    if (!m.isGroup) {
+    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
+    await A17.sendMessage(from, { text: 'بلوك' });
+    await A17.sendContact(m.chat, global.Owner, m)
+        let users = m.sender
+        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+    const txtmsg = `*تم الجغم*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
       }    }
 
 
