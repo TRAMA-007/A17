@@ -8221,11 +8221,16 @@ break;
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/profile/${q}?update=true`) 
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000073_${q}.png`)
         A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
-        
+        catch (error) {
+          console.error(error);
+          reply("uhh..an error occurred..please make sure you have this character on your profile and (show character details) option is enabled");
+}
+       break; 
 
+    
      case 'card-layla':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
