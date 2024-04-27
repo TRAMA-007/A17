@@ -8221,12 +8221,16 @@ break;
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/profile/${q}?update=true`) 
+        const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/profile/${q}?update=true`)
+        sleep(15000);
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000073_${q}.png`)
+        gg = await axios.get(`https://starraillcard.up.railway.app/card/gen_10000073_${q}.png`)
+        const nahida = gg.data
+        if (nahida.message === 'There was an error retrieving the image; it may be out of date') {
+            return reply("uhh..an error occurred..please make sure you have this character on your profile and (show character details) option is enabled"); 
+          } else {
         A17.sendMessage(from, { image: buffer }, { quoted: m })
-          console.error(error);
-          reply("uhh..an error occurred..please make sure you have this character on your profile and (show character details) option is enabled");
-       break; 
+        } break; 
 
     
      case 'card-layla':
