@@ -8338,7 +8338,7 @@ break;
         break;
 
 
-        case 'card-neauvillate':
+        case 'card-neuvillette':
         case 'card-خرطوش':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -8420,6 +8420,7 @@ break;
 
 
         case 'card-arlecchino':
+        case 'card-daddy':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
