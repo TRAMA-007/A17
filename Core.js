@@ -9061,14 +9061,16 @@ const characterAI = new CharacterAI();
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
+        if (!text) return reply(`Please proide an id!`)
         
         const starid = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}`)
-        reply(`id registered..you can generate your cards now`);
-        const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/profile/${q}?update=true`) 
         const fuck = starid.data;
-        let idtxt = `generating your characters' cards..please wait 20 seconds then try using the card command`
-        await A17.sendMessage(m.chat, { message : idtxt }, { quoted: m })
+        if (fuck.data === 'Successfully') {
+        reply(`id registered..you can generate your star rail cards now`)
+      } else {
+        const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/profile/${q}?update=true`) 
+        reply(`id registered..you can generate your genshin cards now`)
+      }
       }
         break;
         
