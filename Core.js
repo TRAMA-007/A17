@@ -1626,10 +1626,8 @@ const parameters = {
 };
 
 const shiroko = await axios.get(apiUrl, { params: parameters })
-    .then(response => {
-       A17.sendMessage(m.chat, { text: response.data }, { quoted: m });
-      } 
-         } 
+       A17.sendMessage(m.chat, { text: shiroko.data }, { quoted: m });
+      }
         break;
 
 
