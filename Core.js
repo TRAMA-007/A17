@@ -1616,6 +1616,24 @@ Then if I got any juice left I'm gonna get Sunday too`);
         break;
 
 
+      case 'yy': {
+        
+const apiUrl = 'https://starraillcard.up.railway.app/get_profile';
+
+const parameters = {
+    Uid: 701607417,
+    Image: { "1212": "https://graph.org/file/4e0d9651728cec9a07a49.jpg" }
+};
+
+const shiroko = await axios.get(apiUrl, { params: parameters })
+    .then(response => {
+       A17.sendMessage(m.chat, { text: response.data }, { quoted: m });
+      } 
+         } 
+        break;
+
+
+
 
       case 'support': case 'supportgc': {
         if (isBan) return reply(mess.banned);
