@@ -7901,7 +7901,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        reply(`can deez nuts fit in your mouth🤭`)
+        A17.sendMessage(from, { text: `can deez nuts fit in your mouth🤭` }, { quoted: m })
         buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714368521.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
         buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714368522.jpg`)
@@ -8006,7 +8006,96 @@ break;
         break;
 
 
-        
+        case 'mika':
+      case 'ميكا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714369523.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369524.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714369535.jpg`)
+        A17.sendMessage(from, { image: buffer3 }, { quoted: m })
+        break;
+
+
+        case 'kirara':
+      case 'كيرارا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714369670.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369671.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714369672.jpg`)
+        A17.sendMessage(from, { image: buffer3 }, { quoted: m })
+        break;
+
+
+        case 'baizhu':
+      case 'بايزو':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714369719.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369720.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714369721.jpg`)
+        A17.sendMessage(from, { image: buffer3 }, { quoted: m })
+        break;
+
+
+        case 'كافيه':
+      case 'kaveh':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714369771.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369772.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714369773.jpg`)
+        A17.sendMessage(from, { image: buffer3 }, { quoted: m })
+        break;
+
+
+        case 'lynette':
+      case 'لينيت':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714369816.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369817.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;
+
+
+        case 'lyney':
+      case 'ليني':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714369884.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369885.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;
+
+
+        case 'freminet':
+      case 'فريمينت':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714369933.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369934.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;        
 
 
      case 'menggoda':
