@@ -1777,7 +1777,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-        let serika = await getBuffer(`https://api.lolhuman.xyz/api/removebg?apikey=gatadios&img=${util.format(anu)}`) 
+        let serika = await getBuffer(`https://api.neoxr.eu/api/nobg?apikey=gateapix&image=${util.format(anu)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
@@ -5525,41 +5525,6 @@ case 'post': {
 
 
       //
-      case 'igdl':
-      case 'instagram':
-      case 'instagramreels':
-      case 'igreels':
-
-        {
-          if (isBan) {
-            return reply(mess.banned);
-          }
-
-          if (isBanChat) {
-            return reply(mess.bangc);
-          }
-
-          // Send a reaction emoji
-          A17.sendMessage(from, { react: { text: "🪄", key: m.key } });
-
-          // Check if a link is provided
-          if (!text) {
-            return reply(`Where is the link?\n\nExample: ${prefix + command} https://www.instagram.com/reel/Ctjt0srIQFg/?igshid=MzRlODBiNWFlZA==`);
-          }
-
-          try {
-            // Download the Instagram video
-            let instadownload = await instadl(text);
-
-            // Send the downloaded video as a reply to the command
-            await A17.sendMessage(m.chat, { video: { url: instadownload.url[0].url }, caption: mess.jobdone }, { quoted: m });
-          } catch (error) {
-            console.error('Error while processing Instagram video:', error);
-            return reply('An error occurred while processing the Instagram video.');
-          }
-        }
-        break;
-
 
       // ///
       // case 'igdl': case 'instagramreels': case 'igreels': {
