@@ -8127,7 +8127,7 @@ break;
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-         if (!quoted) {
+         if (!m.quoted) {
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
            await A17.sendMessage(from, { image: sx }, { quoted: m })
