@@ -8127,7 +8127,7 @@ break;
            break;
 
 
-       case 'card-ruan':
+       case 'card-ruan': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8147,7 +8147,7 @@ break;
            break;
 
 
-        case 'card-fuxuan':
+        case 'card-fuxuan':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8167,7 +8167,7 @@ break;
            break;
 
 
-        case 'card-ratio':
+        case 'card-ratio':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8187,7 +8187,7 @@ break;
            break;
 
         case 'card-hanabi':
-        case 'card-sparkle':
+        case 'card-sparkle':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8207,7 +8207,7 @@ break;
            break;
 
 
-         case 'card-seele':
+         case 'card-seele':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8227,7 +8227,7 @@ break;
            break;
 
 
-        case 'card-blade':
+        case 'card-blade':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8248,6 +8248,8 @@ break;
 
 
         case 'card-silver':
+        case 'card-silverwolf':
+        case 'card-brony':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8267,7 +8269,7 @@ break;
            break;
 
 
-         case 'card-kafka':
+         case 'card-kafka':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8288,6 +8290,7 @@ break;
 
 
         case 'card-swan':
+        case 'card-blackswan':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8307,7 +8310,7 @@ break;
            break;
 
 
-        case 'card-topaz':
+        case 'card-topaz':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8327,7 +8330,7 @@ break;
            break;
 
 
-         case 'card-bronya':
+         case 'card-bronya':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8347,7 +8350,7 @@ break;
            break;
 
 
-        case 'card-bailu':
+        case 'card-bailu':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8368,7 +8371,7 @@ break;
 
 
         case 'card-clara':
-        case 'card-klara':
+        case 'card-klara':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8388,7 +8391,7 @@ break;
            break;
 
 
-         case 'card-himeko':
+         case 'card-himeko':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8408,7 +8411,7 @@ break;
            break;
 
 
-        case 'card-welt':
+        case 'card-welt':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8429,7 +8432,7 @@ break;
 
 
         case 'card-gepard':
-        case 'card-jepard':
+        case 'card-jepard': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8449,7 +8452,7 @@ break;
            break;
 
 
-         case 'card-loucha':
+         case 'card-loucha':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8469,7 +8472,7 @@ break;
            break;
 
 
-        case 'card-jingyuan':
+        case 'card-jingyuan':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8489,7 +8492,7 @@ break;
            break;
 
 
-        case 'card-lunae':
+        case 'card-lunae':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8509,7 +8512,7 @@ break;
            break;
 
 
-         case 'card-huohuo':
+         case 'card-huohuo':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8529,7 +8532,7 @@ break;
            break;
 
         case 'card-argenti':
-        case 'card-arjenti':
+        case 'card-arjenti':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8549,7 +8552,7 @@ break;
            break;
 
 
-        case 'card-march':
+        case 'card-march':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8569,7 +8572,7 @@ break;
            break;
 
 
-        case 'card-dan':
+        case 'card-dan':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8589,7 +8592,7 @@ break;
            break;
 
 
-        case 'card-asta':
+        case 'card-asta':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8609,7 +8612,7 @@ break;
            break;
 
 
-        case 'card-herta':
+        case 'card-herta':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8629,7 +8632,7 @@ break;
            break;
 
         case 'card-serval':
-        case 'card-sevral':
+        case 'card-sevral':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8649,7 +8652,7 @@ break;
            break;
 
 
-        case 'card-natasha':
+        case 'card-natasha':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8669,7 +8672,7 @@ break;
            break;
 
 
-        case 'card-pela':
+        case 'card-pela':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8688,7 +8691,7 @@ break;
         } 
            break;
 
-        case 'card-sampo':
+        case 'card-sampo':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8707,7 +8710,7 @@ break;
         } 
            break;
 
-        case 'card-hook':
+        case 'card-hook':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8727,7 +8730,7 @@ break;
            break;
 
 
-        case 'card-lynx':
+        case 'card-lynx':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8747,7 +8750,7 @@ break;
            break;
 
 
-        case 'card-luka':
+        case 'card-luka':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8767,7 +8770,7 @@ break;
            break;
 
 
-        case 'card-qq':
+        case 'card-qq':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8787,7 +8790,7 @@ break;
            break;
 
 
-        case 'card-tingyun':
+        case 'card-tingyun':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8807,7 +8810,7 @@ break;
            break;
 
 
-        case 'card-sushang':
+        case 'card-sushang':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8827,7 +8830,7 @@ break;
            break;
 
 
-        case 'card-yukong':
+        case 'card-yukong':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8847,7 +8850,7 @@ break;
            break;
 
 
-        case 'card-yanqing':
+        case 'card-yanqing':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8867,7 +8870,7 @@ break;
            break;
 
 
-        case 'card-guinafen':
+        case 'card-guinafen':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8887,7 +8890,7 @@ break;
            break;
 
 
-        case 'card-xueyi':
+        case 'card-xueyi':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8907,7 +8910,7 @@ break;
            break;
 
 
-        case 'card-hanya':
+        case 'card-hanya':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8927,7 +8930,7 @@ break;
            break;
 
 
-        case 'card-misha':
+        case 'card-misha':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8946,7 +8949,7 @@ break;
         } 
            break;
 
-        case 'card-acheron':
+        case 'card-acheron':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -8966,7 +8969,7 @@ break;
            break;
 
 
-        case 'card-aventurine':
+        case 'card-aventurine':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
