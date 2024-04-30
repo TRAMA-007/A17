@@ -8117,7 +8117,7 @@ break;
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
         A17.sendMessage(from, { image: buffer, caption: 'heres your jingliu'}, { quoted: m })
-       } else if (/image/.test(mime)) {
+       } else {
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
           let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
