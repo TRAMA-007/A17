@@ -8127,10 +8127,10 @@ break;
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-         if (!m.quoted) {
+         if (!m.quoted && !/image/.test(mime)) {
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
-          return A17.sendMessage(from, { image: sx }, { quoted: m })
+          await A17.sendMessage(from, { image: sx }, { quoted: m })
          } else if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
