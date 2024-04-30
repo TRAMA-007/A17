@@ -8112,16 +8112,16 @@ break;
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
         if (!/image/.test(mime)) {
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
-        A17.sendMessage(from, { image: buffer, caption: 'heres your jingliu'}, { quoted: m })
-       } else {
+        sx = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
+        A17.sendMessage(from, { image: sx }, { quoted: m })
+       } else if (/image/.test(mime)) {
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
           let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
-           let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1212": "${util.format(anu)}"}`) 
+           const jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1212": "${util.format(anu)}"}`) 
           buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
           A17.sendMessage(from, { image: buffer }, { quoted: m })
          }
