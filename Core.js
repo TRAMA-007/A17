@@ -8111,16 +8111,13 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
-        
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
           let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
-         const jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1212": "${util.format(anu)}"}`) 
-         if (jingliu.data.data === 'Successfully') {
+         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1212": "${util.format(anu)}"}`) 
           buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
-          A17.sendMessage(from, { image: buffer }, { quoted: m })
-          }
+        await A17.sendMessage(from, { image: buffer }, { quoted: m })
            break;
 
 
