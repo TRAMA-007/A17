@@ -8115,7 +8115,7 @@ break;
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
           let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1212": "${util.format(anu)}"}`) 
+      //   let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1212": "${util.format(anu)}"}`) 
           buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
         await A17.sendMessage(from, { image: buffer }, { quoted: m })
            break;
