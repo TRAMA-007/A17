@@ -1402,7 +1402,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('بنيكك')|| smallinput.includes('ببلك') || smallinput.includes('بحشك')) {
-    reply (`كلام بدون افعال🤏🤭`);
+    reply (`كام بدون افعال🤏🤭`);
     }
 
 
