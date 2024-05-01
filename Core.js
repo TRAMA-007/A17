@@ -10595,7 +10595,7 @@ const characterAI = new CharacterAI();
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}fgo jp/934268115`)
 
         const swn = args.join(" ")
         const reigon = swn.split("/")[0];
@@ -10604,11 +10604,12 @@ const characterAI = new CharacterAI();
         const ba = await axios.get(`https://rayshift.io/api/v1/support/decks/${reigon}/${id}`)
         const aru = ba.data.response;
         let arutxt = `
- *Name: ${ba.name}*
- *code: ${ba.code}*
-*level: ${ba.level}*
-`
-        await A17.sendMessage(m.chat, { image: { url: ba.decks.0}, caption: arutxt }, { quoted: m })
+ *Name: ${aru.name}*
+ *code: ${aru.code}*
+*level: ${aru.level}*
+*last login: ${aru.lastLogin}*
+`;
+        await A17.sendMessage(m.chat, { image: { url: aru.decks[0]}, caption: arutxt }, { quoted: m })
      }
         break;
 
