@@ -1417,7 +1417,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
   
 
     if (smallinput.includes('ما شغال')) {
-    reply (`جربتو؟🤭`);
+    reply (`جرببتو؟🤭`);
   }
 
 
