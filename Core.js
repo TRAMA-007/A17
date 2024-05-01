@@ -10590,11 +10590,11 @@ const characterAI = new CharacterAI();
         break;
 
 
-      case 'jp':{
+      case 'fgo':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}fgo jp/934268115`)
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}fgo jp/${q}`)
         
         const ba = await axios.get(`https://rayshift.io/api/v1/support/decks/jp/934268115`)
         const aru = ba.data.response;
@@ -10604,7 +10604,7 @@ const characterAI = new CharacterAI();
 level: ${aru.level}
 last login: ${aru.lastLogin}
 `;
-        await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })
+        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[0] }, caption: arutxt }, { quoted: m })
      }
         break;
 
