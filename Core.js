@@ -10593,8 +10593,7 @@ const characterAI = new CharacterAI();
       case 'fgo':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}fgo jp/934268115`)
 
         const swn = args.join(" ")
@@ -10609,7 +10608,7 @@ const characterAI = new CharacterAI();
 *level: ${aru.level}*
 *last login: ${aru.lastLogin}*
 `;
-        await A17.sendMessage(m.chat, { image: { url: aru.decks[0]}, caption: arutxt }, { quoted: m })
+        await A17.sendMessage(m.chat, { image: { url: aru.decks["0"]}, caption: arutxt }, { quoted: m })
      }
         break;
 
