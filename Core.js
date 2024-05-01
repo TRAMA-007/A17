@@ -10587,7 +10587,30 @@ const characterAI = new CharacterAI();
 `;
        await A17.sendMessage(m.chat, { image: { url: aru.image.portrait}, caption: arutxt }, { quoted: m })
      }
-        break;  
+        break;
+
+
+      case 'fgo':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
+
+        const swn = args.join(" ")
+        const reigon = swn.split("/")[0];
+        const id = swn.split("/")[1];
+        
+        const ba = await axios.get(`https://rayshift.io/api/v1/support/decks/${reigon}/${id}`)
+        const aru = ba.data.response;
+        let arutxt = `
+ *Name: ${ba.name}*
+ *code: ${ba.code}*
+*level: ${ba.level}*
+`
+        await A17.sendMessage(m.chat, { image: { url: ba.decks.0}, caption: arutxt }, { quoted: m })
+     }
+        break;
 
 
       case 'genshin':{
