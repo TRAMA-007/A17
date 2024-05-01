@@ -10604,7 +10604,7 @@ const characterAI = new CharacterAI();
 level: ${aru.level}
 last login: ${aru.lastLogin}
 `;
-        await A17.sendMessage(m.chat, { image: { url: aru.decks["1"] }, caption: arutxt }, { quoted: m })
+        await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })
      }
         break;
 
