@@ -372,84 +372,84 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
        if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=ge7zagRQeIBsSfJgR5GUkPUv_BgbdLEwyM8mTv_Xgfc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=ge7zagRQeIBsSfJgR5GUkPUv_BgbdLEwyM8mTv_Xgfc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         }
 
 
      if (!isCmd && islucas && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=Dvm_7p9ea1uPKtENq18-tjJqHpFkdmP-nFreeGx00s0&sessionId=Vc8LYfrj8siOpn8y42EoTb8PO6FtWhmUnuJReoiKjyI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=Dvm_7p9ea1uPKtENq18-tjJqHpFkdmP-nFreeGx00s0&sessionId=Vc8LYfrj8siOpn8y42EoTb8PO6FtWhmUnuJReoiKjyI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
      }
 
 
     if (!isCmd && isTawfik && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=XX3c9hBaUxR2qsF9VfbhojEsdrtYCSWZj4ZiuWeXaeI&sessionId=1u-66beykntXvPGVUws6CD09zxy0m4nX5VIabzIzo98&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=XX3c9hBaUxR2qsF9VfbhojEsdrtYCSWZj4ZiuWeXaeI&sessionId=1u-66beykntXvPGVUws6CD09zxy0m4nX5VIabzIzo98&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isAdam && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=JmfEuTkX9oGCDIpbvLUWocnVrm8-mtXJttnumQizXoI&sessionId=wKDKr86xnHcIB8igZr7Jip6gUZYyStNHpOvwd449FG4&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=JmfEuTkX9oGCDIpbvLUWocnVrm8-mtXJttnumQizXoI&sessionId=wKDKr86xnHcIB8igZr7Jip6gUZYyStNHpOvwd449FG4&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isCreator && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=hRYPx44-XJR8REiz_p_bPJHXeiFGzVtCR1Aec7cIg9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=hRYPx44-XJR8REiz_p_bPJHXeiFGzVtCR1Aec7cIg9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isAli && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=Pn2NO1mzCsmgCaZ6Eocxqg2bOnlPUv2sk7qwHWgEYWo&sessionId=Y9WOS2dfBmOvFwNAzPIl0_v_iNzg_HNFFkE2bzxGYE4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=Pn2NO1mzCsmgCaZ6Eocxqg2bOnlPUv2sk7qwHWgEYWo&sessionId=Y9WOS2dfBmOvFwNAzPIl0_v_iNzg_HNFFkE2bzxGYE4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
           }
 
 
     if (!isCmd && isAwad && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=WN8Kmu9Zh3jHMAIG3J3xaZa8GXZZwHOeJ9-1LQpoEdA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=WN8Kmu9Zh3jHMAIG3J3xaZa8GXZZwHOeJ9-1LQpoEdA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isEgo && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=scsnOOq2jDNHqRpA9Inuckrb5HHqyQZgtxPFQyPJ-eQ&sessionId=uJiiBbwGUs4dDLYf768T2qvm83pz8NeKVS99R-efWPI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=scsnOOq2jDNHqRpA9Inuckrb5HHqyQZgtxPFQyPJ-eQ&sessionId=uJiiBbwGUs4dDLYf768T2qvm83pz8NeKVS99R-efWPI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isDabi && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=bDtHBp4PQ9E58ja8DfuVWkbjDUh5fCFJnaNQtIJ54Rg&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=bDtHBp4PQ9E58ja8DfuVWkbjDUh5fCFJnaNQtIJ54Rg&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isKaze && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=Q2lM-zMJTtq52KQfHjokb4gDx1_fbWahjim8ET8HfOM&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=Q2lM-zMJTtq52KQfHjokb4gDx1_fbWahjim8ET8HfOM&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isJoan && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=J4XwSJQWf8sUTSlsyAsdHgnG2JrUpPY77XdWtGgqEnw&sessionId=pW8FCoyftHdOug1c2mLwAqkwld9zmTKni4RpyaiQNKs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=J4XwSJQWf8sUTSlsyAsdHgnG2JrUpPY77XdWtGgqEnw&sessionId=pW8FCoyftHdOug1c2mLwAqkwld9zmTKni4RpyaiQNKs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isHkl && !m.isGroup){
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=arona&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=sS652w4JLzJ_mthbNrXKevxN0n6MGxfjcA5EZqogR2Y&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=sS652w4JLzJ_mthbNrXKevxN0n6MGxfjcA5EZqogR2Y&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
@@ -1793,8 +1793,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-        let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=arona&url=${util.format(anu)}`) 
-        let shiroko = await axios.get(`https://skizo.tech/api/toanime?apikey=arona&url=${util.format(anu)} `)
+        let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=plana&url=${util.format(anu)}`) 
+        let shiroko = await axios.get(`https://skizo.tech/api/toanime?apikey=plana&url=${util.format(anu)} `)
         const sensei = shiroko.data.status;
         if (sensei === 400) {
             return reply("oops..daily limit reached..please wait for tomorrow reset");
@@ -2886,7 +2886,7 @@ break;
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
 
         try {
-          const hoshino = await axios.get(`https://skizo.tech/api/openai?apikey=adamxion&messages=&system=&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/openai?apikey=plana&messages=&system=&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -2915,7 +2915,7 @@ break;
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
 
         try {
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=zaWoUtRPYvg4Xr2JWC_30WmL6_mewNJN57nuMOJSBmQ&sessionId=DCXsI093VKdbdaqNp_T4AVjTqWY73niCwCJ995MvQqA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=zaWoUtRPYvg4Xr2JWC_30WmL6_mewNJN57nuMOJSBmQ&sessionId=DCXsI093VKdbdaqNp_T4AVjTqWY73niCwCJ995MvQqA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -6180,7 +6180,6 @@ for (let i = 0; i < 7 && i < tawfik.data.result.length; i++) {
     // هنا يمكنك استخدام مصفوفة stickers كما تحتاج
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
 const imageCount = 5; // عدد الصور التي تريد إرسالها
-
 for (let i = 0; i < imageCount && i < essam.length; i++) {
     const imageUrl = essam[i];
 
@@ -10678,7 +10677,7 @@ last login: ${aru.lastLogin}
         if (isIssamm) return reply(`ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني`)
         if (isIssammm) return reply(`لول فاكرني ناسية الرقم دا`)        
         if (!text) return reply(`Please provide a prompt`) 
-        const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=arona&prompt=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=plana&prompt=${encodeURIComponent(q)}`)
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { image: { url: ig.url} }, { quoted: m })
      }
@@ -10820,7 +10819,7 @@ last login: ${aru.lastLogin}
         if (isBanChat) return reply(mess.bangc);
         if (!isCreator) return reply(`💀`) 
         if (!text) return reply(`Please proide a code`) 
-        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=arona&code=${q}`)
+        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=plana&code=${q}`)
         const fk = apk.data;
         await A17.sendMessage(
           from,
@@ -10851,7 +10850,7 @@ last login: ${aru.lastLogin}
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.download + 'adamxion'},
+          document: { url: fk.download + 'plana'},
           filename: + fk.title.english + '.pdf', 
           mimetype: 'application/pdf',
           quoted: m,
