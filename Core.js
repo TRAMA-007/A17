@@ -1760,7 +1760,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(anu)}`) 
+        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=Gata_Dios&img=${util.format(anu)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break; 
@@ -2907,7 +2907,7 @@ break;
         break;
 
 
-        case 'plana':
+      case 'plana':
       case 'aiussy': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -6118,7 +6118,7 @@ _Click the button below to download_`
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
 
-    const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(q)}`);
+    const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=Gata_Dios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const images = pin.data.result;
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
@@ -6140,7 +6140,7 @@ break;
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}stickers frieren");
 
-    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`);
+    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=Gata_Dios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const results = tawfik.data.result;
 
@@ -8102,7 +8102,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=prinz_eugen_(azur_lane)`)
+        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=Gata_Dios&query=prinz_eugen_(azur_lane)`)
         A17.sendMessage(from, { image: buffer, caption: ':q 💦 '}, { quoted: m })
         break;
 
@@ -9997,7 +9997,7 @@ break;
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}danbooru plana`)
         reply(mess.waiting)
-        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${q}`)
+        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=Gata_Dios&query=${q}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
@@ -10616,7 +10616,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}genshin hu tao`)
         
-        const q = await axios.get(`https://api.lolhuman.xyz/api/genshin/hu tao?apikey=GataDios`)
+        const q = await axios.get(`https://api.lolhuman.xyz/api/genshin/hu tao?apikey=Gata_Dios`)
         reply(mess.waiting);
         const w = q.data.result;
         let hutao = `
@@ -10635,7 +10635,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}character Tachibana kanade`)
         
-        const character = await axios.get(`https://api.lolhuman.xyz/api/character?apikey=GataDios&query=${q}`)
+        const character = await axios.get(`https://api.lolhuman.xyz/api/character?apikey=Gata_Dios&query=${q}`)
         reply(mess.waiting);
         const shiroko = character.data.result;
         let shirokotxt = `
@@ -10654,7 +10654,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { video: { url: ig.result[0]} }, { quoted: m })
@@ -10666,7 +10666,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/twitter?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/twitter?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
         const ig = instgram.data.result.media[0];
         await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
      }
@@ -10689,7 +10689,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const tt = await axios.get(`https://api.lolhuman.xyz/api/tiktok?apikey=GataDios&url=${encodeURIComponent(q)}`)
+        const tt = await axios.get(`https://api.lolhuman.xyz/api/tiktok?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
         const sx = tt.data.result;
         let shirokotxt = `
   *title: ${sx.title}*
@@ -10723,7 +10723,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=GataDios&package=${encodeURIComponent(q)}`)
+        const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=Gata_Dios&package=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const fk = apk.data.result;
         await A17.sendMessage(
@@ -11235,6 +11235,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}manga
   ⌯     ${prefix}feed
   ⌯     ${prefix}foxgirl
+  ⌯     ${prefix}shinobu
+  ⌯     ${prefix}megumin
   ⌯     ${prefix}waifu
   ⌯     ${prefix}loli
   ⌯     ${prefix}coffee
@@ -11243,7 +11245,9 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}hsr (honkai star rail bulids) 
   ⌯     ${prefix}hsr-cards (honkai star rail character cards)
   ⌯     ${prefix}ba (blue archive characters)
+  ⌯     ${prefix}register (for generating your genshin and hsr cards) 
   ⌯     ${prefix}character
+  
  
 
   〢━━━ ♨️ *Informative* ♨️ ━━━〢
