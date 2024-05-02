@@ -752,7 +752,7 @@ Typed *surrender* to surrender and admited defeat`
   }
   
   if (smallinput=='ping') {
-      reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
+      reply (`Hey ${pushname} Png ${latensie.toFixed(4)} ms`)
   }
   
   
