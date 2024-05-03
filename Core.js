@@ -10657,13 +10657,13 @@ cost: ${aru.cost}
         
 
         
-      case 'fgo':{
+      case 'jp':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}fgo jp/${q}`)
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}fgo jp/${q}`)
         
-        const ba = await axios.get(`https://rayshift.io/api/v1/support/decks/jp/934268115`)
+        const ba = await axios.get(`https://rayshift.io/api/v1/support/lookup?apiKey=03555929-1d69-40c0-998c-5f7e7457528f&region=1&friendId=${q}`)
         const aru = ba.data.response;
         let arutxt = `
  Name: ${aru.name}
@@ -10671,8 +10671,37 @@ cost: ${aru.cost}
 level: ${aru.level}
 last login: ${aru.lastLogin}
 `;
+        if (ba.data.status === 200){
         await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[0] }, caption: arutxt }, { quoted: m })
-     }
+        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[1] }, caption: arutxt }, { quoted: m })
+        }else{
+          return reply(`currently in queue..please wait and use the command again`) 
+        } 
+      }
+        break;
+
+
+        case 'na':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}fgo jp/${q}`)
+        
+        const ba = await axios.get(`https://rayshift.io/api/v1/support/lookup?apiKey=03555929-1d69-40c0-998c-5f7e7457528f&region=2&friendId=${q}`)
+        const aru = ba.data.response;
+        let arutxt = `
+ Name: ${aru.name}
+ code: ${aru.code}
+level: ${aru.level}
+last login: ${aru.lastLogin}
+`;
+        if (ba.data.status === 200){
+        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[0] }, caption: arutxt }, { quoted: m })
+        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[1] }, caption: arutxt }, { quoted: m })
+        }else{
+          return reply(`currently in queue..please wait and use the command again`) 
+        } 
+      }
         break;
 
 
