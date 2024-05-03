@@ -10637,19 +10637,20 @@ const characterAI = new CharacterAI();
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
-        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${encodeURIComponent(q)}`)
+        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${q}`)
         const aru = ba.data;
         let arutxt = `
-  *Name: ${aru.name}*
-  *original name: ${aru.originalName}*
-  *class: ${aru.className}*
-*rarity: ${aru.rarity}*
- *cost: ${aru.cost}*
- *max level: ${aru.lvMax}*
- *gender: ${aru.gender}*
- *attrubite: ${aru.attribute}*
- *traits: ${aru.traits.name}*
- *cards: ${aru.cards}*
+  Name: ${aru.name}
+  original name: ${aru.originalName}
+  class: ${aru.className}
+rarity: ${aru.rarity}
+ cost: ${aru.cost}
+ max level: ${aru.lvMax}
+ gender: ${aru.gender}
+ attrubite: ${aru.attribute}
+ traits: ${aru.traits.name}
+ cards: ${aru.cards}*
+ 
 `;
 await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })  
      }
