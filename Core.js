@@ -10671,12 +10671,13 @@ cost: ${aru.cost}
 level: ${aru.level}
 last login: ${aru.lastLogin}
 `;
-        if (ba.data.status === 200){
+        if (ba.data.message === 'in queue'){
+          return reply(`currently in queue..please wait for 10 seconds then use the command again`)
+          }else{
         await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[0] }, caption: arutxt }, { quoted: m })
         await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[1] }, caption: arutxt }, { quoted: m })
-        }else{
-          return reply(`currently in queue..please wait and use the command again`) 
-        } 
+        
+           } 
       }
         break;
 
@@ -10695,12 +10696,13 @@ last login: ${aru.lastLogin}
 level: ${aru.level}
 last login: ${aru.lastLogin}
 `;
-        if (ba.data.status === 200){
+        if (ba.data.message === 'in queue'){
+          return reply(`currently in queue..please wait for 10 seconds then use the command again`)
+          }else{
         await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[0] }, caption: arutxt }, { quoted: m })
         await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[1] }, caption: arutxt }, { quoted: m })
-        }else{
-          return reply(`currently in queue..please wait and use the command again`) 
-        } 
+        
+           } 
       }
         break;
 
