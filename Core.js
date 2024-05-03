@@ -10641,19 +10641,20 @@ const characterAI = new CharacterAI();
         const aru = ba.data[0];
         const traitNames = aru.traits.map(traits => traits.name).join(',');
         let arutxt = `
-  *Name: ${aru.name}*
-  *original name: ${aru.originalName}*
-  *class: ${aru.className}*
-*rarity: ${aru.rarity}*
-*cost: ${aru.cost}*
- *max level: ${aru.lvMax}*
- *Gender: ${aru.gender}*
- *attribute: ${aru.attribute}*
- *traits: ${traitNames}* 
+  Name: ${aru.name}
+  original name: ${aru.originalName}
+  class: ${aru.className}
+rarity: ${aru.rarity}
+cost: ${aru.cost}
+ max level: ${aru.lvMax}
+ Gender: ${aru.gender}
+ attribute: ${aru.attribute}
+ traits: ${traitNames} 
 `;
-  await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })   
+  await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["4"]}, caption: arutxt }, { quoted: m })   
     }
         break;
+        
 
         
       case 'fgo':{
