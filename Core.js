@@ -10651,7 +10651,7 @@ const characterAI = new CharacterAI();
  *attrubite: ${traitNames}*
  *cards: ${aru.cards}*
 `;
-await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })  
+await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })  
      }
         break;
 
