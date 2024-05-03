@@ -10602,7 +10602,6 @@ const characterAI = new CharacterAI();
       case 'ba':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
@@ -10631,6 +10630,34 @@ const characterAI = new CharacterAI();
      }
         break;
 
+
+      case 'servant':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
+        
+        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${encodeURIComponent(q)}`)
+        reply(mess.waiting);
+        const aru = ba.data;
+        const traitNames = aru.traits.map(traits => traits.name).join(',');
+        let arutxt = `
+  *Name: ${aru.name}*
+  *original name: ${aru.originalName}*
+ *class: ${aru.className}*
+*rarity: ${aru.rarity}*
+ *cost: ${aru.cost}*
+ *max level: ${aru.lvMax}*
+ *gender: ${aru.gender}*
+ *attrubite: ${traitNames}*
+ *cards: ${aru.cards}*
+`;
+await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["1"]}, caption: '1st ascension' }, { quoted: m })
+ await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["2"]}, caption: '2nd ascension' }, { quoted: m })
+  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["3"]}, caption: '3rd ascension' }, { quoted: m })
+   await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["4"]}, caption: arutxt }, { quoted: m })  
+     }
+        break;
 
       case 'fgo':{
         if (isBan) return reply(mess.banned);
