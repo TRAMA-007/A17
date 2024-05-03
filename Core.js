@@ -10637,24 +10637,25 @@ const characterAI = new CharacterAI();
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
-        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${q}`)
+        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?lang=en&name=${q}`)
         const aru = ba.data[0];
         const traitNames = aru.traits.map(traits => traits.name).join(',');
         let arutxt = `
-  Name: ${aru.name}
-  original name: ${aru.originalName}
-  class: ${aru.className}
-rarity: ${aru.rarity}
- cost: ${aru.cost}
- max level: ${aru.lvMax}
- Gender: ${aru.gender}
- attribute: ${aru.attribute}
- traits: ${traitNames}
- Voice actor: ${aru.profile.cv} 
- Artist: ${aru.profile.illustrator} 
+  *Name: ${aru.name}*
+  *original name: ${aru.originalName}*
+  *class: ${aru.className}*
+*rarity: ${aru.rarity}*
+*cost: ${aru.cost}*
+ *max level: ${aru.lvMax}*
+ *Gender: ${aru.gender}*
+ *attribute: ${aru.attribute}*
+ *traits: ${traitNames}* 
 `;
-await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })  
-     }
+await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[1]}, caption: 'first ascension' }, { quoted: m })
+  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[2]}, caption: 'second ascension' }, { quoted: m })
+  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[3]}, caption: 'third ascension' }, { quoted: m })
+        await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })   
+    }
         break;
 
       case 'fgo':{
