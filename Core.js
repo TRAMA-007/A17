@@ -10639,6 +10639,7 @@ const characterAI = new CharacterAI();
         
         const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${q}`)
         const aru = ba.data[0];
+        const traitNames = aru.traits.map(traits => traits.name).join(',');
         let arutxt = `
   Name: ${aru.name}
   original name: ${aru.originalName}
@@ -10646,6 +10647,9 @@ const characterAI = new CharacterAI();
 rarity: ${aru.rarity}
  cost: ${aru.cost}
  max level: ${aru.lvMax}
+ Gender: ${aru.gender}
+ attribute: ${aru.attribute}
+ traits: ${traitNames}
 `;
 await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })  
      }
