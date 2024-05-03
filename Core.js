@@ -10638,8 +10638,7 @@ const characterAI = new CharacterAI();
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
         const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${encodeURIComponent(q)}`)
-        reply(mess.waiting);
-        const aru = ba.data;
+        onst aru = ba.data;
         const traitNames = aru.traits.map(traits => traits.name).join(',');
         let arutxt = `
   *Name: ${aru.name}*
@@ -10652,10 +10651,7 @@ const characterAI = new CharacterAI();
  *attrubite: ${traitNames}*
  *cards: ${aru.cards}*
 `;
-await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["1"]}, caption: '1st ascension' }, { quoted: m })
- await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["2"]}, caption: '2nd ascension' }, { quoted: m })
-  await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["3"]}, caption: '3rd ascension' }, { quoted: m })
-   await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["4"]}, caption: arutxt }, { quoted: m })  
+await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })  
      }
         break;
 
