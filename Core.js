@@ -950,6 +950,9 @@ Typed *surrender* to surrender and admited defeat`
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+      const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
+    const gg = tt[Math.floor(Math.random() * tt.length)];
+    if (isShaq) return reply (gg) 
     // قائمة بروابط الصور المختلفة
     const imageUrls = [
  'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
