@@ -10639,16 +10639,16 @@ const characterAI = new CharacterAI();
         
         const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${encodeURIComponent(q)}`)
         const aru = ba.data;
-        const traitNames = aru.traits.map(traits => traits.name).join(',');
         let arutxt = `
   *Name: ${aru.name}*
   *original name: ${aru.originalName}*
- *class: ${aru.className}*
+  *class: ${aru.className}*
 *rarity: ${aru.rarity}*
  *cost: ${aru.cost}*
  *max level: ${aru.lvMax}*
  *gender: ${aru.gender}*
- *attrubite: ${traitNames}*
+ *attrubite: ${aru.attribute}*
+ *traits: ${aru.traits.name}*
  *cards: ${aru.cards}*
 `;
 await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })  
