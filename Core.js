@@ -10651,7 +10651,7 @@ const characterAI = new CharacterAI();
  *attribute: ${aru.attribute}*
  *traits: ${traitNames}* 
 `;
-  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })   
+  await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })   
     }
         break;
 
