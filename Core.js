@@ -10652,10 +10652,10 @@ const characterAI = new CharacterAI();
  *attrubite: ${traitNames}*
  *cards: ${aru.cards}*
 `;
-await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["1"]}, caption: '1st ascension' }, { quoted: m })
- await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["2"]}, caption: '2nd ascension' }, { quoted: m })
-  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["3"]}, caption: '3rd ascension' }, { quoted: m })
-   await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension["4"]}, caption: arutxt }, { quoted: m })  
+await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["1"]}, caption: '1st ascension' }, { quoted: m })
+ await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["2"]}, caption: '2nd ascension' }, { quoted: m })
+  await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["3"]}, caption: '3rd ascension' }, { quoted: m })
+   await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["4"]}, caption: arutxt }, { quoted: m })  
      }
         break;
 
