@@ -10651,13 +10651,11 @@ const characterAI = new CharacterAI();
  *attribute: ${aru.attribute}*
  *traits: ${traitNames}* 
 `;
-await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[1]}, caption: 'first ascension' }, { quoted: m })
-  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[2]}, caption: 'second ascension' }, { quoted: m })
-  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[3]}, caption: 'third ascension' }, { quoted: m })
-        await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })   
+  await A17.sendMessage(m.chat, { image: { url:aru.CharaGraph.ascension[4]}, caption: arutxt }, { quoted: m })   
     }
         break;
 
+        
       case 'fgo':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
