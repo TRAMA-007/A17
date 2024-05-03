@@ -10646,11 +10646,6 @@ const characterAI = new CharacterAI();
 rarity: ${aru.rarity}
  cost: ${aru.cost}
  max level: ${aru.lvMax}
- gender: ${aru.gender}
- attrubite: ${aru.attribute}
- traits: ${aru.traits.name}
- cards: ${aru.cards}*
- 
 `;
 await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })  
      }
