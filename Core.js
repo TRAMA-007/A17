@@ -10638,7 +10638,7 @@ const characterAI = new CharacterAI();
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
         const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?name=${q}`)
-        const aru = ba.data;
+        const aru = ba.data[0];
         let arutxt = `
   Name: ${aru.name}
   original name: ${aru.originalName}
