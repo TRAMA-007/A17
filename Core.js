@@ -10650,6 +10650,18 @@ rarity: ${aru.rarity}
  Gender: ${aru.gender}
  attribute: ${aru.attribute}
  traits: ${traitNames}
+ Catds: ${aru.cards}
+ Voice actor: ${aru.profile.cv} 
+ Artist: ${aru.profile.illustrator}
+ Strength: ${aru.profile.stats.strength}
+ endurance: ${aru.profile.stats.endurance}
+ agility: ${aru.profile.stats.agility}
+ magic: ${aru.profile.stats.magic}
+ luck: ${aru.profile.stats.luck}
+ Np rank : ${aru.profile.stats.np}
+ personality: ${aru.profile.stats.personality}
+ policy: ${aru.profile.stats.policy}
+ agility: ${aru.profile.stats.agility}
 `;
 await A17.sendMessage(m.chat, { text: arutxt }, { quoted: m })  
      }
