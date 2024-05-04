@@ -5204,7 +5204,7 @@ case 'post': {
           //
           let anu = await GraphOrg(media5);
           m.reply(`*Generated Image URL:* \n\n${util.format(anu)}\n`);
-        } else if (/webp/.test(mime)) {
+        } else if (/sticker/.test(mime)) {
           //
           try {
             let anu = await GraphOrg(media5);
