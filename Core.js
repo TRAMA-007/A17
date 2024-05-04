@@ -500,34 +500,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-    // Assuming 'message' is the object representing the incoming message
-const sxx = message.mimetype || ''; // Get mimetype or set to empty string if undefined
-const shiroko = /image|video|sticker|audio/.test(mimeType);
-let { GraphOrg } = require("./lib/uploader");
-
-if (shiroko && m.isGroup) {
-let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(sxx);
-  let serika = await axios.get(`https://nsfw-categorize.it/api/upload?url=${util.format(anu)}`)
-        const sensei = serika.data.data;
-  if (serika.nsfw === true && serika.porn === true) {
-    let { chat, fromMe, id } = m;
-    
-    const key = {
-        remoteJid: chat,
-        fromMe: fromMe,
-        id: id,
-        participant: m.sender
-    };
-        await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins) await A17.sendMessage(from, { text: '*nudity detected message deleted*' });
-  }
-
-}
-
-
-
-
     //
     // const hariRaya = new Date("6 1, 2022 00:00:00");
     // const sekarang = new Date().getTime();
@@ -1872,6 +1844,26 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
+
+
+      case 'resize':{
+
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
+
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await GraphOrg(media);
+        const swn = args.join(" ")
+        const width = swn.split("x")[0];
+        const height = swn.split("x")[1];
+        let serika = await getBuffer(`https://resize.sardo.work/width=${width}&height=${height}&quality=1?imageUrl=${util.format(anu)}`) 
+        await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
+      }
+        break;
+
 
 
         case 'toanime':{
