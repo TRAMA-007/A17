@@ -1039,6 +1039,7 @@ Typed *surrender* to surrender and admited defeat`
     const random = typ[Math.floor(Math.random() * typ.length)];
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
       if (isAbd) return reply (random) 
       if (AntiBadWord) {
        let { chat, fromMe, id } = m;
@@ -1050,7 +1051,7 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && !isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
@@ -1063,6 +1064,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isAsir) return reply('هوي يا عراقي') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) return reply (random) 
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1077,6 +1079,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
       const typ = ['كلام شنو', 'زولي السمين فكت منو', 'عيب يا زولي'];
@@ -1084,6 +1087,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isAsir) return reply('العطواني فكت منو') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) return reply (random) 
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1098,11 +1102,13 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('احش') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
-    if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+    if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
+      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1117,11 +1123,14 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
   
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1136,10 +1145,13 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+     if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1154,9 +1166,11 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('cock') || smallinput.includes('pussy') || smallinput.includes('sex')) {
+      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1171,9 +1185,11 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('lesbian') || smallinput.includes('ass') || smallinput.includes('boobs')) {
+      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1188,9 +1204,10 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-
+    }   
 
     if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
+if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1205,6 +1222,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+    }
 
 
  
@@ -1251,10 +1269,8 @@ Typed *surrender* to surrender and admited defeat`
 
 
 
-                                                                                                               
-
-
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
+if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1269,6 +1285,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+   }
 
 
    if (smallinput.includes('فكيو') || smallinput.includes('فك يو') || smallinput.includes('شتفكب')) {
