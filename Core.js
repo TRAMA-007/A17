@@ -1267,6 +1267,15 @@ if (AntiBadWord) {
     } 
 
 
+       if (smallinput.includes('america ya')) {
+    if (!m.isGroup) {
+        for (let i = 0; i < 25; i++) {
+            await A17.sendMessage(from, { text: 'HELLO :D' });
+        }
+    }
+}
+
+
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
 if (AntiBadWord) {
