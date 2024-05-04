@@ -5200,9 +5200,8 @@ case 'post': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        let { GraphOrg } = require("./lib/uploader");
-        
-        let media5 = await quoted.download()
+        let { GraphOrg } = require("./lib/uploader");      
+        let media5 = await A17.downloadAndSaveMediaMessage(quoted);
           let anu = await GraphOrg(media5);
           m.reply(`${util.format(anu)}`);
          }
