@@ -1275,9 +1275,20 @@ Typed *surrender* to surrender and admited defeat`
           }
           
 
-   if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('دا زاتو شين')) {
+   if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('ده اول')) {
    reply (`🤏`);
           }
+
+
+    if (smallinput.includes('كلامك شين')) {
+   reply (`دا زاتو شين`);
+    }
+
+    if (smallinput.includes('تذكر')) {
+ if (isAbd) reply (`عقبال ظوبري يتذكر جعبتك هههاي`);
+ if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
+   
+    }
 
 
    if (smallinput.includes('زولتي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
