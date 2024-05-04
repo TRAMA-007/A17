@@ -1,4 +1,4 @@
-Process.on("uncaughtException", console.error);
+process.on("uncaughtException", console.error);
 require("./config");
 
 const fs = require('fs');
