@@ -196,8 +196,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const planaa = global.plann
     const isCmd = body.startsWith(prefix)
     const notCmd = body.startsWith('')
-    const plan = body.startsWith(plana)
-    const pla = body.startsWith(planaa)
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
