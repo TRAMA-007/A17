@@ -5199,12 +5199,12 @@ case 'post': {
         case "yg":{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-
-        let { GraphOrg } = require("./lib/uploader");      
-        let media5 = await A17.downloadAndSaveMediaMessage(quoted);
-          let anu = await GraphOrg(media5);
-          m.reply(`${util.format(anu)}`);
-         }
+       let { GraphOrg } = require("./lib/uploader");      
+        if (m.quoted.isAnimated === true) {
+          let media = await quoted.download()
+          let anu = await GraphOrg(media);
+          await A17.sendMessage(m.chat, { text: ${util.format(anu)}  }, { quoted: m })
+          } }
           break;
 
 
