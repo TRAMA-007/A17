@@ -18,9 +18,6 @@ global.autoreadgc = true;
 
 //
 global.prefa = ["."];//Default prefix here. you can change if you want.
-global.plan = ["plana"];
-global.plann = ["بلانا"];
-
 
 //
 global.Owner = ["249904077717"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
