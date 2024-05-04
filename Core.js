@@ -5117,14 +5117,14 @@ case 'post': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
-        let { GraphOrg } = require("./lib/uploader");
         if (!m.quoted) return reply('reply Image')
         if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
-        
+        reply(mess.waiting)
+        let { webp2mp4File } = require('./lib/uploader')
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let webpToMp4 = await GraphOrg(media)
-        let kayoko = await axios.get(`https://api.neoxr.eu/api/webp2mp4?apikey=gateapix&url=${util.format(webpToMp4)}`);
-        await A17.sendMessage(m.chat, { video: { url: kayoko.data.data.url, caption: 'ْ' } }, { quoted: m })
+        let webpToMp4 = await webp2mp4File(media)
+        await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
+        await fs.unlinkSync(media)
       }
         break;
 
@@ -5201,7 +5201,7 @@ case 'post': {
         if (isBanChat) return reply(mess.bangc);
        let { GraphOrg } = require("./lib/uploader");      
         if (m.quoted.isAnimated === true) {
-          let media = await quoted.download()
+          let media =  await A17.downloadAndSaveMediaMessage(quoted);
           let anu = await GraphOrg(media);
           m.reply(`${anu}`);
        } }
