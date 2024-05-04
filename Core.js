@@ -6360,7 +6360,7 @@ break;
         const pcknm = swn.split("|")[0];
         const atnm = swn.split("|")[1];
          if (m.quoted.isAnimated === true) {
-          let media =  await A17.downloadAndSaveMediaMessage(quoted)
+          let media =  await quoted.download()
           A17.sendMessage(from, { sticker: media }, { quoted: m });
         } else if (/image/.test(mime)) {
           let media = await quoted.download()
