@@ -5202,9 +5202,7 @@ case 'post': {
 
         let { GraphOrg } = require("./lib/uploader");
         
-        let media5 = await A17.downloadAndSaveMediaMessage(quoted);
-        if (isMedia) {
-         let media5 = await A17.downloadAndSaveMediaMessage(quoted);
+        let media5 = await quoted.download()
           let anu = await GraphOrg(media5);
           m.reply(`${util.format(anu)}`);
          }
