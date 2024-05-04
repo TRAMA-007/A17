@@ -6361,7 +6361,7 @@ break;
         const atnm = swn.split("|")[1];
          if (m.quoted.isAnimated === true) {
           let media =  await quoted.download()
-       let enc = await A17.sendMessage(from, { sticker: media }, m, { packname: pcknm, author: atnm }, { quoted: m });
+       let enc = await A17.sendMessage(from, { sticker: media }, { quoted: m });
            await fs.unlinkSync(enc)
         } else if (/image/.test(mime)) {
           let media = await quoted.download()
