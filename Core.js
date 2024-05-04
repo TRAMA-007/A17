@@ -5203,8 +5203,8 @@ case 'post': {
         if (m.quoted.isAnimated === true) {
           let media = await quoted.download()
           let anu = await GraphOrg(media);
-          await A17.sendMessage(m.chat, { text: ${util.format(anu)}  }, { quoted: m })
-          } }
+          m.reply(`${anu}`);
+       } }
           break;
 
 
