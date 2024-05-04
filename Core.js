@@ -5187,6 +5187,21 @@ case 'post': {
       // break;
 
 
+        case "yg":
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+
+        let { GraphOrg } = require("./lib/uploader");
+        
+        let media5 = await A17.downloadAndSaveMediaMessage(quoted);
+        if (isMedia) {
+         let media5 = await A17.downloadAndSaveMediaMessage(quoted);
+          let anu = await GraphOrg(media5);
+          m.reply(`${util.format(anu)}`);
+         }
+          break;
+
+
       case "tourl": case 'tolink':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
