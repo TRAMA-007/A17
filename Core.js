@@ -1,4 +1,4 @@
-process.on("uncaughtException", console.error);
+Process.on("uncaughtException", console.error);
 require("./config");
 
 const fs = require('fs');
@@ -1574,7 +1574,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
    if (smallinput.includes('دا زاتو')) {
-    reply (`هوي يا بوت`);
+    reply (`هوي ياا بوت`);
 }
 */
 
