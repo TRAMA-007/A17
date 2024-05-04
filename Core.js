@@ -252,6 +252,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const antiWame = m.isGroup ? ntwame.includes(from) : false
     const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
     const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
+    const AntiBadWord = m.isGroup ? ntword.includes(from) : false
     autoreadsw = true
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
@@ -952,7 +953,7 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
       const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
-    if (isShaq) return reply (gg) 
+    if (isShaq) reply (gg) 
     // قائمة بروابط الصور المختلفة
     const imageUrls = [
  'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
@@ -1039,6 +1040,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) return reply (random) 
+      if (AntiBadWord) {
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1053,7 +1055,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-  
+ }
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
     const typ = ['زولي السمين مالك ههه', 'اتلفظ يا سمين', 'درعتها يا زولي'];
@@ -3090,31 +3092,31 @@ break;
 
 
       //
- /*     case 'nsfw': {
+      case 'badword': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
+        if (!isBotAdmins) return reply(`plana isn't an admin`);
         if (!isAdmins && !isCreator) return reply(mess.useradmin);
         A17.sendMessage(from, { react: { text: "⚠️", key: m.key } });
 
         if (args[0] === "on") {
-          if (AntiNsfw) return reply('Already activated');
-          ntnsfw.push(from);
-          reply('الشغل فتح ');
+          if (AntiBadWord) return reply('Already activated');
+          ntword.push(from);
+          reply('anti badword is now enabled');
         } else if (args[0] === "off") {
-          if (!AntiNsfw) return reply('Already deactivated');
-          let off = ntnsfw.indexOf(from);
-          ntnsfw.splice(off, 1);
-          reply('الشغل قفل 😔');
+          if (!AntiBadWord) return reply('Already deactivated');
+          let off = ntword.indexOf(from);
+          ntword.splice(off, 1);
+          reply('anti bad word is now disabled');
         } else {
-          reply(`NSFW(not safe for wakamo) feature has been enabled in this group, which means anyone here can يجلد حلاوة!\n\nPlease use *'${prefix}nsfw on*' to enable NSFW commands or *'${prefix}nsfw off'* to disable them.`);
+          reply(`بالذوق`);
         }
       }
         break;
 
 
-      case 'nsfwmenu':
+    /*  case 'nsfwmenu':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!AntiNsfw) return reply(mess.nonsfw);
