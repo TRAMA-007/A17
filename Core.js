@@ -6360,9 +6360,9 @@ break;
         const pcknm = swn.split("|")[0];
         const atnm = swn.split("|")[1];
          if (m.quoted.isAnimated === true) {
-          A17.downloadAndSaveMediaMessage(quoted, "gifee")
-          A17.sendMessage(from, { sticker: fs.readFileSync("gifee.webp") }, { quoted: m })
-       }  else if (/image/.test(mime)) {
+          let media =  await A17.downloadAndSaveMediaMessage(quoted)
+          A17.sendMessage(from, { sticker: media },
+        } else if (/image/.test(mime)) {
           let media = await quoted.download()
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
