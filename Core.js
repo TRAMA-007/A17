@@ -226,7 +226,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
     const mime = (quoted.msg || quoted).mimetype || ''
-    const isMedia = /image|video|sticker|audio/.test(mime)
+    const isMedia = /image|video|sticker|audio|webp|document/.test(mime)
     const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
     const groupMetadata = m.isGroup ? await A17.groupMetadata(m.chat).catch(e => { }) : ''
     const groupName = m.isGroup ? groupMetadata.subject : ''
