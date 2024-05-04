@@ -5187,7 +5187,7 @@ case 'post': {
       // break;
 
 
-        case "yg":
+        case "yg":{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
@@ -5199,6 +5199,7 @@ case 'post': {
           let anu = await GraphOrg(media5);
           m.reply(`${util.format(anu)}`);
          }
+         } 
           break;
 
 
