@@ -6356,9 +6356,9 @@ break;
         const pcknm = swn.split("|")[0];
         const atnm = swn.split("|")[1];
          if (m.quoted.isAnimated === true) {
-          let media =  await quoted.download()
-       let enc = await A17.sendMessage(from, { sticker: media }, { quoted: m });
-           await fs.unlinkSync(enc)
+          let media = await quoted.download()
+          let enc = await A17.sendMessage(from, { sticker: media, packname: pcknm }, { quoted: m })
+          await fs.unlinkSync(enc)
         } else if (/image/.test(mime)) {
           let media = await quoted.download()
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
