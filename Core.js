@@ -1859,7 +1859,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         const swn = args.join(" ")
         const width = swn.split("x")[0];
         const height = swn.split("x")[1];
-        let serika = await getBuffer(`https://resize.sardo.work/width=${width}&height=${height}&quality=1?imageUrl=${util.format(anu)}`) 
+        let serika = await getBuffer(`https://resize.sardo.work/?imageUrl=${util.format(anu)}&width=${width}&height=${height}&quality=1`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
