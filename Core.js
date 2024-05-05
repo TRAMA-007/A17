@@ -196,6 +196,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const planaa = global.plann
     const isCmd = body.startsWith(prefix)
     const notCmd = body.startsWith('')
+    const plan = body.startsWith(plana)
+    const pla = body.startsWith(planaa)
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
@@ -224,7 +226,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
     const mime = (quoted.msg || quoted).mimetype || ''
-    const isMedia = /image|video|sticker|audio|webp|document/.test(mime)
+    const isMedia = /image|video|sticker|audio/.test(mime)
     const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
     const groupMetadata = m.isGroup ? await A17.groupMetadata(m.chat).catch(e => { }) : ''
     const groupName = m.isGroup ? groupMetadata.subject : ''
@@ -250,7 +252,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const antiWame = m.isGroup ? ntwame.includes(from) : false
     const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
     const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
-    const AntiBadWord = m.isGroup ? ntword.includes(from) : false
     autoreadsw = true
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
@@ -371,115 +372,84 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
     
        if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
-         const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=ge7zagRQeIBsSfJgR5GUkPUv_BgbdLEwyM8mTv_Xgfc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=hB8Mefg-sB63sp5ecZFVkhZxTsw9VgzGmIENKcgBOsE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         }
 
 
      if (!isCmd && islucas && !m.isGroup){
-       const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=Dvm_7p9ea1uPKtENq18-tjJqHpFkdmP-nFreeGx00s0&sessionId=Vc8LYfrj8siOpn8y42EoTb8PO6FtWhmUnuJReoiKjyI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=Dvm_7p9ea1uPKtENq18-tjJqHpFkdmP-nFreeGx00s0&sessionId=Vc8LYfrj8siOpn8y42EoTb8PO6FtWhmUnuJReoiKjyI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
      }
 
 
     if (!isCmd && isTawfik && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=XX3c9hBaUxR2qsF9VfbhojEsdrtYCSWZj4ZiuWeXaeI&sessionId=1u-66beykntXvPGVUws6CD09zxy0m4nX5VIabzIzo98&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=XX3c9hBaUxR2qsF9VfbhojEsdrtYCSWZj4ZiuWeXaeI&sessionId=1u-66beykntXvPGVUws6CD09zxy0m4nX5VIabzIzo98&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isAdam && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=JmfEuTkX9oGCDIpbvLUWocnVrm8-mtXJttnumQizXoI&sessionId=wKDKr86xnHcIB8igZr7Jip6gUZYyStNHpOvwd449FG4&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=JmfEuTkX9oGCDIpbvLUWocnVrm8-mtXJttnumQizXoI&sessionId=wKDKr86xnHcIB8igZr7Jip6gUZYyStNHpOvwd449FG4&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isCreator && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=hRYPx44-XJR8REiz_p_bPJHXeiFGzVtCR1Aec7cIg9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=hRYPx44-XJR8REiz_p_bPJHXeiFGzVtCR1Aec7cIg9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isAli && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=Pn2NO1mzCsmgCaZ6Eocxqg2bOnlPUv2sk7qwHWgEYWo&sessionId=Y9WOS2dfBmOvFwNAzPIl0_v_iNzg_HNFFkE2bzxGYE4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=Pn2NO1mzCsmgCaZ6Eocxqg2bOnlPUv2sk7qwHWgEYWo&sessionId=Y9WOS2dfBmOvFwNAzPIl0_v_iNzg_HNFFkE2bzxGYE4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
           }
 
 
     if (!isCmd && isAwad && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=WN8Kmu9Zh3jHMAIG3J3xaZa8GXZZwHOeJ9-1LQpoEdA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=U3dJdreV9rrvUiAnILMauI-oNH838a8E_kEYfOFPalE&sessionId=WN8Kmu9Zh3jHMAIG3J3xaZa8GXZZwHOeJ9-1LQpoEdA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isEgo && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=scsnOOq2jDNHqRpA9Inuckrb5HHqyQZgtxPFQyPJ-eQ&sessionId=uJiiBbwGUs4dDLYf768T2qvm83pz8NeKVS99R-efWPI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=scsnOOq2jDNHqRpA9Inuckrb5HHqyQZgtxPFQyPJ-eQ&sessionId=uJiiBbwGUs4dDLYf768T2qvm83pz8NeKVS99R-efWPI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isDabi && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=bDtHBp4PQ9E58ja8DfuVWkbjDUh5fCFJnaNQtIJ54Rg&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=bDtHBp4PQ9E58ja8DfuVWkbjDUh5fCFJnaNQtIJ54Rg&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isKaze && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=Q2lM-zMJTtq52KQfHjokb4gDx1_fbWahjim8ET8HfOM&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=QZmU2FJxM1vDzFxufgcgk7KDBVBHBpA98ma5hu7PNVc&sessionId=Q2lM-zMJTtq52KQfHjokb4gDx1_fbWahjim8ET8HfOM&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isJoan && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=J4XwSJQWf8sUTSlsyAsdHgnG2JrUpPY77XdWtGgqEnw&sessionId=pW8FCoyftHdOug1c2mLwAqkwld9zmTKni4RpyaiQNKs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=J4XwSJQWf8sUTSlsyAsdHgnG2JrUpPY77XdWtGgqEnw&sessionId=pW8FCoyftHdOug1c2mLwAqkwld9zmTKni4RpyaiQNKs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
 
 
     if (!isCmd && isHkl && !m.isGroup){
-      const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=sS652w4JLzJ_mthbNrXKevxN0n6MGxfjcA5EZqogR2Y&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=sS652w4JLzJ_mthbNrXKevxN0n6MGxfjcA5EZqogR2Y&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
@@ -496,6 +466,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         A17.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
       }
     }
+
 
 
     //
@@ -781,7 +752,7 @@ Typed *surrender* to surrender and admited defeat`
   }
   
   if (smallinput=='ping') {
-      reply (`Hey ${pushname} Png ${latensie.toFixed(4)} ms`)
+      reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
   }
   
   
@@ -859,7 +830,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-  /*  if (smallinput.includes('يعنيي ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
+  /*  if (smallinput.includes('يعني ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
     let media = await getBuffer("https://graph.org/file/1ffa4ac8f20ecb203b96d.mp4");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
@@ -948,9 +919,6 @@ Typed *surrender* to surrender and admited defeat`
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
-      const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
-    const gg = tt[Math.floor(Math.random() * tt.length)];
-    if (isShaq) reply (gg) 
     // قائمة بروابط الصور المختلفة
     const imageUrls = [
  'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
@@ -1036,9 +1004,7 @@ Typed *surrender* to surrender and admited defeat`
     const random = typ[Math.floor(Math.random() * typ.length)];
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
       if (isAbd) return reply (random) 
-      if (AntiBadWord) {
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1048,12 +1014,12 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik && !isIssam && !isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
- }
+  
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
     const typ = ['زولي السمين مالك ههه', 'اتلفظ يا سمين', 'درعتها يا زولي'];
@@ -1061,7 +1027,6 @@ Typed *surrender* to surrender and admited defeat`
       if (isAsir) return reply('هوي يا عراقي') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) return reply (random) 
-      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1076,7 +1041,6 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-     }
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
       const typ = ['كلام شنو', 'زولي السمين فكت منو', 'عيب يا زولي'];
@@ -1084,7 +1048,6 @@ Typed *surrender* to surrender and admited defeat`
       if (isAsir) return reply('العطواني فكت منو') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) return reply (random) 
-      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1099,13 +1062,11 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-     }
 
 
     if (smallinput.includes('احش') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
+    if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-    if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1120,14 +1081,11 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-     }
 
 
   
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1142,13 +1100,10 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-     }
 
 
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
-     if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1163,11 +1118,9 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-     }
 
 
     if (smallinput.includes('cock') || smallinput.includes('pussy') || smallinput.includes('sex')) {
-      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1182,11 +1135,9 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-     }
 
 
     if (smallinput.includes('lesbian') || smallinput.includes('ass') || smallinput.includes('boobs')) {
-      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1201,10 +1152,9 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-    }   
+
 
     if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
-if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1219,7 +1169,6 @@ if (AntiBadWord) {
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-    }
 
 
  
@@ -1265,18 +1214,11 @@ if (AntiBadWord) {
     } 
 
 
-       if (smallinput.includes('america ya')) {
-    if (!m.isGroup) {
-        for (let i = 0; i < 25; i++) {
-            await A17.sendMessage(from, { text: 'HELLO :D' });
-        }
-    }
-}
 
+                                                                                                               
 
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
-if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1291,7 +1233,6 @@ if (AntiBadWord) {
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-   }
 
 
    if (smallinput.includes('فكيو') || smallinput.includes('فك يو') || smallinput.includes('شتفكب')) {
@@ -1300,20 +1241,9 @@ if (AntiBadWord) {
           }
           
 
-   if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('ده اول')) {
+   if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('دا زاتو شين')) {
    reply (`🤏`);
           }
-
-
-    if (smallinput.includes('كلامك شين')) {
-   reply (`دا زاتو شين`);
-    }
-
-    if (smallinput.includes('تذكر')) {
- if (isAbd) reply (`عقبال ظوبري يتذكر جعبتك هههاي`);
- if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
-   
-    }
 
 
    if (smallinput.includes('زولتي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
@@ -1472,7 +1402,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('بنيكك')|| smallinput.includes('ببلك') || smallinput.includes('بحشك')) {
-    reply (`كام بدون افعال🤏🤭`);
+    reply (`كلام بدون افعال🤏🤭`);
     }
 
 
@@ -1487,7 +1417,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
   
 
     if (smallinput.includes('ما شغال')) {
-    reply (`جرببتو؟🤭`);
+    reply (`جربتو؟🤭`);
   }
 
 
@@ -1830,7 +1760,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=Gata_Dios&img=${util.format(anu)}`) 
+        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${util.format(anu)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break; 
@@ -1853,26 +1783,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
-      case 'resize':{
-
-        if (isBanChat) return reply(mess.bangc);
-         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-
-        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
-        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(media);
-        const swn = args.join(" ")
-        const width = swn.split("x")[0];
-        const height = swn.split("x")[1];
-        let serika = await getBuffer(`https://resize.sardo.work/?imageUrl=${util.format(anu)}&width=${width}&height=${height}&quality=1`) 
-        await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
-      }
-        break;
-
-
-
         case 'toanime':{
 
         if (isBanChat) return reply(mess.bangc);
@@ -1883,10 +1793,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-          const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=${api}&url=${util.format(anu)}`) 
-        let shiroko = await axios.get(`https://skizo.tech/api/toanime?apikey=${api}&url=${util.format(anu)} `)
+        let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=arona&url=${util.format(anu)}`) 
+        let shiroko = await axios.get(`https://skizo.tech/api/toanime?apikey=arona&url=${util.format(anu)} `)
         const sensei = shiroko.data.status;
         if (sensei === 400) {
             return reply("oops..daily limit reached..please wait for tomorrow reset");
@@ -2978,10 +2886,7 @@ break;
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
 
         try {
-          const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-          const hoshino = await axios.get(`https://skizo.tech/api/openai?apikey=${api}&messages=&system=&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/openai?apikey=adamxion&messages=&system=&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -3002,8 +2907,7 @@ break;
         break;
 
 
-      case 'plana':
-        case 'cai':
+        case 'plana':
       case 'aiussy': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -3011,10 +2915,7 @@ break;
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
 
         try {
-          const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=zaWoUtRPYvg4Xr2JWC_30WmL6_mewNJN57nuMOJSBmQ&sessionId=DCXsI093VKdbdaqNp_T4AVjTqWY73niCwCJ995MvQqA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=adamxion&characterId=zaWoUtRPYvg4Xr2JWC_30WmL6_mewNJN57nuMOJSBmQ&sessionId=DCXsI093VKdbdaqNp_T4AVjTqWY73niCwCJ995MvQqA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -3135,31 +3036,31 @@ break;
 
 
       //
-      case 'badword': {
+ /*     case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(`plana isn't an admin`);
+        if (!isBotAdmins) return reply(mess.botadmin);
         if (!isAdmins && !isCreator) return reply(mess.useradmin);
         A17.sendMessage(from, { react: { text: "⚠️", key: m.key } });
 
         if (args[0] === "on") {
-          if (AntiBadWord) return reply('Already activated');
-          ntword.push(from);
-          reply('anti badword is now enabled');
+          if (AntiNsfw) return reply('Already activated');
+          ntnsfw.push(from);
+          reply('الشغل فتح ');
         } else if (args[0] === "off") {
-          if (!AntiBadWord) return reply('Already deactivated');
-          let off = ntword.indexOf(from);
-          ntword.splice(off, 1);
-          reply('anti bad word is now disabled');
+          if (!AntiNsfw) return reply('Already deactivated');
+          let off = ntnsfw.indexOf(from);
+          ntnsfw.splice(off, 1);
+          reply('الشغل قفل 😔');
         } else {
-          reply(`بالذوق`);
+          reply(`NSFW(not safe for wakamo) feature has been enabled in this group, which means anyone here can يجلد حلاوة!\n\nPlease use *'${prefix}nsfw on*' to enable NSFW commands or *'${prefix}nsfw off'* to disable them.`);
         }
       }
         break;
 
 
-    /*  case 'nsfwmenu':
+      case 'nsfwmenu':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!AntiNsfw) return reply(mess.nonsfw);
@@ -5111,20 +5012,20 @@ case 'post': {
         break;
 
 
-   /*   case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
+      case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
+        let { GraphOrg } = require("./lib/uploader");
         if (!m.quoted) return reply('reply Image')
         if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
-        reply(mess.waiting)
-        let { webp2mp4File } = require('./lib/uploader')
+        
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let webpToMp4 = await webp2mp4File(media)
-        await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
-        await fs.unlinkSync(media)
+        let webpToMp4 = await GraphOrg(media)
+        let kayoko = await axios.get(`https://api.neoxr.eu/api/webp2mp4?apikey=gateapix&url=${util.format(webpToMp4)}`);
+        await A17.sendMessage(m.chat, { video: { url: kayoko.data.data.url, caption: 'ْ' } }, { quoted: m })
       }
-        break; */
+        break;
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
@@ -5194,18 +5095,6 @@ case 'post': {
       // break;
 
 
-  /*      case "yg":{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-       let { GraphOrg } = require("./lib/uploader");      
-        if (m.quoted.isAnimated === true) {
-          let media =  await A17.downloadAndSaveMediaMessage(quoted);
-          let anu = await GraphOrg(media);
-          m.reply(`${anu}`);
-       } }
-          break; */
-
-
       case "tourl": case 'tolink':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5223,7 +5112,7 @@ case 'post': {
           //
           let anu = await GraphOrg(media5);
           m.reply(`*Generated Image URL:* \n\n${util.format(anu)}\n`);
-        } else if (/sticker/.test(mime)) {
+        } else if (/webp/.test(mime)) {
           //
           try {
             let anu = await GraphOrg(media5);
@@ -6229,7 +6118,7 @@ _Click the button below to download_`
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
 
-    const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=Gata_Dios&query=${encodeURIComponent(q)}`);
+    const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=GataDios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const images = pin.data.result;
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
@@ -6251,7 +6140,7 @@ break;
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}stickers frieren");
 
-    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=Gata_Dios&query=${encodeURIComponent(q)}`);
+    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const results = tawfik.data.result;
 
@@ -6291,6 +6180,7 @@ for (let i = 0; i < 7 && i < tawfik.data.result.length; i++) {
     // هنا يمكنك استخدام مصفوفة stickers كما تحتاج
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
 const imageCount = 5; // عدد الصور التي تريد إرسالها
+
 for (let i = 0; i < imageCount && i < essam.length; i++) {
     const imageUrl = essam[i];
 
@@ -6354,10 +6244,9 @@ break;
         const pcknm = swn.split("|")[0];
         const atnm = swn.split("|")[1];
          if (m.quoted.isAnimated === true) {
-          let media = await quoted.download()
-          let enc = await A17.sendMessage(from, { sticker: media, packname: pcknm }, { quoted: m })
-          await fs.unlinkSync(enc)
-        } else if (/image/.test(mime)) {
+          A17.downloadAndSaveMediaMessage(quoted, "gifee")
+          A17.sendMessage(from, { sticker: fs.readFileSync("gifee.webp") }, { quoted: m })
+       }  else if (/image/.test(mime)) {
           let media = await quoted.download()
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
@@ -8213,7 +8102,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=Gata_Dios&query=prinz_eugen_(azur_lane)`)
+        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=prinz_eugen_(azur_lane)`)
         A17.sendMessage(from, { image: buffer, caption: ':q 💦 '}, { quoted: m })
         break;
 
@@ -10108,7 +9997,7 @@ break;
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}danbooru plana`)
         reply(mess.waiting)
-        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=Gata_Dios&query=${q}`)
+        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDios&query=${q}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
@@ -10671,6 +10560,7 @@ const characterAI = new CharacterAI();
       case 'ba':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
         
@@ -10697,83 +10587,7 @@ const characterAI = new CharacterAI();
 `;
        await A17.sendMessage(m.chat, { image: { url: aru.image.portrait}, caption: arutxt }, { quoted: m })
      }
-        break;
-
-
-      case 'servant':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
-        
-        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?lang=en&name=${q}`)
-        const aru = ba.data[0];
-        const traitNames = aru.traits.map(traits => traits.name).join(',');
-        let arutxt = `
-  Name: ${aru.name}
-  original name: ${aru.originalName}
-  class: ${aru.className}
-rarity: ${aru.rarity}
-cost: ${aru.cost}
- max level: ${aru.lvMax}
- Gender: ${aru.gender}
- attribute: ${aru.attribute}
- traits: ${traitNames} 
-`;
-  await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["4"]}, caption: arutxt }, { quoted: m })   
-    }
-        break;
-        
-
-        
-      case 'jp':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}fgo jp/${q}`)
-        
-        const ba = await axios.get(`https://rayshift.io/api/v1/support/lookup?apiKey=03555929-1d69-40c0-998c-5f7e7457528f&region=1&friendId=${q}`)
-        const aru = ba.data.response;
-        let arutxt = `
- Name: ${aru.name}
- code: ${aru.code}
-level: ${aru.level}
-last login: ${aru.lastLogin}
-`;
-        if (ba.data.message === 'in queue'){
-          return reply(`currently in queue..please wait for 10 seconds then use the command again`)
-          }else{
-        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[0] }, caption: arutxt }, { quoted: m })
-        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[1] }, caption: arutxt }, { quoted: m })
-        
-           } 
-      }
-        break;
-
-
-        case 'na':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}fgo jp/${q}`)
-        
-        const ba = await axios.get(`https://rayshift.io/api/v1/support/lookup?apiKey=03555929-1d69-40c0-998c-5f7e7457528f&region=2&friendId=${q}`)
-        const aru = ba.data.response;
-        let arutxt = `
- Name: ${aru.name}
- code: ${aru.code}
-level: ${aru.level}
-last login: ${aru.lastLogin}
-`;
-        if (ba.data.message === 'in queue'){
-          return reply(`currently in queue..please wait for 10 seconds then use the command again`)
-          }else{
-        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[0] }, caption: arutxt }, { quoted: m })
-        await A17.sendMessage(m.chat, { image: { url: 'https://rayshift.io' + aru.decks[1] }, caption: arutxt }, { quoted: m })
-        
-           } 
-      }
-        break;
+        break;  
 
 
       case 'genshin':{
@@ -10783,7 +10597,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}genshin hu tao`)
         
-        const q = await axios.get(`https://api.lolhuman.xyz/api/genshin/hu tao?apikey=Gata_Dios`)
+        const q = await axios.get(`https://api.lolhuman.xyz/api/genshin/hu tao?apikey=GataDios`)
         reply(mess.waiting);
         const w = q.data.result;
         let hutao = `
@@ -10802,7 +10616,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}character Tachibana kanade`)
         
-        const character = await axios.get(`https://api.lolhuman.xyz/api/character?apikey=Gata_Dios&query=${q}`)
+        const character = await axios.get(`https://api.lolhuman.xyz/api/character?apikey=GataDios&query=${q}`)
         reply(mess.waiting);
         const shiroko = character.data.result;
         let shirokotxt = `
@@ -10821,7 +10635,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=GataDios&url=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { video: { url: ig.result[0]} }, { quoted: m })
@@ -10833,7 +10647,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/twitter?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://api.lolhuman.xyz/api/twitter?apikey=GataDios&url=${encodeURIComponent(q)}`)
         const ig = instgram.data.result.media[0];
         await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
      }
@@ -10845,10 +10659,7 @@ last login: ${aru.lastLogin}
         if (isIssamm) return reply(`ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني`)
         if (isIssammm) return reply(`لول فاكرني ناسية الرقم دا`)        
         if (!text) return reply(`Please provide a prompt`) 
-          const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=${api}&prompt=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://skizo.tech/api/dalle3?apikey=arona&prompt=${encodeURIComponent(q)}`)
         const ig = instgram.data;
         await A17.sendMessage(m.chat, { image: { url: ig.url} }, { quoted: m })
      }
@@ -10859,7 +10670,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const tt = await axios.get(`https://api.lolhuman.xyz/api/tiktok?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
+        const tt = await axios.get(`https://api.lolhuman.xyz/api/tiktok?apikey=GataDios&url=${encodeURIComponent(q)}`)
         const sx = tt.data.result;
         let shirokotxt = `
   *title: ${sx.title}*
@@ -10893,7 +10704,7 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=Gata_Dios&package=${encodeURIComponent(q)}`)
+        const apk = await axios.get(`https://api.lolhuman.xyz/api/apkdownloader?apikey=GataDios&package=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const fk = apk.data.result;
         await A17.sendMessage(
@@ -10990,7 +10801,7 @@ last login: ${aru.lastLogin}
         if (isBanChat) return reply(mess.bangc);
         if (!isCreator) return reply(`💀`) 
         if (!text) return reply(`Please proide a code`) 
-        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=plana&code=${q}`)
+        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=arona&code=${q}`)
         const fk = apk.data;
         await A17.sendMessage(
           from,
@@ -11021,7 +10832,7 @@ last login: ${aru.lastLogin}
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.download + 'plana'},
+          document: { url: fk.download + 'adamxion'},
           filename: + fk.title.english + '.pdf', 
           mimetype: 'application/pdf',
           quoted: m,
@@ -11405,8 +11216,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}manga
   ⌯     ${prefix}feed
   ⌯     ${prefix}foxgirl
-  ⌯     ${prefix}shinobu
-  ⌯     ${prefix}megumin
   ⌯     ${prefix}waifu
   ⌯     ${prefix}loli
   ⌯     ${prefix}coffee
@@ -11415,9 +11224,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}hsr (honkai star rail bulids) 
   ⌯     ${prefix}hsr-cards (honkai star rail character cards)
   ⌯     ${prefix}ba (blue archive characters)
-  ⌯     ${prefix}register (for generating your genshin and hsr cards) 
   ⌯     ${prefix}character
-  
  
 
   〢━━━ ♨️ *Informative* ♨️ ━━━〢
