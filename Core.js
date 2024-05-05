@@ -196,8 +196,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const planaa = global.plann
     const isCmd = body.startsWith(prefix)
     const notCmd = body.startsWith('')
-    const plan = body.startsWith(plana)
-    const pla = body.startsWith(planaa)
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
@@ -226,7 +224,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
     const mime = (quoted.msg || quoted).mimetype || ''
-    const isMedia = /image|video|sticker|audio/.test(mime)
+    const isMedia = /image|video|sticker|audio|webp|document/.test(mime)
     const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
     const groupMetadata = m.isGroup ? await A17.groupMetadata(m.chat).catch(e => { }) : ''
     const groupName = m.isGroup ? groupMetadata.subject : ''
@@ -252,6 +250,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const antiWame = m.isGroup ? ntwame.includes(from) : false
     const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
     const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
+    const AntiBadWord = m.isGroup ? ntword.includes(from) : false
     autoreadsw = true
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
@@ -497,7 +496,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         A17.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
       }
     }
-
 
 
     //
@@ -952,7 +950,7 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
       const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
-    if (isShaq) return reply (gg) 
+    if (isShaq) reply (gg) 
     // قائمة بروابط الصور المختلفة
     const imageUrls = [
  'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
@@ -1038,7 +1036,9 @@ Typed *surrender* to surrender and admited defeat`
     const random = typ[Math.floor(Math.random() * typ.length)];
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
       if (isAbd) return reply (random) 
+      if (AntiBadWord) {
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1048,12 +1048,12 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik && !isIssam && isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && !isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'ياخي مجنون هذا التوفيق 😅' });
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-  
+ }
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
     const typ = ['زولي السمين مالك ههه', 'اتلفظ يا سمين', 'درعتها يا زولي'];
@@ -1061,6 +1061,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isAsir) return reply('هوي يا عراقي') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) return reply (random) 
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1075,6 +1076,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
     
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
       const typ = ['كلام شنو', 'زولي السمين فكت منو', 'عيب يا زولي'];
@@ -1082,6 +1084,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isAsir) return reply('العطواني فكت منو') 
       if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) return reply (random) 
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1096,11 +1099,13 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('احش') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
-    if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+    if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
+      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1115,11 +1120,14 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
   
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1134,10 +1142,13 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+     if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
+      if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1152,9 +1163,11 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('cock') || smallinput.includes('pussy') || smallinput.includes('sex')) {
+      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1169,9 +1182,11 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+     }
 
 
     if (smallinput.includes('lesbian') || smallinput.includes('ass') || smallinput.includes('boobs')) {
+      if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1186,9 +1201,10 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
-
+    }   
 
     if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
+if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1203,6 +1219,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+    }
 
 
  
@@ -1248,11 +1265,18 @@ Typed *surrender* to surrender and admited defeat`
     } 
 
 
+       if (smallinput.includes('america ya')) {
+    if (!m.isGroup) {
+        for (let i = 0; i < 25; i++) {
+            await A17.sendMessage(from, { text: 'HELLO :D' });
+        }
+    }
+}
 
-                                                                                                               
 
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
+if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1267,6 +1291,7 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'لول آدم' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام قليل ادب؟ ' });
 }
+   }
 
 
    if (smallinput.includes('فكيو') || smallinput.includes('فك يو') || smallinput.includes('شتفكب')) {
@@ -1826,6 +1851,26 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
+
+
+      case 'resize':{
+
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
+
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await GraphOrg(media);
+        const swn = args.join(" ")
+        const width = swn.split("x")[0];
+        const height = swn.split("x")[1];
+        let serika = await getBuffer(`https://resize.sardo.work/?imageUrl=${util.format(anu)}&width=${width}&height=${height}&quality=1`) 
+        await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
+      }
+        break;
+
 
 
         case 'toanime':{
@@ -3090,31 +3135,31 @@ break;
 
 
       //
- /*     case 'nsfw': {
+      case 'badword': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
+        if (!isBotAdmins) return reply(`plana isn't an admin`);
         if (!isAdmins && !isCreator) return reply(mess.useradmin);
         A17.sendMessage(from, { react: { text: "⚠️", key: m.key } });
 
         if (args[0] === "on") {
-          if (AntiNsfw) return reply('Already activated');
-          ntnsfw.push(from);
-          reply('الشغل فتح ');
+          if (AntiBadWord) return reply('Already activated');
+          ntword.push(from);
+          reply('anti badword is now enabled');
         } else if (args[0] === "off") {
-          if (!AntiNsfw) return reply('Already deactivated');
-          let off = ntnsfw.indexOf(from);
-          ntnsfw.splice(off, 1);
-          reply('الشغل قفل 😔');
+          if (!AntiBadWord) return reply('Already deactivated');
+          let off = ntword.indexOf(from);
+          ntword.splice(off, 1);
+          reply('anti bad word is now disabled');
         } else {
-          reply(`NSFW(not safe for wakamo) feature has been enabled in this group, which means anyone here can يجلد حلاوة!\n\nPlease use *'${prefix}nsfw on*' to enable NSFW commands or *'${prefix}nsfw off'* to disable them.`);
+          reply(`بالذوق`);
         }
       }
         break;
 
 
-      case 'nsfwmenu':
+    /*  case 'nsfwmenu':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!AntiNsfw) return reply(mess.nonsfw);
@@ -5066,20 +5111,20 @@ case 'post': {
         break;
 
 
-      case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
+   /*   case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
-        let { GraphOrg } = require("./lib/uploader");
         if (!m.quoted) return reply('reply Image')
         if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
-        
+        reply(mess.waiting)
+        let { webp2mp4File } = require('./lib/uploader')
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let webpToMp4 = await GraphOrg(media)
-        let kayoko = await axios.get(`https://api.neoxr.eu/api/webp2mp4?apikey=gateapix&url=${util.format(webpToMp4)}`);
-        await A17.sendMessage(m.chat, { video: { url: kayoko.data.data.url, caption: 'ْ' } }, { quoted: m })
+        let webpToMp4 = await webp2mp4File(media)
+        await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
+        await fs.unlinkSync(media)
       }
-        break;
+        break; */
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
@@ -5149,6 +5194,18 @@ case 'post': {
       // break;
 
 
+  /*      case "yg":{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+       let { GraphOrg } = require("./lib/uploader");      
+        if (m.quoted.isAnimated === true) {
+          let media =  await A17.downloadAndSaveMediaMessage(quoted);
+          let anu = await GraphOrg(media);
+          m.reply(`${anu}`);
+       } }
+          break; */
+
+
       case "tourl": case 'tolink':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5166,7 +5223,7 @@ case 'post': {
           //
           let anu = await GraphOrg(media5);
           m.reply(`*Generated Image URL:* \n\n${util.format(anu)}\n`);
-        } else if (/webp/.test(mime)) {
+        } else if (/sticker/.test(mime)) {
           //
           try {
             let anu = await GraphOrg(media5);
@@ -6297,9 +6354,10 @@ break;
         const pcknm = swn.split("|")[0];
         const atnm = swn.split("|")[1];
          if (m.quoted.isAnimated === true) {
-          A17.downloadAndSaveMediaMessage(quoted, "gifee")
-          A17.sendMessage(from, { sticker: fs.readFileSync("gifee.webp") }, { quoted: m })
-       }  else if (/image/.test(mime)) {
+          let media = await quoted.download()
+          let enc = await A17.sendMessage(from, { sticker: media, packname: pcknm }, { quoted: m })
+          await fs.unlinkSync(enc)
+        } else if (/image/.test(mime)) {
           let media = await quoted.download()
           let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
