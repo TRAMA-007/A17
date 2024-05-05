@@ -5111,7 +5111,7 @@ case 'post': {
         break;
 
 
-      case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
+   /*   case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
@@ -5124,7 +5124,7 @@ case 'post': {
         await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
         await fs.unlinkSync(media)
       }
-        break;
+        break; */
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
@@ -5194,7 +5194,7 @@ case 'post': {
       // break;
 
 
-        case "yg":{
+  /*      case "yg":{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
        let { GraphOrg } = require("./lib/uploader");      
@@ -5203,7 +5203,7 @@ case 'post': {
           let anu = await GraphOrg(media);
           m.reply(`${anu}`);
        } }
-          break;
+          break; */
 
 
       case "tourl": case 'tolink':
