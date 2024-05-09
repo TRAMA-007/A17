@@ -213,6 +213,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isAwad = [botNumber, ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAbd = [botNumber, ...global.coomer].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [botNumber, ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isMob = [botNumber, ...global.mob].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHkl = [botNumber, ...global.hkl].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
     const isIssam = [botNumber, ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssamm = [botNumber, ...global.issamm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -1310,9 +1311,11 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('تست')) {
+    if (smallinput.includes('كسمك')) {
  if (tagg && m.isGroup) {
-   reply (`موب كلامك كتير و شراميطك حبة`);
+   if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
+   let userToKick = m.sender;
+    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     }
      }
     
