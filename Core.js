@@ -208,6 +208,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isEgo = [botNumber, ...global.ego].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKaze = [botNumber, ...global.kaze].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const islucas = [botNumber, ...global.lucas].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isTori = [botNumber, ...global.tori].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAsir = [botNumber, ...global.asir].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isDabi = [botNumber, ...global.dabi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAwad = [botNumber, ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -1306,6 +1307,17 @@ Typed *surrender* to surrender and admited defeat`
           }
 
 
+    if (smallinput.includes('pedo') || smallinput.includes('بيدو') || smallinput.includes('شفع')) {
+   const imageUrls = [
+        'https://graph.org/file/52c0d08cd7f69f682f0ac.jpg', 
+         'https://graph.org/file/6908739acfc4d729a156b.jpg', 
+                ]; 
+      const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+   if (isTori) return reply(media);
+    }
+
+
     if (smallinput.includes('كلامك شين')) {
    reply (`دا زاتو شين`);
     }
@@ -1318,6 +1330,24 @@ Typed *surrender* to surrender and admited defeat`
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     }
      }
+
+
+    if (smallinput.includes('لوطي')) {
+      const imageUrls = [
+        'https://graph.org/file/e580fc2585c0abb435263.jpg', 
+         'https://graph.org/file/0eb13a900d0f5689806a5.jpg', 
+                ]; 
+      const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+   if (isMob) return reply(media);
+      const imageUrlss = [
+        'https://graph.org/file/eab639f031486fbee4f73.jpg', 
+         'https://graph.org/file/02120b09baa569fb82fae.jpg', 
+                ]; 
+      const randomImageUrll = imageUrlss[Math.floor(Math.random() * imageUrlss.length)];
+        let mediaa = await getBuffer(randomImageUrll);
+   if (isTori) return reply(mediaa);
+    }
     
 
     if (smallinput.includes('تذكر')) {
