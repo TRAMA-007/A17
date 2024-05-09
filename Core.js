@@ -223,7 +223,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const text = args.join(" ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
-    const tagg = m.quoted ? m.quoted : itsMe
+    const tagg = m.quoted == botNumber ? true : false
     const mime = (quoted.msg || quoted).mimetype || ''
     const isMedia = /image|video|sticker|audio/.test(mime)
     const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
@@ -486,21 +486,14 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-    if (!isCmd && m.isGroup){
-     let taggg = null; // Initialize tagg as null
-      if (m.mentionedJid && m.mentionedJid.includes(botNumber)) {
-        taggg = m.quoted ? m.quoted : m;  
-
-        if(taggg) {
-      const typ = ['plana', 'arona', 'adamxion'];
+    if (!isCmd && tagg && m.isGroup){
+     const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=HZzrX3peZbMcshoJi0xV68nP-f9-OPzFcYIZFKt-zqs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-    }
-       }
-     } 
+        } 
 
 
     //----------------------------------------------------------------------------------------------------//
