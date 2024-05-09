@@ -1026,7 +1026,7 @@ Typed *surrender* to surrender and admited defeat`
         let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
         await fs.unlinkSync(encmedia);
 } */
-    
+   } 
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
