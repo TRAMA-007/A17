@@ -35,6 +35,7 @@ global.ego = ["249122618252"];
 global.awad = ["201271270116"];
 global.sora = ["249117300794"];
 global.adam = ["962796904879"];
+global.mob = ["249127772592"];
 global.lucas = ["249901496804"];
 global.issam = ["201098744043"];
 global.issamm = ["12394885980"];
