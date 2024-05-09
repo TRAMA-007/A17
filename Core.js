@@ -221,6 +221,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const text = args.join(" ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
+    const tagg = m.quoted ? m.quoted : itsMe
     const mime = (quoted.msg || quoted).mimetype || ''
     const isMedia = /image|video|sticker|audio/.test(mime)
     const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
@@ -1307,6 +1308,14 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('كلامك شين')) {
    reply (`دا زاتو شين`);
     }
+
+
+    if (smallinput.includes('تست')) {
+ if (tagg && m.isGroup) {
+   reply (`موب كلامك كتير و شراميطك حبة`);
+    }
+     }
+    
 
     if (smallinput.includes('تذكر')) {
  if (isAbd) reply (`عقبال ظوبري يتذكر جعبتك هههاي`);
