@@ -949,7 +949,7 @@ Typed *surrender* to surrender and admited defeat`
     const gg = tt[Math.floor(Math.random() * tt.length)];
     if (isShaq) reply (gg) 
     // قائمة بروابط الصور المختلفة
-    const imageUrls = [
+/*    const imageUrls = [
  'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
  'https://graph.org/file/8cb96154ceca2e3a7c559.png',
  'https://graph.org/file/86c444642b5768dc7d2d5.png',
@@ -1025,7 +1025,7 @@ Typed *surrender* to surrender and admited defeat`
         let media = await getBuffer(randomImageUrl);
         let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
         await fs.unlinkSync(encmedia);
-}
+} */
     
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
