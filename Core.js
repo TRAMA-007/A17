@@ -486,7 +486,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-    if (!isCmd && tagg && m.isGroup){
+    if (!isCmd && m.mentionedJid && m.mentionedJid.includes(botNumber) && m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
