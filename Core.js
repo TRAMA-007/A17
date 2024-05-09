@@ -486,7 +486,12 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-    if (!isCmd && m.mentionedJid && m.mentionedJid.includes(botNumber) && m.isGroup){
+    if (!isCmd && m.isGroup){
+     let taggg = null; // Initialize tagg as null
+      if (m.mentionedJid && m.mentionedJid.includes(botNumber)) {
+        taggg = m.quoted ? m.quoted : m;  
+
+        if(taggg) {
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
@@ -494,6 +499,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
+       }
+     } 
 
 
     //----------------------------------------------------------------------------------------------------//
