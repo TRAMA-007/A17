@@ -3115,7 +3115,7 @@ break;
           const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
 
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=A3-RD6-5JghQlA_1mdnL-BZGvnQys2OApzUG7V2EguI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=i_lRstKIjj7KspjPjzZM1hNRfQZDgWm3fNKEWhYN8SQ&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -4884,6 +4884,7 @@ case 'post': {
 
 
       case 'send': {
+        if (!isCreator) return reply (`🍆`) 
       A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         const swn = args.join(" ")
         const number = swn.split("/")[0];
