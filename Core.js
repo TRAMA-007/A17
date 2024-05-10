@@ -224,7 +224,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const text = args.join(" ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
-    const tagg = m.message?.conversation?.toLowerCase().includes(`@${botNumber.split('@')[0]}`.toLowerCase()) ? (m.quoted || m) : null; 
     const mime = (quoted.msg || quoted).mimetype || ''
     const isMedia = /image|video|sticker|audio/.test(mime)
     const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
