@@ -5261,7 +5261,7 @@ case 'post': {
       // break;
 
 
-  /*      case "yg":{
+        case "yg":{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
        let { GraphOrg } = require("./lib/uploader");      
@@ -5270,7 +5270,7 @@ case 'post': {
           let anu = await GraphOrg(media);
           m.reply(`${anu}`);
        } }
-          break; */
+          break; 
 
 
       case "tourl": case 'tolink':
