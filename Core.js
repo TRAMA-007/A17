@@ -10824,7 +10824,7 @@ last login: ${aru.lastLogin}
 
 
         case 'na':{
-        if (isBan) return reply(mess.banned);
+        if (isBan) return replyMessage(mess.banned);
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}fgo jp/${q}`)
@@ -10893,10 +10893,10 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/instagram?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
+        const instgram = await axios.get(`https://skizo.tech/api/ig?apikey=arona&url=${encodeURIComponent(q)}`)
         reply(mess.waiting);
-        const ig = instgram.data;
-        await A17.sendMessage(m.chat, { video: { url: ig.result[0]} }, { quoted: m })
+        const ig = instgram.data[0];
+        await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
      }
         break;
 
