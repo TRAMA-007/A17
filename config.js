@@ -45,8 +45,8 @@ global.OwnerNumber = ["249904077717"];   //If you want singal number so global.O
 global.ownertag = ["249904077717"];
 global.OwnerName = "akane710";
 global.BotName = "plana";
-global.packname = "plana";                             //Do not change.
-global.author = "By: akane710";                               //Do not change.
+global.packname = "A17 Bot";                             //Do not change.
+global.author = "By: Kai";      
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/KJKxoW0FmOeLLv7etC6e5Y";
 
