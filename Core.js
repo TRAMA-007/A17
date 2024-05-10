@@ -1345,7 +1345,7 @@ Typed *surrender* to surrender and admited defeat`
                 ]; 
       const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
         let media = await getBuffer(randomImageUrl);
-   if (isTori) return reply(media);
+   if (isTori) await A17.sendMessage(from, { image : mediaa });
     }
 
 
@@ -1372,14 +1372,14 @@ Typed *surrender* to surrender and admited defeat`
                 ]; 
       const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
         let media = await getBuffer(randomImageUrl);
-   if (isMob) return reply(media);
+   if (isMob) await A17.sendMessage(from, { image : media });
       const imageUrlss = [
         'https://graph.org/file/eab639f031486fbee4f73.jpg', 
          'https://graph.org/file/02120b09baa569fb82fae.jpg', 
                 ]; 
       const randomImageUrll = imageUrlss[Math.floor(Math.random() * imageUrlss.length)];
         let mediaa = await getBuffer(randomImageUrll);
-   if (isTori) return reply(mediaa);
+   if (isTori) await A17.sendMessage(from, { image : mediaa });
     }
     
 
