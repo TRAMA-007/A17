@@ -1269,7 +1269,7 @@ Typed *surrender* to surrender and admited defeat`
         participant: m.sender
     };
         await A17.sendMessage(chat, { delete: key });
-      if (isBotAdmins && !isTawfik && !isIssam && !isAdam) await A17.sendMessage(from, { text: '*bad words detected..message deleted*' });
+      if (isBotAdmins && !isTawfik && !isIssam && !isAdam) await A17.sendMessage(from, { text: '*no France allowed*' });
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'خخخخخ توفيق يتكلم فرنسي' });
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'يعني مش كفاية انك آدم كمان عايز تتكلم فرنسي' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام اتجنن ' });
