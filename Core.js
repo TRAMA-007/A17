@@ -1331,6 +1331,16 @@ Typed *surrender* to surrender and admited defeat`
    if (isTawfik) return reply('توفيق تشان..عيب')
      reply (`🤓`);
           }
+
+
+    if (smallinput.includes('براه يعبرن')) {
+   if (isJoan) return reply('تعال ظوبري يعبرك🍆')
+    }
+
+
+    if (smallinput.includes('رد خاص')) {
+   if (isJoan) return reply('رد على دا اول🍆')
+    }
           
 
    if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('ده اول')) {
