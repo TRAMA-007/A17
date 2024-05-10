@@ -1301,10 +1301,8 @@ Typed *surrender* to surrender and admited defeat`
 
 
        if (smallinput.includes('america ya')) {
-    if (!m.isGroup) {
         for (let i = 0; i < 25; i++) {
             await A17.sendMessage(from, { text: 'HELLO :D' });
-        }
     }
 }
 
@@ -1359,10 +1357,12 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('كسمك')) {
  if (m.isGroup) {
    if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
+   if (tagg) {
    let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     }
      }
+     } 
 
 
     if (smallinput.includes('لوطي')) {
