@@ -10955,7 +10955,8 @@ last login: ${aru.lastLogin}
         case 'imagine': {
         if (isIssam) return reply(`نو`)
         if (isIssamm) return reply(`ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني`)
-        if (isIssammm) return reply(`لول فاكرني ناسية الرقم دا`)        
+        if (isIssammm) return reply(`لول فاكرني ناسية الرقم دا`)  
+        if (!isCreator) return reply(`how about you imagine deez nuts on your mouth 🍆`) 
         if (!text) return reply(`Please provide a prompt`) 
           const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
@@ -10967,7 +10968,8 @@ last login: ${aru.lastLogin}
         break; 
 
 
-        case 'tiktok': {
+        case 'tiktok':
+        case 'tt':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
