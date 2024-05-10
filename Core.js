@@ -495,6 +495,29 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         } 
 
 
+     if (isMedia && m.isGroup) {
+let { GraphOrg } = require("./lib/uploader");
+       
+let media = await A17.downloadAndSaveMediaMessage
+        let anu = await GraphOrg(media);
+  let serika = await axios.get(`https://nsfw-categorize.it/api/upload?url=${util.format(anu)}`)
+        const sensei = serika.data.data;
+  if (serika.nsfw === true && serika.porn === true) {
+    let { chat, fromMe, id } = m;
+    
+    const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins) await A17.sendMessage(from, { text: '*nudity detected message deleted*' });
+  }
+
+}
+
+
     //----------------------------------------------------------------------------------------------------//
 
 
