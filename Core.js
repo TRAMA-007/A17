@@ -495,7 +495,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         } 
 
 
-     if (isMedia && m.isGroup) {
+    /* if (isMedia && m.isGroup) {
 let { GraphOrg } = require("./lib/uploader");
        
 let media = await A17.downloadAndSaveMediaMessage
@@ -515,7 +515,7 @@ let media = await A17.downloadAndSaveMediaMessage
       if (isBotAdmins) await A17.sendMessage(from, { text: '*nudity detected message deleted*' });
   }
 
-}
+} */
 
 
     //----------------------------------------------------------------------------------------------------//
