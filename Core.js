@@ -1922,6 +1922,23 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
+        case 'compress':{
+
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
+
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/video/.test(mime)) return `*Send/reply video With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await GraphOrg(media);
+        let serika = await axios.get(`https://api.alyachan.dev/api/compressvid?video=${util.format(anu)}&apikey=QnYS8I`) 
+        const shiroko = serika.data.data
+        await A17.sendMessage(m.chat, { video: { url: shiroko.url_file} }, { quoted: m })
+      }
+        break; 
+
+
 
         case 'toanime':{
 
