@@ -1259,7 +1259,7 @@ Typed *surrender* to surrender and admited defeat`
 
  
     
-   if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french')) {
+   if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french') || smallinput.includes('🇫🇷')) {
     let { chat, fromMe, id } = m;
     
     const key = {
