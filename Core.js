@@ -223,7 +223,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const text = args.join(" ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
-    const tagg = quoted.includes(botNumber)
     const mime = (quoted.msg || quoted).mimetype || ''
     const isMedia = /image|video|sticker|audio/.test(mime)
     const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
@@ -1334,7 +1333,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('كسمك')) {
- if (tagg && m.isGroup) {
+ if (m.isGroup) {
    if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
    let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
