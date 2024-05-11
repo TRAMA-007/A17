@@ -1341,9 +1341,14 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('رد خاص')) {
    if (isJoan) return reply('رد على دا اول🍆')
     }
+
+
+    if (smallinput.includes('براه بحياتي')) {
+   if (isJoan) return reply('وانا')
+    }
           
 
-   if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('ده اول')) {
+   if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('ده اول') || smallinput.includes('زاتو شين')) {
    reply (`🤏`);
           }
 
@@ -2531,7 +2536,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
           if (isBotAdmins) await A17.sendMessage(from, { text: 'شوف ليك زول تاني اسرقو ما معقول اسود و كمان قلبك اسود' });
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
 
-        }
+        }else{
 
         let tpy = random;
         if (random === 'ran') {
@@ -2547,6 +2552,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
             reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
             reply(`You got 💎${w}`);
         }
+         }
     }
     break;
 
@@ -2591,7 +2597,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         var user = m.sender
         var cara = 'cara'
         const give1 = eco.give(user, cara, 100000)
-        reply(`You got 💎100000*`)
+        reply(`*You got 💎100000*`)
       }
         break;
 
