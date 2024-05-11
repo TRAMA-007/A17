@@ -4912,7 +4912,6 @@ case 'post': {
       case 'join': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!isCreator) return reply(mess.botowner)
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         if (!args[0]) return reply(`Where's the link?`)
         vdd = args[0]
@@ -4921,29 +4920,16 @@ case 'post': {
         if (isCreator) {
           await A17.groupAcceptInvite(vcc).then(async (res) => reply(jsonformat(res))).catch(_ => _)
           reply("Succes!")
-        } else {
-          A17.query({
-            tag: "iq",
-            attrs: {
-              type: "get",
-              xmlns: "w:g2",
-              to: "@g.us"
-            },
-            content: [{ tag: "invite", attrs: { code: vcc } }]
-          }).then(async (res) => {
-            sizny = res.content[0].attrs.size
-            if (sizny < 20) {
-              teks = `Sorry, munimun 20 members are required in a group to add bot!`
-              sendOrder(m.chat, teks, "667140254502463", fs.readFileSync('./Assets/pic7.jpg'), `${global.packname}`, `${global.BotName}`, "916297175943@s.whatsapp.net", "AR6NCY8euY5cbS8Ybg5Ca55R8HFSuLO3qZqrIYCT7hQp0g==", "99999999999999999999")
-            } else if (sizny > 20) {
-              await A17.groupAcceptInvite(vcc).then(async (res) => reply(jsonformat(res))).catch(_ => _)
-              reply("Joined !")
-            } else {
-              reply("Error")
-            }
-          }).catch(_ => _)
-        }
-      }
+        } else if (!isCreator) {
+          if (!args[0]) return reply(`Where's the link?`)
+          vdd = args[0]
+          let vcc = vdd.split("https://chat.whatsapp.com/")[1]
+          if (!vcc) return reply("Link invalid!")
+          const number = (`249904077717`)
+          await A17.sendMessage(number+ '@s.whatsapp.net', { text: vcc, mentions: [m.sender] })
+          reply(`request added successfully..please wait till it get accepted`)
+        }   
+       }
         break;
 
 
