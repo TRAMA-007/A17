@@ -486,14 +486,14 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-    if (!isCmd && tagg && m.isGroup){
+/*    if (!isCmd && tagg && m.isGroup){
      const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=HZzrX3peZbMcshoJi0xV68nP-f9-OPzFcYIZFKt-zqs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-        } 
+        } */
 
 
     /* if (isMedia && m.isGroup) {
@@ -1346,6 +1346,20 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('براه بحياتي')) {
    if (isJoan) return reply('وانا')
     }
+
+
+if (smallinput.includes('ثباح')) {
+  const typ = ['ثبااااحوو', 'ثباحو يا عسل', 'احلى ثباحو على احلى جوعان🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJoan) return reply(random)
+}
+
+
+if (smallinput.includes('مثا')) {
+  const typ = ['مثاااااؤ يا جميل', 'مثااؤ يا عسل', 'احلى مثاؤ على احلى جوعان🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJoan) return reply(random)
+}
           
 
    if (smallinput.includes('دا اول') || smallinput.includes('ذا اول') || smallinput.includes('ده اول') || smallinput.includes('زاتو شين')) {
