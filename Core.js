@@ -525,7 +525,7 @@ let media = await A17.downloadAndSaveMediaMessage
 
     //
     for (let anju of kaiaudio) {
-      if (budy === anju) {
+      if budy.includes(anju) {
         result = fs.readFileSync(`./Assets/audio/${anju}.mp3`)
         A17.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
       }
