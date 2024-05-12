@@ -3318,7 +3318,7 @@ break;
           const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
 
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=PJZJxR2vMGTDCc4dV0myrnCSr4WTgFMYgjKNjMCRZn8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RQrrOj-UNdEV2_PC5D03US-27MZ7EUtaRH_husjbRQA&sessionId=0sTiYK8e0psRDjXV8ZTT4Yuv_XITlvXvIYERfreE46I&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
