@@ -202,7 +202,7 @@ var yye = tgel.getYear();
 //
 module.exports = A17 = async (A17, m, chatUpdate, store) => {
   try {
-    var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
+    var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
     const isCmd = body.startsWith(prefix)
@@ -1699,7 +1699,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
     //
     switch (command) {
 
-     case 'btntes': case 'tesbtn':
+     case 'hssr': 
         if (isBanChat) return reply(mess.bangc);
         if (isBan) return reply(mess.banned);
         let msg = generateWAMessageFromContent(m.chat, {
@@ -1711,15 +1711,23 @@ Then if I got any juice left I'm gonna get Sunday too`);
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: 'test button A17'
+            text: 'hsr'
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: 'Powered by Kai'
+            text: 'character builds'
           }),
-          header: proto.Message.InteractiveMessage.Header.create({
-            title: 'Test',
-            subtitle: null,
-            hasMediaAttachment: false
+          const header = proto.Message.InteractiveMessage.Header.create({
+  title: 'honkai star rail',
+  subtitle: null,
+  hasMediaAttachment: true, 
+  media: {  // Add the 'media' property
+    image: { 
+      url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', // URL of the image
+      mimetype: 'image/jpg', // Correct MIME type
+    } 
+  }
+}); 
+
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
