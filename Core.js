@@ -1700,58 +1700,58 @@ Then if I got any juice left I'm gonna get Sunday too`);
     switch (command) {
 
      case 'hssr': case 'tesbtn':
-        if (isBanChat) return reply(mess.bangc);
-        if (isBan) return reply(mess.banned);
-        let msg = generateWAMessageFromContent(m.chat, {
-  viewOnceMessage: {
+  if (isBanChat) return reply(mess.bangc);
+  if (isBan) return reply(mess.banned);
+  let msg = generateWAMessageFromContent(m.chat, {
     message: {
-        "messageContextInfo": {
-          "deviceListMetadata": {},
-          "deviceListMetadataVersion": 2
-        },
-        interactiveMessage: proto.Message.InteractiveMessage.create({
-          body: proto.Message.InteractiveMessage.Body.create({
-            text: 'test button A17'
-          }),
-          footer: proto.Message.InteractiveMessage.Footer.create({
-            text: 'Powered by Kai'
-          }),
-          const header = proto.Message.InteractiveMessage.Header.create({
-  title: 'honkai star rail',
-  subtitle: null,
-  hasMediaAttachment: true, 
-  media: {  // Add the 'media' property
-    image: { 
-      url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', // URL of the image
-      mimetype: 'image/jpeg', // Correct MIME type
-    } 
-  }
-}); 
-          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-            buttons: [
-              {
-  "name": "quick_reply",
-  "buttonParamsJson": `{"display_text":".jingliu","id":"${global.prefa[0]}jingliu"}`
-   },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": `{"display_text":".ruan mei","id":"${global.prefa[0]}ruan"}`
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": `{"display_text":".blade","id":"${global.prefa[0]}blade"}`
-              }
-           ],
-          })
+      "messageContextInfo": {
+        "deviceListMetadata": {},
+        "deviceListMetadataVersion": 2
+      },
+      interactiveMessage: proto.Message.InteractiveMessage.create({
+        body: proto.Message.InteractiveMessage.Body.create({
+          text: 'test button A17'
+        }),
+        footer: proto.Message.InteractiveMessage.Footer.create({
+          text: 'Powered by Kai'
+        }),
+        // *Corrected: Header is now declared separately*
+        header: proto.Message.InteractiveMessage.Header.create({
+          title: 'honkai star rail',
+          subtitle: null,
+          hasMediaAttachment: true, 
+          media: {  
+            image: { 
+              url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', 
+              mimetype: 'image/jpeg', 
+            } 
+          }
+        }), 
+        nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+          buttons: [
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".jingliu","id":"${global.prefa[0]}jingliu"}
+            },
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".ruan mei","id":"${global.prefa[0]}ruan"}
+            },
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".blade","id":"${global.prefa[0]}blade"}
+            }
+          ],
         })
+      })
     }
-  }
-}, {})
+  }, {})
 
-A17.relayMessage(msg.key.remoteJid, msg.message, {
-  messageId: msg.key.id
-})
-        break;
+  A17.relayMessage(msg.key.remoteJid, msg.message, {
+    messageId: msg.key.id
+  })
+  break;
+
 
 
       //
