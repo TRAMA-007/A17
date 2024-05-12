@@ -1396,7 +1396,7 @@ if (smallinput.includes('مثا')) {
     }
 
 
-    if (smallinput.includes('كسمك')) {
+    if (smallinput.includes('كسم')) {
  if (m.isGroup) {
    if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
    if (tagg) {
