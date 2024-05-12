@@ -1727,7 +1727,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
     } 
   }
 }); 
-          }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
