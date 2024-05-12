@@ -2737,6 +2737,41 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
+      case 'gift': {
+  if (isBan) return reply(mess.banned);
+  if (isBanChat) return reply(mess.bangc);
+  A17.sendMessage(from, { react: { text: "💋", key: m.key } });
+  let value = text.trim().split(" ");
+  if (value[0] === "") return reply(`Use ${prefix}transfer 100`);
+  const cara = "cara";
+  const user1 = m.sender;
+  const word = value[0];
+  let d = parseInt(word);
+  if (!d) return reply("Check your text plz, you are using the command in a wrong way.");
+
+  const balance = await eco.balance(user1, cara);
+  if (balance.wallet < d) {
+    return reply("You don't have sufficient money to transfer.");
+  }
+
+  // Get all users from your database (you need to implement this function)
+  const allUsers = await getAllUsers(); 
+
+  let successfulTransfers = 0;
+  for (const user2 of allUsers) {
+    if (user2 === user1) continue; // Skip the sender
+    try {
+      await eco.give(user2, cara, value[0]); 
+      successfulTransfers++;
+    }
+  }
+
+  reply(`📠 Transfers completed for ${successfulTransfers} out of ${allUsers.length - 1} users.`); 
+}
+break;
+
+
+
       case 'wealth': case 'ritual': {
         if (!isCreator) return reply(mess.botowner)
         var user = m.sender
