@@ -1716,24 +1716,31 @@ Then if I got any juice left I'm gonna get Sunday too`);
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: 'Powered by Kai'
           }),
-          header: proto.Message.InteractiveMessage.Header.create({
-            title: 'Test',
-            subtitle: null,
-            hasMediaAttachment: false
+          const header = proto.Message.InteractiveMessage.Header.create({
+  title: 'honkai star rail',
+  subtitle: null,
+  hasMediaAttachment: true, 
+  media: {  // Add the 'media' property
+    image: { 
+      url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', // URL of the image
+      mimetype: 'image/jpeg', // Correct MIME type
+    } 
+  }
+}); 
           }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
   "name": "quick_reply",
-  "buttonParamsJson": `{"display_text":".jingliu","id":"${global.prefa[0]}menu"}`
+  "buttonParamsJson": `{"display_text":".jingliu","id":"${global.prefa[0]}jingliu"}`
    },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": `{"display_text":".ruan mei","id":"${global.prefa[0]}owner"}`
+                "buttonParamsJson": `{"display_text":".ruan mei","id":"${global.prefa[0]}ruan"}`
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": `{"display_text":".blade","id":"${global.prefa[0]}script"}`
+                "buttonParamsJson": `{"display_text":".blade","id":"${global.prefa[0]}blade"}`
               }
            ],
           })
