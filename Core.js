@@ -1432,6 +1432,13 @@ if (smallinput.includes('مثا')) {
     }
 
 
+     if (smallinput.includes('قطع')) {
+ if (isAbd) reply (`يقطعه فيك واحد من دار زغاوة لا ناك لا جلد حلاوة`);
+ if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
+   
+     } 
+
+
    if (smallinput.includes('زولتي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
    const typ = ['زولي السمين..الخبر', 'وين الناس', 'اخبار السكس شنو يا زولي'];
    const random = typ[Math.floor(Math.random() * typ.length)];
