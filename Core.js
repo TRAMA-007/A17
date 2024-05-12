@@ -2752,7 +2752,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
   const balance = await eco.balance(user1, cara);
   if (balance.wallet < d) {
     return reply("You don't have sufficient money to transfer.");
-  }
+  
 
   // Get all users from your database (you need to implement this function)
   const allUsers = await getAllUsers(); 
@@ -2760,14 +2760,13 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
   let successfulTransfers = 0;
   for (const user2 of allUsers) {
     if (user2 === user1) continue; // Skip the sender
-    try {
       await eco.give(user2, cara, value[0]); 
       successfulTransfers++;
-    }
-  }
 
   reply(`📠 Transfers completed for ${successfulTransfers} out of ${allUsers.length - 1} users.`); 
 }
+      }  
+      }   
 break;
 
 
