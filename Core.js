@@ -1397,13 +1397,7 @@ if (smallinput.includes('مثا')) {
 
 
     if (smallinput.includes('كسم')) {
- if (m.isGroup) {
    if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
-   if (tagg) {
-   let userToKick = m.sender;
-    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
-    }
-     }
      } 
 
 
