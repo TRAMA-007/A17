@@ -1699,10 +1699,10 @@ Then if I got any juice left I'm gonna get Sunday too`);
     //
     switch (command) {
 
-     case 'hssr': 
+     case 'hssr': case 'tesbtn':
         if (isBanChat) return reply(mess.bangc);
-if (isBan) return reply(mess.banned);
-let msg = generateWAMessageFromContent(m.chat, {
+        if (isBan) return reply(mess.banned);
+        let msg = generateWAMessageFromContent(m.chat, {
   viewOnceMessage: {
     message: {
         "messageContextInfo": {
@@ -1711,36 +1711,29 @@ let msg = generateWAMessageFromContent(m.chat, {
         },
         interactiveMessage: proto.Message.InteractiveMessage.create({
           body: proto.Message.InteractiveMessage.Body.create({
-            text: 'hsr'
+            text: 'test button A17'
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: 'character builds'
+            text: 'Powered by Kai'
           }),
-          // *Corrected: Added closing parenthesis for 'header' constant*
-          header: proto.Message.InteractiveMessage.Header.create({ 
-            title: 'honkai star rail',
+          header: proto.Message.InteractiveMessage.Header.create({
+            title: 'Test',
             subtitle: null,
-            hasMediaAttachment: false, 
-           // media: {  
-          //    image: { 
-         //       url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg',
-          //      mimetype: 'image/jpg',
-         //     } 
-        //    }
-          }), // *Closing parenthesis added*
+            hasMediaAttachment: false
+          }),
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
+  "name": "quick_reply",
+  "buttonParamsJson": `{"display_text":".jingliu","id":"${global.prefa[0]}menu"}`
+   },
+              {
                 "name": "quick_reply",
-                "buttonParamsJson": {"display_text":".jingliu ❄","id":"${global.prefa[0]}menu"}
+                "buttonParamsJson": `{"display_text":".ruan mei","id":"${global.prefa[0]}owner"}`
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": {"display_text":".ruan mei","id":"${global.prefa[0]}owner"}
-              },
-              {
-                "name": "quick_reply",
-                "buttonParamsJson": {"display_text":".blade","id":"${global.prefa[0]}script"}
+                "buttonParamsJson": `{"display_text":".blade","id":"${global.prefa[0]}script"}`
               }
            ],
           })
@@ -1752,7 +1745,7 @@ let msg = generateWAMessageFromContent(m.chat, {
 A17.relayMessage(msg.key.remoteJid, msg.message, {
   messageId: msg.key.id
 })
-break;
+        break;
 
 
       //
