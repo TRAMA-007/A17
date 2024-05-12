@@ -1701,8 +1701,8 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
      case 'hssr': 
         if (isBanChat) return reply(mess.bangc);
-        if (isBan) return reply(mess.banned);
-        let msg = generateWAMessageFromContent(m.chat, {
+if (isBan) return reply(mess.banned);
+let msg = generateWAMessageFromContent(m.chat, {
   viewOnceMessage: {
     message: {
         "messageContextInfo": {
@@ -1716,32 +1716,31 @@ Then if I got any juice left I'm gonna get Sunday too`);
           footer: proto.Message.InteractiveMessage.Footer.create({
             text: 'character builds'
           }),
-          const header = proto.Message.InteractiveMessage.Header.create({
-  title: 'honkai star rail',
-  subtitle: null,
-  hasMediaAttachment: true, 
-  media: {  // Add the 'media' property
-    image: { 
-      url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', // URL of the image
-      mimetype: 'image/jpg', // Correct MIME type
-    } 
-  }
-}); 
-
-          }),
+          // *Corrected: Added closing parenthesis for 'header' constant*
+          header: proto.Message.InteractiveMessage.Header.create({ 
+            title: 'honkai star rail',
+            subtitle: null,
+            hasMediaAttachment: true, 
+            media: {  
+              image: { 
+                url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg',
+                mimetype: 'image/jpg',
+              } 
+            }
+          }), // *Closing parenthesis added*
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
-  "name": "quick_reply",
-  "buttonParamsJson": `{"display_text":"Allmenu 🗂️","id":"${global.prefa[0]}menu"}`
-   },
-              {
                 "name": "quick_reply",
-                "buttonParamsJson": `{"display_text":"Owner 👤","id":"${global.prefa[0]}owner"}`
+                "buttonParamsJson": {"display_text":"Allmenu 🗂️","id":"${global.prefa[0]}menu"}
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": `{"display_text":"Script 📃","id":"${global.prefa[0]}script"}`
+                "buttonParamsJson": {"display_text":"Owner 👤","id":"${global.prefa[0]}owner"}
+              },
+              {
+                "name": "quick_reply",
+                "buttonParamsJson": {"display_text":"Script 📃","id":"${global.prefa[0]}script"}
               }
            ],
           })
@@ -1753,7 +1752,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 A17.relayMessage(msg.key.remoteJid, msg.message, {
   messageId: msg.key.id
 })
-        break; 
+break;
 
 
       //
