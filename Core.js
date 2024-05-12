@@ -1720,27 +1720,27 @@ let msg = generateWAMessageFromContent(m.chat, {
           header: proto.Message.InteractiveMessage.Header.create({ 
             title: 'honkai star rail',
             subtitle: null,
-            hasMediaAttachment: true, 
-            media: {  
-              image: { 
-                url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg',
-                mimetype: 'image/jpg',
-              } 
-            }
+            hasMediaAttachment: false, 
+           // media: {  
+          //    image: { 
+         //       url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg',
+          //      mimetype: 'image/jpg',
+         //     } 
+        //    }
           }), // *Closing parenthesis added*
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
                 "name": "quick_reply",
-                "buttonParamsJson": {"display_text":"Allmenu 🗂️","id":"${global.prefa[0]}menu"}
+                "buttonParamsJson": {"display_text":".jingliu ❄","id":"${global.prefa[0]}menu"}
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": {"display_text":"Owner 👤","id":"${global.prefa[0]}owner"}
+                "buttonParamsJson": {"display_text":".ruan mei","id":"${global.prefa[0]}owner"}
               },
               {
                 "name": "quick_reply",
-                "buttonParamsJson": {"display_text":"Script 📃","id":"${global.prefa[0]}script"}
+                "buttonParamsJson": {"display_text":".blade","id":"${global.prefa[0]}script"}
               }
            ],
           })
