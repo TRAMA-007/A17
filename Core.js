@@ -1699,6 +1699,54 @@ Then if I got any juice left I'm gonna get Sunday too`);
     //
     switch (command) {
 
+     case 'btntes': case 'tesbtn':
+        if (isBanChat) return reply(mess.bangc);
+        if (isBan) return reply(mess.banned);
+        let msg = generateWAMessageFromContent(m.chat, {
+  viewOnceMessage: {
+    message: {
+        "messageContextInfo": {
+          "deviceListMetadata": {},
+          "deviceListMetadataVersion": 2
+        },
+        interactiveMessage: proto.Message.InteractiveMessage.create({
+          body: proto.Message.InteractiveMessage.Body.create({
+            text: 'test button A17'
+          }),
+          footer: proto.Message.InteractiveMessage.Footer.create({
+            text: 'Powered by Kai'
+          }),
+          header: proto.Message.InteractiveMessage.Header.create({
+            title: 'Test',
+            subtitle: null,
+            hasMediaAttachment: false
+          }),
+          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+            buttons: [
+              {
+  "name": "quick_reply",
+  "buttonParamsJson": `{"display_text":"Allmenu 🗂️","id":"${global.prefa[0]}menu"}`
+   },
+              {
+                "name": "quick_reply",
+                "buttonParamsJson": `{"display_text":"Owner 👤","id":"${global.prefa[0]}owner"}`
+              },
+              {
+                "name": "quick_reply",
+                "buttonParamsJson": `{"display_text":"Script 📃","id":"${global.prefa[0]}script"}`
+              }
+           ],
+          })
+        })
+    }
+  }
+}, {})
+
+A17.relayMessage(msg.key.remoteJid, msg.message, {
+  messageId: msg.key.id
+})
+        break; 
+
 
       //
       case 'sc': case 'script': case 'sourcecode': {
@@ -2386,6 +2434,63 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
       // economy ...
+
+      case 'dice': case 'roll': {
+        A17.sendMessage(from, { react: { text: "🎲", key: m.key } })
+        const result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
+
+        const diceMessage = `🎲 *Dice Roll Result:* ${result}`;
+
+        reply(diceMessage);
+      }
+        break;
+
+
+      case 'flipcoin': case 'coin': {
+        A17.sendMessage(from, { react: { text: "🪙", key: m.key } });
+        // Simulate flipping a coin (0 for heads, 1 for tails)
+        const result = Math.random() < 0.5 ? 'Heads' : 'Tails';
+
+        const flipCoinMessage = `🪙 *Coin Flip Result: ${result}*`;
+        reply(flipCoinMessage);
+      }
+        break;
+
+
+      case 'rps': {
+        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
+        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
+
+        // Check if the command includes a valid move (rock, paper, or scissors)
+        const validMoves = ['rock', 'paper', 'scissors'];
+        if (!args[0] || !validMoves.includes(args[0].toLowerCase())) {
+          return reply('Please provide a valid move: rock, paper, or scissors.');
+        }
+
+        // Generate a random move for the bot
+        const botMove = validMoves[Math.floor(Math.random() * validMoves.length)];
+
+        // Determine the winner
+        const userMove = args[0].toLowerCase();
+        let result;
+
+        if (userMove === botMove) {
+          result = 'It\'s a tie!';
+        } else if (
+          (userMove === 'rock' && botMove === 'scissors') ||
+          (userMove === 'paper' && botMove === 'rock') ||
+          (userMove === 'scissors' && botMove === 'paper')
+        ) {
+          result = `You win! 🥳 ${userMove} beats ${botMove}.`;
+        } else {
+          result = `You lose! 🫳🏻 ${botMove} beats ${userMove}.`;
+        }
+
+        // Send the result as a response
+        reply(`You chose ${userMove}.\nA17 chose ${botMove}.\n${result}`);
+      }
+        break;
+
 
       case 'daily': case 'claim': case 'reward':
 
