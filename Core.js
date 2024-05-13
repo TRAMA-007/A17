@@ -313,7 +313,16 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       fs.writeFileSync("./storage/user/user.json", JSON.stringify(pendaftar));
     }
 
-
+async function getAllUsers() {
+  try {
+    const jj = await fs.promises.readFile('./storage/user/user.json', 'utf-8');
+    const ui = JSON.parse(jj);
+    return ui; // Return the array of user IDs
+  } catch (error) {
+    console.error("Error reading user data:", error);
+    return []; // Return an empty array if there is an error
+  }
+}   
 
     //----------------------------------------------------------------------------------------------------------//
 
@@ -2828,17 +2837,7 @@ break;
         break;
 
 
-     case 'hmm':  {
-async function getAllUsers() {
-  try {
-    const jj = await fs.promises.readFile('./storage/user/user.json', 'utf-8');
-    const ui = JSON.parse(jj);
-    return ui; // Return the array of user IDs
-  } catch (error) {
-    console.error("Error reading user data:", error);
-    return []; // Return an empty array if there is an error
-  }
-}   
+     case 'hmm':  
     var user = m.sender;
     var cara = 'cara';
   // Get all users (You need to implement this function)
@@ -2849,7 +2848,6 @@ async function getAllUsers() {
     }
   reply(`Wealth ritual completed! All users received 💎100000.`); 
 	 }
-	    }
 break; 
 
 
