@@ -2792,9 +2792,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
-        case 'hmm': {
+        case 'gift': {
     var cara = 'cara';
-    var user = m.sender
   // Get all users (You need to implement this function)
 async function getAllUsers() {
   try {
