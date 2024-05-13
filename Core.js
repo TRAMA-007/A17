@@ -427,7 +427,7 @@ if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwa
 
   try {
     const botreply = await axios.get(apiUrl);
-    const sessionId = botreply.data.result.sessionid; // Get session ID from API response 
+    const sessionId = botreply.data.result.sessionId; // Get session ID from API response 
     storeSessionId(userId, sessionId); // Store the session ID for future use
 
     const menggoda = botreply.data.result.text;
