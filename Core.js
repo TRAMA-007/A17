@@ -2832,9 +2832,7 @@ break;
   // Get all users (You need to implement this function)
   const allUsers = await getAllUsers(); 
   for (const user of allUsers) {
-    try {
       await eco.give(user, cara, 100000); 
-    }
   reply(`Wealth ritual completed! All users received 💎100000.`); 
 	 }
 break; 
