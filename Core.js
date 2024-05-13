@@ -383,7 +383,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
 	  
 // Function to get or create a session ID for a user 
-/*	  const userId = m.sender;  
+	  const userId = m.sender;  
 function getOrCreateSessionId(userId) {
   let userSessions = {};
   try {
@@ -400,8 +400,8 @@ function getOrCreateSessionId(userId) {
 function storeSessionId(userId, sessionId) {
   let userSessions = {};
   try {
-    const data = fs.readFileSync('./database/user_sessions.json', 'utf-8');
-    userSessions = JSON.parse(dataa); 
+    const dataaa = fs.readFileSync('./database/user_sessions.json', 'utf-8');
+    userSessions = JSON.parse(dataaa); 
   } catch (error) {
     console.log("No session data found, creating a new file.");
   }
@@ -434,15 +434,15 @@ if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwa
     console.error("Error fetching response from Character AI:", error);
     m.reply("Sorry, there was an error processing your reply.");
   }
-} */
+} 
     
-       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
+   /*    if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=ge7zagRQeIBsSfJgR5GUkPUv_BgbdLEwyM8mTv_Xgfc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-        } 
+        } */
 
 
      if (!isCmd && islucas && !m.isGroup){
@@ -2824,19 +2824,6 @@ break;
         reply(`*You got 💎100000*`)
       }
         break;
-
-
-     case 'hmm':  
-    var user = m.sender;
-    var cara = 'cara';
-  // Get all users (You need to implement this function)
-  const allUsers = await getAllUsers(); 
-  for (const user of allUsers) {
-      await eco.give(user, cara, 100000); 
-  reply(`Wealth ritual completed! All users received 💎100000.`); 
-	 }
-break; 
-
 
 
 
