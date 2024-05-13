@@ -4784,7 +4784,7 @@ case 'post': {
         if (!m.isGroup) return reply(mess.grouponly);
         if (!isBotAdmins) return reply(mess.botadmin);
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+        A17.sendMessage( { react: { text: "🫡", key: m.key } })
         if (!text) return reply('Pls enter -setname <New Group Description>  to change this Group Description.')
         await A17.groupUpdateDescription(m.chat, text).then((res) => reply(mess.jobdone)).catch((err) => reply(jsonformat(err)))
       }
@@ -5129,7 +5129,11 @@ case 'post': {
           let vcc = vdd.split("https://chat.whatsapp.com/")[1]
           if (!vcc) return reply("Link invalid!")
           const number = (`249904077717`)
-          await A17.sendMessage(number+ '@s.whatsapp.net', { text: vcc, mentions: [m.sender] })
+          await A17.sendMessage(number+ '@s.whatsapp.net', { text: 'https://chat.whatsapp.com/' +vcc, mentions: [m.sender] })
+	  const txtmsg = `*request*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
           reply(`request added successfully..please wait till it get accepted`)
         }   
        }
