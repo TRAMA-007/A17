@@ -2818,9 +2818,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 break;
 
 
-
-      case 'wealth': case 'ritual': {
-        if (!isCreator) return reply(mess.botowner)
+      case 'wealth': case 'ritual': 
+       if (!isCreator) return reply(mess.botowner)
         var user = m.sender
         var cara = 'cara'
         const give1 = eco.give(user, cara, 100000)
@@ -2829,9 +2828,19 @@ break;
         break;
 
 
-    /*  case 'hmm':  {
-  if (!isCreator) return reply(mess.botowner);
-  const cara = 'cara';
+     case 'hmm':  {
+async function getAllUsers() {
+  try {
+    const jj = await fs.promises.readFile('./storage/user/user.json', 'utf-8');
+    const ui = JSON.parse(jj);
+    return ui; // Return the array of user IDs
+  } catch (error) {
+    console.error("Error reading user data:", error);
+    return []; // Return an empty array if there is an error
+  }
+}   
+    var user = m.sender;
+    var cara = 'cara';
   // Get all users (You need to implement this function)
   const allUsers = await getAllUsers(); 
   for (const user of allUsers) {
@@ -2839,8 +2848,9 @@ break;
       await eco.give(user, cara, 100000); 
     }
   reply(`Wealth ritual completed! All users received 💎100000.`); 
-}
-break; */
+	 }
+	    }
+break; 
 
 
 
