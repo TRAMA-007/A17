@@ -383,14 +383,68 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     //Dm and Groups Autoreply/Bot chat
+	  
+// Function to get or create a session ID for a user
+const userId = m.sender;  
+function getOrCreateSessionId(userId) {
+  let userSessions = {};
+  try {
+    const dataa = fs.readFileSync('./database/user_sessions.json', 'utf-8');
+    userSessions = JSON.parse(dataa); 
+  } catch (error) {
+    console.log("No session data found, creating a new file.");
+  }
+
+  return userSessions[userId] || null; // Return the session ID if it exists, otherwise null
+}
+
+// Function to store the session ID for a user
+function storeSessionId(userId, sessionId) {
+  let userSessions = {};
+  try {
+    const data = fs.readFileSync('./database/user_sessions.json', 'utf-8');
+    userSessions = JSON.parse(dataa); 
+  } catch (error) {
+    console.log("No session data found, creating a new file.");
+  }
+
+  userSessions[userId] = sessionId;
+  fs.writeFileSync('./database/user_sessions.json', JSON.stringify(userSessions));
+}
+
+if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
+  const existingSessionId = getOrCreateSessionId(userId);
+
+  const typ = ['plana', 'arona', 'adamxion'];
+  const api = typ[Math.floor(Math.random() * typ.length)];
+
+  let apiUrl = `https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`;
+
+  // Add existing sessionId to the API URL if it exists
+  if (existingSessionId) {
+    apiUrl += `&sessionId=${existingSessionId}`;
+  }
+
+  try {
+    const botreply = await axios.get(apiUrl);
+    const sessionId = botreply.data.result.sessionid; // Get session ID from API response 
+    storeSessionId(userId, sessionId); // Store the session ID for future use
+
+    const menggoda = botreply.data.result.text;
+    m.reply(menggoda);
+  } catch (error) {
+    console.error("Error fetching response from Character AI:", error);
+    m.reply("Sorry, there was an error processing your reply.");
+  }
+}
     
-       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
+    /*   if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=ge7zagRQeIBsSfJgR5GUkPUv_BgbdLEwyM8mTv_Xgfc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-        }
+        } */
 
 
      if (!isCmd && islucas && !m.isGroup){
