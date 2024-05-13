@@ -48,6 +48,18 @@ const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
 });
 
+async function getAllUsers() {
+  try {
+    const data = await fs.promises.readFile('./storage/user/user.json', 'utf-8');
+    const pendaftar = JSON.parse(data);
+    return pendaftar; // Return the array of user IDs
+  } catch (error) {
+    console.error("Error reading user data:", error);
+    return []; // Return an empty array if there is an error
+  }
+}
+
+
 async function startA17() {
   console.log(
     color(
