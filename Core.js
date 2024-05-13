@@ -383,7 +383,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
 	  
 // Function to get or create a session ID for a user 
-/*  const userId = m.sender;  
+  const userId = m.sender;  
 function getOrCreateSessionId(userId) {
   let userSessions = {};
   try {
@@ -410,13 +410,13 @@ function storeSessionId(userId, sessionId) {
   fs.writeFileSync('./database/user_sessions.json', JSON.stringify(userSessions));
 }
 
-if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
+if (!isCmd && isCreator && !m.isGroup){
   const existingSessionId = getOrCreateSessionId(userId);
 
   const typ = ['plana', 'arona', 'adamxion'];
   const api = typ[Math.floor(Math.random() * typ.length)];
 
-  let apiUrl = `https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`;
+  let apiUrl = `https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`;
 
   // Add existing sessionId to the API URL if it exists
   if (existingSessionId) {
@@ -434,7 +434,7 @@ if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwa
     console.error("Error fetching response from Character AI:", error);
     m.reply("Sorry, there was an error processing your reply.");
   }
-}  */
+}  
     
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
@@ -473,13 +473,13 @@ if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwa
     }
 
 
-    if (!isCmd && isCreator && !m.isGroup){
+  /*  if (!isCmd && isCreator && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=hRYPx44-XJR8REiz_p_bPJHXeiFGzVtCR1Aec7cIg9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-    }
+    } */
 
 
     if (!isCmd && isAli && !m.isGroup){
@@ -2789,7 +2789,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         var cara = 'cara'
         const give1 = eco.give(user, cara, 100000)
         reply(`*You got 💎100000*`)
-      }
         break;
 
 
