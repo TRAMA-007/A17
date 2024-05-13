@@ -384,8 +384,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
 	  
-// Function to get or create a session ID for a user
-const userId = m.sender;  
+// Function to get or create a session ID for a user 
+/*	  const userId = m.sender;  
 function getOrCreateSessionId(userId) {
   let userSessions = {};
   try {
@@ -436,15 +436,15 @@ if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwa
     console.error("Error fetching response from Character AI:", error);
     m.reply("Sorry, there was an error processing your reply.");
   }
-}
+} */
     
-    /*   if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
+       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=ge7zagRQeIBsSfJgR5GUkPUv_BgbdLEwyM8mTv_Xgfc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-        } */
+        } 
 
 
      if (!isCmd && islucas && !m.isGroup){
