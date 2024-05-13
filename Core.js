@@ -11156,6 +11156,18 @@ last login: ${aru.lastLogin}
         break;
 
 
+	case 'coomer': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`parameters :
+	Pussy Spreadpussy Genshin Squirt Glasses Sunglasses Swimsuit School Swimsuit Holo Live Ass Underwear Nipples Uncensored Sex Sex2 Sex3 Blonde Twintails Breasts Thighhighs Skirt Gamecg Animal Ears Foxgirl Dress School Uniform Twogirls Gloves Vocaloid Touhou Weapon With Flowers Pinkhair Clouds View White Tail Nude Ponytail Bed White Hair Ribbons Japanese Cloths Hatsune Miku Bikini Barefoot Nobra Food Wings Pantyhose Open Shirt Headband Close Wet Catgirl Wolfgirl Neko Loli Spread Legs Bra Fate Series Tree Elbow Gloves Green Hair Horns With Petals Drunk Cum Head Dress Tie Shorts Maid Headphones Anus View Idol Gun Stockings Tears Breasthold Necklace Seethrough Bunnyears Bunnygirl Topless Beach Erect Nipples Yuri Vampire Shirt Pantypull Torn Clothes Bondage Demon Bell Shirt Lift Tattoo Chain Flat Chest Fingering`) 
+        const cum = await axios.get(`https://fantox-apis.vercel.app/${encodeURIComponent(q)}`)
+        const zib = cum.data.url;
+        await A17.sendMessage(m.chat, { image: { url: zib} }, { quoted: m })
+     }
+        break; 
+
+
         case 'imagine': {
         if (isIssam) return reply(`نو`)
         if (isIssamm) return reply(`ههههههه فاكر لو راح ل رقمه التاني ح يقدر يخدعني`)
