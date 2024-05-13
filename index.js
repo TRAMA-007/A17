@@ -44,10 +44,6 @@ const {
 const figlet = require("figlet");
 const { color } = require("./lib/color");
 
-const {
-  pendaftar,
-} = require("./core.js");
-
 const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
 });
