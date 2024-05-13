@@ -2793,6 +2793,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
         case 'gift': {
+	if (!isCreator) return reply(`هاك القيفت دي🍆`) 
     var cara = 'cara';
   // Get all users (You need to implement this function)
 async function getAllUsers() {
