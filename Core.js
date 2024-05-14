@@ -153,6 +153,7 @@ if (global.db)
 let isSleeping = false; // Move the declaration here.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
+let darkchat = JSON.parse(fs.readFileSync('./database/Dark.json'));
 let kaiaudio = JSON.parse(fs.readFileSync('./Media-Database/audio.json'));
 let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
 let _buruan = JSON.parse(fs.readFileSync('./storage/user/bounty.json'));
@@ -253,6 +254,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isBan = banUser.includes(m.sender)
     const welcm = m.isGroup ? wlcm.includes(from) : false
     const isBanChat = m.isGroup ? banchat.includes(from) : false
+    const isDarkChat = m.isGroup ? banchat.includes(from) : true
     const isRakyat = isCreator || global.rkyt.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
     const AntiLink = m.isGroup ? ntilink.includes(from) : false
     const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
@@ -2723,6 +2725,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
       case 'rob':
       case 'attack':
+    if (isDarkChat) return reply (`امشي قروب السرقة يا عب`);
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     if (!m.isGroup) return reply(mess.grouponly);
