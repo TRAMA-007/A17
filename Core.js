@@ -9,7 +9,6 @@ const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
-const ffmpegPath = require('@ffmpeg-static/ffmpeg');
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -27,9 +26,9 @@ const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate)
 const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
 // const thiccysapi = require('textmaker-thiccy');
-// const ffmpeg = require('fluent-ffmpeg');
-// const ffmpegPath = require('ffmpeg-static').path;
-// ffmpeg.setFfmpegPath(ffmpegPath);
+ const ffmpeg = require('fluent-ffmpeg');
+ const ffmpegPath = require('ffmpeg-static').path;
+ ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
 const { hentai } = require('./lib/scraper2.js');
