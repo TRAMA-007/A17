@@ -254,7 +254,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isBan = banUser.includes(m.sender)
     const welcm = m.isGroup ? wlcm.includes(from) : false
     const isBanChat = m.isGroup ? banchat.includes(from) : false
-    const isDarkChat = m.isGroup ? banchat.includes(from) : true
+    const isDarkChat = m.isGroup ? darkchat.includes(from) : true
     const isRakyat = isCreator || global.rkyt.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
     const AntiLink = m.isGroup ? ntilink.includes(from) : false
     const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
