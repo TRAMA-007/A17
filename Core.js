@@ -2723,13 +2723,13 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
       case 'rob':
       case 'attack':
-       let dd = 'https://chat.whatsapp.com/GinclPTNvg6FMMOaGfUNcf';
-let response = await A17.groupInviteCode(m.chat);
-let link = (`https://chat.whatsapp.com/${response}`);
+   //    let dd = 'https://chat.whatsapp.com/GinclPTNvg6FMMOaGfUNcf';
+//     let response = await A17.groupInviteCode(m.chat);
+//    let link = (`https://chat.whatsapp.com/${response}`);
 
-if (dd === link) {
-  return reply('امشي قروب السرقة يا عب');
-}
+//    if (dd === link) {
+//    return reply('امشي قروب السرقة يا عب');
+//   }
        if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     if (!m.isGroup) return reply(mess.grouponly);
@@ -2756,20 +2756,20 @@ if (dd === link) {
         const typ = ['ran', 'rob', 'caught'];
         const random = typ[Math.floor(Math.random() * typ.length)];
 
-        if (a > balance1.wallet) return reply("☹️ You don't have enough money to pay in case you get caught.");
-        if (a > balance2.wallet) return reply("Sorry, your victim is too poor 🤷🏽‍♂️ let go.");
-        if (b > balance2.wallet) {
+        if (a > balance1.wallet) return reply("دا شنو العب المقطع دا..جيب قروش الكفالة اول");
+        if (a > balance2.wallet) return reply("زولك دا مفلس اعمل رايح");
+  //      if (b > balance2.wallet) {
           
-          let userToKick = m.sender;
-          if (isBotAdmins) await A17.sendMessage(from, { text: 'ياخ دا شنو العب دا حشيتنا حش' });
-          if (isBotAdmins) await A17.sendMessage(from, { text: 'شوف ليك زول تاني اسرقو ما معقول اسود و كمان قلبك اسود' });
-    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+    //      let userToKick = m.sender;
+   //       if (isBotAdmins) await A17.sendMessage(from, { text: 'ياخ دا شنو العب دا حشيتنا حش' });
+    //      if (isBotAdmins) await A17.sendMessage(from, { text: 'شوف ليك زول تاني اسرقو ما معقول اسود و كمان قلبك اسود' });
+ //   await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
 
-        }else{
+  //      }else{
 
         let tpy = random;
         if (random === 'ran') {
-            await reply("زولك دا مفلس ساي اعمل رايح");
+            await reply("زولك دا هرب اعمل رايح");
         } else if (random === 'caught') {
             await eco.deduct(user1, cara, k);
             await eco.give(user2, cara, k);
@@ -2780,7 +2780,6 @@ if (dd === link) {
             await eco.give(user1, cara, w);
             reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
             reply(`You got 💎${w}`);
-        }
          }
     }
     break;
