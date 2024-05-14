@@ -28,8 +28,8 @@ const eco = require('discord-mongoose-economy');
 // const thiccysapi = require('textmaker-thiccy');
 const ffmpeg = require('fluent-ffmpeg');
 // const ffmpegPath = require('@ffmpeg-static/ffmpeg');
-// const ffmpegPath = require('ffmpeg-static').path;
-// ffmpeg.setFfmpegPath(ffmpegPath);
+ const ffmpegPath = require('ffmpeg-static').path;
+ ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
 const { hentai } = require('./lib/scraper2.js');
@@ -956,30 +956,26 @@ Typed *surrender* to surrender and admited defeat`
 }
  
 	  
-  if (smallinput.includes('loli')) {
+if (smallinput.includes('loli')) {
   let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
-
-  // Create a temporary file to store the downloaded MP4 data
-  const tempFilePath = `./src/temp_video.mp4`; // Adjust path if needed
-  fs.writeFileSync(tempFilePath, media); 
-
-  ffmpeg(tempFilePath)
+  const webpBuffer = await ffmpeg(media)
     .inputFormat('mp4')
     .outputFormat('webp')
-    .videoCodec('libwebp') // Ensure libwebp is enabled in your FFmpeg build
+    .videoCodec('libwebp')
     .audioCodec('none')
-    .fps(30) // Adjust frames per second as needed 
-    .size('512x512') // Resize for sticker size
-    .loop(0) 
-      // Read the generated WebP file
-      const webpBuffer = fs.readFileSync('./src/temp_video.webp'); // Adjust path if needed
-      // Send sticker using A17 library 
-      A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
+    .fps(30)
+    .size('512x512')
+    .loop(0)
+    .toFormat('webp') // Use toFormat instead of outputFormat
+    .outputOptions('-lossless 1') // Add this option for lossless conversion
+    .outputOptions('-preset default') // Add this option for better quality
+    .outputOptions('-loop 0') // Add this option to loop the animation indefinitely
+    .save('output.webp'); // Save the output to a file
 
-      // Clean up temporary files (optional)
-      fs.unlinkSync(tempFilePath);
-      fs.unlinkSync('./src/temp_video.webp');
+  // Now you can send the sticker using A17 library (replace with your actual function)
+  A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
 }
+
 
 
 
