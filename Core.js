@@ -28,8 +28,8 @@ const eco = require('discord-mongoose-economy');
 // const thiccysapi = require('textmaker-thiccy');
 const ffmpeg = require('fluent-ffmpeg');
 // const ffmpegPath = require('@ffmpeg-static/ffmpeg');
- const ffmpegPath = require('ffmpeg-static').path;
- ffmpeg.setFfmpegPath(ffmpegPath);
+// const ffmpegPath = require('ffmpeg-static').path;
+// ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
 const { hentai } = require('./lib/scraper2.js');
