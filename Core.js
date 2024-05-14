@@ -9,6 +9,7 @@ const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
+const ffmpegPath = require('@ffmpeg-static/ffmpeg');
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -956,20 +957,21 @@ Typed *surrender* to surrender and admited defeat`
  
 	  
 
-    if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
-    let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
-    const webpBuffer = await sharp(media)
-    .resize(512) // Resize to 512x512 pixels
-    .webp({
-      quality: 90, // Set the quality of the output WebP
-      lossless: false, // Disable lossless compression
-      animated: true, // Enable animated WebP support
-      loop: 0, // Set the loop count to 0 for infinite looping
-    })
-    .toBuffer();
+    if (smallinput.includes('loli')  smallinput.includes('لولي')  smallinput.includes('كورن اطفال')) {
+  let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
+  const webpBuffer = await ffmpeg(media)
+    .inputFormat('mp4')
+    .outputFormat('webp')
+    .videoCodec('libwebp')
+    .audioCodec('none')
+    .fps(30)
+    .size('512x512')
+    .loop(0)
+    .run();
   // Send sticker using A17 library (replace with your actual function)
   A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
-}  
+}
+
 
 
 
