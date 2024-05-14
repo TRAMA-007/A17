@@ -946,8 +946,7 @@ Typed *surrender* to surrender and admited defeat`
     
     if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
     let media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
+          A17.sendMessage(from, { sticker: media }, { quoted: m });
 }
 
 
