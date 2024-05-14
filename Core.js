@@ -949,13 +949,10 @@ Typed *surrender* to surrender and admited defeat`
        const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
        // Convert to animated WebP using libwebp (check documentation for options)
        const webpBuffer = await webp.encode(media, '-lossless'); 
-
-       // Send animated sticker using A17 library 
+      // Send animated sticker using A17 library 
        A17.sendMessage(from, {  sticker: webpBuffer }, { quoted: m }); 
    }
-   
-
-
+	  
 
     if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
     let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
@@ -1051,7 +1048,7 @@ Typed *surrender* to surrender and admited defeat`
 }
     
 
-    if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+ /*   if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
       const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
     if (isShaq) reply (gg) 
@@ -1135,7 +1132,7 @@ Typed *surrender* to surrender and admited defeat`
          .toBuffer();
        // Send sticker using A17 library (replace with your actual function)
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
-   } 
+   } */
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
