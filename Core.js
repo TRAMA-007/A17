@@ -963,12 +963,29 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
     let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
-          const webpBuffer = await sharp(media)
-         .webp({ animated: true }) // Set animated to true for animated stickers
-         .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
-   }
+    const author = 'akane710'; // Replace with your author name
+    const pack = 'plana'; // Replace with your package name
+  // Convert to WebP using sharp
+    const webpBuffer = await sharp(media)
+    .resize(512) // Resize to 512x512 pixels
+    .webp({
+      quality: 90, // Set the quality of the output WebP
+      lossless: false, // Disable lossless compression
+      animated: true, // Enable animated WebP support
+      loop: 0, // Set the loop count to 0 for infinite looping
+    })
+    .metadata({
+      exif: {
+        // Set the sticker pack and author name in the EXIF data
+        'packname': pack,
+        'author': author,
+      },
+    })
+    .toBuffer();
+  // Send sticker using A17 library (replace with your actual function)
+  A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
+}
+
 
 
   /*  if (smallinput.includes('يعني ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
