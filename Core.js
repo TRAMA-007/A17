@@ -959,8 +959,12 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
     let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-    }
+          const webpBuffer = await sharp(media)
+         .webp({ animated: true }) // Set animated to true for animated stickers
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+   }
 
 
   /*  if (smallinput.includes('يعني ايه') || smallinput.includes('ولا ايه') || smallinput.includes('في ايه')) {
@@ -972,9 +976,12 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
     let media = await getBuffer("https://gifdb.com/images/thumbnail/ghost-hug-virtual-kiss-anime-girl-menhera-chan-c3fvyxsyb034zqbt.gif");
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
-    }
+          const webpBuffer = await sharp(media)
+         .webp({ animated: true }) // Set animated to true for animated stickers
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+   }
 
 
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
@@ -1046,9 +1053,12 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('يا نجم البحر')) {
     let media = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
-          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
-}
+          const webpBuffer = await sharp(media)
+         .webp({ animated: true }) // Set animated to true for animated stickers
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+   }
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
@@ -1485,11 +1495,11 @@ if (smallinput.includes('مثا')) {
     }
 
 
-     if (smallinput.includes('قطع')) {
+   /*  if (smallinput.includes('قطع')) {
  if (isAbd) reply (`يقطعه فيك واحد من دار زغاوة لا ناك لا جلد حلاوة`);
  if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
    
-     } 
+     } */
 
 
    if (smallinput.includes('زولتي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
@@ -6734,14 +6744,19 @@ break;
 	let { GraphOrg } = require("./lib/uploader");
         if (/image/.test(mime)) {
           let media = await quoted.download()
-	  let anu = await GraphOrg(media);
-          let serika = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gata_dios&img=${util.format(anu)}&package=plana&author=akane710`) 
-          A17.sendMessage(from, { sticker: serika }, { quoted: m });
-        } else if (/video/.test(mime)) {
+	  const webpBuffer = await sharp(media)
+         .webp({ animated: true }) // Set animated to true for animated stickers
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+   } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
-          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, crop: true })
-          await fs.unlinkSync(encmedia)
+          const webpBuffer = await sharp(media)
+         .webp({ animated: true }) // Set animated to true for animated stickers
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m }); 
         } else {
           reply(`رسل الصورة العايز تحولها لستيكر يا غبي`)
         }
