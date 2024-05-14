@@ -946,6 +946,8 @@ Typed *surrender* to surrender and admited defeat`
 
    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+  const author = 'Akane710'; // Replace with your author name
+  const pack = 'plana'; // Replace with your package name
   // Convert to WebP using sharp
   const webpBuffer = await sharp(media)
     .resize(512) // Resize to 512x512 pixels
@@ -953,11 +955,20 @@ Typed *surrender* to surrender and admited defeat`
       quality: 90, // Set the quality of the output WebP
       lossless: false, // Disable lossless compression
       animated: true, // Enable animated WebP support
+      loop: 0, // Set the loop count to 0 for infinite looping
+    })
+    .metadata({
+      exif: {
+        // Set the sticker pack and author name in the EXIF data
+        'WhatsApp-pack-name': pack,
+        'WhatsApp-author': author,
+      },
     })
     .toBuffer();
   // Send sticker using A17 library (replace with your actual function)
   A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
 }
+
 
    
 
