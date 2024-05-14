@@ -6724,10 +6724,12 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+	let { GraphOrg } = require("./lib/uploader");
         if (/image/.test(mime)) {
           let media = await quoted.download()
-          let encmedia = await A17.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia)
+	  let anu = await GraphOrg(media);
+          let serika = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gata_dios&img=${util.format(anu)}&package=plana&author=akane710`) 
+          A17.sendMessage(from, { sticker: serika }, { quoted: m });
         } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
