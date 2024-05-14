@@ -388,8 +388,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 function getOrCreateSessionId(userId) {
   let userSessions = {};
   try {
-    const dataa = fs.readFileSync('./database/user_sessions.json', 'utf-8');
-    userSessions = JSON.parse(dataa); 
+    const data = fs.readFileSync('./database/user_sessions.json', 'utf-8');
+    userSessions = JSON.parse(data); 
   } catch (error) {
     console.log("No session data found, creating a new file.");
   }
@@ -401,8 +401,8 @@ function getOrCreateSessionId(userId) {
 function storeSessionId(userId, sessionId) {
   let userSessions = {};
   try {
-    const dataaa = fs.readFileSync('./database/user_sessions.json', 'utf-8');
-    userSessions = JSON.parse(dataaa); 
+    const data = fs.readFileSync('./database/user_sessions.json', 'utf-8');
+    userSessions = JSON.parse(data); 
   } catch (error) {
     console.log("No session data found, creating a new file.");
   }
