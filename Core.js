@@ -9,6 +9,7 @@ const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
+const webp = require('node-webp');
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -942,26 +943,17 @@ Typed *surrender* to surrender and admited defeat`
     if (responses.hasOwnProperty(smallinput)) {
       reply(responses[smallinput]);
     }
-
-    
-       
-   // ... (Your existing code)
+   // ...
 
    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
        const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-       // Convert to WebP using sharp
-       const webpBuffer = await sharp(media)
-         .webp() 
-         .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+       // Convert to animated WebP using libwebp (check documentation for options)
+       const webpBuffer = await webp.encode(media, '-lossless'); 
+
+       // Send animated sticker using A17 library 
+       A17.sendMessage(from, {  sticker: webpBuffer }, { quoted: m }); 
    }
    
-    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-    const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-    const base64Sticker = media.toString('base64'); 
-  A17.sendMessage(from, {  sticker: {  url: base64Sticker  } }, { quoted: m }); 
-  }
 
 
 
@@ -1142,9 +1134,7 @@ Typed *surrender* to surrender and admited defeat`
          .webp() 
          .toBuffer();
        // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
-
-} 
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
    } 
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
