@@ -26,8 +26,8 @@ const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate)
 const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
 // const thiccysapi = require('textmaker-thiccy');
- const ffmpeg = require('fluent-ffmpeg');
- const ffmpegPath = require('@ffmpeg-static/ffmpeg');
+// const ffmpeg = require('fluent-ffmpeg');
+// const ffmpegPath = require('@ffmpeg-static/ffmpeg');
 // const ffmpegPath = require('ffmpeg-static').path;
 // ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
