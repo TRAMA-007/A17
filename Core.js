@@ -945,9 +945,13 @@ Typed *surrender* to surrender and admited defeat`
     
     
     if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-    let media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-          A17.sendMessage(from, { sticker: media }, { quoted: m });
+  try {
+    const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+    const base64Sticker = media.toString('base64'); 
+  A17.sendMessage(from, {  sticker: {  url: base64Sticker  } }, { quoted: m }); 
+  } 
 }
+
 
 
     if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
