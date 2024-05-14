@@ -1048,7 +1048,7 @@ Typed *surrender* to surrender and admited defeat`
 }
     
 
- /*   if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+    if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
       const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
     if (isShaq) reply (gg) 
@@ -1132,7 +1132,7 @@ Typed *surrender* to surrender and admited defeat`
          .toBuffer();
        // Send sticker using A17 library (replace with your actual function)
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
-   } */
+   } 
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
