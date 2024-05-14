@@ -954,7 +954,6 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
     let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);
     }
 
 
