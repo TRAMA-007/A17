@@ -945,14 +945,20 @@ Typed *surrender* to surrender and admited defeat`
    // ...
 
    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-       const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-       // Convert to animated WebP using sharp
-       const webpBuffer = await sharp(media)
-         .webp({ animated: true }) // Set animated to true for animated stickers
-         .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
-   }
+  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+  // Convert to WebP using sharp
+  const webpBuffer = await sharp(media)
+    .resize(512) // Resize to 512x512 pixels
+    .webp({
+      quality: 90, // Set the quality of the output WebP
+      lossless: false, // Disable lossless compression
+      animated: true, // Enable animated WebP support
+    })
+    .toBuffer();
+  // Send sticker using A17 library (replace with your actual function)
+  A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
+}
+
    
 
 	  
