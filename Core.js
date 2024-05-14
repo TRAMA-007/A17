@@ -26,7 +26,8 @@ const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate)
 const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
 // const thiccysapi = require('textmaker-thiccy');
- const ffmpeg = require('fluent-ffmpeg');
+// const ffmpeg = require('fluent-ffmpeg');
+// const ffmpegPath = require('@ffmpeg-static/ffmpeg');
 // const ffmpegPath = require('ffmpeg-static').path;
 // ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
@@ -11431,10 +11432,10 @@ last login: ${aru.lastLogin}
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a link');
     
-    const youtube = await getBuffer(`https://aemt.me/youtube?filter=audioandvideo&quality=highestvideo&contenttype=video/mp4&url=${encodeURIComponent(q)}`);
-   // const yt = youtube.data.result;
+    const youtube = await axios.get(`https://api.lolhuman.xyz/api/ytvideo?apikey=gata_dios&url=${encodeURIComponent(q)}`);
+    const yt = youtube.data.result.link.link;
 
-    await A17.sendMessage(m.chat, { video: youtube }, { quoted: m });
+    await A17.sendMessage(m.chat, { video: { url: yt } }, { quoted: m });
     }
       break;
 
