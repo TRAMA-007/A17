@@ -8,6 +8,7 @@ const { promisify } = require('util');
 const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
+const sharp = require('sharp');
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -943,7 +944,19 @@ Typed *surrender* to surrender and admited defeat`
     }
 
     
-    
+       
+   // ... (Your existing code)
+
+   if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
+       const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+       // Convert to WebP using sharp
+       const webpBuffer = await sharp(media)
+         .webp() 
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+   }
+   
     if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
     const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
     const base64Sticker = media.toString('base64'); 
