@@ -6629,8 +6629,11 @@ break;
             let media = await getBuffer(randomImageUrl);
 
             if (randomImageUrl.endsWith('.png')) {
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author });
-        await fs.unlinkSync(encmedia);
+          const webpBuffer = await sharp(media)
+         .webp() 
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
             } else {
                A17.sendMessage(from, { sticker: media }, { quoted: m });
             }
