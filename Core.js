@@ -27,7 +27,7 @@ const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
 // const thiccysapi = require('textmaker-thiccy');
 // const ffmpeg = require('fluent-ffmpeg');
-// const ffmpegPath = require('@ffmpeg-static/ffmpeg');
+ const ffmpegPath = require('@ffmpeg-static/ffmpeg');
 // const ffmpegPath = require('ffmpeg-static').path;
 // ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
@@ -957,7 +957,7 @@ Typed *surrender* to surrender and admited defeat`
  
 	  
 
-/*    if (smallinput.includes('loli')  smallinput.includes('لولي')  smallinput.includes('كورن اطفال')) {
+    if (smallinput.includes('loli') || smallinput.includes('لولي') || smallinput.includes('كورن اطفال')) {
   let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
   const webpBuffer = await ffmpeg(media)
     .inputFormat('mp4')
@@ -971,7 +971,7 @@ Typed *surrender* to surrender and admited defeat`
   // Send sticker using A17 library (replace with your actual function)
   A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
 }
-*/
+
 
 
 
