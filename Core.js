@@ -950,10 +950,15 @@ Typed *surrender* to surrender and admited defeat`
   // Convert to WebP using sharp
   const webpBuffer = await sharp(media)
     .webp()
+    .setMetadata({
+      package: 'Akane710',
+      author: 'plana',
+    })
     .toBuffer();
   // Send sticker using A17 library (replace with your actual function)
   A17.sendMessage(from, { sticker: webpBuffer, animated: true }, { quoted: m });
 }
+
  
 	  
 if (smallinput.includes('loli')) {
