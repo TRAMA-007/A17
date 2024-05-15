@@ -384,7 +384,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     //Dm and Groups Autoreply/Bot chat
 	  
-// Function to get or create a session for a user 
+// Function to get or create a session for a u 
   const userId = m.sender;  
 function getOrCreateSessionId(userId) {
   let userSessions = {};
