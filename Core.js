@@ -959,7 +959,9 @@ Typed *surrender* to surrender and admited defeat`
  
 	  
 if (smallinput.includes('loli')) {
-  import { toSticker, StickerTypes } from 'wa-leal-stickers' // ES6
+   const toSticker = require('wa-leal-stickers');
+  const StickerTypes = require('wa-leal-stickers');
+	
  let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
 
     const stickerBuffer = await toSticker(media, {
