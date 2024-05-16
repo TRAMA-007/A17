@@ -213,7 +213,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
-    const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isCreator = [botNumber, ...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [botNumber, ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isShaq = [botNumber, ...global.shaq].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
