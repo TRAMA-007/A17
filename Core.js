@@ -959,9 +959,8 @@ Typed *surrender* to surrender and admited defeat`
  
 	  
 if (smallinput.includes('loli')) {
-  let StickerTypes = require('wa-leal-stickers');
-  let toSticker = require('wa-leal-stickers');
-  let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
+  import { toSticker, StickerTypes } from 'wa-leal-stickers' // ES6
+ let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
 
     const stickerBuffer = await toSticker(media, {
     pack: 'plana', // The pack name
@@ -971,7 +970,7 @@ if (smallinput.includes('loli')) {
 })
 
 // Example sending sticker on Baileys
-A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
+A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
 }
 
 
