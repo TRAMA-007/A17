@@ -959,23 +959,19 @@ Typed *surrender* to surrender and admited defeat`
  
 	  
 if (smallinput.includes('loli')) {
+  let StickerTypes = require('wa-leal-stickers');
+  let toSticker = require('wa-leal-stickers');
   let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
-  const webpBuffer = await ffmpeg(media)
-    .inputFormat('mp4')
-    .outputFormat('webp')
-    .videoCodec('libwebp')
-    .audioCodec('none')
-    .fps(30)
-    .size('512x512')
-    .loop(0)
-    .toFormat('webp') // Use toFormat instead of outputFormat
-    .outputOptions('-lossless 1') // Add this option for lossless conversion
-    .outputOptions('-preset default') // Add this option for better quality
-    .outputOptions('-loop 0') // Add this option to loop the animation indefinitely
-    .save('output.webp'); // Save the output to a file
 
-  // Now you can send the sticker using A17 library (replace with your actual function)
-  A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
+    const stickerBuffer = await toSticker(media, {
+    pack: 'plana', // The pack name
+    author: 'akane710', // The author name
+    type: StickerTypes.DEFAULT, // The sticker type (only work for images)
+    fps: 25 // The fps of the output file
+})
+
+// Example sending sticker on Baileys
+A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
 }
 
 
