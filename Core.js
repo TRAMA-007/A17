@@ -2731,8 +2731,11 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 //   }
        if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
-    if (!m.isGroup) return reply(mess.grouponly);
-
+    if (!m.isGroup) {
+	    const swn = args.join(" ")
+            const number = swn.split("/")[0];
+	    const target = number+ '@s.whatsapp.net'
+	   }
     {
         A17.sendMessage(from, { react: { text: "🔪", key: m.key } });
         if (!text) return reply(`Use ${prefix}rob @user`);
