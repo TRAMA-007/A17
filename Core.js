@@ -990,7 +990,7 @@ if (smallinput.includes('loli')) {
     } */
 
 
-    if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
+/*    if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
     let media = await getBuffer("https://gifdb.com/images/thumbnail/ghost-hug-virtual-kiss-anime-girl-menhera-chan-c3fvyxsyb034zqbt.gif");
           const webpBuffer = await sharp(media)
          .webp({ animated: true }) // Set animated to true for animated stickers
@@ -1013,7 +1013,7 @@ if (smallinput.includes('loli')) {
     let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia); } 
     }
-
+*/
 
     if (smallinput.includes('براه') || smallinput.includes('bruh')) {
      if (isTawfik) return reply('تشسن')
