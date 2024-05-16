@@ -20,7 +20,7 @@ global.autoreadgc = true;
 global.prefa = ["."];//Default prefix here. you can change if you want.
 
 //
-global.Owner = ["249904077717"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.Owner = ["249904077717,249121914174"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.tawfik = ["212607497765"];
 global.tori = ["218931721879"];
 global.hkl = ["249905553316"];
