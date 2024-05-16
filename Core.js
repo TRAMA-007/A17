@@ -398,7 +398,7 @@ function getOrCreateSessionId(userId) {
   return userSessions[userId] || null; // Return the session ID if it exists, otherwise null
 }
 
-// Function to store the session ID a user
+// Function to store the session ID a ur
 function storeSessionId(userId, sessionId) {
   let userSessions = {};
   try {
