@@ -441,7 +441,7 @@ if (!isCmd && isCreator && !m.isGroup){
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=jeC02ArWFsboN8OyW16Q734QTnnWza_wwQl7gu_Wy0o&sessionId=lqY4sXb-TW-0ilRmWAF_XX--ybXa6pSXxpSeFlNPiyI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=plana&characterId=jeC02ArWFsboN8OyW16Q734QTnnWza_wwQl7gu_Wy0o&sessionId=MIy06_KZDx9w2L2DjJ7jJVa1vlYr-CrKIlT78zm2nAs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
