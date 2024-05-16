@@ -20,7 +20,7 @@ global.autoreadgc = true;
 global.prefa = ["."];//Default prefix here. you can change if you want.
 
 //
-global.Owner = ["249904077717,249121914174"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.Owner = ["249904077717 , 249121914174"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.tawfik = ["212607497765"];
 global.tori = ["218931721879"];
 global.hkl = ["249905553316"];
@@ -102,7 +102,7 @@ global.mess = {
   jobdone: 'تم الطبخ',
   useradmin: '*الامر دا بتاع ادمنز بس يا حلو*',
   botadmin: 'فين الادمن',
-  botowner: 'جلا',
+  botowner: '🤏',
   grouponly: 'يا غبي الامر دا في القروبات بس',
   privateonly: 'تعال خاص يا عسل',
   botonly: 'وبك صغير ههههه',
