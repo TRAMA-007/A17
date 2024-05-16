@@ -1163,8 +1163,10 @@ A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
+     const jj = ['الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial', 'الدعامة جوا لي بيومي في بيتهم قالوا ليهو وين الحريم طلع ليهم صورة هوتاو من جزلانو'];
+    const hh = jj[Math.floor(Math.random() * jj.length)]; 
       if (isAsir) return reply('اتلفظ يا شاب..ما هو ما ممكن تكون عطواني و فوقها قليل ادب') 
-      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isBayome) await A17.sendMessage(from, { text: hh });
       if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
       if (isAbd) return reply (random) 
       if (AntiBadWord) {
@@ -1188,8 +1190,10 @@ A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
     const typ = ['زولي السمين مالك ههه', 'اتلفظ يا سمين', 'درعتها يا زولي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
+      const jj = ['الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial', 'الدعامة جوا لي بيومي في بيتهم قالوا ليهو وين الحريم طلع ليهم صورة هوتاو من جزلانو'];
+    const hh = jj[Math.floor(Math.random() * jj.length)]; 
       if (isAsir) return reply('هوي يا عراقي') 
-      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      if (isBayome) await A17.sendMessage(from, { text: hh });
       if (isAbd) return reply (random) 
       if (AntiBadWord) {
       let { chat, fromMe, id } = m;
@@ -1211,8 +1215,9 @@ A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
     if (smallinput.includes('شرموط') || smallinput.includes('بتتشرمط') || smallinput.includes('انيك')) {
       const typ = ['كلام شنو', 'زولي السمين فكت منو', 'عيب يا زولي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
-      if (isAsir) return reply('العطواني فكت منو') 
-      if (isBayome) await A17.sendMessage(from, { text: 'الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+      const jj = ['الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial', 'الدعامة جوا لي بيومي في بيتهم قالوا ليهو وين الحريم طلع ليهم صورة هوتاو من جزلانو'];
+    const hh = jj[Math.floor(Math.random() * jj.length)]; 
+      if (isAsir) return reply('هوي يا عراقي') 
       if (isAbd) return reply (random) 
       if (AntiBadWord) {
       let { chat, fromMe, id } = m;
