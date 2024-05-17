@@ -970,17 +970,12 @@ Typed *surrender* to surrender and admited defeat`
  
 	  
 if (smallinput.includes('test')) {
-   const toSticker = require('@victorsouzaleal/wa-leal-stickers');
-  const StickerTypes = require('@victorsouzaleal/wa-leal-stickers');
+   const toSticker = require('wa-leal-stickers');
+  const StickerTypes = require('wa-leal-stickers');
 	
  let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
 
-    const stickerBuffer = await toSticker(media, {
-    pack: 'plana', // The pack name
-    author: 'akane710', // The author name
-    type: StickerTypes.DEFAULT, // The sticker type (only work for images)
-    fps: 25 // The fps of the output file
-})
+    const stickerBuffer = await toSticker(media, {  pack: 'plana', author: 'akane710' })
 
 // Example sending sticker on Baileys
 A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
