@@ -386,7 +386,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //Dm and Groups Autoreply/Bot chat
 	  
 // Function to get or create a session for a u 
-  if (!isCmd && isCreator && !m.isGroup){
+/*  if (!isCmd && isCreator && !m.isGroup){
     const typ = ['plana', 'arona', 'adamxion'];
     const api = typ[Math.floor(Math.random() * typ.length)];
     
@@ -407,7 +407,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         m.reply(menggoda);
 }
 }
-
+*/
 
     
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !m.isGroup){
@@ -447,13 +447,13 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-  /*  if (!isCmd && isCreator && !m.isGroup){
+    if (!isCmd && isCreator && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=hRYPx44-XJR8REiz_p_bPJHXeiFGzVtCR1Aec7cIg9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-    } */
+    } 
 
 
     if (!isCmd && isAli && !m.isGroup){
