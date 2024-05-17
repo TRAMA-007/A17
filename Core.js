@@ -2747,15 +2747,15 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 //   }
        if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
-    if (!m.isGroup) {
-	    const target = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-            if (target.length == 0) return reply(`Please write the number of the person you want to rob`)
-    }  
+//    if (!m.isGroup) {
+//	    const target = 
+     //       if (target.length == 0) return reply(`Please write the number of the person you want to rob`)
+//    }  
     {
         A17.sendMessage(from, { react: { text: "🔪", key: m.key } });
         if (!text) return reply(`Use ${prefix}rob @user`);
         
-        const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
+        const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] ? m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' || null;
         if (!target || target === m.sender) return reply("What are you trying to do!");
         if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender);
         while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender);
