@@ -392,17 +392,22 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     
     let arona = JSON.parse(fs.readFileSync('./database/user_sessions.json'));
     let sessionId = arona[m.sender] || '';
-    const isCai = arona.includes(m.sender)
-     const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=${sessionId}&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`);
+    const isCai = Object.keys(arona).includes(m.sender.toString());
+
+    let botreply;
     if (!isCai) {
+        botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=${sessionId}&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`);
         session = botreply.data.result.sessionId;
         arona[m.sender] = session;
         fs.writeFileSync("./database/user_sessions.json", JSON.stringify(arona));
- }else{
-    menggoda = `${botreply.data.result.text}`
-        m.reply(menggoda)
-    }
+	reply (`registering your sessionId please wait..`);
+    } else {
+        botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=${sessionId}&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`);
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda);
 }
+}
+
 
     
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !m.isGroup){
