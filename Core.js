@@ -11246,6 +11246,30 @@ last login: ${aru.lastLogin}
         break;
 
 
+	case 'xxs': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const instgram = await axios.get(`https://api.fgmods.xyz/api/search/xvideosearch?apikey=kPXqzsDf&text=${encodeURIComponent(q)}`)
+	for (let i = 0; i < instgram.data.result.length; i++) {
+        const ig = instgram.data.result[i] ;
+}
+       await A17.sendMessage(m.chat, { text: ig }, { quoted: m })
+     }
+        break;
+
+
+	case 'xxdl': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please proide a link`) 
+        const instgram = await axios.get(`https://api.fgmods.xyz/api/downloader/xvideosdl?apikey=kPXqzsDf&url=${encodeURIComponent(q)}`)
+        const ig = instgram.data.result.url_dl;
+        await A17.sendMessage(m.chat, { video: { url: ig } }, { quoted: m })
+     }
+        break;
+
+
 	case 'coomer': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
