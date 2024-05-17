@@ -105,7 +105,7 @@
         "util": "^0.12.5",
         "vicuna-ts": "^1.2.2",
         "wa-sticker-formatter": "^4.4.4",
-        "@victorsouzaleal/wa-leal-stickers": "^1.0.8",
+        "wa-leal-stickers": "^1.0.8",
         "xfarr-api": "^1.0.3",
         "yargs": "^17.7.2",
         "youtube-yts": "^2.0.0",
