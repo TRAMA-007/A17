@@ -2755,9 +2755,9 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!text) return reply(`Use ${prefix}rob @user`);
         
         const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
-        if (!target || target === m.sender) return reply("What are you trying to do!");
-        if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender);
-        while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender);
+     //   if (!target || target === m.sender) return reply("What are you trying to do!");
+      //  if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender);
+      //  while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender);
 
         const cara = "cara";
         const user1 = m.sender;
