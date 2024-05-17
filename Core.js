@@ -2749,8 +2749,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
     if (isBanChat) return reply(mess.bangc);
    if (!m.isGroup) {
 	    const target = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-           if (target.length == 0) return reply(`Please write the number of the person you want to rob`)
-    }  
+               }  
     {
         A17.sendMessage(from, { react: { text: "🔪", key: m.key } });
         if (!text) return reply(`Use ${prefix}rob @user`);
