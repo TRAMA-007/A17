@@ -1462,7 +1462,11 @@ if (smallinput.includes('مثا')) {
 
     if (smallinput.includes('كسم')) {
    if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
-     } 
+   if (tagg) {
+	   let userToKick = m.sender;
+    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+    }
+ } 
 
 
     if (smallinput.includes('لوطي')) {
@@ -4020,9 +4024,14 @@ break;
       case 'deleteall': case 'delall': case 'delete': case 'del': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-      //  if (!isBotAdmins) return reply(mess.botadmin);
-     //   if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+        if (!isBotAdmins) return reply(`انا ما ادمن يا غبي`);
+        if (!isAdmins && !isCreator){
+	  let userToKick = m.sender;
+    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+    if (isBotAdmins) await A17.sendMessage(from, { text: '🤭' });
+		return reply(`تم🤭`)
+	}
+    A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 
         if (!m.quoted) return reply('Please mention a message baka!')
         let { chat, fromMe, id } = m.quoted
