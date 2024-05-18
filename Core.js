@@ -833,7 +833,7 @@ Typed *surrender* to surrender and admited defeat`
     reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
   } 
   
-  if (smallinput.includes('لييغ')) {
+  if (smallinput.includes('ليغ')) {
   
      reply (`اوووفوو امشي استحم يا خوريحتك والاني هنا🤮`);
   
