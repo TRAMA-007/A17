@@ -917,7 +917,7 @@ Typed *surrender* to surrender and admited defeat`
  //     'انا': `انت على زبي' `,
 //      'و أنا': `انت على زبي' `,
 //      'وأنا': `انت على زبي' `,
-  //    'ايه': `ارقعك واحد امبليه`,
+  //    'ايه': `ارقك واحد امبليه`,
     };
 
     const smallinput = budy.toLowerCase();
