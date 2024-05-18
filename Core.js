@@ -2979,8 +2979,8 @@ break;
         if (!m.isGroup) return reply(mess.grouponly)
         var today = new Date();
         if (today.getDay() == 6 || today.getDay() == 5 || today.getDay() == 0) {
-          if (text == 'help') return reply(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎1000 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
-          if (text == 'money') return reply(`*1:* Small Win --> +💎20000\n\n*2:* Small Lose --> -💎20000\n\n*3:* Big Win --> +💎100000\n\n*4:* Big Lose --> -💎500\n\n*5:* 🎉 JackPot --> +💎500000`)
+          if (text == 'help') return reply(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎10000 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
+          if (text == 'money') return reply(`*1:* Small Win --> +💎20000\n\n*2:* Small Lose --> -💎5000\n\n*3:* Big Win --> +💎100000\n\n*4:* Big Lose --> -💎5000\n\n*5:* 🎉 JackPot --> +💎500000`)
           const fruit1 = ["🥥", "🍎", "🍇"]
           const fruit2 = ["🍎", "🍇", "🥥"]
           const fruit3 = ["🍇", "🥥", "🍎"]
@@ -2995,7 +2995,7 @@ break;
           const k = 1000
           const balance1 = await eco.balance(user, cara)
 
-          if (k > balance1.wallet) return reply(`You are going to be spinning on your wallet, you need at least 💎1000`);
+          if (k > balance1.wallet) return reply(`You are going to be spinning on your wallet, you need at least 💎10000`);
           const f1 = fruit1[Math.floor(Math.random() * fruit1.length)];
           const f2 = fruit2[Math.floor(Math.random() * fruit2.length)];
           const f3 = fruit3[Math.floor(Math.random() * fruit3.length)];
@@ -3007,12 +3007,12 @@ break;
           const mess5 = smallLose[Math.floor(Math.random() * smallLose.length)];
 
           if ((f1 !== f2) && f2 !== f3) {
-            const deduct1 = await eco.deduct(user, cara, 500);
-            reply(`${mess1}\n\n*Big Lose -->* _💎500_`)
+            const deduct1 = await eco.deduct(user, cara, 10000);
+            reply(`${mess1}\n\n*Big Lose -->* _💎you lost 10000_`)
           }
           else if ((f1 == f2) && f2 == f3) {
-            const give1 = await eco.give(user, cara, 100000);
-            reply(`${mess2}\n*_Big Win -->* _💎100000_`)
+            const give1 = await eco.give(user, cara, 50000);
+            reply(`${mess2}\n*_Big Win -->* _💎50000_`)
           }
           else if ((f1 == f2) && f2 !== f3) {
             const give2 = await eco.give(user, cara, 20000);
@@ -3020,7 +3020,7 @@ break;
           }
           else if ((f1 !== f2) && f1 == f3) {
             const deduct2 = await eco.deduct(user, cara, 200);
-            reply(`${mess5}\n\n*Small Lose -->* _💎200_`)
+            reply(`${mess5}\n\n*Small Lose -->* _💎you lost 5000_`)
           }
           else if ((f1 !== f2) && f2 == f3) {
             const give4 = eco.give(user, cara, 20000);
@@ -3028,7 +3028,7 @@ break;
           }
           else if (((f1 == f2) && f2 == f3) && f3 == f4) {
             const give5 = eco.give(user, cara, 500000);
-            reply(`${mess4}\n\n_🎊 JackPot --> _💎500000_`)
+            reply(`${mess4}\n\n_🎊 JackPot --> _💎300000_`)
           }
           else {
             reply(`Do you understand what you are doing?`)
