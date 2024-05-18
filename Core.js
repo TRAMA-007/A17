@@ -2979,8 +2979,8 @@ break;
         if (!m.isGroup) return reply(mess.grouponly)
         var today = new Date();
         if (today.getDay() == 6 || today.getDay() == 5 || today.getDay() == 0) {
-          if (text == 'help') return reply(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎100 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
-          if (text == 'money') return reply(`*1:* Small Win --> +💎2000\n\n*2:* Small Lose --> -💎2000\n\n*3:* Big Win --> +💎100\n\n*4:* Big Lose --> -💎50\n\n*5:* 🎉 JackPot --> +💎100000`)
+          if (text == 'help') return reply(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎1000 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
+          if (text == 'money') return reply(`*1:* Small Win --> +💎20000\n\n*2:* Small Lose --> -💎20000\n\n*3:* Big Win --> +💎100000\n\n*4:* Big Lose --> -💎500\n\n*5:* 🎉 JackPot --> +💎500000`)
           const fruit1 = ["🥥", "🍎", "🍇"]
           const fruit2 = ["🍎", "🍇", "🥥"]
           const fruit3 = ["🍇", "🥥", "🍎"]
@@ -2989,13 +2989,13 @@ break;
           const smallLose = ['*You cannot harvest coconut 🥥 in a pineapple 🍍 farm*\n\n_--> 🍍>🥥<🍍_', '*Apples and Coconut are not best Combo*\n\n_--> 🍎>🥥<🍎_', '*Coconuts and Apple are not great deal*\n\n_--> 🥥>🍎<🥥_']
           const won = ['*You harvested a basket of*\n\n_--> 🍎+🍎+🍎_', '*Impressive, You must be a specialist in plucking coconuts*\n\n_--> 🥥+🥥+🥥_', '*Amazing, you are going to be making pineapple juice for the family*\n\n_--> 🍍+🍍+🍍_']
           const near = ['*Wow, you were so close to winning pineapples*\n\n_--> 🍎-🍍+🍍_', '*Hmmm, you were so close to winning Apples*\n\n_--> 🍎+🍎-🍍_']
-          const jack = ['*🥳 JackPot 🤑*\n\n_--> 🍇×🍇×🍇×🍇_', '*🎉 JaaackPooot!*\n\n_--> 🥥×🥥×🥥×🥥_', '*🎊 You Just hit a jackpot worth 💎100000*']
+          const jack = ['*🥳 JackPot 🤑*\n\n_--> 🍇×🍇×🍇×🍇_', '*🎉 JaaackPooot!*\n\n_--> 🥥×🥥×🥥×🥥_', '*🎊 You Just hit a jackpot worth 💎500000*']
           const user = m.sender
           const cara = "cara"
           const k = 1000
           const balance1 = await eco.balance(user, cara)
 
-          if (k > balance1.wallet) return reply(`You are going to be spinning on your wallet, you need at least 💎100`);
+          if (k > balance1.wallet) return reply(`You are going to be spinning on your wallet, you need at least 💎1000`);
           const f1 = fruit1[Math.floor(Math.random() * fruit1.length)];
           const f2 = fruit2[Math.floor(Math.random() * fruit2.length)];
           const f3 = fruit3[Math.floor(Math.random() * fruit3.length)];
@@ -3011,24 +3011,24 @@ break;
             reply(`${mess1}\n\n*Big Lose -->* _💎500_`)
           }
           else if ((f1 == f2) && f2 == f3) {
-            const give1 = await eco.give(user, cara, 10000);
-            reply(`${mess2}\n*_Big Win -->* _💎10000_`)
+            const give1 = await eco.give(user, cara, 100000);
+            reply(`${mess2}\n*_Big Win -->* _💎100000_`)
           }
           else if ((f1 == f2) && f2 !== f3) {
-            const give2 = await eco.give(user, cara, 2000);
-            reply(`${mess3}\n*Small Win -->* _💎2000_`)
+            const give2 = await eco.give(user, cara, 20000);
+            reply(`${mess3}\n*Small Win -->* _💎20000_`)
           }
           else if ((f1 !== f2) && f1 == f3) {
             const deduct2 = await eco.deduct(user, cara, 200);
             reply(`${mess5}\n\n*Small Lose -->* _💎200_`)
           }
           else if ((f1 !== f2) && f2 == f3) {
-            const give4 = eco.give(user, cara, 2000);
-            reply(`${mess3}\n\n*Small Win -->* _💎2000_`)
+            const give4 = eco.give(user, cara, 20000);
+            reply(`${mess3}\n\n*Small Win -->* _💎20000_`)
           }
           else if (((f1 == f2) && f2 == f3) && f3 == f4) {
-            const give5 = eco.give(user, cara, 100000);
-            reply(`${mess4}\n\n_🎊 JackPot --> _💎100000_`)
+            const give5 = eco.give(user, cara, 500000);
+            reply(`${mess4}\n\n_🎊 JackPot --> _💎500000_`)
           }
           else {
             reply(`Do you understand what you are doing?`)
