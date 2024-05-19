@@ -11090,7 +11090,7 @@ const characterAI = new CharacterAI();
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}ba aru`)
+        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}servant enkidu`)
         
         const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?lang=en&name=${q}`)
         const aru = ba.data[0];
@@ -11106,7 +11106,7 @@ cost: ${aru.cost}
  attribute: ${aru.attribute}
  traits: ${traitNames} 
 `;
-  await A17.sendMessage(m.chat, { image: { url:aru.extraAssets.CharaGraph.ascension["4"]}, caption: arutxt }, { quoted: m })   
+  await A17.sendMessage(m.chat, { image: { url:aru["extraAssets"]["charaGraph"]["ascension"]["4"]}, caption: arutxt }, { quoted: m })   
     }
         break;
         
