@@ -2978,7 +2978,7 @@ break;
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly)
         var today = new Date();
-        if (today.getDay() == 6 || today.getDay() == 5 || today.getDay() == 0) {
+        if (today.getDay() == 5) {
           if (text == 'help') return reply(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎10000 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
           if (text == 'money') return reply(`*1:* Small Win --> +💎20000\n\n*2:* Small Lose --> -💎5000\n\n*3:* Big Win --> +💎100000\n\n*4:* Big Lose --> -💎5000\n\n*5:* 🎉 JackPot --> +💎500000`)
           const fruit1 = ["🥥", "🍎", "🍇"]
@@ -3035,7 +3035,7 @@ break;
           }
         }
         else {
-          reply(`*You can only play this game during weekends*\n\n*🌿 Friday*\n*🎏 Saturday*\n*🎐 Sunday*`)
+          reply(`*You can only play this game during Friday🌿*`)
         }
       }
         break;
