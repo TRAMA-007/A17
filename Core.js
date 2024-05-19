@@ -7334,7 +7334,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886518.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GNJ1TzDXsAAJ7KF?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhY7V43HwJZeUt21YbKrclv1LjOYjaNrwyQ&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -7614,21 +7614,15 @@ break;
 
         case 'ستيلي':
         case 'stellle':
+	case 'كاليوس':
+        case 'caelus':
+	case 'trailblazer':
+        case 'تريلبليزر':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://upload-os-bbs.hoyolab.com/upload/2023/05/17/136718215/5aa872ec3ef8456beaaac5b105e097fb_7649136321522721804.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fquality%2Cq_80%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GNVQC6TWMAAP_q7?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        break;
-
-
-        case 'كاليوس':
-        case 'calius':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🤮", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1706175536.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'امشي من هنا يا عرص مافي اي بيلد ليك'}, { quoted: m })
         break;
 
 
@@ -7680,6 +7674,8 @@ break;
         A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
         buffer = await getBuffer(`https://pbs.twimg.com/media/GJtznMUWwAAbKyX.jpg:large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer2 = await getBuffer(`https://pbs.twimg.com/media/GNC-VGsXAAA92WM?format=jpg&name=large`)
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
         break;
 
 
