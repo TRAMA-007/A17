@@ -668,54 +668,62 @@ ${metadata.desc}
    * @returns
    */
   A17.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
-        let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await await getBuffer(path) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        let buffer
-        if (options && (options.packname || options.author)) {
-            buffer = await writeExifImg(buff, options)
-        } else {
-            buffer = await imageToWebp(buff)
-        }
+      let buff = Buffer.isBuffer(path)
+        ? path
+        : /^data:.*?\/.*?;base64,/i.test(path)
+          ? Buffer.from(path.split`,`[1], "base64")
+          : /^https?:\/\//.test(path)
+            ? await await getBuffer(path)
+            : fs.existsSync(path)
+              ? fs.readFileSync(path)
+              : Buffer.alloc(0);
+      let buffer;
+      if (options && (options.packname || options.author)) {
+        buffer = await writeExifImg(buff, options);
+      } else {
+        buffer = await imageToWebp(buff);
+      }
 
-    await A17.sendMessage(
-      jid,
-      { sticker: { url: buffer }, ...options },
-      { quoted }
-    );
-    return buffer;
-  };
+      await A17.sendMessage(
+        jid,
+        { sticker: { url: buffer }, ...options },
+        { quoted }
+      );
+      return buffer;
+    };
 
-  /**
-   *
-   * @param {*} jid
-   * @param {*} path
-   * @param {*} quoted
-   * @param {*} options
-   * @returns
-   */
-  A17.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
-    let buff = Buffer.isBuffer(path)
-      ? path
-      : /^data:.*?\/.*?;base64,/i.test(path)
-        ? Buffer.from(path.split`,`[1], "base64")
-        : /^https?:\/\//.test(path)
-          ? await await getBuffer(path)
-          : fs.existsSync(path)
-            ? fs.readFileSync(path)
-            : Buffer.alloc(0);
-    let buffer;
-    if (options && (options.packname || options.author)) {
-      buffer = await writeExifVid(buff, options);
-    } else {
-      buffer = await videoToWebp(buff);
-    }
+    /**
+     *
+     * @param {*} jid
+     * @param {*} path
+     * @param {*} quoted
+     * @param {*} options
+     * @returns
+     */
+    A17.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
+      let buff = Buffer.isBuffer(path)
+        ? path
+        : /^data:.*?\/.*?;base64,/i.test(path)
+          ? Buffer.from(path.split`,`[1], "base64")
+          : /^https?:\/\//.test(path)
+            ? await await getBuffer(path)
+            : fs.existsSync(path)
+              ? fs.readFileSync(path)
+              : Buffer.alloc(0);
+      let buffer;
+      if (options && (options.packname || options.author)) {
+        buffer = await writeExifVid(buff, options);
+      } else {
+        buffer = await videoToWebp(buff);
+      }
 
-    await A17.sendMessage(
-      jid,
-      { sticker: { url: buffer }, ...options },
-      { quoted }
-    );
-    return buffer;
-  };
+      await A17.sendMessage(
+        jid,
+        { sticker: { url: buffer }, ...options },
+        { quoted }
+      );
+      return buffer;
+    };
   A17.sendMedia = async (
     jid,
     path,
