@@ -9,6 +9,7 @@ const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
+const sagiri = require("sagiri");
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -2090,6 +2091,22 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
+
+
+	case 'صوص':{
+
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
+         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await GraphOrg(media);
+	const client = sagiri("aa7c9a5159533a7cfd79f60c4c4637df0243a8e1");
+        const results = await client(`${util.format(anu)}`);
+        await A17.sendMessage(m.chat, { text: results }, { quoted: m })
+      }
+        break; 
 
 
       case 'resize':{
