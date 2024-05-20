@@ -9482,6 +9482,75 @@ break;
            break;
 
 
+	case 'card-boothil':{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1315": "${util.format(anu)}"}`) 
+          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1315_${q}.png`)
+        await A17.sendMessage(from, { image: buffer }, { quoted: m })
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1315_${q}.png`)
+          await A17.sendMessage(from, { image: sx }, { quoted: m })
+       } 
+        } 
+           break;
+
+
+	case 'card-stelle'
+	case 'card-caelus' 
+	case 'card-trailblazer' :{
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let caldes = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"8001": "${util.format(anu)}"}`) 
+          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/8001_${q}.png`)
+	let steldes = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"8002": "${util.format(anu)}"}`) 
+          buffer1 = await getBuffer(`https://starraillcard.up.railway.app/card/8002_${q}.png`)
+	let calprev = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"8003": "${util.format(anu)}"}`) 
+          buffer2 = await getBuffer(`https://starraillcard.up.railway.app/card/8003_${q}.png`)
+	let calprev = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"8004": "${util.format(anu)}"}`) 
+          buffer3 = await getBuffer(`https://starraillcard.up.railway.app/card/8004_${q}.png`)
+	let calhar = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"8005": "${util.format(anu)}"}`) 
+          buffer4 = await getBuffer(`https://starraillcard.up.railway.app/card/8005_${q}.png`)
+	let stelhar = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"8006": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/8006_${q}.png`)
+        await A17.sendMessage(from, { image: buffer }, { quoted: m })
+	await A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        await A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+       await A17.sendMessage(from, { image: buffer3 }, { quoted: m })
+       await A17.sendMessage(from, { image: buffer4 }, { quoted: m })
+       await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx = await getBuffer(`https://starraillcard.up.railway.app/card/8001_${q}.png`)
+	 sx1 = await getBuffer(`https://starraillcard.up.railway.app/card/8002_${q}.png`)
+          sx2 = await getBuffer(`https://starraillcard.up.railway.app/card/8003_${q}.png`)
+         sx3 = await getBuffer(`https://starraillcard.up.railway.app/card/8004_${q}.png`)
+         sx4 = await getBuffer(`https://starraillcard.up.railway.app/card/8005_${q}.png`)
+         sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/8006_${q}.png`)
+         
+          await A17.sendMessage(from, { image: sx }, { quoted: m })
+	await A17.sendMessage(from, { image: sx1 }, { quoted: m })
+ await A17.sendMessage(from, { image: sx2 }, { quoted: m })
+await A17.sendMessage(from, { image: sx3 }, { quoted: m })
+await A17.sendMessage(from, { image: sx4 }, { quoted: m })
+await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+
+       } 
+        } 
+           break;
+
+
        case 'card-ayaka':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
