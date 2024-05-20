@@ -9502,9 +9502,9 @@ break;
            break;
 
 
-	case 'card-stelle'
+/*	case 'card-stelle'
 	case 'card-caelus' 
-	case 'card-trailblazer' :{
+	case 'card-trailblazer':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -9533,22 +9533,20 @@ break;
          } else {
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/8001_${q}.png`)
-	 sx1 = await getBuffer(`https://starraillcard.up.railway.app/card/8002_${q}.png`)
-          sx2 = await getBuffer(`https://starraillcard.up.railway.app/card/8003_${q}.png`)
-         sx3 = await getBuffer(`https://starraillcard.up.railway.app/card/8004_${q}.png`)
-         sx4 = await getBuffer(`https://starraillcard.up.railway.app/card/8005_${q}.png`)
-         sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/8006_${q}.png`)
-         
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
+	   sx1 = await getBuffer(`https://starraillcard.up.railway.app/card/8002_${q}.png`)
+           sx2 = await getBuffer(`https://starraillcard.up.railway.app/card/8003_${q}.png`)
+           sx3 = await getBuffer(`https://starraillcard.up.railway.app/card/8004_${q}.png`)
+           sx4 = await getBuffer(`https://starraillcard.up.railway.app/card/8005_${q}.png`)
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/8006_${q}.png`)
+         await A17.sendMessage(from, { image: sx }, { quoted: m })
 	await A17.sendMessage(from, { image: sx1 }, { quoted: m })
- await A17.sendMessage(from, { image: sx2 }, { quoted: m })
-await A17.sendMessage(from, { image: sx3 }, { quoted: m })
-await A17.sendMessage(from, { image: sx4 }, { quoted: m })
-await A17.sendMessage(from, { image: sx5 }, { quoted: m })
-
+        await A17.sendMessage(from, { image: sx2 }, { quoted: m })
+       await A17.sendMessage(from, { image: sx3 }, { quoted: m })
+       await A17.sendMessage(from, { image: sx4 }, { quoted: m })
+       await A17.sendMessage(from, { image: sx5 }, { quoted: m })
        } 
         } 
-           break;
+           break; */
 
 
        case 'card-ayaka':
