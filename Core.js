@@ -9519,7 +9519,7 @@ break;
            break;
 
 
-	case 'card-stelle'
+	case 'card-stelle':
 	case 'card-trailblazer':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
