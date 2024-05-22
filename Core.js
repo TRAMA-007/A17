@@ -1611,7 +1611,7 @@ if (smallinput.includes('مثا')) {
 
 
    if (smallinput.includes('ونو')) {
-    reply (`اوريك ما تزعل😂`);
+    reply (`اوريك م تزعل😂`);
           }
 
 
