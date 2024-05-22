@@ -861,7 +861,7 @@ Typed *surrender* to surrender and admited defeat`
   }
   
   if (smallinput=='sasha') {
-    reply ('Only you...🫶🏻')
+    reply ('Only yu...🫶🏻')
   }
   
   if (smallinput=='ping') {
