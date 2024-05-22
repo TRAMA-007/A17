@@ -1748,7 +1748,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('كلامك شين')) {
-    reply (`دا زاتووو شين`);
+    reply (`دا زاتووووو شين`);
     }
 
 
