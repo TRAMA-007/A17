@@ -909,7 +909,7 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
     //  'سمعة': `اب لمعة`,
-  //    'شوفونا': `يشوفك الزب قول آميين`,
+  //    'شوفونا': `يشوك الزب قول آميين`,
       'جلا': `كلامك شين`,
       'ايه': `خدتك عليه `,
   //    'زبي': `صغير `,
