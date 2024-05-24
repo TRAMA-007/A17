@@ -78,8 +78,8 @@ async function startA17() {
   console.log(color('\nHello, I am Kai, the main Developer of this bot.\n\nThanks for using: A17 Bot.', 'aqua'))
   console.log(color('\nYou can follow me on GitHub: Kai0071', 'aqua'))
 
-//  const { state, saveCreds } = await useMultiFileAuthState("./A17-SESSION");
-  const { state, saveState } = useSingleFileAuthState(`./session.json`)
+  const { state, saveCreds } = await useMultiFileAuthState("./A17-SESSION");
+//  const { state, saveState } = useSingleFileAuthState(`./session.json`)
   const A17 = A17Connect({
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
@@ -430,23 +430,45 @@ ${metadata.desc}
 
   A17.serializeM = (m) => smsg(A17, m, store);
 
-    A17.ev.on('connection.update', async (update) => {
-        const { connection, lastDisconnect } = update	    
-        if (connection === 'close') {
-        let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); A17.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🦄Connection closed, reconnecting...."); startA17(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("🦄Connection Lost from Server, reconnecting..."); startA17(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("🦄Connection Replaced, Another New Session Opened, Please Close Current Session First"); A17.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`🦄Device Logged Out, Please Scan Again And Run.`); A17.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("🦄Restart Required, Restarting..."); startA17(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("🦄Connection TimedOut, Reconnecting..."); startA17(); }
-            else A17.end(`🦄Unknown DisconnectReason: ${reason}|${connection}`)
-        }
-        console.log('Connected...', update)
-    })
+    A17.ev.on("connection.update", async (update) => {
+    const { connection, lastDisconnect } = update;
+    if (connection === "close") {
+      let reason = lastDisconnect.error
+        ? lastDisconnect?.error?.output.statusCode
+        : 0;
+      if (reason === DisconnectReason.badSession) {
+        console.log(`Bad Session File, Please Delete Session and Scan Again`);
+        process.exit();
+      } else if (reason === DisconnectReason.connectionClosed) {
+        console.log("Connection closed, reconnecting....");
+        startA17();
+      } else if (reason === DisconnectReason.connectionLost) {
+        console.log("Connection Lost from Server, reconnecting...");
+        startA17();
+      } else if (reason === DisconnectReason.connectionReplaced) {
+        console.log(
+          "Connection Replaced, Another New Session Opened, Please Close Current Session First"
+        );
+        process.exit();
+      } else if (reason === DisconnectReason.loggedOut) {
+        console.log(`Device Logged Out, Please Delete Session and Scan Again.`);
+        process.exit();
+      } else if (reason === DisconnectReason.restartRequired) {
+        console.log("Restart Required, Restarting...");
+        startA17();
+      } else if (reason === DisconnectReason.timedOut) {
+        console.log("Connection TimedOut, Reconnecting...");
+        startA17();
+      } else {
+        console.log(`Unknown DisconnectReason: ${reason}|${connection}`);
+      }
+    }
+    //console.log('Connected...', update)
+  });
 
-    A17.ev.on('creds.update', saveState)
+  A17.ev.on("creds.update", saveCreds);
+
+
 
 
 
