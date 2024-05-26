@@ -9,6 +9,7 @@ const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
+const sagiri = require("sagiri");
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -860,7 +861,7 @@ Typed *surrender* to surrender and admited defeat`
   }
   
   if (smallinput=='sasha') {
-    reply ('Only yu...🫶🏻')
+    reply ('Only you...🫶🏻')
   }
   
   if (smallinput=='ping') {
@@ -908,7 +909,7 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
     //  'سمعة': `اب لمعة`,
-  //    'شوفونا': `يشوك الزب قول آميين`,
+  //    'شوفونا': `يشوفك الزب قول آميين`,
       'جلا': `كلامك شين`,
       'ايه': `خدتك عليه `,
   //    'زبي': `صغير `,
@@ -1610,7 +1611,7 @@ if (smallinput.includes('مثا')) {
 
 
    if (smallinput.includes('ونو')) {
-    reply (`اوريك م تزعل😂`);
+    reply (`اوريك ما تزعل😂`);
           }
 
 
@@ -1747,7 +1748,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('كلامك شين')) {
-    reply (`دا زاتووووو شين`);
+    reply (`دا زاتووو شين`);
     }
 
 
@@ -2090,6 +2091,22 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
+
+
+	case 'صوص':{
+
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
+         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await GraphOrg(media);
+	const client = sagiri("aa7c9a5159533a7cfd79f60c4c4637df0243a8e1");
+        const results = await client(`${util.format(anu)}`);
+        await A17.sendMessage(m.chat, { text: results }, { quoted: m })
+      }
+        break; 
 
 
       case 'resize':{
