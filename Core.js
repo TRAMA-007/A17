@@ -1495,7 +1495,7 @@ if (smallinput.includes('مثا')) {
     }
 
 
-   /*  if (smallinput.includes('قطع')) {
+   /*  if (smallinput.includes('طع')) {
  if (isAbd) reply (`يقطعه فيك واحد من دار زغاوة لا ناك لا جلد حلاوة`);
  if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
    
