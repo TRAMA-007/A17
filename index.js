@@ -2,7 +2,6 @@ require("./config.js");
 const {
   default: A17Connect,
   useMultiFileAuthState,
-  useSingleFileAuthState,
   DisconnectReason,
   fetchLatestBaileysVersion,
   generateForwardMessageContent,
@@ -79,7 +78,6 @@ async function startA17() {
   console.log(color('\nYou can follow me on GitHub: Kai0071', 'aqua'))
 
   const { state, saveCreds } = await useMultiFileAuthState("./A17-SESSION");
-//  const { state, saveState } = useSingleFileAuthState(`./session.json`)
   const A17 = A17Connect({
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
@@ -430,7 +428,7 @@ ${metadata.desc}
 
   A17.serializeM = (m) => smsg(A17, m, store);
 
-    A17.ev.on("connection.update", async (update) => {
+  A17.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect } = update;
     if (connection === "close") {
       let reason = lastDisconnect.error
@@ -467,8 +465,6 @@ ${metadata.desc}
   });
 
   A17.ev.on("creds.update", saveCreds);
-
-
 
 
 
