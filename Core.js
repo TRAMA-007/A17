@@ -2452,7 +2452,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
 
-      //tictactoe game
+      //tictactoe gam
 
       case 'ttc': case 'ttt': case 'tictactoe': {
         if (isBan) return reply(mess.ban)
