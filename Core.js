@@ -1259,7 +1259,7 @@ A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
 }     
 
 
-    if (smallinput.includes('ظوبري') || smallinput.includes('دا زاتو') || smallinput.includes('ده زاتو')) || smallinput.includes('من دا') || smallinput.includes('🍆🍆')){
+    if (smallinput.includes('ظوبري') || smallinput.includes('دا زاتو') || smallinput.includes('ده زاتو') || smallinput.includes('من دا') || smallinput.includes('🍆🍆')){
 //	let dd = 'https://chat.whatsapp.com/KiqD2AAPL3fCIUfJCGps4j';
 //     let response = await A17.groupInviteCode(m.chat);
 //    let link = (`https://chat.whatsapp.com/${response}`);
