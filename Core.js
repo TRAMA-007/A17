@@ -1261,10 +1261,10 @@ A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
 
 
     if (smallinput.includes('ظوبري') || smallinput.includes('دا زاتو') || smallinput.includes('ده زاتو') || smallinput.includes('من دا') || smallinput.includes('🍆🍆')){
-//	let dd = 'https://chat.whatsapp.com/KiqD2AAPL3fCIUfJCGps4j';
-//     let response = await A17.groupInviteCode(m.chat);
-//    let link = (`https://chat.whatsapp.com/${response}`);
-//    if (dd === link) {
+	let dd = 'https://chat.whatsapp.com/KiqD2AAPL3fCIUfJCGps4j';
+   let response = await A17.groupInviteCode(m.chat);
+  let link = (`https://chat.whatsapp.com/${response}`);
+    if (dd === link) {
        var today = new Date();
         if (today.getDay() == 1 || today.getDay() == 2 || today.getDay() == 3 || today.getDay() == 4 || today.getDay() == 5 || today.getDay() == 6) {
 	let { chat, fromMe, id } = m;
@@ -1279,6 +1279,7 @@ A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
       if (isBotAdmins && isAli) await A17.sendMessage(from, { text: 'هوي يا بوت تصديراتك دي خليها للاحد' });
       if (isBotAdmins && isAbd) await A17.sendMessage(from, { text: 'زولي السمين ههه التصديرات دي حقتي انا بطل مداقرات' });
       if (isBotAdmins && isSafi) await A17.sendMessage(from, { text: 'يا صافي كلام شنو' });
+	}
     }
     }
 
