@@ -11930,7 +11930,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
       }
         break;
 
-
+/*
       case 'honkai': case 'hsr': case 'هونكاي': case 'قطار': case 'star': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -12002,6 +12002,73 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
       break;
+*/
+
+	case 'honkai': case 'hsr': case 'هونكاي': case 'قطار': case 'star': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
+
+	let msg = generateWAMessageFromContent(m.key.remoteJid, {
+            viewOnceMessage: {
+              message: {
+                "messageContextInfo": {
+                  "deviceListMetadata": {},
+                  "deviceListMetadataVersion": 2
+                },
+                interactiveMessage: proto.Message.InteractiveMessage.create({
+                  body: proto.Message.InteractiveMessage.Body.create({
+                    text: helpMenuText
+                  }),
+                  footer: proto.Message.InteractiveMessage.Footer.create({
+                    text: "            honkai star rail"
+                  }),
+                  header: proto.Message.InteractiveMessage.Header.create({
+                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/858c9965673d7aaa5d976.jpg' } }, { upload: A17.waUploadToServer })),
+
+
+                    title: "                      Help Menu",
+                    subtitle: "Browse through the available commands",
+                    hasMediaAttachment: false
+                  }),
+                  nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                    buttons: [
+                      {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}jingliu"}`
+                      },
+                      {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"ruan mei","id":"${prefix}ruan"}`
+
+                      }, 
+		    {
+                       "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"silver wolf","id":"${prefix}silver"}`
+                     }
+                    ]
+                  })
+                })
+              }
+            }
+          }, {});
+
+
+          if (!msg || !msg.key || !msg.key.remoteJid || !msg.key.id) {
+            const errorMessage = 'Error: Invalid message key.';
+            console.error(errorMessage);
+            return reply(errorMessage);
+          }
+
+          await A17.relayMessage(msg.key.remoteJid, msg.message, {
+            messageId: msg.key.id
+          });
+        } catch (error) {
+          console.error('Error generating and relaying message:', error);
+          return reply('Error generating and relaying message.');
+        }
+
+        break;
 
 
         case 'hsr-cards': case 'cards': case 'بطاقات': {
