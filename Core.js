@@ -7315,8 +7315,16 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704886323.jpg`)
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717582743.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717583155.jpg`)
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
+	buffer4 = await getBuffer(`https://mallucampaign.in/images/img_1717583156.jpg`)
+        A17.sendMessage(from, { image: buffer4, caption: 'ْ'}, { quoted: m })
+        buffer5 = await getBuffer(`https://mallucampaign.in/images/img_1717583157.jpg`)
+        A17.sendMessage(from, { image: buffer5, caption: 'ْ'}, { quoted: m })
+        buffer6 = await getBuffer(`https://mallucampaign.in/images/img_1717583158.jpg`)
+        A17.sendMessage(from, { image: buffer6, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsWNIQZBgoxCAbBuZoLO4wTr8AX-f3wFUCjA&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break
@@ -7668,8 +7676,18 @@ break;
         A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1708542989.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-        buffer2 = await getBuffer("https://pbs.twimg.com/media/GG0z7tGbMAARnBi.jpg:large");
+	buffer22 = await getBuffer(`https://mallucampaign.in/images/img_1708542989.jpg`)
+        A17.sendMessage(from, { image: buffer22, caption: 'ْ'}, { quoted: m })
+         buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717583623.jpg`)
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
+        buffer4 = await getBuffer(`https://mallucampaign.in/images/img_1717583602.jpg`)
+        A17.sendMessage(from, { image: buffer4, caption: 'ْ'}, { quoted: m })
+        buffer5 = await getBuffer(`https://mallucampaign.in/images/img_1717583600.jpg`)
+        A17.sendMessage(from, { image: buffer5, caption: 'ْ'}, { quoted: m })
+        buffer2 = await getBuffer("https://mallucampaign.in/images/img_1717583599.jpg");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+	buffer6 = await getBuffer(`https://mallucampaign.in/images/img_1717583978.jpg`)
+        A17.sendMessage(from, { image: buffer6, caption: 'ْ'}, { quoted: m })
         break;
 
 
