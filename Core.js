@@ -1495,7 +1495,7 @@ if (smallinput.includes('مثا')) {
     }
 
 
-   /*  if (smallinput.includes('ط')) {
+   /*  if (smallinput.includes('قطع')) {
  if (isAbd) reply (`يقطعه فيك واحد من دار زغاوة لا ناك لا جلد حلاوة`);
  if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
    
@@ -1611,7 +1611,7 @@ if (smallinput.includes('مثا')) {
 
 
    if (smallinput.includes('ونو')) {
-    reply (`اور ما تزعل😂`);
+    reply (`اوريك ما تزعل😂`);
           }
 
 
@@ -1767,9 +1767,65 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     //
+    switch (command) {
+
+     case 'hssr': case 'tesbtn':
+  if (isBanChat) return reply(mess.bangc);
+  if (isBan) return reply(mess.banned);
+  let msg = generateWAMessageFromContent(m.chat, {
+    message: {
+      "messageContextInfo": {
+        "deviceListMetadata": {},
+        "deviceListMetadataVersion": 2
+      },
+      interactiveMessage: proto.Message.InteractiveMessage.create({
+        body: proto.Message.InteractiveMessage.Body.create({
+          text: 'test button A17'
+        }),
+        footer: proto.Message.InteractiveMessage.Footer.create({
+          text: 'Powered by Kai'
+        }),
+        // *Corrected: Header is now declared separately*
+        header: proto.Message.InteractiveMessage.Header.create({
+          title: 'honkai star rail',
+          subtitle: null,
+          hasMediaAttachment: true, 
+          media: {  
+            image: { 
+              url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', 
+              mimetype: 'image/jpeg', 
+            } 
+          }
+        }), 
+        nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+          buttons: [
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".jingliu","id":"${global.prefa[0]}jingliu"}
+            },
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".ruan mei","id":"${global.prefa[0]}ruan"}
+            },
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".blade","id":"${global.prefa[0]}blade"}
+            }
+          ],
+        })
+      })
+    }
+  }, {})
+
+  A17.relayMessage(msg.key.remoteJid, msg.message, {
+    messageId: msg.key.id
+  })
+  break;
+
+
 
       //
- /*     case 'sc': case 'script': case 'sourcecode': {
+      case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "❤", key: m.key } })
@@ -1778,14 +1834,14 @@ Then if I got any juice left I'm gonna get Sunday too`);
         teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
         /*  let buttons = [
           {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
-          ] 
+          ] */
         let buttonMessage = {
           image: Thumb,
           jpegThumbnail: BotLogo,
           caption: teks,
           /* footer: `${BotName}`,
            buttons: buttons,
-           headerType: 4, 
+           headerType: 4, */
           contextInfo: {
             externalAdreply: {
               title: "Powered by Kai",
@@ -1802,7 +1858,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         }
         A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
-        break; */
+        break; 
 
 
       case 'qt': {
@@ -2396,7 +2452,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
 
-      //tictactoe gam
+      //tictactoe game
 
       case 'ttc': case 'ttt': case 'tictactoe': {
         if (isBan) return reply(mess.ban)
