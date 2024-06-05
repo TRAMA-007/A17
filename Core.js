@@ -12019,7 +12019,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: helpMenuText
+                    text: `choose the character to get builds details`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "            honkai star rail"
@@ -12070,7 +12070,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         }
 
         break;
-
+	 }
 
         case 'hsr-cards': case 'cards': case 'بطاقات': {
         if (isBan) return reply(mess.banned);
