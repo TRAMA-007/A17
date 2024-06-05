@@ -12011,7 +12011,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
-            viewOnceMessage: {
               message: {
                 "messageContextInfo": {
                   "deviceListMetadata": {},
@@ -12072,11 +12071,105 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                         "buttonParamsJson": `{"display_text":"himeko","id":"${prefix}himeko"}`
 
                       },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"bronya","id":"${prefix}bronya"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"welt","id":"${prefix}welt"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"clara","id":"${prefix}clara"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"bailu","id":"${prefix}bailu"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"فيمبوي التلج","id":"${prefix}yanxing"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"gepard","id":"${prefix}gepard"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kinguan","id":"${prefix}jinguan"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"loucha","id":"${prefix}loucha"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"blade","id":"${prefix}blade"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"dan heng","id":"${prefix}dan"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"fuxuan","id":"${prefix}fuxuan"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"huohuo","id":"${prefix}huohuo"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kafka","id":"${prefix}kafka"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"black swan","id":"${prefix}black"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"argenti🏳️‍🌈","id":"${prefix}Argenti"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"topaz","id":"${prefix}topaz"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"dr ratio","id":"${prefix}ratio"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"hanabi","id":"${prefix}hanabi"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"boothill","id":"${prefix}بوتهيل"}`
+
+                      },
                     ]
                   })
                 })
               }
-            }
           }, {});
 
 
