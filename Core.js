@@ -12167,6 +12167,96 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                         "buttonParamsJson": `{"display_text":"boothill","id":"${prefix}بوتهيل"}`
 
                       },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"herta","id":"${prefix}herta"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"Asta","id":"${prefix}asta"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"March7th","id":"${prefix}march"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"pela","id":"${prefix}pela"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"serval","id":"${prefix}serval"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"Natasha","id":"${prefix}natasha"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"hook","id":"${prefix}hook"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"Sampo","id":"${prefix}sampo"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"qq","id":"${prefix}qq"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"arlan","id":"${prefix}arlan"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"tingyun","id":"${prefix}tingyun"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"luka","id":"${prefix}luka"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"lynx","id":"${prefix}lynx"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"guinafen","id":"${prefix}guinafen"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yukong","id":"${prefix}yukong"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"hanya","id":"${prefix}hanya"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"xueyi","id":"${prefix}xueyi"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"misha","id":"${prefix}misha"}`
+
+                      },
                     ]
                   })
                 })
