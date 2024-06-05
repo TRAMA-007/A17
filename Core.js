@@ -217,6 +217,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isCreator = [botNumber, ...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [botNumber, ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKh = [botNumber, ...global.khattab].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
+    const isSafi = [botNumber, ...global.safi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)  
     const isShaq = [botNumber, ...global.shaq].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [botNumber, ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isJoan = [botNumber, ...global.eisa].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -1258,6 +1259,30 @@ A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
 }     
 
 
+    if (smallinput.includes('ظوبري') || smallinput.includes('دا زاتو') || smallinput.includes('ده زاتو') || smallinput.includes('من دا') || smallinput.includes('🍆🍆')) {
+	let dd = 'https://chat.whatsapp.com/KiqD2AAPL3fCIUfJCGps4j';
+     let response = await A17.groupInviteCode(m.chat);
+    let link = (`https://chat.whatsapp.com/${response}`);
+    if (dd === link) {
+      var today = new Date();
+        if (today.getDay() == 1 || today.getDay() == 2 || today.getDay() == 3 || today.getDay() == 4 || today.getDay() == 5 || today.getDay() == 6){
+	const key = {
+        remoteJid: chat,
+        fromMe: fromMe,
+        id: id,
+        participant: m.sender
+    };
+        await A17.sendMessage(chat, { delete: key });
+      if (isBotAdmins && !isAli && !isAbd && !isSafi) await A17.sendMessage(from, { text: '*ممنوع التصدير عدا يوم الأحد😡*' });
+      if (isBotAdmins && isAli) await A17.sendMessage(from, { text: 'هوي يا بوت تصديراتك دي خليها للاحد' });
+      if (isBotAdmins && isAbd) await A17.sendMessage(from, { text: 'زولي السمين ههه التصديرات دي حقتي انا بطل مداقرات' });
+      if (isBotAdmins && isSafi) await A17.sendMessage(from, { text: 'يا صافي كلام شنو' });
+	}
+    }
+    }
+
+	    
+
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
@@ -1444,6 +1469,14 @@ if (smallinput.includes('مثا')) {
    reply (`🤏`);
           }
 
+
+if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوبري في جعبتك')) {
+   reply (`🤏`);
+}
+
+    if (smallinput=== '🤏') {
+      reply (`شكلك خبرة يا زولي حتى الاسود بقى ما بكفيك`);
+    }
 
     if (smallinput.includes('pedo') || smallinput.includes('بيدو') || smallinput.includes('شفع')) {
    const imageUrls = [
