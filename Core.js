@@ -12007,6 +12007,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 	case 'honkai': case 'hsr': case 'هونكاي': case 'قطار': case 'star': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
+	try {
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
