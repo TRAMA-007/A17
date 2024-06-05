@@ -1769,7 +1769,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
     //
 
       //
-      case 'sc': case 'script': case 'sourcecode': {
+ /*     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "❤", key: m.key } })
@@ -1778,14 +1778,14 @@ Then if I got any juice left I'm gonna get Sunday too`);
         teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
         /*  let buttons = [
           {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
-          ] */
+          ] 
         let buttonMessage = {
           image: Thumb,
           jpegThumbnail: BotLogo,
           caption: teks,
           /* footer: `${BotName}`,
            buttons: buttons,
-           headerType: 4, */
+           headerType: 4, 
           contextInfo: {
             externalAdreply: {
               title: "Powered by Kai",
@@ -1802,7 +1802,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         }
         A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
-        break; 
+        break; */
 
 
       case 'qt': {
