@@ -10,6 +10,7 @@ const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
 const sagiri = require("sagiri");
+const ecoo = require('discord-economy-super')
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -2643,6 +2644,27 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         }
         break;
 
+
+	case 'weekly':  {
+          if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+          if (isBan) return reply(mess.banned);
+          if (isBanChat) return reply(mess.bangc);
+          if (!m.isGroup) return reply(mess.grouponly)
+
+          A17.sendMessage(from, { react: { text: "🕸️", key: m.key } })
+          let user = m.sender
+          const cara = "cara"
+       //   const daily = await eco.daily(user, cara, 5000); //give 999 for daily, can be changed
+	  const weeklyResult = await ecoo.rewards.getWeekly(user, cara, 20000);
+	  const cooldownTime = weeklyResult.cooldown.time
+
+          if (!weeklyResult.claimed) return reply(`You already claimed daily for today, come back in ${weeklyResult.cooldown.time}`); //cdL is already formatted cooldown Left
+
+          reply(`You claimed 💎20000 for daily`);
+        }
+        break; 
+
+		    
       case 'wallet': case 'purse': {
 
         if (isBan) return reply(mess.banned);
