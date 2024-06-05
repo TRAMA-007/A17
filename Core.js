@@ -1471,7 +1471,7 @@ if (smallinput.includes('مثا')) {
 
 
 if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوبري في جعبتك')) {
-   reply (`🤏`);
+   reply (`بالله كان هناك يعني؟ من شدة ما صغير ما لاحظت ليهو زاتو`);
 }
 
     if (smallinput=== '🤏') {
@@ -1492,6 +1492,13 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     if (smallinput.includes('كلامك شين')) {
    reply (`دا زاتو شين`);
     }
+
+
+    if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
+   const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+  } 
 
 
     if (smallinput.includes('كسم')) {
