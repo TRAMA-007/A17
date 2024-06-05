@@ -7680,6 +7680,8 @@ break;
         A17.sendMessage(from, { react: { text: "🤓", key: m.key } })
         buffer = await getBuffer(`https://pbs.twimg.com/media/GJtziVUWQAAGn4P?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer2 = await getBuffer(`https://pbs.twimg.com/media/GOxUnroXkAExkWl?format=jpg&name=large`)
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
         break;
 
 
