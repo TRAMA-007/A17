@@ -12036,7 +12036,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                     buttons: [
                       {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}jingliu"}`
+                        "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}jinglu"}`
                       },
                       {
                         "name": "quick_reply",
@@ -12046,7 +12046,32 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 		    {
                        "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"silver wolf","id":"${prefix}silver"}`
-                     }
+                     }, 
+	{
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"acheron","id":"${prefix}acheron"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"aventurine","id":"${prefix}aventurine"}`
+
+                      },
+			{
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"robin","id":"${prefix}robin"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"seele","id":"${prefix}seele"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"himeko","id":"${prefix}himeko"}`
+
+                      },
                     ]
                   })
                 })
