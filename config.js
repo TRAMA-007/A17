@@ -26,6 +26,7 @@ global.tori = ["218931721879"];
 global.khattab = ["971547460347"];
 global.hkl = ["249905553316"];
 global.shaq = ["249906424323"];
+global.safi = ["201501519655"];
 global.eisa = ["9647816028285"];
 global.kaze = ["249128210725"];
 global.bayome = ["249966573392"];
