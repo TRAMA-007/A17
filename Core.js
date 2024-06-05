@@ -12011,6 +12011,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
+         viewOnceMessage: {
               message: {
                 "messageContextInfo": {
                   "deviceListMetadata": {},
@@ -12170,6 +12171,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                   })
                 })
               }
+		}
           }, {});
 
 
