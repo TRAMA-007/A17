@@ -12183,7 +12183,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"trailblazer","id":"${prefix}stelle"}`
+                        "buttonParamsJson": `{"display_text":"trailblazer","id":"${prefix}ستيلي"}`
                       },
                       {
                         "name": "quick_reply",
