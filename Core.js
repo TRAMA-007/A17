@@ -7005,9 +7005,9 @@ break;
         if (!text) return reply(`Tag Someone, Example : ${prefix + command} @plana`)
 	if (text.includes('249994230615')) return reply (`مزاكي الزبو المافي`)
 	
-        const zbi = ['ما لقيتو', '🤏', '20 سنتي', '10 كيلومتر', '3 متر🤯', 'متر و نص🤯', 'مقطوع', 'عندو ضعف جنسي', 'نص سنتي', 'ربع سنتي', 'مافيش' , 'ما بتحسب', 'ما عندو زاتو']
+        const zbi = ['ما لقيتو', '🤏', '20 سنتي', '10 كيلومتر', '3 متر', 'متر و نص', 'مقطوع', 'عندو ضعف جنسي', 'نص سنتي', 'ربع سنتي', 'مافيش' , 'ما بتحسب', 'ما عندو زاتو']
         const pussy = zbi[Math.floor(Math.random() * zbi.length)]
-        A17.sendMessage(from, { text: `diksize Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
+        A17.sendMessage(from, { text: `diksize Check : ${q}\nAnswer : *${pussy}*` }, { quoted: m })
 		     }
         break;
 
