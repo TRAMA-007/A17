@@ -10,7 +10,7 @@ const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
 const sagiri = require("sagiri");
-const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
+const { toSticker, StickerTypes } = require('WA-Leal-Stickers')
 const ecoo = require('discord-economy-super')
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
@@ -933,14 +933,11 @@ Typed *surrender* to surrender and admited defeat`
 
    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-   const sticker = Sticker(media, {
-    pack: 'My Pack', // The pack name
-    author: 'Me', // The author name
-    type: StickerTypes.FULL, // The sticker type
-    quality: 50, // The quality of the output file
-    background: '#000000' // The sticker background color (only for full stickers)
-	    })
-A17.sendMessage(from, { sticker: sticker }, { quoted: m });
+   const stickerBuffer = await toSticker(media, {
+    pack: 'Pack_name', // The pack name
+    author: 'Your_name', // The author name
+       })
+A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
 // Convert to WebP using sharp
  // const webpBuffer = await sharp(media)
  //   .webp()
