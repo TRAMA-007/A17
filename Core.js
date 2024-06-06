@@ -6997,16 +6997,16 @@ break;
         break;
 
 
-      case 'dicksize':
+      case 'diksize':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        A17.sendMessage(from, { react: { text: "🤧", key: m.key } })
 
         if (!text) return reply(`Tag Someone, Example : ${prefix + command} @Kai`)
-        const A17tttt = ['ما بتحسب', 'مافيش', '🤏', 'ربع سنتي', 'عندو ضعف جنسي', '3 متر🤯', '20 سنتي', 'مقطوع', 'ما عندو زاتو', 'متر و نص🤯', '7 سنتي' , 'نص سنتي', '5 سنتي']
+        const A17tttt = ['ما لقيتو', '🤏', '20 سنتي', '10 كيلومتر', '3 متر🤯', 'متر و نص🤯', 'مقطوع', 'عندو ضعف جنسي', 'نص سنتي', 'ربع سنتي', 'مافيش' , 'ما بتحسب', 'ما عندو زاتو']
         const taky = A17tttt[Math.floor(Math.random() * A17tttt.length)]
-        A17.sendMessage(from, { text: `diksize : ${q}\nAnswer : *${taky}*` }, { quoted: m })
-        break; 
+        A17.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
+        break;
 
 
       //
