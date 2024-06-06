@@ -933,16 +933,14 @@ Typed *surrender* to surrender and admited defeat`
 
    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-   const buffer = await new Sticker(media)
-    .setPack('My Pack')
-    .setAuthor('Me')
-    .setType(StickerTypes.FULL)
-    .setCategories(['🤩', '🎉'])
-    .setId('12345')
-    .setBackground('#000000')
-    .setQuality(50)
-    .toBuffer()
-A17.sendMessage(from, { sticker: buffer }, { quoted: m });
+   const sticker = Sticker(media, {
+    pack: 'My Pack', // The pack name
+    author: 'Me', // The author name
+    type: StickerTypes.FULL, // The sticker type
+    quality: 50, // The quality of the output file
+    background: '#000000' // The sticker background color (only for full stickers)
+	    })
+A17.sendMessage(from, { sticker: sticker }, { quoted: m });
 // Convert to WebP using sharp
  // const webpBuffer = await sharp(media)
  //   .webp()
