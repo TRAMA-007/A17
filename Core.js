@@ -10,7 +10,6 @@ const chalk = require("chalk");
 const axios = require('axios');
 const sharp = require('sharp');
 const sagiri = require("sagiri");
-const { toSticker, StickerTypes } = require('wa-leal-stickers')
 const ecoo = require('discord-economy-super')
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
@@ -931,11 +930,11 @@ Typed *surrender* to surrender and admited defeat`
     }
    // ...
 
-   if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
+  /*  if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
    const stickerBuffer = await toSticker(media, { pack: 'Pack_name',author: 'Your_name' })
     A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
-	      }
+	      } */
  
 	//  if (smallinput.includes('test')) {
  //  const toSticker = require('wa-leal-stickers');
