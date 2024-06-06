@@ -7331,11 +7331,17 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704883922.jpg`)
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717664643.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGo3cBOEEEM8chSZQLZDWsbVraOG-1XCskIw&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
-        break
+	buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717664644.jpg`)
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
+	buffer4 = await getBuffer(`https://mallucampaign.in/images/img_1717664645.jpg`)
+        A17.sendMessage(from, { image: buffer4, caption: 'ْ'}, { quoted: m })
+       buffer5 = await getBuffer(`https://mallucampaign.in/images/img_1717664646.jpg`)
+        A17.sendMessage(from, { image: buffer5, caption: 'ْ'}, { quoted: m })
+       break
 
 
       case 'سيلفر':
@@ -7350,6 +7356,18 @@ break;
         break
 
 
+      case 'Gallagher':
+      case 'قلقار':
+      case 'قلقات':
+      case 'جرجيرة':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717665327.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break 
+
+
       case 'بلايد':
       case 'blade':
         if (isBan) return reply(mess.banned);
@@ -7359,6 +7377,29 @@ break;
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQglKhETlZC2vnIMFU3E3o03QtDmi6yn_kcAg&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
+        break
+
+
+	case 'firefly':
+      case 'فايرفلاي':
+       case 'الزوجة':
+	case 'القيرلفريند':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717665498.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break
+
+
+       case 'جايد':
+       case 'جيد':
+      case 'jade':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717665497.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         break
 
 
@@ -7521,7 +7562,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704895128.jpg`)
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717664434.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT89Yaa4f8eeYtsSxSTHaWqJq_LUCsaXmuCdQ&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -12353,6 +12394,21 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 			    {
                         "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"misha","id":"${prefix}misha"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"القيرلفريند","id":"${prefix}firefly"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"Gallagher","id":"${prefix}Gallagher"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"jade","id":"${prefix}jade"}`
 
                       },
                     ]
