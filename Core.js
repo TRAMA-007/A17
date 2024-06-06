@@ -1129,7 +1129,7 @@ Typed *surrender* to surrender and admited defeat`
         const webpBuffer = await sharp(media)
          .webp() 
          .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
+       // Send sticker using A17 libray (replace with your actual function)
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
    } 
 
