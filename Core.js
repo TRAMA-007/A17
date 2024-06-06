@@ -936,21 +936,18 @@ Typed *surrender* to surrender and admited defeat`
    const stickerBuffer = await toSticker(media, { pack: 'Pack_name',author: 'Your_name' })
     A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
 	      }
-
-
  
-	  
-if (smallinput.includes('test')) {
-   const toSticker = require('wa-leal-stickers');
-  const StickerTypes = require('wa-leal-stickers');
+	//  if (smallinput.includes('test')) {
+ //  const toSticker = require('wa-leal-stickers');
+ // const StickerTypes = require('wa-leal-stickers');
 	
- let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
+// let media = await getBuffer("https://graph.org/file/bcdc1bb1091a9e006bd53.mp4");
 
-    const stickerBuffer = await toSticker(media, {  pack: 'plana', author: 'akane710' })
+ //   const stickerBuffer = await toSticker(media, {  pack: 'plana', author: 'akane710' })
 
 // Example sending sticker on Baileys
-A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
-}
+// A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
+//  }
 
 
 
