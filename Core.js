@@ -1489,6 +1489,19 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     }
 
 
+    if (smallinput.includes('الناس تتماسك')) {
+   reply (`بتماسكوا بي دا بس`);
+    } 
+
+
+    if (smallinput.includes('كلام شنو')) {
+     const typ = ['يا توفيق اسكت','everyone says وين المينغودا but no one asks hows the مينغودا', 'هاي'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+    if (isTawfik) return reply(random)
+   reply (`كلامي`);
+    }
+
+
     if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
    const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
    const random = typ[Math.floor(Math.random() * typ.length)];
