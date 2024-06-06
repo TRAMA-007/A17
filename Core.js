@@ -6997,6 +6997,18 @@ break;
         break;
 
 
+      case 'dicksize':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+
+        if (!text) return reply(`Tag Someone, Example : ${prefix + command} @Kai`)
+        const A17tttt = ['10 ملي', '12 كيلومتر', '🤏', 'ربع سنتي', 'عندو ضعف جنسي', '3 متر🤯', '20 سنتي', 'مقطوع', 'ما عندو زاتو', 'متر و نص🤯', '7 سنتي' , 'نص سنتي', '5 سنتي']
+        const taky = A17tttt[Math.floor(Math.random() * A17tttt.length)]
+        A17.sendMessage(from, { text: `diksize : ${q}\nAnswer : *${taky}*` }, { quoted: m })
+        break; 
+
+
       //
       case 'dare':
         if (isBan) return reply(mess.banned);
