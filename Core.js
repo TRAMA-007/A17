@@ -7356,7 +7356,7 @@ break;
         break
 
 
-      case 'Gallagher':
+      case 'gallagher':
       case 'قلقار':
       case 'قلقات':
       case 'جرجيرة':
@@ -7767,6 +7767,10 @@ break;
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://pbs.twimg.com/media/GNVQC6TWMAAP_q7?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717668779.jpg`)
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
+        buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717668778.jpg`)
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
         break;
 
 
@@ -12177,6 +12181,10 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                         "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}jinglu"}`
                       },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"trailblazer","id":"${prefix}stelle"}`
+                      },
                       {
                         "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"ruan mei","id":"${prefix}ruan"}`
@@ -12233,7 +12241,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"فيمبوي التلج","id":"${prefix}yanxing"}`
+                        "buttonParamsJson": `{"display_text":"فيمبوي التلج","id":"${prefix}yanqing"}`
 
                       },
 			    {
@@ -12403,7 +12411,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"Gallagher","id":"${prefix}Gallagher"}`
+                        "buttonParamsJson": `{"display_text":"Gallagher","id":"${prefix}قلقات"}`
 
                       },
 			    {
