@@ -933,7 +933,7 @@ Typed *surrender* to surrender and admited defeat`
 
    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-   const sticker = new Sticker(media, {
+   const stickerr = new Sticker(media, {
     pack: 'plana', // The pack name
     author: 'akane710', // The author name
     type: StickerTypes.FULL, // The sticker type
@@ -942,14 +942,8 @@ Typed *surrender* to surrender and admited defeat`
     quality: 50, // The quality of the output file
     background: '#000000' // The sticker background color (only for full stickers)
 })
-
-// const buffer = await sticker.toBuffer() // convert to buffer
-// or save to file
-// await sticker.toFile('sticker.webp')
-
-// or get Baileys-MD Compatible Object
-A17.sendMessage(jid, await sticker.toMessage()) 
-  // Convert to WebP using sharp
+A17.sendMessage(from, { sticker: stickerr }, { quoted: m });
+// Convert to WebP using sharp
  // const webpBuffer = await sharp(media)
  //   .webp()
 //    .toBuffer();
