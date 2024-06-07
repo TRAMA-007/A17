@@ -11788,7 +11788,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
       break;
 */
 
-/*	case 'honkai': case 'hsr': case 'هونكاي': case 'قطار': case 'star': {
+	case 'honkai': case 'hsr': case 'هونكاي': case 'قطار': case 'star': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 	try {
@@ -12084,7 +12084,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
         break;
 	 }
-*/
+
 
 	case 'genshin': case 'قنشن': case 'gayshit': {
       
@@ -12310,7 +12310,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                         "buttonParamsJson": `{"display_text":"thoma","id":"${prefix}thoma"}`
 
                       },
-                           {
+                       /*    {
 			      name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"gorou","id":"${prefix}gorou"}`
 
@@ -12469,7 +12469,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 			      name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"navia","id":"${prefix}navia"}`
 
-                      },
+                      }, */
                     ]
                   })
                 })
