@@ -10305,22 +10305,6 @@ const characterAI = new CharacterAI();
         break;
 
 
-      case 'upscale':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!image) return reply(`Please proide an image`)
-        reply(mess.waiting)
-        K = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=GataDios&img=${image}`)
-        let j = {
-          image: k,
-          caption: `ْ`,
-        }
-        await A17.sendMessage(m.chat, j, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break;
-        
-
       case 'foxgirl':
       case 'neko':
       case 'loli':
@@ -10335,27 +10319,6 @@ const characterAI = new CharacterAI();
                          return reply('error..')
                                          })
        break;
-        
-
-      case 'topless':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        waifudd = await axios.get(`https://fantox-apis.vercel.app/topless`)
-        /*  let xxhnekobot = [
-          {buttonId: `${prefix}touhou`, buttonText: {displayText: `>>`}, type: 1},
-          ]  */
-        let xx1button3Messages = {
-          image: { url: waifudd.data.url },
-          caption: `can't have shit in gensokyo...`,
-          /*  buttons: xxhnekobot,
-          headerType: 1 */
-        }
-        await A17.sendMessage(m.chat, xx1button3Messages, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break;
 
 
       //
@@ -10866,15 +10829,27 @@ const characterAI = new CharacterAI();
         const aru = ba.data[0];
         const traitNames = aru.traits.map(traits => traits.name).join(',');
         let arutxt = `
-  Name: ${aru.name}
-  original name: ${aru.originalName}
-  class: ${aru.className}
-rarity: ${aru.rarity}
-cost: ${aru.cost}
- max level: ${aru.lvMax}
- Gender: ${aru.gender}
- attribute: ${aru.attribute}
- traits: ${traitNames} 
+  *Name: ${aru.name}*
+  
+ *original name: ${aru.originalName}*
+  
+*class: ${aru.className}*
+  
+*rarity: ${aru.rarity}*
+
+ *cost: ${aru.cost}*
+ 
+ *max level: ${aru.lvMax}*
+ 
+ *Gender: ${aru.gender}*
+ 
+ *attribute: ${aru.attribute}*
+ 
+*traits: ${traitNames}* 
+ 
+ *Voice actor : ${aru.profile.cv}* 
+ 
+ *Artist: ${aru.profile.illustrator}* 
 `;
   await A17.sendMessage(m.chat, { image: { url:aru["extraAssets"]["charaGraph"]["ascension"]["4"]}, caption: arutxt }, { quoted: m })   
     }
