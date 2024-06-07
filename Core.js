@@ -931,12 +931,9 @@ Typed *surrender* to surrender and admited defeat`
    // ...
 
    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-  const media = await getBuffer("https://graph.org/file/d8b131069d413ec9c0e04.png");
-          const webpBuffer = await sharp(media)
-         .gif({ time: 3000 }) // Set time to desired duration in milliseconds
-         .toBuffer();
-       // Send GIF using A17 library (replace with your actual function)
-       A17.sendMessage(from, { video: webpBuffer, gifPlayback: true }, { quoted: m });	    
+  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);	    
    } 
  
 	//  if (smallinput.includes('test')) {
@@ -963,13 +960,10 @@ Typed *surrender* to surrender and admited defeat`
     } */
 
 
-/*    if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
+    if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
     let media = await getBuffer("https://gifdb.com/images/thumbnail/ghost-hug-virtual-kiss-anime-girl-menhera-chan-c3fvyxsyb034zqbt.gif");
-          const webpBuffer = await sharp(media)
-         .webp({ animated: true }) // Set animated to true for animated stickers
-         .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);
    }
 
 
@@ -986,7 +980,7 @@ Typed *surrender* to surrender and admited defeat`
     let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia); } 
     }
-*/
+
 
     if (smallinput.includes('براه') || smallinput.includes('bruh')) {
      if (isTawfik) return reply('تشسن')
@@ -6399,12 +6393,9 @@ break;
    } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
-          const webpBuffer = await sharp(media)
-         .webp({ animated: true }) // Set animated to true for animated stickers
-         .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m }); 
-        } else {
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia)
+	} else {
           reply(`رسل الصورة العايز تحولها لستيكر يا غبي`)
         }
       }
