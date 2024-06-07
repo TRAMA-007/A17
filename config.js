@@ -47,8 +47,8 @@ global.OwnerNumber = ["249904077717"];   //If you want singal number so global.O
 global.ownertag = ["249904077717"];
 global.OwnerName = "akane710";
 global.BotName = "plana";
-global.packname = "A17 Bot";                             //Do not change.
-global.author = "By: Kai";      
+global.packname = "plana";                             //Do not change.
+global.author = "حسن زلقو";      
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/KJKxoW0FmOeLLv7etC6e5Y";
 
@@ -111,7 +111,7 @@ global.mess = {
   waiting: 'يتم الطبخ حاليا.',
   nolink: 'Please provide me *link*, Baka!',
   error: 'An error occurd!',
-  banned: 'وين الصوص',
+  banned: 'امشي من هنا يا عب مافي ليك',
   bangc: 'This Group is *Banned* from using Commands!',
   nonsfw: 'عيب'
 
