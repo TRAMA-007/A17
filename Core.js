@@ -12086,12 +12086,11 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 	 }
 
 
-	/* case 'genshin': case 'قنشن': case 'gayshit': {
-      
-	if (isBan) return reply(mess.banned);
+	 case 'genshin': case 'قنشن': case 'gayshit': {
+        if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 	try {
-        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
+        A17.sendMessage(from, { react: { text: "🚮", key: m.key } })
 
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
          viewOnceMessage: {
@@ -12102,13 +12101,13 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `choose the character to get builds details`
+                    text: `بدل تبني الشخصيات رايك شنو تبني حياتك اول`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
-                    text: "            honkai star rail"
+                    text: "            if you still play this game please go take a shower"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
+                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/858c9965673d7aaa5d976.jpg' } }, { upload: A17.waUploadToServer })),
 
 
                     title: "                      Help Menu",
@@ -12131,342 +12130,342 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
                       }, 
 			    {
-			      name": "quick_reply",
+			     "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"sara","id":"${prefix}sara"}`
 
                       },
 			    {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"yanfei","id":"${prefix}yanfei"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"yoimiya","id":"${prefix}yoimiya"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"aloy","id":"${prefix}aloy"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"sayu","id":"${prefix}sayu"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"kazuha","id":"${prefix}kazuha"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"ningguang","id":"${prefix}ningguang"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"eula","id":"${prefix}eula"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"venti","id":"${prefix}venti"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"albedo","id":"${prefix}albedo"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"childe","id":"${prefix}childe"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"razor","id":"${prefix}razor"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"diluc","id":"${prefix}diluc"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"jean","id":"${prefix}jean"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"qiqi","id":"${prefix}qiqi"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"mona","id":"${prefix}mona"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"keqing","id":"${prefix}keqing"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"dehya","id":"${prefix}dehya"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"fishcl","id":"${prefix}fishl"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"الطغنري","id":"${prefix}tighnari"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"كلجة الهايدرو","id":"${prefix}xingqiu"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"hutao","id":"${prefix}hutao"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"klee","id":"${prefix}klee"}`
 
                       },
                            {
-			      name": "quick_reply",
+			     "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"xiao","id":"${prefix}xiao"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"zhongli","id":"${prefix}zhongli"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"ganyu","id":"${prefix}ganyu"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"beidou","id":"${prefix}beidou"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"amber","id":"${prefix}amber"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"noelle","id":"${prefix}noelle"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"kaeya","id":"${prefix}kaeya"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"xiangling","id":"${prefix}xiangling"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"xinyan","id":"${prefix}xinyan"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"diona","id":"${prefix}diona"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"lisa","id":"${prefix}lisa"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"bennett","id":"${prefix}bennett"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"thoma","id":"${prefix}thoma"}`
 
                       },
-                       /*    {
-			      name": "quick_reply",
+                           {
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"gorou","id":"${prefix}gorou"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"shenhe","id":"${prefix}shenhe"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"yunjin","id":"${prefix}yunjin"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"ayato","id":"${prefix}ayato"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"yelan","id":"${prefix}yelan"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"kuki shinobu","id":"${prefix}kuki"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"heizhou","id":"${prefix}هيزو"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"dori","id":"${prefix}dori"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"collei","id":"${prefix}collei"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"nilou","id":"${prefix}nilou"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"cyno","id":"${prefix}cyno"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"ليلى","id":"${prefix}ليلى"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"nahida","id":"${prefix}nahida"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"الهيثم","id":"${prefix}الهيثم"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"scaramouche","id":"${prefix}scaramouche"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"faruzan","id":"${prefix}faruzan"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"yaoyao","id":"${prefix}yaoyao"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"mika","id":"${prefix}mika"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"kirara","id":"${prefix}kirara"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"baizhu","id":"${prefix}baizhu"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"lynette","id":"${prefix}lynette"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"kaveh","id":"${prefix}kaveh"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"lyney","id":"${prefix}lyney"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"freminet","id":"${prefix}freminet"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"arlecchino","id":"${prefix}arlecchino"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"chiori","id":"${prefix}chiori"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"القاضي","id":"${prefix}القاضي"}`
 
                       },
                            {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"اب جعبة","id":"${prefix}ريزلي"}`
 
                       },
 			    {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"chevereuse","id":"${prefix}chevereuse"}`
 
                       },
 			    {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"gaming","id":"${prefix}gaming"}`
 
                       },
 			    {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"furina","id":"${prefix}furina"}`
 
                       },
 			    {
-			      name": "quick_reply",
+			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"navia","id":"${prefix}navia"}`
 
                       }, 
@@ -12494,7 +12493,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
         break;
 	 }
-            */                
+                           
 
         case 'hsr-cards': case 'cards': case 'بطاقات': {
         if (isBan) return reply(mess.banned);
