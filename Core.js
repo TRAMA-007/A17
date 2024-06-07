@@ -416,20 +416,20 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=o40HITAeDQ_PRYlxwhv9A2qIEk3hJBNkk4vZSTohgmY&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=CNjA7zH6Sc16nFtizbqOwiOnSMhiJShPasROgTgY2zU&token=92e56afa8f0e2b15187f483885bab11342bedd0c&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
 
 
-     if (!isCmd && islucas && !m.isGroup){
+ /*    if (!isCmd && islucas && !m.isGroup){
        const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=Dvm_7p9ea1uPKtENq18-tjJqHpFkdmP-nFreeGx00s0&sessionId=Vc8LYfrj8siOpn8y42EoTb8PO6FtWhmUnuJReoiKjyI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
      }
-
+*/
 
     if (!isCmd && isTawfik && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
@@ -440,7 +440,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-    if (!isCmd && isAdam && !m.isGroup){
+/*    if (!isCmd && isAdam && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
@@ -448,18 +448,18 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
-
+*/
 
     if (!isCmd && isCreator && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=hRYPx44-XJR8REiz_p_bPJHXeiFGzVtCR1Aec7cIg9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=wSJPfvPmFR6DSstyNxRgVqclPQnTM_P1HkhpHtYYwko&sessionId=ab8VRtoPmVTJWrctWjmzH-YwnUAStwO3o0HJ9glrRxs&token=92e56afa8f0e2b15187f483885bab11342bedd0c&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     } 
 
 
-    if (!isCmd && isAli && !m.isGroup){
+   /* if (!isCmd && isAli && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
@@ -536,7 +536,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     } 
-
+*/
 
 /*    if (!isCmd && tagg && m.isGroup){
      const typ = ['plana', 'arona', 'adamxion'];
@@ -3466,12 +3466,24 @@ break;
         if (isBanChat) return reply(mess.bangc);
 
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
-
+	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب')){
+         orgnye = m.sender
+	   reply(`you've been banned from using plana..reason : *عشان انت عب قليل ادب*`)
+	const isBane = banUser.includes(orgnye)
+	banUser.push(orgnye)
+	const txtmsg = `*تم الجغم*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+	for (let mood of global.coomer.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
+	   await A17.sendMessage(`${mood}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
+	}
         try {
           const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
 
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=djGwLe4Hgzf0xCjbV1iDvtxCnlI5nwwYiDkaHd0dul8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=yXBOq8dI9ex9o3dL8pDxm4GqN0Q9ZbqSupr5D1lt274&token=92e56afa8f0e2b15187f483885bab11342bedd0c&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
