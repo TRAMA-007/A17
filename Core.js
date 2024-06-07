@@ -930,11 +930,14 @@ Typed *surrender* to surrender and admited defeat`
     }
    // ...
 
-  /*  if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-   const stickerBuffer = await toSticker(media, { pack: 'Pack_name',author: 'Your_name' })
-    A17.sendMessage(from, { sticker: stickerBuffer }, { quoted: m });
-	      } */
+   if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
+  const media = await getBuffer("https://graph.org/file/d8b131069d413ec9c0e04.png");
+          const webpBuffer = await sharp(media)
+         .gif({ time: 500 }) // Set time to desired duration in milliseconds
+         .toBuffer();
+       // Send GIF using A17 library (replace with your actual function)
+       A17.sendMessage(from, { video: webpBuffer, gifPlayback: true }, { quoted: m });	    
+   } 
  
 	//  if (smallinput.includes('test')) {
  //  const toSticker = require('wa-leal-stickers');
