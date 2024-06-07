@@ -6894,11 +6894,7 @@ break;
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
 	buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717664644.jpg`)
         A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
-	buffer4 = await getBuffer(`https://mallucampaign.in/images/img_1717664645.jpg`)
-        A17.sendMessage(from, { image: buffer4, caption: 'ْ'}, { quoted: m })
-       buffer5 = await getBuffer(`https://mallucampaign.in/images/img_1717664646.jpg`)
-        A17.sendMessage(from, { image: buffer5, caption: 'ْ'}, { quoted: m })
-       break
+	break
 
 
       case 'سيلفر':
@@ -7009,10 +7005,6 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
 	buffer4 = await getBuffer(`https://mallucampaign.in/images/img_1717583156.jpg`)
         A17.sendMessage(from, { image: buffer4, caption: 'ْ'}, { quoted: m })
-        buffer5 = await getBuffer(`https://mallucampaign.in/images/img_1717583157.jpg`)
-        A17.sendMessage(from, { image: buffer5, caption: 'ْ'}, { quoted: m })
-        buffer6 = await getBuffer(`https://mallucampaign.in/images/img_1717583158.jpg`)
-        A17.sendMessage(from, { image: buffer6, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsWNIQZBgoxCAbBuZoLO4wTr8AX-f3wFUCjA&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break
@@ -7039,7 +7031,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         A17.sendMessage(from, { react: { text: "🏳️‍🌈", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1717754206.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-	buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717754213.jpg`)
+	buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717763048.jpg`)
         A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZBHdzVzErHc3S1tYvqJpVGVVsW7qLpPIVw&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -7063,10 +7055,10 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717753120.jpg`)
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717763107.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-	buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717753119.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717753120.jpg`)
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkVvhRAUG7-tBfPnsRSN0yk-f5E3oPVt8ngw&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break
@@ -7178,7 +7170,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
 
        case 'ناتاشا':
-       case 'Natasha':
+       case 'natasha':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -7206,7 +7198,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "😭", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1717754310.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        A17.sendMessage(from, { image: buffer, caption: '💢💢💢💢💢💢💢'}, { quoted: m })
         buffer2 = await getBuffer("https://upload-os-bbs.hoyolab.com/upload/2024/03/04/162791300/7f806d21095428c636ede42df3f5f28b_2190414815822329489.png?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_80");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break
@@ -7271,7 +7263,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
 
        case 'لوكا':
-       case 'louka':
+       case 'luka':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
@@ -11596,6 +11588,9 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}ba (blue archive characters)
   ⌯     ${prefix}register (for generating your genshin and hsr cards) 
   ⌯     ${prefix}character
+  ⌯     ${prefix}servant (for fgo servants informations) 
+  ⌯     ${prefix}jp (for generating your fgo jp support list) 
+  ⌯     ${prefix}na (for generating your fgo na support list
   
  
 
@@ -11827,7 +11822,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"gepard","id":"${prefix}gepard"}`
+                        "buttonParamsJson": `{"display_text":"gepard","id":"${prefix}jepard"}`
 
                       },
 			    {
@@ -11872,7 +11867,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"argenti🏳️‍🌈","id":"${prefix}Argenti"}`
+                        "buttonParamsJson": `{"display_text":"argenti🏳️‍🌈","id":"${prefix}ارجينتي"}`
 
                       },
 			    {
@@ -11922,7 +11917,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"Natasha","id":"${prefix}natasha"}`
+                        "buttonParamsJson": `{"display_text":"Natasha","id":"${prefix}ناتاشا"}`
 
                       },
 			    {
@@ -11952,7 +11947,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"luka","id":"${prefix}luka"}`
+                        "buttonParamsJson": `{"display_text":"luka","id":"${prefix}لوكا"}`
 
                       },
 			    {
@@ -11962,7 +11957,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"guinafen","id":"${prefix}guinafen"}`
+                        "buttonParamsJson": `{"display_text":"guinaifen","id":"${prefix}guinaifen"}`
 
                       },
 			    {
@@ -11977,7 +11972,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"xueyi","id":"${prefix}xueyi"}`
+                        "buttonParamsJson": `{"display_text":"xueyi","id":"${prefix}شيويي"}`
 
                       },
 			    {
