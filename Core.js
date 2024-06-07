@@ -11079,22 +11079,9 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.lolhuman.xyz/api/twitter?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
-        const ig = instgram.data.result.media[0];
+        const instgram = await axios.get(`https://skizo.tech/api/twitter?apikey=plana&url=${encodeURIComponent(q)}`)
+        const ig = instgram.data.media[0];
         await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
-     }
-        break;
-
-
-	case 'xxs': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://api.fgmods.xyz/api/search/xvideosearch?apikey=kPXqzsDf&text=${encodeURIComponent(q)}`)
-	for (let i = 0; i < instgram.data.result.length; i++) {
-        const ig = instgram.data.result[i] ;
-}
-       await A17.sendMessage(m.chat, { text: ig }, { quoted: m })
      }
         break;
 		    
@@ -11299,10 +11286,13 @@ last login: ${aru.lastLogin}
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a link');
     
-    const youtube = await axios.get(`https://api.lolhuman.xyz/api/ytvideo?apikey=gata_dios&url=${encodeURIComponent(q)}`);
-    const yt = youtube.data.result.link.link;
+    const youtube = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${encodeURIComponent(q)}`);
+    const yt = youtube.data;
+     const ytxt = `*downloading ${yt.title}`
 
-    await A17.sendMessage(m.chat, { video: { url: yt } }, { quoted: m });
+    await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
+    await A17.sendMessage(m.chat, { video: { url: yt.video["720p"].url}, caption: `1080p` }, { quoted: m })
+    await A17.sendMessage(m.chat, { video: { url: yt.video["480p"].url}, caption: `480p` }, { quoted: m })
     }
       break;
 
