@@ -967,6 +967,19 @@ Typed *surrender* to surrender and admited defeat`
    }
 
 
+     if (smallinput.includes('ggh')) {
+    let media = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
+// تحميل الصورة الأصلية
+const originalImage = await sharp(media);
+
+// تقليل حجم الصورة بحجم 50٪
+const resizedImage = await originalImage.resize(50);
+
+// حفظ الصورة المعالجة
+A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pushname}` }, { quoted: m });
+     }
+
+
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
     const sx = await axios.get("https://api.waifu.pics/sfw/hug");
      const gg = sx.data.url
