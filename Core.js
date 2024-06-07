@@ -12086,11 +12086,12 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 	 }
 
 
-	case 'genshin': case 'قنشن': case 'جنشن': case 'غنشن': case 'gayshit': {
-        if (isBan) return reply(mess.banned);
+	case 'genshin': case 'قنشن': case 'gayshit': {
+      
+	if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 	try {
-        A17.sendMessage(from, { react: { text: "🚮", key: m.key } })
+        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
 
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
          viewOnceMessage: {
@@ -12101,10 +12102,10 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `بدل تبني الشخصيات رايك شنو تبني حياتك`
+                    text: `choose the character to get builds details`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
-                    text: "            if you still play this game..please go take a shower for your own sake"
+                    text: "            honkai star rail"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
                     ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
