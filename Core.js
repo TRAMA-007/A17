@@ -8294,7 +8294,103 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
         buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714369934.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break; 
+
+
+    case 'arlecchino':
+      case 'ارليتشينو':
+       case 'daddy':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717774594.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717774595.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
         break;        
+
+
+     case 'chiori':
+      case 'شيوري':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717774786.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        break;        
+
+
+     case 'neuvillette':
+      case 'نيوفيليت':
+      case 'القاضي' :
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717774948.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+         break;        
+
+
+     case 'gaming':
+      case 'قيمينغ':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717775073.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717775072.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;        
+
+
+     case 'chevereuse':
+      case 'شيفيروز':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717775412.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717775413.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;        
+
+
+     case 'furina':
+      case 'فورينا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717775893.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717775892.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;        
+
+
+     case 'wriothesly':
+      case 'ريزلي':
+      case 'اب جعبة' :
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717775924.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717775923.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;        
+
+
+        case 'نافيا':
+      case 'navia':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717775955.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717775954.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+        break;
+     
 
 
      case 'menggoda':
