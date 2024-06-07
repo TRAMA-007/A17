@@ -28,10 +28,10 @@ const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate)
 const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
 // const thiccysapi = require('textmaker-thiccy');
-const ffmpeg = require('fluent-ffmpeg');
+// const ffmpeg = require('fluent-ffmpeg');
 // const ffmpegPath = require('@ffmpeg-static/ffmpeg');
- const ffmpegPath = require('ffmpeg-static').path;
- ffmpeg.setFfmpegPath(ffmpegPath);
+//  const ffmpegPath = require('ffmpeg-static').path;
+// ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
 const { hentai } = require('./lib/scraper2.js');
@@ -2009,14 +2009,14 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
-      case 'repo': case 'botrepo': {
+/*      case 'repo': case 'botrepo': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
         A17.sendMessage(from, { react: { text: "💫", key: m.key } })
         reply(`⚙ My Source Code is </> - https://github.com/Kai0071/A17`)
       }
-        break;
+        break; */
 
 
       case 'owner': case 'creator': case 'mod': case 'mods': {
@@ -2118,7 +2118,9 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-        let serika = await getBuffer(`https://api.lolhuman.xyz/api/upscale?apikey=Gata_Dios&img=${util.format(anu)}`) 
+	const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        let serika = await getBuffer(`https://skizo.tech/api/remini?apikey=${api}&url=${util.format(anu)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break; 
@@ -2918,14 +2920,14 @@ async function getAllUsers() {
   const allUsers = await getAllUsers(); 
   for (const user of allUsers) {
     try {
-      await eco.give(user, cara, 100000); 
+      await eco.give(user, cara, 300000); 
     } catch (error) {
       console.error("Wealth ritual error:", error);
       // Handle the error appropriately (e.g., log it, send a message)
     }
   }
 
-  reply(`Wealth ritual completed! All users received 💎100000.`); 
+  reply(`Wealth ritual completed! All users received 💎300000.`); 
 }
 break; 
 
@@ -3602,465 +3604,7 @@ break;
         }
       }
         break;
-
-
-    /*  case 'nsfwmenu':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "⚠️", key: m.key } })
-
-        reply(` *━━〈 ⚠️ NSFW Menu ⚠️  〉━━*\n\n gifs, hentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
-        break;
-
-
-      //
-      case 'مينغودا':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cum.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.succses, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'ass':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ass.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'bdsm':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/bdsm.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'blowjob':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/blowjob.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'cuckold':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cuckold.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'cum':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cum.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'eba':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/eba.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'ero':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ero.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'femdom':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/femdom.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'foot':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/foot.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'gangbang':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/gangbang.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      //
-      case 'gifs':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        reply(mess.waiting)
-        A17.sendMessage(from, { react: { text: "👀", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/gifs.json'))
-        const rand = nsfwdata[Math.floor(Math.random() * nsfwdata.length)]
-        const response = await fetchBuffer(rand.url)
-        //console.log(response)
-
-        var fetchedgif = await GIFBufferToVideoBuffer(response)
-
-        await A17.sendMessage(m.chat, { video: fetchedgif, gifPlayback: true }, { quoted: m }).catch(err => {
-          console.log(err);
-        }) */
-
-
-      //
-
-
-  /*    case 'glasses':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/glasses.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'hentai':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/hentai.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'jahy':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'mangansfw':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/manga.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'masturbation':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/masturbation.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'milf':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/milf.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'neko':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break;
-
-
-      case 'neko2':
-        if (isBan) return reply(mess.banned)
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw)
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/neko2.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break; 
-
-
-      case 'مينغوداا':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/nsfwloli.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break; */
-
-
-      // case 'orgy':
-      //   if (isBan) return reply(mess.banned)	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      //   A17.sendMessage(from, { react: { text: "💦" , key: m.key }})
-
-      // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'))
-      // var kairesult = pickRandom(nsfwdata)
-      // A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-      // break;
-
-
-     /*   case 'loli':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-
-        // React to the command message with a specific emoji
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } });
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/anime/loli.json'));
-        var numberOfPictures = 3; // Change this value if you want to send a different number of pictures
-
-        // Create a function to get multiple random pictures from the 'nsfwdata' array
-        function getRandomPictures(array, count) {
-          var shuffled = array.slice();
-          var i = array.length;
-          var min = i - count;
-          var temp;
-          var index;
-
-          while (i-- > min) {
-            index = Math.floor((i + 1) * Math.random());
-            temp = shuffled[index];
-            shuffled[index] = shuffled[i];
-            shuffled[i] = temp;
-          }
-
-          return shuffled.slice(min);
-        }
-
-        // Get multiple random pictures from 'nsfwdata'
-        var selectedPictures = getRandomPictures(nsfwdata, numberOfPictures);
-
-        // Send the selected pictures one by one
-        for (let picture of selectedPictures) {
-          A17.sendMessage(m.chat, { caption: mess.success, image: { url: picture.url } }, { quoted: m });
-        }
-        break;
-
-
-      // case 'panties':
-      //   if (isBan) return reply(mess.banned)	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      //   A17.sendMessage(from, { react: { text: "🥵" , key: m.key }})
-
-      // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/panties.json'))
-      // var kairesult = pickRandom(nsfwdata)
-      // A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-      // break;
-
-
-      case 'panties':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-
-        // React to the command message with a specific emoji
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } });
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/panties.json'));
-        var numberOfPictures = 3; // Change this value if you want to send a different number of pictures
-
-        // Create a function to get multiple random pictures from the 'nsfwdata' array
-        function getRandomPictures(array, count) {
-          var shuffled = array.slice();
-          var i = array.length;
-          var min = i - count;
-          var temp;
-          var index;
-
-          while (i-- > min) {
-            index = Math.floor((i + 1) * Math.random());
-            temp = shuffled[index];
-            shuffled[index] = shuffled[i];
-            shuffled[i] = temp;
-          }
-
-          return shuffled.slice(min);
-        }
-
-        // Get multiple random pictures from 'nsfwdata'
-        var selectedPictures = getRandomPictures(nsfwdata, numberOfPictures);
-
-        // Send the selected pictures one by one
-        for (let picture of selectedPictures) {
-          A17.sendMessage(m.chat, { caption: mess.success, image: { url: picture.url } }, { quoted: m });
-        }
-        break;
-
-
-      // case 'pussy':
-      //   if (isBan) return reply(mess.banned)	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      //   A17.sendMessage(from, { react: { text: "🥵" , key: m.key }})
-
-      // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'))
-      // var kairesult = pickRandom(nsfwdata)
-      // A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-      // break; */
-
-
-      case 'orgy':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-
-        // React to the command message with a specific emoji
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } });
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'));
-
-        // Create an empty array to store the randomly selected pictures
-        var selectedPictures = [];
-
-        // The number of pictures you want to send (in this case, we'll send 3)
-        var numberOfPictures = 3;
-
-        // Loop to randomly select 'numberOfPictures' from 'nsfwdata'
-        for (let i = 0; i < numberOfPictures; i++) {
-          // Pick a random index from 'nsfwdata'
-          var randomIndex = Math.floor(Math.random() * nsfwdata.length);
-          var kairesult = nsfwdata[randomIndex];
-
-          // Add the selected picture URL to the 'selectedPictures' array
-          selectedPictures.push(kairesult.url);
-
-          // Optionally, you can remove the selected picture from 'nsfwdata' to avoid duplication.
-          // nsfwdata.splice(randomIndex, 1);
-        }
-
-        // Send the selected pictures one by one
-        for (let url of selectedPictures) {
-          A17.sendMessage(m.chat, { caption: mess.success, image: { url: url } }, { quoted: m });
-        }
-        break;
-
-
-      case 'tentacles':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🥵", key: m.key } })
-
-        var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
-        var kairesult = pickRandom(nsfwdata)
-        A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-        break; 
-
-
+	  
       //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
