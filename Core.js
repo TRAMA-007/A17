@@ -11281,7 +11281,8 @@ last login: ${aru.lastLogin}
         break; 
 
 
-    case 'yt': { 
+    case 'yt':
+    case 'youtube': { 
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     if (!text) return reply('Please provide a link');
@@ -11291,8 +11292,8 @@ last login: ${aru.lastLogin}
      const ytxt = `*downloading ${yt.title}`
 
     await A17.sendMessage(m.chat, { image: { url: yt.thumbnail}, caption: ytxt }, { quoted: m })
-    await A17.sendMessage(m.chat, { video: { url: yt.video["720p"].url}, caption: `1080p` }, { quoted: m })
-    await A17.sendMessage(m.chat, { video: { url: yt.video["480p"].url}, caption: `480p` }, { quoted: m })
+    await A17.sendMessage(m.chat, { video: { url: yt.video["720p"].url}, caption: `720p` }, { quoted: m })
+    await A17.sendMessage(m.chat, { video: { url: yt.video["360p"].url}, caption: `360p` }, { quoted: m })
     }
       break;
 
