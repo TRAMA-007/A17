@@ -12101,16 +12101,16 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `بدل تبني الشخصيات رايك شنو تبني حياتك اول`
+                    text: `رايك شنو تبني حياتك؟`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "            if you still play this game please go take a shower"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/858c9965673d7aaa5d976.jpg' } }, { upload: A17.waUploadToServer })),
+                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
 
 
-                    title: "                      Help Menu",
+                    title: "                      بدل تبني الشخصيات..",
                     subtitle: "Browse through the available commands",
                     hasMediaAttachment: false
                   }),
