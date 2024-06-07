@@ -8138,7 +8138,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714368747.jpg`)
+        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717789888.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
         buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714368741.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
