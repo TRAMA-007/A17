@@ -8369,7 +8369,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
      case 'wriothesly':
       case 'ريزلي':
-      case 'اب جعبة' :
+      case 'اب' :
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
@@ -12231,7 +12231,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
                            {
 			      name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"كلجة الهايدرو ","id":"${prefix}xingqiu"}`
+                        "buttonParamsJson": `{"display_text":"كلجة الهايدرو","id":"${prefix}xingqiu"}`
 
                       },
                            {
@@ -12469,7 +12469,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                         "buttonParamsJson": `{"display_text":"navia","id":"${prefix}navia"}`
 
                       },
-			    ]
+                    ]
                   })
                 })
               }
@@ -12492,7 +12492,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
         }
 
         break;
-	}
+	 }
                             
 
         case 'hsr-cards': case 'cards': case 'بطاقات': {
