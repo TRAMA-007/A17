@@ -7242,7 +7242,7 @@ break;
         break
 
 
-       case 'جينغ يوان':
+       case 'جينغوان':
        case 'jinguan':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -7578,7 +7578,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1704894960.jpg`)
+        buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbq_LuqdbBO0s9ygDSW2RbqGtCZOYfDngxMw&usqp=CAU`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvGdtQ-EAVP7DyvbQ0hzvqOgzeYkp-NsbgA&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
