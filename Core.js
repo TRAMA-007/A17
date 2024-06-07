@@ -10825,7 +10825,7 @@ const characterAI = new CharacterAI();
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}servant enkidu`)
         
-        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?lang=en&name=${q}`)
+        const ba = await axios.get(`https://api.atlasacademy.io/nice/JP/servant/search?lang=en&lore=true&name=${q}`)
         const aru = ba.data[0];
         const traitNames = aru.traits.map(traits => traits.name).join(',');
         let arutxt = `
