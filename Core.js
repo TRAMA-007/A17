@@ -10997,7 +10997,7 @@ last login: ${aru.lastLogin}
         break;
 
 
-      case 'genshin':{
+    /*  case 'genshin':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -11013,7 +11013,7 @@ last login: ${aru.lastLogin}
         await A17.sendMessage(m.chat, { image: { url: w.cover1}, caption: hutao }, { quoted: m })
         await A17.sendMessage(m.chat, { audio: { url: w.cv[0].audio[0]} }, { quoted: m })
       }
-        break;
+        break; */
 
 
       case 'character':{
