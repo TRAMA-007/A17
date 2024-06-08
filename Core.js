@@ -11107,18 +11107,22 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const tt = await axios.get(`https://api.lolhuman.xyz/api/tiktok?apikey=Gata_Dios&url=${encodeURIComponent(q)}`)
-        const sx = tt.data.result;
+        const tt = await axios.get(`https://skizo.tech/api/tiktok?apikey=plana&url=${encodeURIComponent(q)}`)
+        const sx = tt.data.data;
         let shirokotxt = `
+	*downloading*
   *title: ${sx.title}*
 
-  
- *views: ${sx.statistic.play_count}*
-  *likes: ${sx.statistic.like_count}*
- *share: ${sx.statistic.share_count}*
-  *comments: ${sx.statistic.comment_count}*
+
+
+ *views: ${sx.play_count}*
+  *likes: ${sx.digg_count}*
+ *share: ${sx.share_count}*
+  *comments: ${sx.comment_count}*
   `; 
-        await A17.sendMessage(m.chat, { video: { url: sx.link}, caption: shirokotxt }, { quoted: m })
+        await A17.sendMessage(m.chat, { image: { url: sx.cover}, caption: shirokotxt }, { quoted: m })
+	await A17.sendMessage(m.chat, { video: { url: sx.play}, caption: `sd` }, { quoted: m })
+	await A17.sendMessage(m.chat, { video: { url: sx.hdplay}, caption: `hd` }, { quoted: m })
      }
         break;
 
