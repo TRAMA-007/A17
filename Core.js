@@ -2183,7 +2183,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 		`
          *similarity : ${gg}*
 	 
-	 *creator* : ${creator}*
+	 *creator : ${creator}*
 
          *material : ${material}*
 
@@ -2216,7 +2216,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 			    
                       {
                         "name": "cta_url",
-                        "buttonParamsJson": `{"display_text":"REPO","url":"https://github.com/Kai0071/A17","merchant_url":"https://github.com/Kai0071/A17"}`
+                        "buttonParamsJson": `{"display_text":"REPO", "url" : ${oglink} ,"merchant_url": ${oglink }}`
 
                       }
                     ]
