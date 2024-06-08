@@ -2167,7 +2167,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-	const sauce = await axios.get(`https://saucenao.com/search.php?apikey=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${util.format(anu)}`);
+	const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${util.format(anu)}`);
 	const mina = sauce.data.header.results[0].header;
 	const gg = mina.similarity
 	const danid = mina.data.ext_urls.danbooru_id
