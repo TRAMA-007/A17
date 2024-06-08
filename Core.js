@@ -936,6 +936,13 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);	    
    }
 
+
+	  if (smallinput.includes('kkk')) {
+         let link = "https:\/\/danbooru.donmai.us\/post\/show\/6258510";
+         let fixed_link = link.replace(/\\/g, "/");
+         reply(fixed_link); 
+	        }
+
      
  
 	//  if (smallinput.includes('test')) {
