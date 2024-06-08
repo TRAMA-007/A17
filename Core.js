@@ -934,7 +934,9 @@ Typed *surrender* to surrender and admited defeat`
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);	    
-   } 
+   }
+
+     
  
 	//  if (smallinput.includes('test')) {
  //  const toSticker = require('wa-leal-stickers');
@@ -2201,6 +2203,16 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         let serika = await axios.get(`https://api.alyachan.dev/api/compressvid?video=${util.format(anu)}&apikey=QnYS8I`) 
         const shiroko = serika.data.data
         await A17.sendMessage(m.chat, { video: { url: shiroko.url_file} }, { quoted: m })
+      }
+        break; 
+
+
+		     case 'hio':{
+
+        if (isBanChat) return reply(mess.bangc);
+ const imageUrl = 'https:\/\/danbooru.donmai.us\/post\/show\/6258510';
+const fixedUrl = imageUrl.replace(/\/g, '');
+await A17.sendMessage(m.chat, { text: fixedUrl }, { quoted: m })
       }
         break; 
 
