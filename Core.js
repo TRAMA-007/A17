@@ -2175,7 +2175,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	const material = mina.data.material.join(',')
 	const cha = mina.data.characters
 	const dandan = await axios.get(`https://danbooru.donmai.us/posts/${danid}.json`);
-	const result = dandan.file_url
 	let minatxt =
 	`
          *similarity : ${gg}×
@@ -2186,7 +2185,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         *character: ${cha}*
 	 `;
-	await A17.sendMessage(m.chat, { image: { url: result}, caption: minatxt }, { quoted: m })
+	reply(minatxt) 
+//	await A17.sendMessage(m.chat, { image: { url: dandan.file_url }, caption: minatxt }, { quoted: m })
     }
         break; 
 
