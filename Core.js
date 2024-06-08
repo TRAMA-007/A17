@@ -937,11 +937,7 @@ Typed *surrender* to surrender and admited defeat`
    }
 
 
-	  if (smallinput.includes('kkk')) {
-         let link = "https:\/\/danbooru.donmai.us\/post\/show\/6258510";
-         let fixed_link = link.replace(/\\/g, "/");
-         reply(fixed_link); 
-	        }
+	
 
      
  
@@ -2920,7 +2916,13 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         reply(`*You got 💎100000*`)
         break;
 
+	case 'kkk': { 
+          let link = text;
+         let fixed_link = link.replace(/\\/g, "/");
+         reply(fixed_link); 
+	  }
 
+		
         case 'gift': {
 	if (!isCreator) return reply(`هاك القيفت دي🍆`) 
     var cara = 'cara';
