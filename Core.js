@@ -2205,16 +2205,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { video: { url: shiroko.url_file} }, { quoted: m })
       }
         break; 
-
-
-		     case 'hio':{
-const imageUrl = 'https:\/\/danbooru.donmai.us\/post\/show\/6258510';
-const fixedUrl = imageUrl.replace(/\/g, '');
-reply(fixedUrl) 
-		}
-        break; 
-
-
+		    
 
         case 'toanime':{
 
