@@ -2213,10 +2213,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
                   }),
                   nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
                     buttons: [
-                      {
-                        "name": "cta_url",
-                        "buttonParamsJson": `{"display_text":"danbooru post","url": ${fixed_link},"merchant_url": ${fixed_link}}`
-		      },
+			    
                       {
                         "name": "cta_url",
                         "buttonParamsJson": `{"display_text":"original source","url": ${oglink} ,"merchant_url": ${oglink} }`
