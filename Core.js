@@ -2208,12 +2208,10 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
 		     case 'hio':{
-
-        if (isBanChat) return reply(mess.bangc);
- const imageUrl = 'https:\/\/danbooru.donmai.us\/post\/show\/6258510';
+const imageUrl = 'https:\/\/danbooru.donmai.us\/post\/show\/6258510';
 const fixedUrl = imageUrl.replace(/\/g, '');
-await A17.sendMessage(m.chat, { text: fixedUrl }, { quoted: m })
-      }
+reply(fixedUrl) 
+		}
         break; 
 
 
