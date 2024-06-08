@@ -2216,7 +2216,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 			    
                       {
                         "name": "cta_url",
-                        "buttonParamsJson": `{"display_text":"original source","url": ${oglink} ,"merchant_url": ${oglink} }`
+                        "buttonParamsJson": `{"display_text":"REPO","url":"https://github.com/Kai0071/A17","merchant_url":"https://github.com/Kai0071/A17"}`
 
                       }
                     ]
