@@ -2168,12 +2168,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
 	const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${util.format(anu)}`);
-	const mina = sauce.data.header.results[0].header;
-	const gg = mina.similarity
-	const danid = mina.data.danbooru_id
-	const creator = mina.data.creator
-	const material = mina.data.material.join(',')
-	const cha = mina.data.characters
+	const mina = sauce.data.results[0]
+	const gg = mina["header"]["similarity"] 
+	const danid = mina["data"]["danbooru_id"] 
+	const creator = mina["data"]["creator"]
+	const material = mina["data"]["material"]
+	const cha = mina["data"]["characters"]
 	const dandan = await axios.get(`https://danbooru.donmai.us/posts/${danid}.json`);
 	let minatxt =
 	`
@@ -2185,13 +2185,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         *character: ${cha}*
 	 `;
-	reply(minatxt) 
-//	await A17.sendMessage(m.chat, { image: { url: dandan.file_url }, caption: minatxt }, { quoted: m })
+	await A17.sendMessage(m.chat, { image: { url: dandan.file_url }, caption: minatxt }, { quoted: m })
     }
         break; 
 
-
-      case 'resize':{
+		    
+	case 'resize':{
 
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
