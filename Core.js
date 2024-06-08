@@ -2167,10 +2167,24 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-	const client = sagiri("aa7c9a5159533a7cfd79f60c4c4637df0243a8e1");
-        const results = await client(`${util.format(anu)}`);
-        await A17.sendMessage(m.chat, { text: results }, { quoted: m })
-      }
+	const sauce = await axios.get(`https://saucenao.com/search.php?apikey=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${util.format(anu)}`);
+	const mina = sauce.data.header.results[0].header;
+	const gg = mina.similarity
+	const danid = mina.data.ext_urls.danbooru_id
+	const creator = mina.data.ext_urls.creator
+	const material = mina.data.ext_urls.material.join(',')
+	const dandan = await axios.get(`https://danbooru.donmai.us/posts/${danid}.json`);
+	const result = dandan.file_url
+	let minatxt =
+	`
+         *similarity : ${gg}×
+
+         ×creator* : ${creator}*
+
+         *material : ${material}*
+	 `;
+	await A17.sendMessage(m.chat, { image: { url: result}, caption: minatxt }, { quoted: m })
+    }
         break; 
 
 
