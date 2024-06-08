@@ -2161,6 +2161,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	case 'صوص':{
 
         if (isBanChat) return reply(mess.bangc);
+	try {
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           let { GraphOrg } = require("./lib/uploader");
          if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2174,7 +2175,10 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	const creator = mina["data"]["creator"]
 	const material = mina["data"]["material"]
 	const cha = mina["data"]["characters"]
+	const danlink = mina["data"]["ext_urls"][0]
+	let fixed_link = danlink.replace(/\\/g, "/");
 	const dandan = await axios.get(`https://danbooru.donmai.us/posts/${danid}.json`);
+	const oglink = dandan.data.source
 	let minatxt =
 		`
          *similarity : ${gg}*
@@ -2185,9 +2189,63 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         *character: ${cha}*
 	 `;
-	await A17.sendMessage(m.chat, { image: { url: dandan.data.file_url }, caption: minatxt }, { quoted: m })
-    }
-        break; 
+	let msg = generateWAMessageFromContent(m.key.remoteJid, {
+            viewOnceMessage: {
+              message: {
+                "messageContextInfo": {
+                  "deviceListMetadata": {},
+                  "deviceListMetadataVersion": 2
+                },
+                interactiveMessage: proto.Message.InteractiveMessage.create({
+                  body: proto.Message.InteractiveMessage.Body.create({
+                    text: minatxt
+                  }),
+                  footer: proto.Message.InteractiveMessage.Footer.create({
+                    text: "            results from danbooru"
+                  }),
+                  header: proto.Message.InteractiveMessage.Header.create({
+                    ...(await prepareWAMessageMedia({ image: { url: dandan.data.file_url } }, { upload: A17.waUploadToServer })),
+
+
+                    title: "                      results",
+                    subtitle: "افتح الشغل يا اوباما",
+                    hasMediaAttachment: false
+                  }),
+                  nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                    buttons: [
+                      {
+                        "name": "cta_url",
+                        "buttonParamsJson": `{"display_text":"danbooru post","url": ${fixed_link},"merchant_url": ${fixed_link}}`
+		      },
+                      {
+                        "name": "cta_url",
+                        "buttonParamsJson": `{"display_text":"original source","url": ${oglink} ,"merchant_url": ${oglink} }`
+
+                      }
+                    ]
+                  })
+                })
+              }
+            }
+          }, {});
+
+
+          if (!msg || !msg.key || !msg.key.remoteJid || !msg.key.id) {
+            const errorMessage = 'Error: Invalid message key.';
+            console.error(errorMessage);
+            return reply(errorMessage);
+          }
+
+          await A17.relayMessage(msg.key.remoteJid, msg.message, {
+            messageId: msg.key.id
+          });
+        } catch (error) {
+          console.error('Error generating and relaying message:', error);
+          return reply('Error generating and relaying message.');
+        }
+
+        break;
+      }
 
 		    
 	case 'resize':{
