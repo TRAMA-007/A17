@@ -1553,7 +1553,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     }
 
 
-   /*  if (smallinput.includes('قطع')) {
+   /*  if (smallinput.includes('قط')) {
  if (isAbd) reply (`يقطعه فيك واحد من دار زغاوة لا ناك لا جلد حلاوة`);
  if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
    
