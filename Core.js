@@ -2170,10 +2170,10 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${util.format(anu)}`);
 	const mina = sauce.data.results[0]
 	const gg = mina["header"]["similarity"] 
-	const danid = mina["data"]["danbooru_id"] 
-	const creator = mina["data"]["creator"]
-	const material = mina["data"]["material"]
-	const cha = mina["data"]["characters"]
+	const danid = mina["data"]["ext_urls"]["danbooru_id"] 
+	const creator = mina["data"]["ext_urls"]["creator"]
+	const material = mina["data"]["ext_urls"]["material"]
+	const cha = mina["data"]["ext_urls"]["characters"]
 	const dandan = await axios.get(`https://danbooru.donmai.us/posts/${danid}.json`);
 	let minatxt =
 	`
