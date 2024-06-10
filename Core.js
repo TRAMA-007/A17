@@ -3561,7 +3561,6 @@ break;
 	banUser.push(orgnye)
 	const txtmsg = `*تم الجغم*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-	for (let mod of global.coomer.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
 	   }
@@ -6968,7 +6967,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717754620.jpg`)
+        buffer = await getBuffer(`https://mallucampaign.in/images/img_1718048007.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Z8ak3uT0Za_ztxclHK6wLAKu8zvxjqy-hA&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -12804,7 +12803,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"kinguan","id":"${prefix}jinguan"}`
+                        "buttonParamsJson": `{"display_text":"kingyuan","id":"${prefix}jinguan"}`
 
                       },
 			    {
@@ -12964,7 +12963,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"Gallagher","id":"${prefix}قلقات"}`
+                        "buttonParamsJson": `{"display_text":"قلقات","id":"${prefix}قلقات"}`
 
                       },
 			    {
@@ -13213,7 +13212,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
                       },
                            {
 			      "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"bennett","id":"${prefix}bennett"}`
+                        "buttonParamsJson": `{"display_text":"bennett","id":"${prefix}بينيت"}`
 
                       },
                            {
