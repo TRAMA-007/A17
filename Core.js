@@ -2158,7 +2158,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
-	case 'صوص':{
+	case 'صوص':
+	case 'sauce': {
 
         if (isBanChat) return reply(mess.bangc);
 	try {
@@ -2171,6 +2172,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${util.format(anu)}`);
 	const mina = sauce.data["results"][0]
 	const gg = mina["header"]["similarity"] 
+	if (gg < 50) return reply(`ما عرفت والله يا زولي`)
 	const danid = mina["data"]["danbooru_id"]
 	const creator = mina["data"]["creator"]
 	const material = mina["data"]["material"]
@@ -11641,6 +11643,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}searchgc
   ⌯     ${prefix}wikimedia
   ⌯     ${prefix}gpt
+  ⌯     ${prefix}cai
   ⌯     ${prefix}stickers
 
 
@@ -11696,11 +11699,9 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}bully
   ⌯     ${prefix}slap
   ⌯     ${prefix}kill
-  ⌯     ${prefix}happy
   ⌯     ${prefix}pat
   ⌯     ${prefix}smug
   ⌯     ${prefix}nom
-  ⌯     ${prefix}glomp
   ⌯     ${prefix}bite
   ⌯     ${prefix}yeet
   ⌯     ${prefix}blush
@@ -11717,12 +11718,13 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   〢━━ 🌌 *Downloader* 🌌 ━━〢
  
 
-  ⌯     ${prefix}yt
+  ⌯     ${prefix}yt/youtube
   ⌯     ${prefix}drive (up to 1 GB)
   ⌯     ${prefix}instagram / ig
   ⌯     ${prefix}facebook / fb
   ⌯     ${prefix}twitter
   ⌯     ${prefix}tiktok
+  ⌯     ${prefix}ig/Instagram
   ⌯     ${prefix}soundcloud
   ⌯     ${prefix}Spotify
   ⌯     ${prefix}apk
@@ -11736,14 +11738,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}couple
   ⌯     ${prefix}soulmate
   ⌯     ${prefix}handsomecheck
-  ⌯     ${prefix}beautifulcheck
-  ⌯     ${prefix}awesomecheck
-  ⌯     ${prefix}greatcheck
   ⌯     ${prefix}uglycheck
   ⌯     ${prefix}charactercheck
-  ⌯     ${prefix}lesbiancheck
-  ⌯     ${prefix}prettycheck
-  ⌯     ${prefix}lovelycheck
 
 
   〢━━━ 🈴 *Weeb* 🈴 ━━━〢
@@ -11751,20 +11747,18 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   
   ⌯     ${prefix}anime
   ⌯     ${prefix}manga
-  ⌯     ${prefix}feed
   ⌯     ${prefix}foxgirl
   ⌯     ${prefix}shinobu
   ⌯     ${prefix}megumin
   ⌯     ${prefix}waifu
   ⌯     ${prefix}loli
   ⌯     ${prefix}coffee
-  ⌯     ${prefix}tickle
   ⌯     ${prefix}wallpaper
   ⌯     ${prefix}hsr (honkai star rail bulids) 
   ⌯     ${prefix}hsr-cards (honkai star rail character cards)
   ⌯     ${prefix}ba (blue archive characters)
   ⌯     ${prefix}register (for generating your genshin and hsr cards) 
-  ⌯     ${prefix}character
+  ⌯     ${prefix}genshin (for character builds) 
   ⌯     ${prefix}servant (for fgo servants informations) 
   ⌯     ${prefix}jp (for generating your fgo jp support list) 
   ⌯     ${prefix}na (for generating your fgo na support list
