@@ -7049,6 +7049,10 @@ break;
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1717665498.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717971570.jpg`)
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
+       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717971647.jpg`)
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m })
         break
 
 
@@ -7060,6 +7064,10 @@ break;
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
         buffer = await getBuffer(`https://mallucampaign.in/images/img_1717665497.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717971572.jpg`)
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
+        buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717971571.jpg`)
+        A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m }) 
         break
 
 
