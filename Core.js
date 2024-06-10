@@ -9465,317 +9465,640 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
            break; 
 
 
-       case 'card-ayaka':
+       case 'card-ayaka':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000002_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000002": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000002_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000002_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
 
-        case 'card-jean':
+        case 'card-jean':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000003_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000003": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000003_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000003_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
-
-        case 'card-lisa':
+		    
+        case 'card-lisa':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000006_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000006": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000006_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000006_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
 
-        case 'card-barbara':
+		    
+        case 'card-barbara':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000014_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000014": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000014_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000014_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
-
+		    
         case 'card-kaya':
-        case 'card-kaeya':
+        case 'card-kaeya':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000015_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000015": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000015_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000015_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
 
-        case 'card-diluc':
+        case 'card-diluc':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000016_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000016": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000016_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000016_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
 
-        case 'card-razor':
+        case 'card-razor':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000020_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000020": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000020_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000020_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
-
-        case 'card-amber':
+		    
+        case 'card-amber':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000021_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000021": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000021_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000021_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
-
-        case 'card-venti':
+		    
+        case 'card-venti':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000022_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000022": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000022_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000022_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
 
-        case 'card-xiangling':
+
+        case 'card-xiangling':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000023_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000023": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000023_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000023_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
-
-        case 'card-beidou':
+		    
+        case 'card-beidou':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000024_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000024": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000024_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000024_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
-
-        case 'card-Xingqiu':
+        case 'card-Xingqiu':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000025_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000025": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000025_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000025_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
 
-        case 'card-xiao':
+        case 'card-xiao':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000026_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000026": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000026_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000026_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-Ningguang':
+        case 'card-Ningguang':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000027_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000027": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000027_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000027_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-klee':
+        case 'card-klee':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000029_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000029": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000029_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000029_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-zhongli':
+        case 'card-zhongli':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000030_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000030": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000030_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000030_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-fischl':
+        case 'card-fischl':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000031_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000031": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000031_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000031_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-bennett':
+        case 'card-bennett':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000032_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000032": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000032_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000032_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
         case 'card-tartaglia':
-        case 'card-childe':
+        case 'card-childe':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000033_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000033": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000033_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000033_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-noelle':
+        case 'card-noelle':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000034_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000034": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000034_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000034_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-qiqi':
+        case 'card-qiqi':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000035_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000035": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000035_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000035_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-chongyun':
+        case 'card-chongyun':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000036_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000036": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000036_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000036_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-ganyu':
+        case 'card-ganyu':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000037_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000037": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000037_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000037_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-albedo':
+        case 'card-albedo':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000038_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000038": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000038_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000038_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-diona':
+        case 'card-diona':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000039_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000039": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000039_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000039_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
+
         
 
-        case 'card-mona':
+        case 'card-mona':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000041_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000041": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000041_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000041_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
         
 
-        case 'card-keqing':
+        case 'card-keqing':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000042_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000042": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000042_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000042_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
         
 
-        case 'card-sucrose':
+        case 'card-sucrose':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000043_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000043": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000043_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000043_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
         
 
-        case 'card-xinyan':
+        case 'card-xinyan':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000044_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000044": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000044_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000044_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
         
 
-        case 'card-rosaria':
+        case 'card-rosaria':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000045_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000045": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000045_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000045_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
         
 
-        case 'card-hutao':
+        case 'card-hutao':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
-        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000046_${q}.png`)
-        A17.sendMessage(from, { image: buffer }, { quoted: m })
-        break;
-
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000046": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000046_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000046_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break; 
 
         case 'card-kazuha':
         if (isBan) return reply(mess.banned);
