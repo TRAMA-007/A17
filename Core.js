@@ -941,7 +941,7 @@ Typed *surrender* to surrender and admited defeat`
 
      
  
-	//  if (smallinput.includes('test')) {
+	//  if (smallinput.includes('tt')) {
  //  const toSticker = require('wa-leal-stickers');
  // const StickerTypes = require('wa-leal-stickers');
 	
