@@ -360,7 +360,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
           // You can add more message keys to mark multiple messages as red
         ];
 
-        // Use the sock object to read the specified messages
+        // Use the sock object to rd the specified messages
         await A17.readMessages(keysToMarkAsRead);
       }
     }
