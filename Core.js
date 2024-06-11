@@ -1685,7 +1685,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
           }
 
 
-    if (smallinput.includes('قنيط')) {
+    if (smallinput.includes('يط')) {
     reply (`الفاك لو سمحت`);
           }
 
