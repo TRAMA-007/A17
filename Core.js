@@ -350,7 +350,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (command) {
         await A17.sendPresenceUpdate('composing', m.chat);
 
-        // Create an array of message keys toark as read
+        // Create an array of message keys to mark as read
         const keysToMarkAsRead = [
           {
             remoteJid: m.chat,
@@ -542,7 +542,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
      const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -1601,6 +1601,13 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
         
       }    }
 
+	 if (smallinput.includes('fang') || smallinput.includes('yuan')) {
+	    const txtmsg = `*عان العرصوص دا كمان*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
+	 } 
+	  
 
     if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('ass')) {
     if (!m.isGroup) {
@@ -3568,7 +3575,7 @@ break;
           const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
 
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=9hOqOT1nDBODBsh4-lWt42mAua7XAMlZMgLNL1JywL4&sessionId=Ktela43XNB0_blnnMsXcqW_VvQECt4g6wBNNKfOYttI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=2-P6XvYP3edCFw7HbzMVdvyhG_hKmBj4claKA5cOCeI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
