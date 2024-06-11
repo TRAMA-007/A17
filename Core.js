@@ -350,7 +350,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (command) {
         await A17.sendPresenceUpdate('composing', m.chat);
 
-        // Create an array of message keys to mark as read
+        // Create an array of message keys toark as read
         const keysToMarkAsRead = [
           {
             remoteJid: m.chat,
