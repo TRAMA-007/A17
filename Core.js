@@ -3593,7 +3593,6 @@ break;
 	const sensei = shiroko.data.result.text
 	reply(sensei)
 	if (!text.includes("/")) {
-         {
         try {  
           const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=NxY9MJgZZa7VPrzmVhYlq-97ViJ92-uPJvEPAPhoUoI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
