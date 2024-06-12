@@ -3571,10 +3571,19 @@ break;
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
 	   }
-        try {
-          const typ = ['plana', 'arona', 'adamxion'];
+	const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
 
+	const swn = args.join(" ")
+        const character = swn.split("/")[0];
+        const message = swn.split("/")[1];
+	const sg = await axios.get(`https://skizo.tech/api/cai/search?apikey=${api}&name=${character}&token=529e24b4173b29dbc3054fef02a380e1e5b41949`);
+	const fuxuan = sg.data.result[0].external_id
+	const shiroko = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=${fuxuan}&sessionId=&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
+	const sensei = shiroko.data.result.text
+	reply(sensei)
+	if(!message) {
+        try {  
           const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=2-P6XvYP3edCFw7HbzMVdvyhG_hKmBj4claKA5cOCeI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
@@ -3593,6 +3602,7 @@ break;
           reply("An error occurred while fetching the response from the API.");
         }
       }
+	     }
         break;
 
 
