@@ -1760,7 +1760,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
     if (smallinput.includes('سلام عليكم ')) {
-    reply (`و عليكم السلام ورحمة الله وبركاته`);
+    reply (`و عكم السلام ورحمة الله وبركاته`);
     }
 
 
