@@ -1517,6 +1517,13 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     }
 
 
+    if (smallinput.endsWith('ايه') || smallinput.endsWith('إيه')) {
+     const reimu = ['خدتك عليه' , 'ارقعك واحد امبليه'];
+   const marisa = reimu[Math.floor(Math.random() * reimu.length)];
+   reply (marisa);
+    }
+
+
     if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
    const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
    const random = typ[Math.floor(Math.random() * typ.length)];
@@ -3571,6 +3578,9 @@ break;
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
 	   }
+	 if (text.includes('fang') || text.includes('yuan')) {
+	return reply(`فانغ يوان اليركبك يا عب`)
+	 }
 	const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
 
@@ -3582,9 +3592,9 @@ break;
 	const shiroko = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=${fuxuan}&sessionId=&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(message)}`);
 	const sensei = shiroko.data.result.text
 	reply(sensei)
-	if(!message) {
+	if(!message && !character) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=RAj3vm_xQVvcApJ4BFosLkOQ8O6osGz5E-K5dn9l2xE&sessionId=2-P6XvYP3edCFw7HbzMVdvyhG_hKmBj4claKA5cOCeI&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=NxY9MJgZZa7VPrzmVhYlq-97ViJ92-uPJvEPAPhoUoI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
