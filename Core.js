@@ -3592,7 +3592,7 @@ break;
 	const shiroko = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=${fuxuan}&sessionId=&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(message)}`);
 	const sensei = shiroko.data.result.text
 	reply(sensei)
-	if (!text.includes('/')) {
+	if (!text.includes("/")) {
          {
         try {  
           const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=NxY9MJgZZa7VPrzmVhYlq-97ViJ92-uPJvEPAPhoUoI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
