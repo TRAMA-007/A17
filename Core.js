@@ -2217,7 +2217,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
                     title: "                      results",
-                    subtitle: "افتح الشغل يا اوباما",
+                    subtitle: "افتح الشغل ياا اوباما",
                     hasMediaAttachment: false
                   }),
                   nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
