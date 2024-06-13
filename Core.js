@@ -6340,7 +6340,7 @@ _Click the button below to download_`
 
 
       //
-      case 'pinterest': {
+     /* case 'pinterest': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
@@ -6349,7 +6349,7 @@ _Click the button below to download_`
     const typ = ['plana', 'arona', 'adamxion'];
     const apiKey = typ[Math.floor(Math.random() * typ.length)];
 
-    try {
+       try {
         const apiResponse = await axios.get(`https://skizo.tech/api/pinterest?apikey=${apiKey}&search=${encodeURIComponent(q)}`);
         const images = apiResponse.data.data;
 
@@ -6362,7 +6362,7 @@ _Click the button below to download_`
         }
     } 
 }
-break;
+break; */
 
 
 
