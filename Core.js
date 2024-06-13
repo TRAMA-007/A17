@@ -6345,18 +6345,21 @@ _Click the button below to download_`
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
+       
+	const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        
+        const api = await axios.get(`https://skizo.tech/api/pinterest?apikey=${api}&search=yinlin`);
+        const images = api.data.data;
 
-    const pin = await axios.get(`https://aemt.me/pinterest?query=${encodeURIComponent(q)}`);
-    const images = pin.data.result;
-    // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
-const imageCount = 10; // عدد الصور التي تريد إرسالها
+        // افترض أن البيانات تحتوي على أقل من 10 صور
+        const numberOfImages = Math.min(images.length, 10);
 
-for (let i = 0; i < imageCount; i++) {
-    const randomImageUrl = images[i % images.length]; // يُحدد اختيار صورة عشوائية من القائمة
-    let media = await getBuffer(randomImageUrl);
-    await A17.sendMessage(m.chat, { image: media }, { quoted: m });
+        for (let i = 0; i < numberOfImages; i++) {
+            const image = images[i].media.url; 
+	A17.sendMessage(m.chat, { image: { url: image } }, { quoted: m })
 }
-     } 
+	     }
 break; 
 
 
