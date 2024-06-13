@@ -6340,7 +6340,7 @@ _Click the button below to download_`
 
 
       //
-     /* case 'pinterest': {
+      case 'pinterest': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
@@ -6349,20 +6349,18 @@ _Click the button below to download_`
     const typ = ['plana', 'arona', 'adamxion'];
     const apiKey = typ[Math.floor(Math.random() * typ.length)];
 
-       try {
         const apiResponse = await axios.get(`https://skizo.tech/api/pinterest?apikey=${apiKey}&search=${encodeURIComponent(q)}`);
         const images = apiResponse.data.data;
+	const imageCount = 10;
 
-        // افترض أن البيانات تحتوي على أقل من 10 صور
-        const numberOfImages = Math.min(images.length, 10);
+        for (let j = 0; j < imageCount && j < images.length; j++) {
+            const randomImageUrl = images[j].media.url;
+            let media = await getBuffer(randomImageUrl);
 
-        for (let i = 0; i < numberOfImages; i++) {
-            const image = images[i].media.url;
-            A17.sendMessage(m.chat, { image: { url: image } }, { quoted: m });
-        }
+           A17.sendMessage(m.chat, { image: media }, { quoted: m });
     } 
 }
-break; */
+break;
 
 
 
