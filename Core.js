@@ -3566,7 +3566,7 @@ break;
       case 'aiussy': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-
+	if (text.includes('fang') || text.includes('yuan')) return reply(`فانغ يوان اليركبك يا عب`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
 	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب')){
          orgnye = m.sender
@@ -3578,9 +3578,6 @@ break;
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
 	   }
-	 if (text.includes('fang') || text.includes('yuan')) {
-	return reply(`فانغ يوان اليركبك يا عب`)
-	 }
 	const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
 
@@ -3596,7 +3593,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=NxY9MJgZZa7VPrzmVhYlq-97ViJ92-uPJvEPAPhoUoI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=V9kHFBrHs7_XkodYnEi2-MU3dHF9WPfNYrfHtLfQYp&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
