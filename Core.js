@@ -324,7 +324,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     // if (global.autoreadpmngc) {
-    //   if (command) {
+    //   if (commd) {
     //     await A17.sendPresenceUpdate("composing", m.chat);
     //     A17.sendReadReceipt(from, m.sender, [m.key.id]);
     //   }
