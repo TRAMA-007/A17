@@ -974,7 +974,7 @@ Typed *surrender* to surrender and admited defeat`
 
      if (smallinput.includes('ggh')) {
     let media = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
-// تحميل الصورة الأصلية
+// تيل الصورة الأصلية
 const originalImage = await sharp(media);
 
 // تقليل حجم الصورة بحجم 50٪
