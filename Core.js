@@ -6105,12 +6105,12 @@ _Click the button below to download_`
         let bname = bbuffer.data.result[0].title
         let burl = bbuffer.data.result[0].url;
 
-       let abuffer = await axios.get(`https://api.fgmods.xyz/api/downloader/soundcloud?apikey=kPXqzsDf&url=${burl}`) 
+       let abuffer = await axios.get(`https://api.botcahx.eu.org/api/dowloader/soundcloud?apikey=fUHSYlv7&url=${burl}`) 
 
        let bimg = bbuffer.data.result[0].thumb;;
 
         await A17.sendMessage(from, {
-          audio: { url: abuffer.data.result.dl_url},
+          audio: { url: abuffer.data.result.download},
           ptt: true,
           filename: 'error.mp3',
           mimetype: 'audio/mpeg',
@@ -6346,11 +6346,10 @@ _Click the button below to download_`
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
 
-    const pin = await axios.get(`https://api.lolhuman.xyz/api/pinterest2?apikey=Gata_Dios&query=${encodeURIComponent(q)}`);
-    reply(mess.waiting);
+    const pin = await axios.get(`https://aemt.me/pinterest?query=${encodeURIComponent(q)}`);
     const images = pin.data.result;
     // قم بنسخ هذا الجزء واستبداله مع الجزء السابق في الكود
-const imageCount = 5; // عدد الصور التي تريد إرسالها
+const imageCount = 10; // عدد الصور التي تريد إرسالها
 
 for (let i = 0; i < imageCount; i++) {
     const randomImageUrl = images[i % images.length]; // يُحدد اختيار صورة عشوائية من القائمة
@@ -6364,11 +6363,12 @@ break;
         case 'stickers': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
-    if (m.isGroup) return reply('تعال خاص يا عسل');
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}stickers frieren");
+    const typ = ['808693688ecc695293359089', '2e0da1f78d1721134b21816d', '902c3bc9d8c08b0dcf8f5373', '85faf717d0545d14074659ad'];
+    const api = typ[Math.floor(Math.random() * typ.length)];    
 
-    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=Gata_Dios&query=${encodeURIComponent(q)}`);
+    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=${api}&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const results = tawfik.data.result;
 
@@ -6401,7 +6401,7 @@ break;
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}stickers frieren");
-
+    
     const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDios&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const results = tawfik.data.result;
