@@ -6349,11 +6349,11 @@ _Click the button below to download_`
 	const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
-        const api = await axios.get(`https://skizo.tech/api/pinterest?apikey=${api}&search=yinlin`);
+        const api = await axios.get(`https://skizo.tech/api/pinterest?apikey=${api}&search=${encodeURIComponent(q)}`);
         const images = api.data.data;
 
         // افترض أن البيانات تحتوي على أقل من 10 صور
-        const numberOfImages = Math.min(images.length, 10);
+        const numberOfImages = 10
 
         for (let i = 0; i < numberOfImages; i++) {
             const image = images[i].media.url; 
