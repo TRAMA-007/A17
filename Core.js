@@ -6357,8 +6357,8 @@ _Click the button below to download_`
 
         for (let i = 0; i < numberOfImages; i++) {
             const image = images[i].media.url; 
-	A17.sendMessage(m.chat, { image: { url: image } }, { quoted: m })
-}
+	}
+       A17.sendMessage(m.chat, { image: { url: image } }, { quoted: m })
 	     }
 break; 
 
