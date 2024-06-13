@@ -1389,7 +1389,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 }
 
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
-    if (isTawfik) reply (`توفيق يا توفيق اختو ليك بي الابريق عيب الدنيا رمضان`);
+    if (isTawfik) reply (`توفيق يا توفيق اختو ليك بي الابريق كلام شنو`);
            }
 
 
