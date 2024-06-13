@@ -3565,10 +3565,9 @@ break;
         case 'cai':
       case 'aiussy': {
         if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-	if (text.includes('fang') || text.includes('yuan')) return reply(`فانغ يوان اليركبك يا عب`)
+        if (text.includes('fang') || text.includes('yuan')) return reply(`فانغ يوان اليركبك يا عب`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
-	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب')){
+	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed')){
          orgnye = m.sender
 	   reply(`you've been banned from using plana..reason : *عشان انت عب قليل ادب*`)
 	const isBane = banUser.includes(orgnye)
@@ -3593,7 +3592,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=V9kHFBrHs7_XkodYnEi2-MU3dHF9WPfNYrfHtLfQYp&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=5tWlQFFS9ecxcy25P63VNKAoufN8iSL0AhqIlmbH9_M&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
