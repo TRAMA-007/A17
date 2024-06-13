@@ -6344,23 +6344,26 @@ _Click the button below to download_`
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-    if (!text) return reply("Please provide a search term!\n\n*Example:* ${prefix}pinterest phild corn");
-       
-	const typ = ['plana', 'arona', 'adamxion'];
-        const api = typ[Math.floor(Math.random() * typ.length)];
-        
-        const api = await axios.get(`https://skizo.tech/api/pinterest?apikey=${api}&search=${encodeURIComponent(q)}`);
-        const images = api.data.data;
+    if (!text) return reply("Please provide a search term!nn*Example:* ${prefix}pinterest phild corn");
+
+    const typ = ['plana', 'arona', 'adamxion'];
+    const apiKey = typ[Math.floor(Math.random() * typ.length)];
+
+    try {
+        const apiResponse = await axios.get(`https://skizo.tech/api/pinterest?apikey=${apiKey}&search=${encodeURIComponent(q)}`);
+        const images = apiResponse.data.data;
 
         // افترض أن البيانات تحتوي على أقل من 10 صور
-        const numberOfImages = 10
+        const numberOfImages = Math.min(images.length, 10);
 
         for (let i = 0; i < numberOfImages; i++) {
-            const image = images[i].media.url; 
-	}
-       A17.sendMessage(m.chat, { image: { url: image } }, { quoted: m })
-	     }
-break; 
+            const image = images[i].media.url;
+            A17.sendMessage(m.chat, { image: { url: image } }, { quoted: m });
+        }
+    } 
+}
+break;
+
 
 
         case 'stickers': {
