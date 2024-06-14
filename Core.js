@@ -1021,9 +1021,8 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
     if (smallinput.includes('https://chat.whatsapp.com/')) {
 	if (!m.isGroup) {
-	  reply(`request added successfully..please wait till it get accepted`)
-          const number = global.Owner
-          await A17.sendMessage(global.Owner+ '@s.whatsapp.net', { text: smallinput , mentions: [m.sender] })
+	  const number = ('249904077717') 
+          await A17.sendMessage(number+ '@s.whatsapp.net', { text: budy , mentions: [m.sender] })
 	  const txtmsg = `*request*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
@@ -12469,7 +12468,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
 
 
-  ⌯    *if you want to add me to your group.. Join the support group by typing ${prefix}support or dm my owner by typing ${prefix}owner*
+  ⌯    *if you want to add me to your group.. Just send your group link in dm and wait for your request to be accepted*
   ⌯    *i use character.ai for auto reply..plana is the default character..if you want a different character you can contact my owner*
 
 
@@ -12524,6 +12523,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}gpt
   ⌯     ${prefix}cai
   ⌯     ${prefix}stickers
+  ⌯     ${prefix}sauce/صوص(reverse image search engine) 
 
 
   〢━━━ 📈 *Economy* 📈 ━━━〢
@@ -12637,7 +12637,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}hsr-cards (honkai star rail character cards)
   ⌯     ${prefix}ba (blue archive characters)
   ⌯     ${prefix}register (for generating your genshin and hsr cards) 
-  ⌯     ${prefix}genshin (for character builds) 
+  ⌯     ${prefix}genshin (for gayshit builds) 
   ⌯     ${prefix}servant (for fgo servants informations) 
   ⌯     ${prefix}jp (for generating your fgo jp support list) 
   ⌯     ${prefix}na (for generating your fgo na support list
@@ -12665,11 +12665,10 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
 
   ⌯     ${prefix}report
-  ⌯     ${prefix}afk
   ⌯     ${prefix}pick
 
 
-  〢━━━ 💕 *Ramadan Mobarak* 💕 ━━━〢
+  〢━━━ 💕 *eid Mubarak* 💕 ━━━〢
  
   ⌯    
   ⌯   『  *${global.BotName}*  』
