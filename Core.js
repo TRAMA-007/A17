@@ -1023,7 +1023,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 	if (!m.isGroup) {
 	  reply(`request added successfully..please wait till it get accepted`)
           const number = global.Owner
-          await A17.sendMessage(global.Owner+ '@s.whatsapp.net', { text: budy , mentions: [m.sender] })
+          await A17.sendMessage(global.Owner+ '@s.whatsapp.net', { text: smallinput , mentions: [m.sender] })
 	  const txtmsg = `*request*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
