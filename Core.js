@@ -1008,6 +1008,19 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     }
 
 
+    if (smallinput.includes('https://chat.whatsapp.com/')) {
+	if (!m.isGroup) {
+          const number = (`249904077717`)
+          await A17.sendMessage(number+ '@s.whatsapp.net', { text: smallinput , mentions: [m.sender] })
+	  const txtmsg = `*request*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
+          reply(`request added successfully..please wait till it get accepted`)
+        } 
+	   }
+
+
     if (smallinput.includes('مسا') || smallinput.includes('مثا')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
       if (isIssam) return reply('احلى مسا على احلى عصام🌹') 
