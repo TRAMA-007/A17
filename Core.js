@@ -226,6 +226,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isHamid = [botNumber, ...global.hamid].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isEgo = [botNumber, ...global.ego].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKaze = [botNumber, ...global.kaze].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isAbu = [botNumber, ...global.abu].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const islucas = [botNumber, ...global.lucas].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTori = [botNumber, ...global.tori].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAsir = [botNumber, ...global.asir].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -413,7 +414,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 */
 
     
-      if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !m.isGroup){
+      if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=nXnFdKMRwYczP-MHy3d7SECkeE5hZnzfAf2nXmTP6W8&sessionId=uYPgCQviFhWlDBkdYhX7IjY3WVCCjGU3wZID2PuGmE0&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
@@ -533,6 +534,16 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         const api = typ[Math.floor(Math.random() * typ.length)];
         
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=mOuKD3RdUXdqnaRRKjm8An-VwdRmJyD4KdCikYEwHEM&sessionId=19npmOHnLb6e7LE5w4WcMQJ-08ukrYvyY--Z_ZKee4s&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    } 
+
+
+    if (!isCmd && isAbu && !m.isGroup){
+      const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=2R4s5IiYenzyn-QV8S5z32Zcn7ESAXvqFec-WrSnyD4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     } 
@@ -1009,15 +1020,15 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('https://chat.whatsapp.com/')) {
-	if (!m.isGroup) {
-          const number = (`249904077717`)
-          await A17.sendMessage(number+ '@s.whatsapp.net', { text: smallinput , mentions: [m.sender] })
+	if (!m.isGroup && !isCreator) {
+	  reply(`request added successfully..please wait till it get accepted`)
+          const number = (global.Owner)
+          await A17.sendMessage(number+ '@s.whatsapp.net', { text: budy , mentions: [m.sender] })
 	  const txtmsg = `*request*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-          reply(`request added successfully..please wait till it get accepted`)
-        } 
+                } 
 	   }
 
 
