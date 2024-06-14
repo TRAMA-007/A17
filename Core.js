@@ -1597,7 +1597,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
 
    if (smallinput.includes('زولتي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
-   const typ = ['زولي السمين..الخبر', 'وين الناس', 'اخبار السكس شنو يا زولي'];
+   const typ = ['زولي السمين..الخبر', 'وين الناس', 'اخبار السكس شنو يا زوليي'];
    const random = typ[Math.floor(Math.random() * typ.length)];
     if (isAbd) reply (random);
   }
