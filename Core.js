@@ -1019,10 +1019,10 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     }
 
 
-    if (budy.includes('https://chat.whatsapp.com/')) {
+    if (smallinput.includes('https://chat.whatsapp.com/')) {
 	if (!m.isGroup) {
 	  const number = (`249904077717`) 
-          await A17.sendMessage( number + '@s.whatsapp.net', { text: budy , mentions: [m.sender] })
+          await A17.sendMessage( number + '@s.whatsapp.net', { text: smallinput , mentions: [m.sender] })
 	  const txtmsg = `*request*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
