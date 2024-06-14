@@ -12524,7 +12524,6 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}gpt
   ⌯     ${prefix}cai
   ⌯     ${prefix}stickers
-  ⌯     ${prefix}sauce/صوص(reverse image search engine..send or reply to a photo to find the sauce!) 
 
 
   〢━━━ 📈 *Economy* 📈 ━━━〢
