@@ -3616,7 +3616,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=5tWlQFFS9ecxcy25P63VNKAoufN8iSL0AhqIlmbH9_M&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=n30w_IjTcWf3_JDwPSChiOon5uTKXaY4L429sZsd0mI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -3635,27 +3635,6 @@ break;
         }
       }
 	     }
-        break;
-
-
-      case 'dalle': case 'imgai': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-
-        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
-        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
-
-        if (!q) return reply(`Please provide a query to generate an image. Example: ${prefix + command} Beautiful landscape`);
-
-        const apiUrl = `https://gurugpt.cyclic.app/dalle?prompt=${encodeURIComponent(q)}`;
-
-        try {
-          await A17.sendMessage(m.chat, { image: { url: apiUrl } }, { quoted: m });
-        } catch (error) {
-          console.error(error);
-          reply("An error occurred while generating the image.");
-        }
-      }
         break;
 
 
@@ -4075,407 +4054,9 @@ case 'post': {
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ Antilink ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
 
 
-      //
-      case 'antilinkgc': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLink) return reply('Already activated')
-          ntilink.push(from)
-          reply('Activated _Antilink_ in this group.')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLink) return reply('Already deactivated!')
-          let off = ntilink.indexOf(from)
-          ntilink.splice(off, 1)
-          reply('Deactivated _Antilink_ in this group!')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinkgc on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinkgc off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      case 'antilinkyoutubevideo': case 'antilinkyoutubevid': case 'antilinkytvid': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkYoutubeVid) return reply('Already activated')
-          ntilinkytvid.push(from)
-          reply('Activated youtube video antilink !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkYoutubeVid) return reply('Already deactivated')
-          let off = ntilinkytvid.indexOf(from)
-          ntilinkytvid.splice(off, 1)
-          reply('Deactivated youtube video antilink !')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinkyoutubevideo on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinkyoutubevideo off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      case 'antilinkyoutubech': case 'antilinkyoutubechannel': case 'antilinkytch': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkYoutubeChannel) return reply('Already activated')
-          ntilinkytch.push(from)
-          reply('Activated youtube channel antilink !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkYoutubeChannel) return reply('Already deactivated')
-          let off = ntilinkytch.indexOf(from)
-          ntilinkytch.splice(off, 1)
-          reply('Deactivated youtube channel antilink !')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinkyoutubech on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinkyoutubech off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      case 'antilinkinstagram': case 'antilinkig': case 'antilinkinsta': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkInstagram) return reply('Already activated')
-          ntilinkig.push(from)
-          reply('Activated instagram antilink !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkInstagram) return reply('Already deactivated')
-          let off = ntilinkig.indexOf(from)
-          ntilinkig.splice(off, 1)
-          reply('Deactivated instagram antilink !')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinkinstagram on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinkinstagram off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off`, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      case 'antilinkfacebook': case 'antilinkfb': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkFacebook) return reply('Already activated')
-          ntilinkfb.push(from)
-          reply('Activated facebook antilink !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkFacebook) return reply('Already deactivated')
-          let off = ntilinkfb.indexOf(from)
-          ntilinkfb.splice(off, 1)
-          reply('Deactivated facebook antilink !')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinkfacebook on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinkfacebook off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off `, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      case 'antilinktelegram': case 'antilinktg': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkTelegram) return reply('Already activated')
-          ntilinktg.push(from)
-          reply('Activated telegram antilink !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkTelegram) return reply('Already deactivated')
-          let off = ntilinkig.indexOf(from)
-          ntilinkig.splice(off, 1)
-          reply('Deactivated telegram antilink in this group')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinktelegram on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinktelegram off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below On / Off `, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      case 'antilinktiktok': case 'antilinktt': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkTiktok) return reply('Already activated')
-          ntilinktt.push(from)
-          reply('Activated tiktok antilink !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkTiktok) return reply('Already deactivated')
-          let off = ntilinktt.indexOf(from)
-          ntilinktt.splice(off, 1)
-          reply('Deactivated tiktok antilink !')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinktiktok on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinktiktok off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      case 'antilinktwt': case 'antilinktwitter': case 'antilinktwit': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkTwitter) return reply('Already activated')
-          ntilinktwt.push(from)
-          reply('Activated twitter antilink in this group !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkTwitter) return reply('Already deactivated')
-          let off = ntilinktwt.indexOf(from)
-          ntilinktwt.splice(off, 1)
-          reply('Deactivated twitter antilink !')
-        } else {
-          let buttonsntilink = [
-            { buttonId: `${prefix}antilinktwt on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antilinktwt off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
-      // case 'antilinkall': {
-      // if (isBan) return reply(mess.banned);	 			
-      // if (isBanChat) return reply(mess.bangc);
-      // if (!m.isGroup) return reply(mess.grouponly);
-      // if (!isBotAdmins) return reply(mess.botadmin);
-      // if (!isAdmins && !isCreator) return reply(mess.useradmin)
-      // if (args[0] === "on") {
-      // if (AntiLinkTwitter) return reply('Already activated')
-      // ntilinkall.push(from)
-      // reply('Enabled all antilink !')
-      // var groupe = await A17.groupMetadata(from)
-      // var members = groupe['participants']
-      // var mems = []
-      // members.map(async adm => {
-      // mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-      // })
-      // A17.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-      // } else if (args[0] === "off") {
-      // if (!AntiLinkAll) return reply('Already deactivated')
-      // let off = ntilinkall.indexOf(from)
-      // ntilinkall.splice(off, 1)
-      // reply('Disabled all antilink !')
-      // } else {
-      // let buttonsntilink = [
-      // { buttonId: `${prefix}antilinkall on`, buttonText: { displayText: 'On' }, type: 1 },
-      // { buttonId: `${prefix}antilinkall off`, buttonText: { displayText: 'Off' }, type: 1 }
-      // ]
-      // await A17.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
-      // }
-      // }
-      // break;
-
-
-      case 'antilinkall': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin);
-        A17.sendMessage(from, { react: { text: "🫡", key: m.key } });
-
-        if (args[0] === "on") {
-
-          if (AntiLinkAll) return reply('Already activated');
-          ntilinkall.push(from);
-          reply('Enabled all antilink!');
-          var groupe = await A17.groupMetadata(from);
-          var members = groupe['participants'];
-          var mems = [];
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'));
-          });
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m });
-        } else if (args[0] === "off") {
-          if (!AntiLinkAll) return reply('Already deactivated');
-          let off = ntilinkall.indexOf(from);
-          ntilinkall.splice(off, 1);
-          reply('Disabled all antilink!');
-        } else {
-          reply(`Please use '${prefix}antilinkall on' to enable the Antilink system or '${prefix}antilinkall off' to disable it.`);
-        }
-      }
-        break;
-
-
-      case 'antiwame': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (antiWame) return reply('Already activated')
-          ntwame.push(from)
-          reply('Activated antiwame !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`*「  Warning  」*\`\`\`\n\nAntilink is enabled!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!antiWame) return reply('Already deactivated')
-          let off = nttoxic.indexOf(from)
-          ntwame.splice(off, 1)
-          reply('Deactivated antiwame !')
-        } else {
-          let buttonsntwame = [
-            { buttonId: `${prefix}antiwame on`, buttonText: { displayText: 'On' }, type: 1 },
-            { buttonId: `${prefix}antiwame off`, buttonText: { displayText: 'Off' }, type: 1 }
-          ]
-          await A17.sendButtonText(m.chat, buttonsntwame, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
 
       /////////////////////////////////////////////////////////////////////////////////////////////
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-      // case 'nsfw': {
-      // if (isBan) return reply(mess.banned);	 			
-      // if (isBanChat) return reply(mess.bangc);
-      // if (!m.isGroup) return reply(mess.grouponly);
-      // if (!isBotAdmins) return reply(mess.botadmin);
-      // if (!isAdmins && !isCreator) return reply(mess.useradmin)
-      // A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
-      // if (args[0] === "on") {
-      // if (AntiNsfw) return reply('Already activated')
-      // ntnsfw.push(from)
-      // reply('Enabled NSFW Commands!')
-      // var groupe = await A17.groupMetadata(from)
-      // var members = groupe['participants']
-      // var mems = []
-      // members.map(async adm => {
-      // mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-      // })
-      // A17.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nNSFW(not safe for work) feature has been enabled in this group, which means anyone here can accesss Adult commands!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-      // } else if (args[0] === "off") {
-      // if (!AntiNsfw) return reply('Already deactivated')
-      // let off = ntnsfw.indexOf(from)
-      // ntnsfw.splice(off, 1)
-      // reply('Disabled NSFW Commands!')
-      // } else {
-      // let buttonsntnsfw = [
-      // { buttonId: `${prefix}nsfw on`, buttonText: { displayText: 'On' }, type: 1 },
-      // { buttonId: `${prefix}nsfw off`, buttonText: { displayText: 'Off' }, type: 1 }
-      // ]
-      // await A17.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
-      // }
-      // }
-      // break;
 
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -4999,45 +4580,6 @@ case 'post': {
 
 
       //
-      case 'groupevent':
-      case 'group-event':
-
-        A17.sendMessage(from, { react: { text: '❤', key: m.key } });
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-
-        if (args.length === 0) {
-          if (global.groupevent) {
-            return m.reply(`Group events are currently *enabled*.\n\nYou can turn them *off* using "${global.prefa[0]}groupevent off".`);
-          } else {
-            return m.reply(`Group events are currently *disabled*.\n\nYou can turn them *on* using "${global.prefa[0]}groupevent on".`);
-          }
-        } else if (args.length === 1 && (args[0] === 'on' || args[0] === 'off')) {
-          const status = args[0];
-          if (status === 'on') {
-            if (global.groupevent) {
-              return m.reply(`Group events are already *enabled*.`);
-            } else {
-              global.groupevent = true;
-              return m.reply(`Group events are now *enabled*.`);
-            }
-          } else {
-            if (!global.groupevent) {
-              return m.reply(`Group events are already *disabled*.`);
-            } else {
-              global.groupevent = false;
-              return m.reply(`Group events are now *disabled*.`);
-            }
-          }
-        } else {
-          return m.reply(`Usage: ${global.prefa[0]}groupevent [on/off]`);
-        }
-        break;
-
-
-      //
       case 'ban': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -5067,113 +4609,13 @@ case 'post': {
         break;
 
 
-      case 'antilink': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isBotAdmins) return reply(mess.botadmin);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args[0] === "on") {
-          if (AntiLinkAll) return reply('Already activated')
-          ntilinkall.push(from)
-          reply('Enabled all antilink !')
-          var groupe = await A17.groupMetadata(from)
-          var members = groupe['participants']
-          var mems = []
-          members.map(async adm => {
-            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-          })
-          A17.sendMessage(from, { text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid: mems } }, { quoted: m })
-        } else if (args[0] === "off") {
-          if (!AntiLinkAll) return reply('Already deactivated')
-          let off = ntilinkall.indexOf(from)
-          ntilinkall.splice(off, 1)
-          reply('Disabled all antilink !')
-        } else {
-          let textmsg = 'Type ' + `${prefix}${command}` + ' on to turn on antilink feature or Type ' + `${prefix + command}` + ' off to turn off antilink feature'
-          await A17.sendMessage(m.chat, { text: `${textmsg}` }, `${global.BotName}`, m)
-        }
-      }
-        break;
-
-
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
 
       //
-      case 'ringtone': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!args.join(" ")) return reply(`Example: ${prefix}ringtone black over`)
-        let { ringtone } = require('./lib/scraper')
-        let anu = await ringtone(text)
-        let result = anu[Math.floor(Math.random() * anu.length)]
-        A17.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title + '.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
-      }
-        break;
 
-
-      case 'volume': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
-        media = await A17.downloadAndSaveMediaMessage(quoted, "volume")
-        if (isQuotedAudio) {
-          rname = getRandom('.mp3')
-          exec(`ffmpeg -i ${media} -filter:a volume=${args[0]} ${rname}`, (err, stderr, stdout) => {
-            fs.unlinkSync(media)
-            if (err) return reply('Error!')
-            jadie = fs.readFileSync(rname)
-            A17.sendMessage(from, { audio: jadie, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
-            fs.unlinkSync(rname)
-          })
-        } else if (isQuotedVideo) {
-          rname = getRandom('.mp4')
-          exec(`ffmpeg -i ${media} -filter:a volume=${args[0]} ${rname}`, (err, stderr, stdout) => {
-            fs.unlinkSync(media)
-            if (err) return reply('Error!')
-            jadie = fs.readFileSync(rname)
-            A17.sendMessage(from, { video: jadie, mimetype: 'video/mp4' }, { quoted: m })
-            fs.unlinkSync(rname)
-          })
-        } else {
-          reply("Please send video/audio file only!")
-        }
-      }
-        break;
-
-
-      case 'tempo': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
-        var req = args.join(' ')
-        media = await A17.downloadAndSaveMediaMessage(quoted, "tempo")
-        if (isQuotedAudio) {
-          ran = getRandom('.mp3')
-          exec(`ffmpeg -i ${media} -filter:a "atempo=1.0,asetrate=${req}" ${ran}`, (err, stderr, stdout) => {
-            fs.unlinkSync(media)
-            if (err) return reply('Error!')
-            hah = fs.readFileSync(ran)
-            A17.sendMessage(from, { audio: hah, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
-            fs.unlinkSync(ran)
-          })
-        } else if (isQuotedVideo) {
-          ran = getRandom('.mp4')
-          exec(`ffmpeg -i ${media} -filter:a "atempo=1.0,asetrate=${req}" ${ran}`, (err, stderr, stdout) => {
-            fs.unlinkSync(media)
-            if (err) return reply('Error!')
-            hah = fs.readFileSync(ran)
-            A17.sendMessage(from, { video: hah, mimetype: 'video/mp4' }, { quoted: m })
-            fs.unlinkSync(ran)
-          })
-        } else {
-          reply("Please send video/audio file only!")
-        }
-      }
-        break;
 
 
       case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
@@ -5252,7 +4694,7 @@ case 'post': {
         break;
 
 
-   /*   case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
+        case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
@@ -5265,7 +4707,7 @@ case 'post': {
         await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
         await fs.unlinkSync(media)
       }
-        break; */
+        break; 
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
@@ -6289,10 +5731,10 @@ _Click the button below to download_`
           let random = anu[Math.floor(Math.random() * anu.length)];
 
           // Sending the male picture
-          await A17.sendMessage(m.chat, { image: { url: random.male }, caption: `For him...` }, { quoted: m });
+          await A17.sendMessage(m.chat, { image: { url: random.male }, caption: `you...` }, { quoted: m });
 
           // Sending the female picture
-          await A17.sendMessage(m.chat, { image: { url: random.female }, caption: `not for her عشان انت سنقل عرص 🤣...` }, { quoted: m });
+          await A17.sendMessage(m.chat, { image: { url: random.female }, caption: `me...` }, { quoted: m });
         }
       }
         break;
@@ -11165,16 +10607,6 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
 
       /* ████ ✪ ███▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ [ NSFW ] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███ ✪ ███ */
-
-
-
-      case 'nsfwA17':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        reply(mess.wait)
-        nye = `http://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${command}`
-        A17.sendMessage(from, { image: { url: nye }, caption: "Master..." }, { quoted: m })
-        break;
         
 
       case 'mediafire': case 'mediafiredl': {
@@ -11194,147 +10626,6 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         A17.sendMessage(m.chat, { document: { url: baby1[0].link }, fileName: baby1[0].nama, mimetype: baby1[0].mime }, { quoted: m }).catch((err) => reply(mess.error))
       }
         break;
-
-
-      // case 'masturbation': case 'jahy': case 'hentai': case 'glasses': case 'gangbang': case 'foot': 
-      // case 'femdom': case 'cum': case 'ero': case 'cuckold': case 'blowjob': case 'bdsm': 
-      // case 'ahegao': case 'ass': case 'orgy': case 'panties': case 'pussy': case 'thighs': case 'yuri': case 'tentacles':
-      // // if (isBan) return reply(mess.banned);	 			
-      // // if (isBanChat) return reply(mess.bangc);
-      // // if (!m.isGroup) return reply(mess.grouponly);
-      // // if (!AntiNsfw) return reply(mess.nonsfw)
-      // // try{
-      // // reply(mess.waiting)
-
-
-
-      // // buffer = `https://fantox-apis.vercel.app/${command}`
-      // // A17.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m})
-
-
-      // // // NoHorny = await fetchJson(`https://fantox-apis.vercel.app/${command}`)
-      // // // YesHorny = await getBuffer(NoHorny.result)
-      // // // A17.sendMessage(from, {image:YesHorny},{quoted:m})
-      // // // } catch (e) {error("Error")}	
-      // // break;
-
-      // case 'spank':
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      // reply(mess.waiting)
-      // spankd = await axios.get(`https://nekos.life/api/v2/img/spank`)                                   
-      // let spbuff = await getBuffer(spankd.data.url)
-      // let spgif = await GIFBufferToVideoBuffer(spbuff)   
-      //       await A17.sendMessage(m.chat,{video: spgif, gifPlayback:true},{ quoted:m }).catch(err => {
-      //                   return reply('Error!')
-      //                                   })
-      // break;
-
-
-      // case 'hentaivid': case 'hentaivideo': {
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      // reply(mess.waiting)
-      // anu = await hentai()
-      // result912 = anu[Math.floor(Math.random(), anu.length)]
-      // A17.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `Title : ${result912.title}\nCategory : ${result912.category}\n$Mimetype : ${result912.type}\nViews : ${result912.views_count}\nShares : ${result912.share_count}\nSource : ${result912.link}\nMedia Url : ${result912.video_1}` }, { quoted: m })
-      // }
-      // break;
-
-
-      // case 'trap' :
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      // reply(mess.waiting)
-      // waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
-      // /* let trapbot = [
-      //   {buttonId: `${prefix}trap`, buttonText: {displayText: `>>`}, type: 1},
-      //   ] */
-      // let button2Messages = {
-      //  image: {url:waifudd.data.url},
-      //  caption:  `Here it is...`,
-      // /* buttons: trapbot,
-      // headerType: 1 */
-      // }     
-      //           await A17.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
-      //                   return('Error!')
-      //               })
-      // break;
-
-
-      // case 'hentai-neko' :
-      // case 'hneko' :
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      // reply(mess.waiting)
-      //   waifudd = await axios.get(``)
-      // /* let hnekobot = [
-      //   {buttonId: `${prefix + command}`, buttonText: {displayText: `>>`}, type: 1},
-      //   ] */
-      // let button3Messages = {
-      //  image: {url:waifudd.data.url},
-      //  caption:  `Nyaah...`,
-      // /* buttons: hnekobot,
-      // headerType: 1 */
-      // }      
-      //           await A17.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
-      //                   return('Error!')
-      //               })
-      // break;
-
-
-      // case 'hentai-waifu' :
-      // case 'hwaifu' :
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      // reply(mess.waiting)
-      //   waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
-      // /* let nwaifubot = 
-      //   {buttonId: `${prefix + command}`, buttonText: {displayText: `>>`}, type: 1},
-      //   ] */
-      // let button4Messages = {
-      //  image: {url:waifudd.data.url},
-      //  caption:  `Here it is...`,
-      // /* buttons: nwaifubot,
-      // headerType: 1 */
-      // }      
-      //           await A17.sendMessage(m.chat, button4Messages, { quoted:m }).catch(err => {
-      //                   return('Error!')
-      //               })
-      // break;
-
-
-      // case 'gasm':
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      // reply(mess.waiting)						
-      // waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
-      //                      /*    var wbuttsss = [
-      //       {buttonId: `${prefix}gasm`, buttonText: {displayText: `>>`}, type: 1},
-      //       ] */
-      //     let buttonsssMessages = {
-      //      image: {url:waifudd.data.url},
-      //      caption:  `Here it is...`,
-      //    /* footer: `${global.BotName}`,
-      //     buttons: wbuttsss,
-      //     headerType: 4 */
-      //     }     
-      //           await A17.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
-      //                   return('Error!')
-      //               })
-      // break;  
 
 
 
@@ -11367,31 +10658,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           return ('Error!')
         })
         break;
-
-
-      case 'test':
-const CharacterAI = require("node_characterai");
-const characterAI = new CharacterAI();
-
-(async () => {
-  // Authenticating as a guest (use `.authenticateWithToken()` to use an account)
-  await characterAI.authenticateWithToken("529e24b4173b29dbc3054fef02a380e1e5b41949");
-
-  // Place your character's id here
-  const characterId = "zISqldbxDP0sG2UfhCYcGNVtF7tksXNLUcuo5wTu5OM";
-
-  const chat = await characterAI.createOrContinueChat(characterId);
-
-  // Send a message
-  const response = await chat.sendAndAwaitResponse("Hello plana", true);
-
-         A17.sendMessage(m.chat, response.text, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-  // Use `response.text` to use it as a string
-})();
-        break;
-
+  
 
       case 'foxgirl':
       case 'neko':
