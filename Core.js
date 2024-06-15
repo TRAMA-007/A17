@@ -948,6 +948,14 @@ Typed *surrender* to surrender and admited defeat`
    }
 
 
+   if (smallinput.includes('lop')) {
+   const { toSticker, StickerTypes } require('wa-leal-stickers');
+   const buffer = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
+   const stickerBuffer = await toSticker(buffer, { pack: 'Pack_name', author: 'Your_name' }) 
+    A17.sendMessage(from, { sticker : stickerBuffer }, { quoted: m });
+       }
+
+
 	
 
      
