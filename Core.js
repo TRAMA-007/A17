@@ -11732,7 +11732,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
         const helpmenu = `Hemlo *${pushname}* sensei...!! ${nowtime} ,
   
-Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+Hello, I am "plana" your lovely and cute virtual assistance.
 
 
 
@@ -11747,50 +11747,48 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   〢━━━ 〄 Bot Info 〄 ━━━〢
 
 
-  ⌯    *Bot usr name :* ${pushname} 
+  ⌯    *Bot user name :* ${pushname} 
   ⌯    *My prefix is :*  ${prefix}
   ⌯    *Owner name :* ${global.OwnerName} 
   ⌯    *Bot runtime :* ${runtime(process.uptime())} 
   ⌯    *Platform :* your mom
 
  
-  〢━━ ❅ Group Moderation ❅ ━━〢
+  〢━━ ❅ 𝐆𝐫𝐨𝐮𝐩 𝐌𝐨𝐝𝐞𝐫𝐚𝐭𝐢𝐨𝐧  ❅ ━━〢
 
-  ⌯     ${prefix}add
-  ⌯     ${prefix}invite
-  ⌯     ${prefix}remove
-  ⌯     ${prefix}promote
-  ⌯     ${prefix}demote
-  ⌯     ${prefix}grouplink
-  ⌯     ${prefix}group-event
-  ⌯     ${prefix}groupsetting
-  ⌯     ${prefix}setname
-  ⌯     ${prefix}setgcpp
-  ⌯     ${prefix}setdesc
-  ⌯     ${prefix}revoke
-  ⌯     ${prefix}tagall
-  ⌯     ${prefix}hidetag 
+  ⌯     ${prefix}𝐚𝐝𝐝
+  ⌯     ${prefix}𝐢𝐧𝐯𝐢𝐭𝐞
+  ⌯     ${prefix}𝐫𝐞𝐦𝐨𝐯𝐞
+  ⌯     ${prefix}𝐩𝐫𝐨𝐦𝐨𝐭𝐞
+  ⌯     ${prefix}𝐝𝐞𝐦𝐨𝐭𝐞
+  ⌯     ${prefix}𝐠𝐫𝐨𝐮𝐩𝐥𝐢𝐧𝐤
+  ⌯     ${prefix}𝐬𝐞𝐭𝐧𝐚𝐦𝐞
+  ⌯     ${prefix}𝐬𝐞𝐭𝐠𝐜𝐩𝐩
+  ⌯     ${prefix}𝐬𝐞𝐭𝐝𝐞𝐬𝐜
+  ⌯     ${prefix}𝐫𝐞𝐯𝐨𝐤𝐞
+  ⌯     ${prefix}𝐭𝐚𝐠𝐚𝐥𝐥
+  ⌯     ${prefix}𝐡𝐢𝐝𝐞𝐭𝐚𝐠 
   
 
-  〢━━━ 🔍 *Search* 🔎 ━━━〢
+  〢━━━ 🔍 𝐒𝐞𝐚𝐫𝐜𝐡 🔎 ━━━〢
   
  
-  ⌯     ${prefix}play
-  ⌯     ${prefix}song
-  ⌯     ${prefix}video 
-  ⌯     ${prefix}yts
-  ⌯     ${prefix}lyrics
-  ⌯     ${prefix}movie
-  ⌯     ${prefix}google
-  ⌯     ${prefix}gimage
-  ⌯     ${prefix}pinterest
-  ⌯     ${prefix}wallpaper
-  ⌯     ${prefix}image
-  ⌯     ${prefix}searchgc
-  ⌯     ${prefix}wikimedia
-  ⌯     ${prefix}gpt
-  ⌯     ${prefix}cai
-  ⌯     ${prefix}stickers
+  ⌯     ${prefix}𝐩𝐥𝐚𝐲
+  ⌯     ${prefix}𝐬𝐨𝐧𝐠
+  ⌯     ${prefix}𝐯𝐢𝐝𝐞𝐨 
+  ⌯     ${prefix}𝐲𝐭𝐬
+  ⌯     ${prefix}𝐥𝐲𝐫𝐢𝐜𝐬
+  ⌯     ${prefix}𝐦𝐨𝐯𝐢𝐞
+  ⌯     ${prefix}𝐠𝐨𝐨𝐠𝐥𝐞
+  ⌯     ${prefix}𝐠𝐢𝐦𝐚𝐠𝐞
+  ⌯     ${prefix}𝐩𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐭
+  ⌯     ${prefix}𝐰𝐚𝐥𝐥𝐩𝐚𝐩𝐞𝐫
+  ⌯     ${prefix}𝐢𝐦𝐚𝐠𝐞
+  ⌯     ${prefix}𝐬𝐞𝐚𝐫𝐜𝐡𝐠𝐜
+  ⌯     ${prefix}𝐰𝐢𝐤𝐢𝐦𝐞𝐝𝐢𝐚
+  ⌯     ${prefix}𝐠𝐩𝐭
+  ⌯     ${prefix}𝐜𝐚𝐢
+  ⌯     ${prefix}𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐬
 
 
   〢━━━ 📈 *Economy* 📈 ━━━〢
@@ -11805,6 +11803,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}rob / attack
   ⌯     ${prefix}transfer / give
   ⌯     ${prefix}wealth / ritual
+  ⌯     ${prefix}spin / slot
+  ⌯     ${prefix}gamble / lottery
 
 
   〢━━━ 🎮 *Games* 🎮 ━━━〢
@@ -11813,8 +11813,8 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
   ⌯     ${prefix}ttt / tictactoe
   ⌯     ${prefix}truth
   ⌯     ${prefix}dare
-  ⌯     ${prefix}spin / slot
-  ⌯     ${prefix}gamble / lottery
+  ⌯     ${prefix}rps / rock paper scissors
+  ⌯     ${prefix}coin
  
 
   〢━━━ 🛠️ *Convert* 🛠️ ━━━〢
