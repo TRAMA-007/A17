@@ -11732,8 +11732,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "✨", key: m.key } })
         const helpmenu = `Hemlo *${pushname}* sensei...!! ${nowtime} ,
   
-Hello, I am "plana" your lovely and cute virtual assistance.
-
+     I am "plana" your lovely and cute virtual assistance.
 
 
   ⌯    *if you want to add me to your group..just send your group link in dm and wait for your request to be accepted*
@@ -11768,6 +11767,7 @@ Hello, I am "plana" your lovely and cute virtual assistance.
   ⌯     ${prefix}𝐫𝐞𝐯𝐨𝐤𝐞
   ⌯     ${prefix}𝐭𝐚𝐠𝐚𝐥𝐥
   ⌯     ${prefix}𝐡𝐢𝐝𝐞𝐭𝐚𝐠 
+  ⌯     ${prefix}𝐫𝐞𝐩𝐨𝐫𝐭
   
 
   〢━━━ 🔍 𝐒𝐞𝐚𝐫𝐜𝐡 🔎 ━━━〢
@@ -11789,154 +11789,98 @@ Hello, I am "plana" your lovely and cute virtual assistance.
   ⌯     ${prefix}𝐠𝐩𝐭
   ⌯     ${prefix}𝐜𝐚𝐢
   ⌯     ${prefix}𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐬
+  ⌯     ${prefix}𝐚𝐧𝐢𝐦𝐞
+  ⌯     ${prefix}𝐦𝐚𝐧𝐠𝐚
+  ⌯     ${prefix}𝐰𝐢𝐤𝐢
+  ⌯     ${prefix}𝐰𝐞𝐚𝐭𝐡𝐞𝐫
 
 
-  〢━━━ 📈 *Economy* 📈 ━━━〢
+  〢━━━ 📈 𝗘𝗰𝗼𝗻𝗼𝗺𝘆 📈 ━━━〢
 
 
-  ⌯     ${prefix}daily 
-  ⌯     ${prefix}wallet
-  ⌯     ${prefix}bank
-  ⌯     ${prefix}bankupgrade
-  ⌯     ${prefix}deposit
-  ⌯     ${prefix}withdraw 
-  ⌯     ${prefix}rob / attack
-  ⌯     ${prefix}transfer / give
-  ⌯     ${prefix}wealth / ritual
-  ⌯     ${prefix}spin / slot
-  ⌯     ${prefix}gamble / lottery
+  ⌯     ${prefix}𝐝𝐚𝐢𝐥𝐲
+  ⌯     ${prefix}𝐰𝐚𝐥𝐥𝐞𝐭
+  ⌯     ${prefix}𝐛𝐚𝐧𝐤
+  ⌯     ${prefix}𝐛𝐚𝐧𝐤𝐮𝐩𝐠𝐫𝐚𝐝𝐞 
+  ⌯     ${prefix}𝐝𝐞𝐩𝐨𝐬𝐢𝐭 
+  ⌯     ${prefix}𝐰𝐢𝐭𝐡𝐝𝐫𝐚𝐰
+  ⌯     ${prefix}𝐫𝐨𝐛 / 𝐚𝐭𝐭𝐚𝐜𝐤
+  ⌯     ${prefix}𝐭𝐫𝐚𝐧𝐬𝐟𝐞𝐫 / 𝐠𝐢𝐯𝐞 
+  ⌯     ${prefix}𝐰𝐞𝐚𝐥𝐭𝐡 / 𝐫𝐢𝐭𝐮𝐚𝐥 
+  ⌯     ${prefix}𝐬𝐩𝐢𝐧 / 𝐬𝐥𝐨𝐭 
+  ⌯     ${prefix}𝐠𝐚𝐦𝐛𝐥𝐞 / 𝐥𝐨𝐭𝐭𝐞𝐫𝐲
 
 
-  〢━━━ 🎮 *Games* 🎮 ━━━〢
+  〢━━━ 🎮 *𝗚𝗮𝗺𝗲𝘀* 🎮 ━━━〢
 
 
-  ⌯     ${prefix}ttt / tictactoe
-  ⌯     ${prefix}truth
-  ⌯     ${prefix}dare
-  ⌯     ${prefix}rps / rock paper scissors
-  ⌯     ${prefix}coin
+  ⌯     ${prefix}𝐭𝐭𝐭 / 𝐭𝐢𝐜𝐭𝐚𝐜𝐭𝐨𝐞 
+  ⌯     ${prefix}𝐭𝐫𝐮𝐭𝐡
+  ⌯     ${prefix}𝐝𝐚𝐫𝐞
+  ⌯     ${prefix}𝐫𝐩𝐬 / 𝐫𝐨𝐜𝐤 𝐩𝐚𝐩𝐞𝐫 𝐬𝐜𝐢𝐬𝐬𝐨𝐫𝐬 
+  ⌯     ${prefix}𝐜𝐨𝐢𝐧
  
 
-  〢━━━ 🛠️ *Convert* 🛠️ ━━━〢
+  〢━━━ 🛠️ *𝗧𝗼𝗼𝗹𝘀* 🛠️ ━━━〢
  
 
-  ⌯     ${prefix}sticker
-  ⌯     ${prefix}imagine
-  ⌯     ${prefix}toanime
-  ⌯     ${prefix}toimg
-  ⌯     ${prefix}tovideo
-  ⌯     ${prefix}togif
-  ⌯     ${prefix}tourl
-  ⌯     ${prefix}tomp3
-  ⌯     ${prefix}toaudio
-  ⌯     ${prefix}steal
-  ⌯     ${prefix}emojimix
-  ⌯     ${prefix}enhance / upscale 
-  ⌯     ${prefix}removebackground / removebg
+  ⌯     ${prefix}𝐬𝐭𝐢𝐜𝐤𝐞𝐫
+  ⌯     ${prefix}𝐢𝐦𝐚𝐠𝐢𝐧𝐞
+  ⌯     ${prefix}𝐭𝐨𝐚𝐧𝐢𝐦𝐞
+  ⌯     ${prefix}𝐭𝐨𝐢𝐦𝐠
+  ⌯     ${prefix}𝐭𝐨𝐯𝐢𝐝𝐞𝐨 
+  ⌯     ${prefix}𝐭𝐨𝐠𝐢𝐟
+  ⌯     ${prefix}𝐭𝐨𝐮𝐫𝐥
+  ⌯     ${prefix}𝐭𝐨𝐦𝐩𝟑 
+  ⌯     ${prefix}𝐭𝐨𝐚𝐮𝐝𝐢𝐨 
+  ⌯     ${prefix}𝐬𝐭𝐞𝐚𝐥 
+  ⌯     ${prefix}𝐞𝐦𝐨𝐣𝐢𝐦𝐢𝐱
+  ⌯     ${prefix}𝐞𝐧𝐡𝐚𝐧𝐜𝐞 / 𝐮𝐩𝐬𝐜𝐚𝐥𝐞
+  ⌯     ${prefix}𝐫𝐞𝐦𝐨𝐯𝐞𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 / 𝐫𝐞𝐦𝐨𝐯𝐞𝐛𝐠
+  ⌯     ${prefix}𝐭𝐫𝐚𝐧𝐬𝐥𝐚𝐭𝐞
 
 
-  〢━━━ 📍 *Reactions* 📍 ━━━〢
+  〢━━ 🌌 *𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿* 🌌 ━━〢
  
 
-  ⌯     ${prefix}cuddle
-  ⌯     ${prefix}hug
-  ⌯     ${prefix}bonk
-  ⌯     ${prefix}cry
-  ⌯     ${prefix}bully
-  ⌯     ${prefix}slap
-  ⌯     ${prefix}kill
-  ⌯     ${prefix}pat
-  ⌯     ${prefix}smug
-  ⌯     ${prefix}nom
-  ⌯     ${prefix}bite
-  ⌯     ${prefix}yeet
-  ⌯     ${prefix}blush
-  ⌯     ${prefix}smile
-  ⌯     ${prefix}wave
-  ⌯     ${prefix}highfive
-  ⌯     ${prefix}handhold
-  ⌯     ${prefix}poke
-  ⌯     ${prefix}wink
-  ⌯     ${prefix}dance
-  ⌯     ${prefix}cringe
-
-
-  〢━━ 🌌 *Downloader* 🌌 ━━〢
- 
-
-  ⌯     ${prefix}yt/youtube
-  ⌯     ${prefix}drive (up to 1 GB)
-  ⌯     ${prefix}instagram / ig
-  ⌯     ${prefix}facebook / fb
-  ⌯     ${prefix}twitter
-  ⌯     ${prefix}tiktok
-  ⌯     ${prefix}ig/Instagram
-  ⌯     ${prefix}soundcloud
-  ⌯     ${prefix}Spotify
-  ⌯     ${prefix}apk
+  ⌯     ${prefix}𝐲𝐭/𝐲𝐨𝐮𝐭𝐮𝐛𝐞 
+  ⌯     ${prefix}𝐝𝐫𝐢𝐯𝐞 (𝐮𝐩 𝐭𝐨 𝟏 𝐆𝐁)
+  ⌯     ${prefix}𝐢𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 / 𝐢𝐠
+  ⌯     ${prefix}𝐟𝐚𝐜𝐞𝐛𝐨𝐨𝐤 / 𝐟𝐛
+  ⌯     ${prefix}𝐭𝐰𝐢𝐭𝐭𝐞𝐫
+  ⌯     ${prefix}𝐭𝐢𝐤𝐭𝐨𝐤 
+  ⌯     ${prefix}𝐢𝐠/𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 
+  ⌯     ${prefix}𝐬𝐨𝐮𝐧𝐝𝐜𝐥𝐨𝐮𝐝
+  ⌯     ${prefix}𝐒𝐩𝐨𝐭𝐢𝐟𝐲
+  ⌯     ${prefix}𝐚𝐩𝐤
 
  
-  〢━━━ 🎐 *Fun* 🎐 ━━━〢
+  〢━━━ 🎐 *𝐅𝐮𝐧* 🎐 ━━━〢
   
 
-  ⌯     ${prefix}reaction
-  ⌯     ${prefix}cutecheck
-  ⌯     ${prefix}couple
-  ⌯     ${prefix}soulmate
-  ⌯     ${prefix}handsomecheck
-  ⌯     ${prefix}uglycheck
-  ⌯     ${prefix}charactercheck
+  ⌯     ${prefix}𝐜𝐮𝐭𝐞𝐜𝐡𝐞𝐜𝐤
+  ⌯     ${prefix}𝐜𝐨𝐮𝐩𝐥𝐞
+  ⌯     ${prefix}𝐬𝐨𝐮𝐥𝐦𝐚𝐭𝐞 
+  ⌯     ${prefix}𝐡𝐚𝐧𝐝𝐬𝐨𝐦𝐞𝐜𝐡𝐞𝐜𝐤
+  ⌯     ${prefix}𝐮𝐠𝐥𝐲𝐜𝐡𝐞𝐜𝐤 
+  ⌯     ${prefix}𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐜𝐡𝐞𝐜𝐤
+  ⌯     ${prefix}𝐝𝐢𝐤𝐬𝐢𝐳𝐞
+  ⌯     ${prefix}𝐩𝐢𝐜𝐤 
+  ⌯     ${prefix}𝐬𝐚𝐲
+
+  〢━━━ 🚮 *𝗴𝗮𝗰𝗵𝗮* 🚮━━━〢
 
 
-  〢━━━ 🈴 *Weeb* 🈴 ━━━〢
+  ⌯     ${prefix}𝐡𝐬𝐫 (𝐡𝐨𝐧𝐤𝐚𝐢 𝐬𝐭𝐚𝐫 𝐫𝐚𝐢𝐥 𝐛𝐮𝐥𝐢𝐝𝐬)
+  ⌯     ${prefix}𝐡𝐬𝐫-𝐜𝐚𝐫𝐝𝐬 (𝐡𝐨𝐧𝐤𝐚𝐢 𝐬𝐭𝐚𝐫 𝐫𝐚𝐢𝐥 𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫 𝐜𝐚𝐫𝐝𝐬)
+  ⌯     ${prefix}𝐛𝐚 (𝐛𝐥𝐮𝐞 𝐚𝐫𝐜𝐡𝐢𝐯𝐞 𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐬) 
+  ⌯     ${prefix}𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫 (𝐟𝐨𝐫 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐠𝐞𝐧𝐬𝐡𝐢𝐧 𝐚𝐧𝐝 𝐡𝐬𝐫 𝐜𝐚𝐫𝐝𝐬)
+  ⌯     ${prefix}𝐠𝐞𝐧𝐬𝐡𝐢𝐧 (𝐟𝐨𝐫 𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫 𝐛𝐮𝐢𝐥𝐝𝐬) 
+  ⌯     ${prefix}𝐬𝐞𝐫𝐯𝐚𝐧𝐭 (𝐟𝐨𝐫 𝐟𝐠𝐨 𝐬𝐞𝐫𝐯𝐚𝐧𝐭𝐬 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧𝐬) 
+  ⌯     ${prefix}𝐣𝐩 (𝐟𝐨𝐫 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐟𝐠𝐨 𝐣𝐩 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐥𝐢𝐬𝐭) 
+  ⌯     ${prefix}𝐧𝐚 (𝐟𝐨𝐫 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐟𝐠𝐨 𝐧𝐚 𝐬𝐮𝐩𝐩𝐨𝐫𝐭 𝐥𝐢𝐬𝐭)
 
-  
-  ⌯     ${prefix}anime
-  ⌯     ${prefix}manga
-  ⌯     ${prefix}foxgirl
-  ⌯     ${prefix}shinobu
-  ⌯     ${prefix}megumin
-  ⌯     ${prefix}waifu
-  ⌯     ${prefix}loli
-  ⌯     ${prefix}coffee
-  ⌯     ${prefix}wallpaper
-  ⌯     ${prefix}hsr (honkai star rail bulids) 
-  ⌯     ${prefix}hsr-cards (honkai star rail character cards)
-  ⌯     ${prefix}ba (blue archive characters)
-  ⌯     ${prefix}register (for generating your genshin and hsr cards) 
-  ⌯     ${prefix}genshin (for character builds) 
-  ⌯     ${prefix}servant (for fgo servants informations) 
-  ⌯     ${prefix}jp (for generating your fgo jp support list) 
-  ⌯     ${prefix}na (for generating your fgo na support list
-  
- 
-
-  〢━━━ ♨️ *Informative* ♨️ ━━━〢
-  
-
-  ⌯     ${prefix}weather
-  ⌯     ${prefix}wiki
-
-
-  〢━━━ 🪁 *Essentials* 🪁 ━━━〢
- 
-  
-  ⌯     ${prefix}qr
-  ⌯     ${prefix}say
-  ⌯     ${prefix}fliptext
-  ⌯     ${prefix}toletter
-  ⌯     ${prefix}translate 
-  
- 
-  〢━━━ 🎗 *Others* 🎗 ━━━〢
-
-
-  ⌯     ${prefix}report
-  ⌯     ${prefix}afk
-  ⌯     ${prefix}pick
-
-
-  〢━━━ 💕 *Ramadan Mobarak* 💕 ━━━〢
+  〢━━━ 💕 *eid Mubarak* 💕 ━━━〢
  
   ⌯    
   ⌯   『  *${global.BotName}*  』
