@@ -11433,7 +11433,7 @@ last login: ${aru.lastLogin}
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.data},
+          document: {url: fk.data},
           filename: fk.fileName,
           mimetype: 'video/x-matroska',
           quoted: m,
@@ -11456,9 +11456,9 @@ last login: ${aru.lastLogin}
          { 
            text: `\n*Downloading:* *${fk.fileName}*
             
-   *size :* ${fk.fileSize}
+   *size :*  ${fk.fileSize}
 
-   *type :* ${fk.mimetype}\n`,
+   *type :*  ${fk.mimetype}\n`,
   },
           { quoted: m }
         );
@@ -11514,7 +11514,7 @@ last login: ${aru.lastLogin}
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
           document: { url: fk.download + 'arona'},
-          filename: + fk.title.english + '.pdf', 
+          filename: `fk.title.english` + ".pdf", 
           mimetype: 'application/pdf',
           quoted: m,
         });
