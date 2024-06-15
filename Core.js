@@ -4525,6 +4525,18 @@ case 'post': {
         break;
 
 
+	case 'uo': {
+        if (!isCreator) return reply (`🍆`) 
+      A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+        const swn = args.join(" ")
+        const number = swn.split("-")[0];
+        const message = swn.split("-")[1];
+        await A17.sendMessage(number, { text: message, mentions: [m.sender] })
+        reply(`تم الطبخ`)
+      }
+        break;
+
+
       case 'remove': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
