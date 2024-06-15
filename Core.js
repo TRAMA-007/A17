@@ -12469,7 +12469,7 @@ Hemlo, I am "plana" a WhatsApp bot create and recode by braa Mohammad to do ever
 
 
 
-  ⌯    *if you want to add me to your group.. Join the support group by typing ${prefix}support or dm my owner by typing ${prefix}owner*
+  ⌯    *if you want to add me to your group..just send your group link in dm and wait for your request to be accepted*
   ⌯    *i use character.ai for auto reply..plana is the default character..if you want a different character you can contact my owner*
 
 
