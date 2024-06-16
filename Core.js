@@ -2795,6 +2795,26 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
+	case 'leaderboard':  {
+          if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+          if (isBan) return reply(mess.banned);
+          if (isBanChat) return reply(mess.bangc);
+          if (!m.isGroup) return reply(mess.grouponly)
+          A17.sendMessage(from, { react: { text: "💰", key: m.key } })
+
+	  let user = m.sender
+          const cara = "cara" 
+	 const lb = await eco.lb(user.cara, 50); //(guildID, limit)
+        if(lb < 1) return reply('less than 1'); //If leaderboard is empty, reply to user that it is.
+        var index = 0;
+        const mapped = lb.map(i => `**${index+=1}. ${client.users.cache.get(i.userID).tag} - ${i.wallet}**`);
+	const shirokotxt = `
+          ${mapped.join('\n')}
+        `
+	 reply (shirokotxt) 
+	   break;
+
+
 	case 'weekly':  {
           if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
           if (isBan) return reply(mess.banned);
