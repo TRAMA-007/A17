@@ -949,10 +949,13 @@ Typed *surrender* to surrender and admited defeat`
 
 
    if (smallinput.includes('lop')) {
-   const { toSticker, StickerTypes } = require ("wa-leal-stickers");
-   const buffer = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
-   const stickerBuffer = await toSticker(buffer, { packname: global.packname, author: global.author }) 
-    A17.sendMessage(from, { sticker : stickerBuffer }, { quoted: m });
+   const { Image } = require ("react-native-compressor");
+  const result = await Image.compress('https://graph.org/file/605e27cf2c16a9f2dc432.png', {
+  compressionMethod: 'manual',
+  maxWidth: 1000,
+  quality: 0.8,
+}); 
+    A17.sendMessage(from, { text : result }, { quoted: m });
        }
 
 
