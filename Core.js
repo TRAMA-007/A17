@@ -2812,6 +2812,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
           ${mapped.join('\n')}
         `
 	 reply (shirokotxt) 
+	 }
 	   break;
 
 
