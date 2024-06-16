@@ -949,9 +949,9 @@ Typed *surrender* to surrender and admited defeat`
 
 
    if (smallinput.includes('lop')) {
-   const { toSticker, StickerTypes } require ('wa-leal-stickers');
+   const { toSticker, StickerTypes } = require ("wa-leal-stickers");
    const buffer = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
-   const stickerBuffer = await toSticker(buffer, { packname: 'Pack_name', author: 'Your_name' }) 
+   const stickerBuffer = await toSticker(buffer, { packname: global.packname, author: global.author }) 
     A17.sendMessage(from, { sticker : stickerBuffer }, { quoted: m });
        }
 
