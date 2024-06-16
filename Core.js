@@ -3067,14 +3067,14 @@ async function getAllUsers() {
   const allUsers = await getAllUsers(); 
   for (const user of allUsers) {
     try {
-      await eco.give(user, cara, 300000); 
+      await eco.give(user, cara, 1000000); 
     } catch (error) {
       console.error("Wealth ritual error:", error);
       // Handle the error appropriately (e.g., log it, send a message)
     }
   }
 
-  reply(`Wealth ritual completed! All users received 💎300000.`); 
+  reply(`Wealth ritual completed! All users received 💎1000000.`); 
 }
 break; 
 
