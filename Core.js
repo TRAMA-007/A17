@@ -1211,7 +1211,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     
 
     if (smallinput.includes('زرقو') || smallinput.includes('زبي') || smallinput.includes('قنيط')) {
-    const typ = ['زولي السمين مالك ههه', 'اتلفظ يا سمين', 'درعتها يا زولي'];
+    const typ = ['زولي السمين مالك ههه', 'اتلفظ يا سمين', 'درعتها ياا زولي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
       const jj = ['الدعامة جوا لي بيومي في بيتهم اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial', 'الدعامة جوا لي بيومي في بيتهم قالوا ليهو وين الحريم طلع ليهم صورة هوتاو من جزلانو'];
     const hh = jj[Math.floor(Math.random() * jj.length)]; 
