@@ -108,7 +108,7 @@ global.db = new Low(
       ? new mongoDB(opts["db"])
       : new JSONFile(`src/database.json`)
 );
-global.DATABASE = global.db; // Backwards Compatibility
+global.DATABASE = global.db; // Backwardds Compatibility
 global.loadDatabase = async function loadDatabase() {
   if (global.db.READ)
     return new Promise((resolve) =>
