@@ -1179,7 +1179,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
         const webpBuffer = await sharp(media)
          .webp() 
          .toBuffer();
-       // Send sticker using A17 libray (replace with your actual function)
+       // Send sticker usng A17 libray (replace with your actual function)
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
    } 
 
