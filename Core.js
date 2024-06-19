@@ -744,7 +744,7 @@ let media = await A17.downloadAndSaveMediaMessage
     //     User Role : ${role}
 
 
-    //        「 User Bank 」
+    //        「 User Baank 」
 
     //     User Balance : ${uangku}
     //    //Iron : ${getBesi(m.sender)}
