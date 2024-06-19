@@ -1643,12 +1643,12 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
         
       }    }
 
-	 if (smallinput.includes('fang') || smallinput.includes('yuan')) {
+	/* if (smallinput.includes('fang') || smallinput.includes('yuan')) {
 	    const txtmsg = `*عان العرصوص دا كمان*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-	 } 
+	 } */
 	  
 
     if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('ass')) {
@@ -2959,14 +2959,44 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
       case 'rob':
       case 'attack':
        if (isBan) return reply(mess.banned);
-    if (isBanChat) return reply(mess.bangc);
-   if (!m.isGroup) {
-	   if (text.includes('+')) return reply(`Enter the number together without *+*`)
-	    const target = text + '@s.whatsapp.net'
-   }  
-    {
+    if (isBanChat) return reply(mess.bangc); {
         A17.sendMessage(from, { react: { text: "🔪", key: m.key } });
         if (!text) return reply(`Use ${prefix}rob @user`);
+	if (!m.isGroup) {
+        if (text.includes('+')) return reply(`Enter the number together without *+*`)
+	const target = text + '@s.whatsapp.net'
+        const cara = "cara";
+        const user1 = m.sender;
+        const user2 = target;
+        const a = 250;
+        const b = 10000;
+        const balance1 = await eco.balance(user1, cara);
+        const balance2 = await eco.balance(user2, cara);
+        const k = balance1.wallet * 0.25
+        const w = balance2.wallet * 0.25
+
+        const typ = ['ran', 'rob', 'caught'];
+        const random = typ[Math.floor(Math.random() * typ.length)];
+
+        if (a > balance1.wallet) return reply("دا شنو العب المقطع دا..جيب قروش الكفالة اول");
+        if (a > balance2.wallet) return reply("زولك دا مفلس اعمل رايح");
+  
+
+        let tpy = random;
+        if (random === 'ran') {
+            await reply("زولك دا هرب اعمل رايح");
+        } else if (random === 'caught') {
+            await eco.deduct(user1, cara, k);
+            await eco.give(user2, cara, k);
+            reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
+            reply(`You lost 💎${k}`);
+        } else if (random === 'rob') {
+            await eco.deduct(user2, cara, w);
+            await eco.give(user1, cara, w);
+            reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
+            reply(`You got 💎${w}`);
+         }
+    }  else {
         const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
         const cara = "cara";
         const user1 = m.sender;
@@ -3000,6 +3030,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
             reply(`You got 💎${w}`);
          }
     }
+	   }
     break;
 
 
@@ -3673,7 +3704,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=H6g3fOO5TuY8lybrKR-SMTEha6zjaLsWfOQkELtEtGs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=uKiyn1eyyoi67gkiOjwFZ3fZzhc_7_5D9YFfdc_DanA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
