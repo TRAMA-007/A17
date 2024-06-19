@@ -2781,8 +2781,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
           if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
           if (isBan) return reply(mess.banned);
           if (isBanChat) return reply(mess.bangc);
-          if (!m.isGroup) return reply(mess.grouponly)
-
+          
           A17.sendMessage(from, { react: { text: "💰", key: m.key } })
           let user = m.sender
           const cara = "cara"
@@ -2840,8 +2839,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
+        
         A17.sendMessage(from, { react: { text: "💳", key: m.key } })
 
         if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
@@ -2864,8 +2862,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
+        
         A17.sendMessage(from, { react: { text: "💳", key: m.key } })
 
         const user = m.sender
@@ -2879,8 +2876,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
       case 'capacity': case 'bankupgrade':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
+        
         {
           A17.sendMessage(from, { react: { text: "💲", key: m.key } })
 
@@ -2919,8 +2915,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
       case 'deposit': case 'pay-in': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
+        
         A17.sendMessage(from, { react: { text: "📥", key: m.key } })
 
         if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
@@ -2938,8 +2933,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
       case 'withdraw': case 'withdrawal': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
+        
         A17.sendMessage(from, { react: { text: "💸", key: m.key } })
 
         if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
@@ -3080,8 +3074,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
       case 'transfer': case 'give': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-        A17.sendMessage(from, { react: { text: "🗿", key: m.key } })
+         A17.sendMessage(from, { react: { text: "🗿", key: m.key } })
         let value = text.trim().split(" ");
         if (value[0] === "") return reply(`Use ${prefix}transfer 100 @user`);
         const target =
