@@ -8159,7 +8159,30 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         } 
            break; 
 
+
+	case 'card-firefly':
+	case 'card-القيرلفريند': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let zbi = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1310": "${util.format(anu)}"}`) 
+          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1310_${q}.png`)
+        await A17.sendMessage(from, { image: buffer }, { quoted: m })
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1310_${q}.png`)
+          await A17.sendMessage(from, { image: sx }, { quoted: m })
+       } 
+        } 
+           break;  
+		    
+
         case 'card-hanabi':
+	case 'card-cumdumpster': 
         case 'card-sparkle':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
