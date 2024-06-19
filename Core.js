@@ -2958,13 +2958,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
       case 'rob':
       case 'attack':
-   //    let dd = 'https://chat.whatsapp.com/GinclPTNvg6FMMOaGfUNcf';
-//     let response = await A17.groupInviteCode(m.chat);
-//    let link = (`https://chat.whatsapp.com/${response}`);
-
-//    if (dd === link) {
-//    return reply('امشي قروب السرقة يا عب');
-//   }
        if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
    if (!m.isGroup) {
@@ -2974,12 +2967,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
     {
         A17.sendMessage(from, { react: { text: "🔪", key: m.key } });
         if (!text) return reply(`Use ${prefix}rob @user`);
-        
         const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
-     //   if (!target || target === m.sender) return reply("What are you trying to do!");
-      //  if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender);
-      //  while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender);
-
         const cara = "cara";
         const user1 = m.sender;
         const user2 = target;
@@ -2995,14 +2983,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         if (a > balance1.wallet) return reply("دا شنو العب المقطع دا..جيب قروش الكفالة اول");
         if (a > balance2.wallet) return reply("زولك دا مفلس اعمل رايح");
-  //      if (b > balance2.wallet) {
-          
-    //      let userToKick = m.sender;
-   //       if (isBotAdmins) await A17.sendMessage(from, { text: 'ياخ دا شنو العب دا حشيتنا حش' });
-    //      if (isBotAdmins) await A17.sendMessage(from, { text: 'شوف ليك زول تاني اسرقو ما معقول اسود و كمان قلبك اسود' });
- //   await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
-
-  //      }else{
+  
 
         let tpy = random;
         if (random === 'ran') {
@@ -3020,6 +3001,49 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
          }
     }
     break;
+
+
+     case 'roob':
+       if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    {
+        A17.sendMessage(from, { react: { text: "🔪", key: m.key } });
+        if (!text) return reply(`Use ${prefix}rob @user`);
+        if (text.includes('+')) return reply(`Enter the number together without *+*`)
+	const target = text + '@s.whatsapp.net'
+        const cara = "cara";
+        const user1 = m.sender;
+        const user2 = target;
+        const a = 250;
+        const b = 10000;
+        const balance1 = await eco.balance(user1, cara);
+        const balance2 = await eco.balance(user2, cara);
+        const k = balance1.wallet * 0.25
+        const w = balance2.wallet * 0.25
+
+        const typ = ['ran', 'rob', 'caught'];
+        const random = typ[Math.floor(Math.random() * typ.length)];
+
+        if (a > balance1.wallet) return reply("دا شنو العب المقطع دا..جيب قروش الكفالة اول");
+        if (a > balance2.wallet) return reply("زولك دا مفلس اعمل رايح");
+  
+
+        let tpy = random;
+        if (random === 'ran') {
+            await reply("زولك دا هرب اعمل رايح");
+        } else if (random === 'caught') {
+            await eco.deduct(user1, cara, k);
+            await eco.give(user2, cara, k);
+            reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
+            reply(`You lost 💎${k}`);
+        } else if (random === 'rob') {
+            await eco.deduct(user2, cara, w);
+            await eco.give(user1, cara, w);
+            reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
+            reply(`You got 💎${w}`);
+         }
+    }
+    break; 
 
 
       case 'transfer': case 'give': {
