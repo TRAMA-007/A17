@@ -11278,22 +11278,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
         `
        const gen = await axios.get(`https://enka.network/api/uid/${q}?info`)
-       const sht = gen.data.playerInfo
+       const sht = gen.data
        const htxt = `
        
-       Name : ${sht.nickname}
+       Name : ${sht.playerInfo.nickname}
 
-       Uid : ${gen.data.uid}
+       Uid : ${sht.uid}
 
-       level : ${sht.level}
+       level : ${sht.playerInfo.level}
 
-       world Level : ${sht.worldLevel}
+       world Level : ${sht.playerInfo.worldLevel}
 
-       Achievements : ${sht.finishAchievementNum}
+       Achievements : ${sht.playerInfo.finishAchievementNum}
 
-       Signature : ${sht.signature}
+       Signature : ${sht.playerInfo.signature}
 
-       Abyss : ${sht.towerFloorIndex}
+       Abyss : ${sht.playerInfo.towerFloorIndex}
        `
        
 	const imageUrls = [
