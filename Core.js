@@ -11284,7 +11284,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
        Uid : ${gen.data.uid}
 
-       Signature : ${sht.signature}
+       level : ${sht.level}
 
        world Level : ${sht.worldLevel}
 
