@@ -11614,9 +11614,9 @@ const imageUrrls = [
           });
         } catch (error) {
           console.error('Error generating and relaying message:', error);
-          return reply('Error generating and relaying message.');
+           reply('Error generating and relaying message.');
         }
-	} else {
+	} else{
         const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}`)
         const fuuck = genshinid.data;
         if (fuuck.data === 'Successfully') {
@@ -11630,7 +11630,7 @@ const imageUrrls = [
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `choose the character you want me to generate`
+                    text: `رايك شنو تبني حياتك؟ `
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "if you still play this game please go take a shower"
@@ -11639,7 +11639,7 @@ const imageUrrls = [
                     ...(await prepareWAMessageMedia({ image: meedia }, { upload: A17.waUploadToServer })),
 
 
-                    title: "registered successfully",
+                    title: "بدل تبني الشخصيات..",
                     subtitle: "Browse through the available commands",
                     hasMediaAttachment: false
                   }),
