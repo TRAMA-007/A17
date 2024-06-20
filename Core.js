@@ -11256,6 +11256,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
        Abyss : ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
        `
 		    reply(hhtxt) 
+	    }
 		    break;
 
 
