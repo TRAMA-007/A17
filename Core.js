@@ -11277,7 +11277,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         Music : ${hh.music_count}
 
         `
-       const gen = await axios.get(`https://enka.network/api/uid/${q}?info`)
+       const gen = await axios.get(`https://enka.network/api/uid/${q}`)
        const sht = gen.data
        const htxt = `
        
