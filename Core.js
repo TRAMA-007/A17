@@ -408,7 +408,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     } else {
         botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=uA9-mMrcQav6iD0MyITij-twdhlqZ4Alemv79iKcO_c&sessionId=${sessionId}&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`);
         menggoda = `${botreply.data.result.text}`
-        m.reply(menggoda);
+        m.reply(mengggoda);
 }
 }
 */
