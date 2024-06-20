@@ -11279,7 +11279,8 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         `
        const gen = await axios.get(`https://enka.network/api/uid/${q}?info`)
        const sht = gen.data.playerInfo
-	      const htxt = `
+       const htxt = `
+       
        Name : ${sht.nickname}
 
        Uid : ${gen.data.uid}
@@ -11619,7 +11620,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                     ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
 
 
-                    title: "registered successfully..",
+                    title: "registered successfully",
                     subtitle: "Browse through the available commands",
                     hasMediaAttachment: false
                   }),
