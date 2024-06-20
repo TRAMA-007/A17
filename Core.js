@@ -11238,6 +11238,26 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
       }
         break;
 
+	    case 'teest' :{
+	const geen = await axios.get(`https://enka.network/api/uid/${q}?info`)
+       const shtt = geen.data.playerInfo
+       const hhtxt = `
+       
+       Name : ${shtt.nickname}
+
+       level : ${shtt.level}
+
+       World Level : ${shtt.worldLevel}
+
+       Achievements : ${shtt.finishAchievementNum}
+
+       Signature : ${shtt.signature}
+
+       Abyss : ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
+       `
+		    reply(hhtxt) 
+		    break;
+
 
       case 'register':{
         if (isBan) return reply(mess.banned);
@@ -11277,23 +11297,23 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         Music : ${hh.music_count}
 
         `
-       const geen = await axios.get(`https://enka.network/api/uid/${q}?info`)
-       const shtt = geen.data.playerInfo
-       const hhtxt = `
-       
-       Name : ${shtt.nickname}
-
-       level : ${shtt.level}
-
-       World Level : ${shtt.worldLevel}
-
-       Achievements : ${shtt.finishAchievementNum}
-
-       Signature : ${shtt.signature}
-
-       Abyss : ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
-       `
-       
+const imageUrrls = [
+ 'https://graph.org/file/8b64cdbf9b8558718a1d5.jpg',
+ 'https://graph.org/file/aea45e6946deee1e75d92.jpg', 
+ 'https://graph.org/file/ee444b8f8bc6d263e801c.jpg',
+ 'https://graph.org/file/53dd6a8b676c30883550d.jpg',
+ 'https://graph.org/file/95b467a65f048e3098fb2.jpg',
+ 'https://graph.org/file/a27853718c09095b8dcdd.jpg',
+ 'https://graph.org/file/10aaa282ee56116392c57.jpg',
+ 'https://graph.org/file/d306202cff0cd0f09f18c.jpg',
+ 'https://graph.org/file/700b4b9cba2d7f032c62a.jpg',
+ 'https://graph.org/file/f852012920ab469c93b8b.jpg',
+ 'https://graph.org/file/802f919512633513625f6.jpg',
+ 'https://graph.org/file/40d45f9987fdef4baf43d.jpg', 
+	];
+          const randomImageUrrl = imageUrrls[Math.floor(Math.random() * imageUrrls.length)];
+        let meedia = await getBuffer(randomImageUrrl);
+	      
 	const imageUrls = [
  'https://graph.org/file/9bda3aa0978765724797e.jpg',
  'https://graph.org/file/330f2446be26870934669.jpg', 
@@ -11609,13 +11629,13 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `${hhtxt}`
+                    text: `choose the character you want me to generate`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "if you still play this game please go take a shower"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
+                    ...(await prepareWAMessageMedia({ image: meedia }, { upload: A17.waUploadToServer })),
 
 
                     title: "registered successfully",
