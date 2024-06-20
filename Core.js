@@ -11244,6 +11244,40 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please provide an id!`)
+	const ach = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`)
+	const dh = ach.data.player
+	const hh = dh.space_info
+	const stxt =`
+        Name : ${dh.nickname}
+	
+        signature : ${dh.signature} 
+	
+	uid : ${dh.uid}
+ 
+        Level : ${dh.level}
+	
+	world level : ${dh.world_level}
+ 
+	friends : ${dh.friend_count}
+ 
+        Memory of chaos level : ${hh.memory_data.chaos_level}
+	
+	memory of chaos stars : ${hh.memory_data.chaos_star_count}
+ 
+	simulated universe : ${hh.universe_level} 
+
+        Lightcones : ${hh.light_cone_count}
+
+        Relics : ${hh.relic_count} 
+
+        Achievements  : ${hh.achievement_count}
+
+        Books : ${hh.book_count} 
+
+        Music : ${hh.music_count}
+
+        `
+ 
 	const imageUrls = [
  'https://graph.org/file/9bda3aa0978765724797e.jpg',
  'https://graph.org/file/330f2446be26870934669.jpg', 
@@ -11272,10 +11306,10 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `choose the character you want me to genarate`
+                    text: `${stxt}`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
-                    text: "           you can also set a custom image for your build by sending the command with the image you want or replying to an image"
+                    text: "choose below to get your character build"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
                     ...(await prepareWAMessageMedia({ image: media }, { upload: A17.waUploadToServer })),
