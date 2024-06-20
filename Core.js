@@ -11243,7 +11243,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please proide an id!`)
+        if (!text) return reply(`Please provide an id!`)
         
         const starid = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}`)
         const fuck = starid.data;
@@ -11258,16 +11258,16 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `registered sucssesfuly`
+                    text: `choose the character you want me to genarate`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
-                    text: "           choose the character card you want"
+                    text: "           you can also set a custom image for your build by sending the command with the image you want or replying to an image"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
                     ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/858c9965673d7aaa5d976.jpg' } }, { upload: A17.waUploadToServer })),
 
 
-                    title: "                      Help Menu",
+                    title: "                      registered sucssesfuly",
                     subtitle: "Browse through the available commands",
                     hasMediaAttachment: false
                   }),
@@ -11275,7 +11275,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                     buttons: [
                       {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}card-jinglu ${q}"}`
+                        "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}card-jingilu ${q}"}`
                       },
 			    {
                         "name": "quick_reply",
@@ -11531,9 +11531,409 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           console.error('Error generating and relaying message:', error);
           return reply('Error generating and relaying message.');
         }
-	}else {
-        const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/profile/${q}?update=true`) 
-        reply(`id registered..you can generate your genshin cards now`)
+	} else {
+        const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}`)
+        const fuuck = genshinid.data;
+        if (fuuck.data === 'Successfully') {
+			try {
+	let msg = generateWAMessageFromContent(m.key.remoteJid, {
+         viewOnceMessage: {
+              message: {
+                "messageContextInfo": {
+                  "deviceListMetadata": {},
+                  "deviceListMetadataVersion": 2
+                },
+                interactiveMessage: proto.Message.InteractiveMessage.create({
+                  body: proto.Message.InteractiveMessage.Body.create({
+                    text: `رايك شنو تبني حياتك؟`
+                  }),
+                  footer: proto.Message.InteractiveMessage.Footer.create({
+                    text: "            if you still play this game please go take a shower"
+                  }),
+                  header: proto.Message.InteractiveMessage.Header.create({
+                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
+
+
+                    title: "                      بدل تبني الشخصيات..",
+                    subtitle: "Browse through the available commands",
+                    hasMediaAttachment: false
+                  }),
+                  nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                    buttons: [
+                      {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"ayaka","id":"${prefix}card-ayaka ${q}"}`
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"raiden shogun","id":"${prefix}card-ei ${q}"}`
+                      },
+                      {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yae miko","id":"${prefix}card-yae ${q}"}`
+
+                      }, 
+			    {
+			     "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"sara","id":"${prefix}card-sara ${q}"}`
+
+                      },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yanfei","id":"${prefix}card-yanfei ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yoimiya","id":"${prefix}card-yoimiya ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"aloy","id":"${prefix}card-aloy ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"sayu","id":"${prefix}card-sayu ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kazuha","id":"${prefix}card-kazuha ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"ningguang","id":"${prefix}card-ningguang ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"eula","id":"${prefix}card-eula ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"venti","id":"${prefix}card-venti ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"albedo","id":"${prefix}card-albedo ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"childe","id":"${prefix}card-childe ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"razor","id":"${prefix}card-razor ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"diluc","id":"${prefix}card-diluc ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"jean","id":"${prefix}card-jean ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"qiqi","id":"${prefix}card-qiqi ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"mona","id":"${prefix}card-mona ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"keqing","id":"${prefix}card-keqing ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"dehya","id":"${prefix}card-dehya ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"fishcl","id":"${prefix}card-fishl ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"الطغنري","id":"${prefix}card-tighnari ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"كلجة الهايدرو","id":"${prefix}card-xinqiu ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"hutao","id":"${prefix}card-hutao ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"klee","id":"${prefix}card-klee ${q}"}`
+
+                      },
+                           {
+			     "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"xiao","id":"${prefix}card-xiao ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"zhongli","id":"${prefix}card-zhongli ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"ganyu","id":"${prefix}card-ganyu ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"beidou","id":"${prefix}card-beidou ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"amber","id":"${prefix}card-amber ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"noelle","id":"${prefix}card-noelle ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kaeya","id":"${prefix}card-kaeya ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"xiangling","id":"${prefix}card-xiangling ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"xinyan","id":"${prefix}card-xinyan ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"diona","id":"${prefix}card-diona ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"lisa","id":"${prefix}card-lisa ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"bennett","id":"${prefix}card-bennett ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"thoma","id":"${prefix}card-thoma ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"gorou","id":"${prefix}card-gorou ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"shenhe","id":"${prefix}card-shenhe ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yunjin","id":"${prefix}card-yunjin ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"ayato","id":"${prefix}card-ayato ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yelan","id":"${prefix}card-yelan ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kuki shinobu","id":"${prefix}card-shinobu ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"heizhou","id":"${prefix}card-heizhou ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"dori","id":"${prefix}card-dori ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"collei","id":"${prefix}card-collei ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"nilou","id":"${prefix}card-nilou ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"cyno","id":"${prefix}card-cyno ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"layla","id":"${prefix}card-layla ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"nahida","id":"${prefix}card-nahida ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"الهيثم","id":"${prefix}card-alhaitham ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"scaramouche","id":"${prefix}card-wandrer ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"faruzan","id":"${prefix}card-faruzan ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yaoyao","id":"${prefix}card-yaoyao ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"mika","id":"${prefix}card-mika ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kirara","id":"${prefix}card-kirara ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"baizhu","id":"${prefix}card-baizhu ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"lynette","id":"${prefix}card-lynette ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kaveh","id":"${prefix}card-kaveh ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"lyney","id":"${prefix}card-lyney ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"freminet","id":"${prefix}card-freminet ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"arlecchino","id":"${prefix}card-arlecchino ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"chiori","id":"${prefix}card-chiori ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"القاضي","id":"${prefix}card-خرطوش ${q}"}`
+
+                      },
+                           {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"اب جعبة","id":"${prefix}card-wrio ${q}"}`
+
+                      },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"chevereuse","id":"${prefix}card-chevereuse ${q}"}`
+
+                      },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"gaming","id":"${prefix}card-gaming ${q}"}`
+
+                      },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"furina","id":"${prefix}card-furina ${q}"}`
+
+                      },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"navia","id":"${prefix}navia"}`
+
+                      }, 
+                    ]
+                  })
+                })
+              }
+		}
+          }, {});
+
+
+          if (!msg || !msg.key || !msg.key.remoteJid || !msg.key.id) {
+            const errorMessage = 'Error: Invalid message key.';
+            console.error(errorMessage);
+            return reply(errorMessage);
+          }
+
+          await A17.relayMessage(msg.key.remoteJid, msg.message, {
+            messageId: msg.key.id
+          });
+        } catch (error) {
+          console.error('Error generating and relaying message:', error);
+          return reply('Error generating and relaying message.');
+        }
       }
       }
         break;
