@@ -11279,11 +11279,9 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         `
        const gen = await axios.get(`https://enka.network/api/uid/${q}`)
        const sht = gen.data
-       const htxt = `
+       const hhtxt = `
        
        Name : ${sht.playerInfo.nickname}
-
-       Uid : ${sht.uid}
 
        level : ${sht.playerInfo.level}
 
@@ -11293,7 +11291,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
        Signature : ${sht.playerInfo.signature}
 
-       Abyss : ${sht.playerInfo.towerFloorIndex}
+       Abyss : ${sht.playerInfo.towerFloorIndex} - ${sht.playerInfo.towerLevelIndex}
        `
        
 	const imageUrls = [
@@ -11611,7 +11609,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `${htxt}`
+                    text: `${hhtxt}`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "            if you still play this game please go take a shower"
