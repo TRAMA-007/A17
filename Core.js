@@ -11265,39 +11265,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please provide an id!`)
-	const ach = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`)
-	const dh = ach.data.player
-	const hh = dh.space_info
-	const stxt =`
-        Name : ${dh.nickname}
 	
-        signature : ${dh.signature} 
-	
-	uid : ${dh.uid}
- 
-        Level : ${dh.level}
-	
-	world level : ${dh.world_level}
- 
-	friends : ${dh.friend_count}
- 
-        Memory of chaos level : ${hh.memory_data.chaos_level}
-	
-	memory of chaos stars : ${hh.memory_data.chaos_star_count}
- 
-	simulated universe : ${hh.universe_level} 
-
-        Lightcones : ${hh.light_cone_count}
-
-        Relics : ${hh.relic_count} 
-
-        Achievements  : ${hh.achievement_count}
-
-        Books : ${hh.book_count} 
-
-        Music : ${hh.music_count}
-
-        `
 const imageUrrls = [
  'https://graph.org/file/8b64cdbf9b8558718a1d5.jpg',
  'https://graph.org/file/aea45e6946deee1e75d92.jpg', 
@@ -11333,6 +11301,39 @@ const imageUrrls = [
         const starid = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}`)
         const fuck = starid.data;
         if (fuck.data === 'Successfully') {
+	const ach = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`)
+	const dh = ach.data.player
+	const hh = dh.space_info
+	const stxt =`
+        Name : ${dh.nickname}
+	
+        signature : ${dh.signature} 
+	
+	uid : ${dh.uid}
+ 
+        Level : ${dh.level}
+	
+	world level : ${dh.world_level}
+ 
+	friends : ${dh.friend_count}
+ 
+        Memory of chaos level : ${hh.memory_data.chaos_level}
+	
+	memory of chaos stars : ${hh.memory_data.chaos_star_count}
+ 
+	simulated universe : ${hh.universe_level} 
+
+        Lightcones : ${hh.light_cone_count}
+
+        Relics : ${hh.relic_count} 
+
+        Achievements  : ${hh.achievement_count}
+
+        Books : ${hh.book_count} 
+
+        Music : ${hh.music_count}
+
+        `
         try {
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
          viewOnceMessage: {
