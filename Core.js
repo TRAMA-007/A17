@@ -11244,6 +11244,20 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please provide an id!`)
+	const imageUrls = [
+ 'https://graph.org/file/9bda3aa0978765724797e.jpg',
+ 'https://graph.org/file/330f2446be26870934669.jpg', 
+ 'https://graph.org/file/164b6ac5085370f3f2d43.jpg',
+ 'https://graph.org/file/b7a339394b46d32b837a1.jpg',
+ 'https://graph.org/file/7497b1956b0306e63454c.jpg',
+ 'https://graph.org/file/1d64649ad0fe9b717c9d1.jpg',
+ 'https://graph.org/file/e1038ea5ce44fa62c46dd.jpg',
+ 'https://graph.org/file/78ca23ebc45610b44e2bb.jpg',
+ 'https://graph.org/file/471dfce47fa4f0c1e1406.jpg',
+ 'https://graph.org/file/f43d9364b78ddc7a867aa.jpg',
+	];
+          const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
         
         const starid = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}`)
         const fuck = starid.data;
@@ -11264,10 +11278,10 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                     text: "           you can also set a custom image for your build by sending the command with the image you want or replying to an image"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/858c9965673d7aaa5d976.jpg' } }, { upload: A17.waUploadToServer })),
+                    ...(await prepareWAMessageMedia({ image: media }, { upload: A17.waUploadToServer })),
 
 
-                    title: "                      registered sucssesfuly",
+                    title: "registered sucssesfuly",
                     subtitle: "Browse through the available commands",
                     hasMediaAttachment: false
                   }),
@@ -11275,7 +11289,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                     buttons: [
                       {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}card-jingilu ${q}"}`
+                        "buttonParamsJson": `{"display_text":"jingliu","id":"${prefix}card-jingliu ${q}"}`
                       },
 			    {
                         "name": "quick_reply",
