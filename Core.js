@@ -11277,7 +11277,24 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         Music : ${hh.music_count}
 
         `
- 
+       const gen = await axios.get(`https://enka.network/api/uid/${q}?info`)
+       const sht = gen.data.playerInfo
+	      const htxt = `
+       Name : ${sht.nickname}
+
+       Uid : ${gen.data.uid}
+
+       Signature : ${sht.signature}
+
+       world Level : ${sht.worldLevel}
+
+       Achievements : ${sht.finishAchievementNum}
+
+       Signature : ${sht.signature}
+
+       Abyss : ${sht.towerFloorIndex}
+       `
+       
 	const imageUrls = [
  'https://graph.org/file/9bda3aa0978765724797e.jpg',
  'https://graph.org/file/330f2446be26870934669.jpg', 
@@ -11593,7 +11610,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `رايك شنو تبني حياتك؟`
+                    text: `${htxt}`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "            if you still play this game please go take a shower"
@@ -11602,7 +11619,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                     ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
 
 
-                    title: "                      بدل تبني الشخصيات..",
+                    title: "registered successfully..",
                     subtitle: "Browse through the available commands",
                     hasMediaAttachment: false
                   }),
