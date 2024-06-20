@@ -11277,21 +11277,21 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         Music : ${hh.music_count}
 
         `
-       const gen = await axios.get(`https://enka.network/api/uid/${q}`)
-       const sht = gen.data
+       const geen = await axios.get(`https://enka.network/api/uid/${q}?info`)
+       const shtt = geen.data.playerInfo
        const hhtxt = `
        
-       Name : ${sht.playerInfo.nickname}
+       Name : ${shtt.nickname}
 
-       level : ${sht.playerInfo.level}
+       level : ${shtt.level}
 
-       world Level : ${sht.playerInfo.worldLevel}
+       World Level : ${shtt.worldLevel}
 
-       Achievements : ${sht.playerInfo.finishAchievementNum}
+       Achievements : ${shtt.finishAchievementNum}
 
-       Signature : ${sht.playerInfo.signature}
+       Signature : ${shtt.signature}
 
-       Abyss : ${sht.playerInfo.towerFloorIndex} - ${sht.playerInfo.towerLevelIndex}
+       Abyss : ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
        `
        
 	const imageUrls = [
@@ -11612,7 +11612,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
                     text: `${hhtxt}`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
-                    text: "            if you still play this game please go take a shower"
+                    text: "if you still play this game please go take a shower"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
                     ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b9e742e3b029ef894c49f.jpg' } }, { upload: A17.waUploadToServer })),
