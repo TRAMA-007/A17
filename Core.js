@@ -11238,27 +11238,6 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
       }
         break;
 
-	    case 'teest' :{
-	const geen = await axios.get(`https://enka.network/api/uid/${q}?info`)
-       const shtt = geen.data.playerInfo
-       const hhtxt = `
-       
-       Name : ${shtt.nickname}
-
-       level : ${shtt.level}
-
-       World Level : ${shtt.worldLevel}
-
-       Achievements : ${shtt.finishAchievementNum}
-
-       Signature : ${shtt.signature}
-
-       Abyss : ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
-       `
-		    reply(hhtxt) 
-	    }
-		    break;
-
 
       case 'register':{
         if (isBan) return reply(mess.banned);
@@ -11621,6 +11600,22 @@ const imageUrrls = [
         const genshinid = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}`)
         const fuuck = genshinid.data;
         if (fuuck.data === 'Successfully') {
+	const geen = await axios.get(`https://enka.network/api/uid/${q}?info`)
+       const shtt = geen.data.playerInfo
+       const hhtxt = `
+       
+       Name : ${shtt.nickname}
+
+       level : ${shtt.level}
+
+       World Level : ${shtt.worldLevel}
+
+       Achievements : ${shtt.finishAchievementNum}
+
+       Signature : ${shtt.signature}
+
+       Abyss : ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
+       `
 			try {
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
          viewOnceMessage: {
@@ -11631,7 +11626,7 @@ const imageUrrls = [
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: `رايك شنو تبني حياتك؟ `
+                    text: `${hhtxt}`
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "if you still play this game please go take a shower"
@@ -11640,7 +11635,7 @@ const imageUrrls = [
                     ...(await prepareWAMessageMedia({ image: meedia }, { upload: A17.waUploadToServer })),
 
 
-                    title: "بدل تبني الشخصيات..",
+                    title: "registered successfully..",
                     subtitle: "Browse through the available commands",
                     hasMediaAttachment: false
                   }),
