@@ -10992,7 +10992,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 
 
       //
-      case 'kill': case 'pat': case 'lick': case 'bite':
+      case 'kill': case 'pat': case 'bite':
       case 'bully': case 'bonk': case 'poke': case 'slap':
       case 'happy':
       case 'cuddle': case 'kick': {
