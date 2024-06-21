@@ -572,7 +572,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     /* if (isMedia && m.isGroup) {
-let { GraphOrg } = require("./lib/uploader");
+let { GragphOrg } = require("./lib/uploader");
        
 let media = await A17.downloadAndSaveMediaMessage
         let anu = await GraphOrg(media);
