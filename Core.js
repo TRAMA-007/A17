@@ -1734,7 +1734,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
           }
 
 
-   if (smallinput.includes('ونو')) {
+   if (smallinput.includes('وييينو')) {
     reply (`اوريك ما تزعل😂`);
           }
 
