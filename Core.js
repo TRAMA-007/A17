@@ -1612,7 +1612,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     }
 
 
-   /*  if (smallinput.includes('قhط')) {
+   /*  if (smallinput.includes('قhمط')) {
  if (isAbd) reply (`يقطعه فيك واحد من دار زغاوة لا ناك لا جلد حلاوة`);
  if (isAbd) await A17.sendMessage(from, { text: 'معليش' });
    
