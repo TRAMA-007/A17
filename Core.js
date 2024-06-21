@@ -731,7 +731,7 @@ let media = await A17.downloadAndSaveMediaMessage
     //       }
     //     );
     //   //  await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-    //     A17.sendMessage(from, { text: `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Group link detected !*\n\n*🚫@${kice.split("@")[0]} You are not allowed to send any links in this group !*\n`, contextInfo: { mentionedJid: [kice] } }, { quoted: m })
+    //     A17.sendMessage(from, { text: `\`\`\`「  Antiilink System  」\`\`\`\n\n*⚠️ Group link detected !*\n\n*🚫@${kice.split("@")[0]} You are not allowed to send any links in this group !*\n`, contextInfo: { mentionedJid: [kice] } }, { quoted: m })
     //   } else {
     //   }
 
