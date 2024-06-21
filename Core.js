@@ -1826,7 +1826,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
     }
 
 
-    if (smallinput.includes('كبير')) {
+    if (smallinput.includes('كبر')) {
     reply (`الله يكرمك`);
     }
 
