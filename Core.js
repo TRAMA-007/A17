@@ -417,9 +417,18 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
+    if (smallinput.includes('fang') || smallinput.includes('yuan')) {
+    await A17.sendMessage(from, { text: 'فانغ يوان اليركبك يا عب' });
+      let users = m.sender
+        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+      const txtmsg = `*تم جغم مصاص ازبار الصينيين*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
+             }    
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=nXnFdKMRwYczP-MHy3d7SECkeE5hZnzfAf2nXmTP6W8&sessionId=MB5QlLwibq3Q77DYYU6-rMSlXGs8dRHJopJ-9It2ay8&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=xR_UpZih5iSfyQYoZiIrP18qj7SjzHZKxfKenqX22lE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
