@@ -12227,10 +12227,10 @@ last login: ${aru.lastLogin}
       case 'waifuai': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please proide a link`) 
+        if (!text) return reply(`Please provide a prompt`) 
         const instgram = await axios.get(`https://api.neoxr.eu/api/waifudiff?q=${encodeURIComponent(q)}`)
         const ig = instgram.data.data;
-	if (instgram.data.status === 'true') {
+	if (instgram.data.status === 'true,') {
         await A17.sendMessage(m.chat, { image: { url: ig.url }, caption: ig.prompt }, { quoted: m })
      } else {
      reply(`oops i can't generate that`) 
@@ -12751,6 +12751,7 @@ last login: ${aru.lastLogin}
 
   ⌯     ${prefix}𝐬𝐭𝐢𝐜𝐤𝐞𝐫
   ⌯     ${prefix}𝐢𝐦𝐚𝐠𝐢𝐧𝐞
+  ⌯     ${prefix}𝐖𝐚𝐢𝐟𝐮𝐚𝐢
   ⌯     ${prefix}𝐭𝐨𝐚𝐧𝐢𝐦𝐞
   ⌯     ${prefix}𝐭𝐨𝐢𝐦𝐠
   ⌯     ${prefix}𝐭𝐨𝐯𝐢𝐝𝐞𝐨 
