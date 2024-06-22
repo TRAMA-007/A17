@@ -1589,7 +1589,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
   } 
 
 
-    if (smallinput.includes('اركب') || (smallinput.includes('ابلع') || (smallinput.includes('يا مرا')) {
+    if (smallinput.includes('اركب') || smallinput.includes('ابلع') || smallinput.includes('يا مرا')) {
    const typ = ['ميدوريا كلامك كتير و شراميطك حبة','اركب في دا اول يا صحبي', '🤠'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isMedo) {
