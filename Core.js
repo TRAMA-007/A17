@@ -12230,11 +12230,7 @@ last login: ${aru.lastLogin}
         if (!text) return reply(`Please provide a prompt`) 
         const instgram = await axios.get(`https://api.neoxr.eu/api/waifudiff?q=${encodeURIComponent(q)}`)
         const ig = instgram.data.data;
-	if (instgram.data.status === 'true,') {
-        await A17.sendMessage(m.chat, { image: { url: ig.url }, caption: ig.prompt }, { quoted: m })
-     } else {
-     reply(`oops i can't generate that`) 
-	}
+	await A17.sendMessage(m.chat, { image: { url: ig.url }, caption: ig.prompt }, { quoted: m }) 
       }
         break; 
 
