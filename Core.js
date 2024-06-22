@@ -1563,7 +1563,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
 
     if (smallinput.includes('الناس تتماسك')) {
-   reply (`بتماسكوا بي دا بس`);
+    reply (`بتماسكوا بي دا بس`);
     } 
 
 
@@ -1595,7 +1595,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    if (isMedo) {
     let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
-    await A17.sendMessage(from, { text : random }); 
+    if (isBotAdmins) await A17.sendMessage(from, { text: random });
     }
  } 
 
