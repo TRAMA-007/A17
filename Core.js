@@ -601,12 +601,12 @@ let media = await A17.downloadAndSaveMediaMessage
 
 
     //
-    for (let anju of kaiaudio) {
+  /*  for (let anju of kaiaudio) {
       if(budy.includes(anju)) {
         result = fs.readFileSync(`./Assets/audio/${anju}.mp3`)
         A17.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
       }
-    }
+    } */
 
 
     //
@@ -1045,7 +1045,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('https://chat.whatsapp.com/')) {
-	if (!m.isGroup) {
+	if (!m.isGroup && !isPlana) {
 	  reply(`request added successfully..please wait till it get accepted`)
           const number = (`249904077717`)
           await A17.sendMessage(number + '@s.whatsapp.net', { text: budy , mentions: [m.sender] })
@@ -1125,6 +1125,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+	    if (!isPlana) {
       const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
     if (isShaq) reply (gg) 
@@ -1208,7 +1209,8 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
          .toBuffer();
        // Send sticker usng A17 libray (replace with your actual function)
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
-   } 
+   }
+	   }
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
