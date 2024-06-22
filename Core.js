@@ -594,6 +594,10 @@ let media = await A17.downloadAndSaveMediaMessage
   }
 
 } */
+	  if (!m.isGroup && !isPlana) {
+	  let { GraphOrg } = require("./lib/uploader");
+           let anu = await GraphOrg(body)
+		reply(${util.format(anu)})  
 
 
     //----------------------------------------------------------------------------------------------------//
