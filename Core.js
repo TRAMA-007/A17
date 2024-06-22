@@ -418,15 +418,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
     
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
-    if (smallinput.includes('fang') || smallinput.includes('yuan')) {
-    await A17.sendMessage(from, { text: 'فانغ يوان اليركبك يا عب' });
-      let users = m.sender
-        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-      const txtmsg = `*تم جغم مصاص ازبار الصينيين*`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-             }    
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=xR_UpZih5iSfyQYoZiIrP18qj7SjzHZKxfKenqX22lE&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
@@ -1066,6 +1057,18 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 	   }
 
 
+	if (smallinput.includes('fang') || smallinput.includes('yuan')) {
+	if (!m.isGroup) {
+    await A17.sendMessage(from, { text: 'فانغ يوان اليركبك يا عب' });
+      let users = m.sender
+        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+      const txtmsg = `*تم جغم مصاص ازبار الصينيين*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          }
+	}
+
+
     if (smallinput.includes('مسا') || smallinput.includes('مثا')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
       if (isIssam) return reply('احلى مسا على احلى عصام🌹') 
@@ -1079,10 +1082,11 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
-    // تحميل الصورة
+    if (tagg) {
  buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
     // إرسال الصورة
     A17.sendMessage(from, { image: buffer, caption: `plana loves you too ${pushname}` }, { quoted: m });
+	   }
 }
 
 
