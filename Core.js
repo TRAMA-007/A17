@@ -1966,7 +1966,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
       //
-      case 'sc': case 'script': case 'sourcecode': {
+   /*   case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "❤", key: m.key } })
@@ -1975,14 +1975,14 @@ Then if I got any juice left I'm gonna get Sunday too`);
         teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
         /*  let buttons = [
           {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
-          ] */
+          ] 
         let buttonMessage = {
           image: Thumb,
           jpegThumbnail: BotLogo,
           caption: teks,
           /* footer: `${BotName}`,
            buttons: buttons,
-           headerType: 4, */
+           headerType: 4, 
           contextInfo: {
             externalAdreply: {
               title: "Powered by Kai",
@@ -1999,7 +1999,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
         }
         A17.sendMessage(m.chat, buttonMessage, { quoted: m })
       }
-        break; 
+        break; */
 
 
       case 'qt': {
@@ -2103,7 +2103,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
 /*      case 'repo': case 'botrepo': {
-        if (isBan) return reply(mess.banned);
+        if (isBan) return reply(mess.banned);I'
         if (isBanChat) return reply(mess.bangc);
 
         A17.sendMessage(from, { react: { text: "💫", key: m.key } })
@@ -12677,6 +12677,7 @@ last login: ${aru.lastLogin}
   ⌯     ${prefix}𝐭𝐚𝐠𝐚𝐥𝐥
   ⌯     ${prefix}𝐡𝐢𝐝𝐞𝐭𝐚𝐠 
   ⌯     ${prefix}𝐫𝐞𝐩𝐨𝐫𝐭
+  ⌯     ${prefix}𝐛𝐚𝐝𝐰𝐨𝐫𝐝
   
 
   〢━━━ 🔍 𝐒𝐞𝐚𝐫𝐜𝐡 🔎 ━━━〢
@@ -12747,6 +12748,7 @@ last login: ${aru.lastLogin}
   ⌯     ${prefix}𝐞𝐧𝐡𝐚𝐧𝐜𝐞 / 𝐮𝐩𝐬𝐜𝐚𝐥𝐞
   ⌯     ${prefix}𝐫𝐞𝐦𝐨𝐯𝐞𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 / 𝐫𝐞𝐦𝐨𝐯𝐞𝐛𝐠
   ⌯     ${prefix}𝐭𝐫𝐚𝐧𝐬𝐥𝐚𝐭𝐞
+  ⌯     ${prefix}𝐒𝐚𝐮𝐜𝐞/صوص(𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐢𝐦𝐚𝐠𝐞 𝐬𝐞𝐚𝐫𝐜𝐡)
 
 
   〢━━ 🌌 *𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿* 🌌 ━━〢
