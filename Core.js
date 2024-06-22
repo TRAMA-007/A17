@@ -1590,7 +1590,15 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    reply(random)
-  } 
+  }
+
+
+    if (smallinput.includes('كسم')) {
+   if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
+   if (tagg) {
+	   let userToKick = m.sender;
+	   await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+	       }
 
 
     if (smallinput.includes('اركب') || smallinput.includes('ابلع') || smallinput.includes('يا مرا')) {
