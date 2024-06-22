@@ -219,6 +219,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isAli = [ ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKh = [ ...global.khattab].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
     const isSafi = [ ...global.safi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)  
+    const isMedo = [ ...global.medo].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
     const isShaq = [ ...global.shaq].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [ ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isJoan = [ ...global.eisa].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -977,7 +978,7 @@ Typed *surrender* to surrender and admited defeat`
   maxWidth: 1000,
   quality: 0.8,
 }); 
-    A17.sendMessage(from, { text : result }, { quoted: m });
+    A17.sendMessage(from, { image : result }, { quoted: m });
        }
 
 
@@ -1588,11 +1589,13 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
   } 
 
 
-    if (smallinput.includes('كسم')) {
-   if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
-   if (tagg) {
-	   let userToKick = m.sender;
+    if (smallinput.includes('اركب') || (smallinput.includes('ابلع') || (smallinput.includes('يا مرا')) {
+   const typ = ['ميدوريا كلامك كتير و شراميطك حبة','اركب في دا اول يا صحبي', '🤠'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isMedo) {
+    let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+    await A17.sendMessage(from, { text : random }); 
     }
  } 
 
