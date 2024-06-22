@@ -1599,6 +1599,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	   let userToKick = m.sender;
 	   await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
 	       }
+    }
 
 
     if (smallinput.includes('اركب') || smallinput.includes('ابلع') || smallinput.includes('يا مرا')) {
