@@ -70,7 +70,7 @@ global.location = "wad madani, sudan";
 global.reactmoji = "🍆";
 global.themeemoji = "💖";
 global.vidmenu = { url: 'https://media.tenor.com/0zUyieJX2kgAAAAC/blue-archive-plana.gif' };
-global.websitex = "https://github.com/Kai0071";
+global.websitex = "https://github.com/Akane7101";
 global.lolhuman = "KaysaS";
 
 
