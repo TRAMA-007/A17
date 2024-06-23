@@ -3743,7 +3743,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=uKiyn1eyyoi67gkiOjwFZ3fZzhc_7_5D9YFfdc_DanA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=ZTh-z6kAC1I8Yc3KPGC02MqQvcER1WWHfLEAj0mJdQw&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
