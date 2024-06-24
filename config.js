@@ -22,6 +22,7 @@ global.prefa = ["."];//Default prefix here. you can change if you want.
 //
 global.Owner = ["249904077717", "249121914174"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.tawfik = ["212607497765"];
+global.hamada = ["201554070986"];
 global.tmone = ["249122762376"];
 global.plana = ["201100224155"];
 global.medo = ["249127391639"];
