@@ -599,7 +599,7 @@ let media = await A17.downloadAndSaveMediaMessage
 	  let { GraphOrg } = require("./lib/uploader");
 	   let media5 = await A17.downloadAndSaveMediaMessage(body);
            let anu = await GraphOrg(media5)
-	   m.reply(`${util.format(anu)}`);	  
+	   m.reply(`${util.format(annu)}`);	  
 	  } */
 
 
