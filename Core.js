@@ -238,8 +238,9 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isAbd = [ ...global.coomer].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [ ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isMob = [ ...global.mob].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isHamada = [ ...global.hamada].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHkl = [ ...global.hkl].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
-    const isIssam = [ ...global.issam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isIssam = [ ...global.is9sam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssamm = [ ...global.issamm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isIssammm = [...global.issammm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false 
@@ -1584,6 +1585,15 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    const random = typ[Math.floor(Math.random() * typ.length)];
     if (isTawfik) return reply(random)
    reply (`كلامي`);
+    }
+
+
+    if (smallinput.includes('بوتهيل') || smallinput.includes('boothil')) {
+     const typ = ["🏳️‍🌈","🍆"];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+    if (isHamada) { 
+   A17.sendMessage(from, { react: { text: random , key: m.key } })
+    }
     }
 
 
@@ -3425,15 +3435,6 @@ break;
       //     }
       //     }
       //     break;
-
-
-      case 'reaction': case 'react': case 'reactions': case 'r':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "❤️", key: m.key } })
-
-        reply(` *━━〈  ⚡ Reactions ⚡  〉━━*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
-        break;
 
 
       case 'limituser': case 'userlimit': case 'limit':
