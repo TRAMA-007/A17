@@ -294,7 +294,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     /* const reply = (teks) => {
-      A17.sendMessage(m.chat, { text: tekkkks }, { quoted: m }); 
+      A17.sendMessage(m.chat, { text: tekkkkks }, { quoted: m }); 
     }; */
 
 
