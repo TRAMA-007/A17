@@ -421,7 +421,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=2iHW7rqfMDvSzZ2y5EtaSnl_vV0A2Hz_W0euBYyAHN0&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=-ZerIaHn_qJt8Q_h2WYJrLjz_qTnPtO8hieapLIp8J8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -1009,9 +1009,11 @@ Typed *surrender* to surrender and admited defeat`
 
 
     if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
+	if (tagg) {
     let media = await getBuffer("https://gifdb.com/images/thumbnail/ghost-hug-virtual-kiss-anime-girl-menhera-chan-c3fvyxsyb034zqbt.gif");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
+	}
    }
 
 
@@ -1089,6 +1091,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
+	if (isBan) return reply(`يحبك الزب`);
     if (tagg) {
  buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
     // إرسال الصورة
@@ -1132,6 +1135,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+	if (isBan) return reply(`ما برد على عبيد`);
 	    if (!isPlana) {
       const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
@@ -1595,6 +1599,15 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    A17.sendMessage(from, { react: { text: random , key: m.key } })
     }
     }
+
+
+   if (smallinput.includes('زولي') || smallinput.includes('هه')) {
+     const typ = ["🏳️‍🌈","🍆"];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+    if (isAbd) { 
+   A17.sendMessage(from, { react: { text: random , key: m.key } })
+    }
+   }
 
 
     if (smallinput.endsWith('ايه') || smallinput.endsWith('إيه')) {
@@ -3717,7 +3730,7 @@ break;
         case 'cai':
       case 'aiussy': {
         if (isBan) return reply(mess.banned);
-        if (text.includes('fang') || text.includes('yuan')) return reply(`فانغ يوان اليركبك يا عب`)
+        if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
 	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed')){
          orgnye = m.sender
@@ -3744,7 +3757,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=PCCB3vQJApx8AgVf8i9sGPR6ppm3uG2pl28LML5M5Ig&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=5RaVqMk0CwkoBj-tupWu9mJ4B8ZzLQE5DFpr5GLKd0A&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
