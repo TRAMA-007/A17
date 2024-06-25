@@ -891,7 +891,7 @@ Typed *surrender* to surrender and admited defeat`
   
   
   if (smallinput=='a17') {
-      reply ('Yes I am Alive')
+      reply ('Yes I am Alivve')
   }
   
   if (smallinput=='sasha') {
