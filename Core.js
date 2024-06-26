@@ -4404,6 +4404,18 @@ case 'post': {
         break;
 
 
+        case 'imagetag': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        if (!isAdmins && !isCreator) return reply(mess.useradmin)
+        A17.sendMessage(from, { react: { text: "✨", key: m.key } })
+	let media = await A17.downloadAndSaveMediaMessage(quoted)
+        A17.sendMessage(m.chat, { image: media , caption: args.join(" ") ? args.join(" ") : '', mentions: participants.map(a => a.id) }, { quoted: m })
+      }
+        break;
+
+
       case 'tagadmins': case 'admins': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
