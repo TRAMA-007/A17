@@ -564,11 +564,11 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
  
 
 
-/*    if (!isCmd && tagg && m.isGroup){
+    if (!isCmd && tagg && m.isGroup){
      const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=wSJPfvPmFR6DSstyNxRgVqclPQnTM_P1HkhpHtYYwko&sessionId=At0wnZiHWkOLZ6uexhDX1RwX9wPl0C_hWNt2PjRx-H4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=cyqawaagZ83EM6yeMVjt61Orf6UEhB741jOPNOLwYEE&sessionId=IJ5qGwXJ9HQ9LrzUhD7Mv85cHQe2-tMR0xKAlAnlitk&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
