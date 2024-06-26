@@ -9392,7 +9392,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         } 
            break; 
 
-        case 'card-Xingqiu':{
+        case 'card-xinqiu':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -9489,6 +9489,27 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
          } else {
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000030_${q}.png`)
+          await A17.sendMessage(from, { image: sx5 }, { quoted: m })
+       } 
+        } 
+           break;
+
+
+	case 'card-clorinde':
+	case 'card-clorinade': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        let { GraphOrg } = require("./lib/uploader");
+        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
+         if (/image/.test(mime)) {
+           let media = await A17.downloadAndSaveMediaMessage(quoted)
+          let anu = await GraphOrg(media);
+         let stelhar = await axios.get(`https://starraillcard.up.railway.app/gen/get_profile?uid=${q}&image={"10000098": "${util.format(anu)}"}`) 
+          buffer5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000098_${q}.png`)
+          await A17.sendMessage(from, { image: buffer5 }, { quoted: m }) 
+         } else {
+          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+           sx5 = await getBuffer(`https://starraillcard.up.railway.app/card/gen_10000098_${q}.png`)
           await A17.sendMessage(from, { image: sx5 }, { quoted: m })
        } 
         } 
@@ -10671,7 +10692,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
            break; 
 
 
-        case 'card-chevreuse':{
+        case 'card-chevereuse':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
@@ -11546,7 +11567,7 @@ const imageUrrls = [
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"boothill","id":"${prefix}card-boothill ${q}"}`
+                        "buttonParamsJson": `{"display_text":"boothill","id":"${prefix}card-boothil ${q}"}`
 
                       },
 			    {
@@ -11738,6 +11759,11 @@ const imageUrrls = [
                         "buttonParamsJson": `{"display_text":"yanfei","id":"${prefix}card-yanfei ${q}"}`
 
                       },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"kokomi","id":"${prefix}card-kokomi ${q}"}`
+
+                      },
                            {
 			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"yoimiya","id":"${prefix}card-yoimiya ${q}"}`
@@ -11820,7 +11846,7 @@ const imageUrrls = [
                       },
                            {
 			      "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"fishcl","id":"${prefix}card-fishl ${q}"}`
+                        "buttonParamsJson": `{"display_text":"fishcl","id":"${prefix}card-fischl ${q}"}`
 
                       },
                            {
@@ -12065,9 +12091,15 @@ const imageUrrls = [
                       },
 			    {
 			      "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"navia","id":"${prefix}navia"}`
+                        "buttonParamsJson": `{"display_text":"navia","id":"${prefix}card-navia ${q}"}`
+
+                      },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"clorinde","id":"${prefix}card-clorinde ${q}"}`
 
                       }, 
+			    
                     ]
                   })
                 })
