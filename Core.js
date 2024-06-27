@@ -4035,7 +4035,7 @@ break;
         break;
 
 
-     /* case 'listpc': {
+      case 'listpc': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
@@ -4068,7 +4068,7 @@ break;
         }
         A17.sendTextWithMentions(m.chat, teks, m)
       }
-        break; */
+        break; 
 
 
       case 'speedtest': case 'speedcheck': {
