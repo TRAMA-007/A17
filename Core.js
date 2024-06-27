@@ -4095,9 +4095,9 @@ break;
        case 'status': case 'post': {
         if (!isCreator) return reply(mess.owner)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
-         const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage })
-          await writeFile('./image.jpeg', media)
-          await A17.sendMessage(botNumber, 'status@broadcast', { image : './image.jpeg', media }).catch((err) => fs.unlinkSync(media))
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+         // await writeFile('./image.jpeg', media)
+          await A17.sendMessage(botNumber, 'status@broadcast', { image : media } )
           reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
         break;
