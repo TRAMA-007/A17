@@ -4092,13 +4092,12 @@ break;
         break;
 
 
-case 'status': case 'post': {
+       case 'status': case 'post': {
         if (!isCreator) return reply(mess.owner)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
-        const messageType = Object.keys(m.message)[0]
-        const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage })
+         const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage })
           await writeFile('./image.jpeg', media)
-          await A17.sendMessage(botNumber, 'status@broadcast', { url: './image.jpeg', media }).catch((err) => fs.unlinkSync(media))
+          await A17.sendMessage(botNumber, 'status@broadcast', { image : './image.jpeg', media }).catch((err) => fs.unlinkSync(media))
           reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
         break;
