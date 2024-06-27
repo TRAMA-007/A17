@@ -4097,7 +4097,7 @@ break;
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
          // await writeFile('./image.jpeg', media)
-          await A17.sendMessage(botNumber, 'status@broadcast', { image : media } )
+          await A17.sendMessage(botNumber, { image : media }, {broadcast : true})
           reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
         break;
