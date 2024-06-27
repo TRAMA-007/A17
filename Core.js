@@ -421,7 +421,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=-ZerIaHn_qJt8Q_h2WYJrLjz_qTnPtO8hieapLIp8J8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=6Tmq48nhGjKl4lDTp0OuMtste0MppGSB8gxX3W-0C6Y&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -12344,7 +12344,9 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const tt = await axios.get(`https://skizo.tech/api/tiktok?apikey=plana&url=${encodeURIComponent(q)}`)
+	const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        const tt = await axios.get(`https://skizo.tech/api/tiktok?apikey=${api}&url=${encodeURIComponent(q)}`)
         const sx = tt.data.data;
         let shirokotxt = `
 	*downloading*
