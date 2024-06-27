@@ -421,7 +421,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=6Tmq48nhGjKl4lDTp0OuMtste0MppGSB8gxX3W-0C6Y&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=xgvUzn0xW7m5oGZV_e6vWyfsEIm83bRGOAIG603dQto&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -4092,33 +4092,16 @@ break;
         break;
 
 
-/*case 'status':
-case 'post': {
-  if (!isCreator) return reply("You don't have permission to do that")
-  if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)
-  if (/video/.test(mime)) {
-    if ((quoted.msg || quoted).seconds > 30) return reply('Maximum 30 seconds video is allowed!')
-  }
-  const messageType = Object.keys(m.message)[0]
-  if (messageType === 'imageMessage') {
-    // Replace 'downloadMediaMessage' and 'writeFile' with appropriate functions
-    // Replace 'A17' and 'botNumber' with the actual variables
-    // Replace './image.jpeg' with the correct file path
-    // Replace 'reply' with the function to send a reply
-    // Replace 'pushname' with the user's name
-    // Replace 'fs.unlinkSync(media)' with the appropriate error handling
-    // Make sure to import necessary modules or functions
-    // Handle errors appropriately
-  }
-  else if (messageType === 'videoMessage') {
-    // Similar to above, handle video message posting
-  }
-  else {
-    // Handle other message types
-  }
-  break;
-}
-*/
+case 'status': case 'post': {
+        if (!isCreator) return reply(mess.owner)
+        if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
+        const messageType = Object.keys(m.message)[0]
+        const media = await downloadMediaMessage(m, 'media', {}, { logger, reuploadRequest: sock.updateMediaMessage })
+          await writeFile('./image.jpeg', media)
+          await A17.sendMessage(botNumber, 'status@broadcast', { url: './image.jpeg', media }).catch((err) => fs.unlinkSync(media))
+          reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
+      }
+        break;
 
 
 
@@ -7458,6 +7441,16 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
        buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714360705.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
+
+
+	case 'سيغوين':
+       case 'siggwinne':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://pbs.twimg.com/media/GRAVOv7WEAAXOec?format=jpg&name=large`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        break; 
 
 
       case 'zhongli':
@@ -13666,7 +13659,12 @@ last login: ${aru.lastLogin}
 			      "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"navia","id":"${prefix}navia"}`
 
-                      }, 
+                      },
+			    {
+			      "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"siggwinne","id":"${prefix}siggwinne"}`
+
+                      },
                     ]
                   })
                 })
