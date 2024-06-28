@@ -2419,14 +2419,13 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
       }
         break; 
 
-
 	case 'view':{ 
-	var q = await m.getQuotedObj()
-	var vtype = Object.keys(q.message)[0]
-	var mtype = Object.keys(q.message[vtype].message)[0]
-	delete q.message[vtype].message[mtype].viewOnce
-	A17.sendMessage(m.chat, { forward: q }, { quoted: m })
-	}
+	var qq = await m.getQuotedObj()
+	var vtype = Object.keys(qq.message)[0]
+	var mtype = Object.keys(qq.message[vtype].message)[0]
+	delete qq.message[vtype].message[mtype].viewOnce
+	A17.sendMessage(m.chat, { forward: qq }, { quoted: m })
+  } 
 
         case 'toanime':{
 
