@@ -152,7 +152,7 @@ if (global.db)
 
 
 //
-let isSleeping = false; // Move tthe declaraation here.
+let isSleeping = false; // Move tthe declaraation herge.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
 let kaiaudio = JSON.parse(fs.readFileSync('./Media-Database/audio.json'));
