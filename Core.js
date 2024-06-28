@@ -2418,7 +2418,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { video: { url: shiroko.url_file} }, { quoted: m })
       }
         break; 
-		    
+
+
+	case 'view':{ 
+	const onetime = await A17.downloadAndSaveMediaMessage(quoted)
+        await A17.sendMessage(m.chat, { image : onetime }, { quoted: m })
+   }
 
         case 'toanime':{
 
