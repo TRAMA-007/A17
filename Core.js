@@ -2259,6 +2259,20 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break; 
 
 
+	case 'tst':{
+
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { UploadFileUgu } = require("./lib/uploader");
+
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await UploadFileUgu(media);
+	reply(anu)
+	}
+        break;  
+
+
         case 'removebackground':
         case 'removebg':{
 
@@ -4977,6 +4991,9 @@ break;
         }
         await fs.unlinkSync(media5);
         break;
+
+
+	  
 
 
      /*   case "enhance": case 'upscale':
