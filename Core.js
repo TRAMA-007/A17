@@ -1838,7 +1838,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
   }
 
 
-    if (smallinput.includes('بنيكك')|| smallinput.includes('ببلك') || smallinput.includes('بحشك')) {
+    if (smallinput.includes('بنيhكك')|| smallinput.includes('ببلك') || smallinput.includes('بحشك')) {
     reply (` بدون افعال🤏🤭`);
     }
 
