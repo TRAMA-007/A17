@@ -1137,14 +1137,14 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
 	if (isBan) return reply(`ما برد على عبيد`);
 	    if (!isPlana) {
-	if (!isCmd && m.isGroup){
+/*	 if (!isCmd && m.isGroup){
         const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=zCagsAa7OceIp_VrymmeUAf_7uZ4olpstIc9AViTSq8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-		}
+		} */
       const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
     if (isShaq) reply (gg) 
