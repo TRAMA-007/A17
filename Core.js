@@ -561,7 +561,17 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=xzgsqA5fjZhEpP2FrX4KBHhRKEX8k-3J4rzCeAWL_Oo&sessionId=KoHqKw6X5Ls8J5zMV8TG5tYVq2shzOpBJ9a8uRducBA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-    } 
+    }
+
+
+      if (!isCmd && isHamada && !isPlana && !m.isGroup){
+      const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=I4xythFytrH0GKA7PpUV0oyOvv603DUjvxHtJiGwjGg&sessionId=5lWipLc8Js8qB3C_Zxb2w_5TpYgl0n2CFiv7QHvkJMU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    }  
  
 
 
