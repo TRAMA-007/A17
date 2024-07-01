@@ -3893,7 +3893,7 @@ break;
       if (!m.quoted) return
       let { chat, fromMe, id, isBaileys } = m.quoted
       if (!isBaileys) return reply('How can i delete messages of other person? Baka!')
-      A17.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
+      A17.sendMessage(m.chat, { delete: { remoteJidت: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
       }
       break;
       */
