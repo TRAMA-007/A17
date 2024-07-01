@@ -6262,7 +6262,7 @@ break;
         A17.sendMessage(from, { react: { text: "🤧", key: m.key } })
 
         if (!text) return reply(`Tag Someone, Example : ${prefix + command} @Kai`)
-        const A17tttt = ['قنيط', 'عب', 'خول', 'معرص', 'كلجة', 'عب قاتشا', 'قافل الشغل', 'فاتح الشغل', 'عب كراتين صينية', 'بوت', 'نجاو ساي' , 'مصري', 'نيرد']
+        const A17tttt = ['جردل', 'عب', 'ما عندو شخصية زاتو', 'متوحد', 'gay', 'عب قاتشا', 'قافل الشغل', 'فاتح الشغل', 'عب كراتين صينية', 'بوت', 'نجاو ساي' , 'مصري', 'نيرد']
         const taky = A17tttt[Math.floor(Math.random() * A17tttt.length)]
         A17.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
         break;
