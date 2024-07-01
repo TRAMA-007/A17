@@ -11278,12 +11278,10 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}anime naruto`)
 
         const malScraper = require('mal-scraper')
-        reply(mess.waiting);
         const anime = await malScraper.getInfoFromName(text).catch(() => null)
         if (!anime) return reply(`${p}Could not find your scarch`)
-	const ziib = anime.genres
-	const zib = ziib.toLowerCase();
-	if (zib.includes('hentai') || zib.includes('ecchi') || text.includes('boys love')){
+	const zib = anime.genres
+	if (zib.includes('Hentai') || zib.includes('Ecchi') || text.includes('Boys Love')){
          orgnye = m.sender
 	reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
 	const isBane = banUser.includes(orgnye)
@@ -12597,14 +12595,12 @@ last login: ${aru.lastLogin}
         if (!m.isGroup) return reply(mess.grouponly);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } })
 
-        reply(mess.waiting)
         const { Manga } = require("@shineiichijo/marika")
         const manga = new Manga();
         if (!q) return reply(`Please proide a search term!\n\n_Example:_ ${prefix}manga naruto`)
         let srh = await manga.searchManga(q)
-	const ziib = srh.data[0].genres[i].name
-	const zib = ziib.toLowerCase();
-	if (zib.includes('hentai') || zib.includes('ecchi') || text.includes('boys love')){
+	const zib = srh.data[0].genres[i].name
+	if (zib.includes('Hentai') || zib.includes('Ecchi') || text.includes('Boys Love')){
          orgnye = m.sender
 	   reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
 	const isBane = banUser.includes(orgnye)
