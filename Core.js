@@ -11283,13 +11283,13 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
 	const zib = anime.genres
 	if (zib.includes('Hentai') || zib.includes('Ecchi') || text.includes('Boys Love')){
          orgnye = m.sender
-	reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
 	const isBane = banUser.includes(orgnye)
 	banUser.push(orgnye)
 	const txtmsg = `*تم جغم العب الويبو*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          }
+	return reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
+        }
         let animetxt = `
   🎀 *Title: ${anime.title}*
   🎋 *Type: ${anime.type}*
@@ -12602,12 +12602,12 @@ last login: ${aru.lastLogin}
 	const zib = srh.data[0].genres[i].name
 	if (zib.includes('Hentai') || zib.includes('Ecchi') || text.includes('Boys Love')){
          orgnye = m.sender
-	   reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
 	const isBane = banUser.includes(orgnye)
 	banUser.push(orgnye)
 	const txtmsg = `*تم جغم العب الويبو*`
         for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+	return reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
 	}
         let mang = `*Title:* ${srh.data[0].title}\n`;
         mang += `*Status:* ${srh.data[0].status}\n`;
