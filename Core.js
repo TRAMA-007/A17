@@ -1641,6 +1641,12 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	       }
     }
 
+    if (smallinput.includes('لباسك ناصل')) {
+   if (tagg) {
+	 reply(`ناصل عشان العتلة دي مستنياك يا زولي`) 
+  }
+	    } 
+
 
     if (smallinput.includes('اركب') || smallinput.includes('ابلع') || smallinput.includes('يا مرا')) {
    const typ = ['ميدوريا كلامك كتير و شراميطك حبة','اركب في دا اول يا صحبي', '🤠'];
