@@ -548,7 +548,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=2R4s5IiYenzyn-QV8S5z32Zcn7ESAXvqFec-WrSnyD4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=hFs_pZ7GpBiqypkWpR3BxMs5Pz1n9mfUNoLPau2NxZo&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     } 
@@ -1701,8 +1701,8 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	 } */
 	  
 
-    if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('seed') || smallinput.includes('boobs') || smallinput.includes('خول') || smallinput.includes('fuck') || smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck') || smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كسم') || smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي'){
-    if (!m.isGroup) {
+    if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('seed') || smallinput.includes('boobs') || smallinput.includes('خول') || smallinput.includes('fuck') || smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck') || smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كسم') || smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي')){
+    if (!m.isGroup && !isPlana && !isCreator) {
     await A17.sendMessage(from, { text: 'بلوك' });
     await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
