@@ -7067,6 +7067,26 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         break
 
 
+       case 'yunli':
+       case 'يونلي':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1221_Yunli.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break 
+
+
+       case 'Jiaoqiu':
+       case 'جياوشي':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1218_Jiaoqiu.png`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break 
+
+
        case 'ميشا':
        case 'misha':
         if (isBan) return reply(mess.banned);
