@@ -216,6 +216,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [botNumber, ...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isHj = [ ...global.hhj].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [ ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKh = [ ...global.khattab].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
     const isSafi = [ ...global.safi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)  
@@ -1684,41 +1685,13 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
      } */
 
 
-   if (smallinput.includes('زولتي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
-   const typ = ['زولي السمين..الخبر', 'وين الناس', 'اخبار السكس شنو يا زوليي'];
+   if (smallinput.includes('زولي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
+   const typ = ['زولي السمين..الخبر', 'وين الناس', 'اخبار السكس شنو يا زولي'];
    const random = typ[Math.floor(Math.random() * typ.length)];
     if (isAbd) reply (random);
   }
 
-
-    if (smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كس')) {
-    if (!m.isGroup) {
-    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
-    await A17.sendMessage(from, { text: 'بلوك' });
-    await A17.sendContact(m.chat, global.Owner, m)
-        let users = m.sender
-        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-      const txtmsg = `*تم الجغم*`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-      }    }
-
                                                                                                               
-    if (smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي')) {
-    if (!m.isGroup) {
-    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
-    await A17.sendMessage(from, { text: 'بلوك' });
-    await A17.sendContact(m.chat, global.Owner, m)
-        let users = m.sender
-        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-        const txtmsg = `*تم الجغم*`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-        
-        
-      }    }
 
 	/* if (smallinput.includes('fang') || smallinput.includes('yuan')) {
 	    const txtmsg = `*عان العرصوص دا كمان*`
@@ -1728,9 +1701,8 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	 } */
 	  
 
-    if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('ass')) {
+    if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('seed') || smallinput.includes('boobs') || smallinput.includes('خول') || smallinput.includes('fuck') || smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck') || smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كسم') || smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي'){
     if (!m.isGroup) {
-    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
     await A17.sendMessage(from, { text: 'بلوك' });
     await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
@@ -1740,36 +1712,6 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
       }    }
-
-
-    if (smallinput.includes('boobs') || smallinput.includes('زب') || smallinput.includes('fuck')) {
-    if (!m.isGroup) {
-    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
-    await A17.sendMessage(from, { text: 'بلوك' });
-    await A17.sendContact(m.chat, global.Owner, m)
-        let users = m.sender
-        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    const txtmsg = `*تم الجغم*`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-      }    }
-
-
-    if (smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck')) {
-    if (!m.isGroup) {
-    await A17.sendMessage(from, { text: 'خخخخخخ من بين كل الناس ما عرفت تتحرش الا مع بوت؟' });
-    await A17.sendMessage(from, { text: 'بلوك' });
-    await A17.sendContact(m.chat, global.Owner, m)
-        let users = m.sender
-        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    const txtmsg = `*تم الجغم*`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
-      }    }
-
-
 
 
     if (smallinput.includes('ارونا احسن') || smallinput.includes('ارونا افضل') || smallinput.includes('ارونا فوء')) {
@@ -1780,6 +1722,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
 
   if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput.includes('201100224155')) {
+      if (isBan) return reply (`ما تتكلم معاي يا عب`)
     const typ = ['عيون بلانا', 'احكي', 'شنو يا عسل', 'شنو يا زوووو999لي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
      if (!isAli && !isTawfik && !isCreator && !isAbd && !isShaq) return reply (random)
@@ -3761,7 +3704,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
-	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed')){
+	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy')){
          orgnye = m.sender
 	   reply(`you've been banned from using plana..reason : *عشان انت عب قليل ادب*`)
 	const isBane = banUser.includes(orgnye)
@@ -3786,7 +3729,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=4yAESrJig_8QoqXFy7T5CcBatQLK906RbdmskOQ5jDg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=JvZrdqq18_OP215p6s3j7tldybN2GgwCBdPLUlyD4_0&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -5652,7 +5595,7 @@ _Click the button below to download_`
       case 'music': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!isCreator && !isAdam && !isTawfik) return reply(`this command is unavailable for you`)
+        if (!isCreator && !isAdam && !isTawfik && !isHj) return reply(`this command is unavailable for you`)
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
 
         const YT = require('./lib/ytdl-core');
