@@ -11281,6 +11281,16 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         reply(mess.waiting);
         const anime = await malScraper.getInfoFromName(text).catch(() => null)
         if (!anime) return reply(`${p}Could not find your scarch`)
+	const zib = anime.genres
+	if (zib.includes('hentai') || zib.includes('ecchi') || text.includes('boys love')){
+         orgnye = m.sender
+	   reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
+	const isBane = banUser.includes(orgnye)
+	banUser.push(orgnye)
+	const txtmsg = `*تم جغم العب الويبو*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          }
         let animetxt = `
   🎀 *Title: ${anime.title}*
   🎋 *Type: ${anime.type}*
@@ -12591,6 +12601,16 @@ last login: ${aru.lastLogin}
         const manga = new Manga();
         if (!q) return reply(`Please proide a search term!\n\n_Example:_ ${prefix}manga naruto`)
         let srh = await manga.searchManga(q)
+	const zib = srh.data[0].genres[i].name
+	if (zib.includes('hentai') || zib.includes('ecchi') || text.includes('boys love')){
+         orgnye = m.sender
+	   reply(`you've been banned from using plana..reason : *عشان انت عب ويبو قليل ادب و ما عندك حياة*`)
+	const isBane = banUser.includes(orgnye)
+	banUser.push(orgnye)
+	const txtmsg = `*تم جغم العب الويبو*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+	}
         let mang = `*Title:* ${srh.data[0].title}\n`;
         mang += `*Status:* ${srh.data[0].status}\n`;
         mang += `*Total Volumes:* ${srh.data[0].volumes}\n`;
