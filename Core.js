@@ -151,7 +151,7 @@ if (global.db)
 
 
 
-//g
+//gh
 let isSleeping = false; // Move tthe declaraation herge.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
