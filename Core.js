@@ -3745,7 +3745,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=JvZrdqq18_OP215p6s3j7tldybN2GgwCBdPLUlyD4_0&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=97APUNf2W2jeCbV-xldQyGak_YfGaOp6KyBsNe8iRgQ&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -11531,8 +11531,7 @@ const imageUrrls = [
                         "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"blade","id":"${prefix}card-blade ${q}"}`
 
-                      },
-			    {
+                      },  {
                         "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"dan heng","id":"${prefix}card-lunae ${q}"}`
 
@@ -12895,7 +12894,6 @@ last login: ${aru.lastLogin}
 
 
   ⌯     ${prefix}𝐡𝐬𝐫 (𝐡𝐨𝐧𝐤𝐚𝐢 𝐬𝐭𝐚𝐫 𝐫𝐚𝐢𝐥 𝐛𝐮𝐥𝐢𝐝𝐬)
-  ⌯     ${prefix}𝐡𝐬𝐫-𝐜𝐚𝐫𝐝𝐬 (𝐡𝐨𝐧𝐤𝐚𝐢 𝐬𝐭𝐚𝐫 𝐫𝐚𝐢𝐥 𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫 𝐜𝐚𝐫𝐝𝐬)
   ⌯     ${prefix}𝐛𝐚 (𝐛𝐥𝐮𝐞 𝐚𝐫𝐜𝐡𝐢𝐯𝐞 𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐬) 
   ⌯     ${prefix}𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫 (𝐟𝐨𝐫 𝐠𝐞𝐧𝐞𝐫𝐚𝐭𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐠𝐞𝐧𝐬𝐡𝐢𝐧 𝐚𝐧𝐝 𝐡𝐬𝐫 𝐜𝐚𝐫𝐝𝐬)
   ⌯     ${prefix}𝐠𝐞𝐧𝐬𝐡𝐢𝐧 (𝐟𝐨𝐫 𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫 𝐛𝐮𝐢𝐥𝐝𝐬) 
@@ -13279,6 +13277,17 @@ last login: ${aru.lastLogin}
                         "buttonParamsJson": `{"display_text":"jade","id":"${prefix}jade"}`
 
                       },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"yunli","id":"${prefix}yunli"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"كلجة النيهيلتي","id":"${prefix}jiaoqiu"}`
+
+                      },
+			    
                     ]
                   })
                 })
