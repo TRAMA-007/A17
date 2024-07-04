@@ -4648,6 +4648,17 @@ break;
         break;
 
 
+	case 'ttt': {
+        if (!isCreator) return reply (`🍆`) 
+        A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+        const number = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender
+	const typ = await getBuffer(`https://rule34.xxx//samples/589/sample_67fe9d3babc7c9f6f66062708c55fc7b.jpg?10533523`)
+        await A17.sendMessage(number, { image: typ, mentions: [m.sender] })
+        reply(`تم الطبخ`)
+      }
+        break;
+
+
 	case 'uo': {
         if (!isCreator) return reply (`🍆`) 
       A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
