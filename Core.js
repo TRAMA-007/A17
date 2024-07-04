@@ -226,6 +226,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isJoan = [ ...global.eisa].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isBayome = [ ...global.bayome].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHamid = [ ...global.hamid].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isZz = [ ...global.zzz].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isEgo = [...global.ego].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKaze = [ ...global.kaze].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAbu = [ ...global.abu].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -518,7 +519,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=J4XwSJQWf8sUTSlsyAsdHgnG2JrUpPY77XdWtGgqEnw&sessionId=pW8FCoyftHdOug1c2mLwAqkwld9zmTKni4RpyaiQNKs&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=9BWaVUtxRh4BGgjJe6ulWM4y3Aw7YDtyoUE4ik1zEuI&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
@@ -1718,7 +1719,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	  
 
     if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('seed') || smallinput.includes('boobs') || smallinput.includes('خول') || smallinput.includes('fuck') || smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck') || smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كسم') || smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي')){
-    if (!m.isGroup && !isPlana && !isCreator) {
+    if (!m.isGroup && !isPlana && !isCreator && !isZz) {
     await A17.sendMessage(from, { text: 'بلوك' });
     await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
