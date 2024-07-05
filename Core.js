@@ -7089,7 +7089,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         break 
 
 
-       case 'Jiaoqiu':
+       case 'jiaoqiu':
        case 'جياوشي':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
