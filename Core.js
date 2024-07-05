@@ -13296,7 +13296,7 @@ last login: ${aru.lastLogin}
                       },
 			    {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"كلجة النيهيلتي","id":"${prefix}jiaoqiu"}`
+                        "buttonParamsJson": `{"display_text":"كلجة النيهيلتي","id":"${prefix}Jiaoqiu"}`
 
                       },
 			    
