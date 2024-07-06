@@ -1630,12 +1630,12 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    }
 
 
-    if (smallinput.endsWith('ايه') || smallinput.endsWith('إيه')) {
+  /*  if (smallinput.endsWith('ايه') || smallinput.endsWith('إيه')) {
      const reimu = ['خدتك عليه' , 'ارقعك واحد امبليه'];
    const marisa = reimu[Math.floor(Math.random() * reimu.length)];
    reply (marisa);
     }
-
+*/
 
     if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
    const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
