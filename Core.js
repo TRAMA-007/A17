@@ -3746,7 +3746,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=IQ9Gzs_b02IoyeP-GU49_ffddw0yYW_YPSFaR8WK9_Y&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=8P0wBc_iX8Fy6JwifvO-IEo5AWdGHJdhMqFfa_780bc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -5235,16 +5235,20 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "⌛", key: m.key } })
+	const swn = args.join(" ")
+        const tosay = swn.split("#")[0];
+        const lang = swn.split("#")[1]; 
 
-        if (!args[0]) return reply("Please give me a text so that i can speak it!")
+        if (!tosay) return reply("Please give me a text so that i can speak it!")
+	if (!lang) return reply("Please give me the language you want..example  .say something #en")
 
-        let texttosay = text
-          ? text
-          : m.quoted && m.quoted.text
-            ? m.quoted.text
-            : m.text;
+     //   let texttosay = text
+     //     ? text
+      //    : m.quoted && m.quoted.text
+     //       ? m.quoted.text
+       //     : m.text;
         const SpeakEngine = require("google-tts-api");
-        const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, { lang: "en", slow: false, host: "https://translate.google.com", });
+        const texttospeechurl = SpeakEngine.getAudioUrl(tosay, { lang: `${lang}`, slow: false, host: "https://translate.google.com", });
         A17.sendMessage(m.chat, { audio: { url: texttospeechurl, }, mimetype: "audio/mpeg", fileName: `A17SpeechEngine.mp3`, }, { quoted: m, });
       }
         break;
