@@ -1590,7 +1590,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
                 ]; 
       const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
         let media = await getBuffer(randomImageUrl);
-   if (isTori) await A17.sendMessage(from, { image : mediaa });
+   if (isTori) await A17.sendMessage(from, { image : media });
     }
 
 
