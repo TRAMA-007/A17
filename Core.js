@@ -423,7 +423,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=zAX437SilgK-sc4v92BYy48l5-LwxuxTlhUdn7zlP-I&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=oBN5QTEr5s7qEZJXEZCKDsadRD5ctNwGOIE187ZO7xA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -3721,7 +3721,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
-	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('kiss')) {
+	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch')) {
          orgnye = m.sender
 	   reply(`you've been banned from using plana..reason : *عشان انت عب قليل ادب*`)
 	const isBane = banUser.includes(orgnye)
@@ -3746,7 +3746,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=8P0wBc_iX8Fy6JwifvO-IEo5AWdGHJdhMqFfa_780bc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=eipC9jgCllkIZTJ3nMKITGaIKnrTs6ybFboJDvzZZ0I&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -4679,6 +4679,7 @@ break;
         if (!m.isGroup) return reply(mess.grouponly);
         if (!isBotAdmins) return reply(mess.botadmin);
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
+	if (m.quoted === botNumber) return reply (`شنو يااا زولي معقولة لكن`) 
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
