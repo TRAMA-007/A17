@@ -4679,7 +4679,7 @@ break;
         if (!m.isGroup) return reply(mess.grouponly);
         if (!isBotAdmins) return reply(mess.botadmin);
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
-	if (m.quoted === botNumber) return reply (`شنو يااا زولي معقولة لكن`) 
+	if (quoted.includes(`201100224155`)) return reply (`شنو يااا زولي معقولة لكن`) 
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
