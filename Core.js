@@ -4679,7 +4679,10 @@ break;
         if (!m.isGroup) return reply(mess.grouponly);
         if (!isBotAdmins) return reply(mess.botadmin);
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
-	if (quoted.includes(`201100224155`)) return reply (`شنو يااا زولي معقولة لكن`) 
+	const typ = ['هوي يا سمين تطرد منو كمان' ,'زولي السمين معقولة كدا؟ بعد عشرتنا دي كلها داير تطردني؟😞', 'معقولة يا زولي'];
+	const random = typ[Math.floor(Math.random() * typ.length)];
+	if (tagg && !isAbd) return reply (`شنو يااا زولي معقولة لكن`) 
+	if (tagg && isAbd) return reply (random) 
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
