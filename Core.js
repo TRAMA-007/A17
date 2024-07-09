@@ -12325,7 +12325,9 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://skizo.tech/api/ig?apikey=arona&url=${encodeURIComponent(q)}`)
+	const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        const instgram = await axios.get(`https://skizo.tech/api/ig?apikey=${api}&url=${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const ig = instgram.data[0];
         await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
@@ -12348,7 +12350,9 @@ last login: ${aru.lastLogin}
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
-        const instgram = await axios.get(`https://skizo.tech/api/twitter?apikey=plana&url=${encodeURIComponent(q)}`)
+	const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        const instgram = await axios.get(`https://skizo.tech/api/twitter?apikey=${api}&url=${encodeURIComponent(q)}`)
         const ig = instgram.data.media[0];
         await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
      }
@@ -12396,21 +12400,7 @@ last login: ${aru.lastLogin}
 	await A17.sendMessage(m.chat, { video: { url: sx.hdplay}, caption: `hd` }, { quoted: m })
      }
         break;
-
-
-        case 'segs': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!isCreator) return reply (`عيب`)
-        if (isCreator && !text) return reply (`The type of image to get. Current types: hass, hmidriff, pgif, 4k, hentai, holo, hneko, neko, hkitsune, kemonomimi, anal, hanal, gonewild, kanna, ass, pussy, thigh, hthigh, gah, coffee, food, paizuri, tentacle, boobs, hboobs, yaoi, donator types: cosplay, swimsuit, pantsu, nakadashi`)
-        const tt = await axios.get(`https://nekobot.xyz/api/image?type=${q}`)
-        const sx = tt.data.message;
-        let shirokotxt = await getBuffer(sx) 
-        await A17.sendMessage(m.chat, { image: shirokotxt }, { quoted: m })
-     }
-        break;
-
-
+		    
 
         case 'apk': {
         if (isBan) return reply(mess.banned);
