@@ -1114,10 +1114,17 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
     if (smallinput.includes('بلانا اطرديه') || smallinput.includes('حد يطرده') || smallinput.includes('اطلع برا')) {
         if (!isAdmins && !isCreator) return reply('🤏')
+	if (tagg && !isAbd) return reply (`شنو يااااا`) 
+	if (tagg && isAbd) {
+	 reply (`يطلع فيك زبي`)
+	let users = m.sender
+	await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
+	} else {
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
         if (isAdmins && isCreator) return reply('تم') 
         }
+	   }
 
 
     if (smallinput.includes('امسح العار') || smallinput.includes('بلانا احذفي') || smallinput.includes('بلانا امسحي')) {
