@@ -209,7 +209,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
-    const isPlana = [ ...global.plana].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isCmd = body.startsWith(prefix)
     const notCmd = body.startsWith('')
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
@@ -217,6 +216,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isPlana = [ ...global.plana].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHj = [ ...global.hhj].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [ ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKh = [ ...global.khattab].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
@@ -981,18 +981,6 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);	    
    }
 
-
-   if (smallinput.includes('lop')) {
-   const { Image } = require ("react-native-compressor");
-  const result = await Image.compress('https://graph.org/file/605e27cf2c16a9f2dc432.png', {
-  compressionMethod: 'manual',
-  maxWidth: 1000,
-  quality: 0.8,
-}); 
-    A17.sendMessage(from, { image : result }, { quoted: m });
-       }
-
-
 	
 
      
@@ -1463,7 +1451,7 @@ Typed *surrender* to surrender and admited defeat`
  
     
    if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french') || smallinput.includes('🇫🇷')) {
-     if (!isPlana {
+     if (!isPlana) {
     let { chat, fromMe, id } = m;
     
     const key = {
