@@ -4591,6 +4591,7 @@ break;
 
 
       case 'promote': case 'admin': {
+	if (!IsPlana){
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -4600,10 +4601,12 @@ break;
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
       }
+	     }
         break;
 
 
       case 'demote': case 'unadmin': {
+	 if (!IsPlana){
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -4613,6 +4616,7 @@ break;
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
       }
+	     }
         break;
 
 
@@ -4675,8 +4679,8 @@ break;
         if (!isCreator) return reply (`🍆`) 
       A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         const swn = args.join(" ")
-        const number = swn.split("-")[0];
-        const message = swn.split("-")[1];
+        const number = swn.split("#")[0];
+        const message = swn.split("#")[1];
         await A17.sendMessage(number, { text: message, mentions: [m.sender] })
         reply(`تم الطبخ`)
       }
