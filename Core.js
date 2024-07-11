@@ -216,7 +216,6 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-    const isPlana = [ ...global.plana].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHj = [ ...global.hhj].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [ ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKh = [ ...global.khattab].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
@@ -981,6 +980,18 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);	    
    }
 
+
+   if (smallinput.includes('lop')) {
+   const { Image } = require ("react-native-compressor");
+  const result = await Image.compress('https://graph.org/file/605e27cf2c16a9f2dc432.png', {
+  compressionMethod: 'manual',
+  maxWidth: 1000,
+  quality: 0.8,
+}); 
+    A17.sendMessage(from, { image : result }, { quoted: m });
+       }
+
+
 	
 
      
@@ -1015,7 +1026,20 @@ Typed *surrender* to surrender and admited defeat`
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
 	}
-   } 
+   }
+
+
+     if (smallinput.includes('ggh')) {
+    let media = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
+// تيل الصورة الأصلية
+const originalImage = await sharp(media);
+
+// تقليل حجم الصورة بحجم 50٪
+const resizedImage = await originalImage.resize(50);
+
+// حفظ الصورة المعالجة
+A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pushname}` }, { quoted: m });
+     }
 
 
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
@@ -1055,7 +1079,7 @@ Typed *surrender* to surrender and admited defeat`
 
 
 	if (smallinput.includes('fang') || smallinput.includes('yuan')) {
-	if (!m.isGroup && !isPlana) {
+	if (!m.isGroup) {
     await A17.sendMessage(from, { text: 'فانغ يوان اليركبك يا عب' });
       let users = m.sender
         await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
@@ -1451,7 +1475,6 @@ Typed *surrender* to surrender and admited defeat`
  
     
    if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french') || smallinput.includes('🇫🇷')) {
-     if (!isPlana) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1466,12 +1489,10 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'يعني مش كفاية انك آدم كمان عايز تتكلم فرنسي' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام اتجنن ' });
 }
-   } 
- 
+
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
     if (isTawfik) reply (`توفيق يا توفيق اختو ليك بي الابريق كلام شنو`);
            }
-	  
 
 
     if (smallinput.includes('🦍') || smallinput.includes('nigga') || smallinput.includes('shit')) {
@@ -1903,6 +1924,59 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
     //
     switch (command) {
+
+     case 'hssr': case 'tesbtn':
+  if (isBanChat) return reply(mess.bangc);
+  if (isBan) return reply(mess.banned);
+  let msg = generateWAMessageFromContent(m.chat, {
+    message: {
+      "messageContextInfo": {
+        "deviceListMetadata": {},
+        "deviceListMetadataVersion": 2
+      },
+      interactiveMessage: proto.Message.InteractiveMessage.create({
+        body: proto.Message.InteractiveMessage.Body.create({
+          text: 'test button A17'
+        }),
+        footer: proto.Message.InteractiveMessage.Footer.create({
+          text: 'Powered by Kai'
+        }),
+        // *Corrected: Header is now declared separately*
+        header: proto.Message.InteractiveMessage.Header.create({
+          title: 'honkai star rail',
+          subtitle: null,
+          hasMediaAttachment: true, 
+          media: {  
+            image: { 
+              url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', 
+              mimetype: 'image/jpeg', 
+            } 
+          }
+        }), 
+        nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+          buttons: [
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".jingliu","id":"${global.prefa[0]}jingliu"}
+            },
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".ruan mei","id":"${global.prefa[0]}ruan"}
+            },
+            {
+              "name": "quick_reply",
+              "buttonParamsJson": {"display_text":".blade","id":"${global.prefa[0]}blade"}
+            }
+          ],
+        })
+      })
+    }
+  }, {})
+
+  A17.relayMessage(msg.key.remoteJid, msg.message, {
+    messageId: msg.key.id
+  })
+  break;
 
 
 
@@ -3112,7 +3186,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 		
         case 'gift': {
-    if (!isCreator) return reply(`هاك القيفت دي🍆`) 
+	if (!isCreator) return reply(`هاك القيفت دي🍆`) 
     var cara = 'cara';
   // Get all users (You need to implement this function)
 async function getAllUsers() {
@@ -3649,14 +3723,14 @@ break;
 
 
       case 'plana':
-      case 'cai':
+        case 'cai':
       case 'aiussy': {
 	if (!isPlana) {
         if (isBan) return reply(mess.banned);
         if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
-        if (text.includes('say') || text.includes('type')) reply(`والله يا عب انا لو قبضتك ببيعك`)
-        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!..or select a character you want..example  .cai fuxuan/hello`);
-	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch') || text.includes('say') || text.includes('type') || text.includes('print')) {
+	if (text.includes('say') || text.includes('type')) reply(`والله يا عب انا لو قبضتك ببيعك`)
+        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
+	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch') || text.includes('type') || text.includes('say') || text.includes('print')){
          orgnye = m.sender
 	   reply(`you've been banned from using plana..reason : *عشان انت عب*`)
 	const isBane = banUser.includes(orgnye)
@@ -3699,7 +3773,7 @@ break;
           reply("An error occurred while fetching the response from the API.");
         }
       }
-	}
+      }
 	     }
         break;
 
@@ -12536,6 +12610,17 @@ last login: ${aru.lastLogin}
     await A17.sendMessage(m.chat, { video: { url: yt.result} }, { quoted: m });
     }
       break;
+        
+
+        case 'planaarona119': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        const seggs = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
+        let bjf = await getBuffer(seggs.data.url)
+       let bjif = await GIFBufferToVideoBuffer(bjf)   
+             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m })
+                                         }
+       break;
 
 
 
@@ -12633,6 +12718,28 @@ last login: ${aru.lastLogin}
         break;
 
 
+      case 'shinobu':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        reply(mess.waiting)
+        waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
+        /* var wbuttsssr = [
+          {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
+          ] */
+        let buttonMessagessfgr = {
+          image: { url: waifuddd.data.url },
+          caption: 'اتحفنا يا سفاح الاندرإيج!',
+          /*  buttons: wbuttsssr,
+            headerType: 2 */
+        }
+
+        await A17.sendMessage(m.chat, buttonMessagessfgr, { quoted: m }).catch(err => {
+          return ('error..')
+        })
+        break;
+
+
 
       ////////////////////////////////////////////////////////////////////////////
       ////////////////////////////////////////////////////////////////////////////
@@ -12681,6 +12788,8 @@ last login: ${aru.lastLogin}
         reply('Broadcast Sent !')
       }
         break;
+
+
 
 
       case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu': {
