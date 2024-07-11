@@ -1033,12 +1033,7 @@ Typed *surrender* to surrender and admited defeat`
 	    const sticker = new Sticker(media, {
     pack: 'My Pack', // The pack name
     author: 'Me', // The author name
-    type: StickerTypes.FULL, // The sticker type
-    categories: ['🤩', '🎉'], // The sticker category
-    id: '12345', // The sticker id
-    quality: 50, // The quality of the output file
-    background: '#000000' // The sticker background color (only for full stickers)
-})
+    })
 
 // or get Baileys-MD Compatible Object
 A17.sendMessage(from, { sticker : sticker }, { quoted: m });
