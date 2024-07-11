@@ -209,13 +209,13 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
-    const isCmd = body.startsWith(prefix) && !isPlana 
+    const isCmd = body.startsWith(prefix) 
     const notCmd = body.startsWith('')
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
-    const isCreator = [botNumber, ...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isCreator = [...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHj = [ ...global.hhj].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [ ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKh = [ ...global.khattab].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
@@ -1026,20 +1026,7 @@ Typed *surrender* to surrender and admited defeat`
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);
 	}
-   }
-
-
-     if (smallinput.includes('ggh')) {
-    let media = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
-// تيل الصورة الأصلية
-const originalImage = await sharp(media);
-
-// تقليل حجم الصورة بحجم 50٪
-const resizedImage = await originalImage.resize(50);
-
-// حفظ الصورة المعالجة
-A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pushname}` }, { quoted: m });
-     }
+   } 
 
 
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
@@ -1079,7 +1066,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
 	if (smallinput.includes('fang') || smallinput.includes('yuan')) {
-	if (!m.isGroup) {
+	if (!m.isGroup && !isPlana) {
     await A17.sendMessage(from, { text: 'فانغ يوان اليركبك يا عب' });
       let users = m.sender
         await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
@@ -1924,59 +1911,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
     //
     switch (command) {
-
-     case 'hssr': case 'tesbtn':
-  if (isBanChat) return reply(mess.bangc);
-  if (isBan) return reply(mess.banned);
-  let msg = generateWAMessageFromContent(m.chat, {
-    message: {
-      "messageContextInfo": {
-        "deviceListMetadata": {},
-        "deviceListMetadataVersion": 2
-      },
-      interactiveMessage: proto.Message.InteractiveMessage.create({
-        body: proto.Message.InteractiveMessage.Body.create({
-          text: 'test button A17'
-        }),
-        footer: proto.Message.InteractiveMessage.Footer.create({
-          text: 'Powered by Kai'
-        }),
-        // *Corrected: Header is now declared separately*
-        header: proto.Message.InteractiveMessage.Header.create({
-          title: 'honkai star rail',
-          subtitle: null,
-          hasMediaAttachment: true, 
-          media: {  
-            image: { 
-              url: 'https://graph.org/file/4df95c0f7a5bf314a6dba.jpg', 
-              mimetype: 'image/jpeg', 
-            } 
-          }
-        }), 
-        nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-          buttons: [
-            {
-              "name": "quick_reply",
-              "buttonParamsJson": {"display_text":".jingliu","id":"${global.prefa[0]}jingliu"}
-            },
-            {
-              "name": "quick_reply",
-              "buttonParamsJson": {"display_text":".ruan mei","id":"${global.prefa[0]}ruan"}
-            },
-            {
-              "name": "quick_reply",
-              "buttonParamsJson": {"display_text":".blade","id":"${global.prefa[0]}blade"}
-            }
-          ],
-        })
-      })
-    }
-  }, {})
-
-  A17.relayMessage(msg.key.remoteJid, msg.message, {
-    messageId: msg.key.id
-  })
-  break;
 
 
 
@@ -3725,6 +3659,7 @@ break;
       case 'plana':
         case 'cai':
       case 'aiussy': {
+	if (!isPlana) {
         if (isBan) return reply(mess.banned);
         if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
@@ -3771,6 +3706,7 @@ break;
           reply("An error occurred while fetching the response from the API.");
         }
       }
+	}
 	     }
         break;
 
@@ -12607,17 +12543,6 @@ last login: ${aru.lastLogin}
     await A17.sendMessage(m.chat, { video: { url: yt.result} }, { quoted: m });
     }
       break;
-        
-
-        case 'planaarona119': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        const seggs = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
-        let bjf = await getBuffer(seggs.data.url)
-       let bjif = await GIFBufferToVideoBuffer(bjf)   
-             await A17.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m })
-                                         }
-       break;
 
 
 
@@ -12712,28 +12637,6 @@ last login: ${aru.lastLogin}
           ""
         )}`;
         A17.sendMessage(m.chat, { image: { url: srh.data[0].images.jpg.large_image_url }, caption: mang }, { quoted: m })
-        break;
-
-
-      case 'shinobu':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        reply(mess.waiting)
-        waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
-        /* var wbuttsssr = [
-          {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
-          ] */
-        let buttonMessagessfgr = {
-          image: { url: waifuddd.data.url },
-          caption: 'اتحفنا يا سفاح الاندرإيج!',
-          /*  buttons: wbuttsssr,
-            headerType: 2 */
-        }
-
-        await A17.sendMessage(m.chat, buttonMessagessfgr, { quoted: m }).catch(err => {
-          return ('error..')
-        })
         break;
 
 
