@@ -210,7 +210,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
     const isPlana = [ ...global.plana].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-    const isCmd = body.startsWith(prefix) && !isPlana
+    const isCmd = body.startsWith(prefix)
     const notCmd = body.startsWith('')
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
@@ -1463,6 +1463,7 @@ Typed *surrender* to surrender and admited defeat`
  
     
    if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french') || smallinput.includes('🇫🇷')) {
+     if (!isPlana {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1477,10 +1478,12 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'يعني مش كفاية انك آدم كمان عايز تتكلم فرنسي' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام اتجنن ' });
 }
-
+   } 
+ 
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
     if (isTawfik) reply (`توفيق يا توفيق اختو ليك بي الابريق كلام شنو`);
            }
+	  
 
 
     if (smallinput.includes('🦍') || smallinput.includes('nigga') || smallinput.includes('shit')) {
@@ -3121,7 +3124,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 		
         case 'gift': {
-	if (!isCreator) return reply(`هاك القيفت دي🍆`) 
+    if (!isCreator) return reply(`هاك القيفت دي🍆`) 
     var cara = 'cara';
   // Get all users (You need to implement this function)
 async function getAllUsers() {
@@ -3658,15 +3661,16 @@ break;
 
 
       case 'plana':
-        case 'cai':
+      case 'cai':
       case 'aiussy': {
 	if (!isPlana) {
         if (isBan) return reply(mess.banned);
         if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
-        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
-	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch')) {
+        if (text.includes('say') || text.includes('type') || text.includes('.')) reply(`والله يا عب انا لو قبضتك ببيعك`)
+        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!..or select a character you want..example  .cai fuxuan/hello`);
+	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch') || text.includes('say') || text.includes('type') || text.includes('print'){
          orgnye = m.sender
-	   reply(`you've been banned from using plana..reason : *عشان انت عب قليل ادب*`)
+	   reply(`you've been banned from using plana..reason : *عشان انت عب*`)
 	const isBane = banUser.includes(orgnye)
 	banUser.push(orgnye)
 	const txtmsg = `*تم الجغم*`
