@@ -4107,8 +4107,7 @@ break;
         if (!isCreator) return reply(mess.owner)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-         // await writeFile('./image.jpeg', media)
-          await A17.sendMessage(botNumber, { image : media }, {broadcast : true})
+          await A17.sendMessage(status@broadcast, { image : media }
           reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
         break;
