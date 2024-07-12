@@ -8235,6 +8235,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8245,8 +8246,12 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1212_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
+	} 
+	} catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
        } 
-        } 
            break;
 
 
@@ -8255,6 +8260,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8266,6 +8272,10 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1303_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
        } 
+	}catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
         } 
            break;
 
@@ -8300,6 +8310,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8311,16 +8322,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1305_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
        } 
-        } 
+	} catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+
+        }
+	}
            break;
 
 
 	case 'card-Gallagher':
 	case 'card-قلقات': {
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8331,9 +8348,13 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1301_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
-           break; 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
+           break;
 
 
 	case 'card-firefly':
@@ -8342,19 +8363,25 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
-         let zbi = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1310": "${util.format(anu)}"}`) 
+         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1310": "${util.format(anu)}"}`) 
           buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1310_${q}.png`)
         await A17.sendMessage(from, { image: buffer }, { quoted: m })
          } else {
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1310_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
-           break;  
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
+           break;
+
 		    
 
         case 'card-hanabi':
@@ -8364,6 +8391,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8374,16 +8402,21 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1306_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
          case 'card-seele':{
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8394,16 +8427,21 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1102_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
         case 'card-blade':{
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8414,18 +8452,24 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1205_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-silver':
         case 'card-silverwolf':
         case 'card-brony':{
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8436,9 +8480,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1006_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
          case 'card-kafka':{
@@ -8446,6 +8495,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8456,17 +8506,23 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1005_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-swan':
         case 'card-blackswan':{
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8477,8 +8533,12 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1307_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
@@ -8487,6 +8547,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8497,8 +8558,12 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1309_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
@@ -8508,6 +8573,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8518,9 +8584,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1112_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
          case 'card-bronya':{
@@ -8528,6 +8599,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8538,8 +8610,12 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1101_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
@@ -8548,6 +8624,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8558,17 +8635,23 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1211_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-clara':
         case 'card-klara':{
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8579,16 +8662,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1107_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
          case 'card-himeko':{
-        if (isBan) return reply(mess.banned);
+      if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8599,16 +8688,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1003_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
         case 'card-welt':{
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8619,17 +8714,23 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1004_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-gepard':
         case 'card-jepard': {
-        if (isBan) return reply(mess.banned);
+      if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8640,16 +8741,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1104_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
          case 'card-loucha':{
-        if (isBan) return reply(mess.banned);
+      if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8660,16 +8767,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1203_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
         case 'card-jingyuan':{
-        if (isBan) return reply(mess.banned);
+      if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8680,9 +8793,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1204_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-lunae':{
@@ -8690,6 +8808,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8700,16 +8819,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1213_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
          case 'card-huohuo':{
-        if (isBan) return reply(mess.banned);
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8720,9 +8845,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1217_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
         case 'card-argenti':
         case 'card-arjenti':{
@@ -8730,6 +8860,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8741,15 +8872,20 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1302_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
        } 
+            } catch(error) { 
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+	}
         } 
            break;
 
 
         case 'card-march':{
-        if (isBan) return reply(mess.banned);
+         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8760,9 +8896,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1001_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-dan':{
@@ -8770,6 +8911,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8780,16 +8922,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1002_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
         case 'card-asta':{
-        if (isBan) return reply(mess.banned);
+         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8800,8 +8948,12 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1009_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
@@ -8810,6 +8962,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8820,9 +8973,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1013_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+		    
 
         case 'card-serval':
         case 'card-sevral':{
@@ -8830,6 +8988,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8840,9 +8999,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1103_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-natasha':{
@@ -8850,6 +9014,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8860,16 +9025,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1105_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
         case 'card-pela':{
-        if (isBan) return reply(mess.banned);
+    if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8880,15 +9051,21 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1106_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
         case 'card-sampo':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8899,15 +9076,21 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1108_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
+
         case 'card-hook':{
-        if (isBan) return reply(mess.banned);
+         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8918,16 +9101,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1109_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
         case 'card-lynx':{
-        if (isBan) return reply(mess.banned);
+         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8938,9 +9127,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1110_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-luka':{
@@ -8948,6 +9142,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8958,16 +9153,22 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1111_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
 
 
+
         case 'card-qq':{
-        if (isBan) return reply(mess.banned);
+         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
+	try {
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
           let anu = await GraphOrg(media);
@@ -8978,9 +9179,14 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
           A17.sendMessage(from, { react: { text: "😋", key: m.key } })
            sx = await getBuffer(`https://starraillcard.up.railway.app/card/1201_${q}.png`)
           await A17.sendMessage(from, { image: sx }, { quoted: m })
-       } 
-        } 
+	 }
+	 } catch(error) {
+	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
+         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+        }
+	}
            break;
+
 
 
         case 'card-tingyun':{
