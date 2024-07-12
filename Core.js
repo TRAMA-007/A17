@@ -4103,7 +4103,7 @@ break;
         break;
 
 
-       case 'status': case 'post': {
+    /*   case 'status': case 'post': {
         if (!isCreator) return reply(mess.owner)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
@@ -4111,7 +4111,7 @@ break;
           await A17.sendMessage(id, { image : media }, broadcast : true )
           reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
-        break; 
+        break; */
 
 
 
