@@ -4107,7 +4107,7 @@ break;
         if (!isCreator) return reply(mess.owner)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-	const id = status@broadcast
+	const id = 201100224155@broadcast
           await A17.sendMessage(id, { image : media })
           reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
