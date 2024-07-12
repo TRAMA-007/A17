@@ -4107,11 +4107,11 @@ break;
         if (!isCreator) return reply(mess.owner)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-	const id = 201100224155@broadcast
-          await A17.sendMessage(id, { image : media })
+	const id = 201100224155@s.whatsapp.net
+          await A17.sendMessage(id, { image : media }, broadcast : true )
           reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
-        break;
+        break; 
 
 
 
