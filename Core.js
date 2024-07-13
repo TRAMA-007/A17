@@ -2241,6 +2241,30 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         let serika = await getBuffer(`https://skizo.tech/api/remini?apikey=${api}&url=${util.format(anu)}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
+        break;
+
+
+	case 'test':{
+        if (isBanChat) return reply(mess.bangc);
+         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+          let { GraphOrg } = require("./lib/uploader");
+
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let anu = await GraphOrg(media);
+	 let serika = await getBuffer(`https://api.trace.moe/search?cutBorders&url=${util.format(anu)}`) 
+	 const hoshino = serika.data.result[0]
+	 const sim = ${hoshino.similarity} * 100
+	 const sensei = `
+        filename : ${hoshino.filename}
+	episode :  ${hoshino.episode}
+	from :  ${hoshino.from}
+        To :  ${hoshino.to}
+	similarity :  ${sim}
+		`
+        await A17.sendMessage(m.chat, { video: { url: hoshino.video}, caption : sensei }, { quoted: m })
+          }
         break; 
 
 
