@@ -2244,7 +2244,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
-/*	case 'test':{
+	case 'trace':{
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           let { GraphOrg } = require("./lib/uploader");
@@ -2266,7 +2266,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { video: { url: hoshino.video}, caption: sensei }, { quoted: m })
           }
         break; 
-       */
+       
 
 	case 'tst':{
 
