@@ -3739,7 +3739,7 @@ break;
         if (isBan) return reply(mess.banned);
         if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
 	if (text.includes('say') || text.includes('type')) reply(`والله يا عب انا لو قبضتك ببيعك`)
-        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!`);
+        if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!...or choose a character you want..example ${prefix}cai gojo satoru/would you lose?`);
 	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch') || text.includes('type') || text.includes('say') || text.includes('print')){
          orgnye = m.sender
 	   reply(`you've been banned from using plana..reason : *عشان انت عب*`)
@@ -3765,7 +3765,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=kIHUXwjpG_LMeguY-FyrfJ4703ouSi_1w_tI8jza0bk&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=fr92OjKNHMYbGHP6KuymPtxv-Lbq1GPLMp3WX8HKe0o&token=529e24b4173b29dbc3054fef02a380e1e5b419498&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
