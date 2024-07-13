@@ -2253,7 +2253,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-	 let serika = await getBuffer(`https://api.trace.moe/search?cutBorders&url=${util.format(anu)}`) 
+	 let serika = await axios.get(`https://api.trace.moe/search?cutBorders&url=${util.format(anu)}`) 
 	 const hoshino = serika.data.result[0]
 	 const sim = ${hoshino.similarity} * 100
 	 const sensei = `
