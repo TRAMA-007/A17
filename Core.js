@@ -2244,7 +2244,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
-	case 'teest':{
+	case 'test':{
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           let { GraphOrg } = require("./lib/uploader");
@@ -2255,7 +2255,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         let anu = await GraphOrg(media);
 	 let serika = await axios.get(`https://api.trace.moe/search?cutBorders&url=${util.format(anu)}`) 
 	 const hoshino = serika.data.result[0]
-	 const sim = ${hoshino.similarity} * 100
+	 const sim = hoshino.similarity * 100
 	 const sensei = `
         filename : ${hoshino.filename}
 	episode :  ${hoshino.episode}
