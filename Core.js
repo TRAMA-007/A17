@@ -6767,9 +6767,11 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717665497.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GSHLLeUX0AAJzHw?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
-	buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717971572.jpg`)
+	bufferr = await getBuffer(`https://pbs.twimg.com/media/GSHLLekWgAAhd4S?format=jpg&name=large`)
+        A17.sendMessage(from, { image: bufferr, caption: 'ْ'}, { quoted: m })
+	buffer2 = await getBuffer(`https://pbs.twimg.com/media/GSHLpyuWwAAVXAc?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
         buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1717971571.jpg`)
         A17.sendMessage(from, { image: buffer3, caption: 'ْ'}, { quoted: m }) 
@@ -6930,7 +6932,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbq_LuqdbBO0s9ygDSW2RbqGtCZOYfDngxMw&usqp=CAU`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GRv7-UzWIAEfNaz?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvGdtQ-EAVP7DyvbQ0hzvqOgzeYkp-NsbgA&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -7129,7 +7131,7 @@ buffer4 = await getBuffer("https://mallucampaign.in/images/img_1717751606.jpg");
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://mallucampaign.in/images/img_1717753069.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GR6e8LJXcAAlYlB?format=jpg&name=large`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStqkwws-JgR-Oj5G739wgaiIeQHM7EOEbq6Q&usqp=CAU");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
