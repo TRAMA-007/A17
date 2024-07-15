@@ -2253,16 +2253,23 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
-	 let serika = await axios.get(`https://api.trace.moe/search?cutBorders&url=${util.format(anu)}`) 
+	 let serika = await axios.get(`https://api.trace.moe/search?anilistInfo&cutBorders&url=${util.format(anu)}`) 
 	 const hoshino = serika.data.result[0]
+	 const title = hoshino.anilist.title.native
+	 const ko = hoshino.anilist.isAdult
+	 if (ko === true) return reply(`دا كلام شنو يا زولي`) 
 	 const sim = hoshino.similarity * 100
 	 if (sim < 86) return reply(`ما عرفت والله يا زولي`) 
 	 const sensei = `
-        filename : ${hoshino.filename}
-	episode :  ${hoshino.episode}
-	from :  ${hoshino.from}
-        To :  ${hoshino.to}
-	similarity :  ${sim}
+        *Name* : ${title}
+	
+	*Episode* :  ${hoshino.episode}
+ 
+	*From* :  ${hoshino.from}
+ 
+        *To* :  ${hoshino.to}
+	
+	*Similarity* :  ${sim}
 		`
         await A17.sendMessage(m.chat, { video: { url: hoshino.video}, caption: sensei }, { quoted: m })
           }
