@@ -12881,7 +12881,7 @@ last login: ${aru.lastLogin}
         if (isBanChat) return reply(mess.bangc);
         if (!isCreator) return reply(`💀`) 
         if (!text) return reply(`Please proide a code`) 
-        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=arona&code=${q}`)
+        const apk = await axios.get(`https://skizo.tech/api/nhentai?apikey=Sora&code=${q}`)
         const fk = apk.data;
         await A17.sendMessage(
           from,
@@ -12912,7 +12912,7 @@ last login: ${aru.lastLogin}
 
         // Send the audio file with the proper 'type' property set to 'audio'
         await A17.sendMessage(from, {
-          document: { url: fk.download + 'arona'},
+          document: { url: fk.download + 'Sora'},
           filename: `fk.title.english` + ".pdf", 
           mimetype: 'application/pdf',
           quoted: m,
