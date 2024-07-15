@@ -6026,6 +6026,16 @@ _Click the button below to download_`
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply("Please provide a search term!nn*Example:* ${prefix}pinterest phild corn");
+    if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('ass')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('hentai')  || text.includes('porn')  || text.includes('nude')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch') || text.includes('rule') || text.includes('loli') || text.includes('milf')){
+         orgnye = m.sender
+	   reply(`you've been banned from using plana..reason : *عشان انت عب*`)
+	const isBane = banUser.includes(orgnye)
+	banUser.push(orgnye)
+	const txtmsg = `*تم الجغم*`
+        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
+          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
+          await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
+	    } 
 
     const typ = ['plana', 'arona', 'adamxion'];
     const apiKey = typ[Math.floor(Math.random() * typ.length)];
