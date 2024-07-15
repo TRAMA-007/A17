@@ -2256,6 +2256,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	 let serika = await axios.get(`https://api.trace.moe/search?cutBorders&url=${util.format(anu)}`) 
 	 const hoshino = serika.data.result[0]
 	 const sim = hoshino.similarity * 100
+	 if (sim < 86) return reply(`ما عرفت والله يا زولي`) 
 	 const sensei = `
         filename : ${hoshino.filename}
 	episode :  ${hoshino.episode}
