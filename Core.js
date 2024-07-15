@@ -423,7 +423,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=9HENGh_y9gI930NL4E7UEFPqiJgypi-5uiQXr0pWMR8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=vMz4UhqfBx3ufac0arbXHAdqRlWrfI_PLv8HmFqw3j4&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -3797,7 +3797,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=fr92OjKNHMYbGHP6KuymPtxv-Lbq1GPLMp3WX8HKe0o&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=6eUUBxZarV7kZxhaLcvp9gVaN6f2X60QthCW1OMVkxg&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
