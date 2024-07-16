@@ -420,7 +420,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 */
 
     
-      if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
+   /*   if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=vMz4UhqfBx3ufac0arbXHAdqRlWrfI_PLv8HmFqw3j4&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
@@ -3769,6 +3769,7 @@ break;
       case 'aiussy': {
 	if (!isPlana) {
         if (isBan) return reply(mess.banned);
+	if (!isCreator) return reply (`هذا الأمر عليه صيانة حاليا`) 
         if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
 	if (text.includes('say') || text.includes('type')) reply(`والله يا عب انا لو قبضتك ببيعك`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!...or choose a character you want..example ${prefix}cai gojo satoru/would you lose?`);
