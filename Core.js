@@ -218,6 +218,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isCreator = [...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isHj = [ ...global.hhj].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAli = [ ...global.sora].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isAlnoor = [ ...global.alnoor].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKh = [ ...global.khattab].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
     const isSafi = [ ...global.safi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)  
     const isMedo = [ ...global.medo].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
@@ -1485,6 +1486,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
  
     
    if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french') || smallinput.includes('🇫🇷')) {
+   if(!isPlana) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1499,10 +1501,13 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'يعني مش كفاية انك آدم كمان عايز تتكلم فرنسي' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام اتجنن ' });
 }
+   }  
+
+
 
     if (smallinput.includes('مينغودا') || smallinput.includes('مينقودا') || smallinput.includes('menggoda')) {
     if (isTawfik) reply (`توفيق يا توفيق اختو ليك بي الابريق كلام شنو`);
-           }
+	  }
 
 
     if (smallinput.includes('🦍') || smallinput.includes('nigga') || smallinput.includes('shit')) {
@@ -1523,6 +1528,15 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     if (isBotAdmins) await A17.sendMessage(from, { text: 'هههههههه قايل لو شفرها ما حأفهم يعني' });
     if (isBotAdmins) await A17.sendMessage(from, { text: 'اطلع برا يلا يا مضحك' });
     } 
+	  
+
+	if (smallinput.includes('بلانا اطرديني') || smallinput.includes('اطرديني')) {
+    let userToKick = m.sender;
+    if(isBotAdmins && !isAlnoor) reply(`حاضر`)
+    if(isBotAdmins && isAlnoor) reply(`من عيوني يا النور🥰`)
+
+    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+      } 
 
 
        if (smallinput.includes('america ya')) {
