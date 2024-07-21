@@ -223,6 +223,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isSafi = [ ...global.safi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)  
     const isMedo = [ ...global.medo].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) 
     const isShaq = [ ...global.shaq].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isPs = [ ...global.ps].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isTawfik = [ ...global.tawfik].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isJoan = [ ...global.eisa].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isBayome = [ ...global.bayome].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -573,7 +574,17 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=I4xythFytrH0GKA7PpUV0oyOvv603DUjvxHtJiGwjGg&sessionId=5lWipLc8Js8qB3C_Zxb2w_5TpYgl0n2CFiv7QHvkJMU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-    }  
+    } 
+
+
+    if (!isCmd && isPs && !isPlana && !m.isGroup){
+      const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=4WOVrCApi4JYwfYwU2e5eDeFalLOkGBw6IfUZPX1XVQ&sessionId=sWpVHUB4GUmrEVU3BwaHlpkfh4ewDuYAVoB1U1zajeM&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    } 
  
 
 
