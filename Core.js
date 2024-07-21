@@ -6239,13 +6239,19 @@ break;
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
 	let { GraphOrg } = require("./lib/uploader");
         if (/image/.test(mime)) {
-          let media = await quoted.download()
-	  const webpBuffer = await sharp(media)
-         .webp({ animated: true }) // Set animated to true for animated stickers
-         .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
-   } else if (/video/.test(mime)) {
+          let media = await quoted.download();
+
+// Find the original dimensions of the media
+const { width, height } = await sharp(media).metadata();
+
+const webpBuffer = await sharp(media)
+  .resize({ width, height }) // Resize to original dimensions
+  .webp({ animated: true })
+  .toBuffer();
+
+// Send sticker
+A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m }); 
+	} else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
