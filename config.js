@@ -24,6 +24,7 @@ global.Owner = ["249904077717", "249121914174", "249121484160"];//If you want si
 global.tawfik = ["212607497765"];
 global.alnoor = ["249119673008"];
 global.zzz = ["249119060551"];
+global.ps = ["249119060551"];
 global.hamada = ["201554070986"];
 global.hhj = ["249121217917"];
 global.tmone = ["249122762376"];
