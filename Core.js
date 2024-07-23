@@ -1118,6 +1118,17 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     }
 
 
+     if (smallinput.includes('بلانا بقيني ادمن') || smallinput.includes('بلانا اديني ادمن')) {
+	if (!creator) return reply (`انت عب ولا شنو`)
+	if (!isBotAdmins) return reply (`انا زاتي ما ادمن يا زولي`) 
+        A17.sendMessage(from, { react: { text: "😋", key: m.key } })
+        let users = m.sender 
+        await A17.groupParticipantsUpdate(m.chat, [users], 'promote')
+	if (isBotAdmins) reply(`طوالي يا زولي`) 
+         }
+        break;
+
+
     if (smallinput.includes('صباح') || smallinput.includes('ثباح')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
       if (isIssam) return reply('احلى صباح على احلى عصام🌹') 
