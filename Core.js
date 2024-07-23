@@ -1126,7 +1126,6 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
         await A17.groupParticipantsUpdate(m.chat, [users], 'promote')
 	if (isBotAdmins) reply(`طوالي يا زولي`) 
          }
-        break;
 
 
     if (smallinput.includes('صباح') || smallinput.includes('ثباح')) {
