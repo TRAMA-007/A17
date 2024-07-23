@@ -1678,12 +1678,11 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     }
 */
  if (smallinput.endsWith('صافي') || smallinput === 'صافي' ) {
-    const sticker = await getBuffer(`https://media.tenor.com/n-_6PDYaUhgAAAAd/dunk.gif`)
+    const safi = fs.readFileSync('./system/STK-20240707-WA0175.webp')
     const typ = ['يختو ليك بتاع المطافي', 'اختو ليك وقّافي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
      reply(random)
-    let encmedia = await A17.sendVideoAsSticker(from, sticker, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia); 
+    A17.sendMessage(from, { sticker: safi });
         }
      
     if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
