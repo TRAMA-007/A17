@@ -1682,7 +1682,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     const typ = ['يختو ليك بتاع المطافي', 'اختو ليك وقّافي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
      reply(random)
-    let encmedia = await A17.sendVideoAsSticker(m.chat, sticker, { packname: global.packname, author: global.author })
+    let encmedia = await A17.sendVideoAsSticker(from, sticker, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia); 
         }
      
