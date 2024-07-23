@@ -1627,8 +1627,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
     if (smallinput.includes('pedo') || smallinput.includes('بيدو') || smallinput.includes('شفع')) {
    const imageUrls = [
-        'https://graph.org/file/52c0d08cd7f69f682f0ac.jpg', 
-         'https://graph.org/file/6908739acfc4d729a156b.jpg', 
+        'https://graph.org/file/52c0d08cd7f69f682f0ac.jpg',
                 ]; 
       const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
         let media = await getBuffer(randomImageUrl);
@@ -1678,7 +1677,15 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    reply (marisa);
     }
 */
-
+ if (smallinput.endsWith('صافي') || smallinput === 'صافي' ) {
+    const sticker = await getBuffer(`https://media.tenor.com/n-_6PDYaUhgAAAAd/dunk.gif`)
+    const typ = ['يختو ليك بتاع المطافي', 'اختو ليك وقّافي'];
+    const random = typ[Math.floor(Math.random() * typ.length)];
+     reply(random)
+    let encmedia = await A17.sendVideoAsSticker(m.chat, sticker, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia); 
+        }
+     
     if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
    const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
    const random = typ[Math.floor(Math.random() * typ.length)];
@@ -1780,7 +1787,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
   }
 
 
-  if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput.includes('201100224155')) {
+  if (smallinput=== 'بلانا' || smallinput=== 'plana' || smallinput.includes('201553822004')) {
       if (isBan) return reply (`ما تتكلم معاي يا عب`)
     const typ = ['عيون بلانا', 'احكي', 'شنو يا عسل', 'شنو يا زوووو999لي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
