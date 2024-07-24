@@ -238,6 +238,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isPlana = [ ...global.plana].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAsir = [ ...global.asir].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isDabi = [ ...global.dabi].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isSae = [ ...global.sae].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAwad = [ ...global.awad].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAbd = [ ...global.coomer].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAdam = [ ...global.adam].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -422,10 +423,10 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 */
 
     
-      if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !m.isGroup){
+      if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !isSae  && !isPs && !isHamada && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=WP0l2PPlDZb2Z_bW1Uv_CYnbP2LDxhOQCRP7wdBCJUM&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=9hWeuOaxkrc02xxqj99KAoigO0T1WhDHEECWm3Cxf78&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -584,7 +585,17 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=4WOVrCApi4JYwfYwU2e5eDeFalLOkGBw6IfUZPX1XVQ&sessionId=sWpVHUB4GUmrEVU3BwaHlpkfh4ewDuYAVoB1U1zajeM&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-    } 
+    }
+
+
+      if (!isCmd && isSae && !isPlana && !m.isGroup){
+      const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=5GzHxGaLz0Efl65ASKF8ULxKEo9NsXT5zUU6__dplGE&sessionId=Vwrlu4_5XEYHsKR7KvDK6W18EIU7813DhchsVAnHeIU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+		}
  
 
 
@@ -3838,7 +3849,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=-MBpQJSpPksWd2zshZg7GV2E_2dXii_oESpLjtd45d4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=hbnNiDTY866zZVxI5L48swlG1idRPI0SlkEo9SCszJA4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -5875,8 +5886,7 @@ _Click the button below to download_`
         const jj = await axios.get(`https://api.lolhuman.xyz/api/ytplay?apikey=GataDiosV2&query=${encodeURIComponent(q)}`)
         const kk = jj.data.result
 	const title = kk.title
-	const urll = kk.video.link
-        A17.sendMessage(from, { video: urll, mimetype: "video/mp4", caption: title }, { quoted: m })
+        A17.sendMessage(from, { video: { url: kk.video.link }, caption: title }, { quoted: m })
       }
 
         break;  
