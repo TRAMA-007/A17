@@ -5853,7 +5853,7 @@ _Click the button below to download_`
         break;
 
 
-      case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
+   /*   case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍃", key: m.key } })
@@ -5865,7 +5865,21 @@ _Click the button below to download_`
         A17.sendMessage(from, { video: { url: ytmp4play.videoUrl }, mimetype: "video/mp4", caption: anu.title }, { quoted: m })
       }
 
-        break; 
+        break; */
+
+
+       case 'ytvd': case 'video': case 'ytvideo': case 'ytmp4': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍃", key: m.key } })
+        const jj = await axios.get(`https://api.lolhuman.xyz/api/ytplay?apikey=GataDiosV2&query=${encodeURIComponent(q)}`)
+        const kk = jj.data.result
+	const title = kk.title
+	const urll = kk.video.link
+        A17.sendMessage(from, { video: urll, mimetype: "video/mp4", caption: title }, { quoted: m })
+      }
+
+        break;  
 
 
       /*
