@@ -281,7 +281,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
     const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
     autoreadsw = true
-    const AntiBadWord = m.isGroup ? ntword.includes(from) : false
+    const AntiBadWord = m.isGroup ? ntword.includes(from) : true
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
 
@@ -13216,6 +13216,7 @@ last login: ${aru.lastLogin}
 
   ⌯    *if you want to add me to your group..just send your group link in dm and wait for your request to be accepted*
   ⌯    *i use character.ai for auto reply..plana is the default character..if you want a different character you can contact my owner*
+  ⌯    *anti badword is enabled by default if I'm an admin ..if you want to disable it..just type .badword off*
 
 
   ⌯    *Time* : ${kaitime}
@@ -13320,6 +13321,8 @@ last login: ${aru.lastLogin}
   ⌯     ${prefix}𝐫𝐞𝐦𝐨𝐯𝐞𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 / 𝐫𝐞𝐦𝐨𝐯𝐞𝐛𝐠
   ⌯     ${prefix}𝐭𝐫𝐚𝐧𝐬𝐥𝐚𝐭𝐞
   ⌯     ${prefix}𝐒𝐚𝐮𝐜𝐞/صوص(𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐢𝐦𝐚𝐠𝐞 𝐬𝐞𝐚𝐫𝐜𝐡)
+  ⌯     ${prefix}𝐓𝐫𝐚𝐜𝐞(𝐫𝐞𝐯𝐞𝐫𝐬𝐞 𝐢𝐦𝐚𝐠𝐞 𝐬𝐞𝐚𝐫𝐜𝐡 𝐟𝐨𝐫 𝐚𝐧𝐢𝐦𝐞 𝐬𝐜𝐫𝐞𝐞𝐧𝐬𝐡𝐨𝐭𝐬)
+  
 
 
   〢━━ 🌌 *𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗿* 🌌 ━━〢
