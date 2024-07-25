@@ -426,7 +426,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !isSae  && !isPs && !isHamada && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=9hWeuOaxkrc02xxqj99KAoigO0T1WhDHEECWm3Cxf78&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=jtphqlTJKGcWozvW40rjHMJQvStg2DqcGc2kd31J4mM&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -1674,7 +1674,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     }
 
 
-    if (smallinput.includes('بوتهيل') || smallinput.includes('boothil')) {
+    if (smallinput.includes('بوتهيل') || smallinput.includes('boothil') || smallinput.includes('بوتكينج')) {
      const typ = ["🏳️‍🌈","🍆"];
    const random = typ[Math.floor(Math.random() * typ.length)];
     if (isHamada) { 
@@ -3843,13 +3843,13 @@ break;
 	if (text.includes("/")) { 
 	const sg = await axios.get(`https://skizo.tech/api/cai/search?apikey=${api}&name=${character}&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8`);
 	const fuxuan = sg.data.result[0].external_id
-	const shiroko = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=${fuxuan}&sessionId=&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(message)}`);
+	const shiroko = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=${fuxuan}&sessionId=&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(message)}`);
 	const sensei = shiroko.data.result.text
 	reply(sensei)
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=hbnNiDTY866zZVxI5L48swlG1idRPI0SlkEo9SCszJA4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=YRGEtBM3ToWYkfBceTZb0njtd6x0MG6xj7kokO95Kvs&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
