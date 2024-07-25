@@ -1302,7 +1302,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
       if (isBayome) await A17.sendMessage(from, { text: hh });
       if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
       if (isAbd) return reply (random) 
-      if (AntiBadWord) {
+      if (!AntiBadWord) {
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1328,7 +1328,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
       if (isAsir) return reply('هوي يا عراقي') 
       if (isBayome) await A17.sendMessage(from, { text: hh });
       if (isAbd) return reply (random) 
-      if (AntiBadWord) {
+      if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1352,7 +1352,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     const hh = jj[Math.floor(Math.random() * jj.length)]; 
       if (isAsir) return reply('هوي يا عراقي') 
       if (isAbd) return reply (random) 
-      if (AntiBadWord) {
+      if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1373,7 +1373,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     if (smallinput.includes('احش') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
     if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
     if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-     if (AntiBadWord) {
+     if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1395,7 +1395,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-     if (AntiBadWord) {
+     if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1441,7 +1441,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-      if (AntiBadWord) {
+      if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1460,7 +1460,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('cock') || smallinput.includes('pussy') || smallinput.includes('sex')) {
-      if (AntiBadWord) {
+      if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1479,7 +1479,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('lesbian') || smallinput.includes('ass') || smallinput.includes('boobs')) {
-     if (AntiBadWord) {
+     if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1497,7 +1497,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     }     
 
     if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
-    if (AntiBadWord) {
+    if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1580,7 +1580,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
-   if (AntiBadWord) {
+   if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
