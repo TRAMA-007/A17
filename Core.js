@@ -4965,7 +4965,7 @@ break;
         break;
 
 
-    case 'tovideo': case 'tomp4': {
+/*    case 'tovideo': case 'tomp4': {
        if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
@@ -4982,7 +4982,7 @@ break;
      fs.unlinkSync(`${ran}.mp4`);
    });
    }
-        break;
+        break; */
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
