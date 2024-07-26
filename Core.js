@@ -4965,8 +4965,8 @@ break;
         break;
 
 
- case 'tovideo': case 'tomp4': {
-  if (isBan) return reply(mess.banned);
+    case 'tovideo': case 'tomp4': {
+       if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
         if (!m.quoted) return reply('reply GIF')
@@ -4974,14 +4974,14 @@ break;
         reply(mess.waiting)
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let ran = await getRandom('.mp4') 
-        exec(`ffmpeg -i ${media} -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" ${ran}`, (err) => {
-          fs.unlinkSync(media)
-          if (err) throw err
-          let buffer = fs.readFileSync(ran)
-          A17.sendMessage(m.chat, { video: buffer }, { quoted: m }) 
-          fs.unlinkSync(ran)
-        })
-      }
+           exec(`ffmpeg -i ${media} -c copy ${ran}.mp4`, (err) => {
+     fs.unlinkSync(media);
+     if (err) throw err;
+     let buffer = fs.readFileSync(`${ran}.mp4`); 
+     A17.sendMessage(m.chat, { video: buffer }, { quoted: m });
+     fs.unlinkSync(`${ran}.mp4`);
+   });
+   }
         break;
 
 
