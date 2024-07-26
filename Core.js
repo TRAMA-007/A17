@@ -4967,25 +4967,22 @@ break;
 
  case 'tovideo': case 'tomp4': {
   if (isBan) return reply(mess.banned);
-  if (isBanChat) return reply(mess.bangc);
-  A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
-  if (!m.quoted) return reply('reply Image');
-  if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
-  reply(mess.waiting);
-  let media = await A17.downloadAndSaveMediaMessage(quoted);
-  let ran = await getRandom('.mp4'); // Use .mp4 for video output
-
-  // Using FFmpeg to convert WebP to MP4 
-  exec(`ffmpeg -i ${media} -vf scale=640:-1 ${ran}`, (err) => {
-    fs.unlinkSync(media);
-    if (err) throw err;
-
-    let buffer = fs.readFileSync(ran);
-    A17.sendMessage(m.chat, { video: buffer }, { quoted: m }); 
-    fs.unlinkSync(ran);
-  });
-}
-break;
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
+        if (!m.quoted) return reply('reply GIF')
+        if (!/gif/.test(mime)) return reply(reply sticker with caption *${prefix + command}*) 
+        reply(mess.waiting)
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        let ran = await getRandom('.mp4') 
+        exec(`ffmpeg -i ${media} -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" ${ran}`, (err) => {
+          fs.unlinkSync(media)
+          if (err) throw err
+          let buffer = fs.readFileSync(ran)
+          A17.sendMessage(m.chat, { video: buffer }, { quoted: m }) 
+          fs.unlinkSync(ran)
+        })
+      }
+        break;
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
