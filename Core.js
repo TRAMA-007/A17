@@ -4965,20 +4965,27 @@ break;
         break;
 
 
-        case 'tomp4': case 'makemp4': case 'makevideo': case 'tovideo': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
-        if (!m.quoted) return reply('reply Image')
-        if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
-        reply(mess.waiting)
-        let { webp2mp4File } = require('./lib/uploader')
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let webpToMp4 = await webp2mp4File(media)
-        await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Here it is...' } }, { quoted: m })
-        await fs.unlinkSync(media)
-      }
-        break; 
+ case 'tovideo': case 'tomp4': {
+  if (isBan) return reply(mess.banned);
+  if (isBanChat) return reply(mess.bangc);
+  A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
+  if (!m.quoted) return reply('reply Image');
+  if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
+  reply(mess.waiting);
+  let media = await A17.downloadAndSaveMediaMessage(quoted);
+  let ran = await getRandom('.mp4'); // Use .mp4 for video output
+
+  // Using FFmpeg to convert WebP to MP4 
+  exec(`ffmpeg -i ${media} -vf scale=640:-1 ${ran}`, (err) => {
+    fs.unlinkSync(media);
+    if (err) throw err;
+
+    let buffer = fs.readFileSync(ran);
+    A17.sendMessage(m.chat, { video: buffer }, { quoted: m }); 
+    fs.unlinkSync(ran);
+  });
+}
+break;
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
