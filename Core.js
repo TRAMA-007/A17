@@ -2393,6 +2393,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	let fixed_link = danlink.replace(/\\/g, "/");
 	const dandan = await axios.get(`https://danbooru.donmai.us/posts/${danid}.json`);
 	const oglink = dandan.data.source
+	const rating = dandan.data.rating
+	if (rating === 'q' || rating === 'e' || rating === 's') return reply(`عيب الكلام ده يا زولي`) 
 	let minatxt =
 		`
          *similarity : ${gg}*
