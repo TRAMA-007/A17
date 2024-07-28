@@ -1017,12 +1017,12 @@ Typed *surrender* to surrender and admited defeat`
 
    if (smallinput.includes('lop')) {
    const { Image } = require ("react-native-compressor");
-  const result = await Image.compress('https://graph.org/file/605e27cf2c16a9f2dc432.png', {
-  compressionMethod: 'manual',
-  maxWidth: 1000,
-  quality: 0.8,
-}); 
-    A17.sendMessage(from, { image : result }, { quoted: m });
+  const result = await Image.compress('https://graph.org/file/7c11e3a4f98d2c5eddb35.png', {
+  progressDivider: 10,
+  downloadProgress: (progress) => {
+    console.log('downloadProgress: ', progress);
+  },
+    A17.sendMessage(from, { text : progress }, { quoted: m });
        }
 
 
