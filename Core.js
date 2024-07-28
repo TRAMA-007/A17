@@ -1016,13 +1016,8 @@ Typed *surrender* to surrender and admited defeat`
 
 
    if (smallinput.includes('lop')) {
-   const { Image } = require ("react-native-compressor");
-  const result = await Image.compress('https://graph.org/file/7c11e3a4f98d2c5eddb35.png', {
-  progressDivider: 10,
-  downloadProgress: (progress) => {
-    console.log('downloadProgress: ', progress);
-  },
-    A17.sendMessage(from, { text : progress }, { quoted: m });
+   const result = await Image.compress('./Assets/pic10.jpg'
+    A17.sendMessage(from, { image : result }, { quoted: m });
        }
 
 
