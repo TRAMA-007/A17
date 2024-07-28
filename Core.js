@@ -12812,7 +12812,8 @@ last login: ${aru.lastLogin}
         break; 
 
 
-        case 'twitter': {
+        case 'twitter': 
+	case 'tw':  {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a link`) 
@@ -12820,7 +12821,18 @@ last login: ${aru.lastLogin}
         const api = typ[Math.floor(Math.random() * typ.length)];
         const instgram = await axios.get(`https://skizo.tech/api/twitter?apikey=${api}&url=${encodeURIComponent(q)}`)
         const ig = instgram.data.media[0];
-        await A17.sendMessage(m.chat, { video: { url: ig.url} }, { quoted: m })
+	const jj = ig.type
+	const jjtxt = `
+ *Likes : ${instgram.data.likes}*
+ *replies : ${instgram.data.replies}*
+ *author Name : ${instgram.data.authorName}*
+ *author Username : ${instgram.data.likes}*
+ `
+	if(jj === 'video') {
+        await A17.sendMessage(m.chat, { video: { url: ig.url}, caption : jjtxt }, { quoted: m })
+	} else if(jj === 'image') {
+    await A17.sendMessage(m.chat, { image: { url: ig.url}, caption : jjtxt}, { quoted: m })
+      }
      }
         break;
 		    
