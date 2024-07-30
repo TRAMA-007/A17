@@ -231,6 +231,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isHamid = [ ...global.hamid].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isZz = [ ...global.zzz].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isEgo = [...global.ego].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isJig = [...global.jiga].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isKaze = [ ...global.kaze].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isAbu = [ ...global.abu].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const islucas = [ ...global.lucas].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -1735,6 +1736,19 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     if (isBotAdmins) await A17.sendMessage(from, { text: random });
+    }
+ } 
+
+
+if (smallinput.includes('ج') || smallinput.includes('ق') || smallinput.includes('م')) {
+   const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) {
+     await A17.sendMessage(from, { text: random });
     }
  } 
 
