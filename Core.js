@@ -1303,7 +1303,14 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
       if (isBayome) await A17.sendMessage(from, { text: hh });
       if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
       if (isAbd) return reply (random) 
-      if (!AntiBadWord) {
+    const typp = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const randomm = typp[Math.floor(Math.random() * typp.length)];
+   if (isJig) await A17.sendMessage(from, { text: randomm });
+  if (!AntiBadWord) {
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1329,7 +1336,14 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
       if (isAsir) return reply('هوي يا عراقي') 
       if (isBayome) await A17.sendMessage(from, { text: hh });
       if (isAbd) return reply (random) 
-      if (!AntiBadWord) {
+     const typp = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const randomm = typp[Math.floor(Math.random() * typp.length)];
+   if (isJig) await A17.sendMessage(from, { text: randomm });
+    if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1353,7 +1367,14 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     const hh = jj[Math.floor(Math.random() * jj.length)]; 
       if (isAsir) return reply('هوي يا عراقي') 
       if (isAbd) return reply (random) 
-      if (!AntiBadWord) {
+      const typp = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const randomm = typp[Math.floor(Math.random() * typp.length)];
+   if (isJig) await A17.sendMessage(from, { text: randomm });
+   if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1373,6 +1394,13 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
     if (smallinput.includes('احش') || smallinput.includes('بنيك') || smallinput.includes('متناك')) {
     if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
+   const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) await A17.sendMessage(from, { text: random });
     if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
      if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
@@ -1396,6 +1424,13 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     if (smallinput.includes('fuck') || smallinput.includes('shit') || smallinput.includes('gay')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
       if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
+   const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) await A17.sendMessage(from, { text: random });
      if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
@@ -1442,7 +1477,14 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
      if (isAli) await A17.sendMessage(from, { text: 'الدعامة جوا لي علي في بيتهم قالوا ليهو اطلع من البيت توااا(هسع) قال ليهم معليش يا جماعة انا antisocial' });
      if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-      if (!AntiBadWord) {
+      const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) await A17.sendMessage(from, { text: random });
+   if (!AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1461,7 +1503,14 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('cock') || smallinput.includes('pussy') || smallinput.includes('sex')) {
-      if (!AntiBadWord) {
+     const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) await A17.sendMessage(from, { text: random });
+    if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1480,6 +1529,13 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('lesbian') || smallinput.includes('ass') || smallinput.includes('boobs')) {
+	const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) await A17.sendMessage(from, { text: random });
      if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
@@ -1498,6 +1554,13 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     }     
 
     if (smallinput.includes('bitch') || smallinput.includes('قنط') || smallinput.includes('طيز')) {
+     const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) await A17.sendMessage(from, { text: random });
     if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
@@ -1581,6 +1644,13 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
    if (smallinput.includes('كصم') || smallinput.includes('شطور') || smallinput.includes('كثم')) {
+    const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
+		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
+		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
+	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
+	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   if (isJig) await A17.sendMessage(from, { text: random });
    if (!AntiBadWord) {
     let { chat, fromMe, id } = m;
     
@@ -1736,19 +1806,6 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     let userToKick = m.sender;
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
     if (isBotAdmins) await A17.sendMessage(from, { text: random });
-    }
- } 
-
-
-if (smallinput.includes('ج') || smallinput.includes('ق') || smallinput.includes('م')) {
-   const typ = ['ستفوا الشنط خلاص العيد في الخرطوم✌️✌️✌️🇸🇩🔥', 
-		' قررررررربت تنتهي🇸🇩🇸🇩🔥🤌',
-		'ابششرروا بالنصر☝️🇸🇩🇸🇩🔥',
-	       'الف الف مبروك للشعب السوداني النصر المبين🥳🥳🥳🇸🇩☝️🔥🔥',
-	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
-   const random = typ[Math.floor(Math.random() * typ.length)];
-   if (isJig) {
-     await A17.sendMessage(from, { text: random });
     }
  } 
 
@@ -3865,7 +3922,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=meZC-o3aTen_JJxC1KD-wvD5OTXxa5PFwsXx2FSgX9E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=5cnz3bxlR_cgtldz34dUwii8OuFMwJ78ttZrLmd3T8E&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
