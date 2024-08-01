@@ -1112,16 +1112,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 	   }
 
 
-	if (smallinput.includes('fang') || smallinput.includes('yuan')) {
-	if (!m.isGroup) {
-    await A17.sendMessage(from, { text: 'فانغ يوان اليركبك يا عب' });
-      let users = m.sender
-        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-      const txtmsg = `*تم جغم مصاص ازبار الصينيين*`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          }
-	}
+	
 
 
     if (smallinput.includes('مسا') || smallinput.includes('مثا')) {
@@ -1147,7 +1138,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
-	if (isBan) return reply(`يحبك الزب`);
+	if (isBan) return reply(شكراز`);
     if (tagg) {
  buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
     // إرسال الصورة
